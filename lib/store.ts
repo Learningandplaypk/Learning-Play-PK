@@ -294,6 +294,16 @@ export const usePlayer = create<Store>()(
     }),
     {
       name: "learnplay-player",
+      version: 1,
+      // guest uid merge into v0 persisted state (old key had `uid: null`, no isPremium field)
+      migrate: (persisted) => {
+        const s = persisted as Partial<PlayerState> & { uid?: string | null };
+        return {
+          ...s,
+          uid: s.uid && !s.uid.startsWith("guest") ? s.uid : guestKey(),
+          premium: s.premium ?? false,
+        } as PlayerState;
+      },
       // rehydrate manually after mount (see Providers) — avoids SSR/CSR hydration mismatch
       skipHydration: true,
       storage: createJSONStorage(() => localStorage),
@@ -306,7 +316,7 @@ export const usePlayer = create<Store>()(
       },
       onRehydrateStorage: () => (state) => {
         if (state) {
-          usePlayer.setState({ hydrated: true, uid: state.uid ?? guestKey() });
+          usePlayer.setState({ hydrated: true, uid: state?.uid && !state.uid.startsWith("guest") ? state.uid : guestKey() });
         }
       },
     }
@@ -316,6 +326,7 @@ export const usePlayer = create<Store>()(
 /** Snapshot of pure player fields for Firestore sync / guest merge. */
 export function playerSnapshot(s: PlayerState): Partial<PlayerState> {
   return {
+    uid: s.uid,
     name: s.name,
     avatar: s.avatar,
     xp: s.xp,
