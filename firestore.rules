@@ -2,14 +2,14 @@ rules_version = '2';
 
 // Learn & Play PK — Firestore security rules
 // Deploy: firebase deploy --only firestore:rules
+//
+// NOTE: Firestore rules do NOT allow partial-segment wildcards.
+// Dynamic per-topic collections are matched generically and guarded with matches() below.
 service cloud.firestore {
   match /databases/{database}/documents {
 
     function isSignedIn() {
       return request.auth != null;
-    }
-    function isOwner(uid) {
-      return isSignedIn() && request.auth.uid == uid;
     }
     function sanityScore() {
       return request.resource.data.score is int
@@ -17,10 +17,10 @@ service cloud.firestore {
         && request.resource.data.score <= 1000000;
     }
 
-    // users/{uid} — profile owned by the user; leaderboard fields locked
+    // users/{uid} — profile owned by the user; entitlement fields locked to server
     match /users/{uid} {
-      allow read: if isOwner(uid);
-      allow create, update: if isOwner(uid)
+      allow read: if isSignedIn() && request.auth.uid == uid;
+      allow create, update: if isSignedIn() && request.auth.uid == uid
         && request.resource.data.keys().hasOnly(
           ['uid','name','displayName','avatar','email','xp','coins','streak','bestStreak',
            'lastActiveDay','freezes','hints','badges','wordsLearned','quizCorrect','perfectScores',
@@ -31,10 +31,10 @@ service cloud.firestore {
         && request.resource.data.coins is int && request.resource.data.coins >= 0
         && request.resource.data.coins <= 100000
         && (!('isPremium' in request.resource.data) || request.resource.data.isPremium == false);
-      allow delete: if isOwner(uid);
+      allow delete: if isSignedIn() && request.auth.uid == uid;
     }
 
-    // leaderboards/{slug}/scores/{id} — create-only for signed-in users; no edit/delete
+    // leaderboards/{slug}/scores/{id} — public read, create-only for the owner
     match /leaderboards/{slug}/scores/{scoreId} {
       allow read: if true;
       allow create: if isSignedIn() && sanityScore()
@@ -44,7 +44,6 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
-    // admin content queue — write-only for signed-in admins panel users
     match /content_words/{id} {
       allow read: if isSignedIn();
       allow create: if isSignedIn()
@@ -52,19 +51,23 @@ service cloud.firestore {
         && request.resource.data.ur is string && request.resource.data.ur.size() <= 64;
       allow update, delete: if false;
     }
-    match /content_questions_{topic}/{id} {
-      allow read: if isSignedIn();
-      allow create: if isSignedIn() && request.resource.data.q is string;
+
+    // Dynamic per-topic admin queues (content_questions_gk, content_questions_pakistan, …)
+    // Generic two-segment match guarded by matches() — only affects content_questions_* collections.
+    match /{collection}/{id} {
+      allow read: if collection.matches('content_questions_.*') && isSignedIn();
+      allow create: if collection.matches('content_questions_.*') && isSignedIn()
+        && request.resource.data.q is string;
       allow update, delete: if false;
     }
 
-    // server-only rate limiting + payment logs
+    // server-only (Admin SDK bypasses rules)
     match /_rate/{id} {
-      allow read, write: if false; // admin SDK bypasses rules
+      allow read, write: if false;
     }
     match /payments/{id} {
       allow read: if isSignedIn() && resource.data.uid == request.auth.uid;
-      allow write: if false; // server only via webhooks
+      allow write: if false;
     }
   }
 }
