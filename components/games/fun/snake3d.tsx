@@ -4,6 +4,7 @@ import * as THREE from "three";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import type { GameProps } from "@/components/game-shell";
+import { SceneBoundary } from "@/components/scene-boundary";
 import { sfx } from "@/lib/sfx";
 
 const SIZE = 13;
@@ -157,6 +158,7 @@ export default function Snake3D({ onEnd }: GameProps) {
         swipe.current = null;
       }}
     >
+      <SceneBoundary name="snake3d">
       <Canvas camera={{ position: [0, 0, 10.5], fov: 50 }} dpr={[1, 1.75]} gl={{ antialias: true, alpha: true }} style={{ background: "transparent" }}>
         <ambientLight intensity={0.6} />
         <pointLight position={[4, 6, 8]} intensity={50} color="#2d7cff" />
@@ -164,6 +166,7 @@ export default function Snake3D({ onEnd }: GameProps) {
         <Board />
         <Snake snake={snake} food={food} />
       </Canvas>
+      </SceneBoundary>
       <div className="pointer-events-none absolute inset-x-0 top-2 flex justify-center gap-2">
         <span className="chip pointer-events-auto">🐍 {score}</span>
         <button className="chip pointer-events-auto cursor-pointer" onClick={() => setPaused(!paused)}>

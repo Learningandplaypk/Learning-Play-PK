@@ -7,7 +7,7 @@ import "@fontsource-variable/noto-nastaliq-urdu";
 import { Providers } from "@/components/providers";
 import { Navbar, MobileTabs } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Analytics } from "@vercel/analytics/react";
+import { VercelAnalytics } from "@/components/vercel-analytics";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
@@ -75,7 +75,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
           <MobileTabs />
         </Providers>
-        <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );

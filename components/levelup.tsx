@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { create } from "zustand";
 import { Modal, Button, Progress } from "./ui";
 import { levelFromXp, levelTitle } from "@/lib/gamification";
@@ -38,7 +38,7 @@ function LevelUpModal() {
   const hide = useLevelUp((s) => s.hide);
   const xp = usePlayer((s) => s.xp);
   const [display, setDisplay] = useState(1);
-  const lv = usePlayer((s) => levelFromXp(s.xp));
+  const lv = useMemo(() => levelFromXp(xp), [xp]);
 
   useEffect(() => {
     if (level == null) return;

@@ -5,6 +5,7 @@ import React, { useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import type { GameProps } from "@/components/game-shell";
+import { SceneBoundary } from "@/components/scene-boundary";
 import { sfx } from "@/lib/sfx";
 
 type Cell = "X" | "O" | null;
@@ -159,7 +160,8 @@ export default function TicTacToe({ onEnd }: GameProps) {
         <span className={`chip ${busy ? "border-neon-purple/50 text-neon-purple" : ""}`}>{busy ? "AI soch raha…" : result ? (result.who === "X" ? "🏆 Tum jeetay!" : "AI jeeta") : full ? "Draw!" : "Tumhari chaal"}</span>
       </div>
       <div className="aspect-square">
-        <Canvas camera={{ position: [0, 0, 5.6], fov: 45 }} dpr={[1, 1.75]} gl={{ alpha: true }} style={{ background: "transparent" }}>
+        <SceneBoundary name="tictactoe-3d">
+      <Canvas camera={{ position: [0, 0, 5.6], fov: 45 }} dpr={[1, 1.75]} gl={{ alpha: true }} style={{ background: "transparent" }}>
           <ambientLight intensity={0.7} />
           <pointLight position={[3, 4, 5]} intensity={40} color="#2d7cff" />
           <pointLight position={[-4, -3, 4]} intensity={30} color="#b026ff" />
@@ -170,6 +172,7 @@ export default function TicTacToe({ onEnd }: GameProps) {
             <XOrO key={`p${i}`} cell={cell} idx={i} hover={false} />
           ))}
         </Canvas>
+      </SceneBoundary>
       </div>
       {(result || full) && !endedRef.current && <p className="text-center font-display text-xl font-black text-gradient">{result ? (result.who === "X" ? "Tum jeet gaye! 🏆" : "AI jeet gaya 🤖") : "Barabari!"}</p>}
       <button className="chip mx-auto mt-2 block cursor-pointer hover:text-ink" onClick={() => finish(null)} disabled={endedRef.current}>

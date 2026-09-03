@@ -4,6 +4,7 @@ import * as THREE from "three";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import type { GameProps } from "@/components/game-shell";
+import { SceneBoundary } from "@/components/scene-boundary";
 import { sfx } from "@/lib/sfx";
 
 const ROAD_W = 7;
@@ -192,6 +193,7 @@ export default function Racing({ onEnd }: GameProps) {
       }}
       onTouchEnd={() => (swipeStart.current = null)}
     >
+      <SceneBoundary name="racing-3d">
       <Canvas camera={{ position: [0, 2.6, 7], fov: 62 }} dpr={[1, 1.6]} gl={{ alpha: true }} style={{ background: "transparent" }}>
         <fog attach="fog" args={["#05060f", 10, 85]} />
         <ambientLight intensity={0.5} />
@@ -201,6 +203,7 @@ export default function Racing({ onEnd }: GameProps) {
         <Car xRef={xRef} crashed={crashed} />
         <Stars />
       </Canvas>
+      </SceneBoundary>
       <div className="pointer-events-none absolute inset-x-0 top-2 flex justify-center gap-2">
         <span className="chip">🏁 {score} m</span>
         <span className="chip">⚡ {(speedRef.current * 160).toFixed(0)} km/h</span>

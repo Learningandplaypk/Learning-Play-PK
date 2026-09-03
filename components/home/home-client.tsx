@@ -8,7 +8,22 @@ import { levelFromXp } from "@/lib/gamification";
 import { fmt } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
 import { Scene3D } from "@/components/home3d/scene";
+import { SceneBoundary } from "@/components/scene-boundary";
 import { scrollState } from "@/lib/scroll-state";
+
+/** Lightweight CSS/2D stand-in for the 3D hero when WebGL is unavailable or the scene crashes. */
+function Home3dFallback() {
+  return (
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
+      <div className="absolute left-1/2 top-[18%] h-[26rem] w-[26rem] -translate-x-1/2 animate-float rounded-full bg-gradient-to-br from-neon-green/20 via-electric/25 to-neon-purple/25 blur-3xl" />
+      <div className="absolute bottom-[8%] left-[12%] h-72 w-72 animate-float rounded-full bg-neon-orange/15 blur-3xl [animation-delay:.8s]" />
+      <div className="absolute right-[10%] top-[42%] h-80 w-80 animate-float rounded-full bg-pink-accent/15 blur-3xl [animation-delay:1.6s]" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center">
+        <div className="font-display text-[16vw] font-black leading-none tracking-tight text-white/[0.06] sm:text-[9rem]">LEARN &amp; PLAY</div>
+      </div>
+    </div>
+  );
+}
 
 /* ---------- static content ---------- */
 
@@ -261,14 +276,17 @@ export default function HomeClient() {
         });
       }
 
-      ScrollTrigger.create({
-        trigger: "#experience",
-        start: "top top",
-        end: "bottom bottom",
-        onUpdate: (self) => {
-          scrollState.progress = self.progress;
-        },
-      });
+      const experienceEl = document.getElementById("experience");
+      if (experienceEl) {
+        ScrollTrigger.create({
+          trigger: "#experience",
+          start: "top top",
+          end: "bottom bottom",
+          onUpdate: (self) => {
+            scrollState.progress = self.progress;
+          },
+        });
+      }
 
       // hero headline char reveal
       const chars = document.querySelectorAll<HTMLElement>(".hero-char");
@@ -319,7 +337,9 @@ export default function HomeClient() {
 
   return (
     <div ref={root}>
-      <Scene3D sections={sections} />
+      <SceneBoundary name="home-3d" fallback={<Home3dFallback />}>
+        <Scene3D sections={sections} />
+      </SceneBoundary>
       {/* soft CSS aurora behind canvas */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
         <div className="absolute -top-40 left-1/4 h-[36rem] w-[36rem] rounded-full bg-electric/12 blur-[120px]" />

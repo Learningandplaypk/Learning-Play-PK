@@ -294,6 +294,8 @@ export const usePlayer = create<Store>()(
     }),
     {
       name: "learnplay-player",
+      // rehydrate manually after mount (see Providers) — avoids SSR/CSR hydration mismatch
+      skipHydration: true,
       storage: createJSONStorage(() => localStorage),
       partialize: (s) => {
         const { toasts, outcome, hydrated, ...rest } = s;

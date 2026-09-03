@@ -26,6 +26,11 @@ function SoundSync() {
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  // Zustand persist is configured with skipHydration — rehydrate AFTER first paint
+  // so server HTML and client HTML match (no hydration mismatch).
+  useEffect(() => {
+    void usePlayer.persist.rehydrate();
+  }, []);
   return (
     <I18nProvider>
       <AuthProvider>
