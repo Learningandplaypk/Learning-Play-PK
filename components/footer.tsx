@@ -50,7 +50,7 @@ export function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link className="text-ink/80 hover:text-neon-green" href="/privacy">Privacy Policy</Link></li>
             <li><Link className="text-ink/80 hover:text-neon-green" href="/terms">Terms of Service</Link></li>
-            <li><Link className="text-ink/80 hover:text-neon-green" href="/refund">Refund Policy</Link></li>
+            <li><Link className="text-ink/80 hover:text-neon-green" href="/refund-policy">Refund Policy</Link></li>
           </ul>
           <button
             className="chip mt-5 cursor-pointer hover:text-ink"
