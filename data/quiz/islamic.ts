@@ -1,0 +1,33 @@
+import type { QuizQ } from "@/lib/quiz-types";
+
+/** Islamic Studies — 28 questions. */
+export const ISLAMIC: QuizQ[] = [
+  { q: "Islam ke kitne arkan (pillars) hain?", o: ["5", "4", "6", "7"], a: 0, e: "Iman/Shahadah, Namaz, Roza, Zakat, Hajj — 5 arkan." },
+  { q: "Quran Pak mein sab se lambi surah kaunsi hai?", o: ["Al-Baqarah", "Al-Fatiha", "Al-Ikhlas", "Yaseen"], a: 0, e: "Surah Al-Baqarah — 286 ayaat." },
+  { q: "Namaz-e-Fajr ki kitni rakats farz hain?", o: ["2", "3", "4", "1"], a: 0, e: "Fajr mein 2 rakats farz (+ 2 sunnat)." },
+  { q: "Pehle Khalifa-e-Rashid kaun thay?", o: ["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], a: 0, e: "Hazrat Abu Bakr Siddique (RA) — 632–634 CE." },
+  { q: "Baitullah (Khana Kaaba) kis shehar mein hai?", o: ["Madina", "Makkah", "Taif", "Jeddah"], a: 1, e: "Masjid al-Haram, Makkah — qibla musalmanon ka." },
+  { q: "Zakat maal par kitne percent hai?", o: ["2.5%", "5%", "10%", "1%"], a: 0, e: "Nisab ke barabar maal par saal guzarne ke baad 2.5%." },
+  { q: "Quran mein kul kitne paray (juz) hain?", o: ["30", "29", "60", "40"], a: 0, e: "30 paray — taaraweeh mein roz 1 para." },
+  { q: "Hazrat Muhammad ﷺ ki wiladat kab hui?", o: ["571 CE", "570 BC", "610 CE", "632 CE"], a: 0, e: "Aam ul-Feel, 571 CE — Makkah mein." },
+  { q: "Shab-e-Miraj mein Nabi ﷺ ko kis ka milna hua (sab se upar)?", o: ["Hazrat Israfeel", "Allah Rabb ul Izzat ke qurb", "Hazrat Jibrail", "Hazrat Mikail"], a: 1, e: "Sidrat-ul-Muntaha se aage — 5 namazon ka farz hua isi raat." },
+  { q: "Hajj Islam ka kaunsa rukn hai?", o: ["Teesra", "Chotha", "Panchwan", "Doosra"], a: 2, e: "Hajj panchwan rukn hai — isteta'at par zindagi mein ek dafa." },
+  { q: "Qibla avval (pehla) kya tha?", o: ["Masjid al-Aqsa (Bait ul-Muqaddas)", "Khana Kaaba", "Masjid Qiblatain", "Masjid Nabwi"], a: 0, e: "Shuru mein Bait ul-Muqaddas qibla tha; 2 AH mein Kaaba qibla hua." },
+  { q: "Ramzan ki 27 raat ko aam tor par konsi raat manayi jati hai?", o: ["Shab-e-Barat", "Laylat ul-Qadr", "Shab-e-Miraj", "Eid ki raat"], a: 1, e: "Laylat ul-Qadr — 'hazaron mahine se behtar' (Surah Al-Qadr)." },
+  { q: "Hazrat Isa (AS) ki ummat par kitni kitabein nazil huin?", o: ["Zaboor", "Injeel", "Taurat", "Quran"], a: 1, e: "Injeel Hazrat Isa (AS) par nazil hua." },
+  { q: "Masjid Nabwi kis shehar mein hai?", o: ["Makkah", "Madina", "Jerusalem", "Cairo"], a: 1, e: "Madina Munawwara — Nabi ﷺ ne hijrat ke baad banwayi." },
+  { q: "Wahi ka pehla fatra (pause) kitne din ka tha?", o: ["6 mahine se zyada (fatrat al-wahi)", "3 din", "1 saal zaroori", "10 saal"], a: 0, e: "Surah Ad-Duha nazil hone tak ~6 mahine ka fatra tha." },
+  { q: "Muslims ka hafta ka din mila-jula (jumu'ah) kaunsa hai?", o: ["Jumma (Friday)", "Itwar", "Peer", "Hafte"], a: 0, e: "Jumma ki namaz zohr ke waqt jamaat se — Surah Al-Jumuah dekhein." },
+  { q: "Ghusl farz kis wqt hota hai?", o: ["Har namaz se pehle", "Janaabat aur haiz ke baad", "Sirf Jumma ko", "Eid par"], a: 1, e: "Ghusl ki 3 wajoohat: janaabat, haiz/nifas, nifas ke baad (fiqhi tafseel)." },
+  { q: "Sab se behtar amal (Hadees ke mutabiq, ramzan wali baat)?", o: ["Sadaqa khafi", "Ramzan ke rozay", "Hajj", "Tilawat"], a: 1, e: "'Fasting is for Me and I will reward it' — Bukhari." },
+  { q: "Hazrat Yousuf (AS) ki kahani kis surah mein tafseel se hai?", o: ["Surah Yusuf", "Surah Maryam", "Surah Al-Kahf", "Surah Al-Baqarah"], a: 0, e: "Surah Yusuf — 'Ahsan al-qasas' (behtareen qissay) kehlata hai." },
+  { q: "Namaz mein qira'at ke baad kya kehte hain (rukū' se pehle)?", o: ["Subhanakallahumma", "Aameen", "Samiallahu liman hamidah", "Rabbana lakal hamd"], a: 1, e: "Surah Fatiha ke baad 'Aameen' kehte hain." },
+  { q: "Islam ke pehle martabah (1st) kalima ka naam?", o: ["Kalima Tayyabah", "Kalima Shahadat", "Kalima Tamjeed", "Kalima Tauheed"], a: 0, e: "La ilaha illallah Muhammadur Rasulullah — Kalima Tayyabah." },
+  { q: "Zam zam ka chashma kis se jura hai?", o: ["Hazrat Hajra (RA) aur Hazrat Ismail (AS)", "Hazrat Ibrahim (AS) akela", "Badal ka pani", "Baitullah ki neend"], a: 0, e: "Hazrat Hajra (RA) ka pani talash karte waqt bachay (Ismail AS) ki ediyon se pani phoota." },
+  { q: "Sadqa-e-Fitr (fitrana) kab dena masnoon hai?", o: ["Eid ki namaz se pehle", "Eid ki namaz ke baad", "Ramzan ki pehli raat", "Kabhi bhi"], a: 0, e: "Eid ul-Fitr ki namaz se pehle dena behtar hai (Ibn Umar RA)." },
+  { q: "Aitkaf (i'tikaf) sunnat-e-muakkadah kis ashra mein hai?", o: ["Ramzan ka pehla ashra", "Ramzan ka doosra ashra", "Ramzan ka aakhri ashra", "Shawwal"], a: 2, e: "Aakhri 10 raatain — Nabi ﷺ har Ramzan mein aitkaf karte thay." },
+  { q: "Tayammum kis cheez se kiya jata hai?", o: ["Paak mitti/safed mitti", "Pani se hi", "Patthar se", "Kapray se"], a: 0, e: "Saaf dharti ki mitti se — jab pani na mile ya istemal mumkin na ho." },
+  { q: "Surah jise 'Umm ul-Kitab' kehte hain?", o: ["Al-Fatiha", "Al-Ikhlas", "Yaseen", "Ar-Rahman"], a: 0, e: "Surah Al-Fatiha — Umm ul-Kitab / Umm al-Quran." },
+  { q: "Misaq-e-Madina kis se mutalliq tha?", o: ["Muslims–Jews–aquaam ka muahida", "Tijarat ka muahida", "Jang ka elan", "Nikah ka contract"], a: 0, e: "Madina ke tamam qabail (muslim, yahudi, ghair) ka pahla likha muahida — Nabi ﷺ ki hukmarani mein." },
+  { q: "Zaboor kis Nabi par nazil hui?", o: ["Hazrat Dawood (AS)", "Hazrat Musa (AS)", "Hazrat Isa (AS)", "Hazrat Ibrahim (AS)"], a: 0, e: "Zaboor Hazrat Dawood (AS) par; Taurat Musa (AS) par." },
+];

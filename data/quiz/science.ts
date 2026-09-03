@@ -1,0 +1,33 @@
+import type { QuizQ } from "@/lib/quiz-types";
+
+/** Science — 28 questions (Urdu explanations). */
+export const SCIENCE: QuizQ[] = [
+  { q: "Pani ka chemical formula kya hai?", o: ["CO₂", "H₂O", "O₂", "NaCl"], a: 1, e: "Pani = 2 hydrogen + 1 oxygen atom." },
+  { q: "Roshni ki raftaar kitni hai?", o: ["300,000 km/s", "150,000 km/s", "3,000 km/s", "30,000 km/s"], a: 0, e: "Vacuum mein roshni ki raftaar ~299,792 km/s hai." },
+  { q: "Insan ke khoon ka group kis ne discover kiya tha?", o: ["Karl Landsteiner", "Louis Pasteur", "Edward Jenner", "Alexander Fleming"], a: 0, e: "Karl Landsteiner ne 1901 mein ABO blood groups discover kiye." },
+  { q: "DNA ka poora naam?", o: ["Deoxyribonucleic Acid", "Dinucleic Acid", "Dual Nitro Acid", "Deoxyribo Nitric Acid"], a: 0, e: "DNA = Deoxyribonucleic Acid — virasati maloomat ka carrier." },
+  { q: "Kaunsa siyarah 'laal siyarah' kehlata hai?", o: ["Venus", "Jupiter", "Mars", "Saturn"], a: 2, e: "Mars ki mitti mein iron oxide (zang) hai jo laal rang deta hai." },
+  { q: "Photography mein light chitra (photo) kaise banta hai — yeh kis kaam ki misaal hai?", o: ["Chemistry + Physics (optics)", "Sirf chemistry", "Sirf biology", "Mathematics"], a: 0, e: "Camera lens optics (physics) aur film/sensor chemistry dono use karte hain." },
+  { q: "Bijli ka warq (electric current) kis unit mein naapa jata hai?", o: ["Volt", "Ampere", "Watt", "Ohm"], a: 1, e: "Current ka unit Ampere; Volt = voltage; Watt = power." },
+  { q: "Duniya ka sab se sakht maadi (naturally occurring) kya hai?", o: ["Sona", "Loha", "Heera (Diamond)", "Platinum"], a: 2, e: "Diamond Mohs scale par 10 — sab se sakht natural material." },
+  { q: "Paudhe (plants) kis process se khana banate hain?", o: ["Respiration", "Photosynthesis", "Digestion", "Transpiration"], a: 1, e: "Photosynthesis: CO₂ + pani + sooraj ki roshni → glucose + oxygen." },
+  { q: "Insan ke sar mein kitni haddi (skull bones) hoti hain (baray mein)?", o: ["22", "16", "29", "33"], a: 0, e: "Skull 22 haddiyon ka bana hai (8 cranial + 14 facial)." },
+  { q: "AC current kis ne invent kiya (system)?", o: ["Thomas Edison", "Nikola Tesla", "James Watt", "Volta"], a: 1, e: "Nikola Tesla ne AC induction motor aur AC system develop kiya." },
+  { q: "Zameen ka sab se gehra samandari point?", o: ["Mariana Trench", "Puerto Rico Trench", "Java Trench", "Sunda Trench"], a: 0, e: "Mariana Trench ~10,935 meter gehra hai (Challenger Deep)." },
+  { q: "Antibiotic dawaiyan kis ke khilaf kaam karti hain?", o: ["Virus", "Bacteria", "Fungus", "Qehrab (parasites)"], a: 1, e: "Antibiotics bacteria ko marte hain; virus par asar nahi karti." },
+  { q: "Sab se halka element (atom) kaunsa hai?", o: ["Helium", "Hydrogen", "Lithium", "Oxygen"], a: 1, e: "Hydrogen — 1 proton, 1 electron; universal ka 74% hydrogen hai." },
+  { q: "Penicillin kis ne discover kiya?", o: ["Alexander Fleming", "Marie Curie", "Robert Koch", "Joseph Lister"], a: 0, e: "Fleming ne 1928 mein penicillin mold se discover kiya — pehla antibiotic." },
+  { q: "Ozone layer kis ko rokta hai?", o: ["Infrared", "UV (ultraviolet) radiation", "X-rays", "Radio waves"], a: 1, e: "Ozone UV-B/C rays ko absorb karta hai jo jild ko nuqsan deti hain." },
+  { q: "Zameen apne mehwar (axis) par kitne ghante mein ghoomti hai?", o: ["12", "24", "23h 56m 4s", "25"], a: 2, e: "Sidereal din 23 ghante 56 minute 4 second hai." },
+  { q: "Circulatory system ka markaz (pump) kaunsa organ hai?", o: ["Jigar", "Dil", "Gurda", "Phephra"], a: 1, e: "Dil (heart) khoon ko poore jism mein pump karta hai — ~100,000 beats/day." },
+  { q: "Kis element ka symbol 'Fe' hai?", o: ["Fluorine", "Iron (Loha)", "Francium", "Fermium"], a: 1, e: "Fe Latin 'Ferrum' se — loha." },
+  { q: "Sound ki raftaar hawa mein taqreeban kitni hai?", o: ["343 m/s", "1,500 m/s", "3×10⁸ m/s", "100 m/s"], a: 0, e: "Hawa mein (20°C) awaaz ~343 m/s; pani mein ~1,480 m/s." },
+  { q: "Boiling point of water sea level par (°C)?", o: ["90", "100", "110", "80"], a: 1, e: "1 atmosphere par 100°C; bulandi par pressure kam → jald ubalta hai." },
+  { q: "Gravity ki discovery (universal law) kis ki hai?", o: ["Albert Einstein", "Isaac Newton", "Galileo", "Kepler"], a: 1, e: "Newton ka law of universal gravitation (1687); Einstein ne baad mein general relativity di." },
+  { q: "Sab se lambi haddi (bone) jism mein?", o: ["Femur (raan ki haddi)", "Tibia", "Spine", "Humerus"], a: 0, e: "Femur sab se lambi aur sab se mazboot haddi hai." },
+  { q: "Computer memory ka volatile type kaunsa hai?", o: ["Hard disk", "RAM", "SSD", "USB"], a: 1, e: "RAM bijli gayi to data kho deta hai — isliye volatile." },
+  { q: "Rocket kin usoolon par urta hai?", o: ["Newton ka teesra qanoon", "Bernoulli ka usool", "Archimedes", "Ohm ka qanoon"], a: 0, e: "Action-reaction: gases neeche, rocket upar." },
+  { q: "Insaan ke dimagh mein taqreeban kitne neurons hain?", o: ["86 billion", "8.6 billion", "860 million", "86 million"], a: 0, e: "~86 billion neurons — har ek 1000+ synapses bana sakta hai." },
+  { q: "Mausam ki predict karne wali science?", o: ["Meteorology", "Geology", "Astronomy", "Seismology"], a: 0, e: "Meteorology mosmiyat — hawa, barish, temperature ka study." },
+  { q: "Milk (doodh) ka pH taqreeban kitna hota hai?", o: ["6.5–6.7 (halka tezab)", "8–9 (alkaline)", "4 (strong acid)", "7 (neutral)"], a: 0, e: "Taza doodh halka acidic (6.5–6.7) hota hai; khatta hone par pH aur gir jata hai." },
+];

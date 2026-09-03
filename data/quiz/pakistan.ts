@@ -1,0 +1,33 @@
+import type { QuizQ } from "@/lib/quiz-types";
+
+/** Pakistan Studies — 28 questions. */
+export const PAKISTAN: QuizQ[] = [
+  { q: "Pakistan kab qaim hua?", o: ["14 August 1947", "23 March 1940", "15 August 1947", "14 August 1948"], a: 0, e: "14 August 1947 — 27 Ramzan ke raat ko Pakistan ka qayam hua." },
+  { q: "Pakistan ke pehle Governor-General kaun the?", o: ["Liaquat Ali Khan", "Quaid-e-Azam Muhammad Ali Jinnah", "Khawaja Nazimuddin", "Ayub Khan"], a: 1, e: "Quaid-e-Azam Muhammad Ali Jinnah pehle Governor-General thay." },
+  { q: "Qarardad-e-Pakistan (Lahore Resolution) kab pass hui?", o: ["23 March 1940", "14 August 1947", "23 March 1956", "6 September 1965"], a: 0, e: "23 March 1940, Minto Park (Iqbal Park) Lahore mein." },
+  { q: "Pakistan ka qaumi tarana kis ne likha?", o: ["Allama Iqbal", "Hafeez Jalandhari", "Faiz Ahmed Faiz", "Ahmad Nadeem Qasmi"], a: 1, e: "Hafeez Jalandhari ne likha; dhun (music) Ahmed G. Chagla ne banaya." },
+  { q: "Pakistan ki sab se unhi choti (peak) kaunsi hai?", o: ["K2", "Nanga Parbat", "Tirich Mir", "Rakaposhi"], a: 0, e: "K2 (8,611m) — duniya ki doosri sab se unchi choti bhi hai." },
+  { q: "Pakistan ke qaumi janwar (national animal) kaunsa hai?", o: ["Sher", "Markhor", "Hiran", "Bhalu"], a: 1, e: "Markhor — Himalaya ki pahadi bakri, qaumi janwar hai." },
+  { q: "Sindh ka sab se bara shehar?", o: ["Hyderabad", "Sukkur", "Karachi", "Mirpurkhas"], a: 2, e: "Karachi — Sindh aur Pakistan dono ka sab se bara shehar." },
+  { q: "Pakistan mein kitne provinces hain (2024)?", o: ["4", "5", "6", "3"], a: 0, e: "4 provinces: Punjab, Sindh, KP, Balochistan (+ Islamabad Capital Territory, GB, AJK)." },
+  { q: "Khyber Pass kis se jorta hai?", o: ["Pakistan–India", "Pakistan–Afghanistan", "Pakistan–Iran", "Pakistan–China"], a: 1, e: "Khyber Pass Peshawar ko Kabul se jorta hai — tareekhi khaibar route." },
+  { q: "Indus Basin ka sab se bara dam kaunsa hai?", o: ["Mangla", "Tarbela", "Warsak", "Diamer-Bhasha"], a: 1, e: "Tarbela Dam duniya ke sab se baray earth-fill dams mein shumar hai." },
+  { q: "Pakistan ki qaumi zuban kya hai?", o: ["Punjabi", "Urdu", "Sindhi", "English"], a: 1, e: "Urdu qaumi zuban hai; English official raabta zuban hai." },
+  { q: "Shah Abdul Latif Bhittai ka mazar kahan hai?", o: ["Bhit Shah, Sindh", "Multan", "Uch Sharif", "Sehwan"], a: 0, e: "Sindhi ke mashhoor sufi shair Shah Abdul Latif Bhittai ka mazar Bhit Shah (Sindh) mein hai." },
+  { q: "6 September ko kya din manaya jata hai?", o: ["Youm-e-Difa (Defence Day)", "Kashmir Day", "Iqbal Day", "Quaid Day"], a: 0, e: "6 September 1965 ki jang ke yaad mein Youm-e-Difa." },
+  { q: "Allama Iqbal ka mazar kahan hai?", o: ["Lahore", "Sialkot", "Islamabad", "Multan"], a: 0, e: "Badshahi Masjid ke baghal, Lahore mein mara qabristan — Hazuri Bagh." },
+  { q: "Pakistan ka sab se bara district (area) kaunsa hai?", o: ["Chagai", "Tharparkar", "Khuzdar", "Dera Ghazi Khan"], a: 0, e: "Chagai, Balochistan — sab se bara district area mein." },
+  { q: "Mohtarma Fatima Jinnah ka laqab kya tha?", o: ["Madar-e-Millat", "Shaheed-e-Millat", "Shair-e-Mashriq", "Bani-e-Pakistan"], a: 0, e: "Fatima Jinnah 'Madar-e-Millat' kehlai jati hain." },
+  { q: "Pakistan mein pehla constitution kab nafiz hua?", o: ["1947", "1956", "1962", "1973"], a: 1, e: "23 March 1956 — Pakistan Islami Jamhooria bana." },
+  { q: "Habib Bank ka headquarter kahan hai?", o: ["Lahore", "Karachi", "Islamabad", "Rawalpindi"], a: 1, e: "HBL ka HQ Karachi mein hai — Pakistan ka sab se bara bank." },
+  { q: "Sindhu Darya (Indus) kis se nikalta hai?", o: ["Himalaya", "Tibet (Kailash range)", "Karakoram", "Hindu Kush"], a: 1, e: "Sindhu darya Tibet ke nami mane se uthta hai aur Pakistan se guzar kar samandar milta hai." },
+  { q: "Pakistan Aaj Tak kitni dafa cricket World Cup jeet chuka hai?", o: ["1", "2", "3", "0"], a: 1, e: "1992 (50-over, Imran Khan captaincy) + 2009 T20 World Cup." },
+  { q: "Gwadar Port kis se mil kar banaya ja raha hai?", o: ["China", "Saudi Arabia", "UAE", "Turkey"], a: 0, e: "CPEC — China Pakistan Economic Corridor ke tehat Gwadar taraqqi pa raha hai." },
+  { q: "Pakistan ka pehla Nobel Prize kis ne jeeta?", o: ["Dr. Abdus Salam", "Malala Yousafzai", "Abdul Qadeer Khan", "Salimuzzaman Siddiqui"], a: 0, e: "Dr. Abdus Salam — Physics 1979 (electroweak unification)." },
+  { q: "Kashmir ka sab se bara shehar?", o: ["Muzaffarabad", "Srinagar", "Gilgit", "Mirpur"], a: 1, e: "Srinagar — Indian-administered Kashmir ka bara shehar; Muzaffarabad AJK ka darul hukumat." },
+  { q: "Pakistan ki flag mein sabz rang kya zahir karta hai?", o: ["Islam", "Qurbani", "Barozgi", "Aman"], a: 0, e: "Sabz rang Islam ki numaindai karta hai; safaid aqliyat ke huqooq; chand tara taraqqi." },
+  { q: "Rohtas Fort kis ne banwaya?", o: ["Sher Shah Suri", "Akbar", "Aurangzeb", "Ranjit Singh"], a: 0, e: "Sher Shah Suri ne 1540s mein Jhelum ke qareeb banwaya — UNESCO site." },
+  { q: "Sartaj Aziz ka taalluq kis field se tha?", o: ["Cricket", "Economics/Politics", "Fauj", "Films"], a: 1, e: "Sartaj Aziz economist aur statesman thay — finance aur foreign affairs minister rahe." },
+  { q: "Badshahi Masjid kis ne banaee?", o: ["Aurangzeb", "Shah Jahan", "Jahangir", "Babur"], a: 0, e: "Aurangzeb Alamgir ne 1673 mein Lahore mein banaee — duniya ki bari masajid mein." },
+  { q: "Pakistan ka sab se bara industry (exports) kaunsi hai?", o: ["Textile", "IT", "Sports goods", "Cement"], a: 0, e: "Textile ~60% exports — cotton, yark, garment." },
+];
