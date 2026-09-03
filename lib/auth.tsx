@@ -10,13 +10,16 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  getRedirectResult,
   onAuthStateChanged,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signInWithPhoneNumber,
+  signInWithRedirect,
   signOut,
   updateProfile,
+  type AuthProvider,
   type RecaptchaVerifier,
   type User,
 } from "firebase/auth";
@@ -30,6 +33,8 @@ type AuthCtx = {
   user: AuthUser | null;
   loading: boolean;
   configured: boolean;
+  /** true while we are bouncing the user to Google's redirect flow */
+  redirecting: boolean;
   loginGoogle: () => Promise<void>;
   loginEmail: (email: string, password: string) => Promise<void>;
   signupEmail: (name: string, email: string, password: string) => Promise<void>;
@@ -38,6 +43,36 @@ type AuthCtx = {
   resetPassword: (email: string) => Promise<void>;
   logout: () => Promise<void>;
 };
+
+/* ── popup → redirect strategy ────────────────────────────────────────────
+ * Sandboxed iframes (preview embeds) and mobile in-app browsers block popups.
+ * Strategy: top-level desktop → popup first; iframe/mobile → straight to
+ * redirect; popup-blocked/closed errors → silent redirect fallback (no error
+ * is ever surfaced to the user).
+ * ------------------------------------------------------------------------ */
+const POPUP_FALLBACK_CODES = new Set([
+  "auth/popup-blocked",
+  "auth/popup-closed-by-user",
+  "auth/cancelled-popup-request",
+  "auth/popup-blocked-by-browser",
+  // some embedded/strict environments throw these instead of popup-blocked
+  // when window.open is unavailable — the redirect flow then surfaces the real cause
+  "auth/internal-error",
+  "auth/operation-not-supported-in-this-environment",
+]);
+
+function inIframe(): boolean {
+  try {
+    return window.self !== window.top;
+  } catch {
+    return true; // cross-origin frame access throws → we ARE framed
+  }
+}
+
+function isMobileBrowser(): boolean {
+  if (typeof navigator === "undefined") return false;
+  return /Android|iPhone|iPad|iPod|Mobile|Silk/i.test(navigator.userAgent);
+}
 
 const Ctx = createContext<AuthCtx | null>(null);
 
@@ -88,12 +123,18 @@ async function ensureUserDoc(u: User, displayName?: string) {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [fbUser, setFbUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [redirecting, setRedirecting] = useState(false);
 
   useEffect(() => {
     if (!isFirebaseConfigured) {
       setLoading(false);
       return;
     }
+    // resolve any signInWithRedirect return (user lands back here logged in;
+    // guest merge runs via onAuthStateChanged → ensureUserDoc below)
+    getRedirectResult(fbAuth()).catch((e) => {
+      console.error("[auth] redirect sign-in failed:", (e as { code?: string }).code ?? e);
+    });
     const unsub = onAuthStateChanged(fbAuth(), (u) => {
       setFbUser(u);
       if (u) {
@@ -116,10 +157,39 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
   }, [fbUser]);
 
-  const loginGoogle = useCallback(async () => {
-    const provider = new GoogleAuthProvider();
-    await signInWithPopup(fbAuth(), provider);
+  /**
+   * popup first on desktop; iframe/mobile → redirect; blocked popup → silent
+   * redirect fallback. Redirect-flow failures (offline / blocked navigation)
+   * are never surfaced as raw auth/* codes — only a friendly message.
+   */
+  const loginWithProvider = useCallback(async (provider: AuthProvider) => {
+    const goToRedirect = async () => {
+      setRedirecting(true);
+      try {
+        await signInWithRedirect(fbAuth(), provider);
+      } catch {
+        // redirect could not even start (offline / blocked) — friendly note, no auth codes
+        setRedirecting(false);
+        throw new Error("Google tak pahunch nahi ban raha — internet connection check kar ke dobara koshish karo.");
+      }
+    };
+    if (inIframe() || isMobileBrowser()) {
+      await goToRedirect();
+      return;
+    }
+    try {
+      await signInWithPopup(fbAuth(), provider);
+    } catch (e) {
+      const code = (e as { code?: string }).code ?? "";
+      if (POPUP_FALLBACK_CODES.has(code)) {
+        await goToRedirect();
+        return;
+      }
+      throw e;
+    }
   }, []);
+
+  const loginGoogle = useCallback(() => loginWithProvider(new GoogleAuthProvider()), [loginWithProvider]);
 
   const loginEmail = useCallback(async (email: string, password: string) => {
     await signInWithEmailAndPassword(fbAuth(), email, password);
@@ -165,6 +235,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         user,
         loading,
         configured: isFirebaseConfigured,
+        redirecting,
         loginGoogle,
         loginEmail,
         signupEmail,

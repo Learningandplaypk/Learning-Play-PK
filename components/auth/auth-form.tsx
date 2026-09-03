@@ -14,7 +14,7 @@ type Mode = "login" | "signup" | "forgot" | "phone-otp";
 
 export function AuthForm({ mode: initial }: { mode: "login" | "signup" | "forgot" }) {
   const [mode, setMode] = useState<Mode>(initial);
-  const { user, configured, loginGoogle, loginEmail, signupEmail, loginPhone, confirmOtp, resetPassword, logout } = useAuth();
+  const { user, configured, redirecting, loginGoogle, loginEmail, signupEmail, loginPhone, confirmOtp, resetPassword, logout } = useAuth();
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -56,7 +56,9 @@ export function AuthForm({ mode: initial }: { mode: "login" | "signup" | "forgot
     try {
       const { RecaptchaVerifier } = await import("firebase/auth");
       const { fbAuth } = await import("@/lib/firebase");
-      const verifier = new RecaptchaVerifier(fbAuth(), "recaptcha-container", { size: "invisible" });
+      // inline widget ("normal") — renders inside the form, never as a popup
+      // (popups are blocked inside sandboxed preview iframes)
+      const verifier = new RecaptchaVerifier(fbAuth(), "recaptcha-container", { size: "normal" });
       const formatted = phone.startsWith("+92") ? phone : `+92${phone.replace(/^0/, "")}`;
       await loginPhone(formatted, verifier);
       setMode("phone-otp");
@@ -141,13 +143,25 @@ export function AuthForm({ mode: initial }: { mode: "login" | "signup" | "forgot
             </div>
 
             <div className="space-y-2.5">
-              <Button variant="ghost" className="w-full" disabled={busy || !configured} onClick={() => run(loginGoogle)}>
-                <span className="text-base">🇬</span> Google se continue karo
+              <Button variant="ghost" className="w-full" disabled={busy || !configured || redirecting} onClick={() => run(loginGoogle)}>
+                {redirecting ? (
+                  "🌐 Google par le ja rahe hain…"
+                ) : (
+                  <>
+                    <span className="text-base">🇬</span> Google se continue karo
+                  </>
+                )}
               </Button>
               <Button variant="ghost" className="w-full" disabled={busy || !configured} onClick={startPhone}>
                 📱 Phone OTP (JazzCash/EasyPaisa wala number)
               </Button>
             </div>
+
+            {redirecting && (
+              <p className="mt-3 rounded-xl bg-electric/15 p-3 text-center text-xs font-semibold text-electric" role="status" aria-live="polite">
+                🌐 Google par le ja rahe hain… wapas aate hi aap login ho jao ge (progress auto-merge).
+              </p>
+            )}
 
             <p className="mt-5 text-center text-xs text-muted">
               {mode === "login" ? (
