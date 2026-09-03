@@ -78,8 +78,8 @@ describe("English content minimums (master prompt section 4)", () => {
 });
 
 describe("Quiz banks", () => {
-  it.each(TOPICS)("%s has 20+ unique questions, single correct option each", (_, bank) => {
-    expect(bank.length).toBeGreaterThanOrEqual(20);
+  it.each(TOPICS)("%s has 50+ unique questions, single correct option each", (_, bank) => {
+    expect(bank.length).toBeGreaterThanOrEqual(50);
     const texts = new Set(bank.map((q) => q.q));
     expect(texts.size).toBe(bank.length);
     for (const q of bank) {
@@ -90,9 +90,9 @@ describe("Quiz banks", () => {
     }
   });
 
-  it("total pool ≥ 200 (millionaire needs 15 + topic variety)", () => {
+  it("total pool ≥ 450 (millionaire needs 15 + topic variety)", () => {
     const total = TOPICS.reduce((n, [, b]) => n + b.length, 0);
-    expect(total).toBeGreaterThanOrEqual(200);
+    expect(total).toBeGreaterThanOrEqual(450);
   });
 });
 
