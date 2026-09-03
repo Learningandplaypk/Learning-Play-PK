@@ -35,8 +35,8 @@ describe("English content minimums (master prompt section 4)", () => {
     expect(set.size).toBe(ENGLISH_WORDS.length);
   });
 
-  it("≥82 grammar MCQs — each exactly one correct answer + explanation", () => {
-    expect(GRAMMAR.length).toBeGreaterThanOrEqual(82);
+  it("120 grammar MCQs — each exactly one correct answer + explanation", () => {
+    expect(GRAMMAR.length).toBeGreaterThanOrEqual(120);
     for (const q of GRAMMAR) {
       expect(q.o.length).toBeGreaterThanOrEqual(3);
       expect(q.a).toBeGreaterThanOrEqual(0);
@@ -127,13 +127,13 @@ describe("Games catalog integrity", () => {
 });
 
 describe("Languages + badges", () => {
-  it("7 foreign language packs (english = full course, separate data); each with 50+ words and 15+ phrases", () => {
+  it("7 foreign language packs (english = full course, separate data); 100 words + 30 phrases each", () => {
     const langs = Object.values(LANGUAGES);
     expect(langs.length).toBe(7);
     expect(Object.keys(LANGUAGES)).toContain("arabic");
     for (const l of langs) {
-      expect(l.words.length).toBeGreaterThanOrEqual(50);
-      expect(l.phrases.length).toBeGreaterThanOrEqual(15);
+      expect(l.words.length).toBeGreaterThanOrEqual(100);
+      expect(l.phrases.length).toBeGreaterThanOrEqual(30);
       for (const w of l.words) {
         expect(w.roman.length).toBeGreaterThan(0);
         expect(w.en.length).toBeGreaterThan(0);
