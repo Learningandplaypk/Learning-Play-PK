@@ -16,9 +16,9 @@ npm run dev          # http://localhost:3000
 
 | Zone | Games |
 |---|---|
-| 📚 **Learn (8 × 8 languages)** | Word Builder, Grammar Quest, Vocabulary Battle, Sentence Puzzle, Listening Challenge, Story Builder, Pronunciation Game, Idiom Master — English full course (300 words + Urdu meanings, 82 grammar MCQs, 36 sentences, 40 idioms, 10 stories) + 7 languages (Arabic w/ Quranic vocab, Turkish, Chinese, French, Spanish, Korean, Japanese) |
+| 📚 **Learn (8 × 8 languages)** | Word Builder, Grammar Quest, Vocabulary Battle, Sentence Puzzle, Listening Challenge, Story Builder, Pronunciation Game, Idiom Master — English full course (304 words + Urdu meanings, 120 grammar MCQs, 60 sentences, 40 idioms, 10 stories) + 7 languages @ 100 words + 30 phrases each (Arabic w/ Quranic vocab, Turkish, Chinese, French, Spanish, Korean, Japanese) |
 | 🧠 **Brain (10)** | Memory Match, Pattern Recall, Math Speed, Stroop Test, Simon Says, Reaction Time, Logic Puzzles, Sudoku, 2048, Chess vs AI |
-| ❓ **Quiz (10)** | GK, Pakistan Studies, Science, Islamic, History, Geography, Sports, Tech, Movies + **Millionaire** (15 Q, 50-50/Ask-Audience/Skip lifelines, safe havens) |
+| ❓ **Quiz (10)** | GK, Pakistan Studies, Science, Islamic, History, Geography, Sports, Tech, Movies — **50+ questions each (450+ total)** + **Millionaire** (15 Q, 50-50/Ask-Audience/Skip lifelines, safe havens) |
 | 🕹️ **Fun (15)** | Snake 3D, 2048, Flappy, Crossword, Word Search, Tic Tac Toe 3D, Racing 3D, Fruit Ninja, Tetris, Bubble Shooter, Typing Test, Hangman, Jumble, Connect 4, Minesweeper |
 
 Gamification: XP formula, **levels 1–50** (Newbie → Legend), daily streak (Asia/Karachi + freezes), coins, **30 badges**, 7-day daily chests, leaderboards, free-plan limits (5 games + 3 lessons/day) with fair upsell, guest mode with merge-on-login.
