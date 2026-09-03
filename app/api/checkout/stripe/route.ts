@@ -1,17 +1,18 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { jsonError, parseBody, PRICES, coinsPrice } from "@/lib/checkout-shared";
+import { envStr, getSiteUrl } from "@/lib/env";
 
 export const runtime = "nodejs";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
+const SITE = getSiteUrl();
 
 /**
  * Stripe Checkout (test + live). Requires STRIPE_SECRET_KEY.
  * Webhook at /api/webhooks/stripe activates premium / credits coins.
  */
 export async function POST(req: Request) {
-  const secret = process.env.STRIPE_SECRET_KEY;
+  const secret = envStr("STRIPE_SECRET_KEY");
   if (!secret) {
     return jsonError(
       "Stripe configure nahi hai (STRIPE_SECRET_KEY missing). .env.local mein key daalein — code production-ready hai, test mode keys se hi chal jayega.",

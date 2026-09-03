@@ -1,6 +1,8 @@
+import { getSiteUrl } from "@/lib/env";
+
 /** JSON-LD Game schema for game pages. */
 export function GAME_JSON_LD({ name, description, slug, emoji }: { name: string; description: string; slug: string; emoji: string }) {
-  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
+  const SITE = getSiteUrl();
   const json = {
     "@context": "https://schema.org",
     "@type": "Game",

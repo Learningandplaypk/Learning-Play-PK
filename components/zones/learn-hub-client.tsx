@@ -54,7 +54,7 @@ export function LearnHubClient() {
           ))}
         </div>
       </div>
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_LEARN} className="mx-auto mt-12 max-w-2xl" />
+      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_LEARN || undefined} className="mx-auto mt-12 max-w-2xl" />
     </div>
   );
 }

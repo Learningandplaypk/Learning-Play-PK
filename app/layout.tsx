@@ -8,12 +8,13 @@ import { Providers } from "@/components/providers";
 import { Navbar, MobileTabs } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { VercelAnalytics } from "@/components/vercel-analytics";
+import { getSiteUrl, siteUrlObj } from "@/lib/env";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
+const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: siteUrlObj(),
   title: {
     default: "Learn & Play PK — Seekho + Khelo | 3D Language Learning & Games",
     template: "%s | Learn & Play PK",

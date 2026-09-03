@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { createHmac } from "crypto";
 import { jsonError, parseBody, PRICES, coinsPrice } from "@/lib/checkout-shared";
+import { envStr, envStrOr, getSiteUrl } from "@/lib/env";
 
 export const runtime = "nodejs";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
+const SITE = getSiteUrl();
 
 /**
  * Safepay checkout (JazzCash / EasyPaisa / Pakistani cards).
@@ -13,8 +14,8 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
  * Webhook at /api/webhooks/safepay verifies x-safepay-signature (HMAC-SHA256).
  */
 export async function POST(req: Request) {
-  const key = process.env.SAFEPAY_SECRET_KEY;
-  const env = process.env.SAFEPAY_ENV ?? "sandbox";
+  const key = envStr("SAFEPAY_SECRET_KEY");
+  const env = envStrOr("SAFEPAY_ENV", "sandbox");
   if (!key) {
     return jsonError(
       "Safepay configure nahi hai (SAFEPAY_SECRET_KEY missing). getsafepay.com par account bana kar sandbox keys .env.local mein daalein.",
