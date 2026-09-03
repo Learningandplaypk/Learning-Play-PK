@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createHmac, timingSafeEqual } from "crypto";
 import { adminDb, isAdminConfigured } from "@/lib/firebase-admin";
+import { envStr } from "@/lib/env";
 
 export const runtime = "nodejs";
 
@@ -9,7 +10,7 @@ export const runtime = "nodejs";
  * Activates premium / credits coins. Docs: docs.getsafepay.com
  */
 export async function POST(req: Request) {
-  const secret = process.env.SAFEPAY_SECRET_KEY;
+  const secret = envStr("SAFEPAY_SECRET_KEY");
   if (!secret) return NextResponse.json({ received: false, reason: "not configured" }, { status: 503 });
   const raw = await req.text();
   const sig = req.headers.get("x-safepay-signature") ?? "";

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { adminDb, isAdminConfigured } from "@/lib/firebase-admin";
 import { pktDayKey, pktDayOffset } from "@/lib/utils";
+import { envStr, envStrOr } from "@/lib/env";
 import { Resend } from "resend";
 
 export const runtime = "nodejs";
@@ -10,7 +11,7 @@ export const runtime = "nodejs";
  * Configure in vercel.json: path /api/cron/streak-reminder — CRON_SECRET protects it.
  */
 export async function GET(req: Request) {
-  const secret = process.env.CRON_SECRET;
+  const secret = envStr("CRON_SECRET");
   const auth = req.headers.get("authorization") ?? "";
   if (secret && auth !== `Bearer ${secret}`) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
@@ -32,12 +33,13 @@ export async function GET(req: Request) {
     if (lastActiveDay === yesterday || lastActiveDay === today) {
       if (lastActiveDay === today) return;
       const email = u.email as string | undefined;
-      if (email && process.env.RESEND_API_KEY) {
-        const resend = new Resend(process.env.RESEND_API_KEY);
+      const resendKey = envStr("RESEND_API_KEY");
+      if (email && resendKey) {
+        const resend = new Resend(resendKey);
         jobs.push(
           resend.emails
             .send({
-              from: process.env.EMAIL_FROM ?? "Learn & Play PK <salam@learnplaypk.com>",
+              from: envStrOr("EMAIL_FROM", "Learn & Play PK <salam@learnplaypk.com>"),
               to: email,
               subject: `🔥 Aaj ka streak bacha lo! (${u.streak} din)`,
               text: `Sirf aaj ka ek game aur — aapka ${u.streak} din ka streak zinda rahega. Chalo ek tez game lagate hain: https://learnplaypk.com/fun`,
@@ -48,11 +50,12 @@ export async function GET(req: Request) {
       }
       // FCM push
       const token = u.fcmToken as string | undefined;
-      if (token && process.env.FCM_SERVER_KEY) {
+      const fcmKey = envStr("FCM_SERVER_KEY");
+      if (token && fcmKey) {
         jobs.push(
           fetch("https://fcm.googleapis.com/fcm/send", {
             method: "POST",
-            headers: { Authorization: `key=${process.env.FCM_SERVER_KEY}`, "Content-Type": "application/json" },
+            headers: { Authorization: `key=${fcmKey}`, "Content-Type": "application/json" },
             body: JSON.stringify({ to: token, notification: { title: "Aaj ka streak bacha lo! 🔥", body: `${u.streak} din ka streak — ek game bas!`, click_action: "https://learnplaypk.com/fun" } }),
           }).catch(() => {})
         );

@@ -22,7 +22,7 @@ export function QuizClient() {
           🔥 Hot Seat par baitho
         </Link>
       </TiltCard>
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_QUIZ} className="mx-auto mt-10 max-w-2xl" />
+      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_QUIZ || undefined} className="mx-auto mt-10 max-w-2xl" />
     </div>
   );
 }

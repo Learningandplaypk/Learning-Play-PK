@@ -12,8 +12,8 @@ import { Button } from "./ui";
  *   ("Watch ad → +1 heart") and hides itself gracefully when unconfigured or unfilled.
  */
 
-const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
-const REWARDED_SLOT = process.env.NEXT_PUBLIC_ADSENSE_REWARDED_SLOT ?? "";
+const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "";
+const REWARDED_SLOT = process.env.NEXT_PUBLIC_ADSENSE_REWARDED_SLOT || "";
 
 let scriptInjected = false;
 function injectAdSense() {

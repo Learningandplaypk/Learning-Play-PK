@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { adminDb, isAdminConfigured } from "@/lib/firebase-admin";
 import { Resend } from "resend";
+import { envStr, envStrOr } from "@/lib/env";
 
 export const runtime = "nodejs";
 
@@ -10,8 +11,8 @@ export const runtime = "nodejs";
  * in Firestore. Requires STRIPE_WEBHOOK_SECRET + Firebase admin credentials.
  */
 export async function POST(req: Request) {
-  const secret = process.env.STRIPE_SECRET_KEY;
-  const whsec = process.env.STRIPE_WEBHOOK_SECRET;
+  const secret = envStr("STRIPE_SECRET_KEY");
+  const whsec = envStr("STRIPE_WEBHOOK_SECRET");
   if (!secret || !whsec) {
     return NextResponse.json({ received: false, reason: "Stripe webhook not configured (server keys missing)" }, { status: 503 });
   }
@@ -57,13 +58,14 @@ export async function POST(req: Request) {
         );
       }
       // receipt email (best-effort)
-      if (process.env.RESEND_API_KEY) {
+      const resendKey = envStr("RESEND_API_KEY");
+      if (resendKey) {
         try {
           const email = session.customer_details?.email;
           if (email) {
-            const resend = new Resend(process.env.RESEND_API_KEY);
+            const resend = new Resend(resendKey);
             await resend.emails.send({
-              from: process.env.EMAIL_FROM ?? "Learn & Play PK <billing@learnplaypk.com>",
+              from: envStrOr("EMAIL_FROM", "Learn & Play PK <billing@learnplaypk.com>"),
               to: email,
               subject: "Receipt — Learn & Play PK",
               text: `Shukriya! Aapka payment receive ho gaya (${planId}${coins ? `, ${coins} coins` : ""}). Khelna jari rakho! 🎮`,

@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 import { LEARN_GAME_DATA, BRAIN_GAME_DATA, QUIZ_TOPIC_DATA, FUN_GAME_DATA } from "@/lib/games-data";
 import { LANG_PATHS } from "@/lib/lang-paths";
 import { POSTS } from "@/data/blog";
+import { getSiteUrl } from "@/lib/env";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnplaypk.com";
+const SITE = getSiteUrl();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
