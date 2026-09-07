@@ -8,13 +8,13 @@ const COLS = 10;
 const ROWS = 18;
 
 const SHAPES: Array<{ cells: number[][]; color: string }> = [
-  { cells: [[1, 1, 1, 1]], color: "#2d7cff" }, // I
+  { cells: [[1, 1, 1, 1]], color: "#2563EB" }, // I
   { cells: [[1, 1], [1, 1]], color: "#ffd60a" }, // O
-  { cells: [[0, 1, 0], [1, 1, 1]], color: "#b026ff" }, // T
-  { cells: [[1, 0, 0], [1, 1, 1]], color: "#39ff14" }, // J
-  { cells: [[0, 0, 1], [1, 1, 1]], color: "#ff7a00" }, // L
-  { cells: [[0, 1, 1], [1, 1, 0]], color: "#ff2e97" }, // S
-  { cells: [[1, 1, 0], [0, 1, 1]], color: "#00e5ff" }, // Z
+  { cells: [[0, 1, 0], [1, 1, 1]], color: "#7C3AED" }, // T
+  { cells: [[1, 0, 0], [1, 1, 1]], color: "#178A55" }, // J
+  { cells: [[0, 0, 1], [1, 1, 1]], color: "#F5A524" }, // L
+  { cells: [[0, 1, 1], [1, 1, 0]], color: "#E8467C" }, // S
+  { cells: [[1, 1, 0], [0, 1, 1]], color: "#2563EB" }, // Z
 ];
 
 type Piece = { cells: number[][]; color: string; x: number; y: number };
@@ -147,8 +147,7 @@ export default function Tetris({ onEnd }: GameProps) {
 
   return (
     <div
-      className="mx-auto flex max-w-md touch-none flex-col items-center select-none"
-      onTouchStart={(e) => (touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY })}
+      className="mx-auto flex max-w-md touch-none flex-col items-center select-none"onTouchStart={(e) => (touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY })}
       onTouchEnd={(e) => {
         if (!touch.current) return;
         const dx = e.changedTouches[0].clientX - touch.current.x;
@@ -172,24 +171,23 @@ export default function Tetris({ onEnd }: GameProps) {
         <span className="chip">📏 {lines} lines</span>
         <span className="chip">⚡ Lv {level}</span>
       </div>
-      <div className="glass p-1.5">
+      <div className="card p-1.5">
         <div className="grid gap-px" style={{ gridTemplateColumns: `repeat(${COLS}, 1fr)` }}>
           {view.flat().map((color, i) => (
             <div
               key={i}
-              className="aspect-square w-[max(3.2vw,14px)] rounded-[3px]"
-              style={{ background: color ?? "rgba(255,255,255,0.04)", boxShadow: color ? `0 0 10px ${color}66, inset 0 1px 2px rgba(255,255,255,.35)` : "none" }}
+              className="aspect-square w-[max(3.2vw,14px)] rounded-[3px]"style={{ background: color ?? "var(--surface-2)", boxShadow: color ? "inset 0 1px 2px rgba(255,255,255,.35)" : "none" }}
             />
           ))}
         </div>
       </div>
-      {over && <p className="mt-3 font-display text-xl font-black text-gradient">Game Over — {score} points!</p>}
+      {over && <p className="mt-3 font-display text-xl font-black ">Game Over — {score} points!</p>}
       <p className="mt-2 text-center text-[11px] text-muted">← → move • ↑ rotate • ↓ soft drop • Space hard drop • mobile: swipe</p>
       <div className="mt-2 grid grid-cols-4 gap-1.5 sm:hidden">
-        <button className="btn btn-ghost !px-3 !py-1.5" onClick={() => { const p = pieceRef.current; if (!collides(p, p.x - 1, p.y)) p.x--; setTick((t) => t + 1); }} aria-label="Left">←</button>
-        <button className="btn btn-ghost !px-3 !py-1.5" onClick={() => { const p = pieceRef.current; const rot = rotate(p.cells); if (!collides(p, p.x, p.y, rot)) p.cells = rot; setTick((t) => t + 1); }} aria-label="Rotate">⟳</button>
-        <button className="btn btn-ghost !px-3 !py-1.5" onClick={() => { const p = pieceRef.current; if (!collides(p, p.x + 1, p.y)) p.x++; setTick((t) => t + 1); }} aria-label="Right">→</button>
-        <button className="btn btn-ghost !px-3 !py-1.5" onClick={() => step()} aria-label="Down">↓</button>
+        <button className="btn btn-secondary !px-3 !py-1.5" onClick={() => { const p = pieceRef.current; if (!collides(p, p.x - 1, p.y)) p.x--; setTick((t) => t + 1); }} aria-label="Left">←</button>
+        <button className="btn btn-secondary !px-3 !py-1.5" onClick={() => { const p = pieceRef.current; const rot = rotate(p.cells); if (!collides(p, p.x, p.y, rot)) p.cells = rot; setTick((t) => t + 1); }} aria-label="Rotate">⟳</button>
+        <button className="btn btn-secondary !px-3 !py-1.5" onClick={() => { const p = pieceRef.current; if (!collides(p, p.x + 1, p.y)) p.x++; setTick((t) => t + 1); }} aria-label="Right">→</button>
+        <button className="btn btn-secondary !px-3 !py-1.5" onClick={() => step()} aria-label="Down">↓</button>
       </div>
     </div>
   );

@@ -22,9 +22,7 @@ export function jsonError(message: string, status = 400) {
   return NextResponse.json({ error: message }, { status });
 }
 
-export const PRICES: Record<string, { amount: number; label: string }> = {
-  "premium-monthly": { amount: 399, label: "Learn & Play PK Premium (Monthly)" },
-  "premium-yearly": { amount: 3990, label: "Learn & Play PK Premium (Yearly)" },
+export const PRICES: Record<string, { amount: number; label: string }> = {"premium-monthly": { amount: 399, label: "Learn & Play PK Premium (Monthly)" },"premium-yearly": { amount: 3990, label: "Learn & Play PK Premium (Yearly)" },
 };
 
 export function coinsPrice(coins: number): number {

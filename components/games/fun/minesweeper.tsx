@@ -36,7 +36,7 @@ function build(seed: number): Cell[][] {
   return grid;
 }
 
-const NUM_COLORS = ["", "#2d7cff", "#39ff14", "#ff7a00", "#ff2e97", "#b026ff", "#00e5ff", "#f4f6ff", "#8b90b0"];
+const NUM_COLORS = ["", "#2563EB", "#178A55", "#F5A524", "#E8467C", "#7C3AED", "#2563EB", "#F2F2EE", "#9A9CA4"];
 
 export default function Minesweeper({ onEnd }: GameProps) {
   const [{ grid: initial }] = useState(() => ({ grid: build(Math.floor(Math.random() * 1e9)) }));
@@ -104,7 +104,7 @@ export default function Minesweeper({ onEnd }: GameProps) {
         <span className="chip">🚩 {flagsLeft}</span>
         <span className="chip">{status === "play" ? "⛏️ Khodo!" : status === "won" ? "🏆 Jeet!" : "💥 Boom"}</span>
       </div>
-      <div className="glass grid gap-1 p-2" style={{ gridTemplateColumns: `repeat(${SIZE}, 1fr)` }}>
+      <div className="card grid gap-1 p-2" style={{ gridTemplateColumns: `repeat(${SIZE}, 1fr)` }}>
         {grid.flat().map((cell, i) => {
           const r = Math.floor(i / SIZE);
           const c = i % SIZE;
@@ -135,10 +135,7 @@ export default function Minesweeper({ onEnd }: GameProps) {
               className={`grid aspect-square place-items-center rounded-md font-display text-sm font-black transition sm:text-base ${
                 cell.open
                   ? cell.mine
-                    ? "bg-pink-accent/30"
-                    : "bg-white/[0.03]"
-                  : "bg-white/10 hover:bg-white/15 active:scale-95"
-              }`}
+                    ? "bg-accent/30": "bg-surface-2": "bg-surface-2 hover:bg-surface-2 active:scale-95"}`}
               style={{ color: cell.open && !cell.mine ? NUM_COLORS[cell.n] : undefined }}
               aria-label={`Cell ${r},${c}${cell.open ? (cell.mine ? " mine" : ` ${cell.n}`) : " hidden"}`}
             >

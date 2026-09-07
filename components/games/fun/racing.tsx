@@ -1,234 +1,294 @@
 "use client";
 
-import * as THREE from "three";
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { useEffect, useRef, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { SceneBoundary } from "@/components/scene-boundary";
 import { sfx } from "@/lib/sfx";
+import { usePalette, roundRect, type Palette } from "@/lib/canvas-theme";
 
-const ROAD_W = 7;
+/* Neon Racer — Canvas 2D with a fake-perspective road.
+   Same gameplay (dodge blocks, distance score), zero WebGL. */
 
-type Obstacle = { z: number; x: number; id: number };
+const LANES = 2.6; // half-width of the road in world units
+const CAR_SPEED = 0.055; // lateral units per frame step
+const SPEED_START = 9;
+const SPEED_MAX = 26;
 
-let oid = 1;
+type Obstacle = { z: number; x: number };
 
-function Road({ speedRef }: { speedRef: React.MutableRefObject<number> }) {
-  const stripes = useRef<THREE.Group>(null);
-  const count = 14;
-  useFrame((_, delta) => {
-    const g = stripes.current;
-    if (!g) return;
-    g.children.forEach((child) => {
-      child.position.z += speedRef.current * delta * 26;
-      if (child.position.z > 12) child.position.z -= count * 2;
-    });
-  });
-  return (
-    <group>
-      {/* road plane */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, -40]}>
-        <planeGeometry args={[ROAD_W, 140]} />
-        <meshStandardMaterial color="#0b0d1c" roughness={0.9} />
-      </mesh>
-      {/* neon edges */}
-      {[-ROAD_W / 2, ROAD_W / 2].map((x) => (
-        <mesh key={x} position={[x, -0.45, -40]}>
-          <boxGeometry args={[0.12, 0.06, 140]} />
-          <meshBasicMaterial color={x < 0 ? "#39ff14" : "#ff2e97"} toneMapped={false} />
-        </mesh>
-      ))}
-      {/* center dashes */}
-      <group ref={stripes}>
-        {Array.from({ length: count }, (_, i) => (
-          <mesh key={i} position={[0, -0.44, -i * 2]}>
-            <boxGeometry args={[0.16, 0.04, 1]} />
-            <meshBasicMaterial color="#f4f6ff" transparent opacity={0.75} toneMapped={false} />
-          </mesh>
-        ))}
-      </group>
-    </group>
-  );
+function project(z: number, x: number, w: number, h: number, horizon: number) {
+  const scale = 1 / z;
+  const y = horizon + (h - horizon) * scale;
+  const cx = w / 2 + x * scale * (w * 0.42);
+  const halfRoad = (w * 0.46) * scale;
+  return { y, cx, halfRoad };
 }
 
-function Car({ xRef, crashed }: { xRef: React.MutableRefObject<number>; crashed: boolean }) {
-  const g = useRef<THREE.Group>(null);
-  useFrame((_, delta) => {
-    if (!g.current) return;
-    g.current.position.x += (xRef.current - g.current.position.x) * Math.min(1, delta * 10);
-    g.current.rotation.z = (xRef.current - g.current.position.x) * -0.25;
-  });
-  return (
-    <group ref={g} position={[0, 0, 4]}>
-      <mesh position={[0, 0.1, 0]}>
-        <boxGeometry args={[1.1, 0.5, 2]} />
-        <meshStandardMaterial color={crashed ? "#ff2e3f" : "#2d7cff"} emissive={crashed ? "#ff2e3f" : "#2d7cff"} emissiveIntensity={0.8} metalness={0.6} roughness={0.2} />
-      </mesh>
-      <mesh position={[0, 0.48, -0.15]}>
-        <boxGeometry args={[0.8, 0.4, 1]} />
-        <meshPhysicalMaterial color="#12142a" roughness={0.1} metalness={0.4} clearcoat={1} />
-      </mesh>
-      {[-0.55, 0.55].map((x) =>
-        [-0.7, 0.7].map((z) => (
-          <mesh key={`${x}${z}`} position={[x, -0.1, z]} rotation={[0, 0, Math.PI / 2]}>
-            <cylinderGeometry args={[0.22, 0.22, 0.16, 16]} />
-            <meshStandardMaterial color="#05060f" />
-          </mesh>
-        ))
-      )}
-      {[-0.35, 0.35].map((x) => (
-        <mesh key={x} position={[x, 0.15, 1.05]}>
-          <sphereGeometry args={[0.09, 8, 8]} />
-          <meshBasicMaterial color="#fff7ae" toneMapped={false} />
-        </mesh>
-      ))}
-    </group>
-  );
-}
+function draw(
+  ctx: CanvasRenderingContext2D,
+  w: number,
+  h: number,
+  carX: number,
+  obstacles: Obstacle[],
+  distance: number,
+  crashed: boolean,
+  pal: Palette
+) {
+  const horizon = h * 0.32;
+  ctx.clearRect(0, 0, w, h);
 
-function Obstacles({ speedRef, listRef }: { speedRef: React.MutableRefObject<number>; listRef: React.MutableRefObject<Obstacle[]> }) {
-  const group = useRef<THREE.Group>(null);
-  useFrame((_, delta) => {
-    const g = group.current;
-    if (!g) return;
-    g.children.forEach((child, i) => {
-      child.position.z += speedRef.current * delta * 26;
-      child.rotation.y += delta;
-      if (child.position.z > 8) {
-        child.position.z = -90 - Math.random() * 30;
-        child.position.x = (Math.random() - 0.5) * (ROAD_W - 2.4);
-        listRef.current[i] = { z: child.position.z, x: child.position.x, id: i };
-      } else {
-        listRef.current[i] = { z: child.position.z, x: child.position.x, id: i };
-      }
-    });
+  // sky / ground
+  ctx.fillStyle = pal.surface2;
+  ctx.fillRect(0, 0, w, horizon);
+  ctx.fillStyle = pal.bg;
+  ctx.fillRect(0, horizon, w, h - horizon);
+
+  // distant hills (flat, two tones — no gradients)
+  ctx.fillStyle = pal.surface;
+  ctx.beginPath();
+  ctx.moveTo(0, horizon);
+  for (let i = 0; i <= 6; i++) {
+    const x = (w / 6) * i;
+    const peak = horizon - (i % 2 === 0 ? h * 0.07 : h * 0.04);
+    ctx.lineTo(x + w / 12, peak);
+    ctx.lineTo(x + w / 6, horizon);
+  }
+  ctx.closePath();
+  ctx.fill();
+
+  // road trapezoid
+  const near = project(1, 0, w, h, horizon);
+  const far = project(30, 0, w, h, horizon);
+  ctx.fillStyle = pal.surface;
+  ctx.beginPath();
+  ctx.moveTo(near.cx - near.halfRoad, near.y);
+  ctx.lineTo(near.cx + near.halfRoad, near.y);
+  ctx.lineTo(far.cx + far.halfRoad, far.y);
+  ctx.lineTo(far.cx - far.halfRoad, far.y);
+  ctx.closePath();
+  ctx.fill();
+
+  // road edges
+  ctx.strokeStyle = pal.brand;
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(near.cx - near.halfRoad, near.y);
+  ctx.lineTo(far.cx - far.halfRoad, far.y);
+  ctx.moveTo(near.cx + near.halfRoad, near.y);
+  ctx.lineTo(far.cx + far.halfRoad, far.y);
+  ctx.stroke();
+
+  // lane dashes
+  ctx.fillStyle = pal.border;
+  const dashStart = 1.2 - ((distance * 0.35) % 1);
+  for (let d = dashStart; d < 30; d += 1.6) {
+    const a = project(d, 0, w, h, horizon);
+    const b = project(d + 0.7, 0, w, h, horizon);
+    const width = Math.max(1, a.halfRoad * 0.035);
+    ctx.fillRect(a.cx - width / 2, b.y, width, a.y - b.y);
+  }
+  // side lanes
+  ctx.strokeStyle = pal.border;
+  ctx.lineWidth = 1.5;
+  [-0.62, 0.62].forEach((lx) => {
+    const a = project(1.05, lx, w, h, horizon);
+    const b = project(30, lx, w, h, horizon);
+    ctx.beginPath();
+    ctx.moveTo(a.cx, a.y);
+    ctx.lineTo(b.cx, b.y);
+    ctx.stroke();
   });
-  return (
-    <group ref={group}>
-      {Array.from({ length: 7 }, (_, i) => (
-        <mesh key={i} position={[((i % 3) - 1) * 2, 0.2, -12 - i * 14]}>
-          <boxGeometry args={[1.2, 1.2, 1.2]} />
-          <meshStandardMaterial color="#b026ff" emissive="#b026ff" emissiveIntensity={0.9} toneMapped={false} />
-        </mesh>
-      ))}
-    </group>
-  );
+
+  // obstacles (drawn far → near)
+  const sorted = [...obstacles].sort((a, b) => b.z - a.z);
+  for (const o of sorted) {
+    if (o.z < 1 || o.z > 30) continue;
+    const p = project(o.z, o.x, w, h, horizon);
+    const size = p.halfRoad * 0.3;
+    ctx.fillStyle = pal.accent;
+    roundRect(ctx, p.cx - size / 2, p.y - size, size, size, size * 0.2);
+    ctx.fill();
+    ctx.fillStyle = pal.brandDark;
+    roundRect(ctx, p.cx - size / 2, p.y - size * 0.32, size, size * 0.32, size * 0.12);
+    ctx.fill();
+  }
+
+  // car
+  const car = project(1.06, carX, w, h, horizon);
+  const cw = near.halfRoad * 0.34;
+  const ch = cw * 1.7;
+  ctx.fillStyle = crashed ? pal.danger : pal.brand;
+  roundRect(ctx, car.cx - cw / 2, h - ch - h * 0.06, cw, ch, cw * 0.28);
+  ctx.fill();
+  // windscreen
+  ctx.fillStyle = pal.surface2;
+  roundRect(ctx, car.cx - cw * 0.32, h - ch - h * 0.06 + ch * 0.16, cw * 0.64, ch * 0.26, cw * 0.1);
+  ctx.fill();
+  // wheels
+  ctx.fillStyle = pal.text;
+  ctx.fillRect(car.cx - cw * 0.62, h - h * 0.06 - ch * 0.42, cw * 0.2, ch * 0.34);
+  ctx.fillRect(car.cx + cw * 0.42, h - h * 0.06 - ch * 0.42, cw * 0.2, ch * 0.34);
 }
 
 export default function Racing({ onEnd }: GameProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pal = usePalette();
   const [score, setScore] = useState(0);
   const [crashed, setCrashed] = useState(false);
-  const speedRef = useRef(0.55);
-  const xRef = useRef(0);
-  const obstaclesRef = useRef<Obstacle[]>([]);
-  const startedAt = useRef(Date.now());
+
+  const carX = useRef(0);
+  const speed = useRef(SPEED_START);
+  const distance = useRef(0);
+  const obstacles = useRef<Obstacle[]>([
+    { z: 8, x: -0.6 },
+    { z: 14, x: 0.5 },
+    { z: 20, x: -0.3 },
+    { z: 26, x: 0.65 },
+    { z: 32, x: 0 },
+  ]);
+  const keys = useRef<Set<string>>(new Set());
   const endedRef = useRef(false);
+  const startedAt = useRef(Date.now());
   const scoreRef = useRef(0);
-  scoreRef.current = score;
+  const crashedRef = useRef(false);
 
-  // score + speed ramp
-  useEffect(() => {
-    if (crashed) return;
-    const iv = setInterval(() => {
-      setScore((s) => s + 1);
-      speedRef.current = Math.min(1.7, 0.55 + scoreRef.current / 400);
-    }, 220);
-    return () => clearInterval(iv);
-  }, [crashed]);
+  crashedRef.current = crashed;
 
-  // collision check
-  useEffect(() => {
-    if (crashed) return;
-    const iv = setInterval(() => {
-      for (const o of obstaclesRef.current) {
-        if (o.z > 2.8 && o.z < 5.4 && Math.abs(o.x - xRef.current) < 1.05) {
-          if (!endedRef.current) {
-            endedRef.current = true;
-            setCrashed(true);
-            sfx("lose");
-            setTimeout(() => onEnd({ score: scoreRef.current, maxScore: 300, accuracy: Math.min(1, scoreRef.current / 250), timeMs: Date.now() - startedAt.current }), 700);
-          }
-          break;
-        }
-      }
-    }, 60);
-    return () => clearInterval(iv);
-  }, [crashed, onEnd]);
+  const randomX = () => (Math.random() - 0.5) * 2 * (LANES / 3);
 
-  // controls
   useEffect(() => {
-    const keys = new Set<string>();
     const down = (e: KeyboardEvent) => {
-      keys.add(e.key);
+      keys.current.add(e.key);
       if (["ArrowLeft", "ArrowRight", "a", "d"].includes(e.key)) e.preventDefault();
     };
-    const up = (e: KeyboardEvent) => keys.delete(e.key);
-    const iv = setInterval(() => {
-      if (crashed) return;
-      if (keys.has("ArrowLeft") || keys.has("a")) xRef.current = Math.max(-ROAD_W / 2 + 0.8, xRef.current - 0.22);
-      if (keys.has("ArrowRight") || keys.has("d")) xRef.current = Math.min(ROAD_W / 2 - 0.8, xRef.current + 0.22);
-    }, 16);
+    const up = (e: KeyboardEvent) => keys.current.delete(e.key);
     window.addEventListener("keydown", down);
     window.addEventListener("keyup", up);
     return () => {
       window.removeEventListener("keydown", down);
       window.removeEventListener("keyup", up);
-      clearInterval(iv);
     };
-  }, [crashed]);
-
-  const swipeStart = useRef<number | null>(null);
-
-  return (
-    <div
-      className="relative mx-auto aspect-[3/4] max-w-md touch-none select-none"
-      onTouchStart={(e) => (swipeStart.current = e.touches[0].clientX)}
-      onTouchMove={(e) => {
-        if (swipeStart.current === null || crashed) return;
-        const dx = e.touches[0].clientX - swipeStart.current;
-        if (Math.abs(dx) > 6) {
-          xRef.current = Math.max(-ROAD_W / 2 + 0.8, Math.min(ROAD_W / 2 - 0.8, xRef.current + dx * 0.02));
-          swipeStart.current = e.touches[0].clientX;
-        }
-      }}
-      onTouchEnd={() => (swipeStart.current = null)}
-    >
-      <SceneBoundary name="racing-3d">
-      <Canvas camera={{ position: [0, 2.6, 7], fov: 62 }} dpr={[1, 1.6]} gl={{ alpha: true }} style={{ background: "transparent" }}>
-        <fog attach="fog" args={["#05060f", 10, 85]} />
-        <ambientLight intensity={0.5} />
-        <pointLight position={[0, 4, 6]} intensity={45} color="#2d7cff" />
-        <Road speedRef={speedRef} />
-        <Obstacles speedRef={speedRef} listRef={obstaclesRef} />
-        <Car xRef={xRef} crashed={crashed} />
-        <Stars />
-      </Canvas>
-      </SceneBoundary>
-      <div className="pointer-events-none absolute inset-x-0 top-2 flex justify-center gap-2">
-        <span className="chip">🏁 {score} m</span>
-        <span className="chip">⚡ {(speedRef.current * 160).toFixed(0)} km/h</span>
-      </div>
-      {crashed && <div className="absolute inset-0 grid place-items-center bg-black/55 backdrop-blur-sm"><p className="font-display text-2xl font-black text-gradient">Crash! — {score} m</p></div>}
-      <p className="mt-1 text-center text-xs text-muted">← → ya swipe se lane badlo — neon blocks se bacho!</p>
-    </div>
-  );
-}
-
-function Stars() {
-  const geo = useMemo(() => {
-    const g = new THREE.BufferGeometry();
-    const pos = new Float32Array(300 * 3);
-    for (let i = 0; i < 300; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 60;
-      pos[i * 3 + 1] = Math.random() * 18;
-      pos[i * 3 + 2] = -Math.random() * 90;
-    }
-    g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-    return g;
   }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    let raf = 0;
+    let last = performance.now();
+    let w = 360;
+    let h = 480;
+
+    const resize = () => {
+      const box = canvas.parentElement?.getBoundingClientRect().width ?? 360;
+      w = Math.max(260, Math.min(520, Math.floor(box)));
+      h = Math.floor(w * 1.3);
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = `${w}px`;
+      canvas.style.height = `${h}px`;
+      const c = canvas.getContext("2d");
+      if (c) c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const loop = (now: number) => {
+      const dt = Math.min(0.05, (now - last) / 1000);
+      last = now;
+      if (!crashedRef.current) {
+        // steering
+        if (keys.current.has("ArrowLeft") || keys.current.has("a")) carX.current -= CAR_SPEED;
+        if (keys.current.has("ArrowRight") || keys.current.has("d")) carX.current += CAR_SPEED;
+        carX.current = Math.max(-LANES / 2.4, Math.min(LANES / 2.4, carX.current));
+
+        // speed ramp + distance
+        speed.current = Math.min(SPEED_MAX, SPEED_START + scoreRef.current / 40);
+        distance.current += speed.current * dt;
+        const next = Math.floor(distance.current);
+        if (next !== scoreRef.current) {
+          scoreRef.current = next;
+          setScore(next);
+        }
+
+        // move obstacles
+        for (const o of obstacles.current) {
+          o.z -= speed.current * dt;
+          if (o.z < 1) {
+            o.z = 26 + Math.random() * 10;
+            o.x = randomX();
+          }
+          if (o.z > 1.9 && o.z < 2.7 && Math.abs(o.x - carX.current) < 0.42) {
+            crashedRef.current = true;
+            setCrashed(true);
+            sfx("lose");
+            window.setTimeout(
+              () =>
+                onEnd({
+                  score: scoreRef.current,
+                  maxScore: 300,
+                  accuracy: Math.min(1, scoreRef.current / 250),
+                  timeMs: Date.now() - startedAt.current,
+                }),
+              800
+            );
+          }
+        }
+      }
+
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        draw(ctx, w, h, carX.current, obstacles.current, distance.current, crashedRef.current, pal);
+        if (crashedRef.current) {
+          ctx.fillStyle = "rgba(21,23,27,0.5)";
+          ctx.fillRect(0, 0, w, h);
+          ctx.fillStyle = "#fff";
+          ctx.font = "800 26px Nunito, system-ui, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(`Crash! ${scoreRef.current} m`, w / 2, h / 2);
+        }
+      }
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
+  }, [pal, onEnd]);
+
+  const swipe = useRef<number | null>(null);
+
   return (
-    <points geometry={geo}>
-      <pointsMaterial size={0.1} color="#8b90b0" transparent opacity={0.7} />
-    </points>
+    <div className="mx-auto w-full max-w-md">
+      <div className="mb-3 flex items-center justify-between gap-2">
+        <span className="chip">
+          🏁 <span className="tnum">{score}</span> m
+        </span>
+        <span className="chip">
+          ⚡ <span className="tnum">{Math.round(speed.current * 6)}</span> km/h
+        </span>
+      </div>
+      <div
+        className="mx-auto flex w-full touch-none justify-center"
+        onTouchStart={(e) => (swipe.current = e.touches[0].clientX)}
+        onTouchMove={(e) => {
+          if (swipe.current === null || crashed) return;
+          const dx = e.touches[0].clientX - swipe.current;
+          if (Math.abs(dx) > 4) {
+            carX.current = Math.max(-LANES / 2.4, Math.min(LANES / 2.4, carX.current + dx * 0.006));
+            swipe.current = e.touches[0].clientX;
+          }
+        }}
+        onTouchEnd={() => (swipe.current = null)}
+      >
+        <canvas
+          ref={canvasRef}
+          className="rounded-card border border-line"
+          role="img"
+          aria-label="Racing game: dodge the blocks"
+        />
+      </div>
+      <p className="mt-2 text-center text-xs text-muted">← → ya swipe se lane badlo — blocks se bacho!</p>
+    </div>
   );
 }

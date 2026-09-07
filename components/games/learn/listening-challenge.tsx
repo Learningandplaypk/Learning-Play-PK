@@ -104,10 +104,8 @@ export default function ListeningChallenge({ lang = "english", onEnd }: GameProp
       </div>
       <button
         onClick={replay}
-        className="glass glass-hover mx-auto grid h-32 w-32 place-items-center rounded-full text-5xl"
-        aria-label="Dobara suno"
-      >
-        <span className="animate-pulse-glow">🔊</span>
+        className="card mx-auto grid h-32 w-32 place-items-center rounded-full text-5xl"aria-label="Dobara suno">
+        <span className="">🔊</span>
       </button>
       <p className="mt-3 text-xs text-muted">Tap karke dobara suno — jo suna woh chuno</p>
 
@@ -119,14 +117,7 @@ export default function ListeningChallenge({ lang = "english", onEnd }: GameProp
               key={i}
               onClick={() => choose(i)}
               className={`rounded-xl border px-4 py-3.5 text-left text-[15px] font-semibold transition ${
-                state === "idle"
-                  ? "glass glass-hover"
-                  : state === "right"
-                    ? "border-neon-green/70 bg-neon-green/15"
-                    : state === "wrong"
-                      ? "shake border-pink-accent/70 bg-pink-accent/15"
-                      : "opacity-35"
-              }`}
+                state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
             >
               {o}
             </button>

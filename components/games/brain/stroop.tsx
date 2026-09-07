@@ -5,12 +5,12 @@ import type { GameProps } from "@/components/game-shell";
 import { sfx } from "@/lib/sfx";
 
 const COLORS = [
-  { name: "RED", ur: "LAL", hex: "#ff2e3f" },
-  { name: "GREEN", ur: "SABZ", hex: "#39ff14" },
-  { name: "BLUE", ur: "NEELA", hex: "#2d7cff" },
+  { name: "RED", ur: "LAL", hex: "#D7263D" },
+  { name: "GREEN", ur: "SABZ", hex: "#178A55" },
+  { name: "BLUE", ur: "NEELA", hex: "#2563EB" },
   { name: "YELLOW", ur: "PEELA", hex: "#ffd60a" },
-  { name: "PURPLE", ur: "JAMNI", hex: "#b026ff" },
-  { name: "ORANGE", ur: "NARANGI", hex: "#ff7a00" },
+  { name: "PURPLE", ur: "JAMNI", hex: "#7C3AED" },
+  { name: "ORANGE", ur: "NARANGI", hex: "#F5A524" },
 ];
 
 /** Stroop test: does the INK color match the WORD meaning? Tap ✓ / ✗. */
@@ -89,19 +89,19 @@ export default function StroopGame({ onEnd }: GameProps) {
         <span className="chip">⏱️ {left}s</span>
         <span className="chip">✅ {correct}</span>
         <span className="chip">🎯 {acc}%</span>
-        <span className="chip border-neon-orange/40 text-neon-orange">🔥 {streak}</span>
+        <span className="chip border-accent/40 text-accent-ink">🔥 {streak}</span>
       </div>
-      <div className={`glass p-10 ${flash === "ok" ? "!border-neon-green/70" : flash === "no" ? "shake !border-pink-accent/70" : ""}`}>
+      <div className={`card p-10 ${flash === "ok" ? "!border-brand/70" : flash === "no" ? "shake !border-accent/70" : ""}`}>
         <p className="text-xs uppercase tracking-widest text-muted">Kya INK ka rang word ke matlab se match karta hai?</p>
         <div className="mt-6 font-display text-6xl font-black" style={{ color: q.ink.hex, textShadow: `0 0 30px ${q.ink.hex}88` }}>
           {q.word.name}
         </div>
       </div>
       <div className="mt-6 grid grid-cols-2 gap-3">
-        <button onClick={() => answer(false)} className="btn btn-ghost !rounded-2xl py-5 text-lg">
+        <button onClick={() => answer(false)} className="btn btn-secondary !rounded-2xl py-5 text-lg">
           ✗ Nahi
         </button>
-        <button onClick={() => answer(true)} className="btn btn-neon !rounded-2xl py-5 text-lg">
+        <button onClick={() => answer(true)} className="btn btn-primary !rounded-2xl py-5 text-lg">
           ✓ Haan
         </button>
       </div>

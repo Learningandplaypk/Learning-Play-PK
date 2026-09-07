@@ -4,11 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
 import { sfx } from "@/lib/sfx";
 
-const PARAGRAPHS = [
-  "Pakistan zindabad. Lahore ka dil jeeta hai apni mehnavi se. Har bachay ko parhna likhna sikhao. Waqt ki pabandi kamyabi ki kunji hai. Mehnat ka koi murad nahi hota.",
-  "The quick brown fox jumps over the lazy dog. Practice makes a person perfect and patient. Reading books opens the doors of wisdom and light.",
-  "Ilm hasil karna har musalman mard aur aurat par farz hai. Achi soch achi zindagi banati hai. Chai ke bagair subh adhoori hai, yeh baat sab maantay hain.",
-  "Success is not final, failure is not fatal: it is the courage to continue that counts. Every expert was once a beginner who never gave up.",
+const PARAGRAPHS = ["Pakistan zindabad. Lahore ka dil jeeta hai apni mehnavi se. Har bachay ko parhna likhna sikhao. Waqt ki pabandi kamyabi ki kunji hai. Mehnat ka koi murad nahi hota.","The quick brown fox jumps over the lazy dog. Practice makes a person perfect and patient. Reading books opens the doors of wisdom and light.","Ilm hasil karna har musalman mard aur aurat par farz hai. Achi soch achi zindagi banati hai. Chai ke bagair subh adhoori hai, yeh baat sab maantay hain.","Success is not final, failure is not fatal: it is the courage to continue that counts. Every expert was once a beginner who never gave up.",
 ];
 
 export default function TypingGame({ onEnd }: GameProps) {
@@ -53,14 +49,7 @@ export default function TypingGame({ onEnd }: GameProps) {
       <span
         key={i}
         className={
-          state === "ok"
-            ? "text-ink"
-            : state === "bad"
-              ? "bg-pink-accent/30 text-pink-accent"
-              : state === "cur"
-                ? "animate-pulse-glow bg-electric/40 text-white"
-                : "text-muted/60"
-        }
+          state === "ok"? "text-fg": state === "bad"? "bg-accent/30 text-accent-ink": state === "cur"? " bg-info/40 text-white": "text-muted/60"}
       >
         {ch}
       </span>
@@ -74,7 +63,7 @@ export default function TypingGame({ onEnd }: GameProps) {
         <span className="chip">🎯 {acc}%</span>
         <span className="chip">⏱️ {elapsed.toFixed(0)}s</span>
       </div>
-      <div className="glass p-6 text-lg leading-relaxed tracking-wide">
+      <div className="card p-6 text-lg leading-relaxed tracking-wide">
         {chars}
       </div>
       <input
@@ -84,12 +73,7 @@ export default function TypingGame({ onEnd }: GameProps) {
           if (startedAt === null) setStartedAt(Date.now());
           if (e.target.value.length <= para.length) setTyped(e.target.value);
         }}
-        className="mt-4 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-[15px] outline-none focus:border-neon-green/60"
-        placeholder="Yahan type karna shuru karo…"
-        aria-label="Typing input"
-        autoComplete="off"
-        autoCapitalize="off"
-        spellCheck={false}
+        className="mt-4 w-full rounded-xl border border-line bg-surface-2 px-4 py-3 text-[15px] outline-none focus:border-brand/60"placeholder="Yahan type karna shuru karo…"aria-label="Typing input"autoComplete="off"autoCapitalize="off"spellCheck={false}
       />
       <p className="mt-2 text-center text-xs text-muted">Mistakes laal dikhtay hain — tez bhi sahi bhi!</p>
     </div>

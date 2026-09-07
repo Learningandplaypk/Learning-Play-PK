@@ -53,12 +53,8 @@ export default function StoryBuilder({ onEnd }: GameProps) {
                 className={`mx-1 inline-block min-w-20 rounded-lg px-2 py-0.5 text-center font-bold ${
                   !checked
                     ? answers[i] >= 0
-                      ? "bg-electric/25 text-ink"
-                      : "bg-white/8 text-muted"
-                    : answers[i] === story.blanks[i].a
-                      ? "bg-neon-green/25 text-neon-green"
-                      : "bg-pink-accent/25 text-pink-accent"
-                }`}
+                      ? "bg-info/25 text-fg": "bg-surface-2 text-muted": answers[i] === story.blanks[i].a
+                      ? "bg-brand/25 text-brand-ink": "bg-accent/25 text-accent-ink"}`}
               >
                 {answers[i] >= 0 ? story.blanks[i].options[answers[i]] : "___"}
               </span>
@@ -75,9 +71,9 @@ export default function StoryBuilder({ onEnd }: GameProps) {
         <span className="chip">Story {storyIdx + 1}/{stories.length}</span>
         <span className="chip">✅ {correct} blanks</span>
       </div>
-      <div className="glass p-6">
+      <div className="card p-6">
         <h3 className="font-display text-xl font-black">
-          {story.emoji} <span className="text-gradient">{story.title}</span>
+          {story.emoji} <span className="">{story.title}</span>
         </h3>
         <div className="mt-4">{renderText()}</div>
 
@@ -95,8 +91,7 @@ export default function StoryBuilder({ onEnd }: GameProps) {
                         setAnswers((a) => a.map((v, i) => (i === bi ? oi : v)));
                       }}
                       className={`rounded-xl px-3.5 py-2 text-sm font-bold transition ${
-                        answers[bi] === oi ? "bg-electric/35 text-white ring-1 ring-electric" : "glass glass-hover text-ink"
-                      }`}
+                        answers[bi] === oi ? "bg-info/35 text-white ring-1 ring-info" : "card text-fg"}`}
                     >
                       {opt}
                     </button>
@@ -104,26 +99,26 @@ export default function StoryBuilder({ onEnd }: GameProps) {
                 </div>
               </div>
             ))}
-            <button className="btn btn-neon mt-2 w-full" disabled={!allAnswered} onClick={check}>
+            <button className="btn btn-primary mt-2 w-full" disabled={!allAnswered} onClick={check}>
               ✔ Story mukammal karo
             </button>
           </div>
         ) : (
           <div className="mt-6 text-center">
-            <p className="font-display text-lg font-bold text-neon-green">
+            <p className="font-display text-lg font-bold text-brand-ink">
               {answers.filter((a, i) => a === story.blanks[i].a).length}/{story.blanks.length} sahi!
             </p>
             {answers.some((a, i) => a !== story.blanks[i].a) && (
               <p className="mt-2 text-sm text-muted">
                 Sahi jawabat:{" "}
                 {story.blanks.map((b, i) => (
-                  <span key={i} className="mx-1 font-bold text-ink">
+                  <span key={i} className="mx-1 font-bold text-fg">
                     {b.options[b.a]}
                   </span>
                 ))}
               </p>
             )}
-            <button className="btn btn-neon mt-4" onClick={next}>
+            <button className="btn btn-primary mt-4" onClick={next}>
               {storyIdx + 1 >= stories.length ? "🏁 Result dekho" : "Agli story →"}
             </button>
           </div>

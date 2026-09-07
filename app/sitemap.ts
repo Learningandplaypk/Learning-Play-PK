@@ -8,9 +8,7 @@ const SITE = getSiteUrl();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = [
-    "", "/learn", "/brain", "/quiz", "/fun", "/leaderboard", "/profile", "/premium", "/shop",
-    "/blog", "/about", "/contact", "/privacy", "/terms", "/refund-policy", "/login", "/signup", "/forgot",
+  const staticRoutes = ["", "/learn", "/brain", "/quiz", "/fun", "/leaderboard", "/profile", "/premium", "/shop","/blog", "/about", "/contact", "/privacy", "/terms", "/refund-policy", "/login", "/signup", "/forgot",
   ];
 
   // every learn game × every language (matches generateStaticParams)

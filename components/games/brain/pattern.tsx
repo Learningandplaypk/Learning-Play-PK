@@ -7,7 +7,7 @@ import { sfx } from "@/lib/sfx";
 
 type Shape = "▲" | "●" | "■" | "★" | "◆";
 const SHAPES: Shape[] = ["▲", "●", "■", "★", "◆"];
-const SHAPE_COLORS = ["#39ff14", "#2d7cff", "#b026ff", "#ff2e97", "#ff7a00"];
+const SHAPE_COLORS = ["#178A55", "#2563EB", "#7C3AED", "#E8467C", "#F5A524"];
 
 type Round = { seq: Array<{ s: Shape; c: string }>; options: Array<{ s: Shape; c: string }>; answer: number };
 
@@ -54,15 +54,15 @@ export default function PatternGame({ onEnd }: GameProps) {
         <span className="chip">{round + 1}/{TOTAL}</span>
         <span className="chip">✅ {correct}</span>
       </div>
-      <div className="glass p-8">
+      <div className="card p-8">
         <p className="text-xs uppercase tracking-widest text-muted">Pattern poora karo — agla shape kya hoga?</p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
           {q.seq.map((it, i) => (
-            <span key={i} className="grid h-14 w-14 place-items-center rounded-2xl bg-white/8 text-2xl font-black" style={{ color: it.c, textShadow: `0 0 16px ${it.c}99` }}>
+            <span key={i} className="grid h-14 w-14 place-items-center rounded-2xl bg-surface-2 text-2xl font-black" style={{ color: it.c, textShadow: `0 0 16px ${it.c}99` }}>
               {it.s}
             </span>
           ))}
-          <span className="grid h-14 w-14 place-items-center rounded-2xl border-2 border-dashed border-neon-green/60 text-2xl text-neon-green animate-pulse-glow">?</span>
+          <span className="grid h-14 w-14 place-items-center rounded-2xl border-2 border-dashed border-brand/60 text-2xl text-brand-ink ">?</span>
         </div>
       </div>
       <div className="mt-6 grid grid-cols-3 gap-3">
@@ -70,7 +70,7 @@ export default function PatternGame({ onEnd }: GameProps) {
           <button
             key={i}
             onClick={() => feedback === null && pick(i)}
-            className={`glass grid h-20 place-items-center text-3xl font-black transition ${feedback === i ? (i === q.answer ? "!border-neon-green/80" : "shake !border-pink-accent/80") : "hover:!border-electric/60"}`}
+            className={`card grid h-20 place-items-center text-3xl font-black transition ${feedback === i ? (i === q.answer ? "!border-brand/80" : "shake !border-accent/80") : "hover:!border-info/60"}`}
             style={{ color: o.c, textShadow: `0 0 16px ${o.c}88` }}
             aria-label={`Option ${i + 1}`}
           >

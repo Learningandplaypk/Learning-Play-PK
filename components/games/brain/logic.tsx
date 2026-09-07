@@ -63,7 +63,7 @@ export default function LogicGame({ onEnd }: GameProps) {
         <span className="chip">{idx + 1}/{TOTAL}</span>
         <span className="chip">✅ {correct}</span>
       </div>
-      <div className="glass p-6">
+      <div className="card p-6">
         <p className="font-display text-lg font-bold leading-relaxed">🧩 {q.q}</p>
         <div className="mt-5 grid gap-2.5">
           {q.options.map((o, i) => {
@@ -73,15 +73,14 @@ export default function LogicGame({ onEnd }: GameProps) {
                 key={i}
                 onClick={() => choose(i)}
                 className={`rounded-xl border px-4 py-3 text-left text-[15px] font-semibold transition ${
-                  state === "idle" ? "glass glass-hover" : state === "right" ? "border-neon-green/70 bg-neon-green/15" : state === "wrong" ? "shake border-pink-accent/70 bg-pink-accent/15" : "opacity-40"
-                }`}
+                  state === "idle" ? "card" : state === "right" ? "border-brand/70 bg-brand/15" : state === "wrong" ? "shake border-accent/70 bg-accent/15" : "opacity-40"}`}
               >
                 {o.text}
               </button>
             );
           })}
         </div>
-        {picked !== null && <p className="mt-4 text-sm text-neon-green">💡 {q.why}</p>}
+        {picked !== null && <p className="mt-4 text-sm text-brand-ink">💡 {q.why}</p>}
       </div>
     </div>
   );

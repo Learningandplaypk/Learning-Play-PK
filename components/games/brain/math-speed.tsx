@@ -84,24 +84,20 @@ export default function MathSpeed({ onEnd }: GameProps) {
         <span className="chip">⏱️ {left}s</span>
         <span className="chip">✅ {correct}</span>
         <span className="chip">🎯 {acc}%</span>
-        <span className="chip border-neon-orange/40 text-neon-orange">🔥 {streak}</span>
+        <span className="chip border-accent/40 text-accent-ink">🔥 {streak}</span>
       </div>
-      <div className={`glass p-8 transition-colors ${flash === "ok" ? "!border-neon-green/70" : flash === "no" ? "shake !border-pink-accent/70" : ""}`}>
+      <div className={`card p-8 transition-colors ${flash === "ok" ? "!border-brand/70" : flash === "no" ? "shake !border-accent/70" : ""}`}>
         <div className="mb-2 text-xs uppercase tracking-widest text-muted">Level {level}</div>
         <div className="font-display text-5xl font-black tracking-wide">
-          {q.a} <span className="text-electric">{q.op}</span> {q.b} = <span className="text-neon-green">?</span>
+          {q.a} <span className="text-info-ink">{q.op}</span> {q.b} = <span className="text-brand-ink">?</span>
         </div>
         <form onSubmit={submit} className="mt-6 flex gap-2">
           <Input
             ref={inputRef}
-            inputMode="numeric"
-            pattern="[0-9-]*"
-            value={val}
+            inputMode="numeric"pattern="[0-9-]*"value={val}
             onChange={(e) => setVal(e.target.value.replace(/[^\d-]/g, ""))}
-            placeholder="Jawab likho…"
-            aria-label="Answer"
-          />
-          <button className="btn btn-neon" type="submit">
+            placeholder="Jawab likho…"aria-label="Answer"/>
+          <button className="btn btn-primary" type="submit">
             ↵
           </button>
         </form>

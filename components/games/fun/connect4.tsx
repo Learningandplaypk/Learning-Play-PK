@@ -173,18 +173,18 @@ export default function Connect4({ onEnd }: GameProps) {
       <div className="mb-3 flex justify-center gap-2 text-sm">
         <span className="chip">🔴 Tum</span>
         <span className="chip">🟡 AI</span>
-        <span className={`chip ${busy ? "border-neon-purple/50 text-neon-purple" : ""}`}>{busy ? "AI soch raha…" : winLine ? (board[winLine[0][0]][winLine[0][1]] === 1 ? "🏆 Jeet!" : "AI jeeta") : "Apni chaal khelo"}</span>
+        <span className={`chip ${busy ? "border-info/50 text-info-ink" : ""}`}>{busy ? "AI soch raha…" : winLine ? (board[winLine[0][0]][winLine[0][1]] === 1 ? "🏆 Jeet!" : "AI jeeta") : "Apni chaal khelo"}</span>
       </div>
-      <div className="glass p-2.5">
+      <div className="card p-2.5">
         {/* column buttons */}
         <div className="grid gap-1.5" style={{ gridTemplateColumns: `repeat(${COLS}, 1fr)` }}>
           {Array.from({ length: COLS }, (_, c) => (
-            <button key={`h${c}`} onClick={() => play(c)} disabled={busy || dropRow(board, c) < 0} className="rounded-lg bg-white/5 py-1 text-xs font-black text-muted transition hover:bg-electric/25 hover:text-white disabled:opacity-20" aria-label={`Column ${c + 1} mein daalo`}>
+            <button key={`h${c}`} onClick={() => play(c)} disabled={busy || dropRow(board, c) < 0} className="rounded-lg bg-surface-2 py-1 text-xs font-black text-muted transition hover:bg-info/25 hover:text-white disabled:opacity-20" aria-label={`Column ${c + 1} mein daalo`}>
               ▼
             </button>
           ))}
         </div>
-        <div className="mt-1.5 grid gap-1.5 rounded-2xl bg-[#12142a] p-2" style={{ gridTemplateColumns: `repeat(${COLS}, 1fr)` }}>
+        <div className="mt-1.5 grid gap-1.5 rounded-2xl bg-[#1D2026] p-2" style={{ gridTemplateColumns: `repeat(${COLS}, 1fr)` }}>
           {board.flat().map((cell, i) => {
             const r = Math.floor(i / COLS);
             const c = i % COLS;
@@ -195,7 +195,7 @@ export default function Connect4({ onEnd }: GameProps) {
                   className={`grid h-full w-full place-items-center rounded-full text-xl transition-all ${cell ? "pop-in" : ""}`}
                   style={{
                     background: cell === 1 ? "radial-gradient(circle at 35% 35%, #ff7a8a, #e0243f)" : cell === 2 ? "radial-gradient(circle at 35% 35%, #ffe66d, #e6a800)" : "rgba(255,255,255,0.06)",
-                    boxShadow: cell ? (inWin ? "0 0 20px 4px rgba(57,255,20,.9)" : "0 3px 8px rgba(0,0,0,.5), inset 0 -3px 6px rgba(0,0,0,.3)") : "inset 0 2px 6px rgba(0,0,0,.4)",
+                    boxShadow: cell ? (inWin ? "0 0 0 3px var(--accent)" : "inset 0 -3px 6px rgba(0,0,0,.18)") : "inset 0 2px 6px rgba(0,0,0,.10)",
                   }}
                 >
                   {cell === 1 ? "🔴" : cell === 2 ? "🟡" : ""}
@@ -206,7 +206,7 @@ export default function Connect4({ onEnd }: GameProps) {
         </div>
       </div>
       <div className="mt-3 flex justify-center gap-2">
-        <button className="chip cursor-pointer hover:text-ink" onClick={() => finish(null)} disabled={endedRef.current}>
+        <button className="chip-btn hover:text-fg" onClick={() => finish(null)} disabled={endedRef.current}>
           🏳️ Draw result
         </button>
       </div>

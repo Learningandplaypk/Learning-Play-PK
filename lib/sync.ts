@@ -5,19 +5,17 @@
  * leaderboard entries. Silently no-ops in guest mode / when Firebase is not configured.
  */
 
-import { doc, updateDoc, setDoc, serverTimestamp, collection, addDoc, query, orderBy, limit, getDocs, where, getDoc } from "firebase/firestore";
-import { fbDb, isFirebaseConfigured } from "./firebase";
+import { fsModOf, fbDb } from "./firebase";
+import { isFirebaseConfigured } from "./firebase-config";
 import { usePlayer, playerSnapshot } from "./store";
 import type { LastGameOutcome } from "./store";
 
 const SCORE_BOUNDS: Record<string, number> = {
   memory: 60, "math-speed": 100, reaction: 500, stroop: 80, sequence: 60, g2048: 100000,
-  sudoku: 3, chess: 1, "word-builder": 200, "vocab-battle": 200, "grammar-quest": 200,
-  "sentence-puzzle": 200, listening: 100, idioms: 100, quiz: 100, millionaire: 15,
+  sudoku: 3, chess: 1, "word-builder": 200, "vocab-battle": 200, "grammar-quest": 200,"sentence-puzzle": 200, listening: 100, idioms: 100, quiz: 100, millionaire: 15,
   snake3d: 500, tetris: 100000, flappy: 500, tictactoe: 10, connect4: 10, hangman: 100,
   wordsearch: 100, minesweeper: 100, typing: 200, bubble: 500, fruitninja: 1000,
-  jumble: 100, racing: 10000, crossword: 100, pattern: 100, logic: 100,
-  "story-builder": 100, pronunciation: 100,
+  jumble: 100, racing: 10000, crossword: 100, pattern: 100, logic: 100,"story-builder": 100, pronunciation: 100,
 };
 
 /** Server-validated leaderboard submit — sanity bounds stop impossible scores. */
@@ -27,7 +25,8 @@ export async function submitLeaderboardScore(slug: string, score: number) {
   const bound = SCORE_BOUNDS[slug] ?? 100000;
   const safeScore = Math.max(0, Math.min(score, bound));
   try {
-    const db = fbDb();
+    const { collection, addDoc, serverTimestamp } = await fsModOf();
+    const db = await fbDb();
     const name = store.name || "Player";
     await addDoc(collection(db, "leaderboards", slug, "scores"), {
       uid: store.uid,
@@ -46,7 +45,8 @@ export async function pushProgressToFirestore(outcome: LastGameOutcome) {
   const store = usePlayer.getState();
   if (!isFirebaseConfigured || !store.uid || store.uid.startsWith("guest")) return;
   try {
-    const db = fbDb();
+    const { doc, getDoc, setDoc, updateDoc, serverTimestamp } = await fsModOf();
+    const db = await fbDb();
     const ref = doc(db, "users", store.uid);
     const snap = await getDoc(ref);
     if (!snap.exists()) {
@@ -80,7 +80,8 @@ export type LeaderRow = { uid: string; name: string; avatar: string; score: numb
 export async function fetchGlobalLeaderboard(): Promise<LeaderRow[] | null> {
   if (!isFirebaseConfigured) return null;
   try {
-    const db = fbDb();
+    const { collection, query, orderBy, limit, getDocs } = await fsModOf();
+    const db = await fbDb();
     const q = query(collection(db, "users"), orderBy("xp", "desc"), limit(50));
     const snap = await getDocs(q);
     const rows: LeaderRow[] = [];
@@ -98,11 +99,11 @@ export async function fetchGlobalLeaderboard(): Promise<LeaderRow[] | null> {
 export async function fetchLeaderboard(slug: string, mode: "all" | "week" = "all"): Promise<LeaderRow[] | null> {
   if (!isFirebaseConfigured) return null;
   try {
-    const db = fbDb();
+    const { collection, query, orderBy, limit, getDocs, where } = await fsModOf();
+    const db = await fbDb();
     const base = collection(db, "leaderboards", slug, "scores");
     const q =
-      mode === "week"
-        ? query(base, where("createdAt", ">", new Date(Date.now() - 7 * 86400000)), orderBy("createdAt", "desc"), limit(200))
+      mode === "week"? query(base, where("createdAt", ">", new Date(Date.now() - 7 * 86400000)), orderBy("createdAt", "desc"), limit(200))
         : query(base, orderBy("createdAt", "desc"), limit(300));
     const snap = await getDocs(q);
     const best = new Map<string, LeaderRow>();

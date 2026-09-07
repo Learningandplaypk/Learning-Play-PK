@@ -8,20 +8,12 @@ import { getGameData, type ZoneKey } from "@/lib/games-data";
 
 const d = (loader: () => Promise<{ default: ComponentType<GameProps> }>) => dynamic(loader, { ssr: false });
 
-const LEARN_LOADERS: Record<string, ComponentType<GameProps>> = {
-  "word-builder": d(() => import("@/components/games/learn/word-builder")),
-  "grammar-quest": d(() => import("@/components/games/learn/grammar-quest")),
-  "vocab-battle": d(() => import("@/components/games/learn/vocab-battle")),
-  "sentence-puzzle": d(() => import("@/components/games/learn/sentence-puzzle")),
-  "listening-challenge": d(() => import("@/components/games/learn/listening-challenge")),
-  "idiom-master": d(() => import("@/components/games/learn/idiom-master")),
-  "story-builder": d(() => import("@/components/games/learn/story-builder")),
+const LEARN_LOADERS: Record<string, ComponentType<GameProps>> = {"word-builder": d(() => import("@/components/games/learn/word-builder")),"grammar-quest": d(() => import("@/components/games/learn/grammar-quest")),"vocab-battle": d(() => import("@/components/games/learn/vocab-battle")),"sentence-puzzle": d(() => import("@/components/games/learn/sentence-puzzle")),"listening-challenge": d(() => import("@/components/games/learn/listening-challenge")),"idiom-master": d(() => import("@/components/games/learn/idiom-master")),"story-builder": d(() => import("@/components/games/learn/story-builder")),
   pronunciation: d(() => import("@/components/games/learn/pronunciation")),
 };
 
 const BRAIN_LOADERS: Record<string, ComponentType<GameProps>> = {
-  memory: d(() => import("@/components/games/brain/memory")),
-  "math-speed": d(() => import("@/components/games/brain/math-speed")),
+  memory: d(() => import("@/components/games/brain/memory")),"math-speed": d(() => import("@/components/games/brain/math-speed")),
   reaction: d(() => import("@/components/games/brain/reaction")),
   stroop: d(() => import("@/components/games/brain/stroop")),
   sequence: d(() => import("@/components/games/brain/sequence")),

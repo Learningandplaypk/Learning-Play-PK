@@ -1,11 +1,14 @@
 // Learn & Play PK — Service Worker (offline-first shell + runtime cache)
-const VERSION = "lpk-v3";
+const VERSION = "lpk-v4";
 const SHELL = [
   "/",
   "/learn",
   "/brain",
   "/quiz",
   "/fun",
+  "/profile",
+  "/leaderboard",
+  "/premium",
   "/offline",
   "/manifest.webmanifest",
 ];

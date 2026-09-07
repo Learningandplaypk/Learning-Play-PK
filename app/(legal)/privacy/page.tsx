@@ -27,7 +27,7 @@ export default function PrivacyPage() {
   return (
     <article>
       <h1 className="mb-6 font-display text-3xl font-black">
-        <span className="text-gradient">Privacy Policy</span>
+        <span className="">Privacy Policy</span>
       </h1>
       <p className="mb-8 text-xs text-muted">Aakhri update: September 2026</p>
       {SECTIONS.map(([h, body]) => (

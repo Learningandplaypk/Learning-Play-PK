@@ -2,11 +2,12 @@
 
 import React, { useEffect } from "react";
 import { I18nProvider } from "@/lib/i18n";
+import { ThemeProvider } from "@/lib/theme";
 import { AuthProvider } from "@/lib/auth";
 import { ToastHost } from "./toast";
 import { LevelUpHost } from "./levelup";
-import { CustomCursor } from "./cursor";
 import { ConsentBanner } from "./consent";
+import { InstallPrompt } from "./install-prompt";
 import { setSfxEnabled } from "@/lib/sfx";
 import { usePlayer } from "@/lib/store";
 
@@ -33,15 +34,17 @@ export function Providers({ children }: { children: React.ReactNode }) {
   }, []);
   return (
     <I18nProvider>
-      <AuthProvider>
-        <SoundSync />
-        <ServiceWorker />
-        {children}
-        <ToastHost />
-        <LevelUpHost />
-        <CustomCursor />
-        <ConsentBanner />
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <SoundSync />
+          <ServiceWorker />
+          {children}
+          <ToastHost />
+          <LevelUpHost />
+          <ConsentBanner />
+          <InstallPrompt />
+        </AuthProvider>
+      </ThemeProvider>
     </I18nProvider>
   );
 }

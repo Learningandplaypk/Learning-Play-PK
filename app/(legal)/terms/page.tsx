@@ -30,7 +30,7 @@ export default function TermsPage() {
   return (
     <article>
       <h1 className="mb-6 font-display text-3xl font-black">
-        <span className="text-gradient">Terms of Service</span>
+        <span className="">Terms of Service</span>
       </h1>
       <p className="mb-8 text-xs text-muted">Aakhri update: September 2026</p>
       {SECTIONS.map(([h, body]) => (

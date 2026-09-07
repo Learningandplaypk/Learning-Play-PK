@@ -68,12 +68,7 @@ export default function ReactionGame({ onEnd }: GameProps) {
         onClick={tap}
         disabled={state === "done"}
         className={`grid h-72 w-full place-items-center rounded-3xl border font-display text-2xl font-black transition-colors duration-200 select-none ${
-          state === "go"
-            ? "border-neon-green bg-neon-green/20 text-neon-green shadow-[0_0_60px_-10px_rgba(57,255,20,.7)]"
-            : state === "wait"
-              ? "border-pink-accent/60 bg-pink-accent/10 text-pink-accent"
-              : "glass hover:border-electric/60"
-        }`}
+          state === "go"? "border-brand bg-brand/20 text-brand-ink ": state === "wait"? "border-accent/60 bg-accent/10 text-accent-ink": "card hover:border-info/60"}`}
         aria-label={state === "go" ? "Tap now" : "Tap to begin"}
       >
         {state === "idle" && (times.length === 0 ? "👆 Tap shuru karne ke liye" : "👆 Phir se tap karo")}

@@ -15,7 +15,7 @@ export function ConsentBanner() {
 
   useEffect(() => {
     if (consent == null) {
-      const t = setTimeout(() => setVisible(true), 1200);
+      const t = setTimeout(() => setVisible(true), 400);
       return () => clearTimeout(t);
     }
   }, [consent]);
@@ -27,19 +27,24 @@ export function ConsentBanner() {
 
   if (!visible) return null;
   return (
-    <div className="fixed inset-x-3 bottom-20 z-[250] mx-auto max-w-xl lg:bottom-6 lg:left-6 lg:mx-0">
-      <div className="glass p-4">
-        <p className="text-sm text-ink">
+    <div
+      className="fixed inset-x-3 z-[250] mx-auto max-w-xl md:left-4 md:mx-0"
+      style={{ bottom: "calc(4.75rem + env(safe-area-inset-bottom, 0px))" }}
+      role="region"
+      aria-label="Cookie consent"
+    >
+      <div className="card-md p-4">
+        <p className="text-sm leading-relaxed text-fg">
           Hum cookies use karte hain taake games yaad rakhein aur ads dikhayein.{" "}
-          <a href="/privacy" className="text-electric underline underline-offset-2">
+          <a href="/privacy" className="font-semibold text-brand-ink underline underline-offset-2">
             Privacy Policy
           </a>
         </p>
-        <div className="mt-3 flex gap-2">
+        <div className="mt-3 flex flex-wrap gap-2">
           <Button size="sm" onClick={() => decide(true)}>
             Theek hai, accept
           </Button>
-          <Button size="sm" variant="ghost" onClick={() => decide(false)}>
+          <Button size="sm" variant="secondary" onClick={() => decide(false)}>
             Sirf zaroori
           </Button>
         </div>

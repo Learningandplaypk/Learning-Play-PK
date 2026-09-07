@@ -2,85 +2,118 @@
 
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
-import { Button, Input, Progress, TiltCard, Modal } from "@/components/ui";
+import {
+  Coins,
+  Download,
+  Flame,
+  Gamepad2,
+  LogIn,
+  LogOut,
+  Moon,
+  Pencil,
+  RotateCcw,
+  Settings,
+  Snowflake,
+  Sparkles,
+  Sun,
+  Trash2,
+  Trophy,
+  Volume2,
+  VolumeX,
+  Zap,
+} from "lucide-react";
+import { Button, Card, Chip, Modal, Progress, Sheet, StatTile, Tabs } from "@/components/ui";
 import { usePlayer, AVATAR_CHOICES, playerSnapshot, type LangKey } from "@/lib/store";
 import { levelFromXp, levelTitle, DAILY_REWARDS } from "@/lib/gamification";
 import { BADGES } from "@/data/badges";
-import { fmt, pktDayKey } from "@/lib/utils";
+import { fmt, pktDayKey, pktDayOffset } from "@/lib/utils";
 import { useAuth } from "@/lib/auth";
-import { AuthBackground } from "@/components/auth/auth-bg";
+import { useTheme, type ThemeChoice } from "@/lib/theme";
 
-function RadarChart({ values }: { values: number[] }) {
-  // 5-axis radar: learn, brain, quiz, fun, streak
-  const size = 180;
-  const cx = size / 2;
-  const cy = size / 2;
-  const max = 5;
-  const pt = (i: number, v: number) => {
-    const ang = (Math.PI * 2 * i) / values.length - Math.PI / 2;
-    const r = (Math.min(v, max) / max) * (size / 2 - 22);
-    return [cx + Math.cos(ang) * r, cy + Math.sin(ang) * r];
-  };
-  const poly = values.map((v, i) => pt(i, v).join(",")).join(" ");
+function LevelRing({ level, progress }: { level: number; progress: number }) {
+  const r = 42;
+  const c = 2 * Math.PI * r;
   return (
-    <svg viewBox={`0 0 ${size} ${size}`} className="mx-auto w-44" role="img" aria-label="Progress radar chart">
-      {[1, 2, 3, 4, 5].map((ring) => (
-        <polygon
-          key={ring}
-          points={values.map((_, i) => pt(i, ring).join(",")).join(" ")}
+    <div className="relative h-28 w-28 shrink-0">
+      <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90" role="img" aria-label={`Level ${level}`}>
+        <circle cx="50" cy="50" r={r} fill="none" stroke="var(--surface-2)" strokeWidth="10" />
+        <circle
+          cx="50"
+          cy="50"
+          r={r}
           fill="none"
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth="1"
+          stroke="var(--brand)"
+          strokeWidth="10"
+          strokeLinecap="round"
+          strokeDasharray={c}
+          strokeDashoffset={c * (1 - progress)}
+          style={{ transition: "stroke-dashoffset 300ms cubic-bezier(0.22,1,0.36,1)" }}
         />
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <span className="font-display text-2xl font-black text-fg tnum">{level}</span>
+        <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Level</span>
+      </div>
+    </div>
+  );
+}
+
+function WeeklyBars() {
+  const results = usePlayer((s) => s.results);
+  const days = useMemo(() => {
+    const today = pktDayKey();
+    return Array.from({ length: 7 }, (_, i) => {
+      const key = pktDayOffset(-(6 - i), today);
+      const count = results.filter((r) => pktDayKey(new Date(r.at)) === key).length;
+      return { key, count, label: new Date(`${key}T07:00:00Z`).toLocaleDateString("en-PK", { weekday: "short" }) };
+    });
+  }, [results]);
+  const max = Math.max(1, ...days.map((d) => d.count));
+
+  return (
+    <div className="flex items-end justify-between gap-2 pt-2">
+      {days.map((d) => (
+        <div key={d.key} className="flex flex-1 flex-col items-center gap-1.5">
+          <div className="flex h-20 w-full items-end">
+            <div
+              className="w-full rounded-md"
+              style={{
+                height: `${Math.max(6, (d.count / max) * 100)}%`,
+                background: d.count > 0 ? "var(--brand)" : "var(--surface-2)",
+                border: d.count > 0 ? "none" : "1px solid var(--border)",
+              }}
+              title={`${d.count} games`}
+            />
+          </div>
+          <span className="text-[10px] font-semibold text-muted">{d.label}</span>
+        </div>
       ))}
-      <polygon points={poly} fill="rgba(57,255,20,0.18)" stroke="#39ff14" strokeWidth="1.6" />
-      {["📚", "🧠", "❓", "🎮", "🔥"].map((e, i) => {
-        const [x, y] = pt(i, max + 0.65);
-        return (
-          <text key={i} x={x} y={y} textAnchor="middle" dominantBaseline="middle" fontSize="11">
-            {e}
-          </text>
-        );
-      })}
-    </svg>
+    </div>
   );
 }
 
 export function ProfileClient() {
   const s = usePlayer();
   const { user, configured, logout } = useAuth();
+  const { choice, setChoice } = useTheme();
   const lv = levelFromXp(s.xp);
+
   const [editName, setEditName] = useState(false);
-  const [nameDraft, setNameDraft] = useState(s.name);
+  const [nameDraft, setNameDraft] = useState("");
   const [resetConfirm, setResetConfirm] = useState(false);
+  const [avatars, setAvatars] = useState(false);
   const today = pktDayKey();
 
-  const zoneScores = useMemo(() => {
-    const zones = { learn: 0, brain: 0, quiz: 0, fun: 0 };
-    s.results.forEach((r) => {
-      zones[r.zone] += r.score;
-    });
-    const mx = Math.max(1, ...Object.values(zones));
-    return [
-      zones.learn / mx,
-      zones.brain / mx,
-      zones.quiz / mx,
-      zones.fun / mx,
-      Math.min(5, s.streak),
-    ];
-  }, [s.results, s.streak]);
-
+  const earned = useMemo(() => BADGES.filter((b) => s.badges.includes(b.id)), [s.badges]);
   const recent = s.results.slice(0, 6);
-  const earned = BADGES.filter((b) => s.badges.includes(b.id));
+  const rewardAvailable = s.lastRewardDay !== today;
 
   const claim = () => {
     const reward = s.claimDailyReward();
     if (reward) {
-      s.toast("🎁", `Daily reward: ${reward.label} mila!`, reward.freeze ? "+1 streak freeze bhi" : "Kal phir aana — cycle day " + (s.rewardCycleDay % 7 === 0 ? 7 : s.rewardCycleDay));
+      s.toast("🎁", `Daily reward: ${reward.label} mila!`, reward.freeze ? "+1 streak freeze bhi" : "Kal phir aana");
     }
   };
-
-  const rewardAvailable = s.lastRewardDay !== today;
 
   const downloadSnapshot = () => {
     const blob = new Blob([JSON.stringify(playerSnapshot(s), null, 2)], { type: "application/json" });
@@ -93,221 +126,318 @@ export function ProfileClient() {
   };
 
   return (
-    <div className="relative page-pad mx-auto min-h-[100dvh] max-w-5xl pb-28 pt-28">
-      <AuthBackground />
-      <div className="relative z-10">
-        {/* header card */}
-        <TiltCard className="mb-6 overflow-hidden p-6 sm:p-8" intensity={5}>
-          <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start">
-            <div className="relative">
-              <div className="grid h-24 w-24 place-items-center rounded-3xl bg-gradient-to-br from-electric/40 via-neon-purple/35 to-neon-green/35 text-5xl shadow-[0_0_40px_-8px_rgba(45,124,255,.7)]">
-                {s.avatar}
+    <div className="container-page page-pad pb-24 pt-8 md:pb-10">
+      {/* ------------------------------ header ------------------------------ */}
+      <Card className="mb-4 p-5 sm:p-6">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <LevelRing level={lv.level} progress={lv.progress} />
+          <div className="min-w-0 flex-1">
+            {editName ? (
+              <div className="flex gap-2">
+                <input
+                  value={nameDraft}
+                  onChange={(e) => setNameDraft(e.target.value)}
+                  placeholder="Naam likho"
+                  aria-label="Display name"
+                  className="field max-w-[220px]"
+                  autoFocus
+                />
+                <Button
+                  size="sm"
+                  onClick={() => {
+                    s.setPlayer({ name: nameDraft.slice(0, 24) });
+                    setEditName(false);
+                  }}
+                >
+                  Save
+                </Button>
               </div>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-neon-green to-electric px-3 py-0.5 font-display text-[11px] font-black text-black">
-                LV {lv.level}
-              </div>
-            </div>
-            <div className="flex-1 text-center sm:text-left">
-              {editName ? (
-                <div className="flex gap-2">
-                  <Input value={nameDraft} onChange={(e) => setNameDraft(e.target.value)} placeholder="Naam likho" aria-label="Display name" />
-                  <Button
-                    size="sm"
-                    onClick={() => {
-                      s.setPlayer({ name: nameDraft.slice(0, 24) });
-                      setEditName(false);
-                    }}
-                  >
-                    ✔
-                  </Button>
-                </div>
-              ) : (
-                <h1 className="font-display text-2xl font-black">
-                  {s.name || (user ? user.name : "Khiladi")}{" "}
-                  <button onClick={() => { setNameDraft(s.name || (user?.name ?? "")); setEditName(true); }} className="text-sm text-electric hover:underline" aria-label="Naam badlo">
-                    ✏️
-                  </button>
-                </h1>
-              )}
-              <p className="text-sm font-bold text-neon-green">{levelTitle(lv.level)}</p>
-              <div className="mt-3 max-w-sm">
-                <div className="mb-1 flex justify-between text-[11px] text-muted">
-                  <span>{fmt(lv.into)} XP</span>
-                  <span>{lv.need > 0 ? `${fmt(lv.need - lv.into)} XP → Lv ${lv.level + 1}` : "MAX"}</span>
-                </div>
-                <Progress value={lv.progress * 100} />
-              </div>
-              <div className="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
-                <span className="chip">🪙 {fmt(s.coins)}</span>
-                <span className="chip">🔥 {s.streak} day streak</span>
-                <span className="chip">❄️ {s.freezes} freezes</span>
-                <span className="chip">💡 {s.hints} hints</span>
-                {s.premium && <span className="chip border-neon-orange/50 text-neon-orange">👑 Premium{s.premiumExpiry ? ` — ${s.premiumExpiry} tak` : ""}</span>}
-              </div>
-            </div>
-            {/* daily reward chest */}
-            <button
-              onClick={claim}
-              disabled={!rewardAvailable}
-              className={`glass glass-hover w-full max-w-[180px] p-4 text-center transition ${rewardAvailable ? "animate-pulse-glow border-neon-green/50" : "opacity-60"}`}
-              aria-label="Daily reward kholo"
-            >
-              <div className="text-4xl">{rewardAvailable ? "🎁" : "chest khol di 📦"}</div>
-              <div className="mt-2 font-display text-sm font-bold">{rewardAvailable ? "Daily Chest — kholo!" : "Aaj ka chest khul gaya"}</div>
-              <div className="mt-1 text-[10px] text-muted">
-                Day {(s.rewardCycleDay % 7) + 1}/7 — {DAILY_REWARDS[s.rewardCycleDay % 7].label}
-              </div>
-            </button>
-          </div>
-        </TiltCard>
-
-        <div className="grid gap-5 lg:grid-cols-3">
-          {/* stats + radar */}
-          <TiltCard className="p-6">
-            <h3 className="mb-3 font-display font-bold">📈 Stats</h3>
-            <RadarChart values={zoneScores} />
-            <div className="mt-3 grid grid-cols-2 gap-2 text-center text-sm">
-              <div className="glass p-2.5">
-                <div className="font-display text-lg font-black">{s.results.length}</div>
-                <div className="text-[10px] uppercase text-muted">Games</div>
-              </div>
-              <div className="glass p-2.5">
-                <div className="font-display text-lg font-black">{s.wordsLearned.length}</div>
-                <div className="text-[10px] uppercase text-muted">Words</div>
-              </div>
-              <div className="glass p-2.5">
-                <div className="font-display text-lg font-black">{s.quizCorrect}</div>
-                <div className="text-[10px] uppercase text-muted">Quiz ✅</div>
-              </div>
-              <div className="glass p-2.5">
-                <div className="font-display text-lg font-black">{s.perfectScores}</div>
-                <div className="text-[10px] uppercase text-muted">Perfect</div>
-              </div>
-            </div>
-          </TiltCard>
-
-          {/* badges trophy room */}
-          <TiltCard className="p-6 lg:col-span-2">
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="font-display font-bold">🏆 Trophy Room</h3>
-              <span className="text-xs text-muted">{earned.length}/{BADGES.length}</span>
-            </div>
-            <Progress value={(earned.length / BADGES.length) * 100} className="mb-4" />
-            <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-8">
-              {BADGES.map((b) => {
-                const owned = s.badges.includes(b.id);
-                return (
-                  <div
-                    key={b.id}
-                    title={`${b.name} — ${b.desc}`}
-                    className={`grid aspect-square place-items-center rounded-2xl border text-2xl transition ${
-                      owned ? "border-neon-green/50 bg-neon-green/10 shadow-[0_0_18px_-6px_rgba(57,255,20,.8)]" : "border-white/8 bg-white/[0.03] opacity-30 grayscale"
-                    }`}
-                  >
-                    {b.emoji}
-                  </div>
-                );
-              })}
-            </div>
-          </TiltCard>
-
-          {/* recent games */}
-          <TiltCard className="p-6">
-            <h3 className="mb-3 font-display font-bold">🕹️ Recent Games</h3>
-            {recent.length === 0 ? (
-              <p className="text-sm text-muted">Abhi koi game nahi khela — chalo shuru karein!</p>
             ) : (
-              <ul className="space-y-2">
-                {recent.map((r, i) => (
-                  <li key={i} className="glass flex items-center justify-between px-3 py-2 text-sm">
-                    <span className="text-muted">{new Date(r.at).toLocaleDateString("en-PK", { day: "numeric", month: "short" })}</span>
-                    <span className="font-bold">{r.slug}</span>
-                    <span className="text-neon-green">+{r.xp} XP</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </TiltCard>
-
-          {/* settings */}
-          <TiltCard className="p-6 lg:col-span-2">
-            <h3 className="mb-4 font-display font-bold">⚙️ Settings</h3>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">Avatar</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {AVATAR_CHOICES.map((a) => (
-                    <button
-                      key={a}
-                      onClick={() => s.setPlayer({ avatar: a })}
-                      className={`grid h-10 w-10 place-items-center rounded-xl border text-xl transition ${s.avatar === a ? "border-neon-green bg-neon-green/15" : "border-white/10 hover:border-white/30"}`}
-                      aria-label={`Avatar ${a}`}
-                    >
-                      {a}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">Language / زبان</p>
-                <div className="flex gap-2">
-                  {([["en", "English"], ["roman", "Roman Urdu"], ["ur", "اردو"]] as Array<[LangKey, string]>).map(([k, label]) => (
-                    <button key={k} onClick={() => s.setPlayer({ lang: k })} className={`chip cursor-pointer ${s.lang === k ? "border-electric/60 text-ink" : ""}`} aria-pressed={s.lang === k}>
-                      {label}
-                    </button>
-                  ))}
-                </div>
-                <p className="mb-2 mt-4 text-xs font-bold uppercase tracking-wider text-muted">Sound</p>
-                <button className={`chip cursor-pointer ${s.sound ? "border-neon-green/50 text-neon-green" : ""}`} onClick={() => s.setPlayer({ sound: !s.sound })} aria-pressed={s.sound}>
-                  {s.sound ? "🔊 ON" : "🔇 OFF"}
+              <h1 className="flex items-center gap-2 font-display text-2xl font-black text-fg">
+                <span className="truncate">{s.name || (user ? user.name : "Khiladi")}</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setNameDraft(s.name || user?.name || "");
+                    setEditName(true);
+                  }}
+                  aria-label="Naam badlo"
+                  className="grid h-11 w-11 place-items-center rounded-lg text-muted hover:bg-surface-2 hover:text-fg"
+                >
+                  <Pencil size={15} strokeWidth={2.2} />
                 </button>
-                <span className="ml-2">
-                  <button className={`chip cursor-pointer ${s.lowQuality ? "border-neon-orange/50 text-neon-orange" : ""}`} onClick={() => s.setPlayer({ lowQuality: !s.lowQuality })} aria-pressed={s.lowQuality}>
-                    {s.lowQuality ? "🪫 Low graphics ON" : "🔋 Low graphics OFF"}
-                  </button>
+              </h1>
+            )}
+            <p className="mt-0.5 text-sm font-bold text-brand-ink">{levelTitle(lv.level)}</p>
+            <div className="mt-3 max-w-sm">
+              <div className="mb-1.5 flex justify-between text-xs text-muted">
+                <span className="tnum">{fmt(lv.into)} XP</span>
+                <span className="tnum">
+                  {lv.need > 0 ? `${fmt(lv.need - lv.into)} XP → Lv ${lv.level + 1}` : "MAX"}
                 </span>
               </div>
-              <div className="sm:col-span-2">
-                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">Account & Data</p>
-                <div className="flex flex-wrap gap-2">
-                  {user ? (
-                    <Button size="sm" variant="ghost" onClick={() => logout()}>🚪 Logout</Button>
-                  ) : configured ? (
-                    <Link href="/login" className="btn btn-ghost btn-sm">🔑 Login / Signup</Link>
-                  ) : (
-                    <span className="chip">👤 Guest mode (Firebase setup pending)</span>
-                  )}
-                  <Button size="sm" variant="ghost" onClick={downloadSnapshot}>💾 Progress download</Button>
-                  {!s.premium && <Link href="/premium" className="btn btn-neon btn-sm">👑 Premium</Link>}
-                  <Button size="sm" variant="ghost" onClick={() => setResetConfirm(true)}>🗑️ Progress reset</Button>
-                </div>
-              </div>
+              <Progress value={lv.progress * 100} label={`Level ${lv.level} progress`} />
             </div>
-          </TiltCard>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Chip tone="accent">
+                <Flame size={13} strokeWidth={2.4} /> {s.streak} din
+              </Chip>
+              <Chip>
+                <Coins size={13} strokeWidth={2.4} /> {fmt(s.coins)}
+              </Chip>
+              <Chip>
+                <Snowflake size={13} strokeWidth={2.4} /> {s.freezes}
+              </Chip>
+              <Chip>
+                <Sparkles size={13} strokeWidth={2.4} /> {s.hints} hints
+              </Chip>
+              {s.premium && (
+                <Chip tone="brand">
+                  <Trophy size={13} strokeWidth={2.4} /> Premium
+                </Chip>
+              )}
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={claim}
+            disabled={!rewardAvailable}
+            className="card w-full shrink-0 p-4 text-left transition-colors hover:border-brand disabled:opacity-60 sm:max-w-[190px]"
+          >
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-accent-tint text-accent-ink">
+              <Sparkles size={20} strokeWidth={2.4} />
+            </span>
+            <span className="mt-2 block font-display text-sm font-extrabold text-fg">
+              {rewardAvailable ? "Daily chest kholo" : "Aaj ka chest mil gaya"}
+            </span>
+            <span className="mt-0.5 block text-xs text-muted">
+              Day {(s.rewardCycleDay % 7) + 1}/7 — {DAILY_REWARDS[s.rewardCycleDay % 7].label}
+            </span>
+          </button>
         </div>
+      </Card>
+
+      {/* ------------------------------ stats ------------------------------- */}
+      <div className="mb-4 grid gap-3 sm:grid-cols-3">
+        <StatTile icon={<Zap size={20} strokeWidth={2.4} />} value={fmt(s.xp)} label="Total XP" tone="brand" />
+        <StatTile icon={<Flame size={20} strokeWidth={2.4} />} value={s.streak} label="Day streak" tone="accent" />
+        <StatTile icon={<Gamepad2 size={20} strokeWidth={2.4} />} value={s.results.length} label="Games played" />
       </div>
 
-      <Modal open={resetConfirm} onClose={() => setResetConfirm(false)}>
-        <div className="text-center">
-          <div className="text-4xl">⚠️</div>
-          <h3 className="mt-2 font-display text-xl font-black">Pakka reset karna hai?</h3>
-          <p className="mt-2 text-sm text-muted">Saara XP, coins, badges aur history delete ho jayegi. Yeh wapis nahi aata.</p>
-          <div className="mt-5 flex gap-2">
-            <Button variant="ghost" className="flex-1" onClick={() => setResetConfirm(false)}>
-              Nahi
-            </Button>
-            <Button
-              variant="pink"
-              className="flex-1"
-              onClick={() => {
-                s.resetProgress();
-                setResetConfirm(false);
-                s.toast("🗑️", "Progress reset ho gaya", "Naya safar shuru!");
-              }}
-            >
-              Haan, reset
-            </Button>
+      <div className="grid gap-4 lg:grid-cols-3">
+        {/* weekly activity */}
+        <Card className="p-5">
+          <h2 className="font-display text-base font-extrabold text-fg">Is hafte ki activity</h2>
+          <p className="mb-3 text-xs text-muted">Pichle 7 din — kitne games khele</p>
+          <WeeklyBars />
+        </Card>
+
+        {/* badges */}
+        <Card className="p-5 lg:col-span-2">
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="flex items-center gap-2 font-display text-base font-extrabold text-fg">
+              <Trophy size={18} strokeWidth={2.4} className="text-brand-ink" /> Trophy room
+            </h2>
+            <span className="text-xs text-muted tnum">
+              {earned.length}/{BADGES.length}
+            </span>
           </div>
+          <Progress value={(earned.length / BADGES.length) * 100} className="mb-4" label={`Badges earned: ${earned.length} of ${BADGES.length}`} />
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-8">
+            {BADGES.map((b) => {
+              const owned = s.badges.includes(b.id);
+              return (
+                <div
+                  key={b.id}
+                  title={`${b.name} — ${b.desc}`}
+                  className={`grid aspect-square place-items-center rounded-xl border text-xl transition ${
+                    owned ? "border-brand/40 bg-brand-tint" : "border-line bg-surface-2 opacity-40 grayscale"
+                  }`}
+                >
+                  {b.emoji}
+                </div>
+              );
+            })}
+          </div>
+        </Card>
+
+        {/* recent */}
+        <Card className="p-5">
+          <h2 className="font-display text-base font-extrabold text-fg">Recent games</h2>
+          {recent.length === 0 ? (
+            <p className="mt-2 text-sm text-muted">Abhi koi game nahi khela — chalo shuru karein!</p>
+          ) : (
+            <ul className="mt-3 space-y-2">
+              {recent.map((r, i) => (
+                <li key={i} className="flex items-center justify-between gap-2 rounded-xl bg-surface-2 px-3 py-2 text-sm">
+                  <span className="text-xs text-muted">
+                    {new Date(r.at).toLocaleDateString("en-PK", { day: "numeric", month: "short" })}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate font-semibold text-fg">{r.slug.replace(/-/g, " ")}</span>
+                  <span className="font-bold text-brand-ink tnum">+{r.xp}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </Card>
+
+        {/* settings */}
+        <Card className="p-5 lg:col-span-2">
+          <h2 className="mb-4 flex items-center gap-2 font-display text-base font-extrabold text-fg">
+            <Settings size={18} strokeWidth={2.4} className="text-brand-ink" /> Settings
+          </h2>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">Theme</p>
+              <Tabs<ThemeChoice>
+                tabs={[
+                  { id: "light", label: "Light" },
+                  { id: "dark", label: "Dark" },
+                  { id: "system", label: "System" },
+                ]}
+                value={choice}
+                onChange={setChoice}
+              />
+              <p className="mb-2 mt-4 text-xs font-bold uppercase tracking-wider text-muted">Lite mode</p>
+              <button
+                type="button"
+                onClick={() => s.setPlayer({ lowQuality: !s.lowQuality })}
+                aria-pressed={s.lowQuality}
+                className={`filter-chip ${s.lowQuality ? "" : ""}`}
+                style={
+                  s.lowQuality
+                    ? { background: "var(--brand-tint)", borderColor: "var(--brand)", color: "var(--brand-ink)" }
+                    : undefined
+                }
+              >
+                {s.lowQuality ? "Lite mode ON" : "Lite mode OFF"}
+              </button>
+              <p className="mt-1.5 text-xs text-muted">Kamzor phone par 3D band karke sab kuch tez chalta hai.</p>
+            </div>
+
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">Sound</p>
+              <button
+                type="button"
+                onClick={() => s.setPlayer({ sound: !s.sound })}
+                aria-pressed={s.sound}
+                className="filter-chip"
+                style={
+                  s.sound
+                    ? { background: "var(--brand-tint)", borderColor: "var(--brand)", color: "var(--brand-ink)" }
+                    : undefined
+                }
+              >
+                {s.sound ? <Volume2 size={15} strokeWidth={2.2} /> : <VolumeX size={15} strokeWidth={2.2} />}
+                {s.sound ? "Sound on" : "Sound off"}
+              </button>
+
+              <p className="mb-2 mt-4 text-xs font-bold uppercase tracking-wider text-muted">Language / زبان</p>
+              <div className="flex flex-wrap gap-2">
+                {(
+                  [
+                    ["en", "English"],
+                    ["roman", "Roman Urdu"],
+                    ["ur", "اردو"],
+                  ] as Array<[LangKey, string]>
+                ).map(([k, label]) => (
+                  <button
+                    key={k}
+                    type="button"
+                    onClick={() => s.setPlayer({ lang: k })}
+                    className="filter-chip"
+                    aria-pressed={s.lang === k}
+                    style={
+                      s.lang === k
+                        ? { background: "var(--brand-tint)", borderColor: "var(--brand)", color: "var(--brand-ink)" }
+                        : undefined
+                    }
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+
+              <p className="mb-2 mt-4 text-xs font-bold uppercase tracking-wider text-muted">Avatar</p>
+              <button type="button" onClick={() => setAvatars(true)} className="btn btn-secondary btn-sm">
+                Avatar badlo ({s.avatar})
+              </button>
+            </div>
+
+            <div className="sm:col-span-2">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">Account & data</p>
+              <div className="flex flex-wrap gap-2">
+                {user ? (
+                  <Button size="sm" variant="secondary" onClick={() => logout()}>
+                    <LogOut size={15} strokeWidth={2.2} /> Logout
+                  </Button>
+                ) : configured ? (
+                  <Link href="/login" className="btn btn-secondary btn-sm">
+                    <LogIn size={15} strokeWidth={2.2} /> Login / Signup
+                  </Link>
+                ) : (
+                  <Chip>Guest mode — Firebase setup pending</Chip>
+                )}
+                <Button size="sm" variant="secondary" onClick={downloadSnapshot}>
+                  <Download size={15} strokeWidth={2.2} /> Progress download
+                </Button>
+                {!s.premium && (
+                  <Link href="/premium" className="btn btn-primary btn-sm">
+                    <Trophy size={15} strokeWidth={2.2} /> Premium
+                  </Link>
+                )}
+                <Button size="sm" variant="ghost" onClick={() => setResetConfirm(true)}>
+                  <Trash2 size={15} strokeWidth={2.2} /> Progress reset
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      {/* avatar sheet */}
+      <Sheet open={avatars} onClose={() => setAvatars(false)} title="Avatar chuno">
+        <div className="grid grid-cols-6 gap-2">
+          {AVATAR_CHOICES.map((a) => (
+            <button
+              key={a}
+              type="button"
+              onClick={() => {
+                s.setPlayer({ avatar: a });
+                setAvatars(false);
+              }}
+              className={`grid aspect-square place-items-center rounded-xl border text-2xl ${
+                s.avatar === a ? "border-brand bg-brand-tint" : "border-line bg-surface-2"
+              }`}
+              aria-label={`Avatar ${a}`}
+              aria-pressed={s.avatar === a}
+            >
+              {a}
+            </button>
+          ))}
+        </div>
+      </Sheet>
+
+      {/* reset confirm */}
+      <Modal open={resetConfirm} onClose={() => setResetConfirm(false)} title="Pakka reset karna hai?">
+        <p className="text-sm leading-relaxed text-muted">
+          Saara XP, coins, badges aur history delete ho jayegi. Yeh wapis nahi aata.
+        </p>
+        <div className="mt-5 grid grid-cols-2 gap-2">
+          <Button variant="secondary" onClick={() => setResetConfirm(false)}>
+            Nahi
+          </Button>
+          <Button
+            variant="danger"
+            onClick={() => {
+              s.resetProgress();
+              setResetConfirm(false);
+              s.toast("🗑️", "Progress reset ho gaya", "Naya safar shuru!");
+            }}
+          >
+            <RotateCcw size={16} strokeWidth={2.2} /> Haan, reset
+          </Button>
         </div>
       </Modal>
     </div>

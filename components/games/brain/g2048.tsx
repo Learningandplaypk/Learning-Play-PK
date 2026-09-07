@@ -6,17 +6,17 @@ import { canMove, move as gridMove, newGame, spawn, type Dir } from "@/lib/engin
 import { sfx } from "@/lib/sfx";
 
 const TILE_STYLES: Record<number, string> = {
-  2: "bg-white/10 text-ink",
-  4: "bg-white/15 text-ink",
-  8: "bg-electric/40 text-white",
-  16: "bg-electric/60 text-white",
-  32: "bg-neon-purple/50 text-white",
-  64: "bg-neon-purple/70 text-white",
-  128: "bg-pink-accent/60 text-white",
-  256: "bg-pink-accent/80 text-white",
-  512: "bg-neon-orange/70 text-black",
-  1024: "bg-neon-green/70 text-black",
-  2048: "bg-neon-green text-black shadow-[0_0_40px_rgba(57,255,20,.8)]",
+  2: "bg-surface-2 text-fg",
+  4: "bg-surface-2 text-fg",
+  8: "bg-info/40 text-white",
+  16: "bg-info/60 text-white",
+  32: "bg-info/50 text-white",
+  64: "bg-info/70 text-white",
+  128: "bg-accent/60 text-white",
+  256: "bg-accent/80 text-white",
+  512: "bg-accent/70 text-black",
+  1024: "bg-brand/70 text-black",
+  2048: "bg-brand text-black ",
 };
 
 export default function Game2048({ onEnd }: GameProps) {
@@ -86,30 +86,29 @@ export default function Game2048({ onEnd }: GameProps) {
       <div className="mb-4 flex items-center justify-between">
         <span className="chip">🎯 {score}</span>
         <span className="chip">2048 banao!</span>
-        <button className="chip cursor-pointer hover:text-ink" onClick={() => over && onEnd({ score: Math.round(score / 40), maxScore: 500, accuracy: 0.4, timeMs: Date.now() - startedAt })}>
+        <button className="chip-btn hover:text-fg" onClick={() => over && onEnd({ score: Math.round(score / 40), maxScore: 500, accuracy: 0.4, timeMs: Date.now() - startedAt })}>
           {over ? "Result dekho →" : "Swipe ya arrows"}
         </button>
       </div>
-      <div className="glass grid aspect-square grid-cols-4 grid-rows-4 gap-2 p-2.5">
+      <div className="card grid aspect-square grid-cols-4 grid-rows-4 gap-2 p-2.5">
         {grid.map((v, i) => (
           <div
             key={i}
             className={`grid place-items-center rounded-xl font-display text-xl font-black transition-all duration-150 sm:text-2xl ${
-              v === 0 ? "bg-white/[0.04]" : TILE_STYLES[v] ?? "bg-neon-green text-black"
-            } ${v !== 0 ? "pop-in" : ""}`}
+              v === 0 ? "bg-surface-2" : TILE_STYLES[v] ?? "bg-brand text-black"} ${v !== 0 ? "pop-in" : ""}`}
           >
             {v !== 0 ? v : ""}
           </div>
         ))}
       </div>
-      {over && <p className="mt-4 text-center font-display text-xl font-bold text-gradient">Game over — {score} points!</p>}
+      {over && <p className="mt-4 text-center font-display text-xl font-bold ">Game over — {score} points!</p>}
       <div className="mt-4 grid grid-cols-3 gap-2 sm:hidden">
         <div />
-        <button className="btn btn-ghost" onClick={() => doMove("up")} aria-label="Up">↑</button>
+        <button className="btn btn-secondary" onClick={() => doMove("up")} aria-label="Up">↑</button>
         <div />
-        <button className="btn btn-ghost" onClick={() => doMove("left")} aria-label="Left">←</button>
-        <button className="btn btn-ghost" onClick={() => doMove("down")} aria-label="Down">↓</button>
-        <button className="btn btn-ghost" onClick={() => doMove("right")} aria-label="Right">→</button>
+        <button className="btn btn-secondary" onClick={() => doMove("left")} aria-label="Left">←</button>
+        <button className="btn btn-secondary" onClick={() => doMove("down")} aria-label="Down">↓</button>
+        <button className="btn btn-secondary" onClick={() => doMove("right")} aria-label="Right">→</button>
       </div>
     </div>
   );

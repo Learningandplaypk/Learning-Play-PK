@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
 import { sfx } from "@/lib/sfx";
+import { usePalette } from "@/lib/canvas-theme";
 
 const W = 400;
 const H = 560;
@@ -15,6 +16,7 @@ const FRUITS = ["🍎", "🍉", "🍊", "🥭", "🍌", "🍇", "🥝", "🍓"];
 
 export default function FruitNinja({ onEnd }: GameProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pal = usePalette();
   const fruits = useRef<Fruit[]>([]);
   const sparks = useRef<Spark[]>([]);
   const slices = useRef<SliceLine[]>([]);
@@ -77,10 +79,7 @@ export default function FruitNinja({ onEnd }: GameProps) {
       const dt = Math.min(32, now - last);
       last = now;
       ctx.clearRect(0, 0, W, H);
-      const bg = ctx.createLinearGradient(0, 0, 0, H);
-      bg.addColorStop(0, "#0b0d1c");
-      bg.addColorStop(1, "#101331");
-      ctx.fillStyle = bg;
+      ctx.fillStyle = pal.surface2;
       ctx.fillRect(0, 0, W, H);
 
       if (running && !over) {
@@ -124,7 +123,7 @@ export default function FruitNinja({ onEnd }: GameProps) {
             } else {
               sfx("coin");
               for (let i = 0; i < 8; i++) {
-                sparks.current.push({ x: f.x, y: f.y, vx: (Math.random() - 0.5) * 5, vy: (Math.random() - 0.5) * 5 - 1, life: 500, color: "#39ff14" });
+                sparks.current.push({ x: f.x, y: f.y, vx: (Math.random() - 0.5) * 5, vy: (Math.random() - 0.5) * 5 - 1, life: 500, color: f.bomb ? "#D7263D" : "#F5A524" });
               }
             }
           }
@@ -159,8 +158,6 @@ export default function FruitNinja({ onEnd }: GameProps) {
         ctx.font = `${f.r * 2}px serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.shadowColor = f.bomb ? "#ff2e97" : "#39ff14";
-        ctx.shadowBlur = 14;
         ctx.fillText(f.emoji, 0, 0);
         ctx.restore();
       }
@@ -182,36 +179,38 @@ export default function FruitNinja({ onEnd }: GameProps) {
       // slice trail
       slices.current = slices.current.filter((s) => (s.life -= dt) > 0);
       for (const s of slices.current) {
-        ctx.strokeStyle = `rgba(57,255,20,${s.life / 220})`;
+        ctx.strokeStyle = pal.accent;
+        ctx.globalAlpha = s.life / 220;
         ctx.lineWidth = 3;
         ctx.lineCap = "round";
         ctx.beginPath();
         ctx.moveTo(s.x1, s.y1);
         ctx.lineTo(s.x2, s.y2);
         ctx.stroke();
+        ctx.globalAlpha = 1;
       }
 
       // hearts
       ctx.font = "16px sans-serif";
       ctx.textAlign = "left";
       ctx.fillText("❤️".repeat(Math.max(0, livesRef.current)), 10, 24);
-      ctx.font = "bold 22px 'Space Grotesk', sans-serif";
+      ctx.font = "800 22px Nunito, system-ui, sans-serif";
       ctx.textAlign = "right";
-      ctx.fillStyle = "#f4f6ff";
+      ctx.fillStyle = pal.text;
       ctx.fillText(String(scoreRef.current), W - 12, 28);
 
       if (!running && !over) {
         ctx.textAlign = "center";
-        ctx.font = "bold 24px 'Space Grotesk', sans-serif";
-        ctx.fillStyle = "#39ff14";
+        ctx.font = "800 24px Nunito, system-ui, sans-serif";
+        ctx.fillStyle = pal.brand;
         ctx.fillText("Tap = Start", W / 2, H / 2);
       }
       if (over) {
-        ctx.fillStyle = "rgba(0,0,0,.5)";
+        ctx.fillStyle = "rgba(21,23,27,0.5)";
         ctx.fillRect(0, 0, W, H);
         ctx.textAlign = "center";
-        ctx.font = "bold 28px 'Space Grotesk', sans-serif";
-        ctx.fillStyle = "#ff2e97";
+        ctx.font = "800 28px Nunito, system-ui, sans-serif";
+        ctx.fillStyle = "#fff";
         ctx.fillText("Khatam!", W / 2, H / 2 - 8);
       }
 
@@ -232,8 +231,7 @@ export default function FruitNinja({ onEnd }: GameProps) {
         ref={canvasRef}
         width={W}
         height={H}
-        className="w-full touch-none rounded-3xl border border-white/10"
-        onPointerMove={(e) => {
+        className="w-full touch-none rounded-3xl border border-line"onPointerMove={(e) => {
           const r = e.currentTarget.getBoundingClientRect();
           move(((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * H);
         }}
@@ -241,9 +239,8 @@ export default function FruitNinja({ onEnd }: GameProps) {
         onPointerDown={() => {
           if (!running) start();
         }}
-        aria-label="Fruit Ninja canvas"
-      />
-      {combo >= 2 && <p className="mt-2 text-center font-display font-black text-neon-green">🔥 Combo x{combo}!</p>}
+        aria-label="Fruit Ninja canvas"/>
+      {combo >= 2 && <p className="mt-2 text-center font-display font-black text-brand-ink">🔥 Combo x{combo}!</p>}
       <p className="mt-1 text-center text-xs text-muted">Swipe karke phal kaato 🍉 — bombs 💣 se bacho! 3 zindagi.</p>
     </div>
   );

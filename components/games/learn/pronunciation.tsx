@@ -103,41 +103,36 @@ export default function Pronunciation({ lang = "english", onEnd }: GameProps) {
         <span className="chip">{idx + 1}/{words.length}</span>
         <span className="chip">🎯 {score}</span>
       </div>
-      <div className="glass p-8">
+      <div className="card p-8">
         <p className="text-xs uppercase tracking-widest text-muted">Yeh word bolein</p>
-        <p className="mt-3 font-display text-4xl font-black text-gradient">{word.en}</p>
-        <p className="urdu mt-2 text-lg text-neon-green">{word.ur}</p>
+        <p className="mt-3 font-display text-4xl font-black ">{word.en}</p>
+        <p className="urdu mt-2 text-lg text-brand-ink">{word.ur}</p>
 
         <button
           onClick={startListening}
           disabled={listening || feedback !== null}
           className={`mx-auto mt-7 grid h-24 w-24 place-items-center rounded-full text-4xl transition ${
-            listening ? "animate-pulse-glow bg-pink-accent/25 ring-2 ring-pink-accent" : "glass glass-hover"
-          }`}
-          aria-label="Bolna shuru karo"
-        >
+            listening ? " bg-accent/25 ring-2 ring-accent" : "card"}`}
+          aria-label="Bolna shuru karo">
           🎤
         </button>
         <p className="mt-3 text-xs text-muted">
           {listening ? "Sun raha hoon… bolein!" : supported === false ? "Mic recognition available nahi — neeche type karke check karo" : "Tap karo aur clearly bolein"}
         </p>
-        {heard && <p className="mt-3 text-sm text-electric">Aapne kaha: “{heard}”</p>}
+        {heard && <p className="mt-3 text-sm text-info-ink">Aapne kaha: “{heard}”</p>}
 
         <div className="mt-5 flex gap-2">
           <input
             value={typed}
             onChange={(e) => setTyped(e.target.value)}
-            placeholder="…ya yahan type karke check karo"
-            className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm outline-none focus:border-electric/60"
-            aria-label="Type the word"
-          />
-          <button className="btn btn-ghost btn-sm" disabled={!typed || feedback !== null} onClick={() => advance(similarity(typed, word.en))}>
+            placeholder="…ya yahan type karke check karo"className="w-full rounded-xl border border-line bg-surface-2 px-4 py-2.5 text-sm outline-none focus:border-info/60"aria-label="Type the word"/>
+          <button className="btn btn-secondary btn-sm" disabled={!typed || feedback !== null} onClick={() => advance(similarity(typed, word.en))}>
             Check
           </button>
         </div>
 
         {feedback && (
-          <div className={`mt-4 rounded-xl p-3 text-sm font-bold ${feedback.ok ? "bg-neon-green/15 text-neon-green" : "bg-pink-accent/15 text-pink-accent"}`}>
+          <div className={`mt-4 rounded-xl p-3 text-sm font-bold ${feedback.ok ? "bg-brand/15 text-brand-ink" : "bg-accent/15 text-accent-ink"}`}>
             {feedback.ok ? `✅ Zabardast! (${Math.round(feedback.sim * 100)}% match)` : `💋 Aur koshish karo (${Math.round(feedback.sim * 100)}% match) — clearly bolein`}
           </div>
         )}

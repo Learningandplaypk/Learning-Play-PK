@@ -2,12 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
+import { usePalette } from "@/lib/canvas-theme";
 import { sfx } from "@/lib/sfx";
 
 const W = 380;
 const H = 560;
 const R = 17;
-const COLORS = ["#39ff14", "#2d7cff", "#ff2e97", "#ff7a00", "#b026ff"];
+const COLORS = ["#178A55", "#2563EB", "#E8467C", "#F5A524", "#7C3AED"];
 
 type Bubble = { x: number; y: number; color: string; id: number };
 type Flying = { x: number; y: number; vx: number; vy: number; color: string };
@@ -16,6 +17,7 @@ let idc = 1;
 
 export default function BubbleShooter({ onEnd }: GameProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pal = usePalette();
   const grid = useRef<Array<Bubble | null>>([]);
   const flying = useRef<Flying | null>(null);
   const aim = useRef(Math.PI / 2);
@@ -158,10 +160,7 @@ export default function BubbleShooter({ onEnd }: GameProps) {
     if (!ctx) return;
     const loop = () => {
       ctx.clearRect(0, 0, W, H);
-      const bg = ctx.createLinearGradient(0, 0, 0, H);
-      bg.addColorStop(0, "#0b0d1c");
-      bg.addColorStop(1, "#0f1230");
-      ctx.fillStyle = bg;
+      ctx.fillStyle = pal.surface2;
       ctx.fillRect(0, 0, W, H);
 
       // grid bubbles
@@ -172,7 +171,7 @@ export default function BubbleShooter({ onEnd }: GameProps) {
         grd.addColorStop(0.25, b.color);
         grd.addColorStop(1, b.color);
         ctx.fillStyle = grd;
-        ctx.shadowColor = b.color;
+        void b.color;
         ctx.shadowBlur = 10;
         ctx.beginPath();
         ctx.arc(b.x, b.y, R, 0, Math.PI * 2);
@@ -209,7 +208,7 @@ export default function BubbleShooter({ onEnd }: GameProps) {
           grd.addColorStop(0.3, f.color);
           grd.addColorStop(1, f.color);
           ctx.fillStyle = grd;
-          ctx.shadowColor = f.color;
+
           ctx.shadowBlur = 14;
           ctx.beginPath();
           ctx.arc(f.x, f.y, R, 0, Math.PI * 2);
@@ -221,7 +220,7 @@ export default function BubbleShooter({ onEnd }: GameProps) {
       // shooter
       const ox = W / 2;
       const oy = H - 46;
-      ctx.strokeStyle = "rgba(57,255,20,.5)";
+      ctx.strokeStyle = pal.brand;
       ctx.setLineDash([6, 6]);
       ctx.beginPath();
       ctx.moveTo(ox, oy);
@@ -237,10 +236,10 @@ export default function BubbleShooter({ onEnd }: GameProps) {
       ctx.shadowBlur = 0;
 
       // score + floor
-      ctx.fillStyle = "#39ff14";
+      ctx.fillStyle = pal.brand;
       ctx.fillRect(0, H - 20, W, 2);
-      ctx.font = "bold 20px 'Space Grotesk', sans-serif";
-      ctx.fillStyle = "#f4f6ff";
+      ctx.font = "800 20px Nunito, system-ui, sans-serif";
+      ctx.fillStyle = pal.text;
       ctx.textAlign = "right";
       ctx.fillText(String(scoreRef.current), W - 12, 26);
 
@@ -249,7 +248,7 @@ export default function BubbleShooter({ onEnd }: GameProps) {
     rafRef.current = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [over]);
+  }, [over, pal]);
 
   return (
     <div className="mx-auto max-w-sm select-none">
@@ -257,8 +256,7 @@ export default function BubbleShooter({ onEnd }: GameProps) {
         ref={canvasRef}
         width={W}
         height={H}
-        className="w-full touch-none rounded-3xl border border-white/10"
-        onPointerDown={(e) => {
+        className="w-full touch-none rounded-card border border-line"onPointerDown={(e) => {
           const r = e.currentTarget.getBoundingClientRect();
           shoot(((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * H);
         }}
@@ -269,9 +267,8 @@ export default function BubbleShooter({ onEnd }: GameProps) {
           const mx = ((e.clientX - r.left) / r.width) * W;
           aim.current = Math.atan2(my - (H - 46), mx - W / 2);
         }}
-        aria-label="Bubble shooter canvas"
-      />
-      {over && <p className="mt-2 text-center font-display text-lg font-black text-gradient">{score >= 100 ? "Shabash! 🏆" : "Game over"} — {score}</p>}
+        aria-label="Bubble shooter canvas"/>
+      {over && <p className="mt-2 text-center font-display text-lg font-black ">{score >= 100 ? "Shabash! 🏆" : "Game over"} — {score}</p>}
       <p className="mt-1 text-center text-xs text-muted">Tap karke goli chalao — 3+ same rang ke bubbles phato</p>
     </div>
   );
