@@ -8,7 +8,8 @@ import * as chromeLauncher from "chrome-launcher";
 import fs from "node:fs/promises";
 
 const path = process.argv[2] ?? "/";
-const url = `http://127.0.0.1:3000${path}`;
+const origin = process.env.BASE ?? "http://127.0.0.1:3000";
+const url = `${origin}${path}`;
 
 const chrome = await chromeLauncher.launch({
   chromePath: process.env.CHROME_PATH,
@@ -64,7 +65,8 @@ for (const id of [
 const out = lines.join("\n");
 console.log(out);
 await fs.mkdir("reports", { recursive: true });
-const slug = path === "/" ? "home" : path.replace(/^\//, "").replace(/\//g, "_");
+const prefix = process.env.OUT_PREFIX ?? "";
+const slug = (path === "/" ? "home" : path.replace(/^\//, "").replace(/\//g, "_")) + prefix;
 await fs.writeFile(`reports/lighthouse-mobile-${slug}.json`, JSON.stringify(lhr, null, 0));
 await fs.writeFile(`reports/lighthouse-mobile-${slug}.txt`, out + "\n");
 
