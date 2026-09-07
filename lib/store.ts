@@ -264,10 +264,7 @@ export const usePlayer = create<Store>()(
         return {
           ok: !isLimitReached(s.daily, zone === "learn" ? "learn" : "other", s.premium),
           reason: isLimitReached(s.daily, zone === "learn" ? "learn" : "other", s.premium)
-            ? zone === "learn"
-              ? "Aaj ke 3 free lessons pooray ho gaye! Premium par unlimited lessons milte hain."
-              : "Aaj ke 5 free games pooray ho gaye! Kal phir khelo ya Premium lo."
-            : undefined,
+            ? zone === "learn"? "Aaj ke 3 free lessons pooray ho gaye! Premium par unlimited lessons milte hain.": "Aaj ke 5 free games pooray ho gaye! Kal phir khelo ya Premium lo.": undefined,
         };
       },
 

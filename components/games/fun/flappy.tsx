@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
 import { sfx } from "@/lib/sfx";
+import { usePalette } from "@/lib/canvas-theme";
 
 const W = 360;
 const H = 540;
@@ -15,6 +16,7 @@ type Pipe = { x: number; top: number; scored: boolean };
 
 export default function Flappy({ onEnd }: GameProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pal = usePalette();
   const [started, setStarted] = useState(false);
   const [dead, setDead] = useState(false);
   const state = useRef({ y: H / 2, vel: 0, pipes: [] as Pipe[], frame: 0, score: 0 });
@@ -101,34 +103,28 @@ export default function Flappy({ onEnd }: GameProps) {
 
       // ---- draw ----
       ctx.clearRect(0, 0, W, H);
-      const bg = ctx.createLinearGradient(0, 0, 0, H);
-      bg.addColorStop(0, "#0b0d1c");
-      bg.addColorStop(1, "#141838");
-      ctx.fillStyle = bg;
+      ctx.fillStyle = pal.surface2;
       ctx.fillRect(0, 0, W, H);
-      // stars
-      ctx.fillStyle = "rgba(255,255,255,.35)";
-      for (let i = 0; i < 30; i++) {
+      // clouds
+      ctx.fillStyle = pal.border;
+      for (let i = 0; i < 8; i++) {
         const x = (i * 97 + ((s.frame * 0.3) % W)) % W;
-        const y = (i * 173) % (H - 60);
-        ctx.fillRect(x, y, 1.6, 1.6);
+        const y = 40 + (i * 173) % (H - 200);
+        ctx.fillRect(x, y, 22, 5);
       }
-      // pipes neon
+      // pipes
       for (const p of s.pipes) {
-        const grd = ctx.createLinearGradient(p.x, 0, p.x + PIPE_W, 0);
-        grd.addColorStop(0, "#2d7cff");
-        grd.addColorStop(1, "#b026ff");
-        ctx.fillStyle = grd;
-        ctx.shadowColor = "#2d7cff";
-        ctx.shadowBlur = 16;
+        ctx.fillStyle = pal.brand;
         ctx.fillRect(p.x, 0, PIPE_W, p.top);
         ctx.fillRect(p.x, p.top + GAP, PIPE_W, H - p.top - GAP - 30);
-        ctx.shadowBlur = 0;
+        ctx.fillStyle = pal.brandDark;
+        ctx.fillRect(p.x - 3, p.top - 16, PIPE_W + 6, 16);
+        ctx.fillRect(p.x - 3, p.top + GAP, PIPE_W + 6, 16);
       }
       // ground
-      ctx.fillStyle = "#05060f";
+      ctx.fillStyle = pal.brand;
       ctx.fillRect(0, H - 30, W, 30);
-      ctx.fillStyle = "#39ff14";
+      ctx.fillStyle = pal.accent;
       ctx.fillRect(0, H - 32, W, 2.5);
       // bird
       const bx = 60;
@@ -136,31 +132,29 @@ export default function Flappy({ onEnd }: GameProps) {
       ctx.save();
       ctx.translate(bx, by);
       ctx.rotate(Math.max(-0.5, Math.min(1, state.current.vel * 0.06)));
-      ctx.shadowColor = "#39ff14";
-      ctx.shadowBlur = 22;
       ctx.font = "28px serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText("🐤", 0, 0);
       ctx.restore();
       // score
-      ctx.font = "bold 40px 'Space Grotesk', sans-serif";
-      ctx.fillStyle = "rgba(244,246,255,.9)";
+      ctx.font = "800 40px Nunito, system-ui, sans-serif";
+      ctx.fillStyle = pal.text;
       ctx.textAlign = "center";
       ctx.fillText(String(s.score), W / 2, 70);
 
       if (deadRef.current) {
-        ctx.fillStyle = "rgba(0,0,0,.45)";
+        ctx.fillStyle = "rgba(21,23,27,0.45)";
         ctx.fillRect(0, 0, W, H);
-        ctx.font = "bold 30px 'Space Grotesk', sans-serif";
-        ctx.fillStyle = "#ff2e97";
+        ctx.font = "800 30px Nunito, system-ui, sans-serif";
+        ctx.fillStyle = "#fff";
         ctx.fillText("Game Over", W / 2, H / 2 - 10);
-        ctx.font = "15px sans-serif";
-        ctx.fillStyle = "#f4f6ff";
+        ctx.font = "15px system-ui, sans-serif";
+        ctx.fillStyle = "#fff";
         ctx.fillText("Tap karo dobara khelne ke liye", W / 2, H / 2 + 24);
       } else if (!started) {
-        ctx.font = "bold 22px 'Space Grotesk', sans-serif";
-        ctx.fillStyle = "#39ff14";
+        ctx.font = "800 22px Nunito, system-ui, sans-serif";
+        ctx.fillStyle = pal.brand;
         ctx.fillText("Tap / Space = Uchhalo!", W / 2, H / 2);
       }
 
@@ -168,7 +162,7 @@ export default function Flappy({ onEnd }: GameProps) {
     };
     rafRef.current = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(rafRef.current);
-  }, [started, onEnd]);
+  }, [started, onEnd, pal]);
 
   return (
     <div className="mx-auto max-w-sm select-none">
@@ -181,9 +175,7 @@ export default function Flappy({ onEnd }: GameProps) {
           e.preventDefault();
           flap();
         }}
-        className="w-full rounded-3xl border border-white/10 shadow-[0_0_60px_-20px_rgba(45,124,255,.6)]"
-        aria-label="Flappy game canvas"
-      />
+        className="w-full rounded-3xl border border-line "aria-label="Flappy game canvas"/>
       <div className="mt-2 flex justify-center gap-2">
         <span className="chip">🎯 {score}</span>
         <span className="chip">🐦 Taps = flap</span>

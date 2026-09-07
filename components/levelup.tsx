@@ -2,11 +2,13 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { create } from "zustand";
-import { Modal, Button, Progress } from "./ui";
+import { Modal, Progress, useCountUp } from "./ui";
 import { levelFromXp, levelTitle } from "@/lib/gamification";
 import { usePlayer } from "@/lib/store";
 import { sfx } from "@/lib/sfx";
 import confetti from "canvas-confetti";
+import { Ustad } from "./brand/ustad";
+import { fmt } from "@/lib/utils";
 
 type LevelUpState = { level: number | null; show: (l: number) => void; hide: () => void };
 export const useLevelUp = create<LevelUpState>((set) => ({
@@ -15,20 +17,24 @@ export const useLevelUp = create<LevelUpState>((set) => ({
   hide: () => set({ level: null }),
 }));
 
-/** Watches game submissions and pops the animated 3D-ish level-up modal. */
+/** Watches game submissions and celebrates a level-up once per outcome. */
 export function LevelUpHost() {
   const outcome = usePlayer((s) => s.outcome);
-  const shownRef = useRef<number | null>(null);
+  const shownRef = useRef<string | null>(null);
   const show = useLevelUp((s) => s.show);
+  const sound = usePlayer((s) => s.sound);
 
   useEffect(() => {
-    if (outcome?.leveledTo && shownRef.current !== outcome.xp + outcome.coins) {
-      shownRef.current = outcome.xp + outcome.coins;
-      show(outcome.leveledTo);
-      sfx("levelup");
-      confetti({ particleCount: 160, spread: 80, origin: { y: 0.7 }, colors: ["#39ff14", "#2d7cff", "#b026ff", "#ff2e97"] });
+    if (!outcome?.leveledTo) return;
+    const key = `${outcome.slug}:${outcome.xp}:${outcome.coins}:${outcome.leveledTo}`;
+    if (shownRef.current === key) return;
+    shownRef.current = key;
+    show(outcome.leveledTo);
+    sfx("levelup");
+    if (sound && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      confetti({ particleCount: 90, spread: 70, origin: { y: 0.75 }, colors: ["#178A55", "#F5A524", "#12734A"] });
     }
-  }, [outcome, show]);
+  }, [outcome, show, sound]);
 
   return <LevelUpModal />;
 }
@@ -37,48 +43,41 @@ function LevelUpModal() {
   const level = useLevelUp((s) => s.level);
   const hide = useLevelUp((s) => s.hide);
   const xp = usePlayer((s) => s.xp);
-  const [display, setDisplay] = useState(1);
   const lv = useMemo(() => levelFromXp(xp), [xp]);
+  const shown = useCountUp(level ?? 1, 500, level != null);
+  const [display, setDisplay] = useState(1);
 
   useEffect(() => {
     if (level == null) return;
     setDisplay(level);
-    const iv = setInterval(() => {
-      setDisplay((d) => {
-        if (d >= level) {
-          clearInterval(iv);
-          return level;
-        }
-        return d + 1;
-      });
-    }, 70);
-    return () => clearInterval(iv);
   }, [level]);
 
+  const value = level != null ? Math.max(1, Math.min(level, shown || level)) : display;
+
   return (
-    <Modal open={level != null} onClose={hide}>
-      <div className="text-center">
-        <div className="relative mx-auto mb-4 h-32 w-32">
-          <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-neon-green/60" />
-          <div
-            className="absolute inset-2 rounded-full opacity-90"
-            style={{ background: "conic-gradient(from 180deg,#39ff14,#2d7cff,#b026ff,#ff2e97,#39ff14)", filter: "blur(6px)" }}
-          />
-          <div className="absolute inset-3 flex flex-col items-center justify-center rounded-full bg-bg-900/90">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-muted">Level</div>
-            <div className="font-display text-4xl font-black text-gradient">{display}</div>
-          </div>
-        </div>
-        <h3 className="font-display text-2xl font-extrabold">
-          <span className="text-gradient">Mubarak ho! Level Up!</span>
-        </h3>
-        <p className="mt-2 text-sm text-muted">
-          Ab tum <span className="font-bold text-neon-green">{levelTitle(level ?? 1)}</span> ho — total {xp} XP
+    <Modal open={level != null} onClose={hide} title="Level up!">
+      <div className="flex flex-col items-center text-center">
+        <Ustad mood="celebrate" className="h-28 w-28" />
+        <div className="mt-2 font-display text-4xl font-black text-brand-ink tnum">{value}</div>
+        <p className="mt-1 text-sm font-bold text-fg">{levelTitle(level ?? 1)}</p>
+        <p className="mt-2 max-w-xs text-sm text-muted">
+          Mubarak ho! Ab tum level <span className="font-bold text-fg">{level ?? 1}</span> par ho — total{" "}
+          <span className="font-bold text-fg tnum">{fmt(xp)}</span> XP.
         </p>
-        <Progress value={lv.progress * 100} className="mx-auto mt-4 max-w-xs" />
-        <Button className="mt-6 w-full" onClick={hide}>
-          Chalo, aur aage! 🚀
-        </Button>
+        <div className="mt-5 w-full">
+          <div className="mb-1.5 flex justify-between text-xs text-muted">
+            <span>
+              Level {lv.level + 1} tak
+            </span>
+            <span className="tnum">
+              {fmt(lv.into)}/{fmt(lv.need)} XP
+            </span>
+          </div>
+          <Progress value={lv.progress * 100} label={`Level ${lv.level} progress`} />
+        </div>
+        <button type="button" onClick={hide} className="btn btn-primary btn-lg btn-block mt-6">
+          Chalo, aur aage!
+        </button>
       </div>
     </Modal>
   );

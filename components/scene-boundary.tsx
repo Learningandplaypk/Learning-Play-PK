@@ -2,6 +2,7 @@
 
 import React from "react";
 import { captureException } from "@/lib/observability";
+import { Ustad } from "@/components/brand/ustad";
 
 /** WebGL support probe — false in sandboxed iframes / blocked GPU / old devices. */
 export function hasWebGL(): boolean {
@@ -47,12 +48,13 @@ export class SceneBoundary extends React.Component<Props, State> {
     if (this.state.failed) {
       return (
         this.props.fallback ?? (
-          <div className="grid min-h-[240px] w-full place-items-center rounded-3xl border border-white/10 bg-gradient-to-br from-bg-800 via-[#101638] to-[#1a0f33] text-center" aria-hidden>
-            <div className="pointer-events-none absolute inset-0 overflow-hidden">
-              <div className="absolute left-1/4 top-1/3 h-40 w-40 animate-float rounded-full bg-electric/20 blur-3xl" />
-              <div className="absolute right-1/4 bottom-1/4 h-44 w-44 animate-float rounded-full bg-neon-purple/20 blur-3xl [animation-delay:1.2s]" />
+          <div className="grid min-h-[240px] w-full place-items-center rounded-card border border-line bg-surface-2 px-6 py-8 text-center">
+            <div className="flex flex-col items-center gap-3">
+              <Ustad className="h-20 w-auto" mood="happy" />
+              <p className="max-w-xs text-sm text-muted">
+                3D is not available on this device — lightweight mode enabled.
+              </p>
             </div>
-            <p className="relative text-sm text-muted">⚡ 3D is not available on this device — lightweight mode enabled.</p>
           </div>
         )
       );

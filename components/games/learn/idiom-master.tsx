@@ -45,9 +45,9 @@ export default function IdiomMaster({ onEnd }: GameProps) {
         <span className="chip">{idx + 1}/{TOTAL}</span>
         <span className="chip">✅ {correct}</span>
       </div>
-      <div className="glass p-6 sm:p-8">
+      <div className="card p-6 sm:p-8">
         <p className="text-xs uppercase tracking-widest text-muted">Is idiom ka matlab kya hai?</p>
-        <p className="mt-3 font-display text-2xl font-black text-gradient">“{q.idiom.id}”</p>
+        <p className="mt-3 font-display text-2xl font-black ">“{q.idiom.id}”</p>
         <div className="mt-6 grid gap-2.5">
           {q.opts.map((o, i) => {
             const state = picked === null ? "idle" : i === q.answer ? "right" : picked === i ? "wrong" : "dim";
@@ -56,14 +56,7 @@ export default function IdiomMaster({ onEnd }: GameProps) {
                 key={i}
                 onClick={() => choose(i)}
                 className={`rounded-xl border px-4 py-3 text-left text-[15px] font-semibold transition ${
-                  state === "idle"
-                    ? "glass glass-hover"
-                    : state === "right"
-                      ? "border-neon-green/70 bg-neon-green/15"
-                      : state === "wrong"
-                        ? "shake border-pink-accent/70 bg-pink-accent/15"
-                        : "opacity-35"
-                }`}
+                  state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
               >
                 {o}
               </button>
@@ -71,8 +64,8 @@ export default function IdiomMaster({ onEnd }: GameProps) {
           })}
         </div>
         {picked !== null && (
-          <p className="mt-4 rounded-xl bg-white/5 p-3 text-sm text-muted">
-            📝 <span className="font-bold text-ink">{q.idiom.id}</span>: “{q.idiom.ex}”
+          <p className="mt-4 rounded-xl bg-surface-2 p-3 text-sm text-muted">
+            📝 <span className="font-bold text-fg">{q.idiom.id}</span>: “{q.idiom.ex}”
           </p>
         )}
       </div>

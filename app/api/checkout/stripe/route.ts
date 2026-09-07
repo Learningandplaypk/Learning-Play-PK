@@ -14,8 +14,7 @@ const SITE = getSiteUrl();
 export async function POST(req: Request) {
   const secret = envStr("STRIPE_SECRET_KEY");
   if (!secret) {
-    return jsonError(
-      "Stripe configure nahi hai (STRIPE_SECRET_KEY missing). .env.local mein key daalein — code production-ready hai, test mode keys se hi chal jayega.",
+    return jsonError("Stripe configure nahi hai (STRIPE_SECRET_KEY missing). .env.local mein key daalein — code production-ready hai, test mode keys se hi chal jayega.",
       503
     );
   }

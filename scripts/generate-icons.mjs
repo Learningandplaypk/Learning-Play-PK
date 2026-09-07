@@ -13,40 +13,34 @@ const sizes = [
   ["icon-16.png", 16],
 ];
 
-// Owl mascot: rounded-square gradient bg + geometric owl (eyes, beak, tufts)
+// "Ustad" owl on Pakistan Green — flat, two-tone, matches the app mark.
 const svg = (pad = 0) => `
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#05060F"/>
-      <stop offset="0.55" stop-color="#0B0D1C"/>
-      <stop offset="1" stop-color="#182350"/>
-    </linearGradient>
-    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#39FF14"/>
-      <stop offset="0.5" stop-color="#2D7CFF"/>
-      <stop offset="1" stop-color="#B026FF"/>
-    </linearGradient>
-  </defs>
-  <rect x="${pad * 4}" y="${pad * 4}" width="${512 - pad * 8}" height="${512 - pad * 8}" rx="${pad ? 512 : 110}" fill="url(#g)"/>
-  <circle cx="256" cy="250" r="150" fill="url(#acc)" opacity="0.16"/>
-  <!-- tufts -->
-  <path d="M150 150 L185 205 L135 205 Z" fill="#FF7A00"/>
-  <path d="M362 150 L327 205 L377 205 Z" fill="#FF2E97"/>
+  <rect x="${pad * 4}" y="${pad * 4}" width="${512 - pad * 8}" height="${512 - pad * 8}" rx="${pad ? 512 : 112}" fill="#178A55"/>
+  <!-- ear tufts -->
+  <path d="M150 118 L120 196 L206 172 Z" fill="#0E5C3B"/>
+  <path d="M362 118 L392 196 L306 172 Z" fill="#0E5C3B"/>
   <!-- body -->
-  <ellipse cx="256" cy="268" rx="128" ry="140" fill="url(#acc)" opacity="0.22"/>
-  <ellipse cx="256" cy="268" rx="118" ry="130" fill="none" stroke="url(#acc)" stroke-width="10"/>
+  <path d="M256 108c84 0 138 58 138 138 0 116-62 198-138 198s-138-82-138-198C118 166 172 108 256 108z" fill="#178A55"/>
+  <!-- wings -->
+  <path d="M138 250c-22 46-16 106 22 142 16-54 12-104-22-142z" fill="#0E5C3B"/>
+  <path d="M374 250c22 46 16 106-22 142-16-54-12-104 22-142z" fill="#0E5C3B"/>
+  <!-- belly -->
+  <ellipse cx="256" cy="332" rx="80" ry="92" fill="#FDF6E9"/>
+  <!-- face disc -->
+  <ellipse cx="256" cy="222" rx="104" ry="88" fill="#FDF6E9"/>
   <!-- eyes -->
-  <circle cx="204" cy="238" r="52" fill="#F4F6FF"/>
-  <circle cx="308" cy="238" r="52" fill="#F4F6FF"/>
-  <circle cx="212" cy="246" r="26" fill="#05060F"/>
-  <circle cx="300" cy="246" r="26" fill="#05060F"/>
-  <circle cx="220" cy="238" r="8" fill="#39FF14"/>
-  <circle cx="308" cy="238" r="8" fill="#39FF14"/>
+  <circle cx="208" cy="214" r="40" fill="#FFFFFF"/>
+  <circle cx="304" cy="214" r="40" fill="#FFFFFF"/>
+  <circle cx="212" cy="218" r="18" fill="#1C1C1A"/>
+  <circle cx="300" cy="218" r="18" fill="#1C1C1A"/>
+  <circle cx="218" cy="212" r="6" fill="#FFFFFF"/>
+  <circle cx="306" cy="212" r="6" fill="#FFFFFF"/>
   <!-- beak -->
-  <path d="M256 280 L232 316 L280 316 Z" fill="#FF7A00"/>
+  <path d="M256 244 L228 296 L284 296 Z" fill="#F5A524"/>
   <!-- feet -->
-  <path d="M216 396 L236 396 M226 396 L226 384 M316 396 L296 396 M306 396 L306 384" stroke="#FF7A00" stroke-width="10" stroke-linecap="round"/>
+  <path d="M212 424 L186 466 L212 476 L226 444 Z" fill="#F5A524"/>
+  <path d="M300 424 L326 466 L300 476 L286 444 Z" fill="#F5A524"/>
 </svg>`;
 
 await mkdir("public", { recursive: true });

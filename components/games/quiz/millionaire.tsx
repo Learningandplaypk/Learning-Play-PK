@@ -121,11 +121,11 @@ export default function Millionaire({ onEnd }: GameProps) {
   return (
     <div className="mx-auto max-w-xl">
       {/* stage header */}
-      <div className="glass relative overflow-hidden p-5 text-center">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(45,124,255,.25),transparent_60%)]" />
+      <div className="card relative overflow-hidden p-5 text-center">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,.25),transparent_60%)]" />
         <div className="relative">
-          <div className="text-[10px] uppercase tracking-[0.4em] text-neon-orange">Hot Seat</div>
-          <div className="font-display text-2xl font-black text-gradient">
+          <div className="text-[10px] uppercase tracking-[0.4em] text-accent-ink">Hot Seat</div>
+          <div className="font-display text-2xl font-black ">
             Rs. {idx < 15 ? LADDER[idx].amt : "10,000,000"}
           </div>
           <p className="mt-1 text-xs text-muted">{message}</p>
@@ -143,8 +143,7 @@ export default function Millionaire({ onEnd }: GameProps) {
             <div
               key={realIdx}
               className={`rounded px-1.5 py-1 text-center font-bold ${
-                current ? "bg-neon-orange/30 text-neon-orange ring-1 ring-neon-orange" : secured ? "bg-neon-green/20 text-neon-green" : safe ? "bg-white/10 text-white" : "text-muted"
-              }`}
+                current ? "bg-accent/30 text-accent-ink ring-1 ring-accent" : secured ? "bg-brand/20 text-brand-ink" : safe ? "bg-surface-2 text-white" : "text-muted"}`}
             >
               {safe ? "🔒 " : ""}{realIdx + 1}. {l.amt}
             </div>
@@ -154,7 +153,7 @@ export default function Millionaire({ onEnd }: GameProps) {
 
       {/* question */}
       {stage === "play" && idx < 15 && (
-        <div className="glass mt-4 p-6">
+        <div className="card mt-4 p-6">
           <p className="font-display text-base font-bold leading-relaxed sm:text-lg">{q.q}</p>
           <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
             {q.opts.map((o, i) => {
@@ -167,19 +166,11 @@ export default function Millionaire({ onEnd }: GameProps) {
                   onClick={() => choose(i)}
                   className={`flex items-center gap-2 rounded-xl border px-3 py-3 text-left text-sm font-semibold transition ${
                     isHidden
-                      ? "border-white/5 bg-white/[0.02] opacity-20 line-through"
-                      : state === "idle"
-                        ? "border-white/15 bg-white/5 hover:border-neon-orange/70"
-                        : state === "right"
-                          ? "border-neon-green/80 bg-neon-green/20"
-                          : state === "wrong"
-                            ? "shake border-pink-accent/80 bg-pink-accent/20"
-                            : "opacity-40"
-                  }`}
+                      ? "border-line bg-surface-2 opacity-20 line-through": state === "idle"? "border-line bg-surface-2 hover:border-accent/70": state === "right"? "border-brand/80 bg-brand/20": state === "wrong"? "shake border-accent/80 bg-accent/20": "opacity-40"}`}
                 >
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/10 text-[11px] font-black">{["A", "B", "C", "D"][i]}</span>
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-surface-2 text-[11px] font-black">{["A", "B", "C", "D"][i]}</span>
                   <span className="flex-1">{o.text}</span>
-                  {poll && <span className="text-[11px] text-electric">{poll[i]}%</span>}
+                  {poll && <span className="text-[11px] text-info-ink">{poll[i]}%</span>}
                 </button>
               );
             })}
@@ -190,25 +181,25 @@ export default function Millionaire({ onEnd }: GameProps) {
       {/* lifelines */}
       {stage === "play" && (
         <div className="mt-4 flex flex-wrap justify-center gap-2">
-          <button className={`btn btn-sm ${lifelines.fifty ? "btn-pink" : "btn-ghost"}`} disabled={!lifelines.fifty} onClick={useFifty}>
+          <button className={`btn btn-sm ${lifelines.fifty ? "btn-primary" : "btn-secondary"}`} disabled={!lifelines.fifty} onClick={useFifty}>
             ✂️ 50-50
           </button>
-          <button className={`btn btn-sm ${lifelines.poll ? "btn-pink" : "btn-ghost"}`} disabled={!lifelines.poll} onClick={usePoll}>
+          <button className={`btn btn-sm ${lifelines.poll ? "btn-primary" : "btn-secondary"}`} disabled={!lifelines.poll} onClick={usePoll}>
             👥 Audience Poll
           </button>
-          <button className={`btn btn-sm ${lifelines.skip ? "btn-pink" : "btn-ghost"}`} disabled={!lifelines.skip} onClick={useSkip}>
+          <button className={`btn btn-sm ${lifelines.skip ? "btn-primary" : "btn-secondary"}`} disabled={!lifelines.skip} onClick={useSkip}>
             ⏭️ Skip
           </button>
-          <button className="btn btn-ghost btn-sm" onClick={() => settle("walked", wonIdx)}>
+          <button className="btn btn-secondary btn-sm" onClick={() => settle("walked", wonIdx)}>
             🚪 Quit with money
           </button>
         </div>
       )}
 
       {stage !== "play" && (
-        <div className="glass mt-4 p-6 text-center">
+        <div className="card mt-4 p-6 text-center">
           <div className="text-4xl">{stage === "won" ? "🏆" : stage === "lost" ? "💔" : "🤝"}</div>
-          <h3 className="mt-2 font-display text-2xl font-black text-gradient">
+          <h3 className="mt-2 font-display text-2xl font-black ">
             {stage === "won" ? "Crorepati!" : stage === "lost" ? "Khatam!" : "Sahi faisla!"}
           </h3>
           <p className="mt-1 text-sm text-muted">

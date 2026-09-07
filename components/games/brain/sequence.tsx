@@ -5,10 +5,10 @@ import type { GameProps } from "@/components/game-shell";
 import { sfx } from "@/lib/sfx";
 
 const PADS = [
-  { c: "#39ff14", glow: "rgba(57,255,20,.85)", tone: 330 },
-  { c: "#2d7cff", glow: "rgba(45,124,255,.85)", tone: 415 },
-  { c: "#b026ff", glow: "rgba(176,38,255,.85)", tone: 494 },
-  { c: "#ff2e97", glow: "rgba(255,46,151,.85)", tone: 587 },
+  { c: "#178A55", tone: 330 },
+  { c: "#2563EB", tone: 415 },
+  { c: "#7C3AED", tone: 494 },
+  { c: "#E8467C", tone: 587 },
 ];
 
 function playTone(freq: number, dur = 0.22) {
@@ -92,11 +92,10 @@ export default function SequenceGame({ onEnd }: GameProps) {
             onClick={() => tap(i)}
             disabled={phase !== "input"}
             aria-label={`Pad ${i + 1}`}
-            className="aspect-square rounded-3xl border transition-all duration-100 disabled:cursor-default"
-            style={{
-              background: active === i ? p.glow : `${p.c}22`,
+            className="aspect-square rounded-3xl border transition-all duration-100 disabled:cursor-default"style={{
+              background: active === i ? p.c : "var(--surface-2)",
               borderColor: active === i ? p.c : `${p.c}55`,
-              boxShadow: active === i ? `0 0 60px ${p.glow}` : "none",
+
               transform: active === i ? "scale(0.96)" : "scale(1)",
             }}
           />

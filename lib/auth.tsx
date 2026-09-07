@@ -7,24 +7,10 @@
  */
 
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import {
-  GoogleAuthProvider,
-  createUserWithEmailAndPassword,
-  getRedirectResult,
-  onAuthStateChanged,
-  sendPasswordResetEmail,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signInWithPhoneNumber,
-  signInWithRedirect,
-  signOut,
-  updateProfile,
-  type AuthProvider,
-  type RecaptchaVerifier,
-  type User,
-} from "firebase/auth";
-import { doc, getDoc, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
-import { fbAuth, fbDb, isFirebaseConfigured } from "./firebase";
+/* Type-only imports: erased at build time, so the SDK stays out of the initial JS. */
+import type { AuthProvider, RecaptchaVerifier, User } from "firebase/auth";
+import { authModOf, fsModOf, fbAuth, fbDb } from "./firebase";
+import { isFirebaseConfigured } from "./firebase-config";
 import { usePlayer, playerSnapshot } from "./store";
 
 export type AuthUser = { uid: string; email: string | null; phone: string | null; name: string; photo: string | null };
@@ -50,15 +36,9 @@ type AuthCtx = {
  * redirect; popup-blocked/closed errors → silent redirect fallback (no error
  * is ever surfaced to the user).
  * ------------------------------------------------------------------------ */
-const POPUP_FALLBACK_CODES = new Set([
-  "auth/popup-blocked",
-  "auth/popup-closed-by-user",
-  "auth/cancelled-popup-request",
-  "auth/popup-blocked-by-browser",
+const POPUP_FALLBACK_CODES = new Set(["auth/popup-blocked","auth/popup-closed-by-user","auth/cancelled-popup-request","auth/popup-blocked-by-browser",
   // some embedded/strict environments throw these instead of popup-blocked
-  // when window.open is unavailable — the redirect flow then surfaces the real cause
-  "auth/internal-error",
-  "auth/operation-not-supported-in-this-environment",
+  // when window.open is unavailable — the redirect flow then surfaces the real cause"auth/internal-error","auth/operation-not-supported-in-this-environment",
 ]);
 
 function inIframe(): boolean {
@@ -77,7 +57,8 @@ function isMobileBrowser(): boolean {
 const Ctx = createContext<AuthCtx | null>(null);
 
 async function ensureUserDoc(u: User, displayName?: string) {
-  const ref = doc(fbDb(), "users", u.uid);
+  const { doc, getDoc, serverTimestamp, setDoc, updateDoc } = await fsModOf();
+  const ref = doc(await fbDb(), "users", u.uid);
   const snap = await getDoc(ref);
   const store = usePlayer.getState();
   const guestSnapshot = store.uid && store.uid.startsWith("guest") ? playerSnapshot(store) : null;
@@ -130,20 +111,36 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setLoading(false);
       return;
     }
-    // resolve any signInWithRedirect return (user lands back here logged in;
-    // guest merge runs via onAuthStateChanged → ensureUserDoc below)
-    getRedirectResult(fbAuth()).catch((e) => {
-      console.error("[auth] redirect sign-in failed:", (e as { code?: string }).code ?? e);
-    });
-    const unsub = onAuthStateChanged(fbAuth(), (u) => {
-      setFbUser(u);
-      if (u) {
-        usePlayer.getState().setPlayer({ uid: u.uid });
-        ensureUserDoc(u).catch((e) => console.error("user doc sync failed", e));
+    // Firebase SDK is loaded here (idle-ish, after first paint) so the ~100KB
+    // client SDK never blocks LCP. Behaviour is identical, it just starts later.
+    let unsub: (() => void) | undefined;
+    let alive = true;
+    void (async () => {
+      try {
+        const [{ getRedirectResult, onAuthStateChanged }, auth] = await Promise.all([authModOf(), fbAuth()]);
+        if (!alive) return;
+        // resolve any signInWithRedirect return (user lands back here logged in;
+        // guest merge runs via onAuthStateChanged → ensureUserDoc below)
+        getRedirectResult(auth).catch((e) => {
+          console.error("[auth] redirect sign-in failed:", (e as { code?: string }).code ?? e);
+        });
+        unsub = onAuthStateChanged(auth, (u) => {
+          setFbUser(u);
+          if (u) {
+            usePlayer.getState().setPlayer({ uid: u.uid });
+            ensureUserDoc(u).catch((e) => console.error("user doc sync failed", e));
+          }
+          setLoading(false);
+        });
+      } catch (e) {
+        console.error("[auth] firebase failed to load:", e);
+        if (alive) setLoading(false);
       }
-      setLoading(false);
-    });
-    return unsub;
+    })();
+    return () => {
+      alive = false;
+      unsub?.();
+    };
   }, []);
 
   const user: AuthUser | null = useMemo(() => {
@@ -163,10 +160,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
    * are never surfaced as raw auth/* codes — only a friendly message.
    */
   const loginWithProvider = useCallback(async (provider: AuthProvider) => {
+    const { signInWithPopup, signInWithRedirect } = await authModOf();
     const goToRedirect = async () => {
       setRedirecting(true);
       try {
-        await signInWithRedirect(fbAuth(), provider);
+        await signInWithRedirect(await fbAuth(), provider);
       } catch {
         // redirect could not even start (offline / blocked) — friendly note, no auth codes
         setRedirecting(false);
@@ -178,7 +176,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return;
     }
     try {
-      await signInWithPopup(fbAuth(), provider);
+      await signInWithPopup(await fbAuth(), provider);
     } catch (e) {
       const code = (e as { code?: string }).code ?? "";
       if (POPUP_FALLBACK_CODES.has(code)) {
@@ -189,14 +187,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const loginGoogle = useCallback(() => loginWithProvider(new GoogleAuthProvider()), [loginWithProvider]);
+  const loginGoogle = useCallback(async () => {
+    const { GoogleAuthProvider } = await authModOf();
+    await loginWithProvider(new GoogleAuthProvider());
+  }, [loginWithProvider]);
 
   const loginEmail = useCallback(async (email: string, password: string) => {
-    await signInWithEmailAndPassword(fbAuth(), email, password);
+    const { signInWithEmailAndPassword } = await authModOf();
+    await signInWithEmailAndPassword(await fbAuth(), email, password);
   }, []);
 
   const signupEmail = useCallback(async (name: string, email: string, password: string) => {
-    const cred = await createUserWithEmailAndPassword(fbAuth(), email, password);
+    const { createUserWithEmailAndPassword, updateProfile } = await authModOf();
+    const cred = await createUserWithEmailAndPassword(await fbAuth(), email, password);
     await updateProfile(cred.user, { displayName: name });
     await ensureUserDoc(cred.user, name);
     try {
@@ -211,7 +214,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const loginPhone = useCallback(async (phone: string, verifier: RecaptchaVerifier) => {
-    const confirmation = await signInWithPhoneNumber(fbAuth(), phone, verifier);
+    const { signInWithPhoneNumber } = await authModOf();
+    const confirmation = await signInWithPhoneNumber(await fbAuth(), phone, verifier);
     (window as unknown as { __otpConfirm: { confirm: (c: string) => Promise<unknown> } }).__otpConfirm = confirmation;
     return confirmation.verificationId;
   }, []);
@@ -221,11 +225,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const resetPassword = useCallback(async (email: string) => {
-    await sendPasswordResetEmail(fbAuth(), email);
+    const { sendPasswordResetEmail } = await authModOf();
+    await sendPasswordResetEmail(await fbAuth(), email);
   }, []);
 
   const logout = useCallback(async () => {
-    if (isFirebaseConfigured) await signOut(fbAuth());
+    if (isFirebaseConfigured) {
+      const { signOut } = await authModOf();
+      await signOut(await fbAuth());
+    }
     usePlayer.getState().setPlayer({ uid: null });
   }, []);
 

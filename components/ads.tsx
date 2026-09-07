@@ -55,16 +55,13 @@ export function AdSlot({ slot, className, label = "Advertisement" }: { slot?: st
 
   if (!slot || !CLIENT || premium || consent !== true) return null;
   return (
-    <div className={className} aria-label={label}>
+    <div role="region" className={className} aria-label={label}>
       <ins
         ref={ref}
-        className="adsbygoogle"
-        style={{ display: "block", minHeight: 90 }}
+        className="adsbygoogle"style={{ display: "block", minHeight: 90 }}
         data-ad-client={CLIENT}
         data-ad-slot={slot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
+        data-ad-format="auto"data-full-width-responsive="true"/>
     </div>
   );
 }

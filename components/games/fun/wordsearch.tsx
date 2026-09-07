@@ -99,14 +99,13 @@ export default function WordSearch({ onEnd }: GameProps) {
     <div className="mx-auto max-w-lg">
       <div className="mb-3 flex flex-wrap justify-center gap-2">
         {placements.map((p) => (
-          <span key={p.word} className={`chip ${found.includes(p.word) ? "border-neon-green/50 text-neon-green line-through" : ""}`}>
+          <span key={p.word} className={`chip ${found.includes(p.word) ? "border-brand/50 text-brand-ink line-through" : ""}`}>
             {p.word}
           </span>
         ))}
       </div>
       <div
-        className="glass grid touch-none select-none gap-1 p-2.5"
-        style={{ gridTemplateColumns: `repeat(${SIZE}, 1fr)` }}
+        className="card grid touch-none select-none gap-1 p-2.5"style={{ gridTemplateColumns: `repeat(${SIZE}, 1fr)` }}
       >
         {grid.flat().map((ch, i) => (
           <button
@@ -118,11 +117,8 @@ export default function WordSearch({ onEnd }: GameProps) {
             onPointerEnter={() => dragging.current && tap(i)}
             className={`grid aspect-square place-items-center rounded-lg font-display text-sm font-black sm:text-base ${
               foundCells.has(i)
-                ? "bg-neon-green/25 text-neon-green"
-                : selected.includes(i)
-                  ? "bg-electric/40 text-white"
-                  : "text-ink/80 hover:bg-white/10"
-            }`}
+                ? "bg-brand/25 text-brand-ink": selected.includes(i)
+                  ? "bg-info/40 text-white": "text-fg/80 hover:bg-surface-2"}`}
           >
             {ch}
           </button>

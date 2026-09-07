@@ -4,41 +4,81 @@
  * Firebase client SDK — lazily initialized from NEXT_PUBLIC_FIREBASE_* env vars.
  * When env vars are absent the app runs fully in guest/local mode (everything still works)
  * and auth/firestore surfaces show a friendly setup notice instead of crashing.
+ *
+ * Import this module ONLY from inside an async function / effect, or from a
+ * lazily-loaded route: it pulls in the whole client SDK. For a plain
+ * "is Firebase configured?" check import `./firebase-config` instead (no SDK).
  */
 
-import { initializeApp, getApps, getApp, type FirebaseApp } from "firebase/app";
-import { getAuth, type Auth } from "firebase/auth";
-import { getFirestore, type Firestore } from "firebase/firestore";
-import { getStorage, type FirebaseStorage } from "firebase/storage";
+import { firebaseConfig } from "./firebase-config";
+import type { FirebaseApp } from "firebase/app";
+import type { Auth } from "firebase/auth";
+import type { Firestore } from "firebase/firestore";
+import type { FirebaseStorage } from "firebase/storage";
 
-export const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "",
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "",
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "",
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "",
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "",
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "",
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || "",
-};
+export { firebaseConfig, isFirebaseConfigured } from "./firebase-config";
 
-export const isFirebaseConfigured =
-  firebaseConfig.apiKey.length > 0 && firebaseConfig.projectId.length > 0 && firebaseConfig.appId.length > 0;
+type AppMod = typeof import("firebase/app");
+type AuthMod = typeof import("firebase/auth");
+type FsMod = typeof import("firebase/firestore");
+type StorageMod = typeof import("firebase/storage");
 
 let app: FirebaseApp | null = null;
+let appMod: AppMod | null = null;
+let authMod: AuthMod | null = null;
+let fsMod: FsMod | null = null;
+let storageMod: StorageMod | null = null;
+let auth: Auth | null = null;
+let db: Firestore | null = null;
 
-function ensureApp(): FirebaseApp {
-  if (!app) app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+export async function appModOf(): Promise<AppMod> {
+  if (!appMod) appMod = await import("firebase/app");
+  return appMod;
+}
+
+export async function authModOf(): Promise<AuthMod> {
+  if (!authMod) authMod = await import("firebase/auth");
+  return authMod;
+}
+
+export async function fsModOf(): Promise<FsMod> {
+  if (!fsMod) fsMod = await import("firebase/firestore");
+  return fsMod;
+}
+
+async function ensureApp(): Promise<FirebaseApp> {
+  if (!app) {
+    const m = await appModOf();
+    app = m.getApps().length ? m.getApp() : m.initializeApp(firebaseConfig);
+  }
   return app;
 }
 
-export function fbAuth(): Auth {
-  return getAuth(ensureApp());
+export async function fbAuth(): Promise<Auth> {
+  if (!auth) {
+    const [m, a] = await Promise.all([authModOf(), ensureApp()]);
+    auth = m.getAuth(a);
+  }
+  return auth;
 }
 
-export function fbDb(): Firestore {
-  return getFirestore(ensureApp());
+export async function fbDb(): Promise<Firestore> {
+  if (!db) {
+    const [m, a] = await Promise.all([fsModOf(), ensureApp()]);
+    db = m.getFirestore(a);
+  }
+  return db;
 }
 
-export function fbStorage(): FirebaseStorage {
-  return getStorage(ensureApp());
+export async function fbStorage(): Promise<FirebaseStorage> {
+  const [m, a] = await Promise.all([
+    storageMod ?? (storageMod = await import("firebase/storage")),
+    ensureApp(),
+  ]);
+  return m.getStorage(a);
+}
+
+/** Firestore helpers, loaded on demand. Keeps call sites tidy. */
+export async function fs() {
+  return fsModOf();
 }

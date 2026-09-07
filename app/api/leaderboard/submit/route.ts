@@ -16,8 +16,7 @@ const schema = z.object({
 /** Sanity bounds — scores beyond these are rejected as impossible. */
 const BOUNDS: Record<string, number> = {
   memory: 500, "math-speed": 2000, reaction: 250, stroop: 1000, sequence: 500, g2048: 500000,
-  sudoku: 500, chess: 400, "word-builder": 200, "vocab-battle": 500, "grammar-quest": 500,
-  "sentence-puzzle": 200, "listening-challenge": 200, "idiom-master": 200, "story-builder": 200,
+  sudoku: 500, chess: 400, "word-builder": 200, "vocab-battle": 500, "grammar-quest": 500,"sentence-puzzle": 200, "listening-challenge": 200, "idiom-master": 200, "story-builder": 200,
   pronunciation: 200, gk: 200, pakistan: 200, science: 200, islamic: 200, history: 200,
   geography: 200, sports: 200, tech: 200, movies: 200, millionaire: 200,
   snake3d: 1000, tetris: 500000, flappy: 1000, tictactoe: 200, connect4: 200, hangman: 200,

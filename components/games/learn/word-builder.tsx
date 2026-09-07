@@ -85,9 +85,9 @@ export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
         <span className="chip">{idx + 1}/{rounds.length}</span>
         <span className="chip">✅ {correct}</span>
       </div>
-      <div className="glass p-6">
+      <div className="card p-6">
         <p className="text-xs uppercase tracking-widest text-muted">Yeh word banao</p>
-        <p className={`urdu mt-2 text-3xl font-bold ${wrongFlash ? "text-pink-accent" : "text-neon-green"}`}>{round.hintUr}</p>
+        <p className={`urdu mt-2 text-3xl font-bold ${wrongFlash ? "text-accent-ink" : "text-brand-ink"}`}>{round.hintUr}</p>
         {round.hintEn && <p className="mt-1 text-xs text-muted">{round.hintEn}</p>}
 
         {/* built word */}
@@ -98,8 +98,7 @@ export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
               <span
                 key={i}
                 className={`grid h-11 w-9 place-items-center rounded-lg border-b-2 font-display text-lg font-black sm:h-12 sm:w-10 ${
-                  filled ? "border-neon-green bg-neon-green/15 text-ink" : "border-white/25 bg-white/5"
-                }`}
+                  filled ? "border-brand bg-brand/15 text-fg" : "border-line bg-surface-2"}`}
               >
                 {filled ? letters[built[i]].ch : ""}
               </span>
@@ -115,8 +114,7 @@ export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
               onClick={() => tap(i)}
               disabled={built.includes(i)}
               className={`h-12 w-11 rounded-xl font-display text-lg font-black transition-all sm:h-14 sm:w-12 ${
-                built.includes(i) ? "scale-90 opacity-25" : "glass glass-hover text-ink"
-              }`}
+                built.includes(i) ? "scale-90 opacity-25" : "card text-fg"}`}
               aria-label={`Letter ${l.ch}`}
             >
               {l.ch}
@@ -125,10 +123,10 @@ export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
         </div>
 
         <div className="mt-5 flex justify-center gap-2">
-          <button className="chip cursor-pointer hover:text-ink" onClick={undo}>
+          <button className="chip-btn hover:text-fg" onClick={undo}>
             ⌫ Wapis
           </button>
-          <button className="chip cursor-pointer hover:text-ink" onClick={() => { setBuilt([]); setWrongFlash(false); }}>
+          <button className="chip-btn hover:text-fg" onClick={() => { setBuilt([]); setWrongFlash(false); }}>
             🧹 Clear
           </button>
         </div>

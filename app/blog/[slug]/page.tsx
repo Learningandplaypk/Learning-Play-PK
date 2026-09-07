@@ -24,9 +24,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = POSTS.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const json = {
-    "@context": "https://schema.org",
-    "@type": "Article",
+  const json = {"@context": "https://schema.org","@type": "Article",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
@@ -34,14 +32,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   return (
-    <article className="page-pad mx-auto min-h-[100dvh] max-w-2xl pb-28 pt-28">
+    <article className="container-page page-pad max-w-2xl pb-24 pt-8 md:pb-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }} />
-      <Link href="/blog" className="chip hover:text-ink">← Blog</Link>
+      <Link href="/blog" className="chip-btn">← Blog</Link>
       <div className="mt-6">
-        <div className="text-5xl">{post.emoji}</div>
-        <h1 className="mt-3 font-display text-3xl font-black leading-tight sm:text-4xl">
-          <span className="text-gradient">{post.title}</span>
-        </h1>
+        <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-tint text-2xl">{post.emoji}</span>
+        <h1 className="mt-4 font-display text-3xl font-black leading-tight text-fg sm:text-4xl">{post.title}</h1>
         <p className="mt-2 text-xs text-muted">
           {new Date(post.date).toLocaleDateString("en-PK", { day: "numeric", month: "long", year: "numeric" })} • {post.readMins} min parhna
         </p>
@@ -49,7 +45,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <div className="mt-8 space-y-6">
         {post.sections.map((sec, i) => (
           <section key={i}>
-            {sec.h && <h2 className="mb-2 font-display text-xl font-bold text-ink">{sec.h}</h2>}
+            {sec.h && <h2 className="mb-2 font-display text-xl font-bold text-fg">{sec.h}</h2>}
             {sec.p?.map((para, j) => (
               <p key={j} className="mb-3 text-[15px] leading-relaxed text-muted">
                 {para}
@@ -59,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <ul className="space-y-2">
                 {sec.list.map((li, j) => (
                   <li key={j} className="flex gap-2 text-[15px] text-muted">
-                    <span className="text-neon-green">▸</span> {li}
+                    <span className="text-brand-ink">▸</span> {li}
                   </li>
                 ))}
               </ul>
@@ -67,10 +63,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </section>
         ))}
       </div>
-      <div className="glass mt-10 p-6 text-center">
-        <p className="font-display font-bold">Yeh tips amali tor par try karnay ka time hai!</p>
-        <Link href="/learn" className="btn btn-neon btn-sm mt-3">
-          📚 Abhi seekhna shuru karo — free
+      <div className="card mt-10 p-6">
+        <p className="font-display text-lg font-extrabold text-fg">Yeh tips amali tor par try karnay ka time hai!</p>
+        <Link href="/learn" className="btn btn-primary btn-sm mt-3">
+          Abhi seekhna shuru karo — free
         </Link>
       </div>
     </article>

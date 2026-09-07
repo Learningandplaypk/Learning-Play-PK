@@ -78,20 +78,20 @@ export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
         <span className="chip">{idx + 1}/{rounds.length}</span>
         <span className="chip">✅ {correct}</span>
       </div>
-      <div className={`glass p-6 ${checked === false ? "shake" : ""}`}>
+      <div className={`card p-6 ${checked === false ? "shake" : ""}`}>
         <p className="text-xs uppercase tracking-widest text-muted">Jumla theek tarteeb mein lagao</p>
-        <p className="urdu mt-2 text-xl text-neon-green">{round.ur}</p>
+        <p className="urdu mt-2 text-xl text-brand-ink">{round.ur}</p>
 
         {/* answer area */}
-        <div className="mt-5 flex min-h-20 flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-dashed border-white/20 p-3">
+        <div className="mt-5 flex min-h-20 flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-dashed border-line p-3">
           {round.tokens.map((_, slot) => {
             const pi = placed[slot];
             return pi !== undefined ? (
-              <button key={slot} onClick={() => { sfx("click"); setPlaced(placed.filter((_, s) => s !== slot)); }} className="rounded-lg bg-electric/25 px-3 py-2 font-display text-sm font-bold">
+              <button key={slot} onClick={() => { sfx("click"); setPlaced(placed.filter((_, s) => s !== slot)); }} className="rounded-lg bg-info/25 px-3 py-2 font-display text-sm font-bold">
                 {tokens[pi].t}
               </button>
             ) : (
-              <span key={slot} className="h-9 w-16 rounded-lg bg-white/5" />
+              <span key={slot} className="h-9 w-16 rounded-lg bg-surface-2" />
             );
           })}
         </div>
@@ -104,8 +104,7 @@ export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
               onClick={() => tapToken(i)}
               disabled={placed.includes(i)}
               className={`rounded-xl px-3.5 py-2.5 font-display text-sm font-bold transition ${
-                placed.includes(i) ? "scale-90 opacity-25" : "glass glass-hover text-ink"
-              }`}
+                placed.includes(i) ? "scale-90 opacity-25" : "card text-fg"}`}
             >
               {tok.t}
             </button>
@@ -113,17 +112,17 @@ export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
         </div>
 
         <div className="mt-5 flex items-center justify-center gap-2">
-          <button className="chip cursor-pointer hover:text-ink" onClick={undo}>
+          <button className="chip-btn hover:text-fg" onClick={undo}>
             ⌫ Undo
           </button>
           {done && checked === null && (
-            <button className="btn btn-neon btn-sm" onClick={() => check()}>
+            <button className="btn btn-primary btn-sm" onClick={() => check()}>
               ✔ Check
             </button>
           )}
         </div>
-        {checked === true && <p className="mt-3 font-bold text-neon-green">✅ Bilkul sahi!</p>}
-        {checked === false && <p className="mt-3 text-sm text-pink-accent">❌ Ghalat tarteeb — sahi: {round.tokens.join(" ")}</p>}
+        {checked === true && <p className="mt-3 font-bold text-brand-ink">✅ Bilkul sahi!</p>}
+        {checked === false && <p className="mt-3 text-sm text-accent-ink">❌ Ghalat tarteeb — sahi: {round.tokens.join(" ")}</p>}
       </div>
     </div>
   );

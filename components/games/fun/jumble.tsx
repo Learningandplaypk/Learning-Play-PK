@@ -50,37 +50,33 @@ export default function Jumble({ onEnd }: GameProps) {
         <span className="chip">{idx + 1}/{ROUNDS}</span>
         <span className="chip">✅ {correct}</span>
       </div>
-      <div className={`glass p-8 ${state === "no" ? "shake" : ""}`}>
+      <div className={`card p-8 ${state === "no" ? "shake" : ""}`}>
         <p className="text-xs uppercase tracking-widest text-muted">Jumbled word theek karo</p>
         <div className="mt-4 flex flex-wrap justify-center gap-1.5">
           {round.scrambled.split("").map((ch, i) => (
-            <span key={i} className="grid h-12 w-10 place-items-center rounded-xl bg-gradient-to-b from-electric/30 to-neon-purple/25 font-display text-xl font-black">
+            <span key={i} className="grid h-12 w-10 place-items-center rounded-xl bg-info/20 font-display text-xl font-black">
               {ch.toUpperCase()}
             </span>
           ))}
         </div>
-        {showHint && <p className="urdu mt-3 text-lg text-neon-green">💡 {round.ur}</p>}
+        {showHint && <p className="urdu mt-3 text-lg text-brand-ink">💡 {round.ur}</p>}
         <form onSubmit={submit} className="mt-5 flex gap-2">
           <input
             value={guess}
             onChange={(e) => setGuess(e.target.value)}
-            placeholder="Apna jawab likho…"
-            className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center font-display text-lg font-bold uppercase tracking-widest outline-none focus:border-neon-green/60"
-            aria-label="Answer"
-            autoComplete="off"
-            spellCheck={false}
+            placeholder="Apna jawab likho…"className="w-full rounded-xl border border-line bg-surface-2 px-4 py-3 text-center font-display text-lg font-bold uppercase tracking-widest outline-none focus:border-brand/60"aria-label="Answer"autoComplete="off"spellCheck={false}
           />
-          <button className="btn btn-neon" type="submit">
+          <button className="btn btn-primary" type="submit">
             ↵
           </button>
         </form>
         <div className="mt-4 flex justify-center gap-2">
-          <button className="chip cursor-pointer hover:text-ink" onClick={() => setShowHint(true)}>
+          <button className="chip-btn hover:text-fg" onClick={() => setShowHint(true)}>
             💡 Hint (- Urdu meaning)
           </button>
         </div>
-        {state === "ok" && <p className="mt-3 font-bold text-neon-green">✅ Sahi!</p>}
-        {state === "no" && <p className="mt-3 text-sm text-pink-accent">❌ Ghalat — yeh tha: <b>{round.word.toUpperCase()}</b></p>}
+        {state === "ok" && <p className="mt-3 font-bold text-brand-ink">✅ Sahi!</p>}
+        {state === "no" && <p className="mt-3 text-sm text-accent-ink">❌ Ghalat — yeh tha: <b>{round.word.toUpperCase()}</b></p>}
       </div>
     </div>
   );

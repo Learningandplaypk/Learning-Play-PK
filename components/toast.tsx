@@ -1,35 +1,42 @@
 "use client";
 
 import React from "react";
+import { X } from "lucide-react";
 import { usePlayer } from "@/lib/store";
-import { AnimatePresence, motion } from "framer-motion";
 
 export function ToastHost() {
   const toasts = usePlayer((s) => s.toasts);
   const dismiss = usePlayer((s) => s.dismissToast);
+
   return (
-    <div className="pointer-events-none fixed bottom-24 left-1/2 z-[300] flex w-full max-w-sm -translate-x-1/2 flex-col gap-2 px-4 lg:bottom-8 lg:left-8 lg:translate-x-0">
-      <AnimatePresence>
-        {toasts.map((t) => (
-          <motion.button
-            key={t.id}
-            layout
-            initial={{ opacity: 0, y: 30, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.85 }}
-            onClick={() => dismiss(t.id)}
-            className="glass pointer-events-auto glow-ring flex items-center gap-3 px-4 py-3 text-left"
-          >
-            <span className="text-2xl" aria-hidden>
+    <div
+      className="pointer-events-none fixed inset-x-3 z-[300] flex flex-col items-center gap-2 sm:inset-x-auto sm:left-4 sm:items-start"
+      style={{ bottom: "calc(4.75rem + env(safe-area-inset-bottom, 0px))" }}
+      role="status"
+      aria-live="polite"
+    >
+      {toasts.map((t) => (
+        <div
+          key={t.id}
+          className="card-md anim-toast pointer-events-auto flex w-full max-w-sm items-start gap-3 p-3"
+        >
+            <span className="text-xl leading-none" aria-hidden>
               {t.emoji}
             </span>
-            <span>
-              <span className="block font-display text-sm font-bold text-ink">{t.title}</span>
-              {t.body && <span className="block text-xs text-muted">{t.body}</span>}
-            </span>
-          </motion.button>
-        ))}
-      </AnimatePresence>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold leading-snug text-fg">{t.title}</p>
+              {t.body && <p className="mt-0.5 text-xs leading-snug text-muted">{t.body}</p>}
+            </div>
+            <button
+              type="button"
+              onClick={() => dismiss(t.id)}
+              aria-label="Dismiss notification"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-md text-muted hover:bg-surface-2 hover:text-fg"
+            >
+              <X size={14} strokeWidth={2.4} />
+          </button>
+        </div>
+      ))}
     </div>
   );
 }

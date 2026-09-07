@@ -62,7 +62,7 @@ export default function Hangman({ lang = "english", onEnd }: GameProps) {
 
   return (
     <div className="mx-auto max-w-lg text-center">
-      <div className="glass p-6">
+      <div className="card p-6">
         <div className="text-6xl">{STAGES[Math.min(wrong.length, 6)]}</div>
         <p className="mt-2 text-xs uppercase tracking-widest text-muted">Hint: {target.ur}</p>
         <div className="mt-5 flex flex-wrap justify-center gap-1.5">
@@ -70,8 +70,7 @@ export default function Hangman({ lang = "english", onEnd }: GameProps) {
             <span
               key={i}
               className={`grid h-11 w-9 place-items-center border-b-2 font-display text-xl font-black uppercase ${
-                guessed.includes(ch) ? "border-neon-green text-ink" : lost ? "border-pink-accent text-pink-accent" : "border-white/25"
-              }`}
+                guessed.includes(ch) ? "border-brand text-fg" : lost ? "border-accent text-accent-ink" : "border-line"}`}
             >
               {guessed.includes(ch) || lost ? ch : ""}
             </span>
@@ -81,7 +80,7 @@ export default function Hangman({ lang = "english", onEnd }: GameProps) {
 
         {finished ? (
           <div className="mt-5">
-            <p className={`font-display text-2xl font-black ${won ? "text-neon-green" : "text-pink-accent"}`}>
+            <p className={`font-display text-2xl font-black ${won ? "text-brand-ink" : "text-accent-ink"}`}>
               {won ? "🎉 Bacha liya!" : `💀 Woh tha: ${word}`}
             </p>
           </div>
@@ -96,8 +95,7 @@ export default function Hangman({ lang = "english", onEnd }: GameProps) {
                   onClick={() => guess(l)}
                   disabled={used}
                   className={`aspect-square rounded-lg font-display text-sm font-black uppercase transition sm:text-base ${
-                    used ? (hit ? "bg-neon-green/25 text-neon-green" : "bg-white/5 text-pink-accent line-through") : "glass glass-hover text-ink"
-                  }`}
+                    used ? (hit ? "bg-brand/25 text-brand-ink" : "bg-surface-2 text-accent-ink line-through") : "card text-fg"}`}
                 >
                   {l}
                 </button>

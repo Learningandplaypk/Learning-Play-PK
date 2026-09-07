@@ -2,8 +2,8 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-import { Button, Modal, Progress, TiltCard } from "./ui";
+import { ArrowLeft, Flame, Link2, MessageCircle, RotateCcw, Share2, Sparkles, Star } from "lucide-react";
+import { Button, Card, Chip, Modal, Progress, useCountUp } from "./ui";
 import { usePlayer, type Zone } from "@/lib/store";
 import { levelFromXp, levelTitle, xpForGame } from "@/lib/gamification";
 import { pushProgressToFirestore } from "@/lib/sync";
@@ -12,6 +12,8 @@ import { fmt } from "@/lib/utils";
 import confetti from "canvas-confetti";
 import { useI18n } from "@/lib/i18n";
 import type { GameData } from "@/lib/games-data";
+import { ALL_GAME_DATA } from "@/lib/games-data";
+import { ZoneArt } from "@/components/brand/ustad";
 
 export type GameResult = {
   score: number;
@@ -29,6 +31,8 @@ export type GameProps = {
 };
 
 export type GameMeta = GameData & { load: React.ComponentType<GameProps> };
+
+const CONFETTI_COLORS = ["#178A55", "#F5A524", "#12734A"];
 
 function ShareRow({ title, scoreText }: { title: string; scoreText: string }) {
   const [copied, setCopied] = useState(false);
@@ -58,31 +62,37 @@ function ShareRow({ title, scoreText }: { title: string; scoreText: string }) {
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-2">
-      <Button size="sm" variant="neon" onClick={native}>
-        📤 Share Score
+      <Button size="sm" onClick={native}>
+        <Share2 size={16} strokeWidth={2.2} /> Share
       </Button>
-      <a className="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer" href={`https://wa.me/?text=${encodeURIComponent(text + url)}`}>
-        💬 WhatsApp
-      </a>
       <a
-        className="btn btn-ghost btn-sm"
+        className="btn btn-secondary btn-sm"
         target="_blank"
         rel="noopener noreferrer"
-        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`}
+        href={`https://wa.me/?text=${encodeURIComponent(text + url)}`}
       >
-        ✖️ Post
+        <MessageCircle size={16} strokeWidth={2.2} /> WhatsApp
       </a>
-      <a
-        className="btn btn-ghost btn-sm"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
-      >
-        📘 Facebook
-      </a>
-      <Button size="sm" variant="ghost" onClick={copy}>
-        {copied ? "✅ Copied!" : "🔗 Copy Link"}
+      <Button size="sm" variant="secondary" onClick={copy}>
+        <Link2 size={16} strokeWidth={2.2} /> {copied ? "Copied!" : "Copy link"}
       </Button>
+    </div>
+  );
+}
+
+function Stars({ value }: { value: number }) {
+  return (
+    <div role="img" className="flex items-center justify-center gap-1" aria-label={`${value} of 3 stars`}>
+      {[1, 2, 3].map((i) => (
+        <Star
+          key={i}
+          size={26}
+          strokeWidth={2}
+          className={i <= value ? "text-accent" : "text-[var(--border)]"}
+          fill={i <= value ? "var(--accent)" : "none"}
+          aria-hidden
+        />
+      ))}
     </div>
   );
 }
@@ -97,6 +107,8 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
   const submitGame = usePlayer((s) => s.submitGame);
   const canPlay = usePlayer((s) => s.canPlay);
   const xp = usePlayer((s) => s.xp);
+  const streak = usePlayer((s) => s.streak);
+  const coins = usePlayer((s) => s.coins);
   const best = usePlayer((s) => {
     const rows = s.results.filter((r) => r.slug === meta.slug);
     return rows.length ? Math.max(...rows.map((r) => r.score)) : 0;
@@ -117,7 +129,14 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
 
   const handleEnd = useCallback(
     (result: GameResult) => {
-      const o = submitGame({ slug: meta.slug, zone: meta.zone, result, flag: result.flag, words: result.words, quizCorrect: result.quizCorrect });
+      const o = submitGame({
+        slug: meta.slug,
+        zone: meta.zone,
+        result,
+        flag: result.flag,
+        words: result.words,
+        quizCorrect: result.quizCorrect,
+      });
       setOutcome(o);
       setLastResult(result);
       phase.set("over");
@@ -126,7 +145,8 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
       const q = result.maxScore > 0 ? result.score / result.maxScore : 0;
       if (q >= 0.6) {
         sfx("win");
-        confetti({ particleCount: 120, spread: 75, origin: { y: 0.6 }, colors: ["#39ff14", "#2d7cff", "#b026ff", "#ff2e97"] });
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) confetti({ particleCount: 110, spread: 70, origin: { y: 0.65 }, colors: CONFETTI_COLORS });
       } else {
         sfx("lose");
       }
@@ -139,112 +159,166 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
   const back = backHref ?? (meta.zone === "learn" ? `/learn${lang ? `/${lang}` : "/english"}` : `/${meta.zone}`);
   const scoreText = lastResult ? `Maine ${fmt(lastResult.score)} score kiya` : "";
 
+  const nextGame = useMemo(() => {
+    const sameZone = ALL_GAME_DATA.filter((g) => g.zone === meta.zone);
+    const i = sameZone.findIndex((g) => g.slug === meta.slug);
+    return sameZone[(i + 1) % sameZone.length];
+  }, [meta.slug, meta.zone]);
+  const nextHref =
+    meta.zone === "learn" ? `/learn/${lang ?? "english"}/${nextGame.slug}` : `/${meta.zone}/${nextGame.slug}`;
+
+  const stars = outcome
+    ? outcome.maxScore > 0
+      ? Math.max(1, Math.round((outcome.score / outcome.maxScore) * 3))
+      : 1
+    : 0;
+  const xpShown = useCountUp(outcome?.xp ?? 0, 700, !!outcome);
+
   return (
-    <div className="page-pad mx-auto min-h-[100dvh] max-w-4xl pb-28 pt-24 lg:pt-28">
-      <div className="mb-5 flex items-center justify-between">
-        <Link href={back} className="chip hover:text-ink">
-          ← {backHref ? "Zone" : t("nav.home")}
+    <div className="container-page page-pad min-h-[100dvh] pb-24 pt-6 md:pb-10">
+      {/* quiet top bar */}
+      <div className="mb-5 flex items-center justify-between gap-3">
+        <Link
+          href={back}
+          className="inline-flex min-h-11 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold text-muted transition-colors hover:text-fg"
+        >
+          <ArrowLeft size={18} strokeWidth={2.4} /> Back
         </Link>
-        <div className="chip">
-          🔥 {usePlayer.getState().streak} • 🪙 {fmt(usePlayer.getState().coins)}
+        <div className="flex items-center gap-2">
+          <Chip tone={streak > 0 ? "accent" : "neutral"}>
+            <Flame size={13} strokeWidth={2.4} /> <span className="tnum">{streak}</span>
+          </Chip>
+          <Chip>
+            <Sparkles size={13} strokeWidth={2.4} /> <span className="tnum">{fmt(coins)}</span>
+          </Chip>
         </div>
       </div>
 
       {phase.current === "intro" && (
-        <TiltCard className="p-8 text-center" intensity={6}>
-          <div className="mx-auto mb-5 grid h-28 w-28 animate-float place-items-center rounded-3xl bg-gradient-to-br from-electric/30 via-neon-purple/25 to-neon-green/25 text-6xl shadow-[0_0_60px_-12px_rgba(45,124,255,.7)]">
-            {meta.emoji}
-          </div>
-          <h1 className="font-display text-3xl font-black sm:text-4xl">
-            <span className="text-gradient">{meta.title}</span>
-          </h1>
-          <p className="mx-auto mt-3 max-w-lg text-[15px] text-muted">{meta.desc}</p>
-          <ul className="mx-auto mt-6 max-w-md space-y-2 text-left text-sm text-ink/85">
+        <Card className="mx-auto max-w-xl p-6 text-left sm:p-8">
+          <span className="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint">
+            <ZoneArt zone={meta.zone} className="h-8 w-8" />
+          </span>
+          <h1 className="font-display text-2xl font-black text-fg sm:text-3xl">{meta.title}</h1>
+          <p className="mt-2 text-base leading-relaxed text-muted">{meta.desc}</p>
+
+          <ol className="mt-6 space-y-2">
             {meta.howTo.map((h, i) => (
-              <li key={i} className="glass flex items-start gap-3 px-4 py-2.5">
-                <span className="font-display font-black text-neon-green">{i + 1}.</span> {h}
+              <li key={i} className="flex items-start gap-3 rounded-xl bg-surface-2 px-3 py-2.5 text-sm text-fg">
+                <span className="font-display text-sm font-extrabold text-brand-ink">{i + 1}.</span>
+                {h}
               </li>
             ))}
-          </ul>
-          {best > 0 && <p className="mt-5 text-sm text-muted">Aapka best score: <span className="font-bold text-neon-green">{fmt(best)}</span></p>}
-          <Button className="mt-6" onClick={start}>
-            🎮 {t("cta.start")}
+          </ol>
+
+          {best > 0 && (
+            <p className="mt-5 text-sm text-muted">
+              Aapka best score:{" "}
+              <span className="font-bold text-fg tnum">{fmt(best)}</span>
+            </p>
+          )}
+
+          <Button size="lg" block className="mt-6" onClick={start}>
+            {t("cta.start")}
           </Button>
-          <p className="mt-3 text-[11px] text-muted">
-            Free plan: roz 5 games + 3 lessons. <Link className="text-pink-accent underline underline-offset-2" href="/premium">Premium unlimited</Link>
+          <p className="mt-3 text-center text-xs text-muted">
+            Free plan: roz 5 games + 3 lessons.{" "}
+            <Link href="/premium" className="font-semibold text-brand-ink underline underline-offset-2">
+              Premium unlimited
+            </Link>
           </p>
-        </TiltCard>
+        </Card>
       )}
 
       {phase.current === "playing" && <Game lang={lang} onEnd={handleEnd} />}
 
       {phase.current === "over" && outcome && (
-        <TiltCard className="p-8 text-center" intensity={5}>
-          <div className="text-5xl">{outcome.perfect ? "🏆" : outcome.score / Math.max(1, outcome.maxScore) >= 0.6 ? "🎉" : "💪"}</div>
-          <h2 className="mt-3 font-display text-3xl font-black">
-            <span className="text-gradient">{outcome.perfect ? "Perfect Score!" : "Game Over!"}</span>
-          </h2>
-          <p className="mt-1 text-muted">{meta.title}</p>
-
-          <div className="mx-auto mt-6 grid max-w-sm grid-cols-3 gap-3">
-            <div className="glass p-3">
-              <div className="font-display text-2xl font-black text-ink">{fmt(outcome.score)}</div>
-              <div className="text-[11px] uppercase text-muted">Score</div>
-            </div>
-            <div className="glass p-3">
-              <div className="font-display text-2xl font-black text-neon-green">+{fmt(outcome.xp)}</div>
-              <div className="text-[11px] uppercase text-muted">XP</div>
-            </div>
-            <div className="glass p-3">
-              <div className="font-display text-2xl font-black text-neon-orange">+{fmt(outcome.coins)}</div>
-              <div className="text-[11px] uppercase text-muted">Coins</div>
+        <Card className="mx-auto max-w-xl p-6 sm:p-8">
+          <div className="text-center">
+            <p className="text-xs font-bold uppercase tracking-wider text-muted">{meta.title}</p>
+            <h2 className="mt-1 font-display text-2xl font-black text-fg sm:text-3xl">
+              {outcome.perfect ? "Perfect score!" : "Game over!"}
+            </h2>
+            <div className="mt-3">
+              <Stars value={stars} />
             </div>
           </div>
 
-          <div className="mx-auto mt-5 max-w-sm">
-            <div className="mb-1.5 flex justify-between text-xs text-muted">
-              <span>Level {lv.level} • {levelTitle(lv.level)}</span>
-              <span>{fmt(lv.into)}/{fmt(lv.need)} XP</span>
+          <div className="mt-6 grid grid-cols-3 gap-3">
+            <div className="rounded-xl border border-line bg-surface-2 p-3 text-center">
+              <div className="font-display text-2xl font-black text-fg tnum">{fmt(outcome.score)}</div>
+              <div className="text-[11px] uppercase tracking-wide text-muted">Score</div>
             </div>
-            <Progress value={lv.progress * 100} />
+            <div className="rounded-xl border border-line bg-brand-tint p-3 text-center">
+              <div className="font-display text-2xl font-black text-brand-ink tnum">+{fmt(xpShown)}</div>
+              <div className="text-[11px] uppercase tracking-wide text-muted">XP</div>
+            </div>
+            <div className="rounded-xl border border-line bg-accent-tint p-3 text-center">
+              <div className="font-display text-2xl font-black text-accent-ink tnum">+{fmt(outcome.coins)}</div>
+              <div className="text-[11px] uppercase tracking-wide text-muted">Coins</div>
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <div className="mb-1.5 flex justify-between text-xs text-muted">
+              <span>
+                Level {lv.level} · {levelTitle(lv.level)}
+              </span>
+              <span className="tnum">
+                {fmt(lv.into)}/{fmt(lv.need)} XP
+              </span>
+            </div>
+            <Progress value={lv.progress * 100} label={`Level ${lv.level} progress`} />
           </div>
 
           {outcome.newBadges.length > 0 && (
-            <div className="mt-5">
-              <p className="mb-2 text-sm font-bold text-neon-green">Naye badges unlock hue!</p>
-              <div className="flex flex-wrap justify-center gap-2">
+            <div className="mt-5 rounded-xl border border-line bg-surface-2 p-3">
+              <p className="text-sm font-bold text-fg">Naye badges unlock hue!</p>
+              <div className="mt-2 flex flex-wrap gap-2">
                 {outcome.newBadges.map((b) => (
-                  <span key={b.id} className="chip pop-in border-neon-green/40 text-ink">
+                  <Chip key={b.id} tone="brand">
                     {b.emoji} {b.name}
-                  </span>
+                  </Chip>
                 ))}
               </div>
             </div>
           )}
 
-          <div className="mt-7">
+          <div className="mt-6">
             <ShareRow title={meta.title} scoreText={scoreText} />
           </div>
 
-          <div className="mt-6 flex justify-center gap-3">
-            <Button onClick={start}>🔄 {t("cta.playAgain")}</Button>
-            <Link href={back} className="btn btn-ghost">
-              ← Zone wapas
+          <div className="mt-5 grid gap-2 sm:grid-cols-2">
+            <Button size="lg" onClick={start}>
+              <RotateCcw size={18} strokeWidth={2.3} /> {t("cta.playAgain")}
+            </Button>
+            <Link href={nextHref} className="btn btn-secondary btn-lg">
+              Next game: {nextGame.title}
             </Link>
           </div>
-        </TiltCard>
+          <Link
+            href={back}
+            className="mt-3 flex min-h-11 items-center justify-center text-sm font-semibold text-muted hover:text-fg"
+          >
+            Zone wapas jao
+          </Link>
+        </Card>
       )}
 
-      <Modal open={upsell} onClose={() => setUpsell(false)}>
-        <div className="text-center">
-          <div className="text-5xl">⏳</div>
-          <h3 className="mt-3 font-display text-2xl font-black text-gradient">Aaj ka free limit khatam!</h3>
-          <p className="mt-2 text-sm text-muted">
-            Free plan mein roz 5 games + 3 lessons milte hain. Premium par <b className="text-ink">unlimited games, zero ads, progress reports aur certificate</b> milta hai — sirf Rs. 399/mahina.
+      <Modal open={upsell} onClose={() => setUpsell(false)} title="Aaj ka free limit khatam">
+        <div>
+          <p className="text-sm leading-relaxed text-muted">
+            Free plan mein roz 5 games + 3 lessons milte hain. Premium par{" "}
+            <b className="text-fg">unlimited games, zero ads, progress reports aur certificate</b> milta hai — sirf
+            Rs. 399/mahina.
           </p>
-          <div className="mt-5 flex flex-col gap-2">
-            <Link href="/premium" className="btn btn-neon w-full">⚡ Premium Lo — Rs. 399/mo</Link>
-            <Button variant="ghost" onClick={() => setUpsell(false)}>Baad mein</Button>
+          <div className="mt-5 grid gap-2">
+            <Link href="/premium" className="btn btn-primary">
+              Premium dekho — Rs. 399/mo
+            </Link>
+            <Button variant="secondary" onClick={() => setUpsell(false)}>
+              Baad mein
+            </Button>
           </div>
         </div>
       </Modal>

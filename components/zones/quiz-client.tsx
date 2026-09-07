@@ -2,27 +2,40 @@
 
 import React from "react";
 import Link from "next/link";
-import { ZoneGrid, ZoneHeader } from "@/components/zone-grid";
+import { ArrowRight } from "lucide-react";
+import { GameCatalog } from "@/components/zone-grid";
 import { QUIZ_TOPIC_DATA } from "@/lib/games-data";
-import { TiltCard } from "@/components/ui";
+import { Card } from "@/components/ui";
+import { ZoneArt } from "@/components/brand/ustad";
 import { AdSlot } from "@/components/ads";
 
 export function QuizClient() {
   return (
-    <div className="page-pad mx-auto min-h-[100dvh] max-w-6xl pb-28 pt-28">
-      <ZoneHeader emoji="❓" title="Quiz Zone" urdu="کوئز زون" desc="10 topics — timer, streak bonus aur har jawab ki wazahat. Aur Millionaire format ki full drama!" />
-      <ZoneGrid games={QUIZ_TOPIC_DATA} basePath="/quiz" />
-      <TiltCard className="mx-auto mt-10 max-w-2xl overflow-hidden p-8 text-center" intensity={7}>
-        <div className="text-5xl">💰</div>
-        <h2 className="mt-3 font-display text-2xl font-black text-gradient">Kon Banega Crorepati</h2>
-        <p className="mx-auto mt-2 max-w-md text-sm text-muted">
-          15 sawalat ki ladder, 7 checkpoints, 3 lifelines (50-50, Audience Poll, Skip) — dramatic hot seat ka poora maza.
-        </p>
-        <Link href="/quiz/millionaire" className="btn btn-pink mt-5">
-          🔥 Hot Seat par baitho
+    <GameCatalog
+      games={QUIZ_TOPIC_DATA}
+      basePath="/quiz"
+      zone="quiz"
+      title="Quiz Zone"
+      urdu="کوئز زون"
+      desc="10 topics — timer, streak bonus aur har jawab ki wazahat. Aur Millionaire format ki full drama!"
+    >
+      <Card className="mt-6 flex flex-col items-start gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-4">
+          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent-tint">
+            <ZoneArt zone="quiz" className="h-7 w-7" />
+          </span>
+          <div>
+            <h2 className="font-display text-lg font-extrabold text-fg">Kon Banega Crorepati</h2>
+            <p className="mt-1 max-w-md text-sm text-muted">
+              15 sawalat ki ladder, 7 checkpoints, 3 lifelines (50-50, Audience Poll, Skip).
+            </p>
+          </div>
+        </div>
+        <Link href="/quiz/millionaire" className="btn btn-primary btn-sm shrink-0">
+          Hot seat par baitho <ArrowRight size={16} strokeWidth={2.4} />
         </Link>
-      </TiltCard>
+      </Card>
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_QUIZ || undefined} className="mx-auto mt-10 max-w-2xl" />
-    </div>
+    </GameCatalog>
   );
 }

@@ -2,58 +2,97 @@
 
 import React from "react";
 import Link from "next/link";
-import { TiltCard, SectionHeading } from "@/components/ui";
-import { ZoneHeader } from "@/components/zone-grid";
+import { ArrowRight } from "lucide-react";
+import { Card, SectionHeading } from "@/components/ui";
+import { ZoneArt } from "@/components/brand/ustad";
+import { LANG_PATHS, langFlag, langLabel } from "@/lib/lang-paths";
 import { AdSlot } from "@/components/ads";
 
-const LANGS = [
-  { slug: "english", flag: "🇬🇧", name: "English", native: "English", detail: "300+ words • Grammar • Idioms • Stories", color: "#2d7cff" },
-  { slug: "arabic", flag: "🇸🇦", name: "Arabic", native: "العربية", detail: "Quranic vocabulary samet", color: "#39ff14" },
-  { slug: "turkish", flag: "🇹🇷", name: "Turkish", native: "Türkçe", detail: "Ertugrul wali zuban!", color: "#ff2e97" },
-  { slug: "chinese", flag: "🇨🇳", name: "Chinese", native: "中文", detail: "Mandarin basics", color: "#ff7a00" },
-  { slug: "french", flag: "🇫🇷", name: "French", native: "Français", detail: "Romance languages ki queen", color: "#2d7cff" },
-  { slug: "spanish", flag: "🇪🇸", name: "Spanish", native: "Español", detail: "Duniya ki 2nd bari zuban", color: "#ff7a00" },
-  { slug: "korean", flag: "🇰🇷", name: "Korean", native: "한국어", detail: "K-drama aur K-pop ke liye", color: "#b026ff" },
-  { slug: "japanese", flag: "🇯🇵", name: "Japanese", native: "日本語", detail: "Anime ke fans ke liye", color: "#ff2e97" },
-];
+const DETAIL: Record<string, { detail: string; rtl?: boolean }> = {
+  english: { detail: "300+ words • Grammar • Idioms • Stories" },
+  arabic: { detail: "Quranic vocabulary samet", rtl: true },
+  turkish: { detail: "Ertugrul wali zuban!", rtl: true },
+  chinese: { detail: "Mandarin basics" },
+  french: { detail: "Romance languages ki queen" },
+  spanish: { detail: "Duniya ki 2nd bari zuban" },
+  korean: { detail: "K-drama aur K-pop ke liye" },
+  japanese: { detail: "Anime ke fans ke liye" },
+};
+
+const NATIVE: Record<string, string> = {
+  english: "English",
+  arabic: "العربية",
+  turkish: "Türkçe",
+  chinese: "中文",
+  french: "Français",
+  spanish: "Español",
+  korean: "한국어",
+  japanese: "日本語",
+};
 
 export function LearnHubClient() {
   return (
-    <div className="page-pad mx-auto min-h-[100dvh] max-w-6xl pb-28 pt-28">
-      <ZoneHeader emoji="📚" title="Learn Zone" urdu="سیکھنے کا زون" desc="8 languages — har language mein words, phrases, listening aur pronunciation games. Urdu + English meanings ke sath." />
-
-      <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-4">
-        {LANGS.map((l) => (
-          <TiltCard key={l.slug} className="group flex flex-col p-5">
-            <Link href={`/learn/${l.slug}`} className="flex h-full flex-col" aria-label={`${l.name} seekho`}>
-              <div className="mb-3 text-4xl transition-transform duration-300 group-hover:scale-125">{l.flag}</div>
-              <h3 className="font-display text-lg font-bold">{l.name}</h3>
-              <p className="text-sm text-muted">{l.native}</p>
-              <p className="mt-2 text-xs leading-relaxed text-muted/80">{l.detail}</p>
-              <span className="mt-auto pt-3 text-xs font-bold" style={{ color: l.color }}>
-                Seekhna shuru karo →
-              </span>
-            </Link>
-          </TiltCard>
-        ))}
+    <div className="container-page page-pad pb-24 pt-8 md:pb-10">
+      <div className="mb-8">
+        <span className="mb-4 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint">
+          <ZoneArt zone="learn" className="h-8 w-8" />
+        </span>
+        <h1 className="font-display text-3xl font-black text-fg sm:text-4xl">Learn Zone</h1>
+        <p className="urdu mt-1 text-base text-brand-ink">سیکھنے کا زون</p>
+        <p className="mt-2 max-w-2xl text-base text-muted">
+          8 zubanein — har language mein words, phrases, listening aur pronunciation games. Urdu + English meanings ke
+          sath.
+        </p>
       </div>
 
-      <div className="mt-16">
-        <SectionHeading kicker="Kaise kaam karta hai" title="Khel kar seekho — seriously." sub="Har lesson game 3-5 minute ka hota hai. XP kamao, streak rakho, words yaad rakho." />
-        <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-4">
+        {LANG_PATHS.map((slug) => {
+          const cfg = DETAIL[slug] ?? { detail: "" };
+          return (
+            <Link key={slug} href={`/learn/${slug}`} className="group">
+              <Card className="flex h-full flex-col p-4 transition-colors group-hover:border-brand">
+                <span className="mb-3 grid h-12 w-12 place-items-center rounded-xl bg-brand-tint text-xl">
+                  {langFlag(slug)}
+                </span>
+                <h2 className="font-display text-base font-extrabold text-fg">{langLabel(slug)}</h2>
+                <p
+                  className="mt-0.5 text-sm text-brand-ink"
+                  {...(cfg.rtl ? { dir: "rtl" } : {})}
+                >
+                  {NATIVE[slug]}
+                </p>
+                <p className="mt-2 flex-1 text-xs leading-relaxed text-muted">{cfg.detail}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-brand-ink">
+                  Seekhna shuru karo <ArrowRight size={13} strokeWidth={2.6} />
+                </span>
+              </Card>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div className="mt-14">
+        <SectionHeading
+          title="Khel kar seekho — seriously"
+          sub="Har lesson 3-5 minute ka hai. XP kamao, streak rakho, words yaad rakho."
+        />
+        <div className="grid gap-3 md:grid-cols-3">
           {[
-            { e: "1️⃣", t: "Language chuno", d: "English full course hai; 7 aur languages starter packs ke sath." },
-            { e: "2️⃣", t: "Games khelo", d: "Word Builder, Vocab Battle, Listening, Pronunciation — har game XP deta hai." },
-            { e: "3️⃣", t: "Streak rakho", d: "Roz thora thora — 30 din mein results dekho. Daily rewards bhi milte hain." },
+            { n: "1", t: "Language chuno", d: "English full course hai; 7 aur languages starter packs ke sath." },
+            { n: "2", t: "Games khelo", d: "Word Builder, Vocab Battle, Listening, Pronunciation — har game XP deta hai." },
+            { n: "3", t: "Streak rakho", d: "Roz thora thora — 30 din mein results dekho. Daily rewards bhi milte hain." },
           ].map((s) => (
-            <TiltCard key={s.t} className="p-6">
-              <div className="text-3xl">{s.e}</div>
-              <h4 className="mt-3 font-display text-lg font-bold">{s.t}</h4>
-              <p className="mt-2 text-sm text-muted">{s.d}</p>
-            </TiltCard>
+            <Card key={s.n} className="p-5">
+              <span className="grid h-9 w-9 place-items-center rounded-[10px] bg-brand-tint font-display text-base font-extrabold text-brand-ink">
+                {s.n}
+              </span>
+              <h3 className="mt-3 font-display text-base font-extrabold text-fg">{s.t}</h3>
+              <p className="mt-1 text-sm text-muted">{s.d}</p>
+            </Card>
           ))}
         </div>
       </div>
+
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_LEARN || undefined} className="mx-auto mt-12 max-w-2xl" />
     </div>
   );

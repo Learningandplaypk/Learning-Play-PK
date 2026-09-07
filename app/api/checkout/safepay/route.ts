@@ -17,8 +17,7 @@ export async function POST(req: Request) {
   const key = envStr("SAFEPAY_SECRET_KEY");
   const env = envStrOr("SAFEPAY_ENV", "sandbox");
   if (!key) {
-    return jsonError(
-      "Safepay configure nahi hai (SAFEPAY_SECRET_KEY missing). getsafepay.com par account bana kar sandbox keys .env.local mein daalein.",
+    return jsonError("Safepay configure nahi hai (SAFEPAY_SECRET_KEY missing). getsafepay.com par account bana kar sandbox keys .env.local mein daalein.",
       503
     );
   }

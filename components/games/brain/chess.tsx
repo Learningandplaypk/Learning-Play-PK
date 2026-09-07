@@ -148,9 +148,9 @@ export default function ChessGame({ onEnd }: GameProps) {
     <div className="mx-auto max-w-md select-none">
       <div className="mb-3 flex items-center justify-between text-sm">
         <span className="chip">♟️ vs AI (depth 2)</span>
-        <span className={`chip ${thinking ? "border-neon-purple/50 text-neon-purple" : ""}`}>{thinking ? "🤖 soch raha…" : status}</span>
+        <span className={`chip ${thinking ? "border-info/50 text-info-ink" : ""}`}>{thinking ? "🤖 soch raha…" : status}</span>
       </div>
-      <div className="glass overflow-hidden !rounded-2xl p-1.5">
+      <div className="card overflow-hidden !rounded-2xl p-1.5">
         <div className="grid grid-cols-8">
           {board.map((row, r) =>
             row.map((piece, c) => {
@@ -163,15 +163,15 @@ export default function ChessGame({ onEnd }: GameProps) {
                   key={sq}
                   onClick={() => tap(sq)}
                   aria-label={`${sq} ${piece ? `${piece.color}${piece.type}` : "empty"}`}
-                  className={`relative grid aspect-square place-items-center text-3xl sm:text-4xl ${dark ? "bg-[#151a35]" : "bg-[#232a52]"} ${isSel ? "!bg-electric/40" : ""}`}
+                  className={`relative grid aspect-square place-items-center text-3xl sm:text-4xl ${dark ? "bg-[#151a35]" : "bg-[#232a52]"} ${isSel ? "!bg-info/40" : ""}`}
                 >
                   {piece && (
-                    <span className={piece.color === "w" ? "text-white drop-shadow-[0_2px_6px_rgba(0,0,0,.9)]" : "text-neon-purple drop-shadow-[0_0_10px_rgba(176,38,255,.6)]"}>
+                    <span className={piece.color === "w" ? "text-white " : "text-info-ink drop-"}>
                       {PIECE_GLYPH[piece.color === "w" ? piece.type.toUpperCase() : piece.type]}
                     </span>
                   )}
                   {target && (
-                    <span className={`absolute ${target === "•" ? "h-3 w-3 rounded-full bg-neon-green/80" : "inset-1.5 rounded-xl border-2 border-pink-accent/80"}`} />
+                    <span className={`absolute ${target === "•" ? "h-3 w-3 rounded-full bg-brand/80" : "inset-1.5 rounded-xl border-2 border-accent/80"}`} />
                   )}
                 </button>
               );
@@ -181,7 +181,7 @@ export default function ChessGame({ onEnd }: GameProps) {
       </div>
       <p className="mt-3 text-xs text-muted">Pawn ki promotion queen hoti hai. Tum white — neeche se upar chalo.</p>
       <div className="mt-4 flex justify-center gap-2">
-        <button className="chip cursor-pointer hover:text-ink" onClick={() => finish(false)} disabled={endedRef.current}>
+        <button className="chip-btn hover:text-fg" onClick={() => finish(false)} disabled={endedRef.current}>
           🏳️ Haar maan lo (result)
         </button>
       </div>

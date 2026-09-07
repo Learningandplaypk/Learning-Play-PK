@@ -90,17 +90,16 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
         <span className="chip">{zoneLabel}</span>
         <span className="chip">{idx + 1}/{ROUND}</span>
         <span className="chip">✅ {correct}</span>
-        {streak >= 2 && <span className="chip border-neon-orange/50 text-neon-orange">🔥 {streak}x streak!</span>}
+        {streak >= 2 && <span className="chip border-accent/50 text-accent-ink">🔥 {streak}x streak!</span>}
       </div>
       {/* timer bar */}
-      <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-white/10">
+      <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-surface-2">
         <div
-          className="h-full rounded-full transition-all duration-1000 ease-linear"
-          style={{ width: `${(left / seconds) * 100}%`, background: left <= 5 ? "#ff2e3f" : "linear-gradient(90deg,#39ff14,#2d7cff)" }}
+          className="h-full rounded-full transition-all duration-1000 ease-linear"style={{ width: `${(left / seconds) * 100}%`, background: left <= 5 ? "#D7263D" : "linear-gradient(90deg,#178A55,#2563EB)" }}
         />
       </div>
 
-      <div className={`glass p-6 sm:p-8 ${picked !== null ? "" : ""}`}>
+      <div className={`card p-6 sm:p-8 ${picked !== null ? "" : ""}`}>
         <p className="font-display text-lg font-bold leading-relaxed sm:text-xl">{q.q}</p>
         <div className="mt-5 grid gap-2.5">
           {q.opts.map((o, i) => {
@@ -110,16 +109,9 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
                 key={i}
                 onClick={() => choose(i)}
                 className={`flex items-center gap-3 rounded-xl border px-4 py-3.5 text-left text-[15px] font-semibold transition ${
-                  state === "idle"
-                    ? "glass glass-hover"
-                    : state === "right"
-                      ? "border-neon-green/70 bg-neon-green/15 shadow-[0_0_24px_-6px_rgba(57,255,20,.5)]"
-                      : state === "wrong"
-                        ? "shake border-pink-accent/70 bg-pink-accent/15"
-                        : "opacity-35"
-                }`}
+                  state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15 ": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
               >
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-white/10 font-display text-xs font-black">
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-surface-2 font-display text-xs font-black">
                   {["A", "B", "C", "D"][i]}
                 </span>
                 {o.text}
@@ -129,13 +121,13 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
         </div>
         {picked !== null && q.opts[picked] && (
           <div className="mt-4">
-            <p className={`font-display text-sm font-black ${q.opts[picked].correct ? "text-neon-green" : "text-pink-accent"}`}>
+            <p className={`font-display text-sm font-black ${q.opts[picked].correct ? "text-brand-ink" : "text-accent-ink"}`}>
               {q.opts[picked].correct ? "✅ Sahih jawab!" : `❌ Sahi jawab: ${q.opts.find((o) => o.correct)?.text}`}
             </p>
             {q.e && <p className="mt-1 text-sm text-muted">💡 {q.e}</p>}
           </div>
         )}
-        {left === 0 && picked === null && <p className="mt-4 text-sm text-pink-accent">⏰ Waqt khatam! Sahi jawab: {q.opts.find((o) => o.correct)?.text}</p>}
+        {left === 0 && picked === null && <p className="mt-4 text-sm text-accent-ink">⏰ Waqt khatam! Sahi jawab: {q.opts.find((o) => o.correct)?.text}</p>}
       </div>
     </div>
   );

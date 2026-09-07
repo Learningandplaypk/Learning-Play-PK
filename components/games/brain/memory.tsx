@@ -77,15 +77,14 @@ export default function MemoryGame({ onEnd }: GameProps) {
             <button
               key={i}
               onClick={() => flip(i)}
-              className="flip-scene aspect-square"
-              aria-label={`Card ${i + 1}${shown ? `: ${e}` : ""}`}
+              className="flip-scene aspect-square"aria-label={`Card ${i + 1}${shown ? `: ${e}` : ""}`}
             >
               <div className={`flip-inner ${shown ? "flipped" : ""}`}>
-                <div className="flip-face glass !rounded-2xl text-2xl">
-                  <span className="text-neon-purple/70">✦</span>
+                <div className="flip-face card !rounded-2xl text-2xl">
+                  <span className="text-info-ink/70">✦</span>
                 </div>
                 <div
-                  className={`flip-face flip-back !rounded-2xl text-4xl sm:text-5xl ${matched.includes(i) ? "bg-neon-green/15 border border-neon-green/40" : "glass"}`}
+                  className={`flip-face flip-back !rounded-2xl text-4xl sm:text-5xl ${matched.includes(i) ? "bg-brand/15 border border-brand/40" : "card"}`}
                   style={matched.includes(i) ? { borderRadius: "1rem" } : undefined}
                 >
                   {e}

@@ -1,15 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Flame, Home, Gamepad2, GraduationCap, Moon, Sun, Trophy, User, Zap } from "lucide-react";
 import { cn, fmt } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
-import { usePlayer, type LangKey } from "@/lib/store";
-import { levelFromXp, levelTitle } from "@/lib/gamification";
+import { usePlayer } from "@/lib/store";
+import { levelFromXp } from "@/lib/gamification";
+import { useTheme } from "@/lib/theme";
+import { LogoMark } from "./brand/ustad";
 
 const LINKS = [
-  { href: "/", key: "nav.home" },
   { href: "/learn", key: "nav.learn" },
   { href: "/brain", key: "nav.brain" },
   { href: "/quiz", key: "nav.quiz" },
@@ -17,139 +19,127 @@ const LINKS = [
   { href: "/leaderboard", key: "nav.leaderboard" },
 ];
 
-function Widget() {
-  const xp = usePlayer((s) => s.xp);
-  const coins = usePlayer((s) => s.coins);
-  const streak = usePlayer((s) => s.streak);
-  const lv = levelFromXp(xp);
-  return (
-    <Link href="/profile" className="glass glass-hover flex items-center gap-2.5 px-3 py-1.5" aria-label="Profile — XP, coins, streak">
-      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-electric to-neon-purple text-[11px] font-black text-white">
-        {lv.level}
-      </span>
-      <span className="hidden text-[11px] leading-tight sm:block">
-        <span className="block font-bold text-ink">{levelTitle(lv.level)}</span>
-        <span className="block text-muted">{fmt(xp)} XP</span>
-      </span>
-      <span className="hidden h-6 w-px bg-white/15 sm:block" />
-      <span className="text-sm" title="coins">🪙 {fmt(coins)}</span>
-      <span className="text-sm" title="streak">🔥 {streak}</span>
-    </Link>
-  );
+function isActive(pathname: string, href: string) {
+  return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 }
 
-function LangSwitch() {
-  const { lang, setLang } = useI18n();
-  const opts: Array<{ k: LangKey; label: string }> = [
-    { k: "en", label: "EN" },
-    { k: "roman", label: "UR" },
-    { k: "ur", label: "اردو" },
-  ];
-  return (
-    <div className="glass flex overflow-hidden rounded-full text-[11px] font-bold">
-      {opts.map((o) => (
-        <button
-          key={o.k}
-          onClick={() => setLang(o.k)}
-          className={cn("px-2.5 py-1.5 transition", lang === o.k ? "bg-white/15 text-ink" : "text-muted hover:text-ink")}
-          aria-pressed={lang === o.k}
-        >
-          {o.label}
-        </button>
-      ))}
-    </div>
-  );
-}
+/* ------------------------------ desktop bar ------------------------------ */
 
 export function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const { t } = useI18n();
-
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 24);
-    fn();
-    window.addEventListener("scroll", fn, { passive: true });
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
+  const { theme, toggle } = useTheme();
+  const xp = usePlayer((s) => s.xp);
+  const streak = usePlayer((s) => s.streak);
+  const level = levelFromXp(xp).level;
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-3 z-[100] flex justify-center px-3">
-      <nav
-        className={cn(
-          "pointer-events-auto flex w-full max-w-5xl items-center gap-2 rounded-full border border-white/10 px-3 py-2 backdrop-blur-xl transition-all duration-500",
-          scrolled ? "bg-bg-900/85 shadow-[0_10px_40px_-12px_rgba(45,124,255,.35)]" : "bg-bg-900/50"
-        )}
-        aria-label="Main navigation"
-      >
-        <Link href="/" className="flex items-center gap-2 font-display text-base font-black">
-          <span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-neon-green via-electric to-neon-purple text-sm shadow-[0_0_18px_-2px_rgba(57,255,20,.6)]">
-            🦉
+    <header className="sticky top-0 z-[100] border-b border-line bg-surface/95 backdrop-blur-md supports-[backdrop-filter]:bg-surface/80">
+      <div className="container-page page-pad flex h-14 items-center gap-3">
+        <Link href="/" className="-mx-1 flex min-h-11 min-w-11 shrink-0 items-center gap-2 px-1" aria-label="Learn & Play PK home">
+          <LogoMark className="h-8 w-8" />
+          <span className="hidden font-display text-base font-extrabold tracking-tight text-fg sm:block">
+            Learn<span className="text-brand-ink">&amp;</span>Play PK
           </span>
-          <span className="hidden text-gradient sm:block">Learn&Play PK</span>
         </Link>
 
-        <div className="mx-1 hidden flex-1 items-center gap-1 lg:flex">
+        <nav aria-label="Main navigation" className="ml-2 hidden items-center gap-1 md:flex">
           {LINKS.map((l) => {
-            const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+            const active = isActive(pathname, l.href);
             return (
               <Link
                 key={l.href}
                 href={l.href}
+                prefetch={false}
+                aria-current={active ? "page" : undefined}
                 className={cn(
-                  "relative rounded-full px-3.5 py-1.5 text-[13px] font-semibold transition",
-                  active ? "bg-white/12 text-ink shadow-[inset_0_0_0_1px_rgba(255,255,255,.14)]" : "text-muted hover:text-ink"
+                  "relative flex min-h-11 items-center rounded-lg px-3 text-sm font-semibold transition-colors",
+                  active ? "text-brand-ink" : "text-muted hover:bg-surface-2 hover:text-fg"
                 )}
               >
                 {t(l.key)}
                 {active && (
-                  <span className="absolute -bottom-0.5 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-neon-green shadow-[0_0_8px_rgba(57,255,20,.9)]" />
+                  <span className="absolute inset-x-3 -bottom-[7px] h-[3px] rounded-full bg-brand" aria-hidden />
                 )}
               </Link>
             );
           })}
-        </div>
+        </nav>
 
         <div className="ml-auto flex items-center gap-2">
-          <div className="hidden md:block">
-            <LangSwitch />
-          </div>
-          <Link href="/premium" className="btn btn-pink btn-sm hidden sm:inline-flex">
-            {t("nav.premium")}
+          <span className="hidden items-center gap-1.5 rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs font-bold text-accent-ink sm:flex">
+            <Zap size={14} strokeWidth={2.5} aria-hidden />
+            <span className="tnum">{fmt(xp)}</span>
+            <span className="sr-only">XP</span>
+          </span>
+          <span
+            className={cn(
+              "hidden items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-bold sm:flex",
+              streak > 0 ? "border-accent/40 bg-accent-tint text-accent-ink" : "border-line bg-surface-2 text-muted"
+            )}
+          >
+            <Flame size={14} strokeWidth={2.5} aria-hidden />
+            <span className="tnum">{streak}</span>
+            <span className="sr-only">day streak</span>
+          </span>
+
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className="grid h-11 w-11 place-items-center rounded-lg border border-line bg-surface text-muted transition-colors hover:bg-surface-2 hover:text-fg"
+          >
+            {theme === "dark" ? <Sun size={18} strokeWidth={2} /> : <Moon size={18} strokeWidth={2} />}
+          </button>
+
+          <Link
+            href="/profile"
+            aria-label={`Profile — level ${level}`}
+            className="grid h-11 w-11 place-items-center rounded-lg border border-line bg-brand-tint text-sm font-extrabold text-brand-ink transition-colors hover:bg-brand-tint/70"
+          >
+            <span className="tnum">{level}</span>
           </Link>
-          <Widget />
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
+
+/* ------------------------------ mobile tabs ------------------------------ */
 
 export function MobileTabs() {
   const pathname = usePathname();
   const { t } = useI18n();
   const tabs = [
-    { href: "/", label: t("nav.home"), icon: "🏠" },
-    { href: "/learn", label: t("nav.learn"), icon: "📚" },
-    { href: "/brain", label: t("nav.brain"), icon: "🧠" },
-    { href: "/quiz", label: t("nav.quiz"), icon: "❓" },
-    { href: "/fun", label: t("nav.fun"), icon: "🎮" },
-    { href: "/profile", label: t("nav.profile"), icon: "🦉" },
+    { href: "/", label: t("nav.home"), Icon: Home },
+    { href: "/learn", label: t("nav.learn"), Icon: GraduationCap },
+    { href: "/fun", label: t("nav.fun"), Icon: Gamepad2 },
+    { href: "/leaderboard", label: t("nav.leaderboard"), Icon: Trophy },
+    { href: "/profile", label: t("nav.profile"), Icon: User },
   ];
+
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-[100] border-t border-white/10 bg-bg-900/90 backdrop-blur-xl lg:hidden" aria-label="Mobile navigation">
-      <div className="mx-auto grid max-w-lg grid-cols-6">
-        {tabs.map((tab) => {
-          const active = tab.href === "/" ? pathname === "/" : pathname.startsWith(tab.href);
+    <nav
+      aria-label="Mobile navigation"
+      className="fixed inset-x-0 bottom-0 z-[100] border-t border-line bg-surface/95 backdrop-blur-md md:hidden supports-[backdrop-filter]:bg-surface/85"
+      style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+    >
+      <div className="grid h-14 grid-cols-5">
+        {tabs.map(({ href, label, Icon }) => {
+          const active = isActive(pathname, href);
           return (
             <Link
-              key={tab.href}
-              href={tab.href}
-              className={cn("flex flex-col items-center gap-0.5 py-2 text-[10px] font-semibold transition", active ? "text-neon-green" : "text-muted")}
+              key={href}
+              href={href}
+              prefetch={false}
+              aria-current={active ? "page" : undefined}
+              className={cn(
+                "flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition-colors",
+                active ? "text-brand-ink" : "text-muted"
+              )}
             >
-              <span className={cn("text-lg transition-transform", active && "scale-110 drop-shadow-[0_0_8px_rgba(57,255,20,.8)]")} aria-hidden>
-                {tab.icon}
-              </span>
-              {tab.label}
+              <Icon size={22} strokeWidth={active ? 2.5 : 2} aria-hidden />
+              <span className="leading-none">{label}</span>
             </Link>
           );
         })}

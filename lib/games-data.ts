@@ -27,7 +27,7 @@ export const LEARN_GAME_DATA: GameData[] = [
 ];
 
 export const BRAIN_GAME_DATA: GameData[] = [
-  { slug: "memory", zone: "brain", title: "Memory Match", desc: "3D flipping cards — pairs match karo.", emoji: "🧠", howTo: ["Card tap karke kholein", "Same pair dhundo", "Kam moves = zyada XP"] },
+  { slug: "memory", zone: "brain", title: "Memory Match", desc: "Flipping cards — pairs match karo.", emoji: "🧠", howTo: ["Card tap karke kholein", "Same pair dhundo", "Kam moves = zyada XP"] },
   { slug: "math-speed", zone: "brain", title: "Math Speed", desc: "60 second mein jitne hisaab kar sako.", emoji: "➗", howTo: ["Jawab type karo", "Har 5 sahi = level up", "Tez + sahi = zyada score"] },
   { slug: "reaction", zone: "brain", title: "Reaction Time", desc: "Green dekha aur tap kiya? Kitne fast ho?", emoji: "⚡", howTo: ["Tap karke shuru", "Green par foran tap", "5 rounds average"] },
   { slug: "stroop", zone: "brain", title: "Color Challenge", desc: "Stroop test — dimaagh ko dhoka mat do.", emoji: "🎨", howTo: ["INK ka rang dekho", "Word ke matlab se match?", "✓ / ✗ — 45 sec"] },
@@ -53,10 +53,10 @@ export const QUIZ_TOPIC_DATA: GameData[] = [
 ];
 
 export const FUN_GAME_DATA: GameData[] = [
-  { slug: "snake3d", zone: "fun", title: "Snake 3D", desc: "Neon 3D snake — phal khao, barha karo.", emoji: "🐍", howTo: ["Arrows / swipe", "Pink phal khao", "Takrana mana hai!"] },
-  { slug: "tetris", zone: "fun", title: "Tetris", desc: "Classic block puzzle — neon style.", emoji: "🧱", howTo: ["← → move, ↑ rotate", "↓ soft, Space hard drop", "Line bharo"] },
-  { slug: "flappy", zone: "fun", title: "Flappy Neon", desc: "Tap karo, pipes se guzro.", emoji: "🐤", howTo: ["Tap = uchhalo", "Pipes se guzro", "Har pipe = 1 point"] },
-  { slug: "tictactoe", zone: "fun", title: "Tic Tac Toe 3D", desc: "3D board par perfect AI ke khilaf.", emoji: "⭕", howTo: ["Tum X", "Tile tap karo", "3 line banao"] },
+  { slug: "snake3d", zone: "fun", title: "Snake", desc: "Classic snake — phal khao, lamba barhao.", emoji: "🐍", howTo: ["Arrows / swipe / d-pad", "Saffron phal khao", "Deewar ya khud se takrana mana hai"] },
+  { slug: "tetris", zone: "fun", title: "Tetris", desc: "Classic block puzzle — lines banao, screen saaf rakho.", emoji: "🧱", howTo: ["← → move, ↑ rotate", "↓ soft, Space hard drop", "Line bharo"] },
+  { slug: "flappy", zone: "fun", title: "Flappy Bird", desc: "Tap karo, pipes se guzro.", emoji: "🐤", howTo: ["Tap = uchhalo", "Pipes se guzro", "Har pipe = 1 point"] },
+  { slug: "tictactoe", zone: "fun", title: "Tic Tac Toe", desc: "Perfect AI ke khilaf 3 line banao.", emoji: "⭕", howTo: ["Tum X", "Cell tap karo", "3 line banao"] },
   { slug: "connect4", zone: "fun", title: "Connect 4", desc: "4 disc ek line mein lagao.", emoji: "🔴", howTo: ["Column tap karo", "4 ek line", "AI depth-4"] },
   { slug: "hangman", zone: "fun", title: "Hangman", desc: "Word guess karo — galti jaan le.", emoji: "🎯", howTo: ["Urdu hint dekho", "Letters guess", "6 galtiyan max"] },
   { slug: "wordsearch", zone: "fun", title: "Word Search", desc: "Chhupe huay words dhoondo.", emoji: "🔍", howTo: ["Words grid mein hain", "Drag karke select", "7 words dhundo"] },
@@ -65,10 +65,59 @@ export const FUN_GAME_DATA: GameData[] = [
   { slug: "bubble", zone: "fun", title: "Bubble Shooter", desc: "Aim karo, chalao, phoro.", emoji: "🫧", howTo: ["Tap = shoot", "3+ same rang phate", "Jhoolte = bonus"] },
   { slug: "fruitninja", zone: "fun", title: "Fruit Ninja", desc: "Swipe karke phal kaato!", emoji: "🍉", howTo: ["Swipe = blade", "Phal kato", "Bombs se bacho"] },
   { slug: "jumble", zone: "fun", title: "Word Jumble", desc: "Ulte-palte letters ka word.", emoji: "🔀", howTo: ["Letters dekho", "Word type karo", "Hint = Urdu"] },
-  { slug: "racing", zone: "fun", title: "Neon Racer", desc: "Endless 3D highway.", emoji: "🏎️", howTo: ["← → / swipe", "Blocks se bacho", "Door tak bhaago"] },
+  { slug: "racing", zone: "fun", title: "Racer", desc: "Endless highway — blocks se bacho.", emoji: "🏎️", howTo: ["← → / swipe", "Blocks se bacho", "Door tak bhaago"] },
   { slug: "crossword", zone: "fun", title: "Crossword", desc: "Urdu clues se crossword bharo.", emoji: "✒️", howTo: ["Clues parho", "Letters likho", "Check dabao"] },
   { slug: "g2048", zone: "fun", title: "2048", desc: "Tiles joro, 2048 tak pohancho.", emoji: "🔢", howTo: ["Swipe/arrows", "Merge karo", "2048 banao"] },
 ];
+
+export const GAME_DIFFICULTY: Record<string, 1 | 2 | 3> = {
+  "word-builder": 1,
+  "grammar-quest": 2,
+  "vocab-battle": 2,
+  "sentence-puzzle": 2,
+  "listening-challenge": 1,
+  "idiom-master": 3,
+  "story-builder": 2,
+  pronunciation: 2,
+  memory: 1,
+  "math-speed": 2,
+  reaction: 1,
+  stroop: 2,
+  sequence: 3,
+  g2048: 3,
+  sudoku: 3,
+  chess: 3,
+  pattern: 2,
+  logic: 3,
+  gk: 1,
+  pakistan: 2,
+  science: 2,
+  islamic: 2,
+  history: 2,
+  geography: 2,
+  sports: 2,
+  tech: 2,
+  movies: 2,
+  millionaire: 3,
+  snake3d: 2,
+  tetris: 3,
+  flappy: 2,
+  tictactoe: 1,
+  connect4: 3,
+  hangman: 2,
+  wordsearch: 2,
+  minesweeper: 3,
+  typing: 1,
+  bubble: 2,
+  fruitninja: 2,
+  jumble: 2,
+  racing: 2,
+  crossword: 3,
+};
+
+export function gameDifficulty(slug: string): 1 | 2 | 3 {
+  return GAME_DIFFICULTY[slug] ?? 2;
+}
 
 export const ALL_GAME_DATA: GameData[] = [...LEARN_GAME_DATA, ...BRAIN_GAME_DATA, ...QUIZ_TOPIC_DATA, ...FUN_GAME_DATA];
 

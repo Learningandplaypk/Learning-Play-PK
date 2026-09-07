@@ -138,7 +138,7 @@ export default function Crossword({ onEnd }: GameProps) {
 
   return (
     <div className="mx-auto max-w-lg">
-      <div className="glass p-3">
+      <div className="card p-3">
         <div className="grid gap-0.5" style={{ gridTemplateColumns: `repeat(${SIZE}, 1fr)` }}>
           {cells.flat().map((cell, i) => {
             if (!cell) return <div key={i} className="aspect-square rounded-[3px] bg-transparent" />;
@@ -147,14 +147,13 @@ export default function Crossword({ onEnd }: GameProps) {
             const isRight = checked && entries[key]?.toLowerCase() === cell.ch.toLowerCase();
             return (
               <div key={i} className="relative">
-                {cell.num && <span className="pointer-events-none absolute left-0.5 top-0 z-10 text-[8px] font-bold text-electric">{cell.num}</span>}
+                {cell.num && <span className="pointer-events-none absolute left-0.5 top-0 z-10 text-[8px] font-bold text-info-ink">{cell.num}</span>}
                 <input
                   maxLength={1}
                   value={entries[key] ?? ""}
                   onChange={(e) => setEntries((en) => ({ ...en, [key]: e.target.value.toUpperCase().slice(-1) }))}
-                  className={`aspect-square w-full rounded-[3px] border border-white/10 bg-white/[0.06] text-center font-display text-sm font-black uppercase text-ink outline-none focus:border-neon-green/70 ${
-                    isWrong ? "!bg-pink-accent/25 text-pink-accent" : isRight ? "!bg-neon-green/20 text-neon-green" : ""
-                  }`}
+                  className={`aspect-square w-full rounded-[3px] border border-line bg-surface-2 text-center font-display text-sm font-black uppercase text-fg outline-none focus:border-brand/70 ${
+                    isWrong ? "!bg-accent/25 text-accent-ink" : isRight ? "!bg-brand/20 text-brand-ink" : ""}`}
                   aria-label={`Cell ${key}`}
                 />
               </div>
@@ -162,10 +161,10 @@ export default function Crossword({ onEnd }: GameProps) {
           })}
         </div>
       </div>
-      <div className="glass mt-4 space-y-2 p-4 text-sm">
+      <div className="card mt-4 space-y-2 p-4 text-sm">
         {placements.map((p, i) => (
           <div key={i}>
-            <span className="font-black text-electric">{cells[p.row][p.col]!.num}</span>
+            <span className="font-black text-info-ink">{cells[p.row][p.col]!.num}</span>
             <span className="text-muted"> ({p.horiz ? "→" : "↓"}) </span>
             {p.clue}
           </div>
@@ -173,7 +172,7 @@ export default function Crossword({ onEnd }: GameProps) {
       </div>
       <div className="mt-4 flex items-center justify-between">
         <span className="text-xs text-muted">Bhari hui: {filled}/{totalCells}</span>
-        <button className="btn btn-neon btn-sm" onClick={check} disabled={filled === 0}>
+        <button className="btn btn-primary btn-sm" onClick={check} disabled={filled === 0}>
           ✔ Check karo
         </button>
       </div>

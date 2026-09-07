@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-// Self-hosted variable fonts (Fontsource) — build works fully offline, zero CLS
-import "@fontsource-variable/space-grotesk";
+// Self-hosted variable fonts (Fontsource) — build works fully offline, zero CLS, no CDN
+import "@fontsource-variable/nunito";
 import "@fontsource-variable/inter";
-import "@fontsource-variable/noto-nastaliq-urdu";
 import { Providers } from "@/components/providers";
 import { Navbar, MobileTabs } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { VercelAnalytics } from "@/components/vercel-analytics";
 import { getSiteUrl, siteUrlObj } from "@/lib/env";
+import { themeBootstrapScript } from "@/lib/theme";
 import "./globals.css";
 
 const SITE_URL = getSiteUrl();
@@ -16,14 +16,16 @@ const SITE_URL = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: siteUrlObj(),
   title: {
-    default: "Learn & Play PK — Seekho + Khelo | 3D Language Learning & Games",
+    default: "Learn & Play PK — Seekho + Khelo | Free Learning Games & Quizzes",
     template: "%s | Learn & Play PK",
   },
   description:
-    "Pakistan's first fully 3D gamified learning platform. English, Arabic, Korean aur 7 languages — 40+ games se seekho. XP, streaks, badges, leaderboards. 100% Free.",
-  keywords: ["learn english pakistan", "language learning games", "3d games", "seekho khelo", "english urdu", "quiz games pakistan"],
+    "Pakistan's gamified learning platform — English, Arabic, Korean and 5 more languages with Urdu meanings. 43 games, quizzes, brain training. XP, streaks, badges. 100% Free.",
+  keywords: ["learn english pakistan", "language learning games", "urdu meaning", "quiz games pakistan", "seekho khelo"],
   authors: [{ name: "Learn & Play PK" }],
   manifest: "/manifest.webmanifest",
+  applicationName: "Learn & Play PK",
+  appleWebApp: { capable: true, statusBarStyle: "default", title: "Learn&Play PK" },
   icons: {
     icon: [
       { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
@@ -36,21 +38,45 @@ export const metadata: Metadata = {
     locale: "en_PK",
     url: SITE_URL,
     siteName: "Learn & Play PK",
-    title: "Learn & Play PK — Seekho + Khelo, Sab 3D, Sab Free",
-    description: "English, Arabic, Korean & more — learn by playing 40+ 3D games. XP, streaks, badges, leaderboards.",
-    images: [{ url: "/api/og?title=Seekho%20%2B%20Khelo%20%E2%80%94%20Sab%203D%2C%20Sab%20FREE", width: 1200, height: 630, alt: "Learn & Play PK" }],
+    title: "Learn & Play PK — Khelo. Seekho. Jeeto.",
+    description:
+      "English, Arabic, Korean & more — learn by playing 43 games, with Urdu meanings. XP, streaks, badges, leaderboards.",
+    images: [{ url: "/api/og?title=Khelo.%20Seekho.%20Jeeto.", width: 1200, height: 630, alt: "Learn & Play PK" }],
   },
-  twitter: { card: "summary_large_image", title: "Learn & Play PK", description: "Seekho + Khelo — sab 3D, sab free." },
+  twitter: { card: "summary_large_image", title: "Learn & Play PK", description: "Khelo. Seekho. Jeeto. — sab free." },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05060F",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAFAF7" },
+    { media: "(prefers-color-scheme: dark)", color: "#15171B" },
+  ],
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
   viewportFit: "cover",
 };
+
+/**
+ * Urdu webfont bootstrap. Runs before hydration (inline, 0 KB of JS chunk):
+ * the stylesheet is requested immediately at low priority, but the browser only
+ * downloads the woff2 once `media` flips to "all" — which we do on the first
+ * sign of engagement (scroll / tap / key) or 1.5s after load, whichever is
+ * first. Nastaliq then swaps in over the system Nastaliq/serif fallback.
+ */
+const URDU_FONT_BOOTSTRAP = `(function(){
+  var done=false;
+  function flip(){
+    if(done) return; done=true;
+    var l=document.querySelector('link[data-urdu-font]');
+    if(l) l.media='all';
+    ['scroll','touchstart','pointerdown','keydown'].forEach(function(e){removeEventListener(e,flip,{capture:true});});
+  }
+  addEventListener('load',function(){
+    ['scroll','touchstart','pointerdown','keydown'].forEach(function(e){addEventListener(e,flip,{capture:true,once:true,passive:true});});
+    setTimeout(flip,1500);
+  });
+})();`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -58,21 +84,32 @@ const jsonLd = {
   name: "Learn & Play PK",
   url: SITE_URL,
   inLanguage: ["en", "ur"],
-  description: "Pakistan's first fully 3D gamified language-learning and games platform",
+  description: "Pakistan's gamified language-learning and games platform",
   publisher: { "@type": "Organization", name: "Learn & Play PK", url: SITE_URL },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head>
+        {/* Urdu face is ~260KB — bigger than everything else on the page put
+            together. It is fetched with a non-render-blocking `media="print"`
+            link and only switched on once the page is idle or the user engages,
+            so Urdu never competes with first paint for bandwidth. */}
+        <link rel="stylesheet" href="/fonts/urdu.css" media="print" data-urdu-font />
+        <script dangerouslySetInnerHTML={{ __html: URDU_FONT_BOOTSTRAP }} />
+      </head>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[500] focus:rounded-lg focus:bg-neon-green focus:px-4 focus:py-2 focus:text-black">
+        <a href="#main" className="sr-only sr-only-focusable">
           Skip to content
         </a>
         <Providers>
           <Navbar />
-          <main id="main">{children}</main>
+          <main id="main" className="min-h-[100dvh]">
+            {children}
+          </main>
           <Footer />
           <MobileTabs />
         </Providers>

@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     from: envStrOr("EMAIL_FROM", "Learn & Play PK <salam@learnplaypk.com>"),
     to: parsed.data.email,
     subject: "Khush Aamdeed — Learn & Play PK! 🎮",
-    text: `Salam ${parsed.data.name ?? ""}!\n\nLearn & Play PK par khush aamdeed — Pakistan ka pehla 3D learning arcade.\n\nShuru kaise karein:\n1. Learn Zone se English lessons parho\n2. Brain aur Fun zones ke games khelo\n3. Roz aao — streak jalao, badges kamao\n\nChalo shuru karein! 🚀\n— Learn & Play PK team`,
+    text: `Salam ${parsed.data.name ?? ""}!\n\nLearn & Play PK par khush aamdeed — Pakistan ka gamified learning arcade.\n\nShuru kaise karein:\n1. Learn Zone se English lessons parho\n2. Brain aur Fun zones ke games khelo\n3. Roz aao — streak jalao, badges kamao\n\nChalo shuru karein! 🚀\n— Learn & Play PK team`,
   });
   return NextResponse.json({ sent: true });
 }

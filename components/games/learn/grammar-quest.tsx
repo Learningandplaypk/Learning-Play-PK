@@ -75,23 +75,23 @@ export default function GrammarQuest({ onEnd }: GameProps) {
   return (
     <div className="mx-auto max-w-xl">
       {/* battle scene */}
-      <div className="glass relative overflow-hidden p-5">
+      <div className="card relative overflow-hidden p-5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,46,151,.12),transparent_65%)]" />
         <div className="relative flex items-end justify-between">
           <div className="text-center">
-            <div className="text-5xl drop-shadow-[0_0_20px_rgba(57,255,20,.6)]">🦸</div>
+            <div className="text-5xl drop-">🦸</div>
             <div className="mt-1 flex gap-0.5">
               {Array.from({ length: PLAYER_HP }).map((_, i) => (
                 <span key={i} className={`text-sm ${i < playerHp ? "" : "opacity-20 grayscale"}`}>❤️</span>
               ))}
             </div>
           </div>
-          <div className="pb-2 font-display text-lg font-black text-pink-accent">⚡ VS ⚡</div>
+          <div className="pb-2 font-display text-lg font-black text-accent-ink">⚡ VS ⚡</div>
           <div className="text-center">
-            <div className={`text-5xl drop-shadow-[0_0_20px_rgba(255,46,151,.7)] ${picked !== null && q.opts[picked].correct ? "animate-pulse opacity-60" : ""}`}>👾</div>
+            <div className={`text-5xl drop- ${picked !== null && q.opts[picked].correct ? "animate-pulse opacity-60" : ""}`}>👾</div>
             <div className="mt-1 flex justify-center gap-1">
               {Array.from({ length: ENEMY_HP }).map((_, i) => (
-                <span key={i} className={`h-2.5 w-6 rounded-full ${i < enemyHp ? "bg-pink-accent shadow-[0_0_8px_rgba(255,46,151,.8)]" : "bg-white/15"}`} />
+                <span key={i} className={`h-2.5 w-6 rounded-full ${i < enemyHp ? "bg-accent " : "bg-surface-2"}`} />
               ))}
             </div>
           </div>
@@ -99,12 +99,12 @@ export default function GrammarQuest({ onEnd }: GameProps) {
         <div className="relative mt-3 flex justify-center gap-2 text-[11px]">
           <span className="chip">{idx + 1}/{TOTAL}</span>
           <span className="chip">⚔️ {slain} monsters slain</span>
-          {streak >= 2 && <span className="chip border-neon-orange/50 text-neon-orange">🔥 {streak}x — double damage!</span>}
+          {streak >= 2 && <span className="chip border-accent/50 text-accent-ink">🔥 {streak}x — double damage!</span>}
         </div>
       </div>
 
       {/* question */}
-      <div className="glass mt-4 p-6">
+      <div className="card mt-4 p-6">
         <p className="font-display text-lg font-bold leading-relaxed">{q.q}</p>
         <div className="mt-4 grid gap-2.5">
           {q.opts.map((o, i) => {
@@ -114,22 +114,15 @@ export default function GrammarQuest({ onEnd }: GameProps) {
                 key={i}
                 onClick={() => choose(i)}
                 className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-[15px] font-semibold transition ${
-                  state === "idle"
-                    ? "glass glass-hover"
-                    : state === "right"
-                      ? "border-neon-green/70 bg-neon-green/15"
-                      : state === "wrong"
-                        ? "shake border-pink-accent/70 bg-pink-accent/15"
-                        : "opacity-35"
-                }`}
+                  state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
               >
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-white/10 font-display text-xs font-black">{["A", "B", "C", "D"][i]}</span>
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-surface-2 font-display text-xs font-black">{["A", "B", "C", "D"][i]}</span>
                 {o.text}
               </button>
             );
           })}
         </div>
-        {picked !== null && <p className="mt-3 text-sm text-neon-green">💡 {q.why}</p>}
+        {picked !== null && <p className="mt-3 text-sm text-brand-ink">💡 {q.why}</p>}
       </div>
     </div>
   );
