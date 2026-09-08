@@ -313,8 +313,8 @@ export function StyleGuide() {
           </Card>
           <Card className="p-5">
             <div className="relative">
-              <Search size={18} strokeWidth={2.2} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted" />
-              <Input placeholder="Games dhoondo…" className="pl-10" aria-label="Search games" />
+              <Search size={18} strokeWidth={2.2} className="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 text-muted" />
+              <Input placeholder="Games dhoondo…" className="ps-10" aria-label="Search games" />
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {["Sab", "Learn", "Brain", "Quiz", "Fun", "Naye", "Mashhoor"].map((f, i) => (

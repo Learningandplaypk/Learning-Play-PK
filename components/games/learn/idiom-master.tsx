@@ -55,7 +55,7 @@ export default function IdiomMaster({ onEnd }: GameProps) {
               <button
                 key={i}
                 onClick={() => choose(i)}
-                className={`rounded-xl border px-4 py-3 text-left text-[15px] font-semibold transition ${
+                className={`rounded-xl border px-4 py-3 text-start text-[15px] font-semibold transition ${
                   state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
               >
                 {o}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePlayer } from "./store";
+import { computeRichUI } from "./rich-ui";
 
 export type PerfTier = "low" | "high";
 
@@ -77,6 +78,40 @@ export function usePerfTier(): { tier: PerfTier; probed: boolean } {
   }, [lite]);
 
   return { tier: lite || staticLow ? "low" : "high", probed };
+}
+
+/**
+ * Live richUI flag. False on the server and until we can read matchMedia,
+ * so SSR/mobile-first HTML never ships the 3D/GSAP path.
+ */
+export function useRichUI(): boolean {
+  const lite = usePlayer((s) => s.lowQuality);
+  const [rich, setRich] = useState(false);
+
+  useEffect(() => {
+    const mqReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const nav = navigator as Nav;
+    const mem = typeof nav.deviceMemory === "number" ? nav.deviceMemory : undefined;
+    const apply = () => {
+      setRich(
+        computeRichUI({
+          width: window.innerWidth,
+          reducedMotion: mqReduce.matches,
+          lite,
+          deviceMemory: mem,
+        })
+      );
+    };
+    apply();
+    mqReduce.addEventListener("change", apply);
+    window.addEventListener("resize", apply);
+    return () => {
+      mqReduce.removeEventListener("change", apply);
+      window.removeEventListener("resize", apply);
+    };
+  }, [lite]);
+
+  return rich;
 }
 
 /** Mount heavy/optional things only after LCP so first load stays ≤200KB gz. */

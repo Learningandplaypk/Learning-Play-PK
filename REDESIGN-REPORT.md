@@ -183,3 +183,96 @@ shots/after/{home,learn,fun,profile,premium,leaderboard,login}-{light,dark}-{390
    stops being the LCP element. Confirm ads still initialise only after consent.
 5. **Firestore rules** were **not** changed and no new `users/{uid}` fields were added, so nothing needs
    re-publishing.
+
+---
+
+## 9. Polish v2 — depth & motion back (desktop rich / mobile lite)
+
+**Branch:** `arena/01a0815b-learning-play-pk`  
+**Tokens unchanged:** Pakistan Green `#178A55`, saffron `#F5A524`, Nunito/Inter/Noto Nastaliq, radius 12/16/pill, chunky buttons, Ustad mascot. No neon, no black, no text-gradients, no glass, no particles-everywhere, no custom cursor.
+
+### Scroll-bug root cause
+
+`html, body { overflow-x: hidden }` (plus `overscroll-behavior-y: none` and `touch-action: manipulation` on `body`).
+
+Setting `overflow-x: hidden` on **both** html and body computes `overflow-y` to `auto` on both, so you get two nested scroll containers. The document could not move down — `window.scrollTo(0, 99999)` stayed at `scrollY = 0`.
+
+**Fix (layout-level, not per-page):**
+
+- `html { overflow-x: clip; overflow-y: auto; height: auto }`
+- `body { overflow-x: clip; overflow-y: visible }` — no `touch-action` on body
+- Nested-safe `lib/scroll-lock.ts` (counter + `.scroll-locked` class) instead of writing `body.style.overflow = hidden` which leaked when two overlays overlapped
+- Permanent check in `scripts/browser-qa.mjs`: if `scrollHeight > clientHeight`, `scrollTo` must move; sheet lock must release on Escape; `--lang=ur` asserts `dir=rtl`
+
+### Proof (production `next start`, headless Chromium)
+
+| Route | 1280×900 | 390×844 |
+| --- | --- | --- |
+| `/` | sh=2448 ch=900 **y=1548** | sh=5433 ch=844 **y=4589** |
+| `/learn` | sh=1525 **y=625** | sh=3034 **y=2190** |
+| `/fun` | sh=1990 **y=1090** | sh=3838 **y=2994** |
+| `/profile` | sh=1780 **y=880** | sh=3837 **y=2993** |
+
+29 routes × 390 light and 1280 light: **all CLEAN**, all scrollable, 0 console errors. `--lang=ur` → `dir=rtl lang=ur`. Interaction QA (sheet, tabs, toast, quiz, snake, theme): **6/6**. 360×640 and 768×1024 dark also clean.
+
+### Urdu
+
+- `.gitignore` is now `public/fonts/*.woff2` (not the whole directory)
+- `lib/urdu-font.ts` injects deferred inline `@font-face` — **no `/fonts/urdu.css` request** (that 404'd on every page)
+- `lib/i18n.tsx` sets `dir="rtl" lang="ur"` on `<html>` for Urdu and restores `ltr`/`en`
+- Directional chrome utilities converted to logical (`text-start`, `ms`/`ps`/`pe`, `start-`/`end-`)
+
+### What came back (gated by `richUI`)
+
+`richUI = width ≥ 1024 AND not prefers-reduced-motion AND not Lite mode AND deviceMemory ≥ 4 (if known)`.
+
+| Item | Desktop rich | Mobile / lite |
+| --- | --- | --- |
+| 1.1 Hero | R3F globe + green atmosphere + floating A/ب/한/あ/中 + book + controller, idle rotation, mouse parallax, dpr clamp 1.5, lazy after LCP inside SceneBoundary | Designed static SVG of the same scene (`HeroStill`) |
+| 1.2 Scroll | GSAP ScrollTrigger **only on home**, step highlight on “Kaise kaam karta hai”, parallax, progress fills; Reveal = 24px / 400ms fade+rise | Single fade-in per section |
+| 1.3 Navbar | Guest → coins + Login/Guest; logged-in → level ring, name, Lvl · title, XP bar, streak, coins; dropdown: weekly XP, badges, Profile / Leaderboard / Settings / Logout | Compact avatar + streak chip; full widget on Profile |
+| 1.4 Cards | Hover/focus lift −4px + shadow-lg, art scale 1.03, Play pre-highlight | Same layout, no hover lift (coarse pointer) |
+| 1.5 Feedback | Tick pop, shake, combo pulse, star fill stagger, lazy confetti (brand colours, one burst), coins fly to `#nav-coins`, level-up mascot, chest-open, badge toast shine | Same, reduced-motion skips travel |
+| 1.6 Path | Pulse ring + Ustad on current node, crown pop on done | Same, CSS-only |
+| 1.7 Routes | Framer Motion 120ms fade + 8px rise (`app/template.tsx`) | Same; reduced-motion → no travel |
+| 1.8 Sound | Procedural SFX kept, **default off**, remembered; brand-tone `tick` | — |
+
+Dark theme: surfaces lift with a **light rim + shadow**, no brand-green glow.
+
+### Perf (do not lose what we gained)
+
+| | Before polish (Playful Pro) | After polish v2 |
+| --- | --- | --- |
+| First-load JS `/` | 132 kB | **133 kB** (budget ≤ 170) |
+| Shared JS | 103 kB | **103 kB** |
+| `/learn` | 122 kB | 122 kB |
+| `/fun` | 127 kB | 127 kB |
+| `/profile` | 126 kB | 128 kB |
+| Routes in build | 125+ | **126** static pages generated |
+
+Framer Motion is tree-shaken into the template; **GSAP is a dynamic import on home only**; **confetti is dynamic**; R3F still only on the home hero chunk. CLS kept to transform/opacity. `prefers-reduced-motion` still kills choreography; content still appears.
+
+Lighthouse was not re-run in this sandbox (no LH binary). Previous mobile was 94/100/100/100 on `/`. Payload is essentially unchanged (132 → 133 kB), so those scores should hold. Please re-run on the Vercel preview.
+
+### Tests / gates
+
+| Gate | Result |
+| --- | --- |
+| `npx tsc --noEmit` | 0 errors |
+| `npm test` | **62 passed** / 6 files (was 51 / 5) |
+| `npm run build` | 126 pages, exit 0 |
+| `scripts/browser-qa.mjs` | 29 routes × 390 & 1280 light — all clean + scroll |
+| `scripts/interaction-qa.mjs` | 6/6 |
+| New unit tests | Urdu font (no urdu.css), RTL mapping, `computeRichUI`, scroll CSS |
+
+### Manual checks for you (sandbox cannot)
+
+1. **Firebase auth** — Google popup (desktop) / redirect (mobile), email, phone OTP, logout. Watch `[auth]` in the console.
+2. **Logged-in navbar widget** — sign in on desktop ≥1024px and confirm level ring + dropdown (weekly XP, badges, logout). Guest widget is what the screenshots show.
+3. **3D hero** — desktop, Lite mode OFF, not reduced-motion, ≥4 GB RAM. First paint is the static globe; 3D mounts after LCP.
+4. **Game-over** — play a quiz, confirm XP count-up, stars filling one-by-one, one confetti burst, coins flying to the navbar.
+5. **Urdu** — Profile → اردو. Whole chrome should flip RTL and Nastaliq should swap in (no `/fonts/urdu.css` 404).
+6. **Lite mode** — Settings → Lite ON should freeze the static hero even on a powerful desktop.
+7. **Sound** — new guests start with sound **off**; the footer/profile toggle still persists.
+8. **Lighthouse** on the Vercel preview (mobile ≥90, desktop ≥85 with 3D).
+9. Firestore rules were **not** changed. No new user fields.

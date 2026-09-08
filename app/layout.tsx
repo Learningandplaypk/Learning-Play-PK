@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 import { VercelAnalytics } from "@/components/vercel-analytics";
 import { getSiteUrl, siteUrlObj } from "@/lib/env";
 import { themeBootstrapScript } from "@/lib/theme";
+import { URDU_FONT_BOOTSTRAP } from "@/lib/urdu-font";
 import "./globals.css";
 
 const SITE_URL = getSiteUrl();
@@ -57,27 +58,6 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-/**
- * Urdu webfont bootstrap. Runs before hydration (inline, 0 KB of JS chunk):
- * the stylesheet is requested immediately at low priority, but the browser only
- * downloads the woff2 once `media` flips to "all" — which we do on the first
- * sign of engagement (scroll / tap / key) or 1.5s after load, whichever is
- * first. Nastaliq then swaps in over the system Nastaliq/serif fallback.
- */
-const URDU_FONT_BOOTSTRAP = `(function(){
-  var done=false;
-  function flip(){
-    if(done) return; done=true;
-    var l=document.querySelector('link[data-urdu-font]');
-    if(l) l.media='all';
-    ['scroll','touchstart','pointerdown','keydown'].forEach(function(e){removeEventListener(e,flip,{capture:true});});
-  }
-  addEventListener('load',function(){
-    ['scroll','touchstart','pointerdown','keydown'].forEach(function(e){addEventListener(e,flip,{capture:true,once:true,passive:true});});
-    setTimeout(flip,1500);
-  });
-})();`;
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -90,13 +70,10 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en" dir="ltr" data-theme="light" suppressHydrationWarning>
       <head>
-        {/* Urdu face is ~260KB — bigger than everything else on the page put
-            together. It is fetched with a non-render-blocking `media="print"`
-            link and only switched on once the page is idle or the user engages,
-            so Urdu never competes with first paint for bandwidth. */}
-        <link rel="stylesheet" href="/fonts/urdu.css" media="print" data-urdu-font />
+        {/* Urdu face is ~260KB. Injected as deferred inline @font-face
+            from lib/urdu-font.ts so we never 404 a missing stylesheet. */}
         <script dangerouslySetInnerHTML={{ __html: URDU_FONT_BOOTSTRAP }} />
       </head>
       <body>

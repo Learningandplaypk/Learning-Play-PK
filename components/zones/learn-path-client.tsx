@@ -74,7 +74,7 @@ export function LearnPathClient({ lang }: { lang: string }) {
 
       {/* path */}
       <ol className="relative mx-auto max-w-md">
-        <span className="absolute left-[31px] top-6 bottom-6 w-0.5 bg-[var(--border)] sm:left-[39px]" aria-hidden />
+        <span className="absolute start-[31px] top-6 bottom-6 w-0.5 bg-[var(--border)] sm:start-[39px]" aria-hidden />
         {games.map((g, i) => {
           const state = states[i];
           const count = plays.get(g.slug) ?? 0;
@@ -84,7 +84,7 @@ export function LearnPathClient({ lang }: { lang: string }) {
                 type="button"
                 onClick={() => setOpen(i)}
                 aria-label={`${g.title} — ${state}`}
-                className="flex w-full items-center gap-4 text-left"
+                className="flex w-full items-center gap-4 text-start"
               >
                 <span
                   className="relative grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 transition-transform active:scale-95 sm:h-20 sm:w-20"
@@ -101,15 +101,26 @@ export function LearnPathClient({ lang }: { lang: string }) {
                     boxShadow: state === "available" ? "0 4px 0 0 var(--brand-edge)" : "none",
                   }}
                 >
+                  {state === "available" && <span className="pulse-ring" />}
                   {state === "done" ? (
-                    <Check size={26} strokeWidth={3} />
+                    <Check size={26} strokeWidth={3} className="pop-in" />
                   ) : state === "available" ? (
                     <Play size={24} strokeWidth={2.6} />
                   ) : (
                     <Lock size={20} strokeWidth={2.4} />
                   )}
+                  {state === "done" && (
+                    <span className="absolute -top-2 start-1/2 -translate-x-1/2 text-sm pop-in" aria-hidden>
+                      👑
+                    </span>
+                  )}
+                  {state === "available" && (
+                    <span className="absolute -end-10 top-1/2 hidden w-10 -translate-y-1/2 sm:block" aria-hidden>
+                      <Ustad mood="happy" className="h-10 w-10" />
+                    </span>
+                  )}
                   {count > 1 && (
-                    <span className="absolute -right-1 -top-1 grid h-6 w-6 place-items-center rounded-full border-2 border-surface bg-accent text-[11px] font-extrabold text-[#4a2f00] tnum">
+                    <span className="absolute -end-1 -top-1 grid h-6 w-6 place-items-center rounded-full border-2 border-surface bg-accent text-[11px] font-extrabold text-[#4a2f00] tnum">
                       {Math.min(9, count)}
                     </span>
                   )}

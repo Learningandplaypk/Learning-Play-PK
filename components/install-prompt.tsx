@@ -76,7 +76,7 @@ export function InstallPrompt() {
 
   return (
     <div
-      className="anim-dialog fixed inset-x-3 z-[280] mx-auto max-w-sm lg:inset-x-auto lg:right-4 lg:mx-0"
+      className="anim-dialog fixed inset-x-3 z-[280] mx-auto max-w-sm lg:inset-x-auto lg:end-4 lg:mx-0"
         style={{ bottom: "calc(5.5rem + env(safe-area-inset-bottom, 0px))" }}
         role="dialog"
         aria-label="Install Learn & Play PK"

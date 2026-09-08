@@ -26,6 +26,8 @@
     "clsx": "^2.1.1",
     "firebase": "^11.3.0",
     "firebase-admin": "^13.1.0",
+    "framer-motion": "^13.2.0",
+    "gsap": "^3.13.0",
     "lucide-react": "^1.42.0",
     "next": "^15.3.0",
     "puppeteer": "^25.10.0",

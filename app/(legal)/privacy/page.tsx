@@ -7,13 +7,13 @@ export const metadata: Metadata = {
 };
 
 const SECTIONS: Array<[string, React.ReactNode]> = [
-  ["Ham kaun data rakhte hain", <ul key="1" className="list-disc space-y-1.5 pl-5">
+  ["Ham kaun data rakhte hain", <ul key="1" className="list-disc space-y-1.5 ps-5">
     <li><b>Guest:</b> progress sirf aapke browser (localStorage) mein — humare servers tak nahi jata.</li>
     <li><b>Login par:</b> naam, email, XP/level, badges, scores — progress sync ke liye.</li>
     <li><b>Phone OTP:</b> Firebase Secure ko number diya jata hai; hum number store nahi karte.</li>
     <li><b>Audio:</b> pronunciation practice mic sirf aapke device par process hota hai — recording save nahi hoti.</li>
   </ul>],
-  ["Ads aur analytics", <ul key="2" className="list-disc space-y-1.5 pl-5">
+  ["Ads aur analytics", <ul key="2" className="list-disc space-y-1.5 ps-5">
     <li>Google AdSense (guest users ke liye) — personalized ads ke liye consent poochte hain; decline karo toh non-personalized ads.</li>
     <li>Vercel Analytics — anonymous page views, koi personal profile nahi.</li>
   </ul>],

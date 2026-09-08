@@ -10,7 +10,7 @@ export function ToastHost() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-x-3 z-[300] flex flex-col items-center gap-2 sm:inset-x-auto sm:left-4 sm:items-start"
+      className="pointer-events-none fixed inset-x-3 z-[300] flex flex-col items-center gap-2 sm:inset-x-auto sm:start-4 sm:items-start"
       style={{ bottom: "calc(4.75rem + env(safe-area-inset-bottom, 0px))" }}
       role="status"
       aria-live="polite"
@@ -18,7 +18,7 @@ export function ToastHost() {
       {toasts.map((t) => (
         <div
           key={t.id}
-          className="card-md anim-toast pointer-events-auto flex w-full max-w-sm items-start gap-3 p-3"
+          className="card-md anim-toast shine-sweep pointer-events-auto flex w-full max-w-sm items-start gap-3 p-3"
         >
             <span className="text-xl leading-none" aria-hidden>
               {t.emoji}

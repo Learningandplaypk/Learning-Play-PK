@@ -135,7 +135,7 @@ const initialPlayer: PlayerState = {
   flags: {},
   premium: false,
   premiumExpiry: null,
-  sound: true,
+  sound: false,
   lang: "roman",
   lowQuality: false,
   consentAds: null,

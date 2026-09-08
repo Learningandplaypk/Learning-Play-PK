@@ -44,8 +44,8 @@ export function GameCard({ game, basePath, best }: { game: GameData; basePath: s
   const { t } = useI18n();
   const difficulty = gameDifficulty(game.slug);
   return (
-    <Card className="flex h-full flex-col p-4">
-      <span className="mb-3 grid h-12 w-12 place-items-center rounded-xl bg-brand-tint">
+    <Card className="card-interactive flex h-full flex-col p-4">
+      <span className="card-art mb-3 grid h-12 w-12 place-items-center rounded-xl bg-brand-tint">
         <ZoneArt zone={game.zone} className="h-7 w-7" />
       </span>
       <h2 className="font-display text-base font-extrabold leading-tight text-fg">{game.title}</h2>
@@ -61,7 +61,7 @@ export function GameCard({ game, basePath, best }: { game: GameData; basePath: s
           </span>
         ) : null}
       </div>
-      <Link href={`${basePath}/${game.slug}`} className="btn btn-primary btn-sm mt-4 w-full">
+      <Link href={`${basePath}/${game.slug}`} className="btn btn-primary btn-sm btn-play mt-4 w-full">
         {t("cta.play")}
       </Link>
     </Card>
@@ -113,13 +113,13 @@ export function GameCatalog({
 
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="relative w-full sm:max-w-xs">
-          <Search size={18} strokeWidth={2.2} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted" />
+          <Search size={18} strokeWidth={2.2} className="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 text-muted" />
           <Input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Games dhoondo…"
             aria-label="Search games"
-            className="pl-10"
+            className="ps-10"
           />
         </div>
         <div className="flex flex-wrap gap-2">

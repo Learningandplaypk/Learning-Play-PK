@@ -18,6 +18,7 @@ const shot = argv.includes("--shot");
 const w = Number(opt("w", 390));
 const h = Number(opt("h", 844));
 const theme = opt("theme", "light");
+const lang = opt("lang", "en");
 const paths = argv.filter((a) => !a.startsWith("--"));
 const routes = paths.length
   ? paths
@@ -97,6 +98,27 @@ const audits = () => {
     out.overflow = document.documentElement.scrollWidth;
   }
 
+  const se = document.scrollingElement || document.documentElement;
+  const htmlCs = getComputedStyle(document.documentElement);
+  const bodyCs = getComputedStyle(document.body);
+  const dialogOpen = !!document.querySelector('[role="dialog"]');
+  const locked =
+    document.documentElement.classList.contains("scroll-locked") ||
+    document.body.classList.contains("scroll-locked") ||
+    htmlCs.overflow === "hidden" ||
+    bodyCs.overflow === "hidden";
+  out.scroll = {
+    scrollHeight: se.scrollHeight,
+    clientHeight: se.clientHeight,
+    overflowY: htmlCs.overflowY,
+    bodyOverflowY: bodyCs.overflowY,
+    canScroll: se.scrollHeight > se.clientHeight + 8,
+    locked,
+    dialogOpen,
+    dir: document.documentElement.getAttribute("dir") || "ltr",
+    htmlLang: document.documentElement.getAttribute("lang") || "",
+  };
+
   const interactive = Array.from(document.querySelectorAll("a,button,input,select,textarea,[role='button']"));
   for (const el of interactive) {
     const cs0 = getComputedStyle(el);
@@ -146,11 +168,12 @@ for (const route of routes) {
     if (m.type() === "error") errors.push("[console.error] " + m.text());
   });
   page.on("pageerror", (e) => errors.push("[pageerror] " + e.message));
-  await page.evaluateOnNewDocument((t) => {
+  await page.evaluateOnNewDocument((t, l) => {
     try {
       localStorage.setItem("learnplay-theme", t);
+      if (l === "ur" || l === "en" || l === "roman") localStorage.setItem("learnplay-lang", l);
     } catch {}
-  }, theme);
+  }, theme, lang);
   await page.goto("http://localhost:3000" + route, { waitUntil: "networkidle2", timeout: 90000 }).catch((e) => errors.push("[goto] " + e.message));
   await new Promise((r) => setTimeout(r, 1800));
   const appErr = await page
@@ -166,6 +189,69 @@ for (const route of routes) {
   if (res.smallTargets?.length) problems.push(`small tap targets (${res.smallTargets.length}): ` + res.smallTargets.slice(0, 3).join(" | "));
   if (res.missingLabels?.length) problems.push(`unlabelled buttons (${res.missingLabels.length}): ` + res.missingLabels.slice(0, 2).join(" | "));
   if (res.lowContrast?.length) problems.push(`low contrast (${res.lowContrast.length}): ` + res.lowContrast.slice(0, 3).join(" | "));
+
+  if (res.scroll) {
+    const s = res.scroll;
+    if (lang === "ur" && s.dir !== "rtl") problems.push(`Urdu expected dir=rtl, got dir=${s.dir} lang=${s.htmlLang}`);
+    if (lang !== "ur" && s.dir === "rtl") problems.push(`LTR expected dir=ltr, got dir=${s.dir}`);
+    if (s.locked && !s.dialogOpen) problems.push("scroll-lock stuck (no dialog open)");
+    if (s.canScroll && !s.dialogOpen) {
+      const moved = await page
+        .evaluate(async () => {
+          const se = document.scrollingElement || document.documentElement;
+          window.scrollTo(0, 99999);
+          await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+          const y1 = window.scrollY || se.scrollTop || 0;
+          window.scrollTo(0, 0);
+          await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+          window.scrollBy({ top: 240, left: 0, behavior: "instant" });
+          await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+          const y2 = window.scrollY || se.scrollTop || 0;
+          window.scrollTo(0, 0);
+          return { y1, y2 };
+        })
+        .catch((e) => ({ error: e.message }));
+      if (moved.error) problems.push("[scroll] " + moved.error);
+      else if (!(moved.y1 > 40 || moved.y2 > 20)) {
+        problems.push(
+          `NOT SCROLLABLE: scrollHeight=${s.scrollHeight} clientHeight=${s.clientHeight} after scrollTo y=${moved.y1} wheel y=${moved.y2}`
+        );
+      } else {
+        console.log(`   scroll ok  sh=${s.scrollHeight} ch=${s.clientHeight} y=${moved.y1}`);
+      }
+    }
+  }
+
+  if (route === "/learn/english") {
+    const sheet = await page
+      .evaluate(async () => {
+        const node = [...document.querySelectorAll("button")].find((b) => /^\d+\.\s/.test((b.textContent || "").trim()));
+        if (!node) return { opened: false };
+        node.click();
+        await new Promise((r) => setTimeout(r, 280));
+        const dialog = document.querySelector('[role="dialog"]');
+        const lockedOpen =
+          document.documentElement.classList.contains("scroll-locked") ||
+          document.body.classList.contains("scroll-locked") ||
+          getComputedStyle(document.body).overflow === "hidden";
+        window.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+        await new Promise((r) => setTimeout(r, 280));
+        const still = document.querySelector('[role="dialog"]');
+        const lockedAfter =
+          document.documentElement.classList.contains("scroll-locked") ||
+          document.body.classList.contains("scroll-locked") ||
+          getComputedStyle(document.body).overflow === "hidden";
+        return { opened: !!dialog, lockedOpen, closed: !still, lockedAfter };
+      })
+      .catch((e) => ({ error: e.message }));
+    if (sheet.error) problems.push("[sheet] " + sheet.error);
+    else {
+      if (!sheet.opened) problems.push("learn path sheet did not open");
+      if (sheet.opened && !sheet.lockedOpen) problems.push("scroll-lock not applied while sheet open");
+      if (sheet.opened && !sheet.closed) problems.push("sheet did not close on Escape");
+      if (sheet.opened && sheet.closed && sheet.lockedAfter) problems.push("scroll-lock stuck after closing sheet");
+    }
+  }
 
   if (problems.length) failed = true;
   console.log(`\n### ${route} — ${problems.length ? "ISSUES" : "CLEAN ✓"}`);

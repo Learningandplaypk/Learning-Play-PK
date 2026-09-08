@@ -93,7 +93,7 @@ export function ShopClient() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {COIN_PACKS.map((p) => (
           <Card key={p.coins} className="relative p-5">
-            {p.tag === "Best deal" && <span className="absolute -top-2.5 right-4 rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-black text-[#1C1C1A]">BEST</span>}
+            {p.tag === "Best deal" && <span className="absolute -top-2.5 end-4 rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-black text-[#1C1C1A]">BEST</span>}
             <span className="grid h-11 w-11 place-items-center rounded-xl bg-accent-tint text-2xl text-accent-ink">
               {p.emoji}
             </span>

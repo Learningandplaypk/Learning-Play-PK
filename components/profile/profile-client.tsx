@@ -29,6 +29,7 @@ import { BADGES } from "@/data/badges";
 import { fmt, pktDayKey, pktDayOffset } from "@/lib/utils";
 import { useAuth } from "@/lib/auth";
 import { useTheme, type ThemeChoice } from "@/lib/theme";
+import { useI18n } from "@/lib/i18n";
 
 function LevelRing({ level, progress }: { level: number; progress: number }) {
   const r = 42;
@@ -96,6 +97,7 @@ export function ProfileClient() {
   const s = usePlayer();
   const { user, configured, logout } = useAuth();
   const { choice, setChoice } = useTheme();
+  const { setLang } = useI18n();
   const lv = levelFromXp(s.xp);
 
   const [editName, setEditName] = useState(false);
@@ -203,7 +205,7 @@ export function ProfileClient() {
             type="button"
             onClick={claim}
             disabled={!rewardAvailable}
-            className="card w-full shrink-0 p-4 text-left transition-colors hover:border-brand disabled:opacity-60 sm:max-w-[190px]"
+            className={`card w-full shrink-0 p-4 text-start transition-colors hover:border-brand disabled:opacity-60 sm:max-w-[190px] ${rewardAvailable ? "chest-open" : ""}`}
           >
             <span className="grid h-11 w-11 place-items-center rounded-xl bg-accent-tint text-accent-ink">
               <Sparkles size={20} strokeWidth={2.4} />

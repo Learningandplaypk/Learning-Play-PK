@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { Check } from "lucide-react";
 import type { GameProps } from "@/components/game-shell";
 import type { QuizQ } from "@/lib/quiz-types";
 import { shuffle } from "@/lib/utils";
@@ -90,7 +91,7 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
         <span className="chip">{zoneLabel}</span>
         <span className="chip">{idx + 1}/{ROUND}</span>
         <span className="chip">✅ {correct}</span>
-        {streak >= 2 && <span className="chip border-accent/50 text-accent-ink">🔥 {streak}x streak!</span>}
+        {streak >= 2 && <span className="chip combo-pulse border-accent/50 text-accent-ink">🔥 {streak}x streak!</span>}
       </div>
       {/* timer bar */}
       <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-surface-2">
@@ -108,11 +109,11 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
               <button
                 key={i}
                 onClick={() => choose(i)}
-                className={`flex items-center gap-3 rounded-xl border px-4 py-3.5 text-left text-[15px] font-semibold transition ${
+                className={`flex items-center gap-3 rounded-xl border px-4 py-3.5 text-start text-[15px] font-semibold transition ${
                   state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15 ": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
               >
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-surface-2 font-display text-xs font-black">
-                  {["A", "B", "C", "D"][i]}
+                  {state === "right" ? <Check size={14} strokeWidth={3} className="tick-pop text-brand-ink" /> : ["A", "B", "C", "D"][i]}
                 </span>
                 {o.text}
               </button>

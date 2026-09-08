@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { sfx } from "@/lib/sfx";
+import { lockScroll } from "@/lib/scroll-lock";
 
 /* ------------------------------- Button --------------------------------- */
 
@@ -278,8 +279,8 @@ export function EmptyState({
   className?: string;
 }) {
   return (
-    <div className={cn("card flex flex-col items-start gap-4 p-6 text-left sm:p-8", className)}>
-      <div className="flex w-full flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:text-left">
+    <div className={cn("card flex flex-col items-start gap-4 p-6 text-start sm:p-8", className)}>
+      <div className="flex w-full flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:text-start">
         {icon}
         <div className="min-w-0">
           <h2 className="font-display text-lg font-extrabold text-fg">{title}</h2>
@@ -296,11 +297,7 @@ export function EmptyState({
 function useScrollLock(open: boolean) {
   useEffect(() => {
     if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
+    return lockScroll();
   }, [open]);
 }
 
@@ -350,13 +347,13 @@ export function Modal({
                 type="button"
                 onClick={onClose}
                 aria-label="Close"
-                className="absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-lg text-muted hover:bg-surface-2 hover:text-fg"
+                className="absolute end-3 top-3 grid h-11 w-11 place-items-center rounded-lg text-muted hover:bg-surface-2 hover:text-fg"
               >
                 <X size={18} strokeWidth={2} />
               </button>
             )}
             {title && (
-              <h2 id={headingId} className="mb-3 pr-10 font-display text-lg font-extrabold text-fg">
+              <h2 id={headingId} className="mb-3 pe-10 font-display text-lg font-extrabold text-fg">
                 {title}
               </h2>
             )}
@@ -457,11 +454,20 @@ export function Tabs<T extends string>({
   onChange: (id: T) => void;
   className?: string;
 }) {
+  const i = Math.max(0, tabs.findIndex((t) => t.id === value));
   return (
     <div
       role="tablist"
-      className={cn("inline-flex gap-1 rounded-full border border-line bg-surface-2 p-1", className)}
+      className={cn("relative inline-flex gap-1 rounded-full border border-line bg-surface-2 p-1", className)}
     >
+      <span
+        aria-hidden
+        className="pointer-events-none absolute top-1 bottom-1 rounded-full bg-surface shadow-sm transition-transform duration-150 ease-out"
+        style={{
+          width: `calc((100% - 0.5rem) / ${tabs.length})`,
+          transform: `translateX(calc(${i} * 100% + ${i} * 0.25rem))`,
+        }}
+      />
       {tabs.map((t) => (
         <button
           key={t.id}
@@ -469,8 +475,8 @@ export function Tabs<T extends string>({
           aria-selected={value === t.id}
           onClick={() => onChange(t.id)}
           className={cn(
-            "min-h-11 rounded-full px-4 text-sm font-semibold transition-colors",
-            value === t.id ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"
+            "relative z-[1] min-h-11 rounded-full px-4 text-sm font-semibold transition-colors",
+            value === t.id ? "text-fg" : "text-muted hover:text-fg"
           )}
         >
           {t.label}

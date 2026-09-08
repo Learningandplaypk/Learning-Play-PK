@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 
 const SECTIONS: Array<[string, React.ReactNode]> = [
   ["Platform", <p key="1">Learn & Play PK aik free-to-play educational gaming platform hai. Free tier mein roz 5 games + 3 lessons included hain; Premium unlimited access deta hai.</p>],
-  ["Accounts", <ul key="2" className="list-disc space-y-1.5 pl-5">
+  ["Accounts", <ul key="2" className="list-disc space-y-1.5 ps-5">
     <li>Ek insaan, ek account — multi-account se leaderboard ranking invalid.</li>
     <li>Guest progress login par merge hota hai; merge reversible nahi.</li>
   </ul>],
-  ["Fair play", <ul key="3" className="list-disc space-y-1.5 pl-5">
+  ["Fair play", <ul key="3" className="list-disc space-y-1.5 ps-5">
     <li>Bots, scripts, score manipulation mana. Server-side sanity checks se detect hone par scores remove.</li>
     <li>Leaderboard ranks final hote hain — manual review ke baad.</li>
   </ul>],
-  ["Payments & refunds", <ul key="4" className="list-disc space-y-1.5 pl-5">
+  ["Payments & refunds", <ul key="4" className="list-disc space-y-1.5 ps-5">
     <li>Premium Rs. 399/mahina ya Rs. 3,990/saal — auto-renew, cancel email se kabhi bhi.</li>
     <li>Refund: 7 din ke andar, agar 3 se kam games khele hon — no questions asked.</li>
     <li>Coins in-app currency hain; cash redemption nahi.</li>

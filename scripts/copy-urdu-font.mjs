@@ -2,12 +2,10 @@
  * Copies the self-hosted Noto Nastaliq Urdu woff2 files out of node_modules into
  * public/fonts/ so `public/fonts/urdu.css` can point at stable URLs.
  *
- * The Urdu face is ~260KB. It is intentionally NOT imported into the global
- * stylesheet: app/layout.tsx loads this CSS through a non-render-blocking
- * `media="print"` link so Urdu still renders (font-display: swap) without
- * delaying LCP by a full second on slow 4G.
+ * The Urdu face is ~260KB. @font-face is injected inline from lib/urdu-font.ts
+ * (no /fonts/urdu.css request). These woff2 files are the only artifacts.
  *
- * Runs from `prebuild` / `predev`, so public/fonts/*.woff2 are git-ignored.
+ * Runs from `prebuild` / `predev`. public/fonts/*.woff2 are git-ignored.
  */
 import fs from "node:fs";
 import path from "node:path";
