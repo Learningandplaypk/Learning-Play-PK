@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Trophy, Users } from "lucide-react";
 import { Card, EmptyState, Skeleton, Tabs } from "@/components/ui";
 import { usePlayer } from "@/lib/store";
+import { PremiumBadge } from "@/components/premium/premium-nudge";
 import { fetchGlobalLeaderboard, type LeaderRow } from "@/lib/sync";
 import { fmt } from "@/lib/utils";
 import { Ustad } from "@/components/brand/ustad";
@@ -18,6 +19,7 @@ export function LeaderboardClient() {
   const [loading, setLoading] = useState(true);
   const localResults = usePlayer((s) => s.results);
   const myName = usePlayer((s) => s.name);
+  const myPremium = usePlayer((s) => s.premium);
   const myXp = usePlayer((s) => s.xp);
   const myAvatar = usePlayer((s) => s.avatar);
   const myUid = usePlayer((s) => s.uid);
@@ -140,7 +142,10 @@ export function LeaderboardClient() {
               <div key={r.uid} className="flex items-center gap-3 px-4 py-3">
                 <span className="w-6 text-center font-display text-sm font-black text-muted tnum">{i + 4}</span>
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-surface-2 text-lg">{r.avatar}</span>
-                <span className="min-w-0 flex-1 truncate text-sm font-semibold text-fg">{r.name}</span>
+                <span className="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm font-semibold text-fg">
+                  <span className="truncate">{r.name}</span>
+                  {r.uid === myUid && myPremium && <PremiumBadge />}
+                </span>
                 <span className="font-display text-sm font-bold text-brand-ink tnum">{fmt(r.score)} XP</span>
               </div>
             ))}

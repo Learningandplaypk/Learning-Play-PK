@@ -384,9 +384,15 @@ export function ProfileClient() {
                 <Button size="sm" variant="secondary" onClick={downloadSnapshot}>
                   <Download size={15} strokeWidth={2.2} /> Progress download
                 </Button>
+                <Link href="/account" className="btn btn-secondary btn-sm">
+                  <Settings size={15} strokeWidth={2.2} /> Account
+                </Link>
+                <Link href="/progress" className="btn btn-secondary btn-sm">
+                  <Zap size={15} strokeWidth={2.2} /> Progress report
+                </Link>
                 {!s.premium && (
                   <Link href="/premium" className="btn btn-primary btn-sm">
-                    <Trophy size={15} strokeWidth={2.2} /> Premium
+                    <Trophy size={15} strokeWidth={2.2} /> Premium dekho
                   </Link>
                 )}
                 <Button size="sm" variant="ghost" onClick={() => setResetConfirm(true)}>

@@ -90,11 +90,15 @@ function loadH5GamesSdk(cb: () => void) {
 export function RewardedAdButton({ onReward, label = "📺 Ad dekho → +1 ❤️" }: { onReward: () => void; label?: string }) {
   const [available, setAvailable] = useState(false);
   const [busy, setBusy] = useState(false);
+  const premium = usePlayer((s) => s.premium);
+  const consent = usePlayer((s) => s.consentAds);
 
   useEffect(() => {
+    // premium users never load the ad SDK; free users only after consent
+    if (premium || consent !== true) return;
     if (!CLIENT || !REWARDED_SLOT) return;
     loadH5GamesSdk(() => setAvailable(!!window.adBreak));
-  }, []);
+  }, [premium, consent]);
 
   const watch = () => {
     setBusy(true);
@@ -116,7 +120,7 @@ export function RewardedAdButton({ onReward, label = "📺 Ad dekho → +1 ❤�
     setTimeout(() => setBusy(false), 8000);
   };
 
-  if (!available) return null;
+  if (!available || premium || consent !== true) return null;
   return (
     <Button size="sm" variant="ghost" onClick={watch} disabled={busy}>
       {busy ? "Ad chal raha hai…" : label}

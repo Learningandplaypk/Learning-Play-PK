@@ -8,30 +8,30 @@ import {
   xpForGame,
   coinsForGame,
   evalBadges,
-  bumpUsage,
-  isLimitReached,
-  remainingToday,
   DAILY_REWARDS,
   type BadgeStats,
   type BadgeDef,
   type GameResultInput,
 } from "./gamification";
+import {
+  applyStreakProtection,
+  dailyCoinMultiplier,
+  entitlementStatus,
+  freshAllowance,
+  isPremiumActive,
+  monthlyAllowance,
+  rollAllowance,
+  PREMIUM_CHEST_COINS,
+  PREMIUM_CHEST_XP,
+  type MonthlyAllowance,
+} from "./entitlements";
+import { addHearts, freshHearts, settleHearts, spendHeart, type HeartsState } from "./hearts";
+import { recordMistake, recordReviewHit, type Mistake } from "./mistakes";
 import { BADGES } from "@/data/badges";
 import { pktDayKey } from "./utils";
+import type { GameRecord, LangKey, ShopItem, Zone } from "./store-types";
 
-export type LangKey = "en" | "roman" | "ur";
-export type Zone = "learn" | "brain" | "quiz" | "fun";
-
-export type GameRecord = {
-  slug: string;
-  zone: Zone;
-  score: number;
-  maxScore: number;
-  xp: number;
-  at: number;
-};
-
-export type ShopItem = "hint" | "heart" | "freeze";
+export type { GameRecord, LangKey, ShopItem, Zone };
 
 export type PlayerState = {
   /* identity */
@@ -46,8 +46,9 @@ export type PlayerState = {
   freezes: number;
   lastPlayDay: string;
   hints: number;
+  /* hearts — comfort only; running out never blocks content */
+  heartsState: HeartsState;
   /* daily */
-  daily: { date: string; games: number; lessons: number };
   lastRewardDay: string | null;
   rewardCycleDay: number; // 0..6 index into DAILY_REWARDS
   /* content */
@@ -57,9 +58,19 @@ export type PlayerState = {
   quizCorrect: number;
   perfectScores: number;
   flags: Record<string, boolean>;
-  /* account */
+  /* mistakes review */
+  mistakes: Mistake[];
+  /* account — entitlement mirror; the server is always authoritative */
   premium: boolean;
   premiumExpiry: string | null;
+  premiumPlan: string | null;
+  premiumProvider: string | null;
+  trialEnd: string | null;
+  /** Monthly streak-freeze / repair allowance (premium). */
+  allowance: MonthlyAllowance;
+  /* cosmetics */
+  frame: string;
+  themeSkin: string;
   /* settings */
   sound: boolean;
   lang: LangKey;
@@ -91,8 +102,14 @@ type Store = PlayerState & {
   spendCoins: (amount: number) => boolean;
   buyItem: (item: ShopItem) => boolean;
   claimDailyReward: () => { coins: number; xp: number; freeze: boolean; label: string } | null;
-  canPlay: (zone: Zone) => { ok: boolean; reason?: string };
-  limitInfo: () => { games: number; lessons: number };
+  /** Premium right now (expiry + 3-day grace applied). */
+  isPremium: () => boolean;
+  hearts: () => number;
+  useHeart: () => number;
+  grantHearts: (n: number) => void;
+  addMistake: (m: { topic: string; prompt: string; correct: string; given?: string }) => void;
+  clearMistake: (id: string) => void;
+  allowanceLeft: () => { freezesLeft: number; repairsLeft: number; cycle: string };
   mergeGuest: (guest: Partial<PlayerState>) => void;
   resetProgress: () => void;
 };
@@ -124,7 +141,7 @@ const initialPlayer: PlayerState = {
   freezes: 0,
   lastPlayDay: "",
   hints: 3,
-  daily: { date: pktDayKey(), games: 0, lessons: 0 },
+  heartsState: { hearts: 5, at: 0 },
   lastRewardDay: null,
   rewardCycleDay: 0,
   badges: [],
@@ -133,8 +150,15 @@ const initialPlayer: PlayerState = {
   quizCorrect: 0,
   perfectScores: 0,
   flags: {},
+  mistakes: [],
   premium: false,
   premiumExpiry: null,
+  premiumPlan: null,
+  premiumProvider: null,
+  trialEnd: null,
+  allowance: { cycle: "", freezesUsed: 0, repairsUsed: 0 },
+  frame: "none",
+  themeSkin: "default",
   sound: false,
   lang: "roman",
   lowQuality: false,
@@ -160,10 +184,18 @@ export const usePlayer = create<Store>()(
       submitGame: ({ slug, zone, result, flag, words, quizCorrect }) => {
         const s = get();
         const today = pktDayKey();
-        const streakRes = registerPlay(
-          { streak: s.streak, best: s.bestStreak, lastDay: s.lastPlayDay, freezes: s.freezes },
+        const premium = isPremiumActive(
+          { isPremium: s.premium, premiumExpiry: s.premiumExpiry, premiumPlan: s.premiumPlan, trialEnd: s.trialEnd },
           today
         );
+        // premium streak protection runs first (2 freezes + 1 repair per month, automatic)
+        const protection = applyStreakProtection(
+          { streak: s.streak, best: s.bestStreak, lastDay: s.lastPlayDay, freezes: s.freezes },
+          s.allowance,
+          premium,
+          today
+        );
+        const streakRes = registerPlay(protection.next, today);
         const xp = xpForGame(result);
         const coins = coinsForGame(xp, result);
         const perfect = result.maxScore > 0 && result.score >= result.maxScore;
@@ -215,7 +247,7 @@ export const usePlayer = create<Store>()(
           bestStreak: streakRes.next.best,
           freezes: streakRes.next.freezes,
           lastPlayDay: streakRes.next.lastDay,
-          daily: bumpUsage(s.daily, zone === "learn" ? "learn" : "other", today),
+          allowance: protection.allowance,
           results,
           wordsLearned,
           flags,
@@ -249,28 +281,57 @@ export const usePlayer = create<Store>()(
         if (s.lastRewardDay === today) return null;
         const reward = DAILY_REWARDS[s.rewardCycleDay % 7];
         const isLast = s.rewardCycleDay % 7 === 6;
+        const premium = s.isPremium();
+        // premium: 2x daily coins + an extra daily chest
+        const coins = reward.coins * dailyCoinMultiplier(premium) + (premium ? PREMIUM_CHEST_COINS : 0);
+        const xp = reward.xp + (premium ? PREMIUM_CHEST_XP : 0);
         set({
-          coins: s.coins + reward.coins,
-          xp: s.xp + reward.xp,
+          coins: s.coins + coins,
+          xp: s.xp + xp,
           freezes: s.freezes + (isLast ? 1 : 0),
           lastRewardDay: today,
           rewardCycleDay: (s.rewardCycleDay + 1) % 7,
+          allowance: rollAllowance(s.allowance),
         });
-        return { coins: reward.coins, xp: reward.xp, freeze: isLast, label: reward.label };
+        return { coins, xp, freeze: isLast, label: premium ? `${reward.label} · 2× premium` : reward.label };
       },
 
-      canPlay: (zone) => {
+      isPremium: () => {
         const s = get();
-        return {
-          ok: !isLimitReached(s.daily, zone === "learn" ? "learn" : "other", s.premium),
-          reason: isLimitReached(s.daily, zone === "learn" ? "learn" : "other", s.premium)
-            ? zone === "learn"? "Aaj ke 3 free lessons pooray ho gaye! Premium par unlimited lessons milte hain.": "Aaj ke 5 free games pooray ho gaye! Kal phir khelo ya Premium lo.": undefined,
-        };
+        return isPremiumActive({
+          isPremium: s.premium,
+          premiumExpiry: s.premiumExpiry,
+          premiumPlan: s.premiumPlan,
+          trialEnd: s.trialEnd,
+        });
       },
 
-      limitInfo: () => {
+      hearts: () => {
         const s = get();
-        return remainingToday(s.daily, s.premium);
+        return s.isPremium() ? Infinity : settleHearts(s.heartsState, false).hearts;
+      },
+
+      useHeart: () => {
+        const s = get();
+        if (s.isPremium()) return Infinity;
+        const next = spendHeart(s.heartsState, false);
+        set({ heartsState: next });
+        return next.hearts;
+      },
+
+      grantHearts: (n) => {
+        const s = get();
+        if (s.isPremium()) return;
+        set({ heartsState: addHearts(s.heartsState, n, false) });
+      },
+
+      addMistake: (m) => set((st) => ({ mistakes: recordMistake(st.mistakes, m) })),
+
+      clearMistake: (id) => set((st) => ({ mistakes: recordReviewHit(st.mistakes, id) })),
+
+      allowanceLeft: () => {
+        const s = get();
+        return monthlyAllowance(s.allowance, s.isPremium());
       },
 
       mergeGuest: (guest) => {
@@ -287,18 +348,31 @@ export const usePlayer = create<Store>()(
         });
       },
 
-      resetProgress: () => set({ ...initialPlayer, daily: { date: pktDayKey(), games: 0, lessons: 0 } }),
+      resetProgress: () =>
+        set({ ...initialPlayer, heartsState: freshHearts(), allowance: freshAllowance() }),
     }),
     {
       name: "learnplay-player",
-      version: 1,
-      // guest uid merge into v0 persisted state (old key had `uid: null`, no isPremium field)
+      version: 2,
+      /**
+       * v2 — monetization rebuild: drops the dead `daily` usage counters (the
+       * 5-games / 3-lessons limits no longer exist) and seeds hearts, the
+       * monthly freeze/repair allowance, mistakes and cosmetics.
+       */
       migrate: (persisted) => {
-        const s = persisted as Partial<PlayerState> & { uid?: string | null };
+        const s = persisted as Partial<PlayerState> & { uid?: string | null; daily?: unknown };
+        const { daily: _dropped, ...rest } = s;
+        void _dropped;
         return {
-          ...s,
+          ...initialPlayer,
+          ...rest,
           uid: s.uid && !s.uid.startsWith("guest") ? s.uid : guestKey(),
           premium: s.premium ?? false,
+          heartsState: s.heartsState ?? freshHearts(),
+          allowance: s.allowance ?? freshAllowance(),
+          mistakes: s.mistakes ?? [],
+          frame: s.frame ?? "none",
+          themeSkin: s.themeSkin ?? "default",
         } as PlayerState;
       },
       // rehydrate manually after mount (see Providers) — avoids SSR/CSR hydration mismatch
@@ -336,7 +410,35 @@ export function playerSnapshot(s: PlayerState): Partial<PlayerState> {
     wordsLearned: s.wordsLearned,
     quizCorrect: s.quizCorrect,
     perfectScores: s.perfectScores,
-    premium: s.premium,
-    premiumExpiry: s.premiumExpiry,
+    // entitlement fields are deliberately NOT included: only the payment
+    // webhooks (Admin SDK) may write isPremium / premiumExpiry / premiumPlan.
+    mistakes: s.mistakes.slice(0, 100),
+    frame: s.frame,
+    themeSkin: s.themeSkin,
+    heartsState: s.heartsState,
+    allowance: s.allowance,
   };
+}
+
+/** Apply a server-side entitlement document to the local mirror. */
+export function applyEntitlement(e: {
+  isPremium?: boolean;
+  premiumExpiry?: string | null;
+  premiumPlan?: string | null;
+  premiumProvider?: string | null;
+  trialEnd?: string | null;
+}) {
+  const status = entitlementStatus({
+    isPremium: !!e.isPremium,
+    premiumExpiry: e.premiumExpiry ?? null,
+    premiumPlan: e.premiumPlan ?? null,
+    trialEnd: e.trialEnd ?? null,
+  });
+  usePlayer.setState({
+    premium: status.active,
+    premiumExpiry: e.premiumExpiry ?? null,
+    premiumPlan: e.premiumPlan ?? null,
+    premiumProvider: e.premiumProvider ?? null,
+    trialEnd: e.trialEnd ?? null,
+  });
 }

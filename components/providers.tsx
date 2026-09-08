@@ -10,6 +10,7 @@ import { ConsentBanner } from "./consent";
 import { InstallPrompt } from "./install-prompt";
 import { setSfxEnabled } from "@/lib/sfx";
 import { usePlayer } from "@/lib/store";
+import { themeVars } from "@/lib/cosmetics";
 
 function ServiceWorker() {
   useEffect(() => {
@@ -17,6 +18,20 @@ function ServiceWorker() {
       navigator.serviceWorker.register("/sw.js").catch(() => {});
     }
   }, []);
+  return null;
+}
+
+/** Applies the premium theme skin (CSS variables) to the document root. */
+function CosmeticsSync() {
+  const skin = usePlayer((s) => s.themeSkin);
+  const premium = usePlayer((s) => s.premium);
+  useEffect(() => {
+    const vars = themeVars(skin, premium) as Record<string, string>;
+    const root = document.documentElement;
+    const applied = Object.keys(vars);
+    applied.forEach((k) => root.style.setProperty(k, vars[k]));
+    return () => applied.forEach((k) => root.style.removeProperty(k));
+  }, [skin, premium]);
   return null;
 }
 
@@ -37,6 +52,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <ThemeProvider>
         <AuthProvider>
           <SoundSync />
+          <CosmeticsSync />
           <ServiceWorker />
           {children}
           <ToastHost />

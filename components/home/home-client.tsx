@@ -7,7 +7,7 @@ import { ArrowRight, Check, Coins, Flame, Gift, GraduationCap, Quote, Target, Za
 import { Button, ButtonLink, Card, Chip, Progress, SectionHeading } from "@/components/ui";
 import { usePlayer } from "@/lib/store";
 import { getGameData } from "@/lib/games-data";
-import { levelFromXp, levelTitle, FREE_DAILY_GAMES, FREE_DAILY_LESSONS } from "@/lib/gamification";
+import { levelFromXp, levelTitle } from "@/lib/gamification";
 import { fmt, pktDayKey } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
 import { HeroVisual } from "@/components/home3d/hero-visual";
@@ -37,7 +37,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Kya yeh bilkul free hai?", a: "Haan. Saare 43 games aur lessons free hain — roz 5 games + 3 lessons. Premium (Rs. 399/mahina) par unlimited games, zero ads aur progress reports milte hain." },
+  { q: "Kya yeh bilkul free hai?", a: "Haan — sach mein. Saare 43 games, saare levels aur saari 8 zubanein free hain, bina kisi daily limit ke. Premium (Rs. 299/mahina) sirf tajurba behtar karta hai: zero ads, unlimited hearts, progress report, certificate." },
   { q: "Mobile par chalega?", a: "Bilkul. Mobile-first PWA hai — Android Chrome se \"Add to Home Screen\" karo aur app ki tarah chalta hai, offline bhi." },
   { q: "Kaun si languages hain?", a: "English (full course) + Arabic (Quranic vocabulary samet), Turkish, Chinese, French, Spanish, Korean aur Japanese — sab Urdu meanings ke sath." },
   { q: "Progress save hota hai?", a: "Bina account bhi progress browser mein save hoti hai. Login karo toh cloud (Firestore) mein save hoti hai aur leaderboard par aati hai." },
@@ -84,15 +84,11 @@ function TodayChallenges() {
   const lastPlayDay = usePlayer((s) => s.lastPlayDay);
   const lastRewardDay = usePlayer((s) => s.lastRewardDay);
   const premium = usePlayer((s) => s.premium);
-  const daily = usePlayer((s) => s.daily);
   const claimDailyReward = usePlayer((s) => s.claimDailyReward);
   const toast = usePlayer((s) => s.toast);
   const today = pktDayKey();
 
-  const usage = daily.date === today ? daily : { games: 0, lessons: 0 };
   const playedToday = lastPlayDay === today;
-  const gamesLeft = premium ? Infinity : Math.max(0, FREE_DAILY_GAMES - usage.games);
-  const lessonsLeft = premium ? Infinity : Math.max(0, FREE_DAILY_LESSONS - usage.lessons);
   const rewardReady = lastRewardDay !== today;
 
   const claim = () => {
@@ -104,8 +100,8 @@ function TodayChallenges() {
     {
       icon: <Target size={20} strokeWidth={2.3} />,
       title: "Aaj 1 game khelo",
-      body: playedToday ? "Ho gaya — kal phir milte hain." : `${gamesLeft === Infinity ? "Unlimited" : gamesLeft} games aaj free hain.`,
-      value: playedToday ? 100 : Math.min(100, ((premium ? 1 : FREE_DAILY_GAMES - gamesLeft) / FREE_DAILY_GAMES) * 100),
+      body: playedToday ? "Ho gaya — kal phir milte hain." : "Jitne chaho khelo — koi limit nahi.",
+      value: playedToday ? 100 : 0,
       cta: playedToday ? null : { label: "Khelo", href: "/fun" },
     },
     {
@@ -215,7 +211,7 @@ export default function HomeClient() {
             </div>
 
             <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
-              {["Bina account ke khelo", "Roz 5 games free", "Offline bhi chalta hai"].map((f) => (
+              {["Bina account ke khelo", "Koi daily limit nahi", "Offline bhi chalta hai"].map((f) => (
                 <li key={f} className="flex items-center gap-1.5">
                   <Check size={16} strokeWidth={2.6} className="text-brand-ink" /> {f}
                 </li>

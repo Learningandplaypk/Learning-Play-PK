@@ -61,8 +61,14 @@ export async function pushProgressToFirestore(outcome: LastGameOutcome) {
         wordsLearned: store.wordsLearned.slice(0, 1000),
         quizCorrect: store.quizCorrect,
         perfectScores: store.perfectScores,
-        premium: store.premium,
-        premiumExpiry: store.premiumExpiry,
+        // NOTE: entitlement fields (isPremium / premiumExpiry / premiumPlan …) are
+        // written ONLY by the payment webhooks via the Admin SDK. Firestore rules
+        // reject them from client writes, so we never send them here.
+        mistakes: store.mistakes.slice(0, 100),
+        frame: store.frame,
+        themeSkin: store.themeSkin,
+        heartsState: store.heartsState,
+        allowance: store.allowance,
         lastActive: serverTimestamp(),
         updatedAt: serverTimestamp(),
       });

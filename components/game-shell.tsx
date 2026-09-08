@@ -3,7 +3,10 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Flame, Link2, MessageCircle, RotateCcw, Share2, Sparkles, Star } from "lucide-react";
-import { Button, Card, Chip, Modal, Progress, useCountUp } from "./ui";
+import { Button, Card, Chip, Progress, useCountUp } from "./ui";
+import { AdSlot } from "./ads";
+import { GameOverPremiumNote } from "./premium/premium-nudge";
+import { HeartsBar } from "./hearts-bar";
 import { usePlayer, type Zone } from "@/lib/store";
 import { levelFromXp, levelTitle, xpForGame } from "@/lib/gamification";
 import { pushProgressToFirestore } from "@/lib/sync";
@@ -100,11 +103,10 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
   const { t } = useI18n();
   const phase = useMemo(() => new PhaseMachine(), []);
   const [, force] = useState(0);
-  const [upsell, setUpsell] = useState(false);
   const [lastResult, setLastResult] = useState<GameResult | null>(null);
   const [outcome, setOutcome] = useState<ReturnType<ReturnType<typeof usePlayer.getState>["submitGame"]> | null>(null);
   const submitGame = usePlayer((s) => s.submitGame);
-  const canPlay = usePlayer((s) => s.canPlay);
+  const premium = usePlayer((s) => s.premium);
   const xp = usePlayer((s) => s.xp);
   const streak = usePlayer((s) => s.streak);
   const coins = usePlayer((s) => s.coins);
@@ -115,16 +117,12 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
 
   useEffect(() => () => phase.dispose(), [phase]);
 
+  // No limits: a game always starts. There is nothing to check.
   const start = useCallback(() => {
-    const check = canPlay(meta.zone);
-    if (!check.ok) {
-      setUpsell(true);
-      return;
-    }
     sfx("whoosh");
     phase.set("playing");
     force((n) => n + 1);
-  }, [canPlay, meta.zone, phase]);
+  }, [phase]);
 
   const handleEnd = useCallback(
     (result: GameResult) => {
@@ -187,6 +185,7 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
           <ArrowLeft size={18} strokeWidth={2.4} /> Back
         </Link>
         <div className="flex items-center gap-2">
+          {meta.zone === "learn" && <HeartsBar />}
           <Chip tone={streak > 0 ? "accent" : "neutral"}>
             <Flame size={13} strokeWidth={2.4} /> <span className="tnum">{streak}</span>
           </Chip>
@@ -224,15 +223,20 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
             {t("cta.start")}
           </Button>
           <p className="mt-3 text-center text-xs text-muted">
-            Free plan: roz 5 games + 3 lessons.{" "}
-            <Link href="/premium" className="font-semibold text-brand-ink underline underline-offset-2">
-              Premium unlimited
-            </Link>
+            Sab kuch free hai — koi daily limit nahi, koi level lock nahi.
           </p>
         </Card>
       )}
 
       {phase.current === "playing" && <Game lang={lang} onEnd={handleEnd} />}
+
+      {phase.current === "over" && outcome && !premium && (
+        <AdSlot
+          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GAMEOVER || undefined}
+          className="mx-auto mb-4 max-w-xl"
+          label="Advertisement"
+        />
+      )}
 
       {phase.current === "over" && outcome && (
         <Card className="mx-auto max-w-xl p-6 sm:p-8">
@@ -304,26 +308,12 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
           >
             Zone wapas jao
           </Link>
+
+          {/* soft, once-per-session, dismissible — never blocks anything */}
+          <GameOverPremiumNote />
         </Card>
       )}
 
-      <Modal open={upsell} onClose={() => setUpsell(false)} title="Aaj ka free limit khatam">
-        <div>
-          <p className="text-sm leading-relaxed text-muted">
-            Free plan mein roz 5 games + 3 lessons milte hain. Premium par{" "}
-            <b className="text-fg">unlimited games, zero ads, progress reports aur certificate</b> milta hai — sirf
-            Rs. 399/mahina.
-          </p>
-          <div className="mt-5 grid gap-2">
-            <Link href="/premium" className="btn btn-primary">
-              Premium dekho — Rs. 399/mo
-            </Link>
-            <Button variant="secondary" onClick={() => setUpsell(false)}>
-              Baad mein
-            </Button>
-          </div>
-        </div>
-      </Modal>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check, Lock, Play } from "lucide-react";
+import { ArrowRight, Check, Play } from "lucide-react";
 import { Card, Chip, Progress, Sheet } from "@/components/ui";
 import { LEARN_GAME_DATA } from "@/lib/games-data";
 import { langFlag, langLabel } from "@/lib/lang-paths";
@@ -10,7 +10,11 @@ import { usePlayer } from "@/lib/store";
 import { fmt } from "@/lib/utils";
 import { ZoneArt, Ustad } from "@/components/brand/ustad";
 
-type NodeState = "done" | "available" | "locked";
+/**
+ * Path node states. There is NO "locked" state — every lesson is playable from
+ * day one. "next" is only a suggestion of where to continue.
+ */
+type NodeState = "done" | "next" | "todo";
 
 export function LearnPathClient({ lang }: { lang: string }) {
   const label = langLabel(lang)!;
@@ -28,26 +32,22 @@ export function LearnPathClient({ lang }: { lang: string }) {
     return m;
   }, [results]);
 
-  // sequential path: a lesson opens once the one before it has been played once
+  // no gating: every lesson is open. The first unplayed one is just "suggested next".
   const states = useMemo(() => {
-    const out: NodeState[] = [];
-    let blocked = false;
-    games.forEach((g) => {
-      const done = (plays.get(g.slug) ?? 0) > 0;
-      if (done) out.push("done");
-      else if (!blocked) {
-        out.push("available");
-        blocked = true;
-      } else out.push("locked");
+    let suggested = false;
+    return games.map<NodeState>((g) => {
+      if ((plays.get(g.slug) ?? 0) > 0) return "done";
+      if (!suggested) {
+        suggested = true;
+        return "next";
+      }
+      return "todo";
     });
-    return out;
   }, [games, plays]);
-
-  const firstOpen = states.indexOf("available");
   const doneCount = states.filter((s) => s === "done").length;
   const progress = games.length ? (doneCount / games.length) * 100 : 0;
   const active = open != null ? games[open] : null;
-  const activeState = open != null ? states[open] : "locked";
+  const activeState: NodeState = open != null ? states[open] : "todo";
 
   return (
     <div className="container-page page-pad pb-24 pt-8 md:pb-10">
@@ -90,31 +90,29 @@ export function LearnPathClient({ lang }: { lang: string }) {
                   className="relative grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 transition-transform active:scale-95 sm:h-20 sm:w-20"
                   style={{
                     background:
-                      state === "done" ? "var(--brand-solid)" : state === "available" ? "var(--surface)" : "var(--surface-2)",
+                      state === "done" ? "var(--brand-solid)" : state === "next" ? "var(--surface)" : "var(--surface-2)",
                     borderColor:
                       state === "done"
                         ? "var(--brand-solid)"
-                        : state === "available"
+                        : state === "next"
                           ? "var(--brand)"
                           : "var(--border)",
-                    color: state === "done" ? "#fff" : state === "available" ? "var(--brand-ink)" : "var(--muted)",
-                    boxShadow: state === "available" ? "0 4px 0 0 var(--brand-edge)" : "none",
+                    color: state === "done" ? "#fff" : state === "next" ? "var(--brand-ink)" : "var(--muted)",
+                    boxShadow: state === "next" ? "0 4px 0 0 var(--brand-edge)" : "none",
                   }}
                 >
-                  {state === "available" && <span className="pulse-ring" />}
+                  {state === "next" && <span className="pulse-ring" />}
                   {state === "done" ? (
                     <Check size={26} strokeWidth={3} className="pop-in" />
-                  ) : state === "available" ? (
-                    <Play size={24} strokeWidth={2.6} />
                   ) : (
-                    <Lock size={20} strokeWidth={2.4} />
+                    <Play size={24} strokeWidth={2.6} />
                   )}
                   {state === "done" && (
                     <span className="absolute -top-2 start-1/2 -translate-x-1/2 text-sm pop-in" aria-hidden>
                       👑
                     </span>
                   )}
-                  {state === "available" && (
+                  {state === "next" && (
                     <span className="absolute -end-10 top-1/2 hidden w-10 -translate-y-1/2 sm:block" aria-hidden>
                       <Ustad mood="happy" className="h-10 w-10" />
                     </span>
@@ -133,10 +131,10 @@ export function LearnPathClient({ lang }: { lang: string }) {
                   <span className="mt-2 flex items-center gap-2">
                     {state === "done" ? (
                       <Chip tone="brand">Complete</Chip>
-                    ) : state === "available" ? (
-                      <Chip tone="accent">Aaj ka lesson</Chip>
+                    ) : state === "next" ? (
+                      <Chip tone="accent">Yahan se shuru karo</Chip>
                     ) : (
-                      <Chip>Locked</Chip>
+                      <Chip>Khula hai</Chip>
                     )}
                   </span>
                 </span>
@@ -155,7 +153,7 @@ export function LearnPathClient({ lang }: { lang: string }) {
           <div>
             <h2 className="font-display text-sm font-extrabold text-fg">Roz ka target</h2>
             <p className="mt-1 text-sm text-muted">
-              Roz 1 lesson khelo — free plan mein 3 lessons hain. Streak jalao aur daily chest kholo.
+              Roz 1 lesson khelo. Koi daily limit nahi — jitne chaho lessons karo, saare khule hain.
             </p>
           </div>
         </Card>
@@ -180,18 +178,9 @@ export function LearnPathClient({ lang }: { lang: string }) {
         title={active ? `${(open ?? 0) + 1}. ${active.title}` : ""}
         footer={
           active ? (
-            activeState === "locked" ? (
-              <Link
-                href={`/learn/${lang}/${games[firstOpen >= 0 ? firstOpen : 0].slug}`}
-                className="btn btn-primary btn-block"
-              >
-                Pehle lesson {firstOpen + 1} khelo
-              </Link>
-            ) : (
-              <Link href={`/learn/${lang}/${active.slug}`} className="btn btn-primary btn-block">
-                {activeState === "done" ? "Dobara khelo" : "Lesson shuru karo"}
-              </Link>
-            )
+            <Link href={`/learn/${lang}/${active.slug}`} className="btn btn-primary btn-block">
+              {activeState === "done" ? "Dobara khelo" : "Lesson shuru karo"}
+            </Link>
           ) : null
         }
       >
@@ -206,11 +195,6 @@ export function LearnPathClient({ lang }: { lang: string }) {
                 </li>
               ))}
             </ul>
-            {activeState === "locked" && (
-              <p className="mt-4 rounded-xl bg-surface-2 p-3 text-sm text-muted">
-                Yeh lesson tab khulega jab aap pehle wala lesson khel loge.
-              </p>
-            )}
           </>
         )}
       </Sheet>

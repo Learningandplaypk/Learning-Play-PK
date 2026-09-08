@@ -23,6 +23,8 @@ const COLS = [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
       { href: "/premium", label: "Premium" },
+      { href: "/progress", label: "Progress report" },
+      { href: "/account", label: "Account" },
       { href: "/shop", label: "Coin Shop" },
       { href: "/contact", label: "Contact" },
     ],

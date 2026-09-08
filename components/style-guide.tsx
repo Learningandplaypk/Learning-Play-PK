@@ -136,7 +136,7 @@ export function StyleGuide() {
             <div className="grid gap-3">
               <Swatch label="Success" cssVar="--success" note="correct answers" />
               <Swatch label="Danger" cssVar="--danger" note="wrong answers, destructive" />
-              <Swatch label="Warning" cssVar="--warning" note="limits, expiring" />
+              <Swatch label="Warning" cssVar="--warning" note="expiring, needs attention" />
               <Swatch label="Info" cssVar="--info" note="neutral hints" />
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
@@ -178,8 +178,8 @@ export function StyleGuide() {
               { cls: "text-2xl", label: "28 / display 800", sample: "Today's challenges" },
               { cls: "text-xl", label: "22 / display 800", sample: "Word Builder" },
               { cls: "text-lg", label: "18 / body 600", sample: "Urdu meaning dekh kar word banao" },
-              { cls: "text-base", label: "16 / body 400", sample: "Roz 5 games free — premium par unlimited." },
-              { cls: "text-sm", label: "14 / body 400", sample: "Aaj ke 3 lessons pooray ho gaye" },
+              { cls: "text-base", label: "16 / body 400", sample: "Sab kuch free — premium sirf tajurba behtar karta hai." },
+              { cls: "text-sm", label: "14 / body 400", sample: "Aaj ke 3 lessons mukammal — shabash!" },
               { cls: "text-xs", label: "12 / body 500", sample: "STREAK · XP · COINS" },
             ].map((t) => (
               <div key={t.label} className="flex flex-wrap items-baseline gap-x-6 gap-y-1 border-b border-line pb-3 last:border-0 last:pb-0">

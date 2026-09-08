@@ -11,7 +11,7 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
 import type { AuthProvider, RecaptchaVerifier, User } from "firebase/auth";
 import { authModOf, fsModOf, fbAuth, fbDb } from "./firebase";
 import { isFirebaseConfigured } from "./firebase-config";
-import { usePlayer, playerSnapshot } from "./store";
+import { usePlayer, playerSnapshot, applyEntitlement } from "./store";
 
 export type AuthUser = { uid: string; email: string | null; phone: string | null; name: string; photo: string | null };
 
@@ -71,8 +71,9 @@ async function ensureUserDoc(u: User, displayName?: string) {
       photoURL: u.photoURL ?? null,
       createdAt: serverTimestamp(),
       lastActive: serverTimestamp(),
+      // isPremium:false is the only entitlement field a client may write; the
+      // rest (premiumExpiry / premiumPlan / trialEnd) are server-only.
       isPremium: false,
-      premiumExpiry: null,
       xp: guestSnapshot?.xp ?? 0,
       coins: guestSnapshot?.coins ?? 25,
       streak: guestSnapshot?.streak ?? 0,
@@ -96,7 +97,14 @@ async function ensureUserDoc(u: User, displayName?: string) {
     } else {
       await updateDoc(ref, { lastActive: serverTimestamp() });
     }
-    if (data.isPremium) store.setPlayer({ premium: true, premiumExpiry: (data.premiumExpiry as string) ?? null });
+    // entitlement mirror — expiry + grace applied by applyEntitlement()
+    applyEntitlement({
+      isPremium: !!data.isPremium,
+      premiumExpiry: (data.premiumExpiry as string) ?? null,
+      premiumPlan: (data.premiumPlan as string) ?? null,
+      premiumProvider: (data.premiumProvider as string) ?? null,
+      trialEnd: (data.trialEnd as string) ?? null,
+    });
     store.setPlayer({ name: (data.displayName as string) ?? u.displayName ?? "Player" });
   }
 }

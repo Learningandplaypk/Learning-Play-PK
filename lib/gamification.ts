@@ -84,39 +84,17 @@ export function registerPlay(s: StreakState, today = pktDayKey()): { next: Strea
 }
 
 /* ============================================================
-   DAILY LIMITS (free plan)
+   NO DAILY LIMITS — by design.
+
+   Learn & Play PK has no free-plan daily game cap, no lesson cap and no level
+   gating. Every game, every level and every language is free for everyone,
+   forever. Premium buys a better experience (zero ads, unlimited hearts,
+   reports, certificates, cosmetics) — never access.
+
+   The old FREE_DAILY_GAMES / FREE_DAILY_LESSONS / isLimitReached /
+   remainingToday / bumpUsage helpers were deleted in the monetization rebuild.
+   tests/no-limits.test.ts guards against them coming back.
    ============================================================ */
-
-export const FREE_DAILY_GAMES = 5;
-export const FREE_DAILY_LESSONS = 3;
-
-export type DailyUsage = { date: string; games: number; lessons: number };
-
-export function freshUsage(today = pktDayKey()): DailyUsage {
-  return { date: today, games: 0, lessons: 0 };
-}
-
-export function isLimitReached(usage: DailyUsage, zone: "learn" | "other", isPremium: boolean, today = pktDayKey()): boolean {
-  if (isPremium) return false;
-  const u = usage.date === today ? usage : freshUsage(today);
-  return zone === "learn" ? u.lessons >= FREE_DAILY_LESSONS : u.games >= FREE_DAILY_GAMES;
-}
-
-export function remainingToday(usage: DailyUsage, isPremium: boolean, today = pktDayKey()): { games: number; lessons: number } {
-  if (isPremium) return { games: Infinity, lessons: Infinity };
-  const u = usage.date === today ? usage : freshUsage(today);
-  return {
-    games: Math.max(0, FREE_DAILY_GAMES - u.games),
-    lessons: Math.max(0, FREE_DAILY_LESSONS - u.lessons),
-  };
-}
-
-export function bumpUsage(usage: DailyUsage, zone: "learn" | "other", today = pktDayKey()): DailyUsage {
-  const u = usage.date === today ? { ...usage } : freshUsage(today);
-  if (zone === "learn") u.lessons += 1;
-  else u.games += 1;
-  return u;
-}
 
 /* ============================================================
    DAILY REWARDS — 7 day cycle

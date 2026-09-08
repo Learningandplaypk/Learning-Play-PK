@@ -29,6 +29,12 @@ export async function POST(req: Request) {
 
   const stripe = new Stripe(secret);
 
+  const planId = parsed.planId ?? (parsed.plan === "yearly" ? "premium-yearly" : "premium-monthly");
+  const plan = PRICES[planId];
+  // Prefer real Stripe Price IDs when configured (recommended for production);
+  // otherwise fall back to inline price_data so test mode works out of the box.
+  const priceId = planId === "premium-yearly" ? envStr("STRIPE_PRICE_YEARLY") : envStr("STRIPE_PRICE_MONTHLY");
+
   const lineItems = parsed.coins
     ? (() => {
         const amount = coinsPrice(parsed.coins);
@@ -45,9 +51,9 @@ export async function POST(req: Request) {
         ];
       })()
     : (() => {
-        const planId = parsed.planId ?? (parsed.plan === "yearly" ? "premium-yearly" : "premium-monthly");
-        const p = PRICES[planId];
+        const p = plan;
         if (!p) return null;
+        if (priceId) return [{ price: priceId, quantity: 1 }];
         return [
           {
             price_data: {
@@ -63,15 +69,23 @@ export async function POST(req: Request) {
 
   if (!lineItems) return jsonError("Unknown plan");
 
+  const trialDays = !parsed.coins && parsed.trial !== false ? (plan?.trialDays ?? 0) : 0;
+
   const session = await stripe.checkout.sessions.create({
     mode: parsed.coins ? "payment" : "subscription",
     line_items: lineItems,
+    ...(trialDays > 0
+      ? { subscription_data: { trial_period_days: trialDays, metadata: { uid: parsed.uid ?? "", planId } } }
+      : parsed.coins
+        ? {}
+        : { subscription_data: { metadata: { uid: parsed.uid ?? "", planId } } }),
+    ...(parsed.email ? { customer_email: parsed.email } : {}),
     success_url: `${SITE}/premium?success=1`,
     cancel_url: `${SITE}/premium?cancelled=1`,
     client_reference_id: parsed.uid ?? undefined,
     metadata: {
       uid: parsed.uid ?? "",
-      ...(parsed.coins ? { coins: String(parsed.coins) } : { planId: parsed.planId ?? parsed.plan ?? "premium-monthly" }),
+      ...(parsed.coins ? { coins: String(parsed.coins) } : { planId }),
     },
   });
 

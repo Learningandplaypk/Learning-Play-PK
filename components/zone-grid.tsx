@@ -177,8 +177,8 @@ export function GameCatalog({
         <Chip>
           {games.length} games · {filtered.length} dikh rahe hain
         </Chip>
-        <Chip>Free plan: roz 5 games</Chip>
-        <Chip>Premium: unlimited</Chip>
+        <Chip>Har game free</Chip>
+        <Chip>Sab free</Chip>
       </div>
     </div>
   );

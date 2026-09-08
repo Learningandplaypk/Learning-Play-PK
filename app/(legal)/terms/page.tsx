@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const SECTIONS: Array<[string, React.ReactNode]> = [
-  ["Platform", <p key="1">Learn & Play PK aik free-to-play educational gaming platform hai. Free tier mein roz 5 games + 3 lessons included hain; Premium unlimited access deta hai.</p>],
+  ["Platform", <p key="1">Learn & Play PK aik free educational gaming platform hai. Saare games, saare levels aur saari zubanein har user ke liye free hain — koi daily limit nahi. Premium (Rs. 299/mahina ya Rs. 999/saal) content nahi kholta; woh sirf tajurba behtar banata hai: zero ads, unlimited hearts, progress reports, certificate, offline packs aur cosmetics.</p>],
   ["Accounts", <ul key="2" className="list-disc space-y-1.5 ps-5">
     <li>Ek insaan, ek account — multi-account se leaderboard ranking invalid.</li>
     <li>Guest progress login par merge hota hai; merge reversible nahi.</li>
@@ -17,7 +17,7 @@ const SECTIONS: Array<[string, React.ReactNode]> = [
     <li>Leaderboard ranks final hote hain — manual review ke baad.</li>
   </ul>],
   ["Payments & refunds", <ul key="4" className="list-disc space-y-1.5 ps-5">
-    <li>Premium Rs. 399/mahina ya Rs. 3,990/saal — auto-renew, cancel email se kabhi bhi.</li>
+    <li>Premium Rs. 299/mahina ya Rs. 999/saal — auto-renew, cancel kabhi bhi (email ya /account se). Yearly par 7-din free trial optional hai. Refund 7 din ke andar.</li>
     <li>Refund: 7 din ke andar, agar 3 se kam games khele hon — no questions asked.</li>
     <li>Coins in-app currency hain; cash redemption nahi.</li>
   </ul>],
