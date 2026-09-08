@@ -6,6 +6,7 @@ import type { GameProps } from "@/components/game-shell";
 import type { QuizQ } from "@/lib/quiz-types";
 import { shuffle } from "@/lib/utils";
 import { sfx } from "@/lib/sfx";
+import { usePlayer } from "@/lib/store";
 
 export type QuizEngineProps = GameProps & {
   questions: QuizQ[];
@@ -26,6 +27,7 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
   const [left, setLeft] = useState(seconds);
   const [startedAt] = useState(() => Date.now());
   const answeredRef = useRef(false);
+  const addMistake = usePlayer((s) => s.addMistake);
 
   const q = pool[idx];
 
@@ -51,7 +53,16 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx]);
 
-  const advance = (wasCorrect: boolean) => {
+  const advance = (wasCorrect: boolean, given = "") => {
+    // wrong answers feed the personal Mistakes Review set
+    if (!wasCorrect && q) {
+      addMistake({
+        topic: `quiz-${zoneLabel.toLowerCase().replace(/\s+/g, "-")}`,
+        prompt: q.q,
+        correct: q.opts.find((o) => o.correct)?.text ?? "",
+        given,
+      });
+    }
     const nc = correct + (wasCorrect ? 1 : 0);
     const nstreak = wasCorrect ? streak + 1 : 0;
     setCorrect(nc);
@@ -82,7 +93,7 @@ export default function QuizEngine({ questions, count = 10, seconds = 20, onEnd,
     const ok = q.opts[i].correct;
     if (ok) sfx("correct");
     else sfx("wrong");
-    advance(ok);
+    advance(ok, q.opts[i].text);
   };
 
   return (

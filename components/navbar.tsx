@@ -9,6 +9,7 @@ import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 import { LogoMark } from "./brand/ustad";
 import { AccountWidget, MobileAccountChip, NavCoinAnchor } from "./account-widget";
+import { NavPremiumChip } from "./premium/premium-nudge";
 
 const LINKS = [
   { href: "/learn", key: "nav.learn" },
@@ -63,6 +64,7 @@ export function Navbar() {
         </nav>
 
         <div className="ms-auto flex items-center gap-2">
+          <NavPremiumChip />
           <NavCoinAnchor />
           <MobileAccountChip />
           <AccountWidget />

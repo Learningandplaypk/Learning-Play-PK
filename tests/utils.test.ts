@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { shuffle, rng, pktDayKey, pktDayOffset, fmt, isPhonePk } from "@/lib/utils";
-import { registerPlay, isLimitReached, freshUsage, remainingToday, bumpUsage, DAILY_REWARDS } from "@/lib/gamification";
+import { registerPlay, DAILY_REWARDS } from "@/lib/gamification";
 
 describe("utils", () => {
   it("shuffle is a permutation and seeded-stable", () => {
@@ -39,7 +39,7 @@ describe("utils", () => {
   });
 });
 
-describe("streak + limits", () => {
+describe("streak", () => {
   it("consecutive-day play increments streak; gap without freeze resets", () => {
     let s = { streak: 0, best: 0, lastDay: "", freezes: 2 };
     const r1 = registerPlay(s, "2026-09-01");
@@ -68,18 +68,6 @@ describe("streak + limits", () => {
     const r = registerPlay(s, "2026-09-01");
     expect(r.next.streak).toBe(3);
     expect(r.streakUp).toBe(false);
-  });
-
-  it("free plan: 5 games/day, 3 lessons/day; premium unlimited", () => {
-    let u = freshUsage("2026-09-03");
-    for (let i = 0; i < 5; i++) u = bumpUsage(u, "other", "2026-09-03");
-    expect(isLimitReached(u, "other", false, "2026-09-03")).toBe(true);
-    expect(isLimitReached(u, "other", true, "2026-09-03")).toBe(false);
-    let u2 = freshUsage("2026-09-03");
-    for (let i = 0; i < 3; i++) u2 = bumpUsage(u2, "learn", "2026-09-03");
-    expect(isLimitReached(u2, "learn", false, "2026-09-03")).toBe(true);
-    const rem = remainingToday(u, false, "2026-09-03");
-    expect(rem.games).toBe(0);
   });
 
   it("7 daily rewards defined with day cycle 1..7", () => {

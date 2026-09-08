@@ -25,12 +25,23 @@ service cloud.firestore {
           ['uid','name','displayName','avatar','email','xp','coins','streak','bestStreak',
            'lastActiveDay','freezes','hints','badges','wordsLearned','quizCorrect','perfectScores',
            'results','premium','premiumExpiry','isPremium','premiumPlan','premiumSince',
-           'rewardCycleDay','lastRewardDay','lang','fcmToken','updatedAt','createdAt','rewards'])
+           'premiumProvider','trialEnd','rewardCycleDay','lastRewardDay','lang','fcmToken',
+           'updatedAt','createdAt','rewards','lastActive',
+           // monetization rebuild — client-writable comfort state
+           'hearts','heartsState','heartsAt','mistakes','frame','themeSkin','cosmetics','downloads',
+           'premiumCycle','allowance','freezesUsedThisMonth','repairsUsedThisMonth','certificates'])
         && request.resource.data.xp is int && request.resource.data.xp >= 0
         && request.resource.data.xp <= 5000000
         && request.resource.data.coins is int && request.resource.data.coins >= 0
         && request.resource.data.coins <= 100000
-        && (!('isPremium' in request.resource.data) || request.resource.data.isPremium == false);
+        // entitlement fields are SERVER-ONLY: webhooks (Admin SDK) bypass rules,
+        // clients may never grant themselves premium.
+        && (!('isPremium' in request.resource.data) || request.resource.data.isPremium == false)
+        && !('premiumExpiry' in request.resource.data)
+        && !('premiumPlan' in request.resource.data)
+        && !('premiumSince' in request.resource.data)
+        && !('premiumProvider' in request.resource.data)
+        && !('trialEnd' in request.resource.data);
       allow delete: if isSignedIn() && request.auth.uid == uid;
     }
 
@@ -59,6 +70,13 @@ service cloud.firestore {
       allow create: if collection.matches('content_questions_.*') && isSignedIn()
         && request.resource.data.q is string;
       allow update, delete: if false;
+    }
+
+    // certificates/{code} — public read so /verify/[code] works for anyone
+    // (employers, teachers). Written only by the server after a premium check.
+    match /certificates/{code} {
+      allow read: if true;
+      allow write: if false;
     }
 
     // server-only (Admin SDK bypasses rules)

@@ -6,6 +6,7 @@ import { ENGLISH_WORDS } from "@/data/english";
 import { getLanguage } from "@/lib/langs";
 import { shuffle } from "@/lib/utils";
 import { sfx } from "@/lib/sfx";
+import { usePlayer } from "@/lib/store";
 
 const PAIRS_PER_ROUND = 5;
 const ROUNDS = 3;
@@ -41,6 +42,8 @@ export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
   const [score, setScore] = useState(0);
   const [left, setLeft] = useState(ROUND_TIME);
   const [startedAt] = useState(() => Date.now());
+  const addMistake = usePlayer((s) => s.addMistake);
+  const useHeart = usePlayer((s) => s.useHeart);
 
   useEffect(() => {
     const pairs = rounds[round];
@@ -95,6 +98,13 @@ export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
       }
     } else {
       sfx("wrong");
+      // feed Mistakes Review + spend a heart (premium = unlimited, never blocks)
+      const pair = lefts.find((p) => p.id === selLeft);
+      const wrongChoice = rights.find((p) => p.id === id);
+      if (pair) {
+        addMistake({ topic: lang, prompt: pair.left, correct: pair.right, given: wrongChoice?.right ?? "" });
+      }
+      useHeart();
       setWrongPair(id);
       setTimeout(() => setWrongPair(null), 500);
       setSelLeft(null);
