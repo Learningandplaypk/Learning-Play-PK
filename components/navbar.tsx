@@ -3,13 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Flame, Home, Gamepad2, GraduationCap, Moon, Sun, Trophy, User, Zap } from "lucide-react";
-import { cn, fmt } from "@/lib/utils";
+import { Gamepad2, GraduationCap, Home, Moon, Sun, Trophy, User } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
-import { usePlayer } from "@/lib/store";
-import { levelFromXp } from "@/lib/gamification";
 import { useTheme } from "@/lib/theme";
 import { LogoMark } from "./brand/ustad";
+import { AccountWidget, MobileAccountChip, NavCoinAnchor } from "./account-widget";
 
 const LINKS = [
   { href: "/learn", key: "nav.learn" },
@@ -29,9 +28,6 @@ export function Navbar() {
   const pathname = usePathname();
   const { t } = useI18n();
   const { theme, toggle } = useTheme();
-  const xp = usePlayer((s) => s.xp);
-  const streak = usePlayer((s) => s.streak);
-  const level = levelFromXp(xp).level;
 
   return (
     <header className="sticky top-0 z-[100] border-b border-line bg-surface/95 backdrop-blur-md supports-[backdrop-filter]:bg-surface/80">
@@ -43,7 +39,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav aria-label="Main navigation" className="ml-2 hidden items-center gap-1 md:flex">
+        <nav aria-label="Main navigation" className="ms-2 hidden items-center gap-1 md:flex">
           {LINKS.map((l) => {
             const active = isActive(pathname, l.href);
             return (
@@ -66,22 +62,10 @@ export function Navbar() {
           })}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2">
-          <span className="hidden items-center gap-1.5 rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs font-bold text-accent-ink sm:flex">
-            <Zap size={14} strokeWidth={2.5} aria-hidden />
-            <span className="tnum">{fmt(xp)}</span>
-            <span className="sr-only">XP</span>
-          </span>
-          <span
-            className={cn(
-              "hidden items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-bold sm:flex",
-              streak > 0 ? "border-accent/40 bg-accent-tint text-accent-ink" : "border-line bg-surface-2 text-muted"
-            )}
-          >
-            <Flame size={14} strokeWidth={2.5} aria-hidden />
-            <span className="tnum">{streak}</span>
-            <span className="sr-only">day streak</span>
-          </span>
+        <div className="ms-auto flex items-center gap-2">
+          <NavCoinAnchor />
+          <MobileAccountChip />
+          <AccountWidget />
 
           <button
             type="button"
@@ -91,14 +75,6 @@ export function Navbar() {
           >
             {theme === "dark" ? <Sun size={18} strokeWidth={2} /> : <Moon size={18} strokeWidth={2} />}
           </button>
-
-          <Link
-            href="/profile"
-            aria-label={`Profile — level ${level}`}
-            className="grid h-11 w-11 place-items-center rounded-lg border border-line bg-brand-tint text-sm font-extrabold text-brand-ink transition-colors hover:bg-brand-tint/70"
-          >
-            <span className="tnum">{level}</span>
-          </Link>
         </div>
       </div>
     </header>
@@ -138,7 +114,13 @@ export function MobileTabs() {
                 active ? "text-brand-ink" : "text-muted"
               )}
             >
-              <Icon size={22} strokeWidth={active ? 2.5 : 2} aria-hidden />
+              <Icon
+                key={active ? `on:${pathname}` : href}
+                size={22}
+                strokeWidth={active ? 2.5 : 2}
+                aria-hidden
+                className={active ? "tab-bounce" : undefined}
+              />
               <span className="leading-none">{label}</span>
             </Link>
           );

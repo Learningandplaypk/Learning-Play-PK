@@ -6,7 +6,7 @@ import { Modal, Progress, useCountUp } from "./ui";
 import { levelFromXp, levelTitle } from "@/lib/gamification";
 import { usePlayer } from "@/lib/store";
 import { sfx } from "@/lib/sfx";
-import confetti from "canvas-confetti";
+import { burstConfetti } from "@/lib/celebrate";
 import { Ustad } from "./brand/ustad";
 import { fmt } from "@/lib/utils";
 
@@ -31,9 +31,7 @@ export function LevelUpHost() {
     shownRef.current = key;
     show(outcome.leveledTo);
     sfx("levelup");
-    if (sound && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      confetti({ particleCount: 90, spread: 70, origin: { y: 0.75 }, colors: ["#178A55", "#F5A524", "#12734A"] });
-    }
+    if (sound) void burstConfetti(0.75);
   }, [outcome, show, sound]);
 
   return <LevelUpModal />;

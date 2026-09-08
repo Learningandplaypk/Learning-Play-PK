@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ArrowRight, Check, Coins, Flame, Gift, GraduationCap, Quote, Target, Zap } from "lucide-react";
 import { Button, ButtonLink, Card, Chip, Progress, SectionHeading } from "@/components/ui";
@@ -11,6 +12,16 @@ import { fmt, pktDayKey } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
 import { HeroVisual } from "@/components/home3d/hero-visual";
 import { ZoneArt, Ustad, type ZoneKey } from "@/components/brand/ustad";
+import { Reveal } from "@/components/motion/reveal";
+import { InViewCounter } from "@/components/home/in-view-counter";
+
+const HomeScroll = dynamic(() => import("@/components/home/home-scroll"), { ssr: false });
+
+const HOW = [
+  { n: "01", title: "Seekho", body: "Zubaan chuno — English se Korean tak, Urdu meanings ke sath." },
+  { n: "02", title: "Khelo", body: "Words, quiz, snake, sudoku — har game XP deta hai." },
+  { n: "03", title: "Jeeto", body: "Streak jalao, badges kholo, leaderboard par naam likhwao." },
+];
 
 const ZONES: Array<{ id: ZoneKey; title: string; line: string; count: string; href: string }> = [
   { id: "learn", title: "Learn", line: "8 zubanein — words, grammar, listening, pronunciation.", count: "8 languages", href: "/learn" },
@@ -177,6 +188,7 @@ export default function HomeClient() {
 
   return (
     <div className="pb-24 md:pb-10">
+      <HomeScroll />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* ------------------------------- HERO ------------------------------- */}
@@ -256,8 +268,8 @@ export default function HomeClient() {
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {ZONES.map((z) => (
             <Link key={z.id} href={z.href} className="group">
-              <Card className="flex h-full flex-col p-4 transition-colors group-hover:border-brand">
-                <span className="mb-4 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint">
+              <Card className="card-interactive flex h-full flex-col p-4 transition-colors group-hover:border-brand">
+                <span className="card-art mb-4 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint">
                   <ZoneArt zone={z.id} className="h-9 w-9" />
                 </span>
                 <h3 className="font-display text-lg font-extrabold text-fg">{z.title}</h3>
@@ -269,10 +281,69 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* -------------------------- HOW IT WORKS --------------------------- */}
+      <section id="how-it-works" className="container-page page-pad py-10">
+        <Reveal>
+          <SectionHeading title="Kaise kaam karta hai" sub="Teen simple qadam — seekho, khelo, jeeto." />
+        </Reveal>
+        <div className="grid gap-3 md:grid-cols-3">
+          {HOW.map((step, i) => (
+            <Reveal key={step.n} delay={i * 80}>
+              <Card
+                data-step
+                data-active={i === 0 ? "true" : "false"}
+                className="h-full p-5 transition-colors data-[active=true]:border-brand"
+              >
+                <p className="font-display text-sm font-black text-brand-ink">{step.n}</p>
+                <h3 className="mt-2 font-display text-lg font-extrabold text-fg">{step.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted">{step.body}</p>
+              </Card>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* -------------------------- TODAY'S CHALLENGES --------------------- */}
       <section className="container-page page-pad py-10">
-        <SectionHeading title="Aaj ke challenges" sub="Chhote goals — roz thora thora, bara farq." />
-        <TodayChallenges />
+        <Reveal>
+          <SectionHeading title="Aaj ke challenges" sub="Chhote goals — roz thora thora, bara farq." />
+        </Reveal>
+        <Reveal>
+          <TodayChallenges />
+        </Reveal>
+      </section>
+
+      {/* -------------------------- GAMIFICATION --------------------------- */}
+      <section className="container-page page-pad py-4">
+        <Reveal>
+          <Card className="p-5 sm:p-6">
+            <h2 className="font-display text-xl font-extrabold text-fg">XP, streak, badges</h2>
+            <p className="mt-1 text-sm text-muted">Har game aapko aage le jata hai — aaj ka progress yeh raha.</p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
+              {[
+                { label: "Level", value: lv.progress * 100, tone: "brand" as const, caption: `Lv ${lv.level} · ${levelTitle(lv.level)}` },
+                { label: "Streak", value: Math.min(100, streak * 10), tone: "accent" as const, caption: `${streak} din` },
+                { label: "Coins", value: Math.min(100, coins), tone: "brand" as const, caption: `${fmt(coins)} coins` },
+              ].map((row) => (
+                <div key={row.label}>
+                  <div className="mb-1.5 flex justify-between text-xs text-muted">
+                    <span>{row.label}</span>
+                    <span>{row.caption}</span>
+                  </div>
+                  <div className="track">
+                    <span
+                      data-fill
+                      style={{
+                        width: `${row.value}%`,
+                        background: row.tone === "accent" ? "var(--accent)" : "var(--brand)",
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </Reveal>
       </section>
 
       {/* ---------------------------- SOCIAL PROOF ------------------------- */}
@@ -280,12 +351,14 @@ export default function HomeClient() {
         <Card className="p-5 sm:p-6">
           <div className="grid gap-6 sm:grid-cols-3 sm:gap-4">
             {[
-              { v: "43", l: "Games — sab free" },
-              { v: "8", l: "Zubanein, Urdu meanings ke sath" },
-              { v: "450+", l: "Quiz sawalat" },
+              { v: 43, suffix: "", l: "Games — sab free" },
+              { v: 8, suffix: "", l: "Zubanein, Urdu meanings ke sath" },
+              { v: 450, suffix: "+", l: "Quiz sawalat" },
             ].map((s) => (
-              <div key={s.l} className="text-center sm:text-left">
-                <div className="font-display text-3xl font-black text-fg tnum">{s.v}</div>
+              <div key={s.l} className="text-center sm:text-start">
+                <div className="font-display text-3xl font-black text-fg">
+                  <InViewCounter value={s.v} suffix={s.suffix} />
+                </div>
                 <div className="text-sm text-muted">{s.l}</div>
               </div>
             ))}

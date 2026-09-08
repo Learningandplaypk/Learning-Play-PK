@@ -28,7 +28,7 @@ export function ConsentBanner() {
   if (!visible) return null;
   return (
     <div
-      className="fixed inset-x-3 z-[250] mx-auto max-w-xl md:left-4 md:mx-0"
+      className="fixed inset-x-3 z-[250] mx-auto max-w-xl md:start-4 md:mx-0"
       style={{ bottom: "calc(4.75rem + env(safe-area-inset-bottom, 0px))" }}
       role="region"
       aria-label="Cookie consent"

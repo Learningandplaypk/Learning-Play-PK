@@ -148,7 +148,7 @@ export function PremiumClient() {
         {/* --------------------------- comparison --------------------------- */}
         <Card className="overflow-x-auto p-5 sm:p-6">
           <h2 className="mb-4 font-display text-base font-extrabold text-fg">Free vs Premium</h2>
-          <table className="w-full text-left text-sm">
+          <table className="w-full text-start text-sm">
             <caption className="sr-only">Comparison of the free plan and Premium</caption>
             <thead>
               <tr className="text-xs uppercase tracking-wider text-muted">
@@ -166,7 +166,7 @@ export function PremiumClient() {
             <tbody>
               {COMPARE.map(([f, a, b]) => (
                 <tr key={f} className="border-t border-line">
-                  <th scope="row" className="py-2.5 pr-2 text-left font-semibold text-fg">
+                  <th scope="row" className="py-2.5 pe-2 text-start font-semibold text-fg">
                     {f}
                   </th>
                   <td className="py-2.5 text-center text-muted">

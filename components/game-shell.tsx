@@ -9,8 +9,8 @@ import { levelFromXp, levelTitle, xpForGame } from "@/lib/gamification";
 import { pushProgressToFirestore } from "@/lib/sync";
 import { sfx } from "@/lib/sfx";
 import { fmt } from "@/lib/utils";
-import confetti from "canvas-confetti";
 import { useI18n } from "@/lib/i18n";
+import { burstConfetti, flyCoins } from "@/lib/celebrate";
 import type { GameData } from "@/lib/games-data";
 import { ALL_GAME_DATA } from "@/lib/games-data";
 import { ZoneArt } from "@/components/brand/ustad";
@@ -31,8 +31,6 @@ export type GameProps = {
 };
 
 export type GameMeta = GameData & { load: React.ComponentType<GameProps> };
-
-const CONFETTI_COLORS = ["#178A55", "#F5A524", "#12734A"];
 
 function ShareRow({ title, scoreText }: { title: string; scoreText: string }) {
   const [copied, setCopied] = useState(false);
@@ -88,7 +86,8 @@ function Stars({ value }: { value: number }) {
           key={i}
           size={26}
           strokeWidth={2}
-          className={i <= value ? "text-accent" : "text-[var(--border)]"}
+          className={i <= value ? "star-fill text-accent" : "text-[var(--border)]"}
+          style={i <= value ? { animationDelay: `${(i - 1) * 140}ms` } : undefined}
           fill={i <= value ? "var(--accent)" : "none"}
           aria-hidden
         />
@@ -145,8 +144,11 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
       const q = result.maxScore > 0 ? result.score / result.maxScore : 0;
       if (q >= 0.6) {
         sfx("win");
-        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!reduce) confetti({ particleCount: 110, spread: 70, origin: { y: 0.65 }, colors: CONFETTI_COLORS });
+        void burstConfetti(0.65);
+        window.setTimeout(() => {
+          const coin = document.getElementById("game-over-coins");
+          flyCoins(coin?.getBoundingClientRect() ?? null);
+        }, 400);
       } else {
         sfx("lose");
       }
@@ -195,7 +197,7 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
       </div>
 
       {phase.current === "intro" && (
-        <Card className="mx-auto max-w-xl p-6 text-left sm:p-8">
+        <Card className="mx-auto max-w-xl p-6 text-start sm:p-8">
           <span className="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint">
             <ZoneArt zone={meta.zone} className="h-8 w-8" />
           </span>
@@ -253,7 +255,7 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
               <div className="font-display text-2xl font-black text-brand-ink tnum">+{fmt(xpShown)}</div>
               <div className="text-[11px] uppercase tracking-wide text-muted">XP</div>
             </div>
-            <div className="rounded-xl border border-line bg-accent-tint p-3 text-center">
+            <div id="game-over-coins" className="rounded-xl border border-line bg-accent-tint p-3 text-center">
               <div className="font-display text-2xl font-black text-accent-ink tnum">+{fmt(outcome.coins)}</div>
               <div className="text-[11px] uppercase tracking-wide text-muted">Coins</div>
             </div>

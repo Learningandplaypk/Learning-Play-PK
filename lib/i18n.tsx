@@ -2,6 +2,10 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import type { LangKey } from "./store";
+import { usePlayer } from "./store";
+import { isLangKey, documentLangAttrs } from "./i18n-core";
+
+export { isLangKey, documentLangAttrs } from "./i18n-core";
 
 /**
  * Lightweight 3-locale system: English, Roman Urdu, اردو (RTL).
@@ -21,25 +25,57 @@ const ur: Dict = {"nav.home": "ہوم","nav.learn": "سیکھیں","nav.brain": 
 
 const DICTS: Record<LangKey, Dict> = { en, roman, ur };
 
+export function applyDocumentLang(lang: LangKey): void {
+  if (typeof document === "undefined") return;
+  const { dir, htmlLang } = documentLangAttrs(lang);
+  const root = document.documentElement;
+  root.setAttribute("dir", dir);
+  root.setAttribute("lang", htmlLang);
+  root.classList.toggle("lang-ur", lang === "ur");
+}
+
 type I18nCtx = { lang: LangKey; setLang: (l: LangKey) => void; t: (k: string) => string; rtl: boolean };
 
 const Ctx = createContext<I18nCtx>({ lang: "roman", setLang: () => {}, t: (k) => k, rtl: false });
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<LangKey>("roman");
+  const storeLang = usePlayer((s) => s.lang);
+  const hydrated = usePlayer((s) => s.hydrated);
+  const setPlayer = usePlayer((s) => s.setPlayer);
 
   useEffect(() => {
-    const saved = localStorage.getItem("learnplay-lang") as LangKey | null;
-    if (saved && DICTS[saved]) setLangState(saved);
-  }, []);
+    let saved: LangKey | null = null;
+    try {
+      const raw = localStorage.getItem("learnplay-lang");
+      if (isLangKey(raw)) saved = raw;
+    } catch {
+      /* storage unavailable */
+    }
+    let next: LangKey = saved ?? "roman";
+    if (hydrated && isLangKey(storeLang)) {
+      // learnplay-lang is what the language picker / QA writes; if it disagrees
+      // with the default store value, the chrome key wins and we copy it in.
+      if (saved && saved !== storeLang && storeLang === "roman") {
+        next = saved;
+        setPlayer({ lang: saved });
+      } else {
+        next = storeLang;
+      }
+    }
+    setLangState(next);
+    applyDocumentLang(next);
+  }, [hydrated, storeLang, setPlayer]);
 
   const setLang = (l: LangKey) => {
     setLangState(l);
+    setPlayer({ lang: l });
     try {
       localStorage.setItem("learnplay-lang", l);
     } catch {
       /* storage unavailable */
     }
+    applyDocumentLang(l);
   };
 
   const t = (k: string) => DICTS[lang][k] ?? en[k] ?? k;

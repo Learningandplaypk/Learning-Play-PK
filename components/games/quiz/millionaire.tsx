@@ -164,7 +164,7 @@ export default function Millionaire({ onEnd }: GameProps) {
                   key={i}
                   disabled={isHidden}
                   onClick={() => choose(i)}
-                  className={`flex items-center gap-2 rounded-xl border px-3 py-3 text-left text-sm font-semibold transition ${
+                  className={`flex items-center gap-2 rounded-xl border px-3 py-3 text-start text-sm font-semibold transition ${
                     isHidden
                       ? "border-line bg-surface-2 opacity-20 line-through": state === "idle"? "border-line bg-surface-2 hover:border-accent/70": state === "right"? "border-brand/80 bg-brand/20": state === "wrong"? "shake border-accent/80 bg-accent/20": "opacity-40"}`}
                 >

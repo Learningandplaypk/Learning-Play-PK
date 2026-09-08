@@ -147,7 +147,7 @@ export default function Crossword({ onEnd }: GameProps) {
             const isRight = checked && entries[key]?.toLowerCase() === cell.ch.toLowerCase();
             return (
               <div key={i} className="relative">
-                {cell.num && <span className="pointer-events-none absolute left-0.5 top-0 z-10 text-[8px] font-bold text-info-ink">{cell.num}</span>}
+                {cell.num && <span className="pointer-events-none absolute start-0.5 top-0 z-10 text-[8px] font-bold text-info-ink">{cell.num}</span>}
                 <input
                   maxLength={1}
                   value={entries[key] ?? ""}

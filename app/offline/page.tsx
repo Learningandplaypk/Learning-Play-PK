@@ -7,7 +7,7 @@ export const metadata = { title: "Offline" };
 export default function OfflinePage() {
   return (
     <div className="page-pad container-page flex min-h-[100dvh] max-w-md flex-col justify-center pb-24 pt-8">
-      <div className="card p-6 text-left sm:p-8">
+      <div className="card p-6 text-start sm:p-8">
         <div className="flex items-center gap-4">
           <Ustad mood="think" className="h-20 w-20 shrink-0" />
           <span className="grid h-11 w-11 place-items-center rounded-xl bg-surface-2 text-muted">

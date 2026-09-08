@@ -90,7 +90,7 @@ export default function SudokuGame({ onEnd }: GameProps) {
         <p className="mb-5 text-muted">Mushkilat chuno:</p>
         <div className="grid gap-3">
           {LEVELS.map((lv, i) => (
-            <button key={lv} onClick={() => start(lv)} className="card flex items-center justify-between px-6 py-4 text-left">
+            <button key={lv} onClick={() => start(lv)} className="card flex items-center justify-between px-6 py-4 text-start">
               <span className="font-display text-lg font-bold">{["🟢 Aasan", "🟡 Darmiyana", "🔴 Mushkil"][i]}</span>
               <span className="text-xs text-muted">{["38 clues", "30 clues", "24 clues"][i]}</span>
             </button>

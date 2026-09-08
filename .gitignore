@@ -16,4 +16,4 @@ test-results
 shots/
 reports/
 .qa-shot.mjs
-public/fonts/
+public/fonts/*.woff2

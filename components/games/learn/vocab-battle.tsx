@@ -116,7 +116,7 @@ export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
               key={p.id}
               onClick={() => tapLeft(p.id)}
               disabled={matched.includes(p.id)}
-              className={`card w-full px-3 py-3 text-left font-display text-sm font-bold transition ${
+              className={`card w-full px-3 py-3 text-start font-display text-sm font-bold transition ${
                 matched.includes(p.id) ? "opacity-30 line-through" : selLeft === p.id ? "!border-brand/80 bg-brand/10" : ""}`}
             >
               {p.left}
@@ -129,11 +129,11 @@ export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
               key={p.id}
               onClick={() => tapRight(p.id)}
               disabled={matched.includes(p.id)}
-              className={`urdu card w-full px-3 py-3 text-right text-sm transition ${
+              className={`urdu card w-full px-3 py-3 text-end text-sm transition ${
                 matched.includes(p.id) ? "opacity-30" : wrongPair === p.id ? "shake !border-accent/80" : "hover:!border-info/60"}`}
             >
               {p.right}
-              {p.sub && <span className="mt-0.5 block text-[10px] text-muted ltr:text-left" style={{ direction: "ltr" }}>{p.sub}</span>}
+              {p.sub && <span className="mt-0.5 block text-[10px] text-muted ltr:text-start" style={{ direction: "ltr" }}>{p.sub}</span>}
             </button>
           ))}
         </div>

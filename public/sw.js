@@ -1,5 +1,5 @@
 // Learn & Play PK — Service Worker (offline-first shell + runtime cache)
-const VERSION = "lpk-v4";
+const VERSION = "lpk-v5";
 const SHELL = [
   "/",
   "/learn",

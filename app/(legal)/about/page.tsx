@@ -26,7 +26,7 @@ export default function AboutPage() {
         </p>
         <div className="card p-5">
           <h2 className="font-display font-bold text-fg">Hamara wada</h2>
-          <ul className="mt-3 list-disc space-y-2 pl-5">
+          <ul className="mt-3 list-disc space-y-2 ps-5">
             <li><b className="text-brand-ink">Core education hamesha free</b> — English course, saare 43 games ki basic access, leaderboards.</li>
             <li><b className="text-info-ink">Roman Urdu + اردو</b> — jo zuban aap bolte hain usi mein seekhein.</li>
             <li><b className="text-info-ink">No pay-to-win</b> — premium sirf comfort ke liye, kabhi ability ke liye nahi.</li>

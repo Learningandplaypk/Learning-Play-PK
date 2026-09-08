@@ -113,7 +113,7 @@ export default function GrammarQuest({ onEnd }: GameProps) {
               <button
                 key={i}
                 onClick={() => choose(i)}
-                className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-[15px] font-semibold transition ${
+                className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-start text-[15px] font-semibold transition ${
                   state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
               >
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-surface-2 font-display text-xs font-black">{["A", "B", "C", "D"][i]}</span>
