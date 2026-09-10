@@ -2,28 +2,46 @@
 
 import React, { useMemo, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { STORIES } from "@/data/english/stories";
 import { shuffle } from "@/lib/utils";
+import { LessonEmpty, LessonLoading, useLangPack, useLessonScript } from "./lesson-bits";
 import { sfx } from "@/lib/sfx";
 
 /** Story Builder — complete 2 short stories per round by filling the blanks. */
-export default function StoryBuilder({ onEnd }: GameProps) {
-  const stories = useMemo(() => shuffle(STORIES).slice(0, 2), []);
+export default function StoryBuilder({ lang = "english", onEnd }: GameProps) {
+  const pack = useLangPack(lang);
+  const { rtl, family } = useLessonScript(lang);
+  const stories = useMemo(
+    () =>
+      pack
+        ? shuffle(pack.stories)
+            .slice(0, 2)
+            .map((s) => ({ ...s, blanks: s.blanks.map((b) => ({ options: b.o, a: b.a })) }))
+        : null,
+    [pack]
+  );
   const [storyIdx, setStoryIdx] = useState(0);
-  const [answers, setAnswers] = useState<number[]>(Array(stories[0].blanks.length).fill(-1));
+  const [answers, setAnswers] = useState<number[]>(Array(stories?.[0]?.blanks.length ?? 0).fill(-1));
   const [checked, setChecked] = useState(false);
   const [correct, setCorrect] = useState(0);
   const [startedAt] = useState(() => Date.now());
 
-  const story = stories[storyIdx];
+  const story = stories?.[storyIdx] ?? {
+    title: "",
+    emoji: "📖",
+    text: "",
+    en: "",
+    blanks: [] as Array<{ options: string[]; a: number }>,
+  };
 
-  const allAnswered = answers.every((a) => a >= 0);
+  const allAnswered = answers.length > 0 && answers.every((a) => a >= 0);
 
   const finish = (finalCorrect: number) => {
+    if (!stories) return;
     onEnd({ score: finalCorrect * 8, maxScore: stories.reduce((n, s) => n + s.blanks.length, 0) * 8, accuracy: finalCorrect / stories.reduce((n, s) => n + s.blanks.length, 0), timeMs: Date.now() - startedAt });
   };
 
   const check = () => {
+    if (!story) return;
     const good = answers.filter((a, i) => a === story.blanks[i].a).length;
     sfx(good === story.blanks.length ? "win" : good >= story.blanks.length / 2 ? "correct" : "wrong");
     setChecked(true);
@@ -31,12 +49,13 @@ export default function StoryBuilder({ onEnd }: GameProps) {
   };
 
   const next = () => {
-    if (storyIdx + 1 >= stories.length) {
+    if (!stories || !story) return;
+    if (storyIdx + 1 >= (stories?.length ?? 0)) {
       finish(correct);
     } else {
       const nsi = storyIdx + 1;
       setStoryIdx(nsi);
-      setAnswers(Array(stories[nsi].blanks.length).fill(-1));
+      setAnswers(Array(stories?.[nsi]?.blanks.length ?? 0).fill(-1));
       setChecked(false);
     }
   };
@@ -64,6 +83,9 @@ export default function StoryBuilder({ onEnd }: GameProps) {
       </p>
     );
   };
+
+  if (!pack) return <LessonLoading />;
+  if (!stories || stories.length === 0) return <LessonEmpty onEnd={onEnd} slug={lang} />;
 
   return (
     <div className="mx-auto max-w-xl">

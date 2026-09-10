@@ -2,9 +2,8 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { ENGLISH_WORDS } from "@/data/english";
-import { getLanguage } from "@/lib/langs";
 import { shuffle } from "@/lib/utils";
+import { LessonEmpty, LessonLoading, useLangPack, useLessonScript } from "./lesson-bits";
 import { sfx } from "@/lib/sfx";
 import { usePlayer } from "@/lib/store";
 
@@ -15,23 +14,16 @@ const ROUND_TIME = 45;
 type Pair = { id: number; left: string; right: string; sub?: string };
 
 export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
-  const rounds = useMemo<Pair[][]>(() => {
-    const pick = () => {
-      if (lang === "english") {
-        return shuffle(ENGLISH_WORDS.filter((w) => w.en.length <= 10))
-          .slice(0, PAIRS_PER_ROUND)
-          .map((w, i) => ({ id: i, left: w.en, right: w.ur }));
-      }
-      const data = getLanguage(lang);
-      return shuffle(data?.words ?? []).slice(0, PAIRS_PER_ROUND).map((w, i) => ({
-        id: i,
-        left: w.word.length <= 12 ? w.word : w.roman,
-        right: w.ur,
-        sub: w.en,
-      }));
-    };
+  const pack = useLangPack(lang);
+  const { rtl, family } = useLessonScript(lang);
+  const rounds = useMemo<Pair[][] | null>(() => {
+    if (!pack) return null;
+    const pick = () =>
+      shuffle(pack.words)
+        .slice(0, PAIRS_PER_ROUND)
+        .map((w, i) => ({ id: i, left: w.w.length <= 14 ? w.w : w.r, right: w.ur, sub: w.en }));
     return Array.from({ length: ROUNDS }, pick);
-  }, [lang]);
+  }, [pack]);
 
   const [round, setRound] = useState(0);
   const [lefts, setLefts] = useState<Pair[]>([]);
@@ -45,8 +37,12 @@ export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
   const addMistake = usePlayer((s) => s.addMistake);
   const useHeart = usePlayer((s) => s.useHeart);
 
+  if (!pack || !rounds) return <LessonLoading />;
+  if (rounds.length === 0) return <LessonEmpty onEnd={onEnd} slug={lang} />;
+
   useEffect(() => {
-    const pairs = rounds[round];
+    const pairs = rounds?.[round];
+    if (!pairs) return;
     setLefts(shuffle(pairs));
     setRights(shuffle(pairs));
     setMatched([]);
@@ -126,6 +122,8 @@ export default function VocabBattle({ lang = "english", onEnd }: GameProps) {
               key={p.id}
               onClick={() => tapLeft(p.id)}
               disabled={matched.includes(p.id)}
+              dir={rtl ? "rtl" : "ltr"}
+              style={family ? { fontFamily: family } : undefined}
               className={`card w-full px-3 py-3 text-start font-display text-sm font-bold transition ${
                 matched.includes(p.id) ? "opacity-30 line-through" : selLeft === p.id ? "!border-brand/80 bg-brand/10" : ""}`}
             >

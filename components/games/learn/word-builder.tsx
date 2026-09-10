@@ -2,35 +2,32 @@
 
 import React, { useMemo, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { ENGLISH_WORDS } from "@/data/english";
-import { getLanguage } from "@/lib/langs";
 import { shuffle } from "@/lib/utils";
 import { sfx } from "@/lib/sfx";
+import { LessonEmpty, LessonLoading, useLangPack, useLessonScript } from "./lesson-bits";
+
+/** Latin-script words are built letter-by-letter; everything else uses the romanization. */
+const LATIN = /^[A-Za-z\u00C0-\u024F\s'-]+$/;
 
 type Round = { target: string; display: string; hintUr: string; hintEn: string };
 
 const ROUNDS = 8;
 
 export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
-  const rounds = useMemo<Round[]>(() => {
-    if (lang === "english") {
-      return shuffle(ENGLISH_WORDS.filter((w) => w.en.length <= 8)).slice(0, ROUNDS).map((w) => ({
-        target: w.en,
-        display: w.en,
-        hintUr: w.ur,
-        hintEn: w.ex ?? "",
-      }));
-    }
-    const data = getLanguage(lang);
-    return shuffle((data?.words ?? []).filter((w) => w.word.length <= 10 && /^[a-zA-ZāīūūñöçğıöşüÇĞİÖŞÜáéíóúñàèùâêîôûëïü'-\s]+$/.test(w.word) || w.roman.length <= 10))
+  const pack = useLangPack(lang);
+  const { rtl, family } = useLessonScript(lang);
+  const rounds = useMemo<Round[] | null>(() => {
+    if (!pack) return null;
+    const pool = pack.words.filter((w) => LATIN.test(w.w) || (w.r.length >= 3 && w.r.length <= 12));
+    return shuffle(pool)
       .slice(0, ROUNDS)
       .map((w) => ({
-        target: /^[a-zA-Z\s'-]+$/.test(w.word) ? w.word : w.roman,
-        display: w.word,
-        hintUr: `${w.ur} (${w.en})`,
-        hintEn: data?.name ?? lang,
+        target: LATIN.test(w.w) ? w.w : w.r,
+        display: w.w,
+        hintUr: w.ur,
+        hintEn: w.en,
       }));
-  }, [lang]);
+  }, [pack]);
 
   const [idx, setIdx] = useState(0);
   const [built, setBuilt] = useState<number[]>([]);
@@ -38,10 +35,8 @@ export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
   const [wrongFlash, setWrongFlash] = useState(false);
   const [startedAt] = useState(() => Date.now());
 
-  if (rounds.length === 0) {
-    onEnd({ score: 0, maxScore: ROUNDS * 10, accuracy: 0, timeMs: 0 });
-    return null;
-  }
+  if (!pack) return <LessonLoading />;
+  if (!rounds || rounds.length === 0) return <LessonEmpty onEnd={onEnd} slug={lang} />;
 
   const round = rounds[idx];
   const letters = useMemo(() => shuffle(round.target.split("").map((ch, i) => ({ ch, i }))), [round.target]);
@@ -89,6 +84,13 @@ export default function WordBuilder({ lang = "english", onEnd }: GameProps) {
         <p className="text-xs uppercase tracking-widest text-muted">Yeh word banao</p>
         <p className={`urdu mt-2 text-3xl font-bold ${wrongFlash ? "text-accent-ink" : "text-brand-ink"}`}>{round.hintUr}</p>
         {round.hintEn && <p className="mt-1 text-xs text-muted">{round.hintEn}</p>}
+        <p
+          className="mt-3 text-2xl font-extrabold text-fg"
+          dir={rtl ? "rtl" : "ltr"}
+          style={family ? { fontFamily: family } : undefined}
+        >
+          {round.display}
+        </p>
 
         {/* built word */}
         <div className={`mt-6 flex min-h-16 flex-wrap items-center justify-center gap-1.5 ${wrongFlash ? "shake" : ""}`}>

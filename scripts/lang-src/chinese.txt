@@ -1,0 +1,146 @@
+# chinese — authored source (migrated from data/langs/chinese.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|我知道{s}这个词。|I know the word {en}.
+food|我喜欢{s}。|I like {en}.
+adjectives|这个房子很{s}。|The house is very {en}.
+verbs|我想{s}。|I want to {en}.
+colors|颜色是{s}。|The color is {en}.
+numbers|数字是{s}。|The number is {en}.
+
+@words
+book|书|shū
+pen|笔|bǐ
+water|水|shuǐ
+bread|面包|miànbāo
+house|家|jiā
+school|学校|xuéxiào
+friend|朋友|péngyou
+mother|妈妈|māma
+father|爸爸|bàba
+fish|鱼|yú
+car|汽车|qìchē
+road|路|lù
+city|城市|chéngshì
+village|村庄|cūnzhuāng
+rice|米饭|mǐfàn
+tea|茶|chá
+milk|牛奶|niúnǎi
+hand|手|shǒu
+eye|眼睛|yǎnjing
+heart|心|xīn
+day|天|tiān
+night|夜|yè
+time|时间|shíjiān
+money|钱|qián
+work|工作|gōngzuò
+teacher|老师|lǎoshī
+student|学生|xuésheng
+doctor|医生|yīshēng
+market|市场|shìchǎng
+price|价格|jiàgé
+door|门|mén
+window|窗|chuāng
+light|光|guāng
+morning|早上|zǎoshang
+evening|晚上|wǎnshang
+week|星期|xīngqī
+month|月|yuè
+year|年|nián
+peace|和平|hépíng
+meat|肉|ròu
+egg|鸡蛋|jīdàn
+salt|盐|yán
+sugar|糖|táng
+apple|苹果|píngguǒ
+grapes|葡萄|pútáo
+tomato|西红柿|xīhóngshì
+table|桌子|zhuōzi
+chair|椅子|yǐzi
+bed|床|chuáng
+room|房间|fángjiān
+bus|公交车|gōngjiāochē
+train|火车|huǒchē
+airplane|飞机|fēijī
+beautiful|漂亮|piàoliang
+big|大|dà
+small|小|xiǎo
+new|新|xīn
+old|旧|jiù
+fast|快|kuài
+slow|慢|màn
+to eat|吃|chī
+to drink|喝|hē
+to speak|说话|shuōhuà
+to read|读|dú
+to write|写|xiě
+to go|去|qù
+to come|来|lái
+to love|爱|ài
+to sleep|睡觉|shuìjiào
+color|颜色|yánsè
+red|红|hóng
+blue|蓝|lán
+green|绿|lǜ
+yellow|黄|huáng
+black|黑|hēi
+white|白|bái
+child|小孩|xiǎohái
+
+# unmatched (not in _concepts.txt) — 20 entries carried over as extras:
+sun|太阳|tàiyáng||سورج|n|time|A2
+moon|月亮|yuèliang||چاند|n|time|A2
+star|星星|xīngxing||ستارہ|n|time|A2
+tree|树|shù||درخت|n|home|A2
+flower|花|huā||پھول|n|home|A2
+bird|鸟|niǎo||پرندہ|n|school|A2
+food|食物|shíwù||کھانا|n|food|A2
+wind|风|fēng||ہوا|n|home|A2
+rain|雨|yǔ||بارش|n|home|A2
+sea|海|hǎi||سمندر|n|travel|A2
+mountain|山|shān||پہاڑ|n|travel|A2
+orange|橙子|chéngzi||سنترا|n|food|A2
+to see / watch|看|kàn||دیکھنا|v|verbs|A2
+to study|学习|xuéxí||پڑھائی کرنا|v|school|A2
+boy|男孩|nánhái||لڑکا|n|family|A2
+girl|女孩|nǚhái||لڑکی|n|family|A2
+man|男人|nánrén||آدمی|n|family|A2
+woman|女人|nǚrén||عورت|n|family|A2
+dog|狗|gǒu||کتا|n|school|A2
+cat|猫|māo||بلی|n|school|A2
+
+@phrases
+你好|nǐ hǎo|Hello|سلام|greeting
+你好吗？|nǐ hǎo ma|How are you?|آپ کیسے ہیں؟|smalltalk
+我很好，谢谢|wǒ hěn hǎo, xièxie|I'm fine, thanks|ٹھیک ہوں، شکریہ|polite
+你叫什么名字？|nǐ jiào shénme míngzi|What's your name?|آپ کا نام کیا ہے؟|smalltalk
+我叫阿里|wǒ jiào Ali|My name is Ali|میرا نام علی ہے|smalltalk
+你从哪里来？|nǐ cóng nǎlǐ lái|Where are you from?|آپ کہاں سے ہیں؟|travel
+我从巴基斯坦来|wǒ cóng Pakistan lái|I'm from Pakistan|میں پاکستان سے ہوں|smalltalk
+非常感谢|fēicháng gǎnxiè|Thank you very much|بہت شکریہ|polite
+不客气|bú kèqi|You're welcome|کوئی بات نہیں|greeting
+是 / 不是|shì / bú shì|Yes / No|ہاں / نہیں|smalltalk
+我要水|wǒ yào shuǐ|I want water|مجھے پانی چاہیے|food
+多少钱？|duōshao qián|How much money?|کتنے پیسے؟|shopping
+学校在哪里？|xuéxiào zài nǎlǐ|Where is the school?|اسکول کہاں ہے؟|travel
+我不明白|wǒ bù míngbai|I don't understand|میں نہیں سمجھا|school
+请说慢一点|qǐng shuō màn yīdiǎn|Please speak slowly|آہستہ بولیں|polite
+早上好|zǎoshang hǎo|Good morning|صبح بخیر|greeting
+晚上好|wǎnshang hǎo|Good evening|شام بخیر|greeting
+再见|zàijiàn|Goodbye|خدا حافظ|greeting
+谢谢你|xièxie nǐ|Thank you|شکریہ|polite
+对不起|duìbuqǐ|Sorry|معاف کیجیے|polite
+没关系|méi guānxi|It's okay|کوئی بات نہیں|smalltalk
+帮助我|bāngzhù wǒ|Help me|میری مدد کریں|health
+很好吃|hěn hǎochī|Very tasty|بہت مزیدار|food
+我爱你|wǒ ài nǐ|I love you|میں تم سے محبت کرتا ہوں|smalltalk
+当然|dāngrán|Of course|بیشک|polite
+我想要这个|wǒ xiǎng yào zhège|I want this|مجھے یہ چاہیے|greeting
+现在几点？|xiànzài jǐ diǎn|What time is it?|اب کیا وقت ہوا؟|smalltalk
+今天天气很好|jīntiān tiānqì hěn hǎo|The weather is nice today|آج موسم اچھا ہے|food
+祝你好运|zhù nǐ hǎoyùn|Good luck|خوش قسمتی|smalltalk
+

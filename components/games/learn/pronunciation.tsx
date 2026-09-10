@@ -2,22 +2,37 @@
 
 import React, { useMemo, useRef, useState } from "react";
 import type { GameProps, GameResult } from "@/components/game-shell";
-import { ENGLISH_WORDS } from "@/data/english";
-import { getLanguage } from "@/lib/langs";
 import { shuffle } from "@/lib/utils";
 import { sfx } from "@/lib/sfx";
+import { getLangMeta } from "@/lib/lang-registry";
+import { LessonLoading, TtsNote, useLangPack, useLessonScript } from "./lesson-bits";
+
+const LATIN = /^[A-Za-z\u00C0-\u024F\s'-]+$/;
 
 const ROUNDS = 8;
 
 /** Speech recognition with graceful fallback to listen-and-type. */
 export default function Pronunciation({ lang = "english", onEnd }: GameProps) {
-  const words = useMemo(() => {
-    if (lang === "english") return shuffle(ENGLISH_WORDS.filter((w) => w.lv <= 2)).slice(0, ROUNDS);
-    const data = getLanguage(lang);
-    return shuffle((data?.words ?? []).filter((w) => w.roman.length <= 10)).slice(0, ROUNDS).map((w) => ({ en: w.word, ur: `${w.roman} — ${w.ur}` }));
-  }, [lang]);
+  const pack = useLangPack(lang);
+  const { rtl, family } = useLessonScript(lang);
+  const codes = getLangMeta(lang)?.tts ?? ["en-US"];
+  const code = codes[0];
 
-  const code = lang === "english" ? "en-US" : (getLanguage(lang)?.code ?? "en-US");
+  /**
+   * `en` is what speech recognition is compared against: the word itself for
+   * Latin scripts, the romanization for the rest (recognizers return Latin).
+   */
+  const words = useMemo(() => {
+    if (!pack) return null;
+    return shuffle(pack.words.filter((w) => (LATIN.test(w.w) ? w.w : w.r).length <= 14))
+      .slice(0, ROUNDS)
+      .map((w) => ({
+        en: LATIN.test(w.w) ? w.w : w.r,
+        native: w.w,
+        ur: w.ur,
+        meaning: w.en,
+      }));
+  }, [pack]);
   const [idx, setIdx] = useState(0);
   const [supported, setSupported] = useState<boolean | null>(null);
   const [listening, setListening] = useState(false);
@@ -28,7 +43,8 @@ export default function Pronunciation({ lang = "english", onEnd }: GameProps) {
   const [startedAt] = useState(() => Date.now());
   const recRef = useRef<unknown>(null);
 
-  const word = words[idx];
+  if (!pack) return <LessonLoading />;
+  const word = words?.[idx];
   if (!word) {
     // defensive: empty pool (shouldn't happen with current data) — end cleanly without calling onEnd during render
     return <GameEndZero onEnd={onEnd} />;
@@ -99,14 +115,22 @@ export default function Pronunciation({ lang = "english", onEnd }: GameProps) {
 
   return (
     <div className="mx-auto max-w-lg text-center">
+      <TtsNote codes={codes} />
       <div className="mb-4 flex justify-center gap-2 text-sm">
-        <span className="chip">{idx + 1}/{words.length}</span>
+        <span className="chip">{idx + 1}/{words?.length ?? ROUNDS}</span>
         <span className="chip">🎯 {score}</span>
       </div>
       <div className="card p-8">
         <p className="text-xs uppercase tracking-widest text-muted">Yeh word bolein</p>
-        <p className="mt-3 font-display text-4xl font-black ">{word.en}</p>
-        <p className="urdu mt-2 text-lg text-brand-ink">{word.ur}</p>
+        <p
+          className="mt-3 font-display text-4xl font-black"
+          dir={rtl ? "rtl" : "ltr"}
+          style={family ? { fontFamily: family } : undefined}
+        >
+          {word.native}
+        </p>
+        <p className="mt-1 text-sm text-muted">{word.en}</p>
+        <p className="urdu mt-2 text-lg text-brand-ink">{word.ur} — {word.meaning}</p>
 
         <button
           onClick={startListening}

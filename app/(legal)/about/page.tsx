@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="mb-8">
         <Ustad mood="happy" className="mb-4 h-20 w-20" />
         <h1 className="font-display text-3xl font-black text-fg sm:text-4xl">Seekho + Khelo</h1>
-        <p className="mt-2 text-base text-muted">43 games, 8 zubanein, Urdu meanings ke sath — sab free.</p>
+        <p className="mt-2 text-base text-muted">43 games, 21 zubanein, Urdu meanings ke sath — sab free.</p>
       </div>
 
       <div className="space-y-6 text-[15px] leading-relaxed text-muted">
@@ -34,7 +34,7 @@ export default function AboutPage() {
           </ul>
         </div>
         <p>
-          Platform par 43 games hain — 8 lesson games jo 8 languages mein kaam karte hain (English full course, Arabic Quranic set samet), 10 brain teasers, 10 quiz topics aur 15 arcade games. Sab kuch browser mein — install, download, 50MB — kuch nahi chahiye.
+          Platform par 43 games hain — 8 lesson games jo 21 languages mein kaam karte hain (English full course, Urdu, Arabic Quranic set samet, German, French, Spanish, Turkish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Hindi, Bengali, Malay, Persian, Punjabi, Pashto, Sindhi aur Balochi), 10 brain teasers, 10 quiz topics aur 15 arcade games. Sab kuch browser mein — install, download, 50MB — kuch nahi chahiye.
         </p>
         <p className="font-display text-lg font-extrabold text-fg">Chalo shuru karein?</p>
         <div className="mt-3 flex flex-wrap gap-3">

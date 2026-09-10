@@ -13,6 +13,9 @@ import { pushProgressToFirestore } from "@/lib/sync";
 import { sfx } from "@/lib/sfx";
 import { fmt } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
+import { useLangFont } from "@/lib/lang-fonts";
+import { getLangMeta } from "@/lib/lang-registry";
+import { lessonDirection } from "@/lib/lang-paths";
 import { burstConfetti, flyCoins } from "@/lib/celebrate";
 import type { GameData } from "@/lib/games-data";
 import { ALL_GAME_DATA } from "@/lib/games-data";
@@ -115,6 +118,10 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
     return rows.length ? Math.max(...rows.map((r) => r.score)) : 0;
   });
 
+  // Lesson screens only: RTL direction + the language's self-hosted script font.
+  const langMeta = meta.zone === "learn" ? getLangMeta(lang) : undefined;
+  const scriptFamily = useLangFont(langMeta?.font);
+
   useEffect(() => () => phase.dispose(), [phase]);
 
   // No limits: a game always starts. There is nothing to check.
@@ -133,6 +140,8 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
         flag: result.flag,
         words: result.words,
         quizCorrect: result.quizCorrect,
+        // learn-zone results are attributed to a language for per-language XP
+        lang: meta.zone === "learn" ? lang : undefined,
       });
       setOutcome(o);
       setLastResult(result);
@@ -228,7 +237,16 @@ export function GameShell({ meta, lang, backHref }: { meta: GameMeta; lang?: str
         </Card>
       )}
 
-      {phase.current === "playing" && <Game lang={lang} onEnd={handleEnd} />}
+      {phase.current === "playing" && (
+        <div
+          className="lesson-scope"
+          dir={lessonDirection(meta.zone, lang)}
+          lang={langMeta?.slug}
+          style={scriptFamily ? { fontFamily: scriptFamily } : undefined}
+        >
+          <Game lang={lang} onEnd={handleEnd} />
+        </div>
+      )}
 
       {phase.current === "over" && outcome && !premium && (
         <AdSlot

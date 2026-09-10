@@ -1,0 +1,676 @@
+# Russian (Русский) — authored source for data/langs/russian.json
+# Cyrillic, LTR. Romanization: a, ya, yu, e, yo, i, y; kh (х), sh (ш),
+# shch (щ), zh (ж), ch (ч), ts (ц); apostrophe = soft sign.
+
+@info
+romanization|Roman Russian: a, ya, yu, e, yo, i, y; kh, sh, shch, zh, ch, ts; apostrophe for the soft sign.
+alphabet.title|Русский алфавит
+alphabet.intro|33 буквы. Ударение не обозначается на письме, поэтому его нужно запоминать.
+
+@frames
+greetings|Скажите: {s}.|Say: {en}.
+numbers|У меня {s} яблок.|I have {en} apples.
+family|Это {s}.|This is my {en}.
+food|Я люблю {s}.|I like {en}.
+travel|Где {s}?|Where is the {en}?
+time|Я иду в школу {s}.|I go to school {en}.
+colors|Небо {s}.|The sky is {en}.
+body|{s} болит.|My {en} hurts.
+home|Здесь {s}.|Here is the {en}.
+work|Это {s}.|Here is the {en}.
+school|Это {s}.|Here is the {en}.
+shopping|Это {s}.|Here is the {en}.
+emotions|Я чувствую {s}.|I feel {en}.
+verbs|Я каждый день {s}.|This means: {en}.
+adjectives|Дом {s}.|The house is {en}.
+
+@words
+hello|здравствуйте|zdravstvuyte
+goodbye|до свидания|do svidaniya
+good morning|доброе утро|dobroye utro
+good evening|добрый вечер|dobryy vecher
+good night|спокойной ночи|spokoynoy nochi
+thank you|спасибо|spasibo
+please|пожалуйста|pozhaluysta
+sorry|извините|izvinite
+excuse me|простите|prostite
+yes|да|da
+no|нет|net
+welcome|добро пожаловать|dobro pozhalovat'
+how are you|как дела?|kak dela
+my name is|меня зовут|menya zovut||Меня зовут Али.|My name is Ali.
+nice to meet you|очень приятно|ochen' priyatno
+see you later|до встречи|do vstrechi
+good luck|удачи|udachi
+congratulations|поздравляю|pozdravlyayu
+help|помощь|pomoshch'
+of course|конечно|konechno
+zero|ноль|nol'||В расчёте напишите ноль.|Write a zero in the calculation.
+one|один|odin
+two|два|dva
+three|три|tri
+four|четыре|chetyre
+five|пять|pyat'
+six|шесть|shest'
+seven|семь|sem'
+eight|восемь|vosem'
+nine|девять|devyat'
+ten|десять|desyat'
+eleven|одиннадцать|odinnadtsat'
+twelve|двенадцать|dvenadtsat'
+thirteen|тринадцать|trinadtsat'
+fourteen|четырнадцать|chetirnadtsat'
+fifteen|пятнадцать|pyatnadtsat'
+twenty|двадцать|dvadtsat'
+thirty|тридцать|tridtsat'
+forty|сорок|sorok
+fifty|пятьдесят|pyat'desyat
+hundred|сто|sto
+thousand|тысяча|tysyacha
+first|первый|perviy||Это первый урок.|This is the first lesson.
+second|второй|vtoroy||Это вторая комната.|This is the second room.
+half|половина|polovina||Половина стакана воды.|Half a glass of water.
+mother|мама|mama|моя мама
+father|папа|papa|мой папа
+brother|брат|brat|мой брат
+sister|сестра|sestra|моя сестра
+son|сын|syn|его сын
+daughter|дочь|doch'|её дочь
+child|ребёнок|rebyonok|этот ребёнок
+baby|младенец|mladenets|этот младенец
+family|семья|sem'ya|моя семья
+husband|муж|muzh|её муж
+wife|жена|zhena|его жена
+uncle|дядя|dyadya|мой дядя
+aunt|тётя|tyotya|моя тётя
+grandfather|дедушка|dedushka|мой дедушка
+grandmother|бабушка|babushka|моя бабушка
+cousin|двоюродный брат|dvoyurodnyy brat|мой двоюродный брат
+nephew|племянник|plemyannik|его племянник
+friend|друг|drug|мой друг
+neighbour|сосед|sosed|мой сосед
+parent|родители|roditeli|мои родители
+water|вода|voda
+bread|хлеб|khleb
+rice|рис|ris
+milk|молоко|moloko
+tea|чай|chay
+sugar|сахар|sakhar
+salt|соль|sol'
+egg|яйцо|yaytso
+meat|мясо|myaso
+chicken|курица|kuritsa
+fish|рыба|ryba
+apple|яблоко|yabloko
+banana|банан|banan
+mango|манго|mango
+orange (fruit)|апельсин|apel'sin
+grapes|виноград|vinograd
+lemon|лимон|limon
+tomato|помидор|pomidor
+onion|лук|luk
+potato|картофель|kartofel'
+carrot|морковь|morkov'
+oil|масло|maslo
+butter|сливочное масло|slivochnoye maslo
+honey|мёд|myod
+juice|сок|sok
+coffee|кофе|kofe
+soup|суп|sup
+breakfast|завтрак|zavtrak
+lunch|обед|obed
+dinner|ужин|uzhin
+car|машина|mashina
+bus|автобус|avtobus
+train|поезд|poyezd
+airplane|самолёт|samolyot
+bicycle|велосипед|velosiped
+road|дорога|doroga
+street|улица|ulitsa
+bridge|мост|most
+station|вокзал|vokzal
+airport|аэропорт|aeroport
+ticket|билет|bilet
+map|карта|karta
+city|город|gorod
+village|деревня|derevnya
+country|страна|strana
+hotel|гостиница|gostinitsa
+journey|путешествие|puteshestviye
+luggage|багаж|bagazh
+driver|водитель|voditel'
+passport|паспорт|pasport
+time|время|vremya||Время идёт очень быстро.|Time passes very quickly.
+day|день|den'||Принимайте лекарство два раза в день.|Take the medicine twice a day.
+night|ночь|noch'||Ночью небо чистое.|The sky is clear at night.
+morning|утро|utro||Утром я пью чай.|In the morning I drink tea.
+evening|вечер|vecher||Вечером мы отдыхаем.|In the evening we rest.
+week|неделя|nedelya||Раз в неделю я хожу на рынок.|I go to the market once a week.
+month|месяц|mesyats||Зарплата приходит в конце месяца.|The salary comes at the end of the month.
+year|год|god||В году четыре сезона.|Four seasons come in a year.
+hour|час|chas||Приходите на час раньше.|Come one hour earlier.
+minute|минута|minuta||Подождите пять минут.|Wait five minutes.
+today|сегодня|segodnya
+tomorrow|завтра|zavtra
+yesterday|вчера|vchera
+now|сейчас|seychas
+later|позже|pozzhe
+early|рано|rano
+late|поздно|pozdno
+always|всегда|vsegda
+sometimes|иногда|inogda
+never|никогда|nikogda
+color|цвет|tsvet||Цвет этой ткани тёмный.|The color of this cloth is dark.
+red|красный|krasnyy
+blue|синий|siniy
+green|зелёный|zelyonyy
+yellow|жёлтый|zholtyy
+black|чёрный|chyornyy
+white|белый|belyy
+brown|коричневый|korichnevyy
+grey|серый|seryy
+pink|розовый|rozovyy
+purple|фиолетовый|fioletovyy
+orange (color)|оранжевый|oranzhevyy
+body|тело|telo||Телу нужен отдых.|The body needs rest.
+head|голова|golova
+hair|волосы|volosy||Мои волосы чёрные.|My hair is black.
+face|лицо|litso
+eye|глаз|glaz
+ear|ухо|ukho
+nose|нос|nos
+mouth|рот|rot
+tooth|зуб|zub
+tongue|язык|yazyk||Языком чувствуется вкус.|The tongue feels the taste.
+neck|шея|sheya||Держите шею прямо.|Keep the neck straight.
+shoulder|плечо|plecho
+hand|рука|ruka
+finger|палец|palets
+leg|нога|noga
+foot|ступня|stupnya
+heart|сердце|serdtse
+stomach|живот|zhivot
+house|дом|dom
+room|комната|komnata
+door|дверь|dver'
+window|окно|okno
+wall|стена|stena
+roof|крыша|krysha
+floor|пол|pol
+kitchen|кухня|kukhnya
+bathroom|ванная|vannaya
+bed|кровать|krovat'
+table|стол|stol
+chair|стул|stul
+sofa|диван|divan
+lamp|лампа|lampa
+key|ключ|klyuch
+stairs|лестница|lestnitsa
+garden|сад|sad
+light|свет|svet
+fan|вентилятор|ventilyator
+mirror|зеркало|zerkalo
+work|работа|rabota
+job|должность|dolzhnost'
+office|офис|ofis
+money|деньги|den'gi
+salary|зарплата|zarplata
+meeting|совещание|soveshchaniye
+boss|начальник|nachal'nik
+employee|сотрудник|sotrudnik
+business|бизнес|biznes
+company|компания|kompaniya
+market|рынок|rynok
+shop|магазин|magazin
+customer|покупатель|pokupatel'
+price|цена|tsena
+farmer|фермер|fermer
+doctor|врач|vrach
+teacher|учитель|uchitel'
+police|полиция|politsiya
+school|школа|shkola
+book|книга|kniga
+pen|ручка|ruchka
+pencil|карандаш|karandash
+page|страница|stranitsa
+class|класс|klass
+student|студент|student
+lesson|урок|urok
+exam|экзамен|ekzamen
+question|вопрос|vopros
+answer|ответ|otvet
+homework|домашнее задание|domashneye zadaniye
+library|библиотека|biblioteka
+university|университет|universitet
+language|язык|yazyk
+word|слово|slovo
+sentence|предложение|predlozheniye
+dictionary|словарь|slovar'
+science|наука|nauka
+history|история|istoriya
+knowledge|знание|znaniye
+education|образование|obrazovaniye
+shopping|покупки|pokupki||Сегодня вечером нужно сделать покупки.|We have to go shopping tonight.
+buy|покупать|pokupat'||Он покупает овощи.|He is buying vegetables.
+sell|продавать|prodavat'||Фермер продаёт фрукты на рынке.|The farmer sells fruit at the market.
+cheap|дешёвый|deshyovyy||Эта ткань дешёвая.|This cloth is cheap.
+expensive|дорогой|dorogoy||Телефон дорогой.|The phone is expensive.
+coin|монета|moneta
+note|купюра|kupyura
+bill|счёт|schyot
+size|размер|razmer
+discount|скидка|skidka
+receipt|чек|chek
+bag|сумка|sumka
+rupee|рупия|rupiya
+weigh|взвешивать|vzveshivat'||Продавец взвешивает овощи.|The shopkeeper weighs the vegetables.
+pay|платить|platit'||Платите картой.|Pay by card.
+happiness|радость|radost'
+sadness|грусть|grust'
+anger|гнев|gnev
+fear|страх|strakh
+love|любовь|lyubov'
+hope|надежда|nadezhda
+worry|беспокойство|bespokoystvo
+surprise|удивление|udivleniye
+peace|покой|pokoy
+smile|улыбка|ulybka
+laugh|смех|smekh
+crying|плач|plach
+mood|настроение|nastroyeniye
+brave|смелый|smelyy||Он смелый мальчик.|He is a brave boy.
+lonely|одинокий|odinokiy||Он чувствует себя одиноким.|He feels lonely.
+to eat|есть|yest'|ем
+to drink|пить|pit'|пью
+to go|идти|idti|иду
+to come|приходить|prikhodit'|прихожу
+to see|видеть|videt'|вижу
+to hear|слышать|slyshat'|слышу
+to speak|говорить|govorit'|говорю
+to read|читать|chitat'|читаю
+to write|писать|pisat'|пишу
+to learn|учить|uchit'|учу
+to teach|преподавать|prepodavat'|преподаю
+to sleep|спать|spat'|сплю
+to wake up|просыпаться|prosypat'sya|просыпаюсь
+to run|бегать|begat'|бегаю
+to walk|ходить|khodit'|хожу
+to open|открывать|otkryvat'|открываю
+to close|закрывать|zakryvat'|закрываю
+to give|давать|davat'|даю
+to take|брать|brat'|беру
+to make|делать|delat'|делаю
+to love|любить|lyubit'|люблю
+to think|думать|dumat'|думаю
+to understand|понимать|ponimat'|понимаю
+to work|работать|rabotat'|работаю
+to wait|ждать|zhdat'|жду
+big|большой|bol'shoy
+small|маленький|malen'kiy
+new|новый|novyy
+old|старый|staryy
+good|хороший|khoroshiy
+bad|плохой|plokhoy
+beautiful|красивый|krasivyy
+hot|горячий|goryachiy||Сегодня очень жарко.|It is very hot today.
+cold|холодный|kholodnyy||Вода холодная.|The water is cold.
+fast|быстрый|bystryy
+slow|медленный|medlennyy
+easy|лёгкий|lyogkiy
+difficult|трудный|trudnyy
+long|длинный|dlinnyy
+short|короткий|korotkiy
+clean|чистый|chistyy
+dirty|грязный|gryaznyy
+happy|счастливый|schastlivyy||Дети очень счастливы.|The children are very happy.
+tired|уставший|ustavshiy||Сегодня я устал.|I am tired today.
+hungry|голодный|golodnyy||Ребёнок голодный.|The child is hungry.
+
+@phrases
+Здравствуйте!|zdravstvuyte|Hello (formal)!|Здравствуйте!|greeting
+До свидания!|do svidaniya|Goodbye!|До свидания!|greeting
+Доброе утро!|dobroye utro|Good morning!|Доброе утро!|greeting
+Добрый вечер!|dobryy vecher|Good evening!|Добрый вечер!|greeting
+Спокойной ночи!|spokoynoy nochi|Good night!|Спокойной ночи!|greeting
+Как дела?|kak dela|How are you?|Как дела?|smalltalk
+Хорошо, спасибо.|khorosho spasibo|Fine, thank you.|Хорошо, спасибо.|smalltalk
+Большое спасибо!|bol'shoye spasibo|Thank you very much!|Большое спасибо!|polite
+Пожалуйста.|pozhaluysta|You're welcome.|Пожалуйста.|polite
+Извините!|izvinite|Excuse me!|Извините!|polite
+Мне жаль.|mne zhal'|I am sorry.|Мне жаль.|polite
+Ничего страшного.|nichego strashnogo|No problem.|Ничего страшного.|polite
+Как вас зовут?|kak vas zovut|What is your name?|Как вас зовут?|smalltalk
+Меня зовут Аня.|menya zovut anya|My name is Anya.|Меня зовут Аня.|smalltalk
+Откуда вы?|otkuda vy|Where are you from?|Откуда вы?|smalltalk
+Я из Москвы.|ya iz moskvy|I am from Moscow.|Я из Москвы.|smalltalk
+Вы говорите по-английски?|vy govorite po-angliyski|Do you speak English?|Вы говорите по-английски?|smalltalk
+Я хочу учить русский.|ya khochu uchit' russkiy|I want to learn Russian.|Я хочу учить русский.|school
+Я не понял.|ya ne ponyal|I did not understand.|Я не понял.|school
+Говорите медленнее.|govorite medlenneye|Please speak slowly.|Говорите медленнее.|polite
+Что это значит?|chto eto znachit|What does this mean?|Что это значит?|school
+Сколько это стоит?|skol'ko eto stoit|How much does it cost?|Сколько это стоит?|shopping
+Я хочу это.|ya khochu eto|I want this.|Я хочу это.|shopping
+У вас есть меньший размер?|u vas yest' men'shiy razmer|Do you have a smaller size?|У вас есть меньший размер?|shopping
+Счёт, пожалуйста.|schyot pozhaluysta|The bill, please.|Счёт, пожалуйста.|shopping
+Я заплачу картой.|ya zaplachu kartoy|I will pay by card.|Я заплачу картой.|shopping
+Где вокзал?|gde vokzal|Where is the station?|Где вокзал?|travel
+Где туалет?|gde tualet|Where is the toilet?|Где туалет?|travel
+Этот автобус едет в Казань?|etot avtobus yedet v kazan'|Does this bus go to Kazan?|Этот автобус едет в Казань?|travel
+Во сколько идёт поезд?|vo skol'ko idyot poyezd|When does the train leave?|Во сколько идёт поезд?|travel
+Я заблудился.|ya zabludilsya|I am lost.|Я заблудился.|travel
+Вы можете помочь?|vy mozhete pomoch'|Can you help me?|Вы можете помочь?|polite
+Мне нужен врач.|mne nuzhen vrach|I need a doctor.|Мне нужен врач.|health
+Мне нездоровится.|mne nezdorovitsya|I am not feeling well.|Мне нездоровится.|health
+Где аптека?|gde apteka|Where is the pharmacy?|Где аптека?|health
+У меня болит голова.|u menya bolit golova|I have a headache.|У меня болит голова.|health
+Чашку чая, пожалуйста.|chashku chaya pozhaluysta|A cup of tea, please.|Чашку чая, пожалуйста.|food
+Меню, пожалуйста.|menyu pozhaluysta|The menu, please.|Меню, пожалуйста.|food
+Очень вкусно.|ochen' vkusno|It is very tasty.|Очень вкусно.|food
+Я вегетарианец.|ya vegetariyanets|I am a vegetarian.|Я вегетарианец.|food
+Я голоден.|ya goloden|I am hungry.|Я голоден.|food
+Я не ем мясо.|ya ne yem myaso|I don't eat meat.|Я не ем мясо.|food
+Вода холодная.|voda kholodnaya|The water is cold.|Вода холодная.|food
+Сегодня хорошая погода.|segodnya khoroshaya pogoda|The weather is nice today.|Сегодня хорошая погода.|smalltalk
+Я работаю в офисе.|ya rabotayu v ofise|I work in an office.|Я работаю в офисе.|work
+Где вы работаете?|gde vy rabotayete|Where do you work?|Где вы работаете?|work
+Зарплата приходит в конце месяца.|zarplata prikhodit v kontse mesyatsa|The salary comes at month end.|Зарплата приходит в конце месяца.|work
+Завтра у меня совещание.|zavtra u menya soveshchaniye|I have a meeting tomorrow.|Завтра у меня совещание.|work
+Я учусь в университете.|ya uchus' v universitete|I study at the university.|Я учусь в университете.|school
+Во сколько начинается урок?|vo skol'ko nachinayetsya urok|When does the class start?|Во сколько начинается урок?|school
+Экзамен был лёгкий.|ekzamen byl lyogkiy|The exam was easy.|Экзамен был лёгкий.|school
+Я люблю читать книги.|ya lyublyu chitat' knigi|I like reading books.|Я люблю читать книги.|school
+Это новое слово.|eto novoye slovo|This word is new.|Это новое слово.|school
+Я каждый день учу русский.|ya kazhdyy den' uchu russkiy|I learn Russian every day.|Я каждый день учу русский.|school
+Сегодня понедельник.|segodnya ponedel'nik|Today is Monday.|Сегодня понедельник.|time
+Который час?|kotoryy chas|What time is it?|Который час?|time
+У меня нет времени.|u menya net vremeni|I have no time.|У меня нет времени.|time
+Я приду в шесть.|ya pridu v shest'|I will come at six.|Я приду в шесть.|time
+В воскресенье я свободен.|v voskresen'ye ya svoboden|I am free on Sunday.|В воскресенье я свободен.|time
+Это моя мама.|eto moya mama|This is my mother.|Это моя мама.|family
+Мой папа много работает.|moy papa mnogo rabotayet|My father works a lot.|Мой папа много работает.|family
+Моя сестра врач.|moya sestra vrach|My sister is a doctor.|Моя сестра врач.|family
+Наша семья большая.|nasha sem'ya bol'shaya|Our family is big.|Наша семья большая.|family
+Ребёнок играет в саду.|rebyonok igrayet v sadu|The child plays in the garden.|Ребёнок играет в саду.|family
+Мой дом маленький.|moy dom malen'kiy|My house is small.|Мой дом маленький.|home
+Кухня чистая.|kukhnya chistaya|The kitchen is clean.|Кухня чистая.|home
+Окно открыто.|okno otkryto|The window is open.|Окно открыто.|home
+Я закрываю дверь.|ya zakryvayu dver'|I close the door.|Я закрываю дверь.|home
+Свет погас.|svet pogas|The light went out.|Свет погас.|home
+Сейчас я иду спать.|seychas ya idyu spat'|I am going to sleep now.|Сейчас я иду спать.|home
+Где мой паспорт?|gde moy pasport|Where is my passport?|Где мой паспорт?|travel
+Рейс задерживается.|reys zaderzhivayetsya|The flight is delayed.|Рейс задерживается.|travel
+Багаж очень тяжёлый.|bagazh ochen' tyazhyolyy|The luggage is very heavy.|Багаж очень тяжёлый.|travel
+Счастливого пути!|schastlivogo puti|Have a good trip!|Счастливого пути!|travel
+Мне нужен номер на две ночи.|mne nuzhen nomer na dve nochi|I need a room for two nights.|Мне нужен номер на две ночи.|travel
+Идите прямо.|idite pryamo|Go straight ahead.|Идите прямо.|travel
+Поверните налево.|povernite nalevo|Turn left.|Поверните налево.|travel
+Где рынок?|gde rynok|Where is the market?|Где рынок?|shopping
+Цена слишком высокая.|tsena slishkom vysokaya|The price is too high.|Цена слишком высокая.|shopping
+Сделайте скидку, пожалуйста.|sdelayte skidku pozhaluysta|Please give a discount.|Сделайте скидку, пожалуйста.|shopping
+Я только смотрю.|ya tol'ko smotryu|I am just looking.|Я только смотрю.|shopping
+Дайте чек, пожалуйста.|dayte chek pozhaluysta|Please give the receipt.|Дайте чек, пожалуйста.|shopping
+Приятного аппетита!|priyatnogo appetita|Enjoy your meal!|Приятного аппетита!|food
+После еды пьём чай.|posle yedy p'yom chay|We drink tea after the meal.|После еды пьём чай.|food
+Дайте холодной воды.|dayte kholodnoy vody|Give me cold water.|Дайте холодной воды.|food
+Не беспокойтесь.|ne bespokoystes'|Don't worry.|Не беспокойтесь.|emotion
+Я горжусь вами.|ya gorzhus' vami|I am proud of you.|Я горжусь вами.|emotion
+Приятно слышать.|priyatno slyshat'|I am glad to hear that.|Приятно слышать.|emotion
+Мне страшно.|mne strashno|I am scared.|Мне страшно.|emotion
+Рад вас видеть.|rad vas videt'|Good to see you.|Рад вас видеть.|smalltalk
+Поздравляю!|pozdravlyayu|Congratulations!|Поздравляю!|greeting
+Добро пожаловать!|dobro pozhalovat'|Welcome!|Добро пожаловать!|greeting
+Выздоравливайте!|vyzdaravlivayte|Get well soon!|Выздоравливайте!|health
+Одну минуту, пожалуйста.|odnu minutu pozhaluysta|One moment, please.|Одну минуту, пожалуйста.|polite
+Сейчас приду.|seychas pridu|I'll be right there.|Сейчас приду.|smalltalk
+Я не знаю.|ya ne znayu|I don't know.|Я не знаю.|smalltalk
+Может быть позже.|mozhet byt' pozzhe|Maybe later.|Может быть позже.|smalltalk
+Я согласен.|ya soglasen|I agree.|Я согласен.|smalltalk
+Это неправильно.|eto nepravil'no|That is not right.|Это неправильно.|smalltalk
+Что вы делаете сегодня?|chto vy delayete segodnya|What are you doing today?|Что вы делаете сегодня?|smalltalk
+Я готовлюсь к экзамену.|ya gotovlyus' k ekzamenu|I am preparing for the exam.|Я готовлюсь к экзамену.|school
+Мне нужна помощь.|mne nuzhna pomoshch'|I need help.|Мне нужна помощь.|polite
+Спасибо за помощь.|spasibo za pomoshch'|Thank you for your help.|Спасибо за помощь.|polite
+Это первый раз.|eto pervyy raz|This is the first time.|Это первый раз.|smalltalk
+Где обменять деньги?|gde obmenyat' den'gi|Where can I exchange money?|Где обменять деньги?|travel
+Автобус приходит в восемь.|avtobus prikhodit v vosem'|The bus comes at eight.|Автобус приходит в восемь.|travel
+Я опоздал на поезд.|ya opozdal na poyezd|I missed my train.|Я опоздал на поезд.|travel
+Гостиница очень хорошая.|gostinitsa ochen' khoroshaya|The hotel is very good.|Гостиница очень хорошая.|travel
+Кем вы работаете?|kem vy rabotayete|What is your job?|Кем вы работаете?|work
+Я инженер.|ya inzhener|I am an engineer.|Я инженер.|work
+Она всегда помогает.|ona vsegda pomogayet|She always helps.|Она всегда помогает.|smalltalk
+Мы учимся вместе.|my uchimsya vmeste|We learn together.|Мы учимся вместе.|school
+Мой русский становится лучше.|moy russkiy stanovitsya luchshe|My Russian is getting better.|Мой русский становится лучше.|school
+Небо синее.|nebo sineye|The sky is blue.|Небо синее.|smalltalk
+Мой любимый цвет зелёный.|moy lyubimyy tsvet zelyonyy|My favourite color is green.|Мой любимый цвет зелёный.|smalltalk
+Красная машина быстрая.|krasnaya mashina bystraya|The red car is fast.|Красная машина быстрая.|smalltalk
+Ночь тихая.|noch' tikha|The night is quiet.|Ночь тихая.|time
+Сегодня идёт дождь.|segodnya idyot dozhd'|It is raining today.|Сегодня идёт дождь.|smalltalk
+Солнце светит.|solntse svetit|The sun is shining.|Солнце светит.|smalltalk
+Молодец!|molodets|Well done!|Молодец!|smalltalk
+Очень приятно.|ochen' priyatno|Nice to meet you.|Очень приятно.|greeting
+До встречи!|do vstrechi|We will meet again.|До встречи!|greeting
+Простите, что вы сказали?|prostite chto vy skazali|Pardon, what did you say?|Простите, что вы сказали?|polite
+Повторите, пожалуйста.|povtorite pozhaluysta|Please say it again.|Повторите, пожалуйста.|polite
+Как это пишется?|kak eto pishetsya|How do you spell it?|Как это пишется?|school
+Я очень люблю чай.|ya ochen' lyublyu chay|I love tea.|Я очень люблю чай.|food
+Еда готова.|yeda gotova|The food is ready.|Еда готова.|food
+Положите ещё еды в тарелку.|polozhite eshcho yedy v tarelku|Put more food on the plate.|Положите ещё еды в тарелку.|food
+Эта ткань хорошая.|eta tkan' khoroshaya|This cloth is good.|Эта ткань хорошая.|shopping
+Магазин закрыт.|magazin zakryt|The shop is closed.|Магазин закрыт.|shopping
+Я хожу на рынок каждый день.|ya khozhu na rynok kazhdyy den'|I go to the market every day.|Я хожу на рынок каждый день.|shopping
+Машина на дороге.|mashina na doroge|The car is on the road.|Машина на дороге.|travel
+Поверните у моста.|povernite u mosta|Turn near the bridge.|Поверните у моста.|travel
+Город очень большой.|gorod ochen' bol'shoy|The city is very big.|Город очень большой.|travel
+В деревне тихо.|v derevne tikho|It is quiet in the village.|В деревне тихо.|travel
+Я студент.|ya student|I am a student.|Я студент.|school
+Он хороший учитель.|on khoroshiy uchitel'|He is a good teacher.|Он хороший учитель.|school
+Вопрос трудный.|vopros trudnyy|The question is difficult.|Вопрос трудный.|school
+Ответ правильный.|otvet pravil'nyy|The answer is correct.|Ответ правильный.|school
+Книга на столе.|kniga na stole|The book is on the table.|Книга на столе.|school
+Кровать мягкая.|krovat' myagkaya|The bed is soft.|Кровать мягкая.|home
+Ключ потерян.|klyuch poteryan|The key is lost.|Ключ потерян.|home
+В саду цветы.|v sadu tsvety|There are flowers in the garden.|В саду цветы.|home
+Комната светлая.|komnata svetlaya|The room is bright.|Комната светлая.|home
+Поднимитесь по лестнице.|podnimites' po lestnitse|Go up the stairs.|Поднимитесь по лестнице.|home
+
+@grammar
+Род слова "стол" — ___ .|мужской|женский|средний|1|"Стол" is masculine.|Masculine nouns end in a consonant.
+Род слова "книга" — ___ .|женский|мужской|средний|1|"Книга" is feminine.|Feminine nouns usually end in "-а/-я".
+Род слова "окно" — ___ .|средний|мужской|женский|1|"Окно" is neuter.|Neuter nouns end in "-о/-е".
+Множественное число "стол" — ___ .|столы|стола|столов|1|Masculine plural adds "-ы/-и".|Masculine plurals take "-ы/-и".
+Множественное число "книга" — ___ .|книги|книгов|книгам|1|Feminine plural: книги.|Feminine plurals take "-ы/-и".
+"Я ___ ."|иду|идёт|идём|1|First person singular: я иду.|"Я" takes the "-у/-ю" ending.
+"Ты ___ ."|идёшь|иду|идёт|1|Second person singular: ты идёшь.|"Ты" takes "-ёшь/-ешь".
+"Он ___ ."|идёт|иду|идём|1|Third person singular: он идёт.|"Он" takes "-ёт/-ет".
+"Мы ___ ."|идём|иду|идёте|1|First person plural: мы идём.|"Мы" takes "-ём/-ем".
+"Вы ___ ."|идёте|иду|идут|1|"Вы" is polite and plural.|"Вы" takes "-ёте/-ете".
+"Они ___ ."|идут|идёт|идём|1|Third person plural: они идут.|"Они" takes "-ут/-ют".
+Прошедшее время "идти" (он) — ___ .|шёл|идёт|ходит|1|"Шёл" is the masculine past.|Past tense has three gender forms.
+Прошедшее время (она) — ___ .|шла|шёл|шло|1|"Шла" is the feminine past.|Feminine past ends in "-а".
+Прошедшее время (оно) — ___ .|шло|шла|шёл|1|"Шло" is the neuter past.|Neuter past ends in "-о".
+Будущее время "я ___ ."|пойду|иду|шёл|1|"Пойду" is the simple future.|Perfective verbs form the future directly.
+Отрицание делается с помощью ___ .|не|нет|ни|1|"Не" goes before the verb.|"Не" negates the verb.
+"У меня нет ___ ."|времени|время|временем|1|"Нет" requires the genitive: времени.|"Net" takes the genitive case.
+"У меня есть ___ ."|книга|книги|книгой|1|"Yest'" takes the nominative.|'Yest' ke baad nominative case aata hai.
+Винительный падеж отвечает на вопрос ___ .|кого? что?|кто? что?|кому? чему?|1|Accusative answers "кого? что?".|Accusative marks the direct object.
+Дательный падеж отвечает на вопрос ___ .|кому? чему?|кого? что?|кем? чем?|1|Dative answers "кому? чему?".|Dative marks the indirect object.
+Предложный падеж отвечает на вопрос ___ .|о ком? о чём?|кто? что?|кого? что?|1|Prepositional answers "о ком? о чём?".|Prepositional follows "о/в/на".
+Творительный падеж отвечает на вопрос ___ .|кем? чем?|кто? что?|кому? чему?|1|Instrumental answers "кем? чем?".|Instrumental marks the means.
+"В" + предложный падеж означает ___ .|место|направление|время|1|"В школе" = at school (location).|"V" + prepositional marks place.
+"В" + винительный падеж означает ___ .|направление|место|время|1|"В школу" = to school (direction).|"V" + accusative marks direction.
+"На" + винительный означает ___ .|направление|место|время|1|"На рынок" = to the market.|"Na" + accusative marks direction.
+"На" + предложный означает ___ .|место|направление|время|1|"На рынке" = at the market.|"Na" + prepositional marks place.
+"Из" означает ___ .|из/откуда|куда|когда|1|"Из Москвы" = from Moscow.|"Iz" marks origin.
+"С" + творительный означает ___ .|совместность|направление|время|1|"С другом" = with a friend.|"S" + instrumental means "with".
+"К" означает ___ .|к кому/чему|от кого|о ком|1|"К врачу" = to the doctor.|"K" takes the dative.
+"От" означает ___ .|от кого/чего|к кому|о ком|1|"От врача" = from the doctor.|"Ot" takes the genitive.
+"Для" означает ___ .|для кого/чего|от кого|к кому|1|"Для работы" = for work.|"Dlya" takes the genitive.
+"После" означает ___ .|после чего|до чего|о чём|1|"После урока" = after the lesson.|"Posle" takes the genitive.
+"До" означает ___ .|до чего|после чего|о чём|1|"До вечера" = until evening.|"Do" takes the genitive.
+Порядок слов в русском ___ .|свободный|жёсткий SVO|всегда SOV|1|Word order is flexible because of cases.|Cases allow free word order.
+Прилагательное стоит ___ .|перед существительным|после существительного|после глагола|1|Adjectives come before the noun: большой дом.|Adjectives precede the noun.
+В "большой дом" слово "большой" — ___ .|прилагательное|существительное|глагол|1|"Бол'шой" describes "дом".|"Bol'shoy" is an adjective.
+В "быстро бежит" слово "быстро" — ___ .|наречие|существительное|прилагательное|1|"Bystro" modifies the verb.|It is an adverb.
+Сравнительная степень — ___ .|больше|самый большой|большой|1|"Bolshe" = bigger.|Comparative uses "-е/-ее".
+Превосходная степень — ___ .|самый большой|больше|большой|1|"Samyy bol'shoy" = the biggest.|Superlative uses "samyy".
+"И" служит для ___ .|соединения|противопоставления|причины|1|"И" = and.|"I" means "and".
+"Но" служит для ___ .|противопоставления|соединения|причины|1|"Но" = but.|"No" means "but".
+"Потому что" указывает ___ .|причину|время|место|1|"Потому что" = because.|"Potomu chto" gives the reason.
+"Если" вводит ___ .|условие|время|место|1|"Если" = if.|"Esli" makes a condition.
+"Когда" указывает ___ .|время|место|причину|1|"Когда" = when.|"Kogda" refers to time.
+"Очень" — это ___ .|наречие|существительное|предлог|1|"Очень" = very.|"Ochen'" is an adverb.
+"Все" означает ___ .|все|никто|некоторые|1|"Vse" = all.|"Vse" means "all".
+"Никто" означает ___ .|никто|все|некоторые|1|"Nikto" = nobody.|"Nikto" means "nobody".
+"Некоторые" означает ___ .|некоторые|все|никто|1|"Nekotoryye" = some.|"Nekotoryye" means "some".
+"Каждый" означает ___ .|каждый|никто|некоторые|1|"Kazhdyy" = every.|"Kazhdyy" means "every".
+"Днём" указывает ___ .|время|место|причину|1|"Dnyom" = during the day.|"Dnyom" means "during the day".
+"Ночью" указывает ___ .|время|место|причину|1|"Noch'yu" = at night.|"Noch'yu" means "at night".
+"Завтра" означает ___ .|следующий день|сегодня|вчера|1|"Zavtra" = tomorrow.|"Zavtra" means "tomorrow".
+"Вчера" означает ___ .|прошлый день|завтра|сегодня|1|"Vchera" = yesterday.|"Vchera" means "yesterday".
+"Сейчас" означает ___ .|в этот момент|позже|раньше|1|"Seychas" = now.|"Seychas" means "now".
+"Всегда" означает ___ .|каждый раз|иногда|никогда|1|"Vsegda" = always.|"Vsegda" means "always".
+"Спасибо" выражает ___ .|благодарность|извинение|приветствие|1|"Spasibo" = thank you.|"Spasibo" is thanks.
+"Добро пожаловать" выражает ___ .|приветствие гостя|прощание|благодарность|1|"Dobro pozhalovat'" = welcome.|"Dobro pozhalovat'" greets a guest.
+"Да" означает ___ .|да|нет|может быть|1|"Да" = yes.|"Da" means "yes".
+"Нет" означает ___ .|нет|да|может быть|1|"Нет" = no.|"Net" means "no".
+
+Родительный падеж отвечает на вопрос ___ .|кого? чего?|кто? что?|кому? чему?|1|Genitive answers "кого? чего?" and marks possession.|Genitive marks possession.
+"Много" требует ___ .|родительного|винительного|дательного|1|"Много воды" — genitive after "mnogo".|"Mnogo" takes the genitive.
+
+@sentences
+Я пью чай каждое утро.|I drink tea every morning.|Я пью чай каждое утро.
+Мой брат учит немецкий.|My brother is learning German.|Мой брат учит немецкий.
+В воскресенье мы едем в Казань.|We go to Kazan on Sunday.|В воскресенье мы едем в Казань.
+Книга лежит на столе.|The book is lying on the table.|Книга лежит на столе.
+Вчера он написал письмо.|He wrote a letter yesterday.|Вчера он написал письмо.
+Вы можете мне помочь?|Can you help me?|Вы можете мне помочь?
+Я хочу два кофе и одну воду.|I want two coffees and a water.|Я хочу два кофе и одну воду.
+Поезд отправляется в восемь.|The train leaves at eight.|Поезд отправляется в восемь.
+Моя мама сегодня готовит рыбу.|My mother is cooking fish today.|Моя мама сегодня готовит рыбу.
+Он свободно говорит на трёх языках.|He speaks three languages fluently.|Он свободно говорит на трёх языках.
+Наш дом маленький, но чистый.|Our house is small but clean.|Наш дом маленький, но чистый.
+Я не совсем понял вопрос.|I did not fully understand the question.|Я не совсем понял вопрос.
+Сегодня очень хорошая погода.|The weather is really lovely today.|Сегодня очень хорошая погода.
+Завтра мне нужно встать рано.|Tomorrow I have to get up early.|Завтра мне нужно встать рано.
+Она работает в больнице.|She works in a hospital.|Она работает в больнице.
+Мы встречаемся перед школой.|We meet in front of the school.|Мы встречаемся перед школой.
+Он забыл телефон дома.|He forgot his phone at home.|Он забыл телефон дома.
+Сегодня я не иду в офис.|I am not going to the office today.|Сегодня я не иду в офис.
+Дети играют в футбол в саду.|The children play football in the garden.|Дети играют в футбол в саду.
+Вы можете открыть окно?|Can you open the window?|Вы можете открыть окно?
+Сегодня у меня много работы.|I have a lot of work today.|Сегодня у меня много работы.
+Мой папа любит читать газеты.|My father likes reading newspapers.|Мой папа любит читать газеты.
+Еда действительно очень вкусная.|The food is really very tasty.|Еда действительно очень вкусная.
+Мы ждём уже час.|We have been waiting for an hour.|Мы ждём уже час.
+Я учу русский для работы.|I learn Russian for my job.|Я учу русский для работы.
+Она из маленького города.|She is from a small town.|Она из маленького города.
+Я покупаю хлеб и молоко на рынке.|I buy bread and milk at the market.|Я покупаю хлеб и молоко на рынке.
+Он едет в офис на автобусе.|He goes to the office by bus.|Он едет в офис на автобусе.
+Вчера мы смотрели фильм.|We watched a film yesterday.|Вчера мы смотрели фильм.
+Сегодня вечером я отправлю тебе сообщение.|I will send you a message tonight.|Сегодня вечером я отправлю тебе сообщение.
+Гостиница недалеко от вокзала.|The hotel is not far from the station.|Гостиница недалеко от вокзала.
+Моя сестра учится на врача.|My sister is studying medicine.|Моя сестра учится на врача.
+В выходные у меня нет времени.|I have no time at the weekend.|В выходные у меня нет времени.
+Вечером он не пьёт кофе.|He does not drink coffee in the evening.|Вечером он не пьёт кофе.
+Нам нужны два билета в Москву.|We need two tickets to Moscow.|Нам нужны два билета в Москву.
+Экзамен начинается в девять.|The exam starts at nine.|Экзамен начинается в девять.
+Я говорю немного по-русски и по-английски.|I speak a little Russian and English.|Я говорю немного по-русски и по-английски.
+Мой друг работает инженером.|My friend works as an engineer.|Мой друг работает инженером.
+Она помогает маме на кухне.|She helps her mother in the kitchen.|Она помогает маме на кухне.
+Каждый вечер я гуляю.|I go for a walk every evening.|Каждый вечер я гуляю.
+
+@listening
+Здравствуйте, как дела?|zdravstvuyte kak dela|Hello, how are you?|Здравствуйте, как дела?|Здравствуйте, где вы?|Доброе утро, как дела?|1
+Я хочу чашку чая.|ya khochu chashku chaya|I want a cup of tea.|Я хочу чашку чая|Я хочу чашку кофе|Я хочу стакан воды|1
+Где вокзал?|gde vokzal|Where is the station?|Где вокзал?|Где рынок?|Где гостиница?|1
+Я из Москвы.|ya iz moskvy|I am from Moscow.|Я из Москвы|Я живу в Москве|Я еду в Москву|1
+Счёт, пожалуйста.|schyot pozhaluysta|The bill, please.|Счёт, пожалуйста|Меню, пожалуйста|Чек, пожалуйста|1
+Сколько это стоит?|skol'ko eto stoit|How much does it cost?|Сколько это стоит?|Чей это?|Что это?|1
+Я не понял.|ya ne ponyal|I did not understand.|Я не понял|Я не пришёл|Я не услышал|1
+Говорите медленнее.|govorite medlenneye|Please speak slowly.|Говорите медленнее|Говорите громче|Подойдите ближе|1
+Мой брат врач.|moy brat vrach|My brother is a doctor.|Мой брат врач|Мой брат учитель|Мой папа врач|1
+Поезд идёт в восемь.|poyezd idyot v vosem'|The train leaves at eight.|Поезд идёт в восемь|Автобус идёт в восемь|Поезд приходит в восемь|1
+Сегодня у меня нет времени.|segodnya u menya net vremeni|I have no time today.|Сегодня у меня нет времени|Сегодня у меня нет денег|Сегодня у меня нет работы|1
+Еда очень вкусная.|yeda ochen' vkusnaya|The food is very tasty.|Еда очень вкусная|Погода очень хорошая|Чай очень горячий|1
+Мы учим русский вместе.|my uchim russkiy vmeste|We learn Russian together.|Мы учим русский вместе|Мы говорим по-русски вместе|Мы читаем книгу вместе|1
+Мне нужен номер на две ночи.|mne nuzhen nomer na dve nochi|I need a room for two nights.|Мне нужен номер на две ночи|Мне нужен стол на двоих|Мне нужен номер на одну ночь|1
+Моя мама сегодня готовит рыбу.|moya mama segodnya gotovit rybu|My mother cooks fish today.|Моя мама сегодня готовит рыбу|Моя мама сегодня покупает рыбу|Мой папа сегодня готовит рыбу|1
+Каждый вечер я гуляю.|kazhdyy vecher ya gulyayu|I walk every evening.|Каждый вечер я гуляю|Каждое утро я гуляю|Каждый вечер я сплю|1
+У вас есть меньший размер?|u vas yest' men'shiy razmer|Do you have a smaller size?|У вас есть меньший размер?|У вас есть больший размер?|У вас есть другой цвет?|1
+Я заплачу картой.|ya zaplachu kartoy|I will pay by card.|Я заплачу картой|Я заплачу наличными|Я заплачу завтра|1
+Мне очень жаль.|mne ochen' zhal'|I am very sorry.|Мне очень жаль|Я очень рад|Мне очень страшно|1
+Завтра я вам позвоню.|zavtra ya vam pozvonyu|I will call you tomorrow.|Завтра я вам позвоню|Сегодня я вам позвоню|Завтра я вас увижу|1
+
+@stories
+Первый день в Москве|🚆|Али приезжает в Москву утром.\nОн едет на такси до ___ (1).\nВ номере он пьёт ___ (2).\nПотом звонит своей ___ (3).|Ali reaches Moscow in the morning. He goes by taxi to the hotel. In the room he drinks a coffee. Then he calls his family.|гостиницы/вокзала/рынка=0;кофе/книгу/хлеб=0;семье/магазину/классу=0
+Покупки на рынке|🛒|Сара идёт на ___ (1) в воскресенье.\nОна покупает хлеб, молоко и ___ (2).\nОна платит ___ (3).|Sara goes to the market on Sunday. She buys bread, milk and apples. She pays by card.|рынок/школу/офис=0;яблоки/книги/стулья=0;картой/бумагой/водой=0
+Потерянный паспорт|🛂|Ахмад ищет свой ___ (1).\nОн просит помощь у ___ (2).\nК счастью, находит его в ___ (3).|Ahmad is looking for his passport. He asks a policeman for help. Luckily he finds it in his bag.|паспорт/ключ/книгу=0;полицейского/учителя/соседа=0;сумке/кухне/школе=0
+У врача|🏥|Билалу ___ (1).\nОн идёт к ___ (2).\nВрач даёт лекарство и ___ (3).|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|плохо/хорошо/голодно=0;врачу/пекарю/водителю=0;отдых/деньги/книги=0
+Уроки русского|📚|Надя учит ___ (1) три месяца.\nОна занимается каждый вечер с ___ (2).\nЕё ___ (3) говорит, что она уже хорошо говорит.|Nadia has been learning Russian for three months. She practises every evening with books. Her teacher says she already speaks well.|русский/французский/арабский=0;книгами/фотографиями/карточками=0;учитель/брат/сосед=0
+Семейный обед|👨‍👩‍👧‍👦|В воскресенье приезжает вся ___ (1).\nБабушка готовит ___ (2).\nВсе едят вместе и много ___ (3).|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|семья/компания/класс=0;рис/воду/бумагу=0;смеются/работают/спят=0
+На вокзале|🚉|Поезд ___ (1) на десять минут.\nХасан покупает ___ (2) в киоске.\nПотом садится в ___ (3).|The train is ten minutes late. Hassan buys a newspaper. Then he gets on the train.|опаздывает/чистый/готов=0;газету/чек/ключ=0;поезд/автобус/самолёт=0
+Зимний вечер|❄️|В январе очень ___ (1).\nАйша надевает тёплое ___ (2).\nОна пьёт горячий ___ (3) и читает.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|холодно/жарко/дождливо=0;пальто/рубашку/обувь=0;чай/воду/сок=0
+Ужин в гостинице|🍽️|Официант приносит ___ (1).\nОмар заказывает рыбу и ___ (2).\nВ конце он просит ___ (3).|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|меню/стул/свет=0;рис/стол/окно=0;счёт/ключ/чек=0
+Новые друзья|🤝|Лена и Сана встречаются в ___ (1).\nОни говорят о музыке и о ___ (2).\nВ конце они обмениваются ___ (3).|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|парке/офисе/поезде=0;путешествиях/чеках/экзаменах=0;номерами/адресами/книгами=0
+
+@idioms
+Ни пуха ни пера|ni pukha ni pera|Break a leg (good luck).|удачи|Ни пуха ни пера на экзамене!
+Водить за нос|vodit' za nos|To deceive someone.|обманывать|Хватит водить меня за нос.
+Зарубить на носу|zarubit' na nosu|To remember something firmly.|запомнить|Заруби на носу: время дороже денег.
+Делать из мухи слона|delat' iz mukhi slona|To make a mountain out of a molehill.|преувеличивать|Не делай из мухи слона.
+Как снег на голову|kak sneg na golovu|Completely unexpectedly.|совершенно внезапно|Он приехал как снег на голову.
+Бить баклуши|bit' baklushi|To idle away time.|бездельничать|Хватит бить баклуши, пора работать.
+Сесть в лужу|sest' v luzhu|To make a fool of oneself.|опозориться|На собрании он сел в лужу.
+Кот наплакал|kot naplakal|Very little.|совсем мало|Денег у него кот наплакал.
+Взять себя в руки|vzyat' sebya v ruki|To pull oneself together.|собраться с силами|Возьми себя в руки и продолжай.
+Не в своей тарелке|ne v svoyey tarelke|To feel out of place.|чувствовать себя неуютно|Среди них я был не в своей тарелке.
+Как рыба в воде|kak ryba v vode|Completely at ease.|как дома|На новой работе он как рыба в воде.
+Язык без костей|yazyk bez kostey|The tongue has no bones (people talk too much).|язык без костей|Язык без костей — что захочет, то и скажет.
+Держать камень за пазухой|derzhat' kamen' za pazukhoy|To harbour a grudge.|таить злобу|Он держит камень за пазухой.
+С глаз долой|s glaz doloy|Out of sight.|с глаз долой|С глаз долой — из сердца вон.
+Из сердца вон|iz serdtsa von|Out of mind.|из сердца|С глаз долой — из сердца вон.
+Сердце не на месте|serdtse ne na meste|To be anxious.|тревожиться|У матери сердце не на месте.
+Каменное сердце|kamennoye serdtse|Hard-hearted.|бессердечный|У него каменное сердце.
+Доброе сердце|dobroye serdtse|Pure-hearted.|добрый|У неё доброе сердце, она никому не желает зла.
+В мгновение ока|v mgnoveniye oka|In the blink of an eye.|мгновенно|Время прошло в мгновение ока.
+Лить горькие слёзы|lit' gor'kiye slezy|To cry bitterly.|горько плакать|После провала он лил горькие слёзы.
+Закрывать глаза на всё|zakryvat' glaza na vsyo|To ignore the obvious.|закрывать глаза|Объявление перед тобой, не закрывай глаза.
+Связывать себе руки|svyazyvat' sebya ruki|To restrict one's own options.|ограничивать себя|Не связывай себе руки обещаниями.
+Сладкий на язык|sladkiy na yazyk|Sweet-talker.|сладкоречивый|Не верь тому, кто сладок на язык.
+Два зайца одним выстрелом|dva zaytsa odnim vystrelom|Two birds with one stone.|двух зайцев одним выстрелом|Пойду на рынок и встречу Петра — два зайца одним выстрелом.
+На седьмом небе|na sed'mom nebe|On cloud nine.|на седьмом небе|После свадьбы они на седьмом небе.
+
+@alphabet
+А|а|a|арбуз
+Б|бэ|be|брат
+В|вэ|ve|вода
+Г|гэ|ge|город
+Д|дэ|de|дом
+Е|е|ye|если
+Ё|ё|yo|ёлка
+Ж|жэ|zhe|жук
+З|зэ|ze|зима
+И|и|i|игла
+Й|и краткое|i kratkoye|йогурт
+К|ка|ka|книга
+Л|эль|el'|луна
+М|эм|em|мама
+Н|эн|en|нос
+О|о|o|окно
+П|пэ|pe|папа
+Р|эр|er|рука
+С|эс|es|сад
+Т|тэ|te|там
+У|у|u|утро
+Ф|эф|ef|флаг
+Х|ха|kha|хлеб
+Ц|цэ|tse|цвет
+Ч|че|che|час
+Ш|ша|sha|школа
+Щ|ща|shcha|щука
+Ъ|твёрдый знак|tvyordyy znak|объект
+Ы|ы|y|сын
+Ь|мягкий знак|myagkiy znak|соль
+Э|э|e|экзамен
+Ю|ю|yu|юбка
+Я|я|ya|яблоко

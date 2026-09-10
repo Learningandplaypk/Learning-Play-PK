@@ -103,7 +103,7 @@ export function PremiumClient() {
         </span>
         <h1 className="font-display text-3xl font-black text-fg sm:text-4xl">Premium</h1>
         <p className="mt-3 text-base leading-relaxed text-muted">
-          <b className="text-fg">Sab kuch free hai.</b> Saare 43 games, saare levels, saari 8 zubanein, leaderboard, XP,
+          <b className="text-fg">Sab kuch free hai.</b> Saare 43 games, saare levels, saari 21 zubanein, leaderboard, XP,
           streak aur badges — hamesha, bina kisi daily limit ke. Premium content nahi kholta;{" "}
           <b className="text-fg">tajurba behtar banata hai</b> — ads nahi, unlimited hearts, reports, certificate.
         </p>
@@ -150,7 +150,7 @@ export function PremiumClient() {
           </div>
           <p className="mt-2 text-sm leading-relaxed text-muted">{PLANS.free.note}</p>
           <ul className="mt-5 grid gap-2 text-sm">
-            {["Saare 43 games + 8 zubanein", "Koi daily limit nahi, koi level lock nahi", "XP, streak, badges, leaderboard", "Cloud progress sync", "Halke banner ads (consent ke baad)"].map((f) => (
+            {["Saare 43 games + 21 zubanein", "Koi daily limit nahi, koi level lock nahi", "XP, streak, badges, leaderboard", "Cloud progress sync", "Halke banner ads (consent ke baad)"].map((f) => (
               <li key={f} className="flex items-start gap-2">
                 <Check size={15} strokeWidth={3} className="mt-0.5 shrink-0 text-brand-ink" />
                 <span className="text-muted">{f}</span>

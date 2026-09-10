@@ -1,0 +1,686 @@
+# Hindi (हिन्दी / Devanagari) — authored source for data/langs/hindi.json
+# Devanagari, LTR. Romanization = IAST-like but simplified for learners:
+# a, aa, i, ee, u, oo, e, ai, o, au; kh, gh, ch, chh, jh, th, dh, ph, bh, sh,
+# n (retroflex n), sh (श), sh (ष written as shh).
+
+@info
+romanization|Roman Hindi: a, aa, i, ee, u, oo, e, ai, o, au; kh, gh, ch, chh, jh, th, dh, ph, bh, sh, shh, n.
+alphabet.title|हिन्दी वर्णमाला
+alphabet.intro|देवनागरी में ११ स्वर और ३३ व्यंजन होते हैं और यह बाएँ से दाएँ लिखी जाती है।
+
+@frames
+greetings|कहें: {s}.|Say: {en}.
+numbers|मेरे पास {s} सेब हैं।|I have {en} apples.
+family|यह {s} हैं।|This is my {en}.
+food|मुझे {s} पसंद है।|I like {en}.
+travel|{s} कहाँ है?|Where is the {en}?
+time|मैं {s} स्कूल जाता हूँ।|I go to school {en}.
+colors|आकाश {s} है।|The sky is {en}.
+body|मेरा {s} दर्द कर रहा है।|My {en} hurts.
+home|यहाँ {s} है।|Here is the {en}.
+work|यह {s} है।|This is {en}.
+school|यह {s} है।|This is {en}.
+shopping|यह {s} है।|This is {en}.
+emotions|मैं {s} महसूस करता हूँ।|I feel {en}.
+verbs|मैं हर दिन {s} हूँ।|This means: {en}.
+adjectives|यह घर {s} है।|The house is {en}.
+
+@words
+hello|नमस्ते|namaste
+goodbye|अलविदा|alvida
+good morning|शुभ प्रभात|shubh prabhaat
+good evening|शुभ संध्या|shubh sandhya
+good night|शुभ रात्रि|shubh raatri
+thank you|धन्यवाद|dhanyavaad
+please|कृपया|kripaya
+sorry|क्षमा कीजिए|kshama kijiye
+excuse me|सुनिए|suniye
+yes|हाँ|haan
+no|नहीं|nahin
+welcome|स्वागत है|swagat hai
+how are you|आप कैसे हैं?|aap kaise hain
+my name is|मेरा नाम|mera naam||मेरा नाम राहुल है।|My name is Rahul.
+nice to meet you|आपसे मिलकर खुशी हुई|aapse milkar khushi hui
+see you later|फिर मिलेंगे|phir milenge
+good luck|शुभकामनाएँ|shubhkamnayein
+congratulations|बधाई हो|badhai ho
+help|मदद|madad
+of course|बिल्कुल|bilkul
+zero|शून्य|shoonya||गणना में शून्य लिखिए।|Write a zero in the calculation.
+one|एक|ek
+two|दो|do
+three|तीन|teen
+four|चार|chaar
+five|पाँच|paanch
+six|छह|chhah
+seven|सात|saat
+eight|आठ|aath
+nine|नौ|nau
+ten|दस|das
+eleven|ग्यारह|gyarah
+twelve|बारह|baarah
+thirteen|तेरह|terah
+fourteen|चौदह|chaudah
+fifteen|पंद्रह|pandrah
+twenty|बीस|bees
+thirty|तीस|tees
+forty|चालीस|chaalees
+fifty|पचास|pachaas
+hundred|सौ|sau
+thousand|हज़ार|hazaar
+first|पहला|pehla||यह पहला पाठ है।|This is the first lesson.
+second|दूसरा|doosra||यह दूसरा कमरा है।|This is the second room.
+half|आधा|aadha||आधा गिलास पानी।|Half a glass of water.
+mother|माँ|maan|मेरी माँ
+father|पिता|pita|मेरे पिता
+brother|भाई|bhai|मेरा भाई
+sister|बहन|bahan|मेरी बहन
+son|बेटा|beta|उनका बेटा
+daughter|बेटी|beti|उनकी बेटी
+child|बच्चा|baccha|यह बच्चा
+baby|शिशु|shishu|यह शिशु
+family|परिवार|parivaar|हमारा परिवार
+husband|पति|pati|उनके पति
+wife|पत्नी|patni|उनकी पत्नी
+uncle|चाचा|chacha|मेरे चाचा
+aunt|चाची|chachi|मेरी चाची
+grandfather|दादा|dada|मेरे दादा
+grandmother|दादी|dadi|मेरी दादी
+cousin|चचेरा भाई|chachera bhai|मेरा चचेरा भाई
+nephew|भतीजा|bhatija|उनका भतीजा
+friend|दोस्त|dost|मेरा दोस्त
+neighbour|पड़ोसी|padosi|हमारे पड़ोसी
+parent|माता-पिता|maata-pita|मेरे माता-पिता
+water|पानी|paani
+bread|रोटी|roti
+rice|चावल|chaaval
+milk|दूध|doodh
+tea|चाय|chaay
+sugar|चीनी|cheeni
+salt|नमक|namak
+egg|अंडा|anda
+meat|मांस|maans
+chicken|मुर्गी|murgi
+fish|मछली|machhli
+apple|सेब|seb
+banana|केला|kela
+mango|आम|aam
+orange (fruit)|संतरा|santara
+grapes|अंगूर|angoor
+lemon|नींबू|nimboo
+tomato|टमाटर|tamatar
+onion|प्याज़|pyaaz
+potato|आलू|aaloo
+carrot|गाजर|gaajar
+oil|तेल|tel
+butter|मक्खन|makkhan
+honey|शहद|shahad
+juice|रस|ras
+coffee|कॉफ़ी|kofee
+soup|सूप|soop
+breakfast|नाश्ता|naashta
+lunch|दोपहर का खाना|dopahar ka khaana
+dinner|रात का खाना|raat ka khaana
+car|गाड़ी|gaadi
+bus|बस|bas
+train|ट्रेन|tren
+airplane|हवाई जहाज़|havaai jahaaz
+bicycle|साइकिल|saikil
+road|सड़क|sarak
+street|गली|gali
+bridge|पुल|pul
+station|स्टेशन|station
+airport|हवाई अड्डा|havaai adda
+ticket|टिकट|tikat
+map|नक़्शा|naqsha
+city|शहर|shahar
+village|गाँव|gaaon
+country|देश|desh
+hotel|होटल|hotel
+journey|यात्रा|yaatra
+luggage|सामान|saamaan
+driver|चालक|chaalak
+passport|पासपोर्ट|passport
+time|समय|samay||समय बहुत तेज़ी से गुज़रता है।|Time passes very quickly.
+day|दिन|din||दिन में दो बार दवा लीजिए।|Take the medicine twice a day.
+night|रात|raat||रात में आकाश साफ़ रहता है।|The sky is clear at night.
+morning|सुबह|subah
+evening|शाम|shaam
+week|हफ़्ता|hafta||हफ़्ते में एक बार बाज़ार जाता हूँ।|I go to the market once a week.
+month|महीना|maheena||महीने के अंत में तनख़्वाह आती है।|The salary comes at the end of the month.
+year|साल|saal||साल में चार ऋतुएँ आती हैं।|Four seasons come in a year.
+hour|घंटा|ghanta||एक घंटा पहले आ जाइए।|Come one hour earlier.
+minute|मिनट|minat||पाँच मिनट रुकिए।|Wait five minutes.
+today|आज|aaj
+tomorrow|कल|kal
+yesterday|बीता कल|beeta kal
+now|अब|ab
+later|बाद|baad
+early|जल्दी|jaldi
+late|देर|der
+always|हमेशा|hamesha
+sometimes|कभी-कभी|kabhi-kabhi
+never|कभी नहीं|kabhi nahin
+color|रंग|rang||इस कपड़े का रंग गहरा है।|The color of this cloth is dark.
+red|लाल|laal
+blue|नीला|neela
+green|हरा|hara
+yellow|पीला|peela
+black|काला|kaala
+white|सफ़ेद|safed
+brown|भूरा|bhoora
+grey|धूसर|dhoosar
+pink|गुलाबी|gulaabi
+purple|बैंगनी|baingani
+orange (color)|नारंगी|naarangi
+body|शरीर|shareer||शरीर को आराम चाहिए।|The body needs rest.
+head|सिर|sir
+hair|बाल|baal||मेरे बाल काले हैं।|My hair is black.
+face|चेहरा|chehra
+eye|आँख|aankh||मेरी आँख दर्द कर रही है।|My eye hurts.
+ear|कान|kaan
+nose|नाक|naak||नाक से साँस लीजिए।|Breathe through the nose.
+mouth|मुँह|munh
+tooth|दाँत|daant
+tongue|जीभ|jeebh||जीभ से स्वाद महसूस होता है।|The tongue feels the taste.
+neck|गर्दन|gardan||गर्दन सीधी रखिए।|Keep the neck straight.
+shoulder|कंधा|kandha
+hand|हाथ|haath
+finger|उँगली|ungli||उँगली से इशारा कीजिए।|Point with the finger.
+leg|पैर|pair||पैर में दर्द है।|There is pain in the leg.
+foot|पाँव|paaon
+heart|दिल|dil
+stomach|पेट|pet
+house|घर|ghar
+room|कमरा|kamra
+door|दरवाज़ा|darwaza
+window|खिड़की|khidki
+wall|दीवार|deevaar
+roof|छत|chhat
+floor|फ़र्श|farsh
+kitchen|रसोई|rasoi
+bathroom|स्नानघर|snaan-ghar
+bed|बिस्तर|bistar
+table|मेज़|mez
+chair|कुर्सी|kursi
+sofa|सोफ़ा|sofa
+lamp|बत्ती|batti
+key|चाबी|chaabi
+stairs|सीढ़ियाँ|seedhiyaan
+garden|बगीचा|bageecha
+light|रोशनी|roshni
+fan|पंखा|pankha
+mirror|शीशा|sheesha
+work|काम|kaam
+job|नौकरी|naukri
+office|दफ़्तर|daftar
+money|पैसा|paisa
+salary|तनख़्वाह|tankhwaah
+meeting|मीटिंग|meeting
+boss|बॉस|baas
+employee|कर्मचारी|karmchaari
+business|व्यापार|vyaapaar
+company|कंपनी|kampani
+market|बाज़ार|bazaar
+shop|दुकान|dukaan
+customer|ग्राहक|graahak
+price|कीमत|keemat
+farmer|किसान|kisaan
+doctor|डॉक्टर|doctor
+teacher|शिक्षक|shikshak
+police|पुलिस|pulis
+school|स्कूल|school
+book|किताब|kitaab
+pen|क़लम|qalam
+pencil|पेंसिल|pensil
+page|पन्ना|panna
+class|कक्षा|kaksha
+student|छात्र|chhaatr
+lesson|पाठ|paath
+exam|परीक्षा|pareeksha
+question|सवाल|sawaal
+answer|जवाब|jawaab
+homework|होमवर्क|homework
+library|पुस्तकालय|pustakalay
+university|विश्वविद्यालय|vishvavidyalay
+language|भाषा|bhaasha
+word|शब्द|shabd
+sentence|वाक्य|vaaky
+dictionary|शब्दकोश|shabdkosh
+science|विज्ञान|vigyaan
+history|इतिहास|itihaas
+knowledge|ज्ञान|gyaan
+education|शिक्षा|shiksha
+shopping|ख़रीदारी|khareedari||आज शाम ख़रीदारी करनी है।|We have to go shopping this evening.
+buy|ख़रीदना|khareedna||वह सब्ज़ी ख़रीद रहा है।|He is buying vegetables.
+sell|बेचना|bechna||किसान बाज़ार में फल बेचता है।|The farmer sells fruit in the market.
+cheap|सस्ता|sasta||यह कपड़ा सस्ता है।|This cloth is cheap.
+expensive|महँगा|mehnga||फ़ोन महँगा है।|The phone is expensive.
+coin|सिक्का|sikka
+note|नोट|note
+bill|बिल|bill
+size|साइज़|size
+discount|छूट|chhoot
+receipt|रसीद|raseed
+bag|थैला|thaila
+rupee|रुपया|rupaya
+weigh|तौलना|taulna||दुकानदार सब्ज़ी तौलता है।|The shopkeeper weighs the vegetables.
+pay|भुगतान|bhugtaan||कार्ड से भुगतान कीजिए।|Pay by card.
+happiness|ख़ुशी|khushi
+sadness|उदासी|udaasi
+anger|गुस्सा|gussa
+fear|डर|dar
+love|प्यार|pyaar
+hope|उम्मीद|ummeed
+worry|चिंता|chinta
+surprise|हैरानी|hairaani
+peace|शांति|shaanti
+smile|मुस्कान|muskaan
+laugh|हँसी|hansi
+crying|रोना|rona
+mood|मूड|mood
+brave|बहादुर|bahaadur||वह एक बहादुर लड़का है।|He is a brave boy.
+lonely|अकेला|akela||वह अकेला महसूस करता है।|He feels lonely.
+to eat|खाना|khaana|खाता
+to drink|पीना|peena|पीता
+to go|जाना|jaana|जाता
+to come|आना|aana|आता
+to see|देखना|dekhna|देखता
+to hear|सुनना|sunna|सुनता
+to speak|बोलना|bolna|बोलता
+to read|पढ़ना|padhna|पढ़ता
+to write|लिखना|likhna|लिखता
+to learn|सीखना|seekhna|सीखता
+to teach|पढ़ाना|padhaana|पढ़ाता
+to sleep|सोना|sona|सोता
+to wake up|जागना|jaagna|जागता
+to run|दौड़ना|daudna|दौड़ता
+to walk|चलना|chalna|चलता
+to open|खोलना|kholna|खोलता
+to close|बंद करना|band karna|बंद करता
+to give|देना|dena|देता
+to take|लेना|lena|leta
+to make|बनाना|banana|बनाता
+to love|चाहना|chaahna|चाहता
+to think|सोचना|sochna|सोचता
+to understand|समझना|samajhna|समझता
+to work|काम करना|kaam karna|काम करता
+to wait|इंतज़ार करना|intezaar karna|इंतज़ार करता
+big|बड़ा|bada
+small|छोटा|chota
+new|नया|naya
+old|पुराना|purana
+good|अच्छा|achha
+bad|बुरा|bura
+beautiful|सुंदर|sundar
+hot|गर्म|garam||मौसम बहुत गर्म है।|The weather is very hot.
+cold|ठंडा|thanda||पानी ठंडा है।|The water is cold.
+fast|तेज़|tez
+slow|धीमा|dheema
+easy|आसान|aasaan
+difficult|मुश्किल|mushkil
+long|लंबा|lamba
+short|छोटा कद|chota qad
+clean|साफ़|saaf
+dirty|गंदा|ganda
+happy|खुश|khush||बच्चे बहुत खुश हैं।|The children are very happy.
+tired|थका हुआ|thaka hua||मैं आज थका हुआ हूँ।|I am tired today.
+hungry|भूखा|bhookha||बच्चा भूखा है।|The child is hungry.
+
+@phrases
+नमस्ते!|namaste|Hello!|नमस्ते!|greeting
+अलविदा!|alvida|Goodbye!|अलविदा!|greeting
+शुभ प्रभात!|shubh prabhaat|Good morning!|शुभ प्रभात!|greeting
+शुभ संध्या!|shubh sandhya|Good evening!|शुभ संध्या!|greeting
+शुभ रात्रि!|shubh raatri|Good night!|शुभ रात्रि!|greeting
+आप कैसे हैं?|aap kaise hain|How are you? (formal)|आप कैसे हैं?|smalltalk
+मैं ठीक हूँ, धन्यवाद।|main theek hoon dhanyavaad|I am fine, thank you.|मैं ठीक हूँ, धन्यवाद।|smalltalk
+बहुत धन्यवाद!|bahut dhanyavaad|Thank you very much!|बहुत धन्यवाद!|polite
+कोई बात नहीं।|koi baat nahin|No problem / you're welcome.|कोई बात नहीं।|polite
+क्षमा कीजिए।|kshama kijiye|Please excuse me.|क्षमा कीजिए।|polite
+मुझे खेद है।|mujhe khed hai|I am sorry.|मुझे खेद है।|polite
+आपका नाम क्या है?|aapka naam kya hai|What is your name?|आपका नाम क्या है?|smalltalk
+मेरा नाम प्रिया है।|mera naam priya hai|My name is Priya.|मेरा नाम प्रिया है।|smalltalk
+आप कहाँ से हैं?|aap kahaan se hain|Where are you from?|आप कहाँ से हैं?|smalltalk
+मैं दिल्ली से हूँ।|main dilli se hoon|I am from Delhi.|मैं दिल्ली से हूँ।|smalltalk
+क्या आप अंग्रेज़ी बोलते हैं?|kya aap angrezi bolte hain|Do you speak English?|क्या आप अंग्रेज़ी बोलते हैं?|smalltalk
+मुझे हिन्दी सीखनी है।|mujhe hindi seekhni hai|I want to learn Hindi.|मुझे हिन्दी सीखनी है।|school
+मैं समझ नहीं पाया।|main samajh nahin paaya|I did not understand.|मैं समझ नहीं पाया।|school
+कृपया धीरे बोलिए।|kripaya dheere boliye|Please speak slowly.|कृपया धीरे बोलिए।|polite
+इसका अर्थ क्या है?|iska arth kya hai|What does this mean?|इसका अर्थ क्या है?|school
+यह कितने का है?|yah kitne ka hai|How much is this?|यह कितने का है?|shopping
+मुझे यह चाहिए।|mujhe yah chahiye|I want this.|मुझे यह चाहिए।|shopping
+क्या आपके पास छोटा साइज़ है?|kya aapke paas chota size hai|Do you have a smaller size?|क्या आपके पास छोटा साइज़ है?|shopping
+बिल लाइए, धन्यवाद।|bill laaiye dhanyavaad|The bill, please.|बिल लाइए, धन्यवाद।|shopping
+मैं कार्ड से भुगतान करूँगा।|main card se bhugtaan karoonga|I will pay by card.|मैं कार्ड से भुगतान करूँगा।|shopping
+स्टेशन कहाँ है?|station kahaan hai|Where is the station?|स्टेशन कहाँ है?|travel
+शौचालय कहाँ है?|shauchalay kahaan hai|Where is the toilet?|शौचालय कहाँ है?|travel
+क्या यह बस जयपुर जाती है?|kya yah bas jaipur jaati hai|Does this bus go to Jaipur?|क्या यह बस जयपुर जाती है?|travel
+ट्रेन कब चलती है?|tren kab chalti hai|When does the train leave?|ट्रेन कब चलती है?|travel
+मैं रास्ता भूल गया हूँ।|main raasta bhool gaya hoon|I have lost my way.|मैं रास्ता भूल गया हूँ।|travel
+क्या आप मदद कर सकते हैं?|kya aap madad kar sakte hain|Can you help?|क्या आप मदद कर सकते हैं?|polite
+मुझे डॉक्टर चाहिए।|mujhe doctor chahiye|I need a doctor.|मुझे डॉक्टर चाहिए।|health
+मेरी तबीयत ठीक नहीं है।|meri tabiyat theek nahin hai|I am not feeling well.|मेरी तबीयत ठीक नहीं है।|health
+दवा की दुकान कहाँ है?|dawa ki dukaan kahaan hai|Where is the pharmacy?|दवा की दुकान कहाँ है?|health
+मेरे सिर में दर्द है।|mere sir mein dard hai|I have a headache.|मेरे सिर में दर्द है।|health
+एक कप चाय, कृपया।|ek kap chaay kripaya|One cup of tea, please.|एक कप चाय, कृपया।|food
+मेनू दिखाइए।|menu dikhaiye|Show me the menu.|मेनू दिखाइए।|food
+यह बहुत स्वादिष्ट है।|yah bahut swadisht hai|This is very tasty.|यह बहुत स्वादिष्ट है।|food
+मैं शाकाहारी हूँ।|main shaakahaari hoon|I am a vegetarian.|मैं शाकाहारी हूँ।|food
+मुझे भूख लगी है।|mujhe bhookh lagi hai|I am hungry.|मुझे भूख लगी है।|food
+मैं मांस नहीं खाता।|main maans nahin khaata|I don't eat meat.|मैं मांस नहीं खाता।|food
+पानी ठंडा है।|paani thanda hai|The water is cold.|पानी ठंडा है।|food
+आज मौसम बहुत अच्छा है।|aaj mausam bahut achha hai|The weather is very nice today.|आज मौसम बहुत अच्छा है।|smalltalk
+मैं दफ़्तर में काम करता हूँ।|main daftar mein kaam karta hoon|I work in an office.|मैं दफ़्तर में काम करता हूँ।|work
+आप कहाँ काम करते हैं?|aap kahaan kaam karte hain|Where do you work?|आप कहाँ काम करते हैं?|work
+मेरी तनख़्वाह महीने के अंत में आती है।|meri tankhwaah maheene ke ant mein aati hai|My salary comes at month end.|मेरी तनख़्वाह महीने के अंत में आती है।|work
+कल मेरी मीटिंग है।|kal meri meeting hai|I have a meeting tomorrow.|कल मेरी मीटिंग है।|work
+मैं विश्वविद्यालय में पढ़ता हूँ।|main vishvavidyalay mein padhta hoon|I study at the university.|मैं विश्वविद्यालय में पढ़ता हूँ।|school
+कक्षा कब शुरू होती है?|kaksha kab shuru hoti hai|When does the class start?|कक्षा कब शुरू होती है?|school
+परीक्षा आसान थी।|pareeksha aasaan thi|The exam was easy.|परीक्षा आसान थी।|school
+मुझे किताबें पढ़ना पसंद है।|mujhe kitaabein padhna pasand hai|I like reading books.|मुझे किताबें पढ़ना पसंद है।|school
+यह शब्द नया है।|yah shabd naya hai|This word is new.|यह शब्द नया है।|school
+मैं हर दिन हिन्दी सीखता हूँ।|main har din hindi seekhta hoon|I learn Hindi every day.|मैं हर दिन हिन्दी सीखता हूँ।|school
+आज सोमवार है।|aaj somvaar hai|Today is Monday.|आज सोमवार है।|time
+क्या समय हुआ है?|kya samay hua hai|What time is it?|क्या समय हुआ है?|time
+मेरे पास समय नहीं है।|mere paas samay nahin hai|I have no time.|मेरे पास समय नहीं है।|time
+मैं छह बजे आऊँगा।|main chhah baje aaoonga|I will come at six.|मैं छह बजे आऊँगा।|time
+रविवार को मैं खाली हूँ।|ravicar ko main khaali hoon|I am free on Sunday.|रविवार को मैं खाली हूँ।|time
+यह मेरी माँ हैं।|yah meri maan hain|This is my mother.|यह मेरी माँ हैं।|family
+मेरे पिता बहुत काम करते हैं।|mere pita bahut kaam karte hain|My father works a lot.|मेरे पिता बहुत काम करते हैं।|family
+मेरी बहन डॉक्टर है।|meri bahan doctor hai|My sister is a doctor.|मेरी बहन डॉक्टर है।|family
+हमारा परिवार बड़ा है।|hamara parivaar bada hai|Our family is big.|हमारा परिवार बड़ा है।|family
+बच्चा बगीचे में खेलता है।|baccha bageeche mein khelta hai|The child plays in the garden.|बच्चा बगीचे में खेलता है।|family
+मेरा घर छोटा है।|mera ghar chota hai|My house is small.|मेरा घर छोटा है।|home
+रसोई साफ़ है।|rasoi saaf hai|The kitchen is clean.|रसोई साफ़ है।|home
+खिड़की खुली है।|khidki khuli hai|The window is open.|खिड़की खुली है।|home
+मैं दरवाज़ा बंद करता हूँ।|main darwaza band karta hoon|I close the door.|मैं दरवाज़ा बंद करता हूँ।|home
+बिजली चली गई है।|bijli chali gayi hai|The power has gone out.|बिजली चली गई है।|home
+मैं अब सोने जा रहा हूँ।|main ab sone ja raha hoon|I am going to sleep now.|मैं अब सोने जा रहा हूँ।|home
+मेरा पासपोर्ट कहाँ है?|mera passport kahaan hai|Where is my passport?|मेरा पासपोर्ट कहाँ है?|travel
+उड़ान में देरी है।|udaan mein deri hai|The flight is delayed.|उड़ान में देरी है।|travel
+सामान बहुत भारी है।|saamaan bahut bhaari hai|The luggage is very heavy.|सामान बहुत भारी है।|travel
+यात्रा मंगलमय हो!|yaatra mangalmay ho|Have a good trip!|यात्रा मंगलमय हो!|travel
+मुझे दो रातों के लिए कमरा चाहिए।|mujhe do raaton ke liye kamra chahiye|I need a room for two nights.|मुझे दो रातों के लिए कमरा चाहिए।|travel
+सीधे जाइए।|seedhe jaaiye|Go straight ahead.|सीधे जाइए।|travel
+बाएँ मुड़ जाइए।|baayein mud jaaiye|Turn left.|बाएँ मुड़ जाइए।|travel
+बाज़ार कहाँ है?|bazaar kahaan hai|Where is the market?|बाज़ार कहाँ है?|shopping
+कीमत बहुत ज़्यादा है।|keemat bahut zyaada hai|The price is too high.|कीमत बहुत ज़्यादा है।|shopping
+थोड़ी छूट दे दीजिए।|thodi chhoot de dijiye|Give a little discount.|थोड़ी छूट दे दीजिए।|shopping
+मैं सिर्फ़ देख रहा हूँ।|main sirf dekh raha hoon|I am just looking.|मैं सिर्फ़ देख रहा हूँ।|shopping
+रसीद दे दीजिए।|raseed de dijiye|Please give the receipt.|रसीद दे दीजिए।|shopping
+भोजन कीजिए!|bhojan kijiye|Enjoy your meal!|भोजन कीजिए!|food
+खाने के बाद चाय पीते हैं।|khaane ke baad chaay peete hain|We drink tea after the meal.|खाने के बाद चाय पीते हैं।|food
+मुझे ठंडा पानी दीजिए।|mujhe thanda paani dijiye|Give me cold water.|मुझे ठंडा पानी दीजिए।|food
+चिंता मत कीजिए।|chinta mat kijiye|Don't worry.|चिंता मत कीजिए।|emotion
+मुझे आप पर गर्व है।|mujhe aap par garv hai|I am proud of you.|मुझे आप पर गर्व है।|emotion
+यह सुनकर खुशी हुई।|yah sunkar khushi hui|I am glad to hear that.|यह सुनकर खुशी हुई।|emotion
+मुझे डर लग रहा है।|mujhe dar lag raha hai|I am feeling scared.|मुझे डर लग रहा है।|emotion
+आपसे मिलकर अच्छा लगा।|aapse milkar achha laga|Good to see you.|आपसे मिलकर अच्छा लगा।|smalltalk
+बधाई हो!|badhai ho|Congratulations!|बधाई हो!|greeting
+स्वागत है!|swagat hai|Welcome!|स्वागत है!|greeting
+जल्दी ठीक हो जाइए।|jaldi theek ho jaaiye|Get well soon.|जल्दी ठीक हो जाइए।|health
+एक क्षण, कृपया।|ek kshan kripaya|One moment, please.|एक क्षण, कृपया।|polite
+मैं अभी आता हूँ।|main abhi aata hoon|I'll be right there.|मैं अभी आता हूँ।|smalltalk
+मुझे नहीं पता।|mujhe nahin pata|I don't know.|मुझे नहीं पता।|smalltalk
+शायद बाद में।|shaayad baad mein|Maybe later.|शायद बाद में।|smalltalk
+मैं सहमत हूँ।|main sahamat hoon|I agree.|मैं सहमत हूँ।|smalltalk
+यह सही नहीं है।|yah sahi nahin hai|That is not right.|यह सही नहीं है।|smalltalk
+आप आज क्या कर रहे हैं?|aap aaj kya kar rahe hain|What are you doing today?|आप आज क्या कर रहे हैं?|smalltalk
+मैं परीक्षा की तैयारी कर रहा हूँ।|main pareeksha ki taiyaari kar raha hoon|I am preparing for the exam.|मैं परीक्षा की तैयारी कर रहा हूँ।|school
+मुझे मदद चाहिए।|mujhe madad chahiye|I need help.|मुझे मदद चाहिए।|polite
+आपकी मदद के लिए धन्यवाद।|aapki madad ke liye dhanyavaad|Thank you for your help.|आपकी मदद के लिए धन्यवाद।|polite
+यह पहली बार है।|yah pehli baar hai|This is the first time.|यह पहली बार है।|smalltalk
+पैसे कहाँ बदलूँ?|paise kahaan badloon|Where can I exchange money?|पैसे कहाँ बदलूँ?|travel
+बस आठ बजे आती है।|bas aath baje aati hai|The bus comes at eight.|बस आठ बजे आती है।|travel
+मेरी ट्रेन छूट गई।|meri tren chhoot gayi|I missed my train.|मेरी ट्रेन छूट गई।|travel
+होटल बहुत अच्छा है।|hotel bahut achha hai|The hotel is very good.|होटल बहुत अच्छा है।|travel
+आपका काम क्या है?|aapka kaam kya hai|What is your work?|आपका काम क्या है?|work
+मैं इंजीनियर हूँ।|main engineer hoon|I am an engineer.|मैं इंजीनियर हूँ।|work
+वह हमेशा मदद करती है।|vah hamesha madad karti hai|She always helps.|वह हमेशा मदद करती है।|smalltalk
+हम साथ में सीखते हैं।|ham saath mein seekhte hain|We learn together.|हम साथ में सीखते हैं।|school
+मेरी हिन्दी बेहतर हो रही है।|meri hindi behtar ho rahi hai|My Hindi is improving.|मेरी हिन्दी बेहतर हो रही है।|school
+आकाश नीला है।|aakaash neela hai|The sky is blue.|आकाश नीला है।|smalltalk
+मेरा पसंदीदा रंग हरा है।|mera pasandeeda rang hara hai|My favourite color is green.|मेरा पसंदीदा रंग हरा है।|smalltalk
+लाल गाड़ी तेज़ है।|laal gaadi tez hai|The red car is fast.|लाल गाड़ी तेज़ है।|smalltalk
+रात शांत है।|raat shaant hai|The night is peaceful.|रात शांत है।|time
+आज बारिश हो रही है।|aaj baarish ho rahi hai|It is raining today.|आज बारिश हो रही है।|smalltalk
+सूरज चमक रहा है।|sooraj chamak raha hai|The sun is shining.|सूरज चमक रहा है।|smalltalk
+शाबाश!|shaabaash|Well done!|शाबाश!|smalltalk
+फिर मुलाक़ात होगी।|phir mulaqat hogi|We will meet again.|फिर मुलाक़ात होगी।|greeting
+क्षमा कीजिए, क्या कहा?|kshama kijiye kya kaha|Pardon, what did you say?|क्षमा कीजिए, क्या कहा?|polite
+कृपया दोहराइए।|kripaya doharaiye|Please say it again.|कृपया दोहराइए।|polite
+कृपया वर्तनी बताइए।|kripaya vartani bataiye|Please spell it.|कृपया वर्तनी बताइए।|school
+मुझे चाय बहुत पसंद है।|mujhe chaay bahut pasand hai|I love tea.|मुझे चाय बहुत पसंद है।|food
+खाना तैयार है।|khaana taiyaar hai|The food is ready.|खाना तैयार है।|food
+प्लेट में और खाना डालिए।|plate mein aur khaana daaliye|Put more food on the plate.|प्लेट में और खाना डालिए।|food
+यह कपड़ा अच्छा है।|yah kapda achha hai|This cloth is good.|यह कपड़ा अच्छा है।|shopping
+दुकान बंद हो गई।|dukaan band ho gayi|The shop is closed.|दुकान बंद हो गई।|shopping
+मैं हर दिन बाज़ार जाता हूँ।|main har din bazaar jaata hoon|I go to the market every day.|मैं हर दिन बाज़ार जाता हूँ।|shopping
+गाड़ी सड़क पर है।|gaadi sadak par hai|The car is on the road.|गाड़ी सड़क पर है।|travel
+पुल के पास मुड़िए।|pul ke paas mudiye|Turn near the bridge.|पुल के पास मुड़िए।|travel
+शहर बहुत बड़ा है।|shahar bahut bada hai|The city is very big.|शहर बहुत बड़ा है।|travel
+गाँव में शांति है।|gaaon mein shaanti hai|There is peace in the village.|गाँव में शांति है।|travel
+मैं छात्र हूँ।|main chhaatr hoon|I am a student.|मैं छात्र हूँ।|school
+वह अच्छे शिक्षक हैं।|vah achhe shikshak hain|He is a good teacher.|वह अच्छे शिक्षक हैं।|school
+सवाल मुश्किल है।|sawaal mushkil hai|The question is difficult.|सवाल मुश्किल है।|school
+जवाब सही है।|jawaab sahi hai|The answer is correct.|जवाब सही है।|school
+किताब मेज़ पर है।|kitaab mez par hai|The book is on the table.|किताब मेज़ पर है।|school
+बिस्तर नरम है।|bistar naram hai|The bed is soft.|बिस्तर नरम है।|home
+चाबी खो गई है।|chaabi kho gayi hai|The key is lost.|चाबी खो गई है।|home
+बगीचे में फूल हैं।|bageeche mein phool hain|There are flowers in the garden.|बगीचे में फूल हैं।|home
+कमरा उजाले में है।|kamra ujaale mein hai|The room is bright.|कमरा उजाले में है।|home
+सीढ़ियाँ चढ़िए।|seedhiyaan chadhiye|Go up the stairs.|सीढ़ियाँ चढ़िए।|home
+
+@grammar
+"किताब" का लिंग क्या है?|स्त्रीलिंग|पुल्लिंग|कोई नहीं|1|Hindi nouns ending in the "aa" sound are usually feminine: किताब स्त्रीलिंग है।|Nouns with the "aa" sound are usually feminine.
+"लड़का" का लिंग क्या है?|पुल्लिंग|स्त्रीलिंग|कोई नहीं|1|लड़का पुल्लिंग है।|"Ladka" (boy) is masculine.
+"मैं ___ हूँ."|जा रहा|जा रहे|जाती है|1|A male speaker says "मैं जा रहा हूँ"; the participle agrees with the speaker.|The participle agrees with the speaker.
+"आप ___ हैं?"|कैसे|कैसा|कैसी|1|Respectful "आप" takes the plural form "कैसे".|"Aap" takes the plural adjective.
+"वह बाज़ार ___ जाता है."|में|को|से|2|Location uses "में": बाज़ार में.|"Men" marks location.
+"मैं ___ जाता हूँ."|स्कूल|स्कूल में|स्कूल से|1|Direction with verbs of motion takes no marker: स्कूल जाता हूँ.|Direction often needs no marker.
+"मैं ___ किताब ख़रीदी."|ने|को|से|1|Transitive past takes "ने": मैंने किताब ख़रीदी.|"Ne" marks the past agent.
+"यह ___ का है?"|किस|किसको|किससे|1|"Kis ka" = whose.|"Kis ka" asks whose.
+"का/की/के" ___ से मेल खाता है.|स्वामित्व वाली वस्तु|स्वामी|समय|1|It agrees with the thing owned: मेरी किताब, मेरा क़लम.|The possessive agrees with the owned noun.
+बहुवचन: "किताब" → ___|किताबें|किताबों|किताबात|1|Feminine plural takes "-en": किताबें.|Feminine nouns take "-en".
+बहुवचन: "लड़का" → ___|लड़के|लड़कों|लड़काएँ|1|Masculine plural: लड़के.|Masculine nouns take "-e".
+"पर" ___ दिखाता है.|ऊपर|नीचे|अंदर|1|"Par" = on: मेज़ पर.|"Par" means "on".
+"में" ___ दिखाता है.|अंदर|ऊपर|बाहर|1|"Men" = in: कमरे में.|"Men" means "in".
+"के पास" ___ दिखाता है.|नज़दीक|दूर|अंदर|1|"Ke paas" = near/with.|"Ke paas" means "near".
+"यहाँ" ___ के लिए है.|इस जगह|उस जगह|समय|1|"Yahaan" = here.|"Yahaan" means "here".
+"वहाँ" ___ के लिए है.|उस जगह|इस जगह|समय|1|"Vahaan" = there.|"Vahaan" means "there".
+"यह" ___ के लिए है.|नज़दीक|दूर|समय|1|"Yah" = this.|"Yah" means "this".
+"वह" ___ के लिए है.|दूर|नज़दीक|समय|1|"Vah" = that.|"Vah" means "that".
+आदर के लिए ___ का प्रयोग कीजिए.|आप|तुम|तू|1|"Aap" is respectful, "tum" is familiar.|Use "aap" for respect.
+नकारात्मक: "मैं नहीं ___ ."|आता|आता नहीं|नहीं आता हूँ|1|Negation: "nahin" goes before the verb.|"Nahin" precedes the verb.
+प्रश्न: "___ आप आएँगे?"|क्या|कहाँ|कब|1|"Kya" makes a yes/no question.|"Kya" makes yes/no questions.
+"कहाँ" ___ पूछता है.|जगह|समय|कारण|1|"Kahaan" = where.|"Kahaan" asks about place.
+"कब" ___ पूछता है.|समय|जगह|कारण|1|"Kab" = when.|"Kab" asks about time.
+"क्यों" ___ पूछता है.|कारण|समय|जगह|1|"Kyon" = why.|"Kyon" asks the reason.
+"कितना" ___ पूछता है.|मात्रा|जगह|समय|1|"Kitna" = how much.|"Kitna" asks the amount.
+"कितने" ___ पूछता है.|गिनती|मात्रा|समय|1|"Kitne" = how many.|"Kitne" asks the number.
+"कौन" ___ पूछता है.|व्यक्ति|वस्तु|जगह|1|"Kaun" = who.|"Kaun" asks "who".
+"कैसा" ___ पूछता है.|स्थिति|जगह|समय|1|"Kaisa" = how (state).|"Kaisa" asks how.
+"है" ___ है.|वर्तमान|भूतकाल|भविष्य|1|"Hai" is the present "is".|"Hai" is present.
+"था" ___ है.|भूतकाल|वर्तमान|भविष्य|1|"Tha" is the past "was".|"Tha" is past.
+"होगा" ___ है.|भविष्य|भूतकाल|वर्तमान|1|"Hoga" is the future "will be".|"Hoga" is future.
+वर्तमान काल: "वह ___ रहा है."|खा|खाता|खाएगा|1|Present continuous: खा रहा है.|"Raha hai" makes the present continuous.
+भूतकाल: "वह कल ___ ."|आया|आता|आएगा|1|Simple past: वह कल आया.|"Aaya" is the simple past.
+भविष्य: "वह ___ ."|आएगा|आता|आया|1|Future: वह आएगा.|"Aayega" is the future.
+"सकता है" ___ दिखाता है.|सामर्थ्य|मजबूरी|नकार|1|"Sakta hai" = can.|"Sakta hai" expresses ability.
+"पड़ता है" ___ दिखाता है.|मजबूरी|सामर्थ्य|पसंद|1|"Padta hai" = have to.|"Padta hai" expresses necessity.
+"चाहिए" ___ दिखाता है.|आवश्यकता|सामर्थ्य|ख़ुशी|1|"Chahiye" = need/want.|"Chahiye" expresses need.
+"पसंद है" ___ के लिए है.|पसंद|नापसंद|डर|1|"Pasand hai" = like.|"Pasand hai" means "like".
+"मेरे पास" ___ दिखाता है.|स्वामित्व|जगह|समय|1|"Mere paas" = I have.|"Mere paas" expresses possession.
+क्रम: हिन्दी में क्रिया ___ आती है.|अंत में|शुरू में|बीच में|1|Hindi is SOV — the verb is last.|The verb comes at the end.
+विशेषण ___ से पहले आता है.|संज्ञा|क्रिया|संबंधबोधक|1|Adjectives come before the noun: बड़ा घर.|Adjectives precede the noun.
+"बड़ा घर" में "बड़ा" ___ है.|विशेषण|संज्ञा|क्रिया|1|"Bada" describes "ghar".|"Bada" is an adjective.
+"तेज़ चलना" में "तेज़" ___ है.|क्रियाविशेषण|संज्ञा|संबंधबोधक|1|"Tez" modifies the verb → adverb.|"Tez" is an adverb here.
+तुलना: "यह उस ___ बड़ा है."|से|में|को|1|Comparison uses "se": उस से बड़ा.|Comparison uses "se".
+श्रेष्ठ: "सब ___ बड़ा"|से|में|को|1|Superlative: सबसे बड़ा.|Superlative = "sabse".
+"और" ___ दिखाता है.|जोड़|विरोध|कारण|1|"Aur" = and.|"Aur" means "and".
+"लेकिन" ___ दिखाता है.|विरोध|जोड़|कारण|1|"Lekin" = but.|"Lekin" means "but".
+"क्योंकि" ___ दिखाता है.|कारण|समय|जगह|1|"Kyunki" = because.|"Kyunki" gives the reason.
+"अगर" ___ बनाता है.|शर्त|भूतकाल|बहुवचन|1|"Agar" = if.|"Agar" makes a condition.
+"जब" ___ दिखाता है.|समय|जगह|स्वामित्व|1|"Jab" = when.|"Jab" refers to time.
+"तक" ___ दिखाता है.|सीमा|शुरूआत|स्वामित्व|1|"Tak" = until.|"Tak" marks the limit.
+"से" ___ दिखाता है.|शुरूआत या साधन|अंत|स्वामित्व|1|"Se" = from / by means of.|"Se" means "from" or "by".
+"बहुत" ___ है.|क्रियाविशेषण|संज्ञा|संबंधबोधक|1|"Bahut" = very.|"Bahut" is an adverb.
+"सब" ___ के लिए है.|सभी|कोई नहीं|कुछ|1|"Sabb" = all.|"Sabb" means "all".
+"कोई" ___ के लिए है.|कोई भी|सब|कुछ|1|"Koi" = any/someone.|"Koi" means "any".
+"कुछ" ___ के लिए है.|कुछ|सब|कोई नहीं|1|"Kuchh" = some.|"Kuchh" means "some".
+"हर" ___ के लिए है.|प्रत्येक|कोई नहीं|कुछ|1|"Har" = every.|"Har" means "every".
+"दिन में" ___ दिखाता है.|समय|जगह|स्वामित्व|1|"Din men" = during the day.|"Din men" means "during the day".
+"रात को" ___ दिखाता है.|समय|जगह|स्वामित्व|1|"Raat ko" = at night.|"Raat ko" means "at night".
+"कल" ___ अर्थ रखता है.|आने वाला और बीता दोनों|केवल कल|केवल आज|1|"Kal" can mean yesterday or tomorrow — context decides.|"Kal" needs context.
+"अब" ___ है.|अभी|बाद|पहले|1|"Ab" = now.|"Ab" means "now".
+"हमेशा" ___ है.|हर समय|कभी-कभी|कभी नहीं|1|"Hamesha" = always.|"Hamesha" means "always".
+"धन्यवाद" ___ दिखाता है.|कृतज्ञता|क्षमा|स्वागत|1|"Dhanyavaad" = thank you.|"Dhanyavaad" is "thank you".
+"स्वागत है" ___ दिखाता है.|स्वागत|विदाई|कृतज्ञता|1|"Swagat hai" = welcome.|"Swagat hai" welcomes a guest.
+"हाँ" ___ है.|हाँ|नहीं|प्रश्न|1|"Haan" = yes.|"Haan" means "yes".
+"नहीं" ___ है.|नहीं|हाँ|प्रश्न|1|"Nahin" = no.|"Nahin" means "no".
+
+@sentences
+मैं हर सुबह चाय पीता हूँ।|I drink tea every morning.|मैं हर सुबह चाय पीता हूँ।
+मेरा भाई जर्मन भाषा सीख रहा है।|My brother is learning German.|मेरा भाई जर्मन भाषा सीख रहा है।
+हम रविवार को जयपुर जा रहे हैं।|We are going to Jaipur on Sunday.|हम रविवार को जयपुर जा रहे हैं।
+किताब मेज़ पर रखी है।|The book is kept on the table.|किताब मेज़ पर रखी है।
+उसने कल पत्र लिखा।|He wrote a letter yesterday.|उसने कल पत्र लिखा।
+क्या आप मेरी मदद कर सकते हैं?|Can you help me?|क्या आप मेरी मदद कर सकते हैं?
+मुझे दो कॉफ़ी और एक पानी चाहिए।|I want two coffees and a water.|मुझे दो कॉफ़ी और एक पानी चाहिए।
+ट्रेन आठ बजे चलती है।|The train leaves at eight o'clock.|ट्रेन आठ बजे चलती है।
+मेरी माँ आज मछली पका रही है।|My mother is cooking fish today.|मेरी माँ आज मछली पका रही है।
+वह तीन भाषाएँ धाराप्रवाह बोलता है।|He speaks three languages fluently.|वह तीन भाषाएँ धाराप्रवाह बोलता है।
+हमारा घर छोटा पर साफ़ है।|Our house is small but clean.|हमारा घर छोटा पर साफ़ है।
+मैं सवाल पूरी तरह नहीं समझा।|I did not fully understand the question.|मैं सवाल पूरी तरह नहीं समझा।
+आज मौसम बहुत सुहावना है।|The weather is very pleasant today.|आज मौसम बहुत सुहावना है।
+मुझे कल सुबह जल्दी उठना है।|I have to get up early tomorrow.|मुझे कल सुबह जल्दी उठना है।
+वह अस्पताल में काम करती है।|She works in a hospital.|वह अस्पताल में काम करती है।
+हम स्कूल के सामने मिलते हैं।|We meet in front of the school.|हम स्कूल के सामने मिलते हैं।
+वह अपना फ़ोन घर भूल गया।|He forgot his phone at home.|वह अपना फ़ोन घर भूल गया।
+मैं आज दफ़्तर नहीं जा रहा।|I am not going to the office today.|मैं आज दफ़्तर नहीं जा रहा।
+बच्चे बगीचे में फ़ुटबॉल खेल रहे हैं।|The children are playing football in the garden.|बच्चे बगीचे में फ़ुटबॉल खेल रहे हैं।
+क्या आप खिड़की खोल सकते हैं?|Can you open the window?|क्या आप खिड़की खोल सकते हैं?
+आज मुझे बहुत काम है।|I have a lot of work today.|आज मुझे बहुत काम है।
+मेरे पिता को अख़बार पढ़ना पसंद है।|My father likes reading newspapers.|मेरे पिता को अख़बार पढ़ना पसंद है।
+खाना सचमुच बहुत स्वादिष्ट है।|The food is really very tasty.|खाना सचमुच बहुत स्वादिष्ट है।
+हम एक घंटे से इंतज़ार कर रहे हैं।|We have been waiting for an hour.|हम एक घंटे से इंतज़ार कर रहे हैं।
+मैं अपनी नौकरी के लिए हिन्दी सीखता हूँ।|I learn Hindi for my job.|मैं अपनी नौकरी के लिए हिन्दी सीखता हूँ।
+वह एक छोटे से शहर से है।|She is from a small town.|वह एक छोटे से शहर से है।
+मैं बाज़ार से रोटी और दूध लाता हूँ।|I bring bread and milk from the market.|मैं बाज़ार से रोटी और दूध लाता हूँ।
+वह बस से दफ़्तर जाता है।|He goes to the office by bus.|वह बस से दफ़्तर जाता है।
+हमने कल एक फ़िल्म देखी।|We watched a film yesterday.|हमने कल एक फ़िल्म देखी।
+मैं आज शाम आपको संदेश भेजूँगा।|I will send you a message this evening.|मैं आज शाम आपको संदेश भेजूँगा।
+होटल स्टेशन से ज़्यादा दूर नहीं है।|The hotel is not far from the station.|होटल स्टेशन से ज़्यादा दूर नहीं है।
+मेरी बहन चिकित्सा पढ़ रही है।|My sister is studying medicine.|मेरी बहन चिकित्सा पढ़ रही है।
+हफ़्ते के अंत में मेरे पास समय नहीं है।|I have no time at the weekend.|हफ़्ते के अंत में मेरे पास समय नहीं है।
+वह शाम को कॉफ़ी नहीं पीता।|He does not drink coffee in the evening.|वह शाम को कॉफ़ी नहीं पीता।
+हमें जयपुर के दो टिकट चाहिए।|We need two tickets to Jaipur.|हमें जयपुर के दो टिकट चाहिए।
+परीक्षा नौ बजे शुरू होती है।|The exam starts at nine o'clock.|परीक्षा नौ बजे शुरू होती है।
+मैं थोड़ी हिन्दी और अंग्रेज़ी बोलता हूँ।|I speak a little Hindi and English.|मैं थोड़ी हिन्दी और अंग्रेज़ी बोलता हूँ।
+मेरा दोस्त इंजीनियर के रूप में काम करता है।|My friend works as an engineer.|मेरा दोस्त इंजीनियर के रूप में काम करता है।
+वह रसोई में माँ की मदद करती है।|She helps her mother in the kitchen.|वह रसोई में माँ की मदद करती है।
+मैं हर शाम सैर के लिए जाता हूँ।|I go for a walk every evening.|मैं हर शाम सैर के लिए जाता हूँ।
+
+@listening
+नमस्ते, आप कैसे हैं?|namaste aap kaise hain|Hello, how are you?|नमस्ते, आप कैसे हैं?|नमस्ते, आप कहाँ हैं?|शुभ प्रभात, आप कैसे हैं?|1
+मुझे एक कप चाय चाहिए।|mujhe ek kap chaay chahiye|I want a cup of tea.|मुझे एक कप चाय चाहिए|मुझे एक कप कॉफ़ी चाहिए|मुझे एक गिलास पानी चाहिए|1
+स्टेशन कहाँ है?|station kahaan hai|Where is the station?|स्टेशन कहाँ है?|बाज़ार कहाँ है?|होटल कहाँ है?|1
+मैं दिल्ली से हूँ।|main dilli se hoon|I am from Delhi.|मैं दिल्ली से हूँ|मैं दिल्ली में रहता हूँ|मैं दिल्ली जा रहा हूँ|1
+बिल लाइए, धन्यवाद।|bill laaiye dhanyavaad|The bill, please.|बिल लाइए, धन्यवाद|मेनू लाइए, धन्यवाद|रसीद लाइए, धन्यवाद|1
+यह कितने का है?|yah kitne ka hai|How much is this?|यह कितने का है?|यह किसका है?|यह क्या है?|1
+मैं समझ नहीं पाया।|main samajh nahin paaya|I did not understand.|मैं समझ नहीं पाया|मैं आ नहीं पाया|मैं सुन नहीं पाया|1
+कृपया धीरे बोलिए।|kripaya dheere boliye|Please speak slowly.|कृपया धीरे बोलिए|कृपया ऊँचा बोलिए|कृपया पास आइए|1
+मेरा भाई डॉक्टर है।|mera bhai doctor hai|My brother is a doctor.|मेरा भाई डॉक्टर है|मेरा भाई शिक्षक है|मेरे पिता डॉक्टर हैं|1
+ट्रेन आठ बजे चलती है।|tren aath baje chalti hai|The train leaves at eight.|ट्रेन आठ बजे चलती है|बस आठ बजे चलती है|ट्रेन आठ बजे आती है|1
+आज मेरे पास समय नहीं है।|aaj mere paas samay nahin hai|I have no time today.|आज मेरे पास समय नहीं है|आज मेरे पास पैसे नहीं हैं|आज मेरे पास काम नहीं है|1
+खाना बहुत स्वादिष्ट है।|khaana bahut swadisht hai|The food is very tasty.|खाना बहुत स्वादिष्ट है|मौसम बहुत अच्छा है|चाय बहुत गर्म है|1
+हम साथ में हिन्दी सीखते हैं।|ham saath mein hindi seekhte hain|We learn Hindi together.|हम साथ में हिन्दी सीखते हैं|हम साथ में हिन्दी बोलते हैं|हम साथ में किताब पढ़ते हैं|1
+मुझे दो रातों के लिए कमरा चाहिए।|mujhe do raaton ke liye kamra chahiye|I need a room for two nights.|मुझे दो रातों के लिए कमरा चाहिए|मुझे दो लोगों के लिए मेज़ चाहिए|मुझे एक रात के लिए कमरा चाहिए|1
+मेरी माँ आज मछली पका रही है।|meri maan aaj machhli paka rahi hai|My mother is cooking fish today.|मेरी माँ आज मछली पका रही है|मेरी माँ आज मछली ला रही है|मेरे पिता आज मछली पका रहे हैं|1
+मैं हर शाम सैर करता हूँ।|main har shaam sair karta hoon|I walk every evening.|मैं हर शाम सैर करता हूँ|मैं हर सुबह सैर करता हूँ|मैं हर शाम सोता हूँ|1
+क्या आपके पास छोटा साइज़ है?|kya aapke paas chota size hai|Do you have a smaller size?|क्या आपके पास छोटा साइज़ है?|क्या आपके पास बड़ा साइज़ है?|क्या आपके पास दूसरा रंग है?|1
+मैं कार्ड से भुगतान करूँगा।|main card se bhugtaan karoonga|I will pay by card.|मैं कार्ड से भुगतान करूँगा|मैं नक़द भुगतान करूँगा|मैं कल भुगतान करूँगा|1
+मुझे बहुत खेद है।|mujhe bahut khed hai|I am very sorry.|मुझे बहुत खेद है|मुझे बहुत खुशी है|मुझे बहुत डर है|1
+मैं कल आपको फ़ोन करूँगा।|main kal aapko phone karoonga|I will call you tomorrow.|मैं कल आपको फ़ोन करूँगा|मैं आज आपको फ़ोन करूँगा|मैं कल आपसे मिलूँगा|1
+
+@stories
+दिल्ली में पहला दिन|🚆|राहुल सुबह दिल्ली पहुँचा।\nउसने टैक्सी से ___ (1) तक यात्रा की।\nकमरे में उसने ___ (2) पी।\nफिर उसने अपनी ___ (3) को फ़ोन किया।|Rahul reaches Delhi in the morning. He travels by taxi to the hotel. In the room he drinks tea. Then he calls his family.|होटल/स्टेशन/बाज़ार=0;चाय/किताब/रोटी=0;माँ/दुकान/कक्षा=0
+बाज़ार में ख़रीदारी|🛒|प्रिया रविवार को ___ (1) गई।\nउसने रोटी, दूध और ___ (2) ख़रीदे।\nभुगतान उसने ___ (3) से किया।|Priya goes shopping on Sunday. She buys bread, milk and apples. She pays by card.|बाज़ार/स्कूल/दफ़्तर=0;सेब/किताबें/कुर्सियाँ=0;कार्ड/काग़ज़/पानी=0
+खोया हुआ पासपोर्ट|🛂|अहमद अपना ___ (1) ढूँढ रहा था।\nउसने एक ___ (2) से मदद माँगी।\nसौभाग्य से वह उसके ___ (3) में मिल गया।|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is found in his bag.|पासपोर्ट/चाबी/किताब=0;पुलिसकर्मी/शिक्षक/पड़ोसी=0;थैले/रसोई/स्कूल=0
+डॉक्टर के पास|🏥|बिलाल की तबीयत ___ (1) थी।\nवह ___ (2) के पास गया।\nडॉक्टर ने उसे दवा और ___ (3) दी।|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|ख़राब/अच्छी/भूख=0;डॉक्टर/बेकर/चालक=0;आराम/पैसा/किताबें=0
+हिन्दी कक्षा|📚|नादिया तीन महीने से ___ (1) सीख रही है।\nवह हर शाम ___ (2) से अभ्यास करती है।\nउसके ___ (3) कहते हैं वह अच्छा बोल लेती है।|Nadia has been learning Hindi for three months. She practises every evening with books. Her teacher says she speaks well.|हिन्दी/फ़्रेंच/अरबी=0;किताबों/तस्वीरों/कार्डों=0;शिक्षक/भाई/पड़ोसी=0
+पारिवारिक भोजन|👨‍👩‍👧‍👦|रविवार को पूरा ___ (1) आया।\nदादी ने ___ (2) पकाया।\nसबने मिलकर खाया और बहुत ___ (3)।|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|परिवार/दफ़्तर/कक्षा=0;चावल/पानी/काग़ज़=0;हँसी की/काम किया/सो गए=0
+स्टेशन पर|🚉|ट्रेन दस मिनट ___ (1) थी।\nहसन ने दुकान से ___ (2) ख़रीदा।\nफिर वह ___ (3) में बैठ गया।|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|देर से/साफ़/तैयार=0;अख़बार/रसीद/चाबी=0;ट्रेन/बस/हवाई जहाज़=0
+सर्दी की शाम|❄️|जनवरी में बहुत ___ (1) होती है।\nआयशा ने गर्म ___ (2) पहना।\nउसने गर्म ___ (3) पी और किताब पढ़ने लगी।|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|ठंड/गर्मी/बारिश=0;कोट/कमीज़/जूते=0;चाय/पानी/रस=0
+होटल में खाना|🍽️|वेटर ___ (1) लाया।\nउमर ने मछली और ___ (2) मँगाया।\nअंत में उसने ___ (3) माँगा।|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|मेनू/कुर्सी/रोशनी=0;चावल/मेज़/खिड़की=0;बिल/चाबी/रसीद=0
+नए दोस्त|🤝|लेना और सना ___ (1) में मिले।\nउन्होंने संगीत और ___ (2) के बारे में बात की।\nअंत में दोनों ने अपने ___ (3) बदल लिए।|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|बगीचे/दफ़्तर/ट्रेन=0;यात्रा/रसीदें/परीक्षाएँ=0;नंबर/पते/किताबें=0
+
+@idioms
+आँख का तारा|aankh ka taara|The apple of one's eye.|आँख का तारा|उसका बेटा उसकी आँख का तारा है।
+दिल पर हाथ रखना|dil par haath rakhna|To speak honestly.|सच बोलना|दिल पर हाथ रखकर बताइए, क्या हुआ?
+नाक में दम करना|naak mein dam karna|To annoy someone constantly.|तंग कर देना|बच्चों ने शोर मचाकर नाक में दम कर दिया।
+हाथ धोकर पीछे पड़ना|haath dhokar peechhe padna|To chase someone relentlessly.|किसी के पीछे पड़ जाना|वह इस मामले में हाथ धोकर पीछे पड़ गए।
+नाम बड़ा, दर्शन छोटे|naam bada darshan chhote|All name, no substance.|नाम बड़ा, काम शून्य|उसे कुछ नहीं आता — नाम बड़ा, दर्शन छोटे।
+अपनी नाक कटवाना|apni naak katwana|To bring shame on oneself.|बेइज़्ज़ती कराना|झूठ बोलकर उसने अपनी नाक कटवा ली।
+आसमान सिर पर उठाना|aasmaan sir par uthana|To make a huge fuss.|बहुत शोर मचाना|छोटी सी बात पर आसमान सिर पर उठा दिया।
+दाल में काला होना|daal mein kaala hona|Something suspicious.|कुछ गड़बड़ होना|यह मामला साफ़ नहीं, दाल में कुछ काला है।
+हाथ से निकल जाना|haath se nikal jaana|To lose control.|क़ाबू से बाहर होना|मामला हाथ से निकल गया।
+बात की बात|baat ki baat|In no time at all.|पलों में|बात की बात में सारा काम हो गया।
+समय का पाबंद|samay ka paaband|Punctual.|समय पर आने वाला|वह हर मीटिंग में समय का पाबंद रहता है।
+अपने पैर पर कुल्हाड़ी मारना|apne pair par kulhadi maarna|To harm oneself.|अपना ही नुक़सान करना|झूठ बोलकर उसने अपने पैर पर कुल्हाड़ी मारी।
+दो टूक जवाब|do took jawaab|A blunt, clear answer.|साफ़गोई|उसने दो टूक जवाब दे दिया।
+पानी-पानी होना|paani-paani hona|To be deeply embarrassed.|शर्मिंदा होना|सबके सामने वह पानी-पानी हो गया।
+मुँह से निकला शब्द|munh se nikla shabd|A spoken word must be kept.|कहा हुआ वचन|मुँह से निकला शब्द वापस नहीं लेते।
+दिल खोलकर|dil kholkar|Wholeheartedly.|पूरे दिल से|उन्होंने दिल खोलकर मेहमानों की खातिरदारी की।
+आग लगाना|aag lagaana|To spread discord.|फ़ितना खड़ा करना|उसकी बात ने घर में आग लगा दी।
+दिल में उतर जाना|dil mein utar jaana|To touch someone's heart.|दिल में घर कर जाना|उसकी आवाज़ दिल में उतर गई।
+समय पलक झपकते में|samay palak jhapakte mein|In the blink of an eye.|बहुत तेज़ी से|समय पलक झपकते में गुज़र गया।
+महँगे आँसू रोना|mehnge aansoo rona|To cry bitterly.|बहुत ज़्यादा रोना|परीक्षा में असफलता पर वह महँगे आँसू रोया।
+पत्थर दिल|patthar dil|Hard-hearted.|सख़्त दिल|पत्थर दिल इंसान किसी की नहीं सुनता।
+दिल का साफ़|dil ka saaf|Honest and pure-hearted.|साफ़ दिल वाला|वह दिल का साफ़ इंसान है, किसी से क़ीना नहीं रखता।
+आँख बंद करना|aankh band karna|To ignore the obvious.|अनदेखा करना|नोटिस आपके सामने है, आँख बंद मत कीजिए।
+हाथ बाँध लेना|haath baandh lena|To give up.|हार मान लेना|मुश्किल देखकर उसने हाथ बाँध लिए।
+मुँह मीठा करना|munh meetha karna|To celebrate good news.|ख़ुशी मनाना|नतीजा अच्छा आया, सबने मुँह मीठा किया।
+
+@alphabet
+अ|a|a|अमर
+आ|aa|aa|आम
+इ|i|i|इमारत
+ई|ee|ee|ईख
+उ|u|u|उड़ना
+ऊ|oo|oo|ऊँट
+ए|e|e|एक
+ऐ|ai|ai|ऐनक
+ओ|o|o|ओस
+औ|au|au|औरत
+क|ka|ka|कमरा
+ख|kha|kha|खिड़की
+ग|ga|ga|गाड़ी
+घ|gha|gha|घर
+च|cha|cha|चाय
+छ|chha|chha|छत
+ज|ja|ja|जवाब
+झ|jha|jha|झंडा
+ट|tta|tta|टमाटर
+ठ|ttha|ttha|ठंडा
+ड|dda|dda|डॉक्टर
+ढ|ddha|ddha|ढक्कन
+त|ta|ta|तारीख़
+थ|tha|tha|थैला
+द|da|da|दरवाज़ा
+ध|dha|dha|धन्यवाद
+न|na|na|नमक
+प|pa|pa|पानी
+फ|pha|pha|फूल
+ब|ba|ba|बगीचा
+भ|bha|bha|भाई
+म|ma|ma|माँ
+य|ya|ya|यात्रा
+र|ra|ra|रंग
+ल|la|la|लाल
+व|va|va|वक्त
+श|sha|sha|शाम
+ष|shha|shha|षट्कोण
+स|sa|sa|समय
+ह|ha|ha|हाथ

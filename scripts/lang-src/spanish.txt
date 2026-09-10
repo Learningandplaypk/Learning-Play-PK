@@ -1,0 +1,145 @@
+# spanish — authored source (migrated from data/langs/spanish.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|Conozco la palabra {s}.|I know the word {en}.
+adjectives|La casa es muy {s}.|The house is very {en}.
+verbs|Quiero {s}.|I want to {en}.
+colors|El color es {s}.|The color is {en}.
+
+@words
+book|libro|libro
+pen|pluma|pluma
+water|agua|agua
+bread|pan|pan
+house|casa|kasa
+school|escuela|eskuela
+friend|amigo|ameego
+mother|madre|madray
+father|padre|padray
+fish|pez|peth
+car|coche|kochay
+road|camino|kameeno
+city|ciudad|syudad
+village|pueblo|pwevlo
+rice|arroz|aroth
+tea|té|tay
+milk|leche|laychay
+hand|mano|mano
+eye|ojo|okho
+heart|corazón|korazon
+day|día|deeya
+night|noche|nochay
+time|tiempo|tyempo
+money|dinero|deenayro
+work|trabajo|trabakho
+teacher|maestro|mayestro
+student|estudiante|estüdyantay
+doctor|doctor|doktor
+market|mercado|mirkado
+price|precio|prethyo
+door|puerta|pwayrta
+window|ventana|ventana
+light|luz|looth
+morning|mañana|manyana
+evening|tarde|tarday
+week|semana|semana
+month|mes|mayss
+year|año|anyo
+peace|paz|path
+egg|el huevo|huevo
+meat|la carne|carne
+salt|la sal|sal
+sugar|el azúcar|azúcar
+apple|la manzana|manzana
+grapes|la uva|uva
+tomato|el tomate|tomate
+table|la mesa|mesa
+chair|la silla|silla
+bed|la cama|cama
+kitchen|la cocina|cocina
+bus|el autobús|autobús
+train|el tren|tren
+airplane|el avión|avión
+beautiful|bonito|bonito
+big|grande|grande
+small|pequeño|pequeño
+new|nuevo|nuevo
+old|viejo|viejo
+fast|rápido|rápido
+slow|lento|lento
+to eat|comer|comer
+to drink|beber|beber
+to read|leer|leer
+to write|escribir|escribir
+to speak|hablar|hablar
+to love|amar|amar
+to work|trabajar|trabajar
+to sleep|dormir|dormir
+to come|venir|venir
+to go|ir|ir
+color|el color|color
+red|rojo|rojo
+blue|azul|azul
+green|verde|verde
+yellow|amarillo|amarillo
+black|negro|negro
+white|blanco|blanco
+
+# unmatched (not in _concepts.txt) — 21 entries carried over as extras:
+sun|sol|sol||سورج|n|time|A2
+moon|luna|luna||چاند|n|time|A2
+star|estrella|estraya||ستارہ|n|time|A2
+tree|árbol|arbol||درخت|n|home|A2
+flower|flor|flor||پھول|n|home|A2
+bird|pájaro|pakharo||پرندہ|n|school|A2
+food|comida|komeeda||کھانا|n|food|A2
+wind|viento|vyento||ہوا|n|home|A2
+rain|lluvia|yoovya||بارش|n|home|A2
+sea|mar|mar||سمندر|n|travel|A2
+mountain|montaña|montanya||پہاڑ|n|travel|A2
+orange|la naranja|naranja||سنترا|n|food|A2
+boy|el niño|niño||لڑکا|n|family|A2
+girl|la niña|niña||لڑکی|n|family|A2
+man|el hombre|hombre||آدمی|n|family|A2
+woman|la mujer|mujer||عورت|n|family|A2
+dog|el perro|perro||کتا|n|school|A2
+cat|el gato|gato||بلی|n|school|A2
+horse|el caballo|caballo||گھوڑا|n|school|A2
+snow|la nieve|nieve||برف|n|home|A2
+forest|el bosque|bosque||جنگل|n|school|A2
+
+@phrases
+Hola|ola|Hello|سلام|greeting
+¿Cómo estás?|komo estass|How are you?|آپ کیسے ہیں؟|smalltalk
+Estoy bien, gracias|estoy byan grasyass|I'm fine, thanks|ٹھیک ہوں، شکریہ|polite
+¿Cómo te llamas?|komo tay yamass|What's your name?|آپ کا نام کیا ہے؟|smalltalk
+Me llamo Ali|may yamo Ali|My name is Ali|میرا نام علی ہے|smalltalk
+¿De dónde eres?|day donday airayss|Where are you from?|آپ کہاں سے ہیں؟|travel
+Soy de Pakistán|soy day Pakistan|I am from Pakistan|میں پاکستان سے ہوں|smalltalk
+Muchas gracias|moochass grasyass|Thank you very much|بہت شکریہ|polite
+De nada|day nada|You're welcome|کوئی بات نہیں|greeting
+Sí / No|see / no|Yes / No|ہاں / نہیں|smalltalk
+Quiero agua|kyairo agua|I want water|مجھے پانی چاہیے|food
+¿Cuánto cuesta?|kwanto kwaysta|How much does it cost?|یہ کتنے کا ہے؟|shopping
+¿Dónde está la escuela?|donday esta la eskuela|Where is the school?|اسکول کہاں ہے؟|travel
+No entiendo|no entyendo|I don't understand|میں نہیں سمجھا|school
+Habla despacio|abla dayspathyo|Speak slowly|آہستہ بولیں|school
+Buenos días|buenos días|Good morning|صبح بخیر|greeting
+Buenas noches|buenas noches|Good night|شب بخیر|greeting
+Hasta luego|hasta luego|See you later|پھر ملیں گے|greeting
+Perdón|perdón|Sorry|معاف کیجیے|polite
+Ayúdame|ayúdame|Help me|میری مدد کریں|health
+Está delicioso|está delicioso|It's delicious|یہ مزیدار ہے|food
+Te quiero|te quiero|I love you|میں تم سے محبت کرتا ہوں|smalltalk
+Por supuesto|por supuesto|Of course|بیشک|polite
+Quiero esto|quiero esto|I want this|مجھے یہ چاہیے|greeting
+¿Qué hora es?|qué hora es|What time is it?|اب کیا وقت ہوا؟|smalltalk
+Hace buen tiempo|hace buen tiempo|The weather is nice|موسم اچھا ہے|food
+Buena suerte|buena suerte|Good luck|خوش قسمتی|smalltalk
+Estoy cansado|estoy cansado|I am tired|میں تھکا ہوا ہوں|smalltalk
+Cuídate|cuídate|Take care|اپنا خیال رکھنا|smalltalk
+

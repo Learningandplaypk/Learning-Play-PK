@@ -1,14 +1,19 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check, Play } from "lucide-react";
+import { ArrowRight, Check, Play, Plus } from "lucide-react";
 import { Card, Chip, Progress, Sheet } from "@/components/ui";
 import { LEARN_GAME_DATA } from "@/lib/games-data";
-import { langFlag, langLabel } from "@/lib/lang-paths";
+import { getLangMeta } from "@/lib/lang-paths";
+import { langStat } from "@/lib/lang-progress";
 import { usePlayer } from "@/lib/store";
 import { fmt } from "@/lib/utils";
 import { ZoneArt, Ustad } from "@/components/brand/ustad";
+import { LangTile } from "@/components/brand/lang-tile";
+import { useLessonScript } from "@/components/games/learn/lesson-bits";
+import { loadPack } from "@/lib/lang-pack";
+import type { PackAlphabet } from "@/lib/lang-pack-types";
 
 /**
  * Path node states. There is NO "locked" state — every lesson is playable from
@@ -17,14 +22,33 @@ import { ZoneArt, Ustad } from "@/components/brand/ustad";
 type NodeState = "done" | "next" | "todo";
 
 export function LearnPathClient({ lang }: { lang: string }) {
-  const label = langLabel(lang)!;
-  const flag = langFlag(lang);
+  const meta = getLangMeta(lang);
+  const label = meta?.name ?? lang;
   const games = useMemo(() => LEARN_GAME_DATA.filter((g) => !g.langs || g.langs.includes(lang)), [lang]);
 
-  const wordsLearned = usePlayer((s) => s.wordsLearned.length);
-  const xp = usePlayer((s) => s.xp);
+  const learningLanguages = usePlayer((s) => s.learningLanguages);
+  const langProgress = usePlayer((s) => s.langProgress);
+  const addLearningLanguage = usePlayer((s) => s.addLearningLanguage);
   const results = usePlayer((s) => s.results);
   const [open, setOpen] = useState<number | null>(null);
+  const [primer, setPrimer] = useState(false);
+
+  // The script primer is the only part of this page that needs the language's
+  // JSON chunk, so it is fetched when the learner opens it (no hook branching).
+  const [alphabet, setAlphabet] = useState<PackAlphabet | null>(null);
+  useEffect(() => {
+    if (!primer || alphabet) return;
+    let alive = true;
+    void loadPack(lang).then((p) => {
+      if (alive) setAlphabet(p?.alphabet ?? null);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [primer, alphabet, lang]);
+  const { family } = useLessonScript(lang);
+  const stat = langStat(langProgress, lang);
+  const inHub = learningLanguages.includes(lang);
 
   const plays = useMemo(() => {
     const m = new Map<string, number>();
@@ -54,14 +78,35 @@ export function LearnPathClient({ lang }: { lang: string }) {
       {/* header */}
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <span className="mb-3 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint text-2xl">
-            {flag}
+          <span className="mb-3 grid h-14 w-14 place-items-center rounded-xl bg-brand-tint">
+            {meta ? <LangTile meta={meta} size={38} /> : null}
           </span>
           <h1 className="font-display text-3xl font-black text-fg sm:text-4xl">{label} seekho</h1>
+          {meta && (
+            <p
+              className="mt-1 text-sm text-brand-ink"
+              {...(meta.rtl ? { dir: "rtl" } : {})}
+              style={family ? { fontFamily: family } : undefined}
+            >
+              {meta.native}
+            </p>
+          )}
           <p className="mt-2 text-sm text-muted">
-            <span className="tnum">{fmt(xp)}</span> XP · <span className="tnum">{fmt(wordsLearned)}</span> words
-            explored · {doneCount}/{games.length} lessons
+            <span className="tnum">{fmt(stat.xp)}</span> XP · <span className="tnum">{fmt(stat.words)}</span> words ·{" "}
+            {doneCount}/{games.length} lessons
           </p>
+          {!inHub && (
+            <button
+              type="button"
+              className="btn btn-secondary btn-sm mt-3"
+              onClick={() => {
+                addLearningLanguage(lang);
+                void import("@/lib/sync").then((m) => m.pushLanguagePrefs()).catch(() => {});
+              }}
+            >
+              <Plus size={15} strokeWidth={2.6} /> My languages mein add karo
+            </button>
+          )}
         </div>
         <div className="w-full max-w-xs">
           <div className="mb-1.5 flex justify-between text-xs text-muted">
@@ -143,6 +188,41 @@ export function LearnPathClient({ lang }: { lang: string }) {
           );
         })}
       </ol>
+
+      {/* script primer (only languages that have one) */}
+      <div className="mx-auto mt-8 max-w-md">
+        <Card className="p-4">
+          <button type="button" className="flex w-full items-center justify-between gap-3 text-start" onClick={() => setPrimer((v) => !v)}>
+            <span>
+              <span className="block font-display text-sm font-extrabold text-fg">Script primer</span>
+              <span className="mt-0.5 block text-xs text-muted">
+                {meta?.rtl ? "RTL script" : "Alphabet"} — letters, romanization aur examples
+              </span>
+            </span>
+            <span className="chip">{primer ? "Band karo" : "Kholo"}</span>
+          </button>
+          {primer && !alphabet && <p className="mt-3 text-xs text-muted">Load ho raha hai…</p>}
+          {primer && alphabet && (
+            <div className="mt-3">
+              {alphabet.intro && <p className="mb-3 text-xs leading-relaxed text-muted">{alphabet.intro}</p>}
+              <div
+                className="grid grid-cols-4 gap-2 sm:grid-cols-6"
+                dir={meta?.rtl ? "rtl" : "ltr"}
+                style={family ? { fontFamily: family } : undefined}
+              >
+                {alphabet.rows.map((r) => (
+                  <span key={`${r.ch}-${r.name}`} className="rounded-lg border border-line bg-surface-2 p-2 text-center">
+                    <span className="block text-xl font-bold text-fg">{r.ch}</span>
+                    <span className="mt-0.5 block text-[10px] text-muted" style={{ fontFamily: "inherit" }} dir="ltr">
+                      {r.r}
+                    </span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </Card>
+      </div>
 
       {/* side cards */}
       <div className="mt-10 grid gap-3 sm:grid-cols-2">

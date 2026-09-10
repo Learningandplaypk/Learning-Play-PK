@@ -1,0 +1,147 @@
+# arabic — authored source (migrated from data/langs/arabic.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|أنا أعرف كلمة {s}.|I know the word {en}.
+food|أنا أحب {s}.|I like {en}.
+colors|اللون {s}.|The color is {en}.
+adjectives|البيت {s} جدًا.|The house is very {en}.
+numbers|الرقم {s}.|The number is {en}.
+
+@words
+book|كِتاب|kitaab
+pen|قَلَم|qalam
+water|مَاء|maa'
+bread|خُبز|khubz
+house|بَيت|bayt
+school|مَدرَسَة|madrasa
+friend|صَديق|sadeeq
+mother|أُمّ|umm
+father|أَب|ab
+fish|سَمَك|samak
+car|سَيّارَة|sayyaara
+road|طَريق|tareeq
+city|مَدينَة|madeena
+village|قَريَة|qarya
+rice|أَرُزّ|aruz
+tea|شَاي|shaay
+milk|حَليب|haleeb
+hand|يَد|yad
+eye|عَين|'ayn
+heart|قَلب|qalb
+day|يَوم|yawm
+night|لَيل|layl
+time|وَقت|waqt
+knowledge|عِلم|'ilm
+education|تَعليم|ta'leem
+student|طالِب|taalib
+teacher|مُعَلِّم|mu'allim
+market|سُوق|souq
+price|ثَمَن|thaman
+door|باب|baab
+window|نَافِذَة|naafiza
+light|نور|noor
+morning|صَبَاح|sabaah
+evening|مَساء|masaa'
+week|أُسبُوع|usboo'
+month|شَهر|shahr
+year|عَام|'aam
+peace|سَلام|salaam
+head|رَأْس|ra's
+language|لُغَة|lugha
+sentence|جُمْلَة|jumlah
+word|كَلِمَة|kalimah
+question|سُؤَال|su'aal
+answer|جَوَاب|jawab
+color|لَوْن|lawn
+red|أَحْمَر|ahmar
+blue|أَزْرَق|azraq
+green|أَخْضَر|akhdar
+yellow|أَصْفَر|asfar
+black|أَسْوَد|aswad
+white|أَبْيَض|abyad
+doctor|طَبِيب|tabib
+garden|حَدِيقَة|hadiqa
+
+# unmatched (not in _concepts.txt) — 45 entries carried over as extras:
+sun|شَمس|shams||سورج|n|time|A2
+moon|قَمَر|qamar||چاند|n|time|A2
+star|نَجم|najm||ستارہ|n|time|A2
+tree|شَجَرَة|shajara||درخت|n|home|A2
+flower|زَهرَة|zahra||پھول|n|home|A2
+bird|طائِر|taa'ir||پرندہ|n|school|A2
+food|طَعام|ta'aam||کھانا|n|food|A2
+wind|رِيح|reeh||ہوا|n|home|A2
+rain|مَطَر|matar||بارش|n|home|A2
+sea|بَحر|bahr||سمندر|n|travel|A2
+mountain|جَبَل|jabal||پہاڑ|n|travel|A2
+goodness|خَير|khayr||بھلائی|n|emotions|A2
+Allah|الله|Allah||اللہ|n|school|A2
+Lord|رَبّ|Rabb||رَب (پالنے والا)|n|school|A2
+Most Merciful|رَحمن|Rahmaan||رحمٰن|n|school|A2
+Most Compassionate|رَحيم|Raheem||رحیم|n|school|A2
+religion|دِين|deen||دین|n|school|A2
+mankind|نَاس|naas||لوگ|n|school|A2
+soul|نَفْس|nafs||نفس|n|body|A2
+patience|صَبر|sabr||صبر|n|emotions|A2
+prayer|صَلات|salaat||نماز|n|school|A2
+charity due|زَكاة|zakaat||زکوٰۃ|n|school|A2
+fasting|صَوم|sawm||روزہ|n|school|A2
+truth / right|حَقّ|haqq||حق|n|emotions|A2
+resurrection|بَعث|ba'ath||بعث|n|school|A2
+prophet|نَبِيّ|nabiyy||نبی|n|school|A2
+mosque|مَسْجِد|masjid||مسجد|n|school|A2
+charity|صَدَقَة|sadaqah||صدقہ|n|school|A2
+zakat (obligatory alms)|زَكَاة|zakah||زکوٰۃ|n|school|A2
+Hajj (pilgrimage)|حَجّ|hajj||حج|n|school|A2
+paradise|جَنَّة|jannah||جنت|n|school|A2
+hellfire|نَار|nar||جہنم|n|school|A2
+angel|مَلَك|malak||فرشتہ|n|school|A2
+wisdom|حِكْمَة|hikmah||حکمت|n|school|A2
+earth|أَرْض|ard||زمین|n|school|A2
+sky|سَمَاء|samaa||آسمان|n|school|A2
+letter (alphabet)|حَرْف|harf||حرف|n|school|A2
+deed|عَمَل|amal||عمل|n|work|A2
+boy|وَلَد|walad||لڑکا|n|family|A2
+girl|بِنْت|bint||لڑکی|n|family|A2
+man|رَجُل|rajul||آدمی|n|family|A2
+woman|امْرَأَة|imra'a||عورت|n|family|A2
+horse|حِصَان|hisan||گھوڑا|n|school|A2
+snow|ثَلْج|thalj||برف|n|home|A2
+leaf|وَرَق|waraq||پتہ|n|home|A2
+
+@phrases
+السلام عليكم|As-salaamu alaykum|Peace be upon you|السلام علیکم|smalltalk
+كيف حالك؟|Kayfa haaluk?|How are you?|آپ کیسے ہیں؟|smalltalk
+بخير، شكراً|Bi-khayr, shukran|I am fine, thank you|ٹھیک ہوں، شکریہ|polite
+ما اسمك؟|Maa ismuk?|What is your name?|آپ کا نام کیا ہے؟|smalltalk
+اسمي أحمد|Ismee Ahmad|My name is Ahmad|میرا نام احمد ہے|smalltalk
+من أين أنت؟|Min ayna ant?|Where are you from?|آپ کہاں سے ہیں؟|travel
+أنا من باكستان|Anaa min Pakistan|I am from Pakistan|میں پاکستان سے ہوں|smalltalk
+شكراً جزيلاً|Shukran jazeelan|Thank you very much|بہت شکریہ|polite
+عفواً|'afwan|You're welcome|کوئی بات نہیں|greeting
+نعم / لا|Na'am / Laa|Yes / No|ہاں / نہیں|smalltalk
+أريد ماء|Ureed maa'|I want water|مجھے پانی چاہیے|food
+كم السعر؟|Kam as-saman?|How much is the price?|قیمت کیا ہے؟|shopping
+أين المدرسة؟|Ayna al-madrasa?|Where is the school?|اسکول کہاں ہے؟|travel
+لا أفهم|Laa afham|I don't understand|میں نہیں سمجھا|school
+تكلم ببطء|Takallam bi-bu't|Speak slowly|آہستہ بولیں|school
+وَعَلَيْكُمُ السَّلَام|wa alaykum as-salam|And peace be upon you (reply)|وعلیکم السلام|smalltalk
+عَفْوًا|afwan|You're welcome / excuse me|معاف کیجیے|greeting
+اسْمِي أَحْمَد|ismi Ahmad|My name is Ahmed|میرا نام احمد ہے|smalltalk
+أَيْنَ الْمَسْجِدُ؟|ayna al-masjid|Where is the mosque?|مسجد کہاں ہے؟|travel
+كَمْ هَذَا؟|kam hadha|How much is this?|یہ کتنے کا ہے؟|greeting
+إِنْ شَاءَ اللَّه|in sha Allah|God willing|ان شاء اللہ|smalltalk
+الْحَمْدُ لِلَّه|alhamdulillah|Praise be to Allah|الحمد للہ|smalltalk
+بِسْمِ اللَّه|bismillah|In the name of Allah|بسم اللہ|smalltalk
+مَعَ السَّلَامَة|ma'a as-salama|Goodbye (go safely)|خدا حافظ|greeting
+مُمْتَاز|mumtaz|Excellent|شاندار|smalltalk
+أَهْلًا وَسَهْلًا|ahlan wa sahlan|Welcome|خوش آمدید|greeting
+أُرِيدُ هَذَا|uridu hadha|I want this|مجھے یہ چاہیے|greeting
+مَتَى؟|mata|When?|کب؟|smalltalk
+أَنَا تَعِبَان|ana ta'ban|I am tired|میں تھکا ہوا ہوں|smalltalk
+أَرَىكَ لَاحِقًا|araka lahiqan|See you later|پھر ملیں گے|greeting
+

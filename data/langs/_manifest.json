@@ -1,0 +1,202 @@
+{
+  "arabic": {
+    "words": 98,
+    "phrases": 30,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "chinese": {
+    "words": 97,
+    "phrases": 29,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "french": {
+    "words": 100,
+    "phrases": 30,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "japanese": {
+    "words": 98,
+    "phrases": 29,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "korean": {
+    "words": 98,
+    "phrases": 30,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "spanish": {
+    "words": 98,
+    "phrases": 29,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "turkish": {
+    "words": 99,
+    "phrases": 30,
+    "grammar": 0,
+    "sentences": 0,
+    "listening": 0,
+    "stories": 0,
+    "idioms": 0,
+    "alphabet": 0
+  },
+  "german": {
+    "words": 300,
+    "phrases": 174,
+    "grammar": 92,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 30
+  },
+  "urdu": {
+    "words": 300,
+    "phrases": 146,
+    "grammar": 91,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 37
+  },
+  "punjabi": {
+    "words": 300,
+    "phrases": 145,
+    "grammar": 76,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 37
+  },
+  "pashto": {
+    "words": 300,
+    "phrases": 144,
+    "grammar": 62,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 42
+  },
+  "sindhi": {
+    "words": 300,
+    "phrases": 143,
+    "grammar": 69,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 26,
+    "alphabet": 45
+  },
+  "balochi": {
+    "words": 300,
+    "phrases": 142,
+    "grammar": 61,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 35
+  },
+  "persian": {
+    "words": 300,
+    "phrases": 145,
+    "grammar": 66,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 32
+  },
+  "hindi": {
+    "words": 300,
+    "phrases": 143,
+    "grammar": 66,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 40
+  },
+  "italian": {
+    "words": 300,
+    "phrases": 145,
+    "grammar": 62,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 21
+  },
+  "portuguese": {
+    "words": 300,
+    "phrases": 145,
+    "grammar": 63,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 26
+  },
+  "russian": {
+    "words": 300,
+    "phrases": 145,
+    "grammar": 61,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 33
+  },
+  "bengali": {
+    "words": 300,
+    "phrases": 145,
+    "grammar": 64,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 50
+  },
+  "malay": {
+    "words": 300,
+    "phrases": 144,
+    "grammar": 72,
+    "sentences": 40,
+    "listening": 20,
+    "stories": 10,
+    "idioms": 25,
+    "alphabet": 26
+  }
+}

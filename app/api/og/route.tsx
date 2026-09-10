@@ -29,6 +29,8 @@ export async function GET(req: NextRequest) {
   const title = (searchParams.get("title") ?? "Seekho + Khelo").slice(0, 80);
   const game = searchParams.get("game");
   const score = searchParams.get("score");
+  /** Secondary line — counts / native label (Latin only: the OG font is Inter). */
+  const sub = (searchParams.get("sub") ?? "").slice(0, 110);
 
   return new ImageResponse(
     (
@@ -64,9 +66,12 @@ export async function GET(req: NextRequest) {
             Score: {score}
           </div>
         )}
+        {sub && (
+          <div style={{ display: "flex", fontSize: 38, fontWeight: 700, marginTop: 20, color: "#178A55" }}>{sub}</div>
+        )}
         {game && <div style={{ display: "flex", fontSize: 30, marginTop: 18, color: "#6B6B66" }}>{game}</div>}
         <div style={{ display: "flex", fontSize: 26, marginTop: 48, color: "#6B6B66" }}>
-          43 FREE games - 8 languages with Urdu meanings - learnplaypk.com
+          43 FREE games - 21 languages with Urdu meanings - learnplaypk.com
         </div>
       </div>
     ),

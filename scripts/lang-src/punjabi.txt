@@ -1,0 +1,695 @@
+# Punjabi (پنجابی / Shahmukhi) — authored source for data/langs/punjabi.json
+# Shahmukhi spelling, RTL. Romanization = everyday Roman Panjabi
+# (a, aa, i, ee, u, oo, e, ai, o, au; kh, gh, ch, sh, dh, th, rr, n).
+
+@info
+romanization|Roman Panjabi: a, aa, i, ee, u, oo, e, ai, o, au; kh, gh, q, ch, sh, dh, th, rr, n.
+alphabet.title|پنجابی اکھر (شاہ مکھی)
+alphabet.intro|پنجابی شاہ مکھی وچ ۳۸ اکھر ہُندے نیں تے ایہہ سجے توں کھبے لکھی جاندی اے۔
+
+@frames
+greetings|ایہہ کہو: {s}۔|Say: {en}.
+numbers|میرے کول {s} سیب ہن۔|I have {en} apples.
+family|ایہہ {s} ہن۔|This is my {en}.
+food|مینوں {s} پسند اے۔|I like {en}.
+travel|{s} کتھے اے؟|Where is the {en}?
+time|میں {s} سکول جاندا ہاں۔|I go to school {en}.
+colors|اسمان {s} اے۔|The sky is {en}.
+body|میرا {s} درد کر رہا اے۔|My {en} hurts.
+home|ایتھے {s} اے۔|Here is the {en}.
+work|ایہہ {s} اے۔|This is {en}.
+school|ایہہ {s} اے۔|This is {en}.
+shopping|ایہہ {s} اے۔|This is {en}.
+emotions|میں {s} محسوس کردا ہاں۔|I feel {en}.
+verbs|میں روز {s} ہاں۔|This means: {en}.
+adjectives|ایہہ گھر {s} اے۔|The house is {en}.
+
+@words
+hello|ست سری اکال|sat sri akaal
+goodbye|رب راکھا|rab rakha
+good morning|سویر دی بخیر|saver di bakhair
+good evening|شام دی بخیر|shaam di bakhair
+good night|شب بخیر|shab bakhair
+thank you|مہربانی|meharbani
+please|مہربانی کر کے|meharbani kar ke
+sorry|معافی|muaafi
+excuse me|سنیو|suniyo
+yes|ہاں|haan
+no|نہیں|nahin
+welcome|جی آیاں نوں|jee ayaan no
+how are you|تسی کیویں او؟|tusi keevein o
+my name is|میرا ناں اے|mera naan ae||میرا ناں بلو اے۔|My name is Balu.
+nice to meet you|تہانوں مل کے خوشی ہوئی|tahaanoo mil ke khushi hoi
+see you later|فیر ملدے آں|phir milde aan
+good luck|چنگی قسمت|changi qismat
+congratulations|وادھائیاں|vadhaiyaan
+help|مدد|madad
+of course|بلکل|bilkul
+zero|صفر|sifar||صفر دا مطلب کجھ وی نہیں۔|Zero means nothing.
+one|اک|ikk
+two|دو|do
+three|تن|tinn
+four|چار|chaar
+five|پنج|panj
+six|چھ|chay
+seven|ست|satt
+eight|اٹھ|atth
+nine|نو|nau
+ten|دس|das
+eleven|گیاراں|gyaraan
+twelve|باراں|baraan
+thirteen|تیراں|teraan
+fourteen|چوداں|chaudaan
+fifteen|پندراں|pandraan
+twenty|ویہہ|veeh
+thirty|تیہہ|teeh
+forty|چالی|chaali
+fifty|پنجی|panji
+hundred|سو|sau
+thousand|ہزار|hazaar
+first|پہلا|pehla||ایہہ پہلا سبق اے۔|This is the first lesson.
+second|دوجا|doja||ایہہ دوجا کمرہ اے۔|This is the second room.
+half|ادھا|addha||ادھا گلاس پانی۔|Half a glass of water.
+mother|ماں|maa|میری ماں
+father|پیو|pio|میرے پیو
+brother|بھرا|bhara|میرا بھرا
+sister|بھین|bhein|میری بھین
+son|پتر|puttar|اوہناں دا پتر
+daughter|دھی|dhee|اوہناں دی دھی
+child|بچہ|bachcha|ایہہ بچہ
+baby|نیانہ|neyana|ایہہ نیانہ
+family|ٹبر|tabbar|ساڈا ٹبر
+husband|خاوند|khavand|اوہناں دا خاوند
+wife|ذال|zaal|اوہناں دی ذال
+uncle|چاچا|chacha|میرے چاچا
+aunt|چاچی|chachi|میری چاچی
+grandfather|دادا|dada|میرے دادا
+grandmother|دادی|dadi|میری دادی
+cousin|چچیرا بھرا|chachera bhara|میرا چچیرا بھرا
+nephew|بھتریجا|bhatreja|اوہناں دا بھتریجا
+friend|یار|yaar|میرا یار
+neighbour|گوانڈھی|gwaandhee|ساڈے گوانڈھی
+parent|ماپے|maape|میرے ماپے
+water|پانی|paani
+bread|روٹی|roti
+rice|چول|chaul
+milk|دودھ|doodh
+tea|چاء|chaah
+sugar|کھنڈ|khand
+salt|لون|loon
+egg|آنا|aana
+meat|گوشت|gosht
+chicken|کورگی|koorgi
+fish|مچھی|machhi
+apple|سیب|seb
+banana|کیلا|kela
+mango|اںب|anb
+orange (fruit)|سنگترہ|sangtra
+grapes|انگور|angoor
+lemon|نبو|nimbu
+tomato|ٹماٹر|tamatar
+onion|پیاز|pyaaz
+potato|الو|aloo
+carrot|گاجر|gajar
+oil|تیل|tail
+butter|مکھن|makkhan
+honey|شہد|shahad
+juice|رس|ras
+coffee|کافی|kaafi
+soup|شوربا|shorba
+breakfast|ناشتہ|nashta
+lunch|دوپہر دا کھانا|dopehar da khana
+dinner|رات دا کھانا|raat da khana
+car|گڈی|gaddi
+bus|بس|bus
+train|ریل|rail
+airplane|جہاز|jahaaz
+bicycle|سائیکل|cycle
+road|سڑک|sarak
+street|گلی|gali
+bridge|پل|pull
+station|سٹیشن|station
+airport|ہوائی اڈا|hawai adda
+ticket|ٹکٹ|ticket
+map|نقشہ|naqsha
+city|شہر|shehar
+village|پنڈ|pind
+country|دیس|des
+hotel|ہوٹل|hotel
+journey|سفر|safar
+luggage|سامان|saamaan
+driver|ڈرائیور|driver
+passport|پاسپورٹ|passport
+time|ویلا|vela||ویلا بہت تیزی نال لنگھدا اے۔|Time passes very quickly.
+day|دن|din||دن وچ دو واری دوا لوو۔|Take the medicine twice a day.
+night|رات|raat||رات نوں اسمان صاف اے۔|The sky is clear at night.
+morning|سویر|saver
+evening|شام|shaam
+week|ہفتہ|hafta||ہفتے وچ اک واری بازار جاندا ہاں۔|I go to the market once a week.
+month|مہینہ|meena||مہینے دے آخر وچ تنخواہ آوندی اے۔|The salary comes at the end of the month.
+year|سال|saal||سال وچ چار رتّ آوندیاں ہن۔|Four seasons come in a year.
+hour|گھنٹہ|ghanta||اک گھنٹہ پہلاں آ جاوو۔|Come one hour early.
+minute|منٹ|mint||پنج منٹ ٹھہر جاوو۔|Wait five minutes.
+today|اج|aj
+tomorrow|بھلک|bhalak
+yesterday|کل|kal
+now|ہن|hun
+later|بعد|baad
+early|سویلے|savere
+late|دیر|dair
+always|ہمیشہ|hamesha
+sometimes|کدے کدے|kade kade
+never|کدے نہیں|kade nahin
+color|رنگ|rang||اس کپڑے دا رنگ گہرا اے۔|The color of this cloth is dark.
+red|لال|laal
+blue|نیلا|neela
+green|ہرا|hara
+yellow|پیلا|peela
+black|کالا|kaala
+white|چٹا|chitta
+brown|بھورا|bhoora
+grey|سلیٹی|sleti
+pink|گلابی|gulabi
+purple|جمنی|jamani
+orange (color)|نارنگی|naarangi
+body|جسم|jism||جسم نوں آرام دی لوڑ اے۔|The body needs rest.
+head|سر|sir
+hair|وال|vaal||میرے وال کالے ہن۔|My hair is black.
+face|چہرہ|chehra
+eye|اکھ|akkh||میری اکھ درد کر رہی اے۔|My eye hurts.
+ear|کن|kann
+nose|نک|nakk||ناک نال ساہ لوو۔|Breathe through the nose.
+mouth|مونہ|moonh
+tooth|دند|dand
+tongue|جیبھ|jeebh||جیبھ نال سواد محسوس ہُندا اے۔|The tongue feels the taste.
+neck|گرڈن|gardan||گرڈن سدھی رکھو۔|Keep the neck straight.
+shoulder|موڈھا|moddha
+hand|ہتھ|hath
+finger|انگلی|ungli||انگلی نال اشارہ کرو۔|Point with the finger.
+leg|لت|latt||لت وچ درد اے۔|There is pain in the leg.
+foot|پیر|pair
+heart|دل|dil
+stomach|پیٹ|pet
+house|گھر|ghar
+room|کمرہ|kamra
+door|بوہا|boha
+window|کھڑکی|khidki
+wall|کندھ|kandh
+roof|چھت|chhat
+floor|فرش|farsh
+kitchen|رسوئی|rasoi
+bathroom|اسنانشال|asnanshaal
+bed|بستر|bistar
+table|میز|mez
+chair|کورسی|korsi
+sofa|صوفہ|sofa
+lamp|بجلی|bijli
+key|چابی|chaabi
+stairs|پوڑیاں|pauriyaan
+garden|باغ|baagh
+light|روشنی|roshni
+fan|پکھا|pakkha
+mirror|شیشہ|sheesha
+work|کم|kamm
+job|نوکری|naukri
+office|دفتر|daftar
+money|پیسے|paise
+salary|تنخواہ|tankhwa
+meeting|میٹنگ|meeting
+boss|باس|baas
+employee|ملازم|mulazim
+business|کاروبار|karobar
+company|کمپنی|company
+market|بازار|bazaar
+shop|دکان|dukaan
+customer|گاہک|gahak
+price|قیمت|qeemat
+farmer|کسان|kisaan
+doctor|ڈاکٹر|doctor
+teacher|استاد|ustaad
+police|پولیس|police
+school|سکول|school
+book|کتاب|kitaab
+pen|قلم|qalam
+pencil|پینسل|pencil
+page|صفہ|safaa
+class|جماعت|jamaat
+student|پڑھیار|padhiyaar
+lesson|سبق|sabaq
+exam|امتحان|imtihaan
+question|سوال|sawaal
+answer|جواب|jawaab
+homework|گھر دا کم|ghar da kamm
+library|لائبریری|library
+university|یونیورسٹی|university
+language|بولی|boli
+word|شببد|shabad
+sentence|جملہ|jumla
+dictionary|لغت|lughaat
+science|سائنس|science
+history|اتہاس|itihaas
+knowledge|گیان|gyaan
+education|سکھیا|sukhia
+shopping|سودا لینا|sauda lena||اج شام سودا لینا اے۔|We have to go shopping this evening.
+buy|خریدنا|khareedna||اوہ سبزی خرید رہا اے۔|He is buying vegetables.
+sell|ویچنا|vechna||کسان بازار وچ پھل ویچدا اے۔|The farmer sells fruit in the market.
+cheap|سستا|sasta||ایہہ کپڑا سستا اے۔|This cloth is cheap.
+expensive|مہنگا|mehnga||فون مہنگا اے۔|The phone is expensive.
+coin|سکہ|sikka
+note|نوٹ|note
+bill|بل|bill
+size|سائز|size
+discount|چھوٹ|chhot
+receipt|رسید|raseed
+bag|بیگ|bag
+rupee|روپیہ|rupiya
+weigh|تلنا|tolna||دکاندار سبزی تلدا اے۔|The shopkeeper weighs the vegetables.
+pay|ادائیگی|adaigi||کارڈ نال ادائیگی کرو۔|Pay by card.
+happiness|خوشی|khushi
+sadness|اداسی|udaasi
+anger|غصہ|ghussa
+fear|ڈر|dar
+love|پیار|pyaar
+hope|امید|umeed
+worry|فکر|fikar
+surprise|حیرانی|hairaani
+peace|سکون|sukoon
+smile|مسکراہٹ|muskuraahat
+laugh|ہاسا|haasa
+crying|رونا|rona
+mood|مزاج|mizaaj
+brave|بہادر|bahadur||اوہ اک بہادر منڈا اے۔|He is a brave boy.
+lonely|اکلا|ikla||اوہ اکلا محسوس کردا اے۔|He feels lonely.
+to eat|کھانا|khana|کھاندا
+to drink|پینا|peena|پیندا
+to go|جانا|jaana|جاندا
+to come|آنا|aana|آندا
+to see|ویکھنا|vekhna|ویکھدا
+to hear|سننا|sunna|سندا
+to speak|بولنا|bolna|بولدا
+to read|پڑھنا|padhna|پڑھدا
+to write|لکھنا|likhna|لکھدا
+to learn|سکھنا|sukhna|سکھدا
+to teach|پڑھاؤنا|padhauna|پڑھاؤندا
+to sleep|سونا|sona|ساوندا
+to wake up|جاگنا|jaagna|جاگدا
+to run|دوڑنا|daurna|دوڑدا
+to walk|ترنا|tarna|تردا
+to open|کھولھنا|kholna|کھولھدا
+to close|بند کرنا|band karna|بند کردا
+to give|دینا|dena|دیندا
+to take|لینا|lena|لیندا
+to make|بناؤنا|banauna|بناؤندا
+to love|چاہنا|chahna|چاہندا
+to think|سوچنا|sochna|سوچدا
+to understand|سمجھنا|samajhna|سمجھدا
+to work|کم کرنا|kamm karna|کم کردا
+to wait|اڈیک کرنا|udeek karna|اڈیک کردا
+big|وڈا|wadda
+small|نکا|nikka
+new|نواں|navaan
+old|پرانا|purana
+good|چنگا|changa
+bad|ماڑا|maara
+beautiful|سوہنا|sohna
+hot|گرم|garam||موسم بہت گرم اے۔|The weather is very hot.
+cold|ٹھنڈا|thanda||پانی ٹھنڈا اے۔|The water is cold.
+fast|تیز|tez
+slow|ہولی|holi
+easy|سوکھا|sokha
+difficult|اوکھا|aukha
+long|لمبا|lamba
+short|نکا قد|nikka qad
+clean|صاف|saaf
+dirty|گندہ|ganda
+happy|خوش|khush||بچے بہت خوش ہن۔|The children are very happy.
+tired|تھکا|thukka||میں اج تھکا ہویا ہاں۔|I am tired today.
+hungry|بھکھا|bhukka||بچہ بھکھا اے۔|The child is hungry.
+
+@phrases
+ست سری اکال!|sat sri akaal|Hello (greeting)!|ست سری اکال!|greeting
+رب راکھا!|rab rakha|Goodbye (God protect you)!|رب راکھا!|greeting
+سویر دی بخیر!|saver di bakhair|Good morning!|سویر دی بخیر!|greeting
+شام دی بخیر!|shaam di bakhair|Good evening!|شام دی بخیر!|greeting
+شب بخیر!|shab bakhair|Good night!|شب بخیر!|greeting
+تسی کیویں او؟|tusi keevein o|How are you? (respectful)|تسی کیویں او؟|smalltalk
+میں ٹھیک آں، شکریہ۔|main theek aan shukriya|I am fine, thank you.|میں ٹھیک آں، شکریہ۔|smalltalk
+بہت مہربانی!|bohat meharbani|Thank you very much!|بہت مہربانی!|polite
+کوئی گل نہیں۔|koi gal nahin|No problem / you're welcome.|کوئی گل نہیں۔|polite
+معاف کرنا۔|maaf karna|Please excuse me.|معاف کرنا۔|polite
+مینوں افسوس اے۔|mainoo afsos ae|I am sorry.|مینوں افسوس اے۔|polite
+تہاڈا ناں کی اے؟|tuhada naan ki ae|What is your name?|تہاڈا ناں کی اے؟|smalltalk
+میرا ناں سنگیتا اے۔|mera naan sangeeta ae|My name is Sangeeta.|میرا ناں سنگیتا اے۔|smalltalk
+تسی کتھوں او؟|tusi kitthon o|Where are you from?|تسی کتھوں او؟|smalltalk
+میں لاہور توں آں۔|main lahore ton aan|I am from Lahore.|میں لاہور توں آں۔|smalltalk
+کی تسی انگریزی بولدے او؟|ki tusi angrezi bolde o|Do you speak English?|کی تسی انگریزی بولدے او؟|smalltalk
+مینوں پنجابی سکھنی اے۔|mainoo panjabi sukhni ae|I want to learn Punjabi.|مینوں پنجابی سکھنی اے۔|school
+میں سمجھیا نہیں۔|main samjheya nahin|I did not understand.|میں سمجھیا نہیں۔|school
+ذرا ہولی بولو۔|zara holi bolo|Please speak slowly.|ذرا ہولی بولو۔|polite
+ایہدا مطلب کی اے؟|ehda matlab ki ae|What does this mean?|ایہدا مطلب کی اے؟|school
+ایہہ کینے دا اے؟|eh kena da ae|How much is this?|ایہہ کینے دا اے؟|shopping
+مینوں ایہہ چاہیدا اے۔|mainoo eh chaahida ae|I want this.|مینوں ایہہ چاہیدا اے۔|shopping
+کی تہاڈے کول نکا سائز اے؟|ki tuhade kol nikka size ae|Do you have a smaller size?|کی تہاڈے کول نکا سائز اے؟|shopping
+بل لیایو، مہربانی۔|bill leyaayo meharbani|The bill, please.|بل لیایو، مہربانی۔|shopping
+میں کارڈ نال ادائیگی کراں گا۔|main card naal adaigi karaan ga|I will pay by card.|میں کارڈ نال ادائیگی کراں گا۔|shopping
+سٹیشن کتھے اے؟|station kitthe ae|Where is the station?|سٹیشن کتھے اے؟|travel
+واش روم کتھے اے؟|washroom kitthe ae|Where is the washroom?|واش روم کتھے اے؟|travel
+کی ایہہ بس ملتان جاندی اے؟|ki eh bus multan jaandi ae|Does this bus go to Multan?|کی ایہہ بس ملتان جاندی اے؟|travel
+ریل کس ویلے چلدی اے؟|rail kis vele chaldi ae|What time does the train leave?|ریل کس ویلے چلدی اے؟|travel
+میں رستہ بھل گیا آں۔|main rasta bhol gaya aan|I have lost my way.|میں رستہ بھل گیا آں۔|travel
+کی تسی میری مدد کر سکدے او؟|ki tusi meri madad kar sakde o|Can you help me?|کی تسی میری مدد کر سکدے او؟|polite
+مینوں ڈاکٹر دی لوڑ اے۔|mainoo doctor di lor ae|I need a doctor.|مینوں ڈاکٹر دی لوڑ اے۔|health
+میری طبیعت ٹھیک نہیں۔|meri tabiyat theek nahin|I am not feeling well.|میری طبیعت ٹھیک نہیں۔|health
+دوا خانہ کتھے اے؟|dawa khana kitthe ae|Where is the pharmacy?|دوا خانہ کتھے اے؟|health
+میرے سر وچ درد اے۔|mere sir vich dard ae|I have a headache.|میرے سر وچ درد اے۔|health
+اک کپ چاء، مہربانی۔|ek cup chaah meharbani|One cup of tea, please.|اک کپ چاء، مہربانی۔|food
+مینو دسیو۔|menu dasyo|Show me the menu.|مینو دسیو۔|food
+ایہہ بہت مزیدار اے۔|eh bohat mazedaar ae|This is very tasty.|ایہہ بہت مزیدار اے۔|food
+میں سبزی خور آں۔|main sabzi khor aan|I am a vegetarian.|میں سبزی خور آں۔|food
+مینوں بھکھ لگی اے۔|mainoo bhukh lagi ae|I am hungry.|مینوں بھکھ لگی اے۔|food
+پانی ٹھنڈا اے۔|paani thanda ae|The water is cold.|پانی ٹھنڈا اے۔|food
+اج موسم بہت چنگا اے۔|aj mausam bohat changa ae|The weather is very nice today.|اج موسم بہت چنگا اے۔|smalltalk
+میں دفتر وچ کم کردا ہاں۔|main daftar vich kamm karda haan|I work in an office.|میں دفتر وچ کم کردا ہاں۔|work
+تسی کتھے کم کردے او؟|tusi kitthe kamm karde o|Where do you work?|تسی کتھے کم کردے او؟|work
+میری تنخواہ مہینے دے آخر وچ آوندی اے۔|meri tankhwa meene de aakhir vich aaudi ae|My salary comes at the end of the month.|میری تنخواہ مہینے دے آخر وچ آوندی اے۔|work
+بھلک میری میٹنگ اے۔|bhalak meri meeting ae|I have a meeting tomorrow.|بھلک میری میٹنگ اے۔|work
+میں یونیورسٹی وچ پڑھدا ہاں۔|main university vich padhda haan|I study at the university.|میں یونیورسٹی وچ پڑھدا ہاں۔|school
+کلاس کس ویلے شروع ہُندی اے؟|class kis vele shuru hundi ae|What time does the class start?|کلاس کس ویلے شروع ہُندی اے؟|school
+امتحان سوکھا سی۔|imtihaan sokha si|The exam was easy.|امتحان سوکھا سی۔|school
+مینوں کتاباں پڑھن دی شوق اے۔|mainoo kitaabaan padhan di shauk ae|I like reading books.|مینوں کتاباں پڑھن دی شوق اے۔|school
+ایہہ شببد نواں اے۔|eh shabad navaan ae|This word is new.|ایہہ شببد نواں اے۔|school
+میں روز پنجابی سکھدا ہاں۔|main roz panjabi sukhda haan|I learn Punjabi every day.|میں روز پنجابی سکھدا ہاں۔|school
+اج سوموار اے۔|aj somvaar ae|Today is Monday.|اج سوموار اے۔|time
+کی ویلا ہویا اے؟|ki vela hoia ae|What time is it?|کی ویلا ہویا اے؟|time
+میرے کول ویلا نہیں اے۔|mere kol vela nahin ae|I don't have time.|میرے کول ویلا نہیں اے۔|time
+میں چھ وجے آواں گا۔|main chh voje aawaan ga|I will come at six o'clock.|میں چھ وجے آواں گا۔|time
+اتوار نوں میں فارغ ہاں۔|atvaar noo main faarigh haan|I am free on Sunday.|اتوار نوں میں فارغ ہاں۔|time
+ایہہ میری ماں ہن۔|eh meri maa han|This is my mother.|ایہہ میری ماں ہن۔|family
+میرے پیو بہت کم کردے ہن۔|mere pio bohat kamm karde han|My father works a lot.|میرے پیو بہت کم کردے ہن۔|family
+میری بھین ڈاکٹر اے۔|meri bhein doctor ae|My sister is a doctor.|میری بھین ڈاکٹر اے۔|family
+ساڈا ٹبر وڈا اے۔|saada tabbar wadda ae|Our family is big.|ساڈا ٹبر وڈا اے۔|family
+بچہ باغ وچ کھیڈدا اے۔|bachcha baagh vich khedda ae|The child plays in the garden.|بچہ باغ وچ کھیڈدا اے۔|family
+میرا گھر نکا اے۔|mera ghar nikka ae|My house is small.|میرا گھر نکا اے۔|home
+رسوئی صاف اے۔|rasoi saaf ae|The kitchen is clean.|رسوئی صاف اے۔|home
+کھڑکی کھلی اے۔|khidki khulli ae|The window is open.|کھڑکی کھلی اے۔|home
+میں بوہا بند کردا ہاں۔|main boha band karda haan|I close the door.|میں بوہا بند کردا ہاں۔|home
+بجلی چلی گئی اے۔|bijli chali gayi ae|The power has gone out.|بجلی چلی گئی اے۔|home
+میں ہن سون جاندا ہاں۔|main hun son jaanda haan|I am going to sleep now.|میں ہن سون جاندا ہاں۔|home
+میرا پاسپورٹ کتھے اے؟|mera passport kitthe ae|Where is my passport?|میرا پاسپورٹ کتھے اے؟|travel
+جہاز دیر نال اے۔|jahaaz dair naal ae|The flight is delayed.|جہاز دیر نال اے۔|travel
+سامان بہت بھارا اے۔|saamaan bohat bhaara ae|The luggage is very heavy.|سامان بہت بھارا اے۔|travel
+سفر بخیر!|safar bakhair|Have a good trip!|سفر بخیر!|travel
+مینوں دو راتاں لئی کمرہ چاہیدا اے۔|mainoo do raataan lai kamra chaahida ae|I need a room for two nights.|مینوں دو راتاں لئی کمرہ چاہیدا اے۔|travel
+سدھے جاوو۔|sidhe jaavo|Go straight ahead.|سدھے جاوو۔|travel
+کھبے مڑ جاوو۔|khabbe mur jaavo|Turn left.|کھبے مڑ جاوو۔|travel
+بازار کتھے اے؟|bazaar kitthe ae|Where is the market?|بازار کتھے اے؟|shopping
+قیمت بہت ودھ اے۔|qeemat bohat wadh ae|The price is too high.|قیمت بہت ودھ اے۔|shopping
+تھوڑی چھوٹ کر دیو۔|thori chhot kar deyo|Give a little discount.|تھوڑی چھوٹ کر دیو۔|shopping
+میں صرف ویکھ رہا ہاں۔|main siraf vekh reha haan|I am just looking.|میں صرف ویکھ رہا ہاں۔|shopping
+رسید دے دیو۔|raseed de deyo|Please give the receipt.|رسید دے دیو۔|shopping
+کھانا کھاوو جی۔|khana khao jee|Enjoy your meal!|کھانا کھاوو جی۔|food
+کھانے توں بعد چاء پیندے آں۔|khane ton baad chaah peende aan|We drink tea after the meal.|کھانے توں بعد چاء پیندے آں۔|food
+مینوں ٹھنڈا پانی دیو۔|mainoo thanda paani deyo|Give me cold water.|مینوں ٹھنڈا پانی دیو۔|food
+فکر نا کرو۔|fikar na karo|Don't worry.|فکر نا کرو۔|emotion
+مینوں تہاڈے تے مان اے۔|mainoo tuhade te maan ae|I am proud of you.|مینوں تہاڈے تے مان اے۔|emotion
+ایہہ سن کے خوشی ہوئی۔|eh sun ke khushi hoi|I am happy to hear that.|ایہہ سن کے خوشی ہوئی۔|emotion
+مینوں ڈر لگ رہا اے۔|mainoo dar lag reha ae|I am feeling scared.|مینوں ڈر لگ رہا اے۔|emotion
+تہانوں ویکھ کے چنگا لگیا۔|tahaanoo vekh ke changa laggeya|It was good to see you.|تہانوں ویکھ کے چنگا لگیا۔|smalltalk
+وادھائیاں!|vadhaiyaan|Congratulations!|وادھائیاں!|greeting
+جی آیاں نوں!|jee ayaan no|Welcome!|جی آیاں نوں!|greeting
+جلد ٹھیک ہو جاوو۔|jald theek ho jaavo|Get well soon.|جلد ٹھیک ہو جاوو۔|health
+اک پل، مہربانی۔|ek pal meharbani|One moment, please.|اک پل، مہربانی۔|polite
+میں ہن آندا ہاں۔|main hun aanda haan|I'll be right there.|میں ہن آندا ہاں۔|smalltalk
+مینوں پتا نہیں۔|mainoo pata nahin|I don't know.|مینوں پتا نہیں۔|smalltalk
+شاید بعد وچ۔|shayad baad vich|Maybe later.|شاید بعد وچ۔|smalltalk
+میں راضی ہاں۔|main raazi haan|I agree.|میں راضی ہاں۔|smalltalk
+ایہہ ٹھیک نہیں اے۔|eh theek nahin ae|That is not right.|ایہہ ٹھیک نہیں اے۔|smalltalk
+تسی اج کی کر رہے او؟|tusi aj ki kar rehe o|What are you doing today?|تسی اج کی کر رہے او؟|smalltalk
+میں امتحان دی تیاری کر رہا ہاں۔|main imtihaan di tayyaari kar reha haan|I am preparing for the exam.|میں امتحان دی تیاری کر رہا ہاں۔|school
+مینوں مدد چاہیدی اے۔|mainoo madad chaahidi ae|I need help.|مینوں مدد چاہیدی اے۔|polite
+تہاڈی مدد دا شکریہ۔|tuhadi madad da shukriya|Thank you for your help.|تہاڈی مدد دا شکریہ۔|polite
+ایہہ پہلی واری اے۔|eh pehli vaari ae|This is the first time.|ایہہ پہلی واری اے۔|smalltalk
+پیسے کتھے بدلاں؟|paise kitthe badlaan|Where can I exchange money?|پیسے کتھے بدلاں؟|travel
+بس اٹھ وجے آوندی اے۔|bus atth voje aaudi ae|The bus comes at eight.|بس اٹھ وجے آوندی اے۔|travel
+میری ریل چھٹ گئی۔|meri rail chhut gayi|I missed my train.|میری ریل چھٹ گئی۔|travel
+ہوٹل بہت چنگا اے۔|hotel bohat changa ae|The hotel is very nice.|ہوٹل بہت چنگا اے۔|travel
+تہاڈا کم کی اے؟|tuhada kamm ki ae|What is your profession?|تہاڈا کم کی اے؟|work
+میں انجینئر ہاں۔|main engineer haan|I am an engineer.|میں انجینئر ہاں۔|work
+اوہ ہر ویلے مدد کردی اے۔|oh har vele madad kardi ae|She always helps.|اوہ ہر ویلے مدد کردی اے۔|smalltalk
+اسی رل کے سکھدے آں۔|asi ral ke sukhde aan|We learn together.|اسی رل کے سکھدے آں۔|school
+میری پنجابی بہتر ہو رہی اے۔|meri panjabi behtar ho rahi ae|My Punjabi is getting better.|میری پنجابی بہتر ہو رہی اے۔|school
+اسمان نیلا اے۔|asmaan neela ae|The sky is blue.|اسمان نیلا اے۔|smalltalk
+میرا پسندیدہ رنگ ہرا اے۔|mera pasandeeda rang hara ae|My favourite color is green.|میرا پسندیدہ رنگ ہرا اے۔|smalltalk
+لال گڈی تیز اے۔|laal gaddi tez ae|The red car is fast.|لال گڈی تیز اے۔|smalltalk
+رات پرسکون اے۔|raat pursukoon ae|The night is peaceful.|رات پرسکون اے۔|time
+اج مینہہ پی رہا اے۔|aj meenh pee reha ae|It is raining today.|اج مینہہ پی رہا اے۔|smalltalk
+سورج نکل رہا اے۔|sooraj nikal reha ae|The sun is shining.|سورج نکل رہا اے۔|smalltalk
+واہ واہ!|waah waah|Well done!|واہ واہ!|smalltalk
+خدا حافظ!|khuda hafiz|Goodbye (God protect)!|خدا حافظ!|greeting
+تہانوں مل کے خوشی ہوئی۔|tahaanoo mil ke khushi hoi|Nice to meet you.|تہانوں مل کے خوشی ہوئی۔|greeting
+فیر ملاقات ہووے گی۔|phir mulaqat hovae gi|We will meet again.|فیر ملاقات ہووے گی۔|greeting
+معاف کرنا، کی کیا؟|maaf karna ki keha|Pardon, what did you say?|معاف کرنا، کی کیا؟|polite
+ذرا دہرا دیو۔|zara dohra deyo|Please repeat that.|ذرا دہرا دیو۔|polite
+ہجے دس دیو۔|hije das deyo|Please spell it.|ہجے دس دیو۔|school
+مینوں چاء بہت پسند اے۔|mainoo chaah bohat pasand ae|I love tea.|مینوں چاء بہت پسند اے۔|food
+کھانا تیار اے۔|khana tayyaar ae|The food is ready.|کھانا تیار اے۔|food
+پلیٹ وچ ہور کھانا پایو۔|plate vich hor khana paayo|Put more food on the plate.|پلیٹ وچ ہور کھانا پایو۔|food
+میں گوشت نہیں کھاندا۔|main gosht nahin khaanda|I don't eat meat.|میں گوشت نہیں کھاندا۔|food
+ایہہ کپڑا چنگا اے۔|eh kapra changa ae|This cloth is good.|ایہہ کپڑا چنگا اے۔|shopping
+دکان بند ہو گئی اے۔|dukaan band ho gayi ae|The shop is closed.|دکان بند ہو گئی اے۔|shopping
+میں روز بازار جاندا ہاں۔|main roz bazaar jaanda haan|I go to the market every day.|میں روز بازار جاندا ہاں۔|shopping
+گڈی سڑک تے اے۔|gaddi sarak te ae|The car is on the road.|گڈی سڑک تے اے۔|travel
+پل کول مڑ جاوو۔|pull kol mur jaavo|Turn near the bridge.|پل کول مڑ جاوو۔|travel
+شہر بہت وڈا اے۔|shehar bohat wadda ae|The city is very big.|شہر بہت وڈا اے۔|travel
+پنڈ وچ سکون اے۔|pind vich sukoon ae|There is peace in the village.|پنڈ وچ سکون اے۔|travel
+میں پڑھیار ہاں۔|main padhiyaar haan|I am a student.|میں پڑھیار ہاں۔|school
+اوہ چنگے استاد ہن۔|oh changay ustaad han|He is a good teacher.|اوہ چنگے استاد ہن۔|school
+سوال اوکھا اے۔|sawaal aukha ae|The question is difficult.|سوال اوکھا اے۔|school
+جواب ٹھیک اے۔|jawaab theek ae|The answer is correct.|جواب ٹھیک اے۔|school
+کتاب میز تے اے۔|kitaab mez te ae|The book is on the table.|کتاب میز تے اے۔|school
+بستر نرم اے۔|bistar naram ae|The bed is soft.|بستر نرم اے۔|home
+چابی گم ہو گئی اے۔|chaabi gum ho gayi ae|The key is lost.|چابی گم ہو گئی اے۔|home
+باغ وچ پھل ہن۔|baagh vich phul han|There are flowers in the garden.|باغ وچ پھل ہن۔|home
+کمرہ روشن اے۔|kamra roshan ae|The room is bright.|کمرہ روشن اے۔|home
+پوڑیاں چڑھ جاوو۔|pauriyaan charh jaavo|Go up the stairs.|پوڑیاں چڑھ جاوو۔|home
+
+@grammar
+"کتاب" دا لنگ کی اے؟|مؤنث|مذکر|کوئی نہیں|1|پنجابی وچ "آ" آواز والے اسم عموماً مؤنث ہُندے نیں: کتاب۔|Panjabi nouns ending in an "aa" sound are usually feminine.
+"منڈا" دا لنگ کی اے؟|مذکر|مؤنث|کوئی نہیں|1|منڈا مذکر اے۔|"Munda" (boy) is masculine.
+"میں ___ ہاں۔"|جاندا|جاندے|جاندی اے|1|First person singular: میں جاندا ہاں۔|Male speaker says "main jaanda haan".
+"تسی ___ او؟"|کیویں|کیدا|کیدی|1|Respectful "tusi" takes "keevein".|"Tusi keevein o?" is the polite "how are you".
+"اوہ بازار ___ جاندا اے۔"|نوں|وچ|توں|1|Direction uses "noo": بازار نوں۔|"Noo" marks direction/goal.
+"میں ___ وچ رہندا ہاں۔"|گھر|گھر نوں|گھر توں|1|Location uses "vich": گھر وچ۔|"Vich" means "in/inside".
+"میں ___ کولوں لیا۔"|دکان|دکان وچ|دکان تے|1|"Kolon" marks "from": دکان کولوں۔|"Kolon" means "from".
+"ایہہ کس ___ اے؟"|دا|نوں|وچ|1|Possession uses "da/dee/de": کس دا؟|"Da/dee/de" means "of".
+"دا/دی/دے" ___ نال ملدا اے۔|ملکیت والی شئے|مالک|ویلا|1|It agrees with the thing owned: میری کتاب (دی)۔|The possessive agrees with the owned noun.
+جمع: "کتاب" → ___|کتاباں|کتابیں|کتابات|1|Feminine plural takes "-aan": کتاباں۔|Feminine nouns take "-aan" in the plural.
+جمع: "منڈا" → ___|منڈے|منڈیاں|منڈےآں|1|Masculine plural: منڈے۔|Masculine nouns take "-e" in the plural.
+حرفِ جار "تے" ___ لئی اے۔|اوپر|اندر|باہر|1|"Te" = on: میز تے۔|"Te" means "on".
+حرفِ جار "تھلے" ___ لئی اے۔|نیچے|اوپر|اگے|1|"Thalle" = under.|"Thalle" means "under".
+حرفِ جار "کول" ___ لئی اے۔|نیڑے|دور|اندر|1|"Kol" = near: پل کول۔|"Kol" means "near".
+"ایتھے" ___ لئی اے۔|ایس تھاں|اوس تھاں|ویلا|1|"Ethe" = here.|"Ethe" means "here".
+"اوتھے" ___ لئی اے۔|اوس تھاں|ایس تھاں|ویلا|1|"Othe" = there.|"Othe" means "there".
+"ایہہ" ___ لئی اے۔|نیڑے|دور|ویلا|1|"Eh" = this (near).|"Eh" means "this".
+"اوہ" ___ لئی اے۔|دور|نیڑے|ویلا|1|"Oh" = that (far).|"Oh" means "that".
+عزت نال بولن لئی ___ ورتو۔|تسی|توں|اوہ|1|"Tusi" is respectful, "toon" is familiar.|Use "tusi" for respect.
+منفی: "میں نہیں ___ ۔"|آندا|آندا نہیں|آوندا|1|Negation: نہیں goes before the verb.|Panjabi puts "nahin" before the verb.
+سوال: "___ تسی آؤ گے؟"|کی|کتھے|کدوں|1|"Ki" makes a yes/no question.|"Ki" makes yes/no questions.
+"کتھے" ___ پچھدا اے۔|جگہ|ویلا|کارن|1|"Kitthe" = where.|"Kitthe" asks about place.
+"کدوں" ___ پچھدا اے۔|ویلا|جگہ|کارن|1|"Kadon" = when.|"Kadon" asks about time.
+"کیوں" ___ پچھدا اے۔|کارن|ویلا|جگہ|1|"Kyon" = why.|"Kyon" asks the reason.
+"کینا" ___ پچھدا اے۔|مقدار|جگہ|ویلا|1|"Kena" = how much.|"Kena" asks the amount.
+"کنے" ___ پچھدا اے۔|تعداد|مقدار|ویلا|1|"Kine" = how many.|"Kine" asks the number.
+فعل "اے" ___ نال آندا اے۔|حال|ماضی|مستقبل|1|"Ae" is the present "is".|"Ae" is present tense.
+فعل "سی" ___ نال آندا اے۔|ماضی|حال|مستقبل|1|"Si" is the past "was".|"Si" is past tense.
+فعل "گا/گی" ___ نال آندا اے۔|مستقبل|ماضی|حال|1|"-ga/-gi" marks the future.|"-ga/-gi" marks future.
+حال استمراری: "میں ___ رہا ہاں۔"|پڑھ|پڑھدا|پڑھاں|1|Present continuous: پڑھ رہا ہاں۔|"Reha haan" makes present continuous.
+ماضی استمراری: "اوہ ___ رہا سی۔"|کھاندا|کھا|کھاوے|1|Past continuous: کھا رہا سی۔|"Reha si" makes past continuous.
+فعل "سکدا اے" ___ ظاہر کردا اے۔|صلاحیت|مجبوری|نفی|1|"Sakda ae" = can.|"-sakda ae" expresses ability.
+"پیندا اے" ___ ظاہر کردا اے۔|مجبوری|صلاحیت|پسند|1|"Painda ae" = have to.|"Painda ae" expresses necessity.
+"چاہیدا اے" ___ لئی اے۔|لوڑ|نفرت|ڈر|1|"Chaahida ae" = need/want.|"Chaahida ae" expresses need.
+"پسند اے" ___ لئی اے۔|پسند|نفرت|ڈر|1|"Pasand ae" = like.|"Pasand ae" means "like".
+"مینوں ___ لگی اے" بھکھ لئی۔|بھکھ|درد|خوشی|1|Bhukh lagi ae = I am hungry.|Hunger uses "lagi ae".
+"میرے کول ___ اے" ___ ظاہر کردا اے۔|ملکیت|جگہ|ویلا|1|"Mere kol" = I have (possession).|"Mere kol ... ae" means "I have".
+ترتیب: پنجابی وچ فعل ___ آندا اے۔|آخر وچ|شروع وچ|درمیان وچ|1|Panjabi is SOV — the verb comes last.|The verb goes at the end.
+حرفِ عطف "تے" ___ لئی اے۔|جوڑ|تضاد|کارن|1|"Te" = and.|The conjunction "te" means "and".
+حرفِ عطف "پر" ___ لئی اے۔|تضاد|جوڑ|کارن|1|"Par" = but.|"Par" means "but".
+"کیونکہ" ___ ظاہر کردا اے۔|کارن|ویلا|جگہ|1|"Kyunki" = because.|"Kyunki" gives the reason.
+"جے" ___ بناندا اے۔|شرط|ماضی|جمع|1|"Je" = if.|"Je" makes a condition.
+"جدوں" ___ ظاہر کردا اے۔|ویلا|جگہ|ملکیت|1|"Jadon" = when.|"Jadon" refers to time.
+"تک" ___ ظاہر کردا اے۔|حد|شروع|ملکیت|1|"Tak" = until.|"Tak" marks the limit.
+"توں" ___ ظاہر کردا اے۔|شروع یا ذریعہ|آخر|ملکیت|1|"Ton" = from / by.|"Ton" means "from" or "by".
+صفت ___ توں پہلاں آندی اے۔|اسم|فعل|حرف|1|Adjectives come before the noun: وڈا گھر۔|Adjectives precede the noun.
+"وڈا گھر" وچ "وڈا" ___ اے۔|صفت|اسم|فعل|1|"Wadda" describes "ghar", so it is an adjective.|"Wadda" is an adjective here.
+"تیز ترنا" وچ "تیز" ___ اے۔|متعلق فعل|اسم|حرف|1|"Tez" describes the verb → adverb.|"Tez" modifies the verb.
+موازنہ: "ایہہ اس ___ ودھ چنگا اے۔"|نالوں|توں|وچ|2|"Naalon" marks comparison.|Comparison uses "-naalon".
+اعلیٰ ترین: "سب توں ___"|ودھیا|چنگا|چنگے|1|Superlative: سب توں ودھیا۔|Superlative = "sab ton vadhiya".
+جمع اسم نال فعل ___ ہُندا اے۔|جمع|واحد|کوئی نہیں|1|منڈے آؤندے ہن۔|Plural nouns take plural verbs.
+"کردا اے" ___ لئی اے۔|مذکر واحد|مؤنث واحد|جمع|1|Masculine singular present.|"Karda ae" is masculine singular.
+"کردی اے" ___ لئی اے۔|مؤنث واحد|مذکر واحد|جمع|1|Feminine singular present.|"Kardi ae" is feminine singular.
+"کردے ہن" ___ لئی اے۔|جمع|واحد|مستقبل|1|Plural present.|"Karde han" is plural.
+فعلِ امر (عزت): "بوہا ___ ۔"|کھولو|کھول|کھولھدا|1|Respectful imperative uses the plural form.|Polite commands use "-o".
+فعلِ امر (عام): "ایتھے ___ ۔"|آ|آوو|آندا|1|Familiar imperative for "toon".|Familiar command is bare stem.
+"لے جاوو" ___ اے۔|عزت دا امر|ماضی|حال|1|"Le jaavo" is a polite command.|"Le jaavo" is the polite imperative.
+"بہت" ___ اے۔|متعلق فعل|اسم|حرف|1|"Bohat" = very (adverb).|"Bohat" means "very".
+"سب" ___ لئی اے۔|تمام|کوئی نہیں|اک|1|"Sabb" = all.|"Sabb" means "all".
+"کوئی" ___ لئی اے۔|کوئی وی|سب|کوئی نہیں|1|"Koi" = any/someone.|"Koi" means "any".
+"کجھ" ___ لئی اے۔|تھوڑی مقدار|سب|کوئی نہیں|1|"Kujh" = some.|"Kujh" means "some".
+"ہر" ___ لئی اے۔|ہر اک|کوئی نہیں|کجھ|1|"Har" = every.|"Har" means "every".
+"دن وچ" ___ ظاہر کردا اے۔|ویلا|جگہ|ملکیت|1|"Din vich" = during the day.|"Din vich" means "during the day".
+"رات نوں" ___ ظاہر کردا اے۔|ویلا|جگہ|ملکیت|1|"Raat noo" = at night.|"Raat noo" means "at night".
+"بھلک" ___ اے۔|کل (اگے)|اج|پرھوں|1|"Bhalak" = tomorrow.|"Bhalak" means "tomorrow".
+"کل" ___ اے۔|گزشتہ دن|بھلک|اج|1|"Kal" = yesterday in Panjabi.|"Kal" means "yesterday".
+"ہن" ___ اے۔|ہن|بعد|پہلاں|1|"Hun" = now.|"Hun" means "now".
+"سویرے" ___ اے۔|سویلے|دیر|بعد|1|"Savere" = early/early morning.|"Savere" means "early".
+"دیر" ___ اے۔|لیٹ|سویلے|ہن|1|"Dair" = late.|"Dair" means "late".
+"ہمیشہ" ___ اے۔|ہر ویلے|کدے کدے|کدے نہیں|1|"Hamesha" = always.|"Hamesha" means "always".
+"کدے کدے" ___ اے۔|بعض اوقات|ہمیشہ|کدے نہیں|1|"Kade kade" = sometimes.|"Kade kade" means "sometimes".
+"مہربانی" ___ لئی اے۔|شکریہ|معافی|خوش آمدید|1|"Meharbani" = thank you/please.|"Meharbani" is used for thanks and requests.
+"جی آیاں نوں" ___ لئی اے۔|استقبال|رخصت|شکریہ|1|"Jee ayaan no" = welcome.|"Jee ayaan no" greets a guest.
+"معاف کرنا" ___ لئی اے۔|معافی|شکریہ|خوشی|1|"Maaf karna" = please excuse me.|"Maaf karna" asks forgiveness.
+"ہاں" ___ اے۔|تصدیق|نفی|سوال|1|"Haan" = yes.|"Haan" means "yes".
+"نہیں" ___ اے۔|نفی|تصدیق|سوال|1|"Nahin" = no.|"Nahin" means "no".
+
+@sentences
+میں ہر سویرے چاء پیندا ہاں۔|I drink tea every morning.|میں ہر سویرے چاء پیندا ہاں۔
+میرا بھرا جرمن بولی سکھ رہا اے۔|My brother is learning German.|میرا بھرا جرمن بولی سکھ رہا اے۔
+اسی اتوار نوں ملتان جا رہے آں۔|We are going to Multan on Sunday.|اسی اتوار نوں ملتان جا رہے آں۔
+کتاب میز تے رکھی اے۔|The book is kept on the table.|کتاب میز تے رکھی اے۔
+اوہنے کل خط لکھیا۔|He wrote a letter yesterday.|اوہنے کل خط لکھیا۔
+کی تسی میری مدد کر سکدے او؟|Can you help me?|کی تسی میری مدد کر سکدے او؟
+مینوں دو کافی تے اک پانی چاہیدا اے۔|I want two coffees and a water.|مینوں دو کافی تے اک پانی چاہیدا اے۔
+ریل اٹھ وجے چلدی اے۔|The train leaves at eight o'clock.|ریل اٹھ وجے چلدی اے۔
+میری ماں اج مچھی پکا رہی اے۔|My mother is cooking fish today.|میری ماں اج مچھی پکا رہی اے۔
+اوہ تن بولیاں روانی نال بولدا اے۔|He speaks three languages fluently.|اوہ تن بولیاں روانی نال بولدا اے۔
+ساڈا گھر نکا پر صاف اے۔|Our house is small but clean.|ساڈا گھر نکا پر صاف اے۔
+مینوں سوال پورا سمجھ نہیں آیا۔|I did not fully understand the question.|مینوں سوال پورا سمجھ نہیں آیا۔
+اج موسم بہت سوہنا اے۔|The weather is very pleasant today.|اج موسم بہت سوہنا اے۔
+مینوں بھلک سویرے جلدی اٹھنا اے۔|I have to get up early tomorrow.|مینوں بھلک سویرے جلدی اٹھنا اے۔
+اوہ ہسپتال وچ کم کردی اے۔|She works in a hospital.|اوہ ہسپتال وچ کم کردی اے۔
+اسی سکول دے اگے ملدے آں۔|We meet in front of the school.|اسی سکول دے اگے ملدے آں۔
+اوہ اپنا فون گھر بھل گیا۔|He forgot his phone at home.|اوہ اپنا فون گھر بھل گیا۔
+میں اج دفتر نہیں جا رہا۔|I am not going to the office today.|میں اج دفتر نہیں جا رہا۔
+بچے باغ وچ فٹ بال کھیڈ رہے ہن۔|The children are playing football in the garden.|بچے باغ وچ فٹ بال کھیڈ رہے ہن۔
+کی تسی کھڑکی کھولھ سکدے او؟|Can you open the window?|کی تسی کھڑکی کھولھ سکدے او؟
+اج مینوں بہت کم اے۔|I have a lot of work today.|اج مینوں بہت کم اے۔
+میرے پیو نوں اخبار پڑھن دا شوق اے۔|My father likes reading newspapers.|میرے پیو نوں اخبار پڑھن دا شوق اے۔
+کھانا سچ مچ بہت مزیدار اے۔|The food is really very tasty.|کھانا سچ مچ بہت مزیدار اے۔
+اسی اک گھنٹے توں اڈیک کر رہے آں۔|We have been waiting for an hour.|اسی اک گھنٹے توں اڈیک کر رہے آں۔
+میں اپنی نوکری لئی پنجابی سکھدا ہاں۔|I learn Punjabi for my job.|میں اپنی نوکری لئی پنجابی سکھدا ہاں۔
+اوہ اک نکے جئے شہر توں اے۔|She is from a small town.|اوہ اک نکے جئے شہر توں اے۔
+میں بازار توں روٹی تے دودھ لیاؤندا ہاں۔|I bring bread and milk from the market.|میں بازار توں روٹی تے دودھ لیاؤندا ہاں۔
+اوہ بس نال دفتر جاندا اے۔|He goes to the office by bus.|اوہ بس نال دفتر جاندا اے۔
+اسی کل اک فلم ویکھی۔|We watched a film yesterday.|اسی کل اک فلم ویکھی۔
+میں اج شام تہانوں سنیہا بھیجاں گا۔|I will send you a message this evening.|میں اج شام تہانوں سنیہا بھیجاں گا۔
+ہوٹل سٹیشن توں ودھ دور نہیں اے۔|The hotel is not far from the station.|ہوٹل سٹیشن توں ودھ دور نہیں اے۔
+میری بھین میڈیکل پڑھ رہی اے۔|My sister is studying medicine.|میری بھین میڈیکل پڑھ رہی اے۔
+ہفتے دے آخر وچ میرے کول ویلا نہیں اے۔|I have no time at the weekend.|ہفتے دے آخر وچ میرے کول ویلا نہیں اے۔
+اوہ شام نوں کافی نہیں پیندا۔|He does not drink coffee in the evening.|اوہ شام نوں کافی نہیں پیندا۔
+اسی ملتان دے دو ٹکٹ چاہیدے ہن۔|We need two tickets to Multan.|اسی ملتان دے دو ٹکٹ چاہیدے ہن۔
+امتحان نوں وجے شروع ہُندا اے۔|The exam starts at nine o'clock.|امتحان نوں وجے شروع ہُندا اے۔
+میں تھوڑی پنجابی تے انگریزی بولدا ہاں۔|I speak a little Punjabi and English.|میں تھوڑی پنجابی تے انگریزی بولدا ہاں۔
+میرا یار انجینئر دے طور تے کم کردا اے۔|My friend works as an engineer.|میرا یار انجینئر دے طور تے کم کردا اے۔
+اوہ رسوئی وچ ماں دی مدد کردی اے۔|She helps her mother in the kitchen.|اوہ رسوئی وچ ماں دی مدد کردی اے۔
+میں ہر شام ٹہلن جاندا ہاں۔|I go for a walk every evening.|میں ہر شام ٹہلن جاندا ہاں۔
+
+@listening
+ست سری اکال، تسی کیویں او؟|sat sri akaal tusi keevein o|Hello, how are you?|ست سری اکال، تسی کیویں او؟|ست سری اکال، تسی کتھے او؟|سویر دی بخیر، تسی کیویں او؟|1
+مینوں اک کپ چاء چاہیدا اے۔|mainoo ek cup chaah chaahida ae|I want a cup of tea.|مینوں اک کپ چاء چاہیدا اے|مینوں اک کپ کافی چاہیدا اے|مینوں اک گلاس پانی چاہیدا اے|1
+سٹیشن کتھے اے؟|station kitthe ae|Where is the station?|سٹیشن کتھے اے؟|بازار کتھے اے؟|ہوٹل کتھے اے؟|1
+میں لاہور توں آں۔|main lahore ton aan|I am from Lahore.|میں لاہور توں آں|میں لاہور وچ رہندا ہاں|میں لاہور جا رہا ہاں|1
+بل لیایو، مہربانی۔|bill leyaayo meharbani|The bill, please.|بل لیایو، مہربانی|مینو لیایو، مہربانی|رسید لیایو، مہربانی|1
+ایہہ کینے دا اے؟|eh kena da ae|How much is this?|ایہہ کینے دا اے؟|ایہہ کس دا اے؟|ایہہ کی اے؟|1
+میں سمجھیا نہیں۔|main samjheya nahin|I did not understand.|میں سمجھیا نہیں|میں جا نہیں سکیا|میں سن نہیں سکیا|1
+ذرا ہولی بولو۔|zara holi bolo|Please speak slowly.|ذرا ہولی بولو|ذرا اچا بولو|ذرا نیڑے آوو|1
+میرا بھرا ڈاکٹر اے۔|mera bhara doctor ae|My brother is a doctor.|میرا بھرا ڈاکٹر اے|میرا بھرا استاد اے|میرے پیو ڈاکٹر ہن|1
+ریل اٹھ وجے جاندی اے۔|rail atth voje jaandi ae|The train goes at eight.|ریل اٹھ وجے جاندی اے|بس اٹھ وجے جاندی اے|ریل اٹھ وجے آوندی اے|1
+اج میرے کول ویلا نہیں اے۔|aj mere kol vela nahin ae|I have no time today.|اج میرے کول ویلا نہیں اے|اج میرے کول پیسے نہیں ہن|اج میرے کول کم نہیں اے|1
+کھانا بہت مزیدار اے۔|khana bohat mazedaar ae|The food is very tasty.|کھانا بہت مزیدار اے|موسم بہت چنگا اے|چاء بہت گرم اے|1
+اسی رل کے پنجابی سکھدے آں۔|asi ral ke panjabi sukhde aan|We learn Punjabi together.|اسی رل کے پنجابی سکھدے آں|اسی رل کے پنجابی بولدے آں|اسی رل کے کتاب پڑھدے آں|1
+مینوں دو راتاں لئی کمرہ چاہیدا اے۔|mainoo do raataan lai kamra chaahida ae|I need a room for two nights.|مینوں دو راتاں لئی کمرہ چاہیدا اے|مینوں دو بندیاں لئی میز چاہیدی اے|مینوں اک رات لئی کمرہ چاہیدا اے|1
+میری ماں اج مچھی پکا رہی اے۔|meri maa aj machhi paka rahi ae|My mother is cooking fish today.|میری ماں اج مچھی پکا رہی اے|میری ماں اج مچھی لیاندی اے|میرے پیو اج مچھی پکا رہے ہن|1
+میں ہر شام ٹہلدا ہاں۔|main har shaam tahalda haan|I walk every evening.|میں ہر شام ٹہلدا ہاں|میں ہر سویرے ٹہلدا ہاں|میں ہر شام سوندا ہاں|1
+کی تہاڈے کول نکا سائز اے؟|ki tuhade kol nikka size ae|Do you have a smaller size?|کی تہاڈے کول نکا سائز اے؟|کی تہاڈے کول وڈا سائز اے؟|کی تہاڈے کول ہور رنگ اے؟|1
+میں کارڈ نال ادائیگی کراں گا۔|main card naal adaigi karaan ga|I will pay by card.|میں کارڈ نال ادائیگی کراں گا|میں نقد ادائیگی کراں گا|میں بھلک ادائیگی کراں گا|1
+مینوں بہت افسوس اے۔|mainoo bohat afsos ae|I am very sorry.|مینوں بہت افسوس اے|مینوں بہت خوشی اے|مینوں بہت ڈر اے|1
+میں بھلک تہانوں فون کراں گا۔|main bhalak tahaanoo phone karaan ga|I will call you tomorrow.|میں بھلک تہانوں فون کراں گا|میں اج تہانوں فون کراں گا|میں بھلک تہانوں ملوں گا|1
+
+@stories
+لاہور وچ پہلا دن|🚆|علی سویرے لاہور پہنچیا۔\nاوہنے ٹیکسی نال ___ (1) تک سفر کیتا۔\nکمرے وچ اوہنے ___ (2) پیتی۔\nفیر اوہنے اپنی ___ (3) نوں فون کیتا۔|Ali reaches Lahore in the morning. He travels by taxi to the hotel. In the room he drinks tea. Then he calls his family.|ہوٹل/سٹیشن/بازار=0;چاء/کتاب/روٹی=0;ماں/دکان/کلاس=0
+بازار وچ سودا|🛒|سارہ اتوار نوں ___ (1) گئی۔\nاوہنے روٹی، دودھ تے ___ (2) خریدے۔\nادائیگی اوہنے ___ (3) نال کیتی۔|Sara goes shopping on Sunday. She buys bread, milk and apples. She pays by card.|بازار/سکول/دفتر=0;سیب/کتاباں/کورسیاں=0;کارڈ/کاغذ/پانی=0
+گم پاسپورٹ|🛂|احمد اپنا ___ (1) لبھ رہا سی۔\nاوہنے اک ___ (2) توں مدد منگی۔\nخوش قسمتی نال اوہ اوہدے ___ (3) وچ مل گیا۔|Ahmad is looking for his passport. He asks a policeman for help. Luckily he finds it in his bag.|پاسپورٹ/چابی/کتاب=0;پولیس والے/استاد/گوانڈھی=0;بیگ/رسوئی/سکول=0
+ڈاکٹر کول|🏥|بلال دی طبیعت ___ (1) سی۔\nاوہ ___ (2) کول گیا۔\nڈاکٹر نے اوہنوں دوا تے ___ (3) دتا۔|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|خراب/چنگی/بھکھ=0;ڈاکٹر/بیکر/ڈرائیور=0;آرام/پیسے/کتاباں=0
+پنجابی کلاس|📚|نادیہ تن مہینیاں توں ___ (1) سکھ رہی اے۔\nاوہ ہر شام ___ (2) نال مشق کردی اے۔\nاوہدے ___ (3) آکھدے ہن اوہ چنگا بول لیندی اے۔|Nadia has been learning Punjabi for three months. She practises every evening with books. Her teacher says she speaks well.|پنجابی/فرانسیسی/عربی=0;کتاباں/تصویراں/کارڈاں=0;استاد/بھرا/گوانڈھی=0
+ٹبر دا کھانا|👨‍👩‍👧‍👦|اتوار نوں پورا ___ (1) آیا۔\nدادی نے ___ (2) پکایا۔\nسب نے رل کے کھایا تے بہت ___ (3)۔|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|ٹبر/دفتر/جماعت=0;چول/پانی/کاغذ=0;ہاسا کیتا/کم کیتا/سوتے=0
+سٹیشن تے|🚉|ریل دس منٹ ___ (1) سی۔\nحسن نے دکان توں ___ (2) خریدی۔\nفیر اوہ ___ (3) وچ بیٹھ گیا۔|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|دیر/صاف/تیار=0;اخبار/رسید/چابی=0;ریل/بس/جہاز=0
+سردی دی شام|❄️|جنوری وچ بہت ___ (1) ہُندی اے۔\nعائشہ نے گرم ___ (2) پایا۔\nاوہ گرم ___ (3) پی کے کتاب پڑھن لگ گئی۔|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and starts reading.|سردی/گرمی/مینہہ=0;کوٹ/قمیض/جوتے=0;چاء/پانی/رس=0
+ہوٹل وچ کھانا|🍽️|ویٹر ___ (1) لیایا۔\nعمر نے مچھی تے ___ (2) منگوایا۔\nآخر وچ اوہنے ___ (3) منگی۔|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|مینو/کورسی/روشنی=0;چول/میز/کھڑکی=0;بل/چابی/رسید=0
+نویں یار|🤝|لینا تے ثنہ ___ (1) وچ ملے۔\nاوہناں نے موسیقی تے ___ (2) بارے گل کیتی۔\nآخر وچ دوواں نے اپنے ___ (3) بدل لئی۔|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|باغ/دفتر/ریل=0;سفر/رسیداں/امتحان=0;نمبر/پتے/کتاباں=0
+
+@idioms
+اکھ دا تارا|akkh da taara|The apple of one's eye.|اکھ دا تارا|اوہدا پتر اوہدی اکھ دا تارا اے۔
+دل تے ہتھ رکھ کے|dil te hath rakh ke|Speaking honestly, from the heart.|سچ کہنا|دل تے ہتھ رکھ کے دسو، کی ہویا؟
+ناک وچ دم کرنا|nakk vich dam karna|To annoy someone constantly.|تنگ کر دینا|بچیاں نے شور مچا کے ناک وچ دم کر دتا۔
+ہتھ دھو کے پے جانا|hath dho ke pe jaana|To go after someone relentlessly.|کسی دے پچھے پے جانا|اوہ اس معاملے وچ ہتھ دھو کے پے گئے۔
+اکھ دا اننا، ناں نورا|akkh da anna naan noora|All name, no substance.|ناں وڈا، کم صفر|اوہنوں کجھ وی نہیں آوندا — اکھ دا اننا، ناں نورا۔
+اپنی نک کٹواؤنی|apni nakk katwauni|To bring shame on oneself.|بے عزتی کرواؤنی|اوہنے جھوٹ بول کے اپنی نک کٹوا لئی۔
+اسمان سر تے چکھنا|asmaan sir te chakhna|To make a huge fuss.|بہت شور مچاؤنا|نکی جئی گل تے اسمان سر تے چکھ دتا۔
+دال وچ کالا|daal vich kaala|Something suspicious.|کجھ گڑبڑ|ایہہ معاملہ صاف نہیں، دال وچ کجھ کالا اے۔
+ہتھوں نکل جانا|hathan nikal jaana|To lose control of something.|قابو توں باہر ہو جانا|معاملہ ہتھوں نکل گیا۔
+گلاں وڈیاں، کم صفر|galan waddiyaan kamm sifar|All talk, no action.|صرف گلاں|اوہدیاں گلاں وڈیاں، کم صفر۔
+ویلا ہتھوں نکل جانا|vela hathan nikal jaana|To let time slip away.|ویلا گوا دینا|پڑھائی وچ ویلا ہتھوں نہ کڈھو۔
+دل کھول کے|dil khol ke|Wholeheartedly, generously.|پورے دل نال|اوہناں نے دل کھول کے مہماناں دی آؤ بھگت کیتی۔
+اجڑ گھر|ujjar ghar|A ruined household / total loss.|تباہ حال|مینہہ نے فصل دا اجڑ گھر کر دتا۔
+پانی پانی ہو جانا|paani paani ho jaana|To be deeply embarrassed.|شرمندہ ہو جانا|سب دے اگے اوہ پانی پانی ہو گیا۔
+مونہوں نکلیا لفظ|moonho nikleya lafz|A spoken promise must be kept.|کہیا ہویا وعدہ|مونہوں نکلیا لفظ واپس نہیں لیندے۔
+ناک دے ناں|nakk de naa|A matter of honour/pride.|عزت دا سوال|ایہہ ہن ناک دے ناں دا معاملہ اے۔
+چنے چبانا|chane chabana|To teach someone a harsh lesson.|سخت سبق سکھاؤنا|استاد نے شرارتی منڈے نوں چنے چبا دتے۔
+تن دے کے|tan de ke|With full effort.|پوری جان لا کے|اوہنے امتحان لئی تن دے کے محنت کیتی۔
+اکھاں دا تارا بننا|akkhaan da taara banna|To become someone's favourite.|سب دا پیارا بننا|اوہ اپنے استاد دیاں اکھاں دا تارا بن گیا۔
+دل کھلا رکھنا|dil khula rakhna|To be generous and open-hearted.|دل دا وڈا ہونا|اوہدا دل کھلا اے، کسے نال کینہ نہیں رکھدا۔
+ویلا پلک جھپکنی وچ|vela palak jhapkni vich|In the blink of an eye.|بہت تیزی نال|ویلا پلک جھپکنی وچ لنگھ گیا۔
+مہنگے ہنجو روؤنا|mehange hanju rovana|To cry bitterly.|بہت زیادہ روؤنا|امتحان وچ ناکامی تے اوہنے مہنگے ہنجو روئے۔
+پتھر دل|patthar dil|Hard-hearted.|سخت دل|پتھر دل انسان کسے دی نہیں سندا۔
+دل دا صاف|dil da saaf|Honest and pure-hearted.|صاف دل والا|اوہ دل دا صاف بندہ اے، کینہ نہیں رکھدا۔
+
+نکمّا گھر دی ڈھیہ|nakamma ghar di dhee|Useless baggage (harsh proverb, avoid in class)|بے کار بوجھ|اوہدا نکمّا گھر دی ڈھیہ والا رویہ پسند نہیں۔
+
+@alphabet
+ا|alif|alif|اڈیک
+ب|be|be|باغ
+پ|pe|pe|پانی
+ت|te|te|تاریخ
+ٹ|tte|tte|ٹماٹر
+ث|se|se|ثابت
+ج|jim|jim|جسم
+چ|che|che|چاء
+ح|he (with dot)|he|حکیم
+خ|khe|khe|خواب
+د|daal|daal|دودھ
+ڈ|ddaal|ddaal|ڈاکٹر
+ذ|zaal|zaal|ذکر
+ر|re|re|روشنی
+ڑ|rra|rra|پہاڑ
+ز|ze|ze|زبان
+ژ|zhe|zhe|ژالہ
+س|sin|sin|سکول
+ش|shin|shin|شام
+ص|suad|suad|صابن
+ض|zuad|zuad|ضرورت
+ط|toe|toe|طریقہ
+ظ|zoe|zoe|ظالم
+ع|ain|ain|عید
+غ|ghain|ghain|غریب
+ف|fe|fe|فصل
+ق|qaaf|qaaf|قیمت
+ک|kaaf|kaaf|کتاب
+گ|gaaf|gaaf|گھر
+ل|laam|laam|لفظ
+م|mim|mim|میز
+ن|nun|nun|نمک
+و|wao|wao|ویلا
+ہ|he|he|ہتھ
+ء|hamza|hamza|آئینہ
+ی|ye|ye|یہ
+ے|bari ye|bari ye|کھیلے

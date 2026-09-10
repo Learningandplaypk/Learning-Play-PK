@@ -1,0 +1,148 @@
+# french — authored source (migrated from data/langs/french.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|Je connais le mot {s}.|I know the word {en}.
+adjectives|La maison est très {s}.|The house is very {en}.
+verbs|Je veux {s}.|I want to {en}.
+colors|La couleur est {s}.|The color is {en}.
+
+@words
+book|livre|livr
+pen|stylo|steelo
+water|eau|o
+bread|pain|pan
+house|maison|mayzon
+school|école|aykol
+friend|ami|amee
+mother|mère|mair
+father|père|pair
+fish|poisson|pwason
+car|voiture|vwatür
+road|route|root
+city|ville|veel
+village|village|veelajh
+rice|riz|ree
+tea|thé|tay
+milk|lait|lay
+hand|main|man
+eye|œil|öy
+heart|cœur|kör
+day|jour|zhoor
+night|nuit|nwee
+time|temps|tan
+money|argent|arzhan
+work|travail|travay
+teacher|professeur|profesör
+student|étudiant|aytüdyan
+doctor|médecin|maysan
+market|marché|marshay
+price|prix|pree
+door|porte|port
+window|fenêtre|fönaytr
+light|lumière|lümyair
+morning|matin|matan
+evening|soir|swar
+week|semaine|sömayn
+month|mois|mwa
+year|année|anay
+peace|paix|pay
+egg|l'œuf|œuf
+meat|la viande|viande
+salt|le sel|sel
+sugar|le sucre|sucre
+apple|la pomme|pomme
+grapes|le raisin|raisin
+tomato|la tomate|tomate
+table|la table|table
+chair|la chaise|chaise
+bed|le lit|lit
+room|la chambre|chambre
+kitchen|la cuisine|cuisine
+bus|le bus|bus
+train|le train|train
+airplane|l'avion|avion
+beautiful|beau|beau
+big|grand|grand
+small|petit|petit
+new|nouveau|nouveau
+old|vieux|vieux
+fast|rapide|rapide
+slow|lent|lent
+to eat|manger|manger
+to drink|boire|boire
+to read|lire|lire
+to write|écrire|écrire
+to speak|parler|parler
+to love|aimer|aimer
+to work|travailler|travailler
+to sleep|dormir|dormir
+to come|venir|venir
+to go|aller|aller
+color|la couleur|couleur
+red|rouge|rouge
+blue|bleu|bleu
+green|vert|vert
+yellow|jaune|jaune
+black|noir|noir
+white|blanc|blanc
+child|l'enfant|enfant
+
+# unmatched (not in _concepts.txt) — 21 entries carried over as extras:
+sun|soleil|solay||سورج|n|time|A2
+moon|lune|lün||چاند|n|time|A2
+star|étoile|aytwal||ستارہ|n|time|A2
+tree|arbre|arbr||درخت|n|home|A2
+flower|fleur|flör||پھول|n|home|A2
+bird|oiseau|wazo||پرندہ|n|school|A2
+food|nourriture|nooreetür||کھانا|n|food|A2
+wind|vent|van||ہوا|n|home|A2
+rain|pluie|plüee||بارش|n|home|A2
+sea|mer|mair||سمندر|n|travel|A2
+mountain|montagne|montany||پہاڑ|n|travel|A2
+orange|l'orange|orange||سنترا|n|food|A2
+pupil|l'élève|élève||شاگرد|n|school|A2
+boy|le garçon|garçon||لڑکا|n|family|A2
+girl|la fille|fille||لڑکی|n|family|A2
+man|l'homme|homme||آدمی|n|family|A2
+woman|la femme|femme||عورت|n|family|A2
+dog|le chien|chien||کتا|n|school|A2
+cat|le chat|chat||بلی|n|school|A2
+horse|le cheval|cheval||گھوڑا|n|school|A2
+snow|la neige|neige||برف|n|home|A2
+
+@phrases
+Bonjour|bonzhoor|Hello / Good day|سلام|greeting
+Comment ça va?|komon sa va|How are you?|آپ کیسے ہیں؟|smalltalk
+Ça va bien, merci|sa va byan mairsee|I'm fine, thanks|ٹھیک ہوں، شکریہ|polite
+Comment tu t'appelles?|komon tü tapel|What's your name?|آپ کا نام کیا ہے؟|smalltalk
+Je m'appelle Ali|zhö mapel Ali|My name is Ali|میرا نام علی ہے|smalltalk
+D'où viens-tu?|doo vyan-tü|Where are you from?|آپ کہاں سے ہیں؟|travel
+Je viens du Pakistan|zhö vyan dü Pakistan|I am from Pakistan|میں پاکستان سے ہوں|smalltalk
+Merci beaucoup|mairsee bo-ko|Thank you very much|بہت شکریہ|polite
+De rien|dö ryan|You're welcome|کوئی بات نہیں|greeting
+Oui / Non|wee / non|Yes / No|ہاں / نہیں|smalltalk
+Je veux de l'eau|zhö võ day-lo|I want water|مجھے پانی چاہیے|food
+C'est combien?|say kombyan|How much is it?|یہ کتنے کا ہے؟|shopping
+Où est l'école?|oo ay laykol|Where is the school?|اسکول کہاں ہے؟|travel
+Je ne comprends pas|zhö nö kompran pa|I don't understand|میں نہیں سمجھا|school
+Parlez lentement|parlay lantman|Speak slowly|آہستہ بولیں|school
+Bonsoir|bonsoir|Good evening|شام بخیر|greeting
+À bientôt|à bientôt|See you soon|جلد ملیں گے|greeting
+Excusez-moi|excusez-moi|Excuse me|معاف کیجیے|polite
+Combien ça coûte?|combien ça coûte|How much does it cost?|یہ کتنے کا ہے؟|shopping
+Où est la gare?|où est la gare|Where is the station?|اسٹیشن کہاں ہے؟|travel
+J'ai faim|j'ai faim|I am hungry|مجھے بھوک لگی ہے|food
+C'est délicieux|c'est délicieux|It's delicious|یہ مزیدار ہے|food
+Bonne nuit|bonne nuit|Good night|شب بخیر|greeting
+S'il vous plaît|s'il vous plaît|Please|مہربانی|polite
+Bien sûr|bien sûr|Of course|بیشک|polite
+Je voudrais ceci|je voudrais ceci|I'd like this|مجھے یہ چاہیے|greeting
+Quelle heure est-il?|quelle heure est-il|What time is it?|اب کیا وقت ہوا؟|smalltalk
+Il fait beau|il fait beau|The weather is nice|موسم اچھا ہے|food
+Bonne chance|bonne chance|Good luck|خوش قسمتی|smalltalk
+Je suis fatigué|je suis fatigué|I am tired|میں تھکا ہوا ہوں|smalltalk
+

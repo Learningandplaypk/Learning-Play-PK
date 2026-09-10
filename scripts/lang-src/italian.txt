@@ -1,0 +1,664 @@
+# Italian (Italiano) — authored source for data/langs/italian.json
+# Latin script. Romanization adds stress marks (à è é ì ò ó ù) because Italian
+# stress is unpredictable; otherwise the spelling is used as-is.
+
+@info
+romanization|Italian spelling with stress marks added (à, è, ì, ò, ù) — spelling and pronunciation are almost identical.
+alphabet.title|L'alfabeto italiano
+alphabet.intro|21 lettere più j, k, w, x, y nelle parole straniere. Le vocali si pronunciano sempre.
+
+@frames
+greetings|Dici: {s}.|Say: {en}.
+numbers|Ho {s} mele.|I have {en} apples.
+family|Questa è {s}.|This is my {en}.
+food|Mi piace {s}.|I like {en}.
+travel|Dov'è {s}?|Where is the {en}?
+time|Vado a scuola {s}.|I go to school {en}.
+colors|Il cielo è {s}.|The sky is {en}.
+body|Mi fa male {s}.|My {en} hurts.
+home|Qui c'è {s}.|Here is the {en}.
+work|Ecco {s}.|Here is the {en}.
+school|Ecco {s}.|Here is the {en}.
+shopping|Ecco {s}.|Here is the {en}.
+emotions|Provo {s}.|I feel {en}.
+verbs|Devo {s} oggi.|This means: {en}.
+adjectives|La casa è {s}.|The house is {en}.
+
+@words
+hello|ciao|chào
+goodbye|arrivederci|arrivedérchi
+good morning|buongiorno|buondjórno
+good evening|buonasera|buonaséra
+good night|buonanotte|buonanòtte
+thank you|grazie|gràtsie
+please|per favore|per favóre
+sorry|scusa|skùza
+excuse me|mi scusi|mi skùzi
+yes|sì|sì
+no|no|no
+welcome|benvenuto|benvenùto
+how are you|come stai?|kóme stài
+my name is|mi chiamo|mi kiàmo||Mi chiamo Marco.|My name is Marco.
+nice to meet you|piacere|piachére
+see you later|a dopo|a dòpo
+good luck|buona fortuna|buòna fortùna
+congratulations|congratulazioni|kongratulatsióni
+help|aiuto|aiùto
+of course|certo|chèrto
+zero|zero|dzèro||Scrivi zero nel calcolo.|Write a zero in the calculation.
+one|uno|ùno
+two|due|dùe
+three|tre|tre
+four|quattro|kuàttro
+five|cinque|chinkue
+six|sei|sèi
+seven|sette|sètte
+eight|otto|òtto
+nine|nove|nòve
+ten|dieci|diéchi
+eleven|undici|ùndichi
+twelve|dodici|dódichi
+thirteen|tredici|trédichi
+fourteen|quattordici|kuattórdichi
+fifteen|quindici|kuìndichi
+twenty|venti|vènti
+thirty|trenta|trènta
+forty|quaranta|kuarànta
+fifty|cinquanta|chinkuànta
+hundred|cento|chènto
+thousand|mille|mìlle
+first|primo|prìmo||Questa è la prima lezione.|This is the first lesson.
+second|secondo|sekóndo||Questa è la seconda stanza.|This is the second room.
+half|mezzo|mèddzo||Mezzo bicchiere d'acqua.|Half a glass of water.
+mother|madre|màdre|mia madre
+father|padre|pàdre|mio padre
+brother|fratello|fratèllo|mio fratello
+sister|sorella|sorèlla|mia sorella
+son|figlio|fìllo|mio figlio
+daughter|figlia|fìlla|mia figlia
+child|bambino|bambìno|questo bambino
+baby|bebè|bebè|questo bebè
+family|famiglia|famìlla|la mia famiglia
+husband|marito|marìto|mio marito
+wife|moglie|mòlle|mia moglie
+uncle|zio|dzìo|mio zio
+aunt|zia|dzìa|mia zia
+grandfather|nonno|nònno|mio nonno
+grandmother|nonna|nònna|mia nonna
+cousin|cugino|kudjìno|mio cugino
+nephew|nipote|nipòte|mio nipote
+friend|amico|amìko|mio amico
+neighbour|vicino|vichìno|il mio vicino
+parent|genitori|djenitóri|i miei genitori
+water|acqua|àkqua
+bread|pane|pàne
+rice|riso|rìzo
+milk|latte|làtte
+tea|tè|tè
+sugar|zucchero|dzùkkero
+salt|sale|sàle
+egg|uovo|uòvo
+meat|carne|kàrne
+chicken|pollo|pòllo
+fish|pesce|péshe
+apple|mela|mèla
+banana|banana|banana
+mango|mango|màngo
+orange (fruit)|arancia|aràncha
+grapes|uva|ùva
+lemon|limone|limóne
+tomato|pomodoro|pomodòro
+onion|cipolla|chipòlla
+potato|patata|patàta
+carrot|carota|karòta
+oil|olio|òlio
+butter|burro|bùrro
+honey|miele|mièle
+juice|succo|sùkko
+coffee|caffè|kaffè
+soup|zuppa|dzùppa
+breakfast|colazione|kolatsióne
+lunch|pranzo|pràntso
+dinner|cena|chéna
+car|macchina|màkkina
+bus|autobus|àutobus
+train|treno|trèno
+airplane|aereo|aèreo
+bicycle|bicicletta|bichiklètta
+road|strada|stràda
+street|via|vìa
+bridge|ponte|pónte
+station|stazione|stantsióne
+airport|aeroporto|aeropòrto
+ticket|biglietto|billiétto
+map|mappa|màppa
+city|città|chittà
+village|paese|paése
+country|paese estero|paése èstero
+hotel|albergo|albèrgo
+journey|viaggio|viàddjo
+luggage|bagaglio|bagàllo
+driver|autista|autìsta
+passport|passaporto|passapòrto
+time|tempo|tèmpo||Il tempo passa molto in fretta.|Time passes very quickly.
+day|giorno|djórno||Prendi la medicina due volte al giorno.|Take the medicine twice a day.
+night|notte|nòtte||Di notte il cielo è sereno.|The sky is clear at night.
+morning|mattina|matìna
+evening|sera|séra
+week|settimana|settimàna
+month|mese|mése
+year|anno|ànno
+hour|ora|òra
+minute|minuto|minùto
+today|oggi|òddji
+tomorrow|domani|domàni
+yesterday|ieri|ièri
+now|adesso|adèsso
+later|dopo|dòpo
+early|presto|prèsto
+late|tardi|tàrdi
+always|sempre|sèmpre
+sometimes|a volte|a vòlte
+never|mai|mai
+color|colore|kolóre||Il colore di questo tessuto è scuro.|The color of this cloth is dark.
+red|rosso|ròsso
+blue|blu|blu
+green|verde|vèrde
+yellow|giallo|djàllo
+black|nero|nèro
+white|bianco|biànko
+brown|marrone|marróne
+grey|grigio|grìdjo
+pink|rosa|ròza
+purple|viola|viòla
+orange (color)|arancione|aranchóne
+body|corpo|kòrpo||Il corpo ha bisogno di riposo.|The body needs rest.
+head|testa|tèsta|la testa
+hair|capelli|kapèlli||I miei capelli sono neri.|My hair is black.
+face|faccia|fàccia|la faccia
+eye|occhio|òkkio|l'occhio
+ear|orecchio|orèkkio|l'orecchio
+nose|naso|nàzo|il naso
+mouth|bocca|bòkka|la bocca
+tooth|dente|dènte|il dente
+tongue|lingua|lìngua|la lingua
+neck|collo|kòllo|il collo
+shoulder|spalla|spàlla|la spalla
+hand|mano|màno|la mano
+finger|dito|dìto|il dito
+leg|gamba|gàmba|la gamba
+foot|piede|piède|il piede
+heart|cuore|kuòre|il cuore
+stomach|stomaco|stòmaco|lo stomaco
+house|casa|kàza
+room|stanza|stàntsa
+door|porta|pòrta
+window|finestra|finèstra
+wall|muro|mùro
+roof|tetto|tètto
+floor|pavimento|paviménto
+kitchen|cucina|kuchìna
+bathroom|bagno|bànnio
+bed|letto|lètto
+table|tavolo|tàvolo
+chair|sedia|sèdia
+sofa|divano|divàno
+lamp|lampada|làmpada
+key|chiave|kiàve
+stairs|scale|skàle
+garden|giardino|djardìno
+light|luce|lùche
+fan|ventilatore|ventilatóre
+mirror|specchio|spèkkio
+work|lavoro|lavóro
+job|impiego|imipiégo
+office|ufficio|uffìcho
+money|soldi|sòldi
+salary|stipendio|stipèndio
+meeting|riunione|riunióne
+boss|capo|kàpo
+employee|impiegato|imipiégato
+business|azienda|adziènda
+company|società|sochetà
+market|mercato|merkàto
+shop|negozio|negòtsio
+customer|cliente|kliènte
+price|prezzo|prèttso
+farmer|contadino|kontadìno
+doctor|medico|mèdiko
+teacher|insegnante|inseñànte
+police|polizia|politsìa
+school|scuola|skuòla
+book|libro|lìbro
+pen|penna|pènna
+pencil|matita|matìta
+page|pagina|pàdjina
+class|classe|klàsse
+student|studente|studènte
+lesson|lezione|letsióne
+exam|esame|ezàme
+question|domanda|domànda
+answer|risposta|rispòsta
+homework|compiti|kòmpiti
+library|biblioteca|bibliotèka
+university|università|università
+language|lingua|lìngua
+word|parola|paròla
+sentence|frase|fràze
+dictionary|dizionario|ditsionàrio
+science|scienza|shièntsa
+history|storia|stòria
+knowledge|conoscenza|konoshèntsa
+education|istruzione|istrutsióne
+shopping|spesa|spéza||Stasera dobbiamo fare la spesa.|We have to go shopping tonight.
+buy|comprare|kompràre||Lui compra la verdura.|He is buying vegetables.
+sell|vendere|vèndere||Il contadino vende la frutta al mercato.|The farmer sells fruit at the market.
+cheap|economico|ekonòmiko||Questo tessuto è economico.|This cloth is cheap.
+expensive|caro|kàro||Il telefono è caro.|The phone is expensive.
+coin|moneta|monèta
+note|banconota|bankonòta
+bill|conto|kónto
+size|taglia|tàlla
+discount|sconto|skónto
+receipt|scontrino|skontìno
+bag|borsa|bòrsa
+rupee|rupia|rùpia
+weigh|pesare|pezàre||Il negoziante pesa la verdura.|The shopkeeper weighs the vegetables.
+pay|pagare|pagàre||Paga con la carta.|Pay by card.
+happiness|gioia|giòa
+sadness|tristezza|tristèttza
+anger|rabbia|ràbbia
+fear|paura|paùra
+love|amore|amóre
+hope|speranza|speràntsa
+worry|preoccupazione|preokkupatsióne
+surprise|sorpresa|sorpèza
+peace|pace|pàche
+smile|sorriso|sorrìzo
+laugh|risata|rizàta
+crying|pianto|piànto
+mood|umore|umóre
+brave|coraggioso|koraddjóso||È un ragazzo coraggioso.|He is a brave boy.
+lonely|solo|sòlo||Si sente solo.|He feels lonely.
+to eat|mangiare|mandjàre
+to drink|bere|bère
+to go|andare|andàre
+to come|venire|venìre
+to see|vedere|vedère
+to hear|sentire|sentìre
+to speak|parlare|parlàre
+to read|leggere|lèddjere
+to write|scrivere|skrìvere
+to learn|imparare|imparàre
+to teach|insegnare|inseñàre
+to sleep|dormire|dormìre
+to wake up|svegliarsi|zvelàrsi
+to run|correre|kòrrere
+to walk|camminare|kamminàre
+to open|aprire|aprìre
+to close|chiudere|kiùdere
+to give|dare|dàre
+to take|prendere|prèndere
+to make|fare|fàre
+to love|amare|amàre
+to think|pensare|pensàre
+to understand|capire|kapìre
+to work|lavorare|lavoràre
+to wait|aspettare|aspettàre
+big|grande|grànde
+small|piccolo|pìkkolo
+new|nuovo|nuòvo
+old|vecchio|vèkkio
+good|buono|buòno
+bad|cattivo|kattìvo
+beautiful|bello|bèllo
+hot|caldo|kàldo||Fa molto caldo oggi.|It is very hot today.
+cold|freddo|frèddo||L'acqua è fredda.|The water is cold.
+fast|veloce|velòche
+slow|lento|lènto
+easy|facile|fàchile
+difficult|difficile|diffìchile
+long|lungo|lùngo
+short|corto|kòrto
+clean|pulito|pulìto
+dirty|sporco|spòrko
+happy|felice|felìche||I bambini sono molto felici.|The children are very happy.
+tired|stanco|stànko||Oggi sono stanco.|I am tired today.
+hungry|affamato|affamàto||Il bambino è affamato.|The child is hungry.
+
+@phrases
+Ciao!|chào|Hello!|Ciao!|greeting
+Arrivederci!|arrivedérchi|Goodbye!|Arrivederci!|greeting
+Buongiorno!|buondjórno|Good morning!|Buongiorno!|greeting
+Buonasera!|buonaséra|Good evening!|Buonasera!|greeting
+Buonanotte!|buonanòtte|Good night!|Buonanotte!|greeting
+Come stai?|kóme stài|How are you?|Come stai?|smalltalk
+Bene, grazie.|bène gràtsie|Fine, thank you.|Bene, grazie.|smalltalk
+Grazie mille!|gràtsie mìlle|Thank you very much!|Grazie mille!|polite
+Prego.|prègo|You're welcome.|Prego.|polite
+Scusa!|skùza|Sorry!|Scusa!|polite
+Mi dispiace.|mi dispjàche|I am sorry.|Mi dispiace.|polite
+Non c'è problema.|non ché problèma|No problem.|Non c'è problema.|polite
+Come ti chiami?|kóme ti kiàmi|What is your name?|Come ti chiami?|smalltalk
+Mi chiamo Giulia.|mi kiàmo djùlia|My name is Giulia.|Mi chiamo Giulia.|smalltalk
+Di dove sei?|di dòve sèi|Where are you from?|Di dove sei?|smalltalk
+Sono di Roma.|sòno di ròma|I am from Rome.|Sono di Roma.|smalltalk
+Parli inglese?|pàrli inglése|Do you speak English?|Parli inglese?|smalltalk
+Voglio imparare l'italiano.|vòllo imparàre l'italiàno|I want to learn Italian.|Voglio imparare l'italiano.|school
+Non ho capito.|non ò kapìto|I did not understand.|Non ho capito.|school
+Parla più lentamente.|pàrla piú lentaménte|Please speak slowly.|Parla più lentamente.|polite
+Che cosa significa?|ke kòza sinìfika|What does it mean?|Che cosa significa?|school
+Quanto costa?|kuànto kòsta|How much does it cost?|Quanto costa?|shopping
+Vorrei questo.|vorrèi kuèsto|I would like this.|Vorrei questo.|shopping
+Ha una taglia più piccola?|à ùna tàlla piú pìkkola|Do you have a smaller size?|Ha una taglia più piccola?|shopping
+Il conto, per favore.|il kónto per favóre|The bill, please.|Il conto, per favore.|shopping
+Pago con la carta.|pàgo kon la kàrta|I pay by card.|Pago con la carta.|shopping
+Dov'è la stazione?|dòv'è la stantsióne|Where is the station?|Dov'è la stazione?|travel
+Dov'è il bagno?|dòv'è il bànnio|Where is the toilet?|Dov'è il bagno?|travel
+Questo autobus va a Milano?|kuèsto àutobus va a milàno|Does this bus go to Milan?|Questo autobus va a Milano?|travel
+A che ora parte il treno?|a ke òra pàrte il trèno|When does the train leave?|A che ora parte il treno?|travel
+Mi sono perso.|mi sòno pèrso|I am lost.|Mi sono perso.|travel
+Può aiutarmi?|può aiutàrmi|Can you help me?|Può aiutarmi?|polite
+Ho bisogno di un medico.|ò bisònnio di un mèdiko|I need a doctor.|Ho bisogno di un medico.|health
+Non mi sento bene.|non mi sènto bène|I don't feel well.|Non mi sento bene.|health
+Dov'è la farmacia?|dòv'è la farmachìa|Where is the pharmacy?|Dov'è la farmacia?|health
+Ho mal di testa.|ò mal di tèsta|I have a headache.|Ho mal di testa.|health
+Un caffè, per favore.|un kaffè per favóre|A coffee, please.|Un caffè, per favore.|food
+Il menù, per favore.|il menù per favóre|The menu, please.|Il menù, per favore.|food
+È molto buono.|è molto buòno|It is very good.|È molto buono.|food
+Sono vegetariano.|sòno vedjetariàno|I am a vegetarian.|Sono vegetariano.|food
+Ho fame.|ò fàme|I am hungry.|Ho fame.|food
+Non mangio carne.|non màngio kàrne|I don't eat meat.|Non mangio carne.|food
+L'acqua è fredda.|l'àkua è frèdda|The water is cold.|L'acqua è fredda.|food
+Oggi il tempo è bello.|òddji il tèmpo è bèllo|The weather is nice today.|Oggi il tempo è bello.|smalltalk
+Lavoro in ufficio.|lavóro in uffìcho|I work in an office.|Lavoro in ufficio.|work
+Dove lavori?|dòve lavóri|Where do you work?|Dove lavori?|work
+Lo stipendio arriva a fine mese.|lo stipèndio arrìva a fìne mése|The salary comes at month end.|Lo stipendio arriva a fine mese.|work
+Domani ho una riunione.|domàni ò ùna riunióne|I have a meeting tomorrow.|Domani ho una riunione.|work
+Studio all'università.|stùdio all'università|I study at the university.|Studio all'università.|school
+A che ora inizia la lezione?|a ke òra inìtsia la letsióne|When does the class start?|A che ora inizia la lezione?|school
+L'esame era facile.|l'ezàme èra fàchile|The exam was easy.|L'esame era facile.|school
+Mi piace leggere i libri.|mi pjàche lèddjere i lìbri|I like reading books.|Mi piace leggere i libri.|school
+Questa parola è nuova.|kuèsta paròla è nuòva|This word is new.|Questa parola è nuova.|school
+Imparo l'italiano ogni giorno.|impàro l'italiàno òddji djórno|I learn Italian every day.|Imparo l'italiano ogni giorno.|school
+Oggi è lunedì.|òddji è lunedí|Today is Monday.|Oggi è lunedì.|time
+Che ore sono?|ke òre sòno|What time is it?|Che ore sono?|time
+Non ho tempo.|non ò tèmpo|I have no time.|Non ho tempo.|time
+Arrivo alle sei.|arrìvo àlle sèi|I arrive at six.|Arrivo alle sei.|time
+Domenica sono libero.|doménika sòno lìbero|I am free on Sunday.|Domenica sono libero.|time
+Questa è mia madre.|kuèsta è mia màdre|This is my mother.|Questa è mia madre.|family
+Mio padre lavora molto.|mio pàdre lavóra molto|My father works a lot.|Mio padre lavora molto.|family
+Mia sorella è medico.|mia sorèlla è mèdiko|My sister is a doctor.|Mia sorella è medico.|family
+La nostra famiglia è grande.|la nòstra famìlla è grànde|Our family is big.|La nostra famiglia è grande.|family
+Il bambino gioca in giardino.|il bambìno djòka in djardìno|The child plays in the garden.|Il bambino gioca in giardino.|family
+La mia casa è piccola.|la mia kàza è pìkkola|My house is small.|La mia casa è piccola.|home
+La cucina è pulita.|la kuchìna è pulìta|The kitchen is clean.|La cucina è pulita.|home
+La finestra è aperta.|la finèstra è apèrta|The window is open.|La finestra è aperta.|home
+Chiudo la porta.|kiùdo la pòrta|I close the door.|Chiudo la porta.|home
+È andata via la luce.|è andàta vìa la lùche|The power has gone out.|È andata via la luce.|home
+Adesso vado a dormire.|adèsso vàdo a dormìre|I am going to sleep now.|Adesso vado a dormire.|home
+Dov'è il mio passaporto?|dòv'è il mio passapòrto|Where is my passport?|Dov'è il mio passaporto?|travel
+Il volo è in ritardo.|il vòlo è in ritàrdo|The flight is late.|Il volo è in ritardo.|travel
+Il bagaglio è pesante.|il bagàllo è pezànte|The luggage is heavy.|Il bagaglio è pesante.|travel
+Buon viaggio!|buòn viàddjo|Have a good trip!|Buon viaggio!|travel
+Vorrei una camera per due notti.|vorrèi ùna kàmera per dùe nòtti|I need a room for two nights.|Vorrei una camera per due notti.|travel
+Vada dritto.|vàda drìtto|Go straight ahead.|Vada dritto.|travel
+Giri a sinistra.|djìri a sinìstra|Turn left.|Giri a sinistra.|travel
+Dov'è il mercato?|dòv'è il merkàto|Where is the market?|Dov'è il mercato?|shopping
+Il prezzo è troppo alto.|il prèttso è tròppo àlto|The price is too high.|Il prezzo è troppo alto.|shopping
+Mi fa un piccolo sconto?|mi fa un pìkkolo skónto|Can you give a small discount?|Mi fa un piccolo sconto?|shopping
+Sto solo guardando.|sto sòlo guardàndo|I am just looking.|Sto solo guardando.|shopping
+Mi dà lo scontrino?|mi da lo skontìno|Can I have the receipt?|Mi dà lo scontrino?|shopping
+Buon appetito!|buòn appetìto|Enjoy your meal!|Buon appetito!|food
+Dopo mangiamo un tè.|dòpo mandjàmo un tè|We drink tea after the meal.|Dopo mangiamo un tè.|food
+Mi dia dell'acqua fredda.|mi dia dèll'àkua frèdda|Give me cold water.|Mi dia dell'acqua fredda.|food
+Non ti preoccupare.|non ti preokkupàre|Don't worry.|Non ti preoccupare.|emotion
+Sono fiero di te.|sòno fièro di te|I am proud of you.|Sono fiero di te.|emotion
+Sono contento di sentirlo.|sòno kontènto di sentìrlo|I am glad to hear that.|Sono contento di sentirlo.|emotion
+Ho paura.|ò paùra|I am scared.|Ho paura.|emotion
+È bello rivederti.|è bèllo rivedèrti|Good to see you.|È bello rivederti.|smalltalk
+Congratulazioni!|kongratulatsióni|Congratulations!|Congratulazioni!|greeting
+Benvenuto!|benvenùto|Welcome!|Benvenuto!|greeting
+Guarisci presto!|guarìshi prèsto|Get well soon!|Guarisci presto!|health
+Un momento, per favore.|un moménto per favóre|One moment, please.|Un momento, per favore.|polite
+Arrivo subito.|arrìvo sùbito|I'll be right there.|Arrivo subito.|smalltalk
+Non lo so.|non lo so|I don't know.|Non lo so.|smalltalk
+Forse dopo.|fòrse dòpo|Maybe later.|Forse dopo.|smalltalk
+Sono d'accordo.|sòno d'akkòrdo|I agree.|Sono d'accordo.|smalltalk
+Non è giusto.|non è djùsto|That is not right.|Non è giusto.|smalltalk
+Che cosa fai oggi?|ke kòza fai òddji|What are you doing today?|Che cosa fai oggi?|smalltalk
+Sto preparando l'esame.|sto preparàndo l'ezàme|I am preparing for the exam.|Sto preparando l'esame.|school
+Ho bisogno di aiuto.|ò bisònnio di aiùto|I need help.|Ho bisogno di aiuto.|polite
+Grazie per l'aiuto.|gràtsie per l'aiùto|Thank you for your help.|Grazie per l'aiuto.|polite
+È la prima volta.|è la prìma vòlta|This is the first time.|È la prima volta.|smalltalk
+Dove cambio i soldi?|dòve kàmbio i sòldi|Where can I exchange money?|Dove cambio i soldi?|travel
+L'autobus arriva alle otto.|l'àutobus arrìva àlle òtto|The bus comes at eight.|L'autobus arriva alle otto.|travel
+Ho perso il treno.|ò pèrso il trèno|I missed my train.|Ho perso il treno.|travel
+L'albergo è molto bello.|l'albèrgo è molto bèllo|The hotel is very nice.|L'albergo è molto bello.|travel
+Che lavoro fai?|ke lavóro fai|What is your job?|Che lavoro fai?|work
+Sono ingegnere.|sòno indjennière|I am an engineer.|Sono ingegnere.|work
+Lei aiuta sempre.|lèi aiùta sèmpre|She always helps.|Lei aiuta sempre.|smalltalk
+Impariamo insieme.|impariàmo insièmo|We learn together.|Impariamo insieme.|school
+Il mio italiano migliora.|il mio italiàno mellióra|My Italian is improving.|Il mio italiano migliora.|school
+Il cielo è blu.|il chièlo è blu|The sky is blue.|Il cielo è blu.|smalltalk
+Il mio colore preferito è il verde.|il mio kolóre prefèrito è il vèrde|My favourite color is green.|Il mio colore preferito è il verde.|smalltalk
+La macchina rossa è veloce.|la màkkina ròssa è velòche|The red car is fast.|La macchina rossa è veloce.|smalltalk
+La notte è tranquilla.|la nòtte è trankuìlla|The night is quiet.|La notte è tranquilla.|time
+Oggi piove.|òddji piòve|It is raining today.|Oggi piove.|smalltalk
+Il sole splende.|il sòle splènde|The sun is shining.|Il sole splende.|smalltalk
+Bravo!|bràvo|Well done!|Bravo!|smalltalk
+Piacere di conoscerti.|piachére di konòsherti|Nice to meet you.|Piacere di conoscerti.|greeting
+Ci vediamo dopo.|chi vediàmo dòpo|We will meet again.|Ci vediamo dopo.|greeting
+Scusi, cosa ha detto?|skùzi kòza à dètto|Pardon, what did you say?|Scusi, cosa ha detto?|polite
+Lo ripeta, per favore.|lo ripèta per favóre|Please say it again.|Lo ripeta, per favore.|polite
+Come si scrive?|kóme si skrìve|How do you spell it?|Come si scrive?|school
+Amo il tè.|àmo il tè|I love tea.|Amo il tè.|food
+Il cibo è pronto.|il chìbo è prònto|The food is ready.|Il cibo è pronto.|food
+Metta più cibo nel piatto.|mètta piú chìbo nel piàtto|Put more food on the plate.|Metta più cibo nel piatto.|food
+Questo tessuto è buono.|kuèsto tèsuto è buòno|This cloth is good.|Questo tessuto è buono.|shopping
+Il negozio è chiuso.|il negòtsio è kiùzo|The shop is closed.|Il negozio è chiuso.|shopping
+Vado al mercato ogni giorno.|vàdo al merkàto òddji djórno|I go to the market every day.|Vado al mercato ogni giorno.|shopping
+La macchina è sulla strada.|la màkkina è sùlla stràda|The car is on the road.|La macchina è sulla strada.|travel
+Giri vicino al ponte.|djìri vichìno al pónte|Turn near the bridge.|Giri vicino al ponte.|travel
+La città è grande.|la chittà è grànde|The city is big.|La città è grande.|travel
+In paese c'è pace.|in paése ché pàche|There is peace in the village.|In paese c'è pace.|travel
+Sono studente.|sòno studènte|I am a student.|Sono studente.|school
+È un bravo insegnante.|è un bràvo inseñànte|He is a good teacher.|È un bravo insegnante.|school
+La domanda è difficile.|la domànda è diffìchile|The question is difficult.|La domanda è difficile.|school
+La risposta è giusta.|la rispòsta è djùsta|The answer is correct.|La risposta è corretta.|school
+Il libro è sul tavolo.|il lìbro è sul tàvolo|The book is on the table.|Il libro è sul tavolo.|school
+Il letto è morbido.|il lètto è mòrbido|The bed is soft.|Il letto è morbido.|home
+La chiave è persa.|la kiàve è pèrsa|The key is lost.|La chiave è persa.|home
+In giardino ci sono i fiori.|in djardìno chi sòno i fióri|There are flowers in the garden.|In giardino ci sono i fiori.|home
+La stanza è luminosa.|la stàntsa è luminóza|The room is bright.|La stanza è luminosa.|home
+Salga le scale.|sàlga le skàle|Go up the stairs.|Salga le scale.|home
+
+@grammar
+L'articolo di "libro" è ___ .|il|la|lo|1|"Libro" is masculine: il libro.|Masculine nouns take "il".
+L'articolo di "casa" è ___ .|la|il|lo|1|"Casa" is feminine: la casa.|Feminine nouns take "la".
+Davanti a vocale si usa ___ .|l'|il|lo|1|Before a vowel the article shortens to "l'": l'amico.|Before a vowel use "l'".
+"Lo" si usa davanti a ___ .|s + consonante|vocale|z|1|"Lo zaino, lo studente".|"Lo" precedes s+consonant, z, gn, ps.
+Io ___ studente.|sono|sei|è|1|"Io sono" — first person of "essere".|"Sono" is "I am".
+Tu ___ italiano.|sei|sono|siamo|1|"Tu sei" — second person.|"Sei" is "you are".
+Lui ___ stanco.|è|sono|siamo|1|"Lui è" — third person.|"È" is "he/she is".
+Noi ___ pronti.|siamo|sono|siete|1|"Noi siamo" — first person plural.|"Siamo" is "we are".
+Voi ___ in ritardo.|siete|siamo|sono|1|"Voi siete" — second person plural.|"Siete" is "you (pl.) are".
+Loro ___ amici.|sono|siamo|è|1|"Loro sono" — third person plural.|"Sono" is "they are".
+Il plurale di "libro" è ___ .|libri|libre|libros|1|Masculine "-o" → "-i".|Masculine nouns take "-i".
+Il plurale di "casa" è ___ .|case|casi|casse|1|Feminine "-a" → "-e".|Feminine nouns take "-e".
+Il plurale di "città" è ___ .|città|cittae|cittas|1|Words ending in a stressed vowel don't change.|Accented endings stay the same.
+Il passato prossimo usa ___ .|avere o essere|solo avere|solo essere|1|Most verbs use "avere", movement verbs "essere".|Auxiliary depends on the verb.
+Ho ___ .|mangiato|mangiare|mangiava|1|Regular past participle ends in "-ato".|"Avere" verbs take "-ato/-uto/-ito".
+Sono ___ a Roma.|andato|andare|andavo|1|Movement verbs take "essere" + participle agreeing in gender.|"Essere" verbs agree with the subject.
+L'imperfetto di "essere" (io) è ___ .|ero|sono|fui|1|"Ero" describes a past state.|"Ero" is the imperfect of "essere".
+Il futuro di "andare" (io) è ___ .|andrò|vado|andai|1|"Andrò" is the simple future.|"Andrò" is future.
+"Voglio ___ ."|mangiare|mangiato|mangiavo|1|After a modal verb comes the infinitive.|Modals take the infinitive.
+"Posso ___ ."|entrare|entrato|entravo|1|"Posso" + infinitive.|"Potere" takes the infinitive.
+"Devo ___ ."|partire|partito|partivo|1|"Devo" + infinitive.|"Dovere" takes the infinitive.
+La negazione si fa con ___ .|non|no|mai|1|"Non" goes before the verb.|"Non" negates the verb.
+La domanda sì/no spesso ___ .|inizia col verbo|finisce col verbo|ha "non"|1|Italian often inverts subject and verb.|Inversion makes questions.
+"Che cosa" chiede ___ .|una cosa|un luogo|un tempo|1|"Che cosa" = what.|"Che cosa" asks what.
+"Dove" chiede ___ .|un luogo|un tempo|una cosa|1|"Dove" = where.|"Dove" asks where.
+"Quando" chiede ___ .|un tempo|un luogo|una cosa|1|"Quando" = when.|"Quando" asks when.
+"Perché" chiede ___ .|una ragione|un tempo|un luogo|1|"Perché" = why.|"Perché" asks why.
+"Quanto" chiede ___ .|una quantità|un luogo|un tempo|1|"Quanto" = how much.|"Quanto" asks quantity.
+"Chi" chiede ___ .|una persona|una cosa|un luogo|1|"Chi" = who.|"Chi" asks who.
+"Come" chiede ___ .|il modo|il luogo|il tempo|1|"Come" = how.|"Come" asks how.
+L'ordine normale è ___ .|soggetto + verbo + oggetto|verbo + soggetto|oggetto + verbo|1|Italian is usually SVO.|Italian is SVO.
+L'aggettivo va ___ .|dopo il nome|prima del nome|dopo il verbo|1|Adjectives usually follow the noun: casa grande.|Adjectives follow the noun.
+In "casa grande", "grande" è ___ .|un aggettivo|un nome|un verbo|1|"Grande" describes "casa".|"Grande" is an adjective.
+In "cammina veloce", "veloce" è ___ .|un avverbio|un nome|un aggettivo|1|"Veloce" modifies the verb.|It is an adverb here.
+Il comparativo è ___ .|più grande|grande più|grandissimo|1|"Più" + adjective makes the comparative.|"Più" makes comparatives.
+Il superlativo è ___ .|il più grande|più grande|grande|1|"Il più" makes the superlative.|"Il più" makes superlatives.
+"E" serve a ___ .|unire|opporre|spiegare|1|"E" = and.|"E" means "and".
+"Ma" serve a ___ .|opporre|unire|spiegare|1|"Ma" = but.|"Ma" means "but".
+"Perché" introduce ___ .|una causa|un tempo|un luogo|1|"Perché" = because.|"Perché" gives the reason.
+"Se" introduce ___ .|una condizione|un tempo|un luogo|1|"Se" = if.|"Se" makes a condition.
+"Quando" introduce ___ .|un tempo|un luogo|una causa|1|"Quando" = when.|"Quando" refers to time.
+"Fino a" indica ___ .|un limite|un inizio|una causa|1|"Fino a" = until.|"Fino a" marks the limit.
+"Da" indica ___ .|origine|destinazione|tempo futuro|1|"Da" = from.|"Da" marks origin.
+"In" indica ___ .|luogo|tempo|causa|1|"In" = in: in cucina.|"In" marks place.
+"Su" indica ___ .|sopra|sotto|accanto|1|"Su" = on: sul tavolo.|"Su" means "on".
+"Sotto" indica ___ .|sotto|sopra|accanto|1|"Sotto" = under.|"Sotto" means "under".
+"Vicino a" indica ___ .|vicinanza|distanza|tempo|1|"Vicino a" = near.|"Vicino a" means "near".
+"Molto" è ___ .|un avverbio|un nome|una preposizione|1|"Molto" = very.|"Molto" is an adverb.
+"Tutto" significa ___ .|tutto|nessuno|alcuni|1|"Tutto" = all.|"Tutto" means "all".
+"Nessuno" significa ___ .|nessuno|tutto|alcuni|1|"Nessuno" = none.|"Nessuno" means "none".
+"Qualche" significa ___ .|alcuni|tutti|nessuno|1|"Qualche" = some.|"Qualche" means "some".
+"Ogni" significa ___ .|ogni|nessuno|alcuni|1|"Ogni" = every.|"Ogni" means "every".
+"Di giorno" indica ___ .|un tempo|un luogo|una causa|1|"Di giorno" = during the day.|"Di giorno" means "during the day".
+"Di notte" indica ___ .|un tempo|un luogo|una causa|1|"Di notte" = at night.|"Di notte" means "at night".
+"Domani" significa ___ .|il giorno dopo|oggi|ieri|1|"Domani" = tomorrow.|"Domani" means "tomorrow".
+"Ieri" significa ___ .|il giorno prima|domani|oggi|1|"Ieri" = yesterday.|"Ieri" means "yesterday".
+"Adesso" significa ___ .|ora|dopo|prima|1|"Adesso" = now.|"Adesso" means "now".
+"Sempre" significa ___ .|ogni volta|a volte|mai|1|"Sempre" = always.|"Sempre" means "always".
+"Grazie" esprime ___ .|gratitudine|scuse|benvenuto|1|"Grazie" = thank you.|"Grazie" is thanks.
+"Benvenuto" esprime ___ .|benvenuto|addio|gratitudine|1|"Benvenuto" = welcome.|"Benvenuto" greets someone.
+"Sì" significa ___ .|sì|no|forse|1|"Sì" = yes.|"Sì" means "yes".
+"No" significa ___ .|no|sì|forse|1|"No" = no.|"No" means "no".
+
+@sentences
+Bevo il tè ogni mattina.|I drink tea every morning.|Bevo il tè ogni mattina.
+Mio fratello impara il tedesco.|My brother is learning German.|Mio fratello impara il tedesco.
+Domenica andiamo a Milano.|We go to Milan on Sunday.|Domenica andiamo a Milano.
+Il libro è sul tavolo.|The book is on the table.|Il libro è sul tavolo.
+Ieri ha scritto una lettera.|He wrote a letter yesterday.|Ieri ha scritto una lettera.
+Può aiutarmi, per favore?|Can you help me, please?|Può aiutarmi, per favore?
+Vorrei due caffè e un'acqua.|I would like two coffees and a water.|Vorrei due caffè e un'acqua.
+Il treno parte alle otto.|The train leaves at eight.|Il treno parte alle otto.
+Mia madre cucina il pesce oggi.|My mother is cooking fish today.|Mia madre cucina il pesce oggi.
+Parla tre lingue correntemente.|He speaks three languages fluently.|Parla tre lingue correntemente.
+La nostra casa è piccola ma pulita.|Our house is small but clean.|La nostra casa è piccola ma pulita.
+Non ho capito bene la domanda.|I did not fully understand the question.|Non ho capito bene la domanda.
+Oggi il tempo è bellissimo.|The weather is really lovely today.|Oggi il tempo è bellissimo.
+Domani devo alzarmi presto.|Tomorrow I have to get up early.|Domani devo alzarmi presto.
+Lei lavora in ospedale.|She works in a hospital.|Lei lavora in ospedale.
+Ci vediamo davanti alla scuola.|We meet in front of the school.|Ci vediamo davanti alla scuola.
+Ha dimenticato il telefono a casa.|He forgot his phone at home.|Ha dimenticato il telefono a casa.
+Oggi non vado in ufficio.|I am not going to the office today.|Oggi non vado in ufficio.
+I bambini giocano a calcio in giardino.|The children play football in the garden.|I bambini giocano a calcio in giardino.
+Puoi aprire la finestra?|Can you open the window?|Puoi aprire la finestra?
+Oggi ho molto lavoro.|I have a lot of work today.|Oggi ho molto lavoro.
+A mio padre piace leggere il giornale.|My father likes reading the newspaper.|A mio padre piace leggere il giornale.
+Il cibo è davvero molto buono.|The food is really very good.|Il cibo è davvero molto buono.
+Aspettiamo da un'ora.|We have been waiting for an hour.|Aspettiamo da un'ora.
+Imparo l'italiano per il mio lavoro.|I learn Italian for my job.|Imparo l'italiano per il mio lavoro.
+Lei viene da una piccola città.|She comes from a small town.|Lei viene da una piccola città.
+Compro pane e latte al mercato.|I buy bread and milk at the market.|Compro pane e latte al mercato.
+Va in ufficio con l'autobus.|He goes to the office by bus.|Va in ufficio con l'autobus.
+Ieri abbiamo visto un film.|We watched a film yesterday.|Ieri abbiamo visto un film.
+Stasera ti mando un messaggio.|I will send you a message tonight.|Stasera ti mando un messaggio.
+L'albergo non è lontano dalla stazione.|The hotel is not far from the station.|L'albergo non è lontano dalla stazione.
+Mia sorella studia medicina.|My sister studies medicine.|Mia sorella studia medicina.
+Nel fine settimana non ho tempo.|I have no time at the weekend.|Nel fine settimana non ho tempo.
+La sera non beve il caffè.|He does not drink coffee in the evening.|La sera non beve il caffè.
+Ci servono due biglietti per Roma.|We need two tickets to Rome.|Ci servono due biglietti per Roma.
+L'esame comincia alle nove.|The exam starts at nine.|L'esame comincia alle nove.
+Parlo un po' di italiano e di inglese.|I speak a little Italian and English.|Parlo un po' di italiano e di inglese.
+Il mio amico lavora come ingegnere.|My friend works as an engineer.|Il mio amico lavora come ingegnere.
+Aiuta sua madre in cucina.|She helps her mother in the kitchen.|Aiuta sua madre in cucina.
+Ogni sera faccio una passeggiata.|I go for a walk every evening.|Ogni sera faccio una passeggiata.
+
+@listening
+Ciao, come stai?|chào kóme stài|Hello, how are you?|Ciao, come stai?|Ciao, dove sei?|Buongiorno, come stai?|1
+Vorrei un caffè.|vorrèi un kaffè|I would like a coffee.|Vorrei un caffè|Vorrei un tè|Vorrei un'acqua|1
+Dov'è la stazione?|dòv'è la stantsióne|Where is the station?|Dov'è la stazione?|Dov'è il mercato?|Dov'è l'albergo?|1
+Sono di Roma.|sòno di ròma|I am from Rome.|Sono di Roma|Abito a Roma|Vado a Roma|1
+Il conto, per favore.|il kónto per favóre|The bill, please.|Il conto, per favore|Il menù, per favore|Lo scontrino, per favore|1
+Quanto costa?|kuànto kòsta|How much does it cost?|Quanto costa?|Di chi è?|Che cos'è?|1
+Non ho capito.|non ò kapìto|I did not understand.|Non ho capito|Non sono venuto|Non ho sentito|1
+Parla più lentamente.|pàrla piú lentaménte|Please speak slowly.|Parla più lentamente|Parla più forte|Venga più vicino|1
+Mio fratello è medico.|mio fratèllo è mèdiko|My brother is a doctor.|Mio fratello è medico|Mio fratello è insegnante|Mio padre è medico|1
+Il treno parte alle otto.|il trèno pàrte àlle òtto|The train leaves at eight.|Il treno parte alle otto|L'autobus parte alle otto|Il treno arriva alle otto|1
+Oggi non ho tempo.|òddji non ò tèmpo|I have no time today.|Oggi non ho tempo|Oggi non ho soldi|Oggi non ho lavoro|1
+Il cibo è molto buono.|il chìbo è molto buòno|The food is very good.|Il cibo è molto buono|Il tempo è molto bello|Il tè è molto caldo|1
+Impariamo l'italiano insieme.|impariàmo l'italiàno insièmo|We learn Italian together.|Impariamo l'italiano insieme|Parliamo l'italiano insieme|Leggiamo un libro insieme|1
+Vorrei una camera per due notti.|vorrèi ùna kàmera per dùe nòtti|I need a room for two nights.|Vorrei una camera per due notti|Vorrei un tavolo per due|Vorrei una camera per una notte|1
+Mia madre cucina il pesce oggi.|mia màdre kuchìna il péshe òddji|My mother cooks fish today.|Mia madre cucina il pesce oggi|Mia madre compra il pesce oggi|Mio padre cucina il pesce oggi|1
+Ogni sera faccio una passeggiata.|ònni sèra fàchcho ùna passeddjàta|I walk every evening.|Ogni sera faccio una passeggiata|Ogni mattina faccio una passeggiata|Ogni sera vado a dormire|1
+Ha una taglia più piccola?|à ùna tàlla piú pìkkola|Do you have a smaller size?|Ha una taglia più piccola?|Ha una taglia più grande?|Ha un altro colore?|1
+Pago con la carta.|pàgo kon la kàrta|I pay by card.|Pago con la carta|Pago in contanti|Pago domani|1
+Mi dispiace molto.|mi dispjàche molto|I am very sorry.|Mi dispiace molto|Sono molto contento|Ho molta paura|1
+Domani ti chiamo.|domàni ti kiàmo|I will call you tomorrow.|Domani ti chiamo|Oggi ti chiamo|Domani ti vedo|1
+
+@stories
+Il primo giorno a Roma|🚆|Ali arriva a Roma la mattina.\nPrende un taxi fino all'___ (1).\nIn camera beve un ___ (2).\nPoi chiama la sua ___ (3).|Ali reaches Rome in the morning. He takes a taxi to the hotel. In the room he drinks a coffee. Then he calls his family.|albergo/aeroporto/stazione=0;caffè/libro/pane=0;famiglia/negozio/classe=0
+Al mercato|🛒|Sara va al ___ (1) la domenica.\nCompra pane, latte e ___ (2).\nPaga con la ___ (3).|Sara goes to the market on Sunday. She buys bread, milk and apples. She pays by card.|mercato/scuola/ufficio=0;mele/libri/sedie=0;carta/carta da lettere/acqua=0
+Il passaporto perso|🛂|Ahmad cerca il suo ___ (1).\nChiede aiuto a un ___ (2).\nPer fortuna lo trova nella sua ___ (3).|Ahmad is looking for his passport. He asks a policeman for help. Luckily he finds it in his bag.|passaporto/chiave/libro=0;poliziotto/insegnante/vicino=0;borsa/cucina/scuola=0
+Dal medico|🏥|Bilal non sta ___ (1).\nVa dal ___ (2).\nIl medico gli dà la medicina e ___ (3).|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|bene/male/fame=0;medico/fornaio/autista=0;riposo/soldi/libri=0
+Il corso di italiano|📚|Nadia impara l'___ (1) da tre mesi.\nSi esercita ogni sera con i ___ (2).\nIl suo ___ (3) dice che parla già bene.|Nadia has been learning Italian for three months. She practises every evening with books. Her teacher says she already speaks well.|italiano/francese/arabo=0;libri/foto/carte=0;insegnante/fratello/vicino=0
+Pranzo in famiglia|👨‍👩‍👧‍👦|Domenica arriva tutta la ___ (1).\nLa nonna cucina il ___ (2).\nTutti mangiano insieme e ___ (3) molto.|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|famiglia/azienda/classe=0;riso/acqua/carta=0;ridono/lavorano/dormono=0
+Alla stazione|🚉|Il treno ha dieci minuti di ___ (1).\nHassan compra un ___ (2) al chiosco.\nPoi sale sul ___ (3).|The train is ten minutes late. Hassan buys a newspaper. Then he gets on the train.|ritardo/pulizia/preparazione=0;giornale/scontrino/chiave=0;treno/aereo/bus=0
+Una sera d'inverno|❄️|A gennaio fa molto ___ (1).\nAisha mette un ___ (2) caldo.\nBeve un ___ (3) caldo e legge.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|freddo/caldo/pioggia=0;cappotto/camicia/scarpe=0;tè/acqua/succo=0
+Cena in albergo|🍽️|Il cameriere porta il ___ (1).\nOmar ordina pesce e ___ (2).\nAlla fine chiede il ___ (3).|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|menù/sedia/luce=0;riso/tavolo/finestra=0;conto/chiave/scontrino=0
+Nuovi amici|🤝|Lena e Sana si incontrano al ___ (1).\nParlano di musica e di ___ (2).\nAlla fine si scambiano i ___ (3).|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|parco/ufficio/treno=0;viaggi/scontrini/esami=0;numeri/indirizzi/libri=0
+
+@idioms
+In bocca al lupo|in bòkka al lùpo|Good luck (literally "into the wolf's mouth").|buona sorte|In bocca al lupo per l'esame!
+Acqua in bocca|àkua in bòkka|Keep it secret.|tenere il segreto|Non dirlo a nessuno: acqua in bocca.
+Avere le mani in pasta|avère le màni in pàsta|To be involved in something (often shady).|essere coinvolto|In quell'affare ha le mani in pasta.
+Prendere due piccioni con una fava|prèndere dùe pichchóni kon ùna fàva|Two birds with one stone.|due cose in una volta|Vado al mercato e incontro Marco: due piccioni con una fava.
+Essere al settimo cielo|èssere al sèttimo chièlo|To be on cloud nine.|essere felicissimo|Da quando si sono sposati è al settimo cielo.
+Avere il cuore d'oro|avère il kuòre d'òro|To be very kind-hearted.|avere un cuore d'oro|Aiuta tutti: ha il cuore d'oro.
+Costare un occhio della testa|kostàre un òkkio dèlla tèsta|To cost a fortune.|costare moltissimo|Quella borsa costa un occhio della testa.
+Non avere peli sulla lingua|non avère pèli sùlla lìngua|To speak bluntly.|parlare senza filtri|Dice sempre la verità: non ha peli sulla lingua.
+Piovere sul bagnato|piòvere sul bañàto|Misfortune upon misfortune.|piovere sul bagnato|Ho perso il treno e piove: piove sul bagnato.
+Avere un diavolo per capello|avère un diàvolo per kapèllo|To be furious.|essere furioso|Non parlargli ora: ha un diavolo per capello.
+Rimanere di stucco|rimanère di stùkko|To be stunned.|restare di sasso|Quando ha visto il conto è rimasto di stucco.
+Tagliare la testa al toro|tallàre la tèsta al tòro|To settle the matter decisively.|chiudere la questione|Tagliamo la testa al toro e decidiamo oggi.
+Andare a gonfie vele|andàre a gònfe vèle|To go very well.|andare a meraviglia|Il progetto va a gonfie vele.
+Avere la testa tra le nuvole|avère la tèsta tra le nuòvole|To be daydreaming.|essere distratto|Non ascolta mai: ha la testa tra le nuvole.
+Essere di buon umore|èssere di buòn umóre|To be in a good mood.|essere di buon umore|Stamattina è di buon umore.
+Fare orecchie da mercante|fàre orèkkie da merkànte|To turn a deaf ear.|fare finta di niente|Gli ho chiesto aiuto ma fa orecchie da mercante.
+Essere rosso come un peperone|èssere ròsso kóme un peperóne|To blush deeply.|diventare rosso|Quando l'ho guardata è diventato rosso come un peperone.
+Avere le mani legate|avère le màni legàte|To be unable to act.|non poter fare nulla|Vorrei aiutarti ma ho le mani legate.
+In un batter d'occhio|in un battèr d'òkkio|In the blink of an eye.|in un attimo|Il tempo è passato in un batter d'occhio.
+Piangere lacrime amare|piàndjere làkrime amàre|To cry bitterly.|piangere amaramente|Dopo l'esame ha pianto lacrime amare.
+Avere un cuore di pietra|avère un kuòre di piètra|To be hard-hearted.|avere un cuore di pietra|Un cuore di pietra non ascolta nessuno.
+Essere di pasta buona|èssere di pàsta buòna|To be good-natured.|essere di buon carattere|È di pasta buona, non serba rancore.
+Chiudere gli occhi davanti a tutto|kiùdere li òkki davànti a tùtto|To ignore the obvious.|chiudere gli occhi|Il cartello è davanti a te, non chiudere gli occhi.
+Legarsi il dito al fegato|legàrsi il dìto al fègato|To hold a grudge.|serbare rancore|Non legarti il dito, è passato tanto tempo.
+Avere la bocca dolce|avère la bòkka dòlche|To be a sweet-talker.|avere la parlantina|Non fidarti di chi ha la bocca dolce.
+
+@alphabet
+A|a|a|acqua
+B|bi|bi|buono
+C|ci|chi|casa
+D|di|di|dare
+E|e|e|estate
+F|effe|èffe|fare
+G|gi|dji|giorno
+H|acca|àkka|hotel
+I|i|i|Italia
+L|elle|èlle|lavoro
+M|emme|èmme|madre
+N|enne|ènne|notte
+O|o|o|ora
+P|pi|pi|pane
+Q|cu|ku|quattro
+R|erre|èrre|rosso
+S|esse|èsse|sera
+T|ti|ti|tempo
+U|u|u|uomo
+V|vi|vi|verde
+Z|zeta|dzèta|zucchero

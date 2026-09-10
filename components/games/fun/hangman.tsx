@@ -3,7 +3,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
 import { ENGLISH_WORDS } from "@/data/english";
-import { getLanguage } from "@/lib/langs";
+import { useLangPack } from "@/components/games/learn/lesson-bits";
+
+const LATIN = /^[A-Za-z\s'-]+$/;
 import { sfx } from "@/lib/sfx";
 
 const MAX_WRONG = 6;
@@ -12,13 +14,14 @@ const LETTERS = "abcdefghijklmnopqrstuvwxyz".split("");
 const STAGES = ["😀", "🙂", "😐", "😟", "😧", "😰", "💀"];
 
 export default function Hangman({ lang = "english", onEnd }: GameProps) {
+  // hangman plays in romanized form, so only non-English packs need loading
+  const pack = useLangPack(lang === "english" ? "" : lang);
   const target = useMemo(() => {
     if (lang === "english") return ENGLISH_WORDS[Math.floor(Math.random() * ENGLISH_WORDS.length)];
-    const data = getLanguage(lang);
-    const pool = (data?.words ?? []).filter((w) => /^[a-zA-Z\s'-]+$/.test(w.roman) && w.roman.length >= 4);
-    const w = pool[Math.floor(Math.random() * pool.length)] ?? { roman: "salaam", en: "peace", ur: "امن" };
-    return { en: w.roman, ur: `${w.ur} (${w.en})` };
-  }, [lang]);
+    const pool = (pack?.words ?? []).filter((w) => LATIN.test(w.r) && w.r.length >= 4);
+    const w = pool[Math.floor(Math.random() * pool.length)] ?? { r: "salaam", en: "peace", ur: "امن" };
+    return { en: w.r, ur: `${w.ur} (${w.en})` };
+  }, [lang, pack]);
 
   const [guessed, setGuessed] = useState<string[]>([]);
   const [startedAt] = useState(() => Date.now());

@@ -1,0 +1,146 @@
+# korean — authored source (migrated from data/langs/korean.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|이 단어는 {s}입니다.|This word is {en}.
+colors|색은 {s}이에요.|The color is {en}.
+food|{s} 맛있어요.|The {en} is tasty.
+numbers|숫자는 {s}이에요.|The number is {en}.
+
+@words
+book|책|chaek
+pencil|연필|yonpil
+water|물|mul
+bread|빵|ppang
+house|집|jip
+school|학교|hakkyo
+friend|친구|chingu
+mother|어머니|ömani
+father|아버지|aböji
+fish|물고기|mulgogi
+car|자동차|jadongcha
+road|길|gil
+city|도시|dosi
+village|마을|ma-öl
+rice|쌀|ssal
+tea|차|cha
+milk|우유|ooyu
+hand|손|son
+eye|눈|noon
+heart|마음|ma-öm
+day|날|nal
+night|밤|pam
+time|시간|shigan
+money|돈|don
+work|일|il
+teacher|선생님|sonsangnim
+student|학생|haksaeng
+doctor|의사|üisa
+market|시장|shijang
+price|가격|kagyök
+door|문|moon
+window|창문|changmoon
+light|불빛|pullit
+morning|아침|achim
+evening|저녁|jonyök
+week|주간|jügan
+month|달 (월)|dal
+year|해 (년)|hae
+peace|평화|pyonghwa
+egg|계란|gyeran
+meat|고기|gogi
+salt|소금|sogeum
+sugar|설탕|seoltang
+apple|사과|sagwa
+grapes|포도|podo
+tomato|토마토|tomato
+chair|의자|uija
+bed|침대|chimdae
+room|방|bang
+bus|버스|beoseu
+train|기차|gicha
+airplane|비행기|bihaenggi
+big|크다|keuda
+small|작다|jakda
+new|새로운|saeroun
+old|오래된|oraedoen
+fast|빠르다|ppareuda
+slow|느리다|neurida
+to eat|먹다|meokda
+to drink|마시다|masida
+to see|보다|boda
+to speak|말하다|malhada
+to read|읽다|ikda
+to write|쓰다|sseuda
+to learn|배우다|baeuda
+to go|가다|gada
+to come|오다|oda
+to love|사랑하다|saranghada
+to sleep|자다|jada
+to work|일하다|ilhada
+color|색|saek
+red|빨간|ppalgan
+blue|파란|paran
+green|초록|cholog
+yellow|노란|noran
+black|검은|geomeun
+white|흰|huin
+child|아이|ai
+
+# unmatched (not in _concepts.txt) — 20 entries carried over as extras:
+sun|해|hae||سورج|n|time|A2
+moon|달|dal||چاند|n|time|A2
+star|별|byöl||ستارہ|n|time|A2
+tree|나무|namu||درخت|n|home|A2
+flower|꽃|kkot||پھول|n|home|A2
+bird|새|sae||پرندہ|n|school|A2
+food|음식|ömshik||کھانا|n|food|A2
+wind|바람|param||ہوا|n|home|A2
+rain|비|bi||بارش|n|home|A2
+sea|바다|pada||سمندر|n|travel|A2
+mountain|산|san||پہاڑ|n|travel|A2
+cooked rice|밥|bap||چاول|n|food|A2
+kimchi|김치|kimchi||کمچی|n|school|A2
+pear|배|bae||ناشپاتی|n|school|A2
+desk|책상|chaeksang||میز|n|school|A2
+pretty|예쁘다|yeppeuda||خوبصورت|n|school|A2
+boy|소년|sonyeon||لڑکا|n|family|A2
+girl|소녀|sonyeo||لڑکی|n|family|A2
+man|남자|namja||آدمی|n|family|A2
+woman|여자|yeoja||عورت|n|family|A2
+
+@phrases
+안녕하세요|annyeonghaseyo|Hello|سلام|greeting
+어떻게 지내세요?|öttökay jinaeseyo|How are you?|آپ کیسے ہیں؟|smalltalk
+잘 지내요, 감사합니다|jal jinaeyo, kamsahamnida|I'm fine, thanks|ٹھیک ہوں، شکریہ|polite
+이름이 뭐예요?|irümi möeyo|What's your name?|آپ کا نام کیا ہے؟|smalltalk
+제 이름은 알리예요|jay irümön Ali-yeyo|My name is Ali|میرا نام علی ہے|smalltalk
+어디에서 왔어요?|ödaesö wassöyo|Where are you from?|آپ کہاں سے ہیں؟|travel
+파키스탄에서 왔어요|Pakistan-aysö wassöyo|I'm from Pakistan|میں پاکستان سے ہوں|smalltalk
+감사합니다|kamsahamnida|Thank you|شکریہ|polite
+천만에요|chonmaneyo|You're welcome|کوئی بات نہیں|greeting
+네 / 아니요|nae / aniyo|Yes / No|ہاں / نہیں|smalltalk
+물 주세요|mul jusaeyo|Water, please|پانی دیجیے|polite
+얼마예요?|ölmeyo|How much is it?|یہ کتنے کا ہے؟|shopping
+학교가 어디예요?|hakkyoga ödiyeyo|Where is the school?|اسکول کہاں ہے؟|travel
+모르겠어요|morügassöyo|I don't know|مجھے نہیں پتا|school
+천천히 말해 주세요|chonchoni marae jusaeyo|Please speak slowly|آہستہ بولیں|polite
+안녕히 가세요|annyeonghi gaseyo|Goodbye (to one leaving)|خدا حافظ|greeting
+죄송합니다|joesonghamnida|Sorry|معاف کیجیے|polite
+괜찮아요|gwaenchanayo|It's okay|ٹھیک ہے|smalltalk
+저는 알리예요|jeoneun alliyeyo|I am Ali|میں علی ہوں|smalltalk
+이거 얼마예요?|igeo eolmayeyo|How much is this?|یہ کتنے کا ہے؟|greeting
+화장실 어디예요?|hwajangsil eodiyeyo|Where is the bathroom?|باتھ روم کہاں ہے؟|travel
+도와주세요|dowajuseyo|Please help me|میری مدد کریں|polite
+맛있어요|masisseoyo|It's delicious|یہ مزیدار ہے|food
+사랑해요|saranghaeyo|I love you|میں تم سے محبت کرتا ہوں|smalltalk
+잘 자요|jal jayo|Good night|شب بخیر|greeting
+또 만나요|tto mannayo|See you again|پھر ملیں گے|greeting
+물론이요|mulloniyo|Of course|بیشک|polite
+이거 주세요|igeon juseyo|This one please|یہ دیجیے|greeting
+지금 몇 시예요?|jigeum myeot siyeyo|What time is it?|اب کیا وقت ہوا؟|smalltalk
+행운을 빌어요|haenguneul bireoyo|Good luck|خوش قسمتی|smalltalk
+

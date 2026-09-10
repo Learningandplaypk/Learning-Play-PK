@@ -54,7 +54,7 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-            Khelo. Seekho. Jeeto. — 43 games, 8 zubanein, Urdu meanings ke sath. Sab free.
+            Khelo. Seekho. Jeeto. — 43 games, 21 zubanein, Urdu meanings ke sath. Sab free.
           </p>
           <button
             type="button"

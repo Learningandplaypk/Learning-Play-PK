@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Learn & Play PK — Seekho + Khelo",
     short_name: "Learn&Play PK",
-    description: "Pakistan's gamified learning + games platform — 43 games, 8 languages, Urdu meanings. 100% Free.",
+    description: "Pakistan's gamified learning + games platform — 43 games, 21 languages, Urdu meanings. 100% Free.",
     start_url: "/",
     display: "standalone",
     orientation: "portrait",

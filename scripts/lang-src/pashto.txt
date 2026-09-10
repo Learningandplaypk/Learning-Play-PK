@@ -1,0 +1,686 @@
+# Pashto (پښتو) — authored source for data/langs/pashto.json
+# Arabic-derived script, RTL. Romanization follows a single scheme:
+# a, aa, i, ee, u, oo, e, o, ay, aw; ts (څ), dz (ځ), z (ږ/ژ), x (ښ), g (ګ),
+# n (ڼ), n (ڼ), kh, gh, sh, zh, hh, rr, tt, dd, nn.
+
+@info
+romanization|Roman Pashto: a, aa, i, ee, u, oo, e, o, ay, aw; ts, dz, zh, x (ښ), g (ګ), n (ڼ), kh, gh, sh, rr, tt, dd.
+alphabet.title|پښتو توري
+alphabet.intro|پښتو ۴۵ توري لري او له ښي اړخه کیڼ اړخ ته لیکل کیږي.
+
+@frames
+greetings|وایاست: {s}.|Say: {en}.
+numbers|ما سره {s} مڼې دي.|I have {en} apples.
+family|دا {s} دی.|This is my {en}.
+food|ما ته {s} خوښیږي.|I like {en}.
+travel|{s} چیرته دی؟|Where is the {en}?
+time|زه {s} ښوونځي ته ځم.|I go to school {en}.
+colors|اسمان {s} دی.|The sky is {en}.
+body|زما {s} خوږیږي.|My {en} hurts.
+home|دلته {s} دی.|Here is the {en}.
+work|دا {s} دی.|This is {en}.
+school|دا {s} دی.|This is {en}.
+shopping|دا {s} دی.|This is {en}.
+emotions|زه {s} احساسوم.|I feel {en}.
+verbs|زه هره ورځ {s}.|This means: {en}.
+adjectives|دا کور {s} دی.|The house is {en}.
+
+@words
+hello|السلام علیکم|assalam-o-alaikum
+goodbye|د خدای پامان|de khuday paman
+good morning|سهار مو پخير|sahar mo pakhair
+good evening|ماښام مو پخير|masham mo pakhair
+good night|شپه مو پخير|shpa mo pakhair
+thank you|مننه|manana
+please|مهرباني وکړئ|meharbani wukrrai
+sorry|بخښنه|bakhtana
+excuse me|وبښئ|wobakhai
+yes|هو|haw
+no|نه|na
+welcome|ښه راغلئ|kha raghlai
+how are you|څنګه یې؟|tsanga ye
+my name is|زما نوم دی|zma nawm day||زما نوم احمد دی۔|My name is Ahmad.
+nice to meet you|ستاسو سره لیدنه خوشحالي وه|staso sara leedana khoshali wa
+see you later|بيا به سره ګورو|bya ba sara goro
+good luck|نېکمرغه|nek-margha
+congratulations|مبارک شه|mubarak sha
+help|مرسته|mrasta
+of course|البته|albata
+zero|صفر|sifar||په حساب کې صفر ولیکئ.|Write a zero in the calculation.
+one|یو|yaw
+two|دوه|dwa
+three|درې|dre
+four|څلور|tsalor
+five|پنځه|pinza
+six|شپږ|shpag
+seven|اووه|uwa
+eight|اته|ata
+nine|نهه|naha
+ten|لس|las
+eleven|یولس|yolas
+twelve|دولس|dwolas
+thirteen|دیارس|dyarlas
+fourteen|څوارلس|tswaarlas
+fifteen|پنځلس|pinzlas
+twenty|شل|shal
+thirty|دېرش|dersh
+forty|څلوېښت|tsalwesht
+fifty|پنځوس|pinzos
+hundred|سل|sal
+thousand|زر|zar
+first|لومړی|lumrray||دا لومړی درس دی.|This is the first lesson.
+second|دوهم|daw-hum||دا دوهم کوټه ده.|This is the second room.
+half|نیم|nim||نیم ګیلاس اوبه.|Half a glass of water.
+mother|مور|mor||دا زما مور ده.|This is my mother.
+father|پلار|plar
+brother|ورور|wror
+sister|خور|khor||دا زما خور ده.|This is my sister.
+son|زوی|zoy
+daughter|لور|lor||دا زما لور ده.|This is my daughter.
+child|ماشوم|mashom
+baby|وړوکی ماشوم|wrrokay mashom
+family|کورنۍ|koranai||دا زما کورنۍ ده.|This is my family.
+husband|خاوند|khawand
+wife|ښځه|kha dza||دا زما ښځه ده.|This is my wife.
+uncle|تره|tra
+aunt|ترورې|traray||دا زما ترورې ده.|This is my aunt.
+grandfather|نیکه|nika
+grandmother|نیا|nya||دا زما نیا ده.|This is my grandmother.
+cousin|تره زوی|tra zoy
+nephew|وراره|warara
+friend|ملګری|malgaray
+neighbour|ګاونډی|gawanday
+parent|مور پلار|mor plar||دا زما مور پلار دي.|These are my parents.
+water|اوبه|oba
+bread|ډوډۍ|doddai
+rice|وریځې|wrize
+milk|شیدې|shede
+tea|چای|chay
+sugar|بوره|bora
+salt|مالګه|malga
+egg|هګۍ|hagai
+meat|غوښه|ghwakha
+chicken|چرګ|tsarg
+fish|کب|kab
+apple|مڼه|mana
+banana|کیله|kela
+mango|مڼغوټی|mangotay
+orange (fruit)|مالټه|malta
+grapes|انګور|angor
+lemon|ليمو|limu
+tomato|رومي بانجه|romi banja
+onion|پیاز|pyaz
+potato|کچالو|kachalu
+carrot|زرده|zarda
+oil|غواړه|ghwara
+butter|غوړي|ghwari
+honey|شات|shaat
+juice|جوس|jos
+coffee|کافي|kafi
+soup|شوروا|shorwa
+breakfast|سهارنی|saharnay
+lunch|ماسپښین|maspakheen
+dinner|ماښامنی|mashamnay
+car|موټر|moter
+bus|بس|bus
+train|اورګاډی|awr-gaaday
+airplane|الوتکه|alwataka
+bicycle|بایسکل|bicycle
+road|لار|laar||لار چیرته ده؟|Where is the road?
+street|کوڅه|kotsa||کوڅه چیرته ده؟|Where is the street?
+bridge|پل|pul
+station|سټیشن|station
+airport|هوایي ډګر|hawayi dagar
+ticket|ټکټ|ticket
+map|نقشه|naqsha||نقشه چیرته ده؟|Where is the map?
+city|ښار|khar
+village|کلی|kalay
+country|هیواد|hiwad
+hotel|هوټل|hotel
+journey|سفر|safar
+luggage|سامان|saman
+driver|چلوونکی|chalwunkay
+passport|پاسپورټ|passport
+time|وخت|wakht||وخت ډیر تیز تیریږي.|Time passes very quickly.
+day|ورځ|wradz||په ورځ کې دوه ځله دوا وخورئ.|Take the medicine twice a day.
+night|شپه|shpa||په شپه کې اسمان صفا وي.|The sky is clear at night.
+morning|سهار|sahar
+evening|ماښام|masham
+week|اونۍ|awnai||په اونۍ کې یو ځل بازار ته ځم.|I go to the market once a week.
+month|میاشت|myasht||د میاشتې په پای کې تنخواه راځي.|The salary comes at the end of the month.
+year|کال|kaal||په کال کې څلور موسمونه وي.|Four seasons come in a year.
+hour|ساعت|saat||یو ساعت وړاندې راشئ.|Come one hour earlier.
+minute|دقیقه|daqiqa||پنځه دقیقې انتظار وکړئ.|Wait five minutes.
+today|نن|nan
+tomorrow|سبا|saba
+yesterday|پرون|parun
+now|اوس|os
+later|وروسته|wrosta
+early|وختي|wakhtay
+late|ناوخته|na-wakhta
+always|تل|tal
+sometimes|ځینې وخت|zine wakht
+never|هیڅکله|hets-kala
+color|رنګ|rang||د دې ټوکر رنګ ژور دی.|The color of this cloth is dark.
+red|سور|sur
+blue|ابي|abi
+green|شین|shin
+yellow|ژیړ|zhiarr
+black|تور|tor
+white|سپین|spin
+brown|نصواري|naswari
+grey|خړ|kharr
+pink|ګلابي|gulabi
+purple|بنفش|banafsh
+orange (color)|نارنجي|naranji
+body|بدن|badan||بدن ته آرام ته اړتیا ده.|The body needs rest.
+head|سر|sar
+hair|ویښتان|wikhtan||زما ویښتان تور دي.|My hair is black.
+face|مخ|makh
+eye|سترګه|starga||زما سترګه خوږیږي.|My eye hurts.
+ear|غوږ|ghwag
+nose|پزه|poza||پزه نه ساه واخلئ.|Breathe through the nose.
+mouth|خوله|khula
+tooth|غاښ|ghaash
+tongue|ژبه|zhaba||ژبه خوند احساسوي.|The tongue feels the taste.
+neck|غاړه|gharra||غاړه سیده ونیسئ.|Keep the neck straight.
+shoulder|اوږه|ogha||زما اوږه خوږیږي.|My shoulder hurts.
+hand|لاس|laas
+finger|ګوته|guta||په ګوته اشاره وکړئ.|Point with the finger.
+leg|پښه|pakha||په پښه کې درد دی.|There is pain in the leg.
+foot|پښه (د پښې تل)|pakha-tal
+heart|زړه|zrra
+stomach|خیټه|khaita
+house|کور|kor
+room|کوټه|kota
+door|ور|war
+window|کړکۍ|karrkai
+wall|دیوال|deewal
+roof|چت|chat
+floor|فرش|farsh
+kitchen|پخلنځی|pakhalandzay
+bathroom|تشناب|tashnab
+bed|بستر|bistar
+table|مېز|mez
+chair|څوکۍ|tsokay
+sofa|صوفه|sofa
+lamp|برېښنا|bresna
+key|کیلي|kili
+stairs|زینې|zine
+garden|باغ|bagh
+light|رڼا|rrana
+fan|پنکه|panka
+mirror|هنداره|hindara
+work|کار|kaar
+job|دنده|danda
+office|دفتر|daftar
+money|پیسې|pese
+salary|تنخواه|tankhwa
+meeting|غونډه|ghunda
+boss|رئیس|raees
+employee|ملازم|mulazim
+business|کاروبار|karobar
+company|شرکت|sharikat
+market|بازار|bazaar
+shop|دکان|dukaan
+customer|پیرودونکی|perodunkay
+price|بیه|bya
+farmer|بڼوال|banwal
+doctor|ډاکټر|doctor
+teacher|ښوونکی|showunkay
+police|پولیس|polis
+school|ښوونځی|showunzay
+book|کتاب|kitab
+pen|قلم|qalam
+pencil|پنسل|pencil
+page|مخ|makh
+class|ټولګی|tolgay
+student|زده کوونکی|zda kawunkay
+lesson|درس|dars
+exam|ازموینه|azmoyna
+question|پوښتنه|pokhtana
+answer|ځواب|dzawab
+homework|کورنی کار|koranay kaar
+library|کتابتون|kitabtun
+university|پوهنتون|pohantun
+language|ژبه|zhaba
+word|ويی|way
+sentence|جمله|jumla
+dictionary|قاموس|qamus
+science|ساینس|science
+history|تاریخ|tarik
+knowledge|پوهه|poha
+education|زده کړه|zda krra
+shopping|پیرود|perod||ماښام پیرود ته ځو.|We go shopping in the evening.
+buy|اخستل|akhistal||هغه سابه اخلي.|He is buying vegetables.
+sell|پلورل|ploral||بڼوال په بازار کې مېوې پلوري.|The farmer sells fruit in the market.
+cheap|ارزان|arzan||دا ټوکر ارزان دی.|This cloth is cheap.
+expensive|ګران|gran||موبایل ګران دی.|The mobile is expensive.
+coin|سکه|sika
+note|نوټ|note
+bill|بل|bill
+size|سایز|size
+discount|تخفیف|takhfif
+receipt|رسید|raseed
+bag|کڅوړه|katsorrai
+rupee|روپۍ|ropai
+weigh|تلل (په تله)|tala||دکاندار سابه تله کوي.|The shopkeeper weighs the vegetables.
+pay|تادیه|tadia||د کارت له لارې تادیه وکړئ.|Pay by card.
+happiness|خوشحالي|khoshali
+sadness|خپګان|khapagan
+anger|قهر|qahar
+fear|وېره|wera
+love|مینه|mina
+hope|هیله|hila
+worry|اندېښنه|andekhtana
+surprise|حیراني|hairani
+peace|سوله|sola
+smile|موسکا|moska
+laugh|خندا|khanda
+crying|ژړا|zhara
+mood|مزاج|mizaj
+brave|زړور|zrror||هغه یو زړور هلک دی.|He is a brave boy.
+lonely|یوازې|yawaze||هغه یوازې احساس کوي.|He feels lonely.
+to eat|خورل|khwaral|خورم
+to drink|څښل|tsakal|څښم
+to go|تلل|tlal|ځم
+to come|راتلل|ratalal|راځم
+to see|لیدل|leedal|وینم
+to hear|اوریدل|awredal|اورم
+to speak|وویل|wayal|وایم
+to read|لوستل|lwastal|لولم
+to write|لیکل|likal|لیکم
+to learn|زده کول|zda kawal|زده کوم
+to teach|ښوول|showal|ښوم
+to sleep|ویده کیدل|weda kedal|ویده کیږم
+to wake up|ویښیدل|wakhedal|ویښیږم
+to run|منډه وهل|manda wahal|منډه وهي
+to walk|تګ کول|tag kawal|تګ کوم
+to open|خلاصول|khalasawal|خلاصوم
+to close|تړل|tarrral|تړم
+to give|ورکول|warkawal|ورکوم
+to take|اخيستل|akhistal|اخم
+to make|جوړول|jorawal|جوړوم
+to love|مینه کول|mina kawal|مینه کوم
+to think|سوچول|sochawal|سوچوم
+to understand|پوهیدل|pohedal|پوهیږم
+to work|کار کول|kaar kawal|کار کوم
+to wait|انتظار کول|intizar kawal|انتظار کوم
+big|لوی|loy
+small|وړوکی|wrrokay
+new|نوی|naway
+old|زوړ|zor
+good|ښه|kha
+bad|بد|bad
+beautiful|ښکلی|khkaray
+hot|ګرم|garam||هوا ډیره ګرمه ده.|The weather is very hot.
+cold|یخ|yakh||اوبه یخې دي.|The water is cold.
+fast|تیز|tez
+slow|ورو|wro
+easy|اسانه|asana
+difficult|ګران کار|gran kaar
+long|اوږد|oghd
+short|لنډ|land
+clean|پاک|paak
+dirty|چټل|tsatal
+happy|خوشحال|khoshal||ماشومان ډیر خوشحال دي.|The children are very happy.
+tired|ستړی|straray||زه نن ستړی یم.|I am tired today.
+hungry|وږی|wzhay||ماشوم وږی دی.|The child is hungry.
+
+@phrases
+السلام علیکم!|assalam-o-alaikum|Peace be upon you (hello)!|السلام علیکم!|greeting
+وعلیکم السلام!|wa-alaikum-assalam|And peace upon you!|وعلیکم السلام!|greeting
+سهار مو پخير!|sahar mo pakhair|Good morning!|سهار مو پخير!|greeting
+ماښام مو پخير!|masham mo pakhair|Good evening!|ماښام مو پخير!|greeting
+شپه مو پخير!|shpa mo pakhair|Good night!|شپه مو پخير!|greeting
+د خدای پامان!|de khuday paman|Goodbye!|د خدای پامان!|greeting
+څنګه یې؟|tsanga ye|How are you?|څنګه یې؟|smalltalk
+ښه یم، مننه.|kha yam manana|I am fine, thank you.|ښه یم، مننه۔|smalltalk
+ډیره مننه!|dera manana|Thank you very much!|ډیره مننه!|polite
+کومه ستونزه نشته.|kuma stonza nashta|No problem.|کومه ستونزه نشته۔|polite
+وبښئ.|wobakhai|Please excuse me.|وبښئ۔|polite
+زه بښنه غواړم.|za bakhtana ghwaram|I apologise.|زه بښنه غواړم۔|polite
+ستا نوم څه دی؟|sta nawm tsa day|What is your name?|ستا نوم څه دی؟|smalltalk
+زما نوم نور دی.|zma nawm noor day|My name is Noor.|زما نوم نور دی۔|smalltalk
+ته له کوم ځایه یې؟|ta la kum dzaye ye|Where are you from?|ته له کوم ځایه یې؟|smalltalk
+زه له کندهاره یم.|za la kandahare yam|I am from Kandahar.|زه له کندهاره یم۔|smalltalk
+ایا تاسو انګلیسي پوهیږئ؟|aya tasu anglisi pohigai|Do you understand English?|ایا تاسو انګلیسي پوهیږئ؟|smalltalk
+زه پښتو زده کوم.|za pashto zda kawam|I am learning Pashto.|زه پښتو زده کوم۔|school
+زه ونه پوهیدم.|za wa na pohedam|I did not understand.|زه ونه پوهیدم۔|school
+ورو وایاست.|wro wayast|Please speak slowly.|ورو وایاست۔|polite
+د دې مانا څه ده؟|da de mana tsa da|What does this mean?|د دې مانا څه ده؟|school
+دا په څو دی؟|da pa tso day|How much is this?|دا په څو دی؟|shopping
+ما ته دا پکار دی.|ma ta da pakar day|I need this.|ما ته دا پکار دی۔|shopping
+ایا کوچنی سایز لرئ؟|aya kochanay size lrai|Do you have a smaller size?|ایا کوچنی سایز لرئ؟|shopping
+بل راکړئ، مننه.|bill rakrrai manana|The bill, please.|بل راکړئ، مننه۔|shopping
+زه د کارت تادیه کوم.|za da kaart tadia kawam|I pay by card.|زه د کارت تادیه کوم۔|shopping
+سټیشن چیرته دی؟|station cherta day|Where is the station?|سټیشن چیرته دی؟|travel
+تشناب چیرته دی؟|tashnab cherta day|Where is the toilet?|تشناب چیرته دی؟|travel
+ایا دا بس کابل ته ځي؟|aya da bus kabul ta dzi|Does this bus go to Kabul?|ایا دا بس کابل ته ځي؟|travel
+اورګاډی په کوم وخت ځي؟|awr-gaaday pa kum wakht dzi|When does the train leave?|اورګاډی په کوم وخت ځي؟|travel
+زه لار ورک یم.|za laar wrak yam|I am lost.|زه لار ورک یم۔|travel
+ایا مرسته کولی شئ؟|aya mrasta kawolai shai|Can you help?|ایا مرسته کولی شئ؟|polite
+ما ته ډاکټر پکار دی.|ma ta doctor pakar day|I need a doctor.|ما ته ډاکټر پکار دی۔|health
+زما روغتیا ښه نه ده.|zma roghtia kha na da|I am not well.|زما روغتیا ښه نه ده۔|health
+درملتون چیرته دی؟|drmal-tun cherta day|Where is the pharmacy?|درملتون چیرته دی؟|health
+زما سر خوږیږي.|zma sar khogigai|I have a headache.|زما سر خوږیږي۔|health
+یو پیاله چای، مهرباني.|yaw pyala chay meharbani|One cup of tea, please.|یو پیاله چای، مهرباني۔|food
+مینو راکړئ.|menu rakrrai|Show me the menu.|مینو راکړئ۔|food
+دا ډیر خوندور دی.|da der khundawar day|This is very tasty.|دا ډیر خوندور دی۔|food
+زه غوښه نه خورم.|za ghwakha na khwaram|I don't eat meat.|زه غوښه نه خورم۔|food
+زه وږی یم.|za wzhay yam|I am hungry.|زه وږی یم۔|food
+اوبه یخې دي.|oba yakhe di|The water is cold.|اوبه یخې دي۔|food
+نن هوا ښه ده.|nan hawa kha da|The weather is nice today.|نن هوا ښه ده۔|smalltalk
+زه په دفتر کې کار کوم.|za pa daftar ke kaar kawam|I work in an office.|زه په دفتر کې کار کوم۔|work
+تاسو چیرته کار کوئ؟|tasu cherta kaar kawai|Where do you work?|تاسو چیرته کار کوئ؟|work
+زما تنخواه د میاشتې په پای کې راځي.|zma tankhwa da myashte pa pay ke razi|My salary comes at month end.|زما تنخواه د میاشتې په پای کې راځي۔|work
+سبا زما غونډه ده.|saba zma ghunda da|I have a meeting tomorrow.|سبا زما غونډه ده۔|work
+زه په پوهنتون کې زده کړه کوم.|za pa pohantun ke zda krra kawam|I study at the university.|زه په پوهنتون کې زده کړه کوم۔|school
+ټولګی په کوم وخت پیلیږي؟|tolgay pa kum wakht peligai|When does the class start?|ټولګی په کوم وخت پیلیږي؟|school
+ازموینه اسانه وه.|azmoyna asana wa|The exam was easy.|ازموینه اسانه وه۔|school
+ما ته د کتابونو لوستل خوښیږي.|ma ta da kitabuno lwastal khoshigai|I like reading books.|ما ته د کتابونو لوستل خوښیږي۔|school
+دا ويی نوی دی.|da way naway day|This word is new.|دا ويی نوی دی۔|school
+زه هره ورځ پښتو زده کوم.|za hara wradz pashto zda kawam|I learn Pashto every day.|زه هره ورځ پښتو زده کوم۔|school
+نن دوشنبه ده.|nan doshanba da|Today is Monday.|نن دوشنبه ده۔|time
+څو بجې دي؟|tso baje di|What time is it?|څو بجې دي؟|time
+زه وخت نه لرم.|za wakht na laram|I have no time.|زه وخت نه لرم۔|time
+زه په شپږو بجو راځم.|za pa shpazho bago razam|I come at six.|زه په شپږو بجو راځم۔|time
+د جمعې په ورځ زه فارغ یم.|da jume pa wradz za farigh yam|I am free on Friday.|د جمعې په ورځ زه فارغ یم۔|time
+دا زما مور ده.|da zma mor da|This is my mother.|دا زما مور ده۔|family
+زما پلار ډیر کار کوي.|zma plar der kaar kawee|My father works a lot.|زما پلار ډیر کار کوي۔|family
+زما خور ډاکټره ده.|zma khor docktara da|My sister is a doctor.|زما خور ډاکټره ده۔|family
+زموږ کورنۍ لویه ده.|zmung koranai loya da|Our family is big.|زموږ کورنۍ لویه ده۔|family
+ماشوم په باغ کې لوبې کوي.|mashom pa bagh ke lobe kawee|The child plays in the garden.|ماشوم په باغ کې لوبې کوي۔|family
+زما کور کوچنی دی.|zma kor kochanay day|My house is small.|زما کور کوچنی دی۔|home
+پخلنځی پاک دی.|pakhalandzay paak day|The kitchen is clean.|پخلنځی پاک دی۔|home
+کړکۍ پرانیستې ده.|karrkai pranestai da|The window is open.|کړکۍ پرانیستې ده۔|home
+زه ور تړم.|za war tarrram|I close the door.|زه ور تړم۔|home
+برېښنا ورکه شوه.|bresna wraka sha|The power went out.|برېښنا ورکه شوه۔|home
+زه اوس ویده کیږم.|za os weda kegam|I am going to sleep now.|زه اوس ویده کیږم۔|home
+زما پاسپورټ چیرته دی؟|zma passport cherta day|Where is my passport?|زما پاسپورټ چیرته دی؟|travel
+الوتکه ناوخته ده.|alwataka na-wakhta da|The flight is late.|الوتکه ناوخته ده۔|travel
+سامان ډیر دروند دی.|saman der drond day|The luggage is heavy.|سامان ډیر دروند دی۔|travel
+سفر مو پخير!|safar mo pakhair|Have a good trip!|سفر مو پخير!|travel
+ما ته د دوو شپو کوټه پکار ده.|ma ta da dwo shpo kota pakar da|I need a room for two nights.|ما ته د دوو شپو کوټه پکار ده۔|travel
+مخکې ولاړ شئ.|mukhe walarrai shai|Go straight ahead.|مخکې ولاړ شئ۔|travel
+کیڼ اړخ ته وګرځئ.|keyan arakh ta wogarrzai|Turn left.|کیڼ اړخ ته وګرځئ۔|travel
+بازار چیرته دی؟|bazaar cherta day|Where is the market?|بازار چیرته دی؟|shopping
+بیه ډیره لوړه ده.|bya dera lowra da|The price is too high.|بیه ډیره لوړه ده۔|shopping
+لږ تخفیف راکړئ.|lag takhfif rakrrai|Give a little discount.|لږ تخفیف راکړئ۔|shopping
+زه یوازې ګورم.|za yawaze goram|I am just looking.|زه یوازې ګورم۔|shopping
+رسید راکړئ.|raseed rakrrai|Please give the receipt.|رسید راکړئ۔|shopping
+خوړه وخورئ!|khawra wakhwarai|Enjoy your meal!|خوړه وخورئ!|food
+د خوړو وروسته چای څښو.|da khawro wrosta chay tsakho|We drink tea after the meal.|د خوړو وروسته چای څښو۔|food
+ما ته یخې اوبه راکړئ.|ma ta yakhe oba rakrrai|Give me cold water.|ما ته یخې اوبه راکړئ۔|food
+اندېښنه مه کوئ.|andekhtana ma kawai|Don't worry.|اندېښنه مه کوئ۔|emotion
+زه ستاسو فخر کوم.|za staso fakhr kawam|I am proud of you.|زه ستاسو فخر کوم۔|emotion
+دا اوریدلو خوشحالي ده.|da awredlo khoshali da|I am glad to hear that.|دا اوریدلو خوشحالي ده۔|emotion
+ما ته وېره کیږي.|ma ta wera kegi|I am scared.|ما ته وېره کیږي۔|emotion
+تاسو موندلو ښه شول.|tasu mundlo kha shol|Good to see you.|تاسو موندلو ښه شول۔|smalltalk
+مبارک شه!|mubarak sha|Congratulations!|مبارک شه!|greeting
+ښه راغلئ!|kha raghlai|Welcome!|ښه راغلئ!|greeting
+ژر جوړ شئ!|zhar jorr shai|Get well soon!|ژر جوړ شئ!|health
+یوه شیبه، مهرباني.|yawa sheba meharbani|One moment, please.|یوه شیبه، مهرباني۔|polite
+زه اوس راځم.|za os razam|I'll be right there.|زه اوس راځم۔|smalltalk
+زه نه پوهیږم.|za na pohigam|I don't know.|زه نه پوهیږم۔|smalltalk
+شاید وروسته.|shayad wrosta|Maybe later.|شاید وروسته۔|smalltalk
+زه هوکړه کوم.|za hokrra kawam|I agree.|زه هوکړه کوم۔|smalltalk
+دا سم نه دی.|da sam na day|That is not right.|دا سم نه دی۔|smalltalk
+تاسو نن څه کوئ؟|tasu nan tsa kawai|What are you doing today?|تاسو نن څه کوئ؟|smalltalk
+زه د ازموینې تیاري کوم.|za da azmoine tayyari kawam|I am preparing for the exam.|زه د ازموینې تیاري کوم۔|school
+ما ته مرسته پکار ده.|ma ta mrasta pakar da|I need help.|ما ته مرسته پکار ده۔|polite
+ستاسو د مرستې مننه.|staso da mraste manana|Thank you for your help.|ستاسو د مرستې مننه۔|polite
+دا لومړی ځل دی.|da lumrray dzal day|This is the first time.|دا لومړی ځل دی۔|smalltalk
+پیسې چیرته بدلوم؟|pese cherta badlawam|Where can I exchange money?|پیسې چیرته بدلوم؟|travel
+بس په اتو بجو راځي.|bus pa ato bago razi|The bus comes at eight.|بس په اتو بجو راځي۔|travel
+زما اورګاډی ورک شو.|zma awr-gaaday wrak sho|I missed my train.|زما اورګاډی ورک شو۔|travel
+هوټل ډیر ښه دی.|hotel der kha day|The hotel is very good.|هوټل ډیر ښه دی۔|travel
+ستاسو کار څه دی؟|staso kaar tsa day|What is your work?|ستاسو کار څه دی؟|work
+زه انجنیر یم.|za anjineer yam|I am an engineer.|زه انجنیر یم۔|work
+هغه تل مرسته کوي.|hagha tal mrasta kawee|She always helps.|هغه تل مرسته کوي۔|smalltalk
+موږ یوځای زده کوو|mung yawdzay zdakawoo|We learn together.|موږ یوځای زده کوو۔|school
+زما پښتو ښه کیږي.|zma pashto kha kegi|My Pashto is improving.|زما پښتو ښه کیږي۔|school
+اسمان ابي دی.|asmaan abi day|The sky is blue.|اسمان ابي دی۔|smalltalk
+زما خوښه رنګ شین دی.|zma khwakha rang shin day|My favourite color is green.|زما خوښه رنګ شین دی۔|smalltalk
+سور موټر تیز دی.|sur moter tez day|The red car is fast.|سور موټر تیز دی۔|smalltalk
+شپه سوله ایزه ده.|shpa sola eza da|The night is peaceful.|شپه سوله ایزه ده۔|time
+نن باران اوري.|nan baran awree|It is raining today.|نن باران اوري۔|smalltalk
+لمر راخیژي|lmar rakhigai|The sun is shining.|لمر راخیژي۔|smalltalk
+شاباس!|shabas|Well done!|شاباس!|smalltalk
+تاسو سره لیدنه خوشحالي وه.|tasu sara leedana khoshali wa|Nice to meet you.|تاسو سره لیدنه خوشحالي وه۔|greeting
+بيا به سره وګورو.|bya ba sara wogoro|We will meet again.|بيا به سره وګورو۔|greeting
+وبښئ، څه مو وویل؟|wobakhai tsa mo wawayl|Pardon, what did you say?|وبښئ، څه مو وویل؟|polite
+یو ځل بیا وایاست.|yaw dzal bya wayast|Please say it again.|یو ځل بیا وایاست۔|polite
+توري یې ووایاست.|turi ye wawayast|Please spell it.|توري یې ووایاست۔|school
+ما ته چای ډیره خوښیږي.|ma ta chay dera khoshigai|I love tea.|ما ته چای ډیره خوښیږي۔|food
+خوړه تیار دي.|khawra tayyar di|The food is ready.|خوړه تیار دي۔|food
+په پلیټ کې نورې خوړه واچوئ.|pa plate ke nore khawra waachoo|Put more food on the plate.|په پلیټ کې نورې خوړه واچوئ۔|food
+دا ټوکر ښه دی.|da toker kha day|This cloth is good.|دا ټوکر ښه دی۔|shopping
+دکان بند شو.|dukaan band sho|The shop is closed.|دکان بند شو۔|shopping
+زه هره ورځ بازار ته ځم.|za hara wradz bazaar ta dzam|I go to the market every day.|زه هره ورځ بازار ته ځم۔|shopping
+موټر په لار دی.|moter pa laar day|The car is on the road.|موټر په لار دی۔|travel
+پل ته نژدې وګرځئ.|pul ta nazde wogarrzai|Turn near the bridge.|پل ته نژدې وګرځئ۔|travel
+ښار ډیر لوی دی.|khar der loy day|The city is very big.|ښار ډیر لوی دی۔|travel
+په کلي کې سوله ده.|pa kalay ke sola da|There is peace in the village.|په کلي کې سوله ده۔|travel
+زه زده کوونکی یم.|za zda kawunkay yam|I am a student.|زه زده کوونکی یم۔|school
+هغه ښه ښوونکی دی.|hagha kha showunkay day|He is a good teacher.|هغه ښه ښوونکی دی۔|school
+پوښتنه ګرانه ده.|pokhtana grana da|The question is difficult.|پوښتنه ګرانه ده۔|school
+ځواب سم دی.|dzawab sam day|The answer is correct.|ځواب سم دی۔|school
+کتاب په میز دی.|kitab pa mez day|The book is on the table.|کتاب په میز دی۔|school
+بستر نرم دی.|bistar naram day|The bed is soft.|بستر نرم دی۔|home
+کیلي ورکه شوه.|kili wraka sha|The key is lost.|کیلي ورکه شوه۔|home
+په باغ کې ګلونه دي.|pa bagh ke guluna di|There are flowers in the garden.|په باغ کې ګلونه دي۔|home
+کوټه رڼا ده.|kota rrana da|The room is bright.|کوټه رڼا ده۔|home
+زینې پورته ولاړ شئ.|zine porta walarrai shai|Go up the stairs.|زینې پورته ولاړ شئ۔|home
+
+@grammar
+"کتاب" جنس څه ده؟|مؤنث|مذکر|بې جنسه|1|Pashto nouns ending in "ay/ai" are usually feminine: کتاب/کړکۍ مؤنث دي۔|Nouns ending in "-ay" are usually feminine.
+"ښوونکی" جنس څه ده؟|مذکر|مؤنث|بې جنسه|1|Agent nouns ending in "-ay" for people are masculine: ښوونکی مذکر دی۔|"-ay" agent nouns are masculine.
+"زه ___ یم."|ستړی|ستړې|ستړو|1|A male speaker says "زہ ستړی یم"; the adjective agrees with the speaker.|Adjectives agree with the speaker's gender.
+"تا ___ وکړه؟"|څه|چیرته|کله|1|څه = what.|"Tsa" asks "what".
+"ښوونځی ___ دی؟"|چیرته|څنګه|څومره|1|چیرته = where.|"Cherta" asks "where".
+"کورګۍ ___ ځي؟"|کله|څه|چیرته|1|کله = when.|"Kala" asks "when".
+"ایا" ___ جوړوي.|هو/نه پوښتنه|کومه پوښتنه|منفي|1|ایا makes a yes/no question.|"Aya" starts yes/no questions.
+منفي: "زه ___ نه خورم."|غوښه|غوښه نه|نه غوښه|1|Pashto negates with "na" before the verb.|Negation uses "na" before the verb.
+حرفِ جر "په" ___ لپاره دی.|دننه ځای|اړخ|ویلی|1|په = in/at: په کور کې.|"Pa" means "in/at".
+حرفِ جر "ته" ___ لپاره دی.|خوا ته|دننه|وروسته|1|ته = to/towards: ښوونځي ته.|"Ta" marks direction.
+حرفِ جر "له" ___ لپاره دی.|څخه|خوا ته|پاسه|1|له = from: کندهاره له.|"La" means "from".
+"د ... " ___ ښیي.|ملکیت|وخت|ځای|1|د = of: د کتاب بیه.|"Da" marks possession.
+جمع: "کتاب" → ___|کتابونه|کتابان|کتابونهو|1|Masculine plural takes "-una": کتابونه.|Masculine nouns take "-una".
+جمع: "کوټه" → ___|کوټې|کوټونه|کوټیان|1|Feminine plural takes "-e": کوټې.|Feminine nouns take "-e".
+"دا" ___ لپاره دی.|نژدې|لرې|وخت|1|دا = this (near).|"Da" means "this".
+"هغه" ___ لپاره دی.|لرې|نژدې|وخت|1|هغه = that (far).|"Hagha" means "that".
+"تاسو" ___ لپاره دی.|عزت|عامه|جمع|1|تاسو = respectful you.|"Tasu" is the respectful form.
+"ته" ___ لپاره دی.|عامه|عزت|جمع|1|ته = familiar "you".|"Ta" is the familiar form.
+فعل حال: "زه ___ ."|ځم|ځي|ځو|1|First person singular of تلل is ځم.|"Zam" is "I go".
+فعل: "هغه ___ ."|ځي|ځم|ځو|1|Third person singular: هغه ځي.|"Dzi" is "he/she goes".
+فعل: "موږ ___ ."|ځو|ځم|ځي|1|First person plural: موږ ځو.|"Dzo" is "we go".
+حال استمراري: "زه ___ کوم."|کار|کار کوي|کار کړ|1|Present continuous uses "kawam".|"Kawam" makes the present continuous.
+تیر حال: "هغه ___ ."|ولاړ|ځي|تللی|1|Simple past: هغه ولاړ.|"Walarra" is the simple past.
+راتلونکی: "زه به ___ ."|ځم|ځو|ځي|1|"Ba" + present marks the future.|"Ba" marks the future.
+"کولی شي" ___ ښیي.|صلاحیت|مجبوري|منفي|1|"Kawalai shi" = can.|"Kawalai shi" expresses ability.
+"پکار دی" ___ ښیي.|اړتیا|صلاحیت|خوشي|1|"Pakar day" = need.|"Pakar day" expresses need.
+"خوښیږي" ___ لپاره دی.|خوښه|کرکه|وېره|1|"Khoshigai" = like.|"Khoshigai" means "like".
+"ما سره" ___ ښیي.|ملکیت|ځای|وخت|1|"Ma sara" = I have.|"Ma sara" expresses possession.
+ترتیب: فعل ___ راځي.|وروستي کې|پیل کې|منځ کې|1|Pashto is SOV — the verb is last.|The verb comes at the end.
+صفت ___ مخکې راځي.|د نوم|د فعل|د حرف|1|Adjectives come before the noun: لوی کور.|Adjectives precede the noun.
+"لوی کور" کې "لوی" ___ دی.|صفت|نوم|فعل|1|"Loy" describes "kor".|"Loy" is an adjective.
+پرتله: "دا له هغه ___ دی."|ښه|ښه تر|ښه دی|1|Comparison uses "tar": ښه تر.|Comparison uses "tar".
+تر ټولو: "له ټولو ___"|ښه|ښه تر|ښه دی|1|Superlative: له ټولو ښه.|Superlative = "la tolo kha".
+حرفِ عطف "او" ___ لپاره دی.|جوړول|تضاد|ویلی|1|او = and.|"Aw" means "and".
+"خو" ___ لپاره دی.|تضاد|جوړول|ویلی|1|خو = but.|"Kho" means "but".
+"ځکه چې" ___ ښیي.|ویلی|وخت|ځای|1|ځکه چې = because.|"Dzaka che" gives the reason.
+"که" ___ جوړوي.|شرط|تیر حال|جمع|1|که = if.|"Ka" makes a condition.
+"کله چې" ___ ښیي.|وخت|ځای|ملکیت|1|کله چې = when.|"Kala che" refers to time.
+"تر" ___ ښیي.|حد|پیل|ملکیت|1|تر = until/to.|"Tar" marks the limit.
+"ډیر" ___ دی.|متعلق فعل|نوم|حرف|1|ډیر = very/much.|"Der" is an adverb.
+"لږ" ___ دی.|لږ مقدار|ډیر مقدار|وخت|1|لږ = a little.|"Lag" means "a little".
+"ټول" ___ لپاره دی.|ټول|هیڅ|ځینې|1|ټول = all.|"Tol" means "all".
+"ځینې" ___ لپاره دی.|ځینې|ټول|هیڅ|1|ځینې = some.|"Zine" means "some".
+"هیڅ" ___ لپاره دی.|هیڅ نه|ټول|ځینې|1|هیڅ = none/any.|"Hets" means "none".
+"په ورځ کې" ___ ښیي.|وخت|ځای|ملکیت|1|"Pa wradz ke" = during the day.|"Pa wradz ke" means "during the day".
+"په شپه کې" ___ ښیي.|وخت|ځای|ملکیت|1|"Pa shpa ke" = at night.|"Pa shpa ke" means "at night".
+"سبا" ___ دی.|راتلونکی ورځ|نن|پرون|1|سبا = tomorrow.|"Saba" means "tomorrow".
+"پرون" ___ دی.|تیره ورځ|سبا|نن|1|پرون = yesterday.|"Parun" means "yesterday".
+"اوس" ___ دی.|اوس|وروسته|پخوا|1|اوس = now.|"Os" means "now".
+"تل" ___ دی.|هر وخت|ځینې وخت|هیڅکله|1|تل = always.|"Tal" means "always".
+"مننه" ___ لپاره دی.|مننه|بښنه|ښه راغلاست|1|مننه = thank you.|"Manana" is "thank you".
+"ښه راغلئ" ___ لپاره دی.|ښه راغلاست|رخصتي|مننه|1|ښه راغلئ = welcome.|"Kha raghlai" welcomes a guest.
+"وبښئ" ___ لپاره دی.|بښنه|مننه|خوشي|1|وبښئ = excuse me.|"Wobakhai" asks pardon.
+"هو" ___ دی.|تایید|منفي|پوښتنه|1|هو = yes.|"Haw" means "yes".
+"نه" ___ دی.|منفي|تایید|پوښتنه|1|نه = no.|"Na" means "no".
+
+"زړه" کوم جنس دی؟|مذکر|مؤنث|بې جنسه|1|زړه مذکر دی: زما زړه.|Nouns like "zrra" are masculine.
+"سترګه" کوم جنس دی؟|مؤنث|مذکر|بې جنسه|1|سترګه مؤنث ده: زما سترګه.|Body parts ending in "a" are often feminine.
+"ما ته ___ پکار ده."|کوټه|کوټ|کوټې|1|"Pakar da" agrees with a feminine noun.|The need verb agrees with the noun.
+"ما ته ___ پکار دی."|کتاب|کتابه|کتابې|1|"Pakar day" agrees with a masculine noun.|Masculine nouns take "day".
+"زه به سبا ___ ."|راشم|راځم|راغلم|1|Future with "ba": زه به راشم.|"Ba rasham" is future.
+"که ته راشې، زه خوشحاله یم." کوم جمله ده؟|شرطي|پوښتنه|امري|1|"Ka" + present + result = conditional sentence.|"Ka ... " builds a conditional.
+"ډیر ښه!" ___ دی.|ستاینه|پوښتنه|منفي|1|ډیر ښه = very good (praise).|"Der kha" praises.
+
+@sentences
+زه هره سهار چای څښم.|I drink tea every morning.|زه هره سهار چای څښم۔
+زما ورور جرمني ژبه زده کوي.|My brother is learning German.|زما ورور جرمني ژبه زده کوي۔
+موږ د جمعې په ورځ کابل ته ځو.|We go to Kabul on Friday.|موږ د جمعې په ورځ کابل ته ځو۔
+کتاب په میز پروت دی.|The book lies on the table.|کتاب په میز پروت دی۔
+هغه پرون یو لیک ولیکه.|He wrote a letter yesterday.|هغه پرون یو لیک ولیکه۔
+ایا تاسو مرسته کولی شئ؟|Can you help?|ایا تاسو مرسته کولی شئ؟
+ما ته دوه کافي او یوه اوبه پکار دي.|I need two coffees and a water.|ما ته دوه کافي او یوه اوبه پکار دي۔
+اورګاډی په اتو بجو ځي.|The train leaves at eight.|اورګاډی په اتو بجو ځي۔
+زما مور نن کب پخي کوي.|My mother is cooking fish today.|زما مور نن کب پخي کوي۔
+هغه درې ژبې په اسانۍ وایي.|He speaks three languages easily.|هغه درې ژبې په اسانۍ وایي۔
+زموږ کور کوچنی خو پاک دی.|Our house is small but clean.|زموږ کور کوچنی خو پاک دی۔
+زه پوښتنه په بشپړه توګه نه پوهیدم.|I did not fully understand the question.|زه پوښتنه په بشپړه توګه نه پوهیدم۔
+نن هوا ډیره ښه ده.|The weather is very nice today.|نن هوا ډیره ښه ده۔
+زه سبا وختي پاڅیږم.|I get up early tomorrow.|زه سبا وختي پاڅیږم۔
+هغه په روغتون کې کار کوي.|She works in a hospital.|هغه په روغتون کې کار کوي۔
+موږ د ښوونځي مخې ته ګورو.|We meet in front of the school.|موږ د ښوونځي مخې ته ګورو۔
+هغه خپل موبایل په کور کې هیر کړ.|He forgot his phone at home.|هغه خپل موبایل په کور کې هیر کړ۔
+زه نن دفتر ته نه ځم.|I am not going to the office today.|زه نن دفتر ته نه ځم۔
+ماشومان په باغ کې فوټبال کوي.|The children play football in the garden.|ماشومان په باغ کې فوټبال کوي۔
+ایا تاسو کړکۍ خلاصولی شئ؟|Can you open the window?|ایا تاسو کړکۍ خلاصولی شئ؟
+زه نن ډیر کار لرم.|I have a lot of work today.|زه نن ډیر کار لرم۔
+زما پلار ته د اخبار لوستل خوښیږي.|My father likes reading newspapers.|زما پلار ته د اخبار لوستل خوښیږي۔
+خوړه ریښتیا ډیر خوندور دي.|The food is really tasty.|خوړه ریښتیا ډیر خوندور دي۔
+موږ یو ساعت انتظار کوو.|We have been waiting an hour.|موږ یو ساعت انتظار کوو۔
+زه د خپلې دندې لپاره پښتو زده کوم.|I learn Pashto for my job.|زه د خپلې دندې لپاره پښتو زده کوم۔
+هغه له یوه کوچني ښاره ده.|She is from a small town.|هغه له یوه کوچني ښاره ده۔
+زه له بازاره ډوډۍ او شیدې راوړم.|I bring bread and milk from the market.|زه له بازاره ډوډۍ او شیدې راوړم۔
+هغه په بس دفتر ته ځي.|He goes to the office by bus.|هغه په بس دفتر ته ځي۔
+موږ پرون یوه فلم ولیده.|We watched a film yesterday.|موږ پرون یوه فلم ولیده۔
+زه به ماښام درته پیام واستوم.|I will send you a message this evening.|زه به ماښام درته پیام واستوم۔
+هوټل له سټیشنه ډیر لرې نه دی.|The hotel is not far from the station.|هوټل له سټیشنه ډیر لرې نه دی۔
+زما خور طب زده کوي.|My sister studies medicine.|زما خور طب زده کوي۔
+د اونۍ په پای کې زه وخت نه لرم.|I have no time at the weekend.|د اونۍ په پای کې زه وخت نه لرم۔
+هغه ماښام کافي نه څښي.|He does not drink coffee in the evening.|هغه ماښام کافي نه څښي۔
+موږ ته د کابل دوه ټکټونه پکار دي.|We need two tickets to Kabul.|موږ ته د کابل دوه ټکټونه پکار دي۔
+ازموینه په نهو بجو پیلیږي.|The exam starts at nine.|ازموینه په نهو بجو پیلیږي۔
+زه لږه پښتو او انګلیسي وایم.|I speak a little Pashto and English.|زه لږه پښتو او انګلیسي وایم۔
+زما ملګری د انجنیر په توګه کار کوي.|My friend works as an engineer.|زما ملګری د انجنیر په توګه کار کوي۔
+هغه په پخلنځي کې د مور مرسته کوي.|She helps her mother in the kitchen.|هغه په پخلنځي کې د مور مرسته کوي۔
+زه هره ماښام تګ کوم.|I go for a walk every evening.|زه هره ماښام تګ کوم۔
+
+@listening
+السلام علیکم، تاسو څنګه یئ؟|assalam-o-alaikum tasu tsanga yai|Hello, how are you?|السلام علیکم، تاسو څنګه یئ؟|السلام علیکم، تاسو چیرته یئ؟|سهار مو پخير، تاسو څنګه یئ؟|1
+ما ته یو پیاله چای پکار دی.|ma ta yaw pyala chay pakar day|I need a cup of tea.|ما ته یو پیاله چای پکار دی|ما ته یو پیاله کافي پکار دی|ما ته یو ګیلاس اوبه پکار دي|1
+سټیشن چیرته دی؟|station cherta day|Where is the station?|سټیشن چیرته دی؟|بازار چیرته دی؟|هوټل چیرته دی؟|1
+زه له کندهاره یم.|za la kandahare yam|I am from Kandahar.|زه له کندهاره یم|زه په کندهار کې اوسیږم|زه کندهار ته ځم|1
+بل راکړئ، مننه.|bill rakrrai manana|The bill, please.|بل راکړئ، مننه|مینو راکړئ، مننه|رسید راکړئ، مننه|1
+دا په څو دی؟|da pa tso day|How much is this?|دا په څو دی؟|دا د چا دی؟|دا څه شی دی؟|1
+زه ونه پوهیدم.|za wa na pohedam|I did not understand.|زه ونه پوهیدم|زه ور ونه رسیدم|زه ونه اوریدل|1
+ورو وایاست.|wro wayast|Please speak slowly.|ورو وایاست|لوړ وایاست|نژدې راشئ|1
+زما ورور ډاکټر دی.|zma wror doctor day|My brother is a doctor.|زما ورور ډاکټر دی|زما ورور ښوونکی دی|زما پلار ډاکټر دی|1
+اورګاډی په اتو بجو ځي.|awr-gaaday pa ato bago dzi|The train leaves at eight.|اورګاډی په اتو بجو ځي|بس په اتو بجو ځي|اورګاډی په اتو بجو راځي|1
+زه نن وخت نه لرم.|za nan wakht na laram|I have no time today.|زه نن وخت نه لرم|زه نن پیسې نه لرم|زه نن کار نه لرم|1
+خوړه ډیر خوندور دي.|khawra der khundawar di|The food is very tasty.|خوړه ډیر خوندور دي|هوا ډیره ښه ده|چای ډیر ګرم دی|1
+موږ یوځای پښتو زده کوو|mung yawdzay pashto zda kawoo|We learn Pashto together.|موږ یوځای پښتو زده کوو|موږ یوځای پښتو وایو|موږ یوځای کتاب لولو|1
+ما ته د دوو شپو کوټه پکار ده.|ma ta da dwo shpo kota pakar da|I need a room for two nights.|ما ته د دوو شپو کوټه پکار ده|ما ته د دوو کسانو میز پکار دی|ما ته د یوې شپې کوټه پکار ده|1
+زما مور نن کب پخي کوي.|zma mor nan kab pakhi kawee|My mother cooks fish today.|زما مور نن کب پخي کوي|زما مور نن کب راوړي|زما پلار نن کب پخي کوي|1
+زه هره ماښام تګ کوم.|za hara masham tag kawam|I walk every evening.|زه هره ماښام تګ کوم|زه هره سهار تګ کوم|زه هره ماښام ویده کیږم|1
+ایا کوچنی سایز لرئ؟|aya kochanay size lrai|Do you have a smaller size?|ایا کوچنی سایز لرئ؟|ایا لوی سایز لرئ؟|ایا بل رنګ لرئ؟|1
+زه د کارت تادیه کوم.|za da kaart tadia kawam|I pay by card.|زه د کارت تادیه کوم|زه نقد تادیه کوم|زه سبا تادیه کوم|1
+زه ډیر بښنه غواړم.|za der bakhtana ghwaram|I am very sorry.|زه ډیر بښنه غواړم|زه ډیر خوشحاله یم|زه ډیر ویره لرم|1
+زه به سبا درته زنګ ووهه.|za ba saba drta zang wawaha|I will call you tomorrow.|زه به سبا درته زنګ ووهه|زه به نن درته زنګ ووهه|زه به سبا درته درسیږم|1
+
+@stories
+کندهار ته لومړی سفر|🚆|احمد سهار کندهار ته ورسید.\nهغه ټیکسي سره ___ (1) ته ولاړ.\nپه کوټه کې یې ___ (2) وڅښله.\nبیا یې خپلې ___ (3) ته زنګ ووهه.|Ahmad reaches Kandahar in the morning. He goes by taxi to the hotel. In the room he drinks tea. Then he calls his family.|هوټل/سټیشن/بازار=0;چای/کتاب/ډوډۍ=0;مور/دکان/ټولګي=0
+په بازار کې پیرود|🛒|سارا د جمعې په ورځ ___ (1) ته ولاړه.\nهغې ډوډۍ، شیدې او ___ (2) واخیستل.\nتادیه یې ___ (3) وکړه.|Sara goes shopping on Friday. She buys bread, milk and apples. She pays by card.|بازار/ښوونځي/دفتر=0;مڼې/کتابونه/څوکۍ=0;د کارت/کاغذ/اوبو=0
+ورک شوی پاسپورټ|🛂|احمد خپل ___ (1) لټاوه.\nهغه له یوه ___ (2) څخه مرسته وغوښته.\nخوشبختانه هغه په خپله ___ (3) کې وموندل شو.|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is found in his bag.|پاسپورټ/کیلي/کتاب=0;پولیس/ښوونکي/ګاونډي=0;کڅوړه/پخلنځي/ښوونځي=0
+ډاکټر ته تلل|🏥|د بلال روغتیا ___ (1) وه.\nهغه ___ (2) ته ولاړ.\nډاکټر ورته درمل او ___ (3) ورکړ.|Bilal is unwell. He goes to the doctor. The doctor gives medicine and rest.|خرابه/ښه/وږی=0;ډاکټر/بیکر/چلوونکي=0;آرام/پیسې/کتابونه=0
+د پښتو ټولګی|📚|نادیې درې میاشتې کیږي ___ (1) زده کوي.\nهغه هره ماښام ___ (2) سره مشق کوي.\nد هغې ___ (3) وایي هغه ښه وایي.|Nadia has been learning Pashto for three months. She practises every evening with books. Her teacher says she speaks well.|پښتو/فرانسوي/عربي=0;کتابونو/انځورونو/کارډونو=0;ښوونکی/ورور/ګاونډی=0
+د کورنۍ خواړه|👨‍👩‍👧‍👦|د جمعې په ورځ ټوله ___ (1) راغله.\nنیا ___ (2) وپخول.\nټولو یوځای وخوړل او ډیره ___ (3) یې وکړه.|On Friday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|کورنۍ/دفتر/ټولګی=0;وریځې/اوبه/کاغذ=0;خندا/کار/ویده=0
+په سټیشن کې|🚉|اورګاډی لس دقیقې ___ (1) و.\nحسن دکان ته ___ (2) واخیسته.\nبیا هغه ___ (3) کې کښیناست.|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|ناوخته/پاک/تیار=0;اخبار/رسید/کیلي=0;اورګاډي/بس/الوتکې=0
+د ژمي شپه|❄️|په جنوري کې هوا ډیره ___ (1) وي.\nعایشې ګرم ___ (2) واغوست.\nهغې ګرم ___ (3) وڅښله او کتاب یې ولوست.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|یخ/ګرم/باراني=0;کوټ/کمیس/بوټان=0;چای/اوبه/جوس=0
+په هوټل کې خوړه|🍽️|خادم ___ (1) راوړ.\nعمر کب او ___ (2) وغوښتل.\nپه پای کې یې ___ (3) وغوښته.|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|مینو/څوکۍ/رڼا=0;وریځې/میز/کړکۍ=0;بل/کیلي/رسید=0
+نوي ملګري|🤝|لینا او ثنا په ___ (1) کې وکتل.\nدوی د موسیقۍ او ___ (2) خبرې وکړې.\nپه پای کې دوی خپل ___ (3) بدل کړل.|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|باغ/دفتر/اورګاډي=0;سفر/رسیدونو/ازموینو=0;شمیرې/پتې/کتابونه=0
+
+@idioms
+د سترګو توری|da stargo toray|The apple of one's eye.|د سترګو توری|د هغه زوی د هغه د سترګو توری دی۔
+په زړه لاس ایښودل|pa zrra laas ekhawdal|To speak honestly.|په رښتیا ویل|په زړه لاس کیږده او رښتیا ووایه۔
+پزه کې وینې راوستل|poza ke wine rawastal|To annoy someone badly.|ډیر تنګول|ماشومانو یې پزه کې وینې راوستلې۔
+لاسونه پریوتل|laasuna preyautal|To give up.|ماتې منل|د ستونزې په لیدو یې لاسونه پریوتل۔
+سترګې پټول|starge patool|To ignore the obvious.|سترګې پټول|نښه ستا مخې ته ده، سترګې مه پټوه۔
+ځان لوړول|dzan lorawal|To show off.|ځان ښودل|هغه تل خپل ځان لوړوي۔
+اسمان سر ته پورته کول|asmaan sar ta porta kawal|To make a huge fuss.|ډیر شور جوړول|د کوچنۍ خبرې لپاره یې اسمان سر ته پورته کړ۔
+د وریځو دال|da wrizo daal|Something suspicious.|شکمن حالت|دا معامله صفا نه ده، د وریځو په دال کې تور شی دی۔
+له لاسه وتل|la laasa watal|To lose control.|قابو له لاسه وتل|حالت له لاسه ووتل۔
+وخت په لاس کې نیول|wakht pa laas ke neewal|To use time wisely.|وخت ضایع نه کول|وخت په لاس کې ونیسه، دا بیرته نه راځي۔
+زړه خلاصول|zrra khalasawal|To speak one's mind.|زړه خلاصول|خپل زړه خلاص کړه، مه ډاریږه۔
+د کور کنډوالې|da kor kundwale|A ruined household.|ویجاړ شوی کور|سیلاب د کلیو کور کنډوالې کړل۔
+اوبه اوبه کیدل|oba oba kedal|To be deeply ashamed.|شرمیدل|د ټولو په مخ کې اوبه اوبه شو۔
+له خولې وتلی لفظ|la khule watlay lafz|A spoken promise must be kept.|ویل شوی ژمنه|له خولې وتلی لفظ بیرته نه اخیستل کیږي۔
+د ناک خبره|da naak khaba|A matter of honour.|عزت خبره|اوس دا د ناک خبره ده۔
+کنګری ورچول|kangre warchawal|To give someone a hard lesson.|سخت درس ورکول|ښوونکي شرارتي ماشوم ته کنګری ورچولې۔
+ځان ټول ورکول|dzan tol warkawal|To put in full effort.|پوره زحمت کول|هغه د ازموینې لپاره ځان ټول ورکړ۔
+د سترګو توری کیدل|da stargo toray kedal|To become someone's favourite.|د هر چا پیارا کیدل|هغه د خپل ښوونکي د سترګو توری شو۔
+زړه لوی نیول|zrra loy neewal|To be generous and open.|د زړه لویوالی|د هغه زړه لوی دی، له چا سره کینه نه لري۔
+وخت د سترګو په رپ کې|wakht da stargo pa rap ke|In the blink of an eye.|ډیر ژر|وخت د سترګو په رپ کې تیر شو۔
+قیمتي اوښکې تویول|qeemati okhke toyawal|To cry bitterly.|ډیر ژړل|د ناکامۍ وروسته یې قیمتي اوښکې تویې کړې۔
+د زړه سخت|da zrra sakht|Hard-hearted.|سخت زړه|د زړه سخت سړی د چا غږ نه اوري۔
+صفا زړه|safa zrra|Pure-hearted.|صفا دل|هغه صفا زړه انسان دی، کینه نه ساتي۔
+په خپله پښه ټکر وهل|pa khpala pakha ttakar wahal|To harm oneself.|ځان ته زیان رسول|درغلي یې په خپله پښه ټکر ووهه۔
+د خولې خوږه|da khule khwakha|Sweet-talker.|خوږه ژبه|د خولې خوږه سړی ژر باوري نه کیږي۔
+
+@alphabet
+ا|alif|alif|اوبه
+ب|be|be|باغ
+پ|pe|pe|پل
+ت|te|te|تور
+ټ|tte|tte|ټوکر
+ث|se|se|ثابت
+ج|jim|jim|جسم
+ځ|dze|dze|ځواب
+چ|che|che|چای
+څ|tse|tse|څلور
+ح|he|hhe|حکیم
+خ|khe|khe|خبر
+د|daal|daal|دری
+ډ|dda|dda|ډوډۍ
+ذ|zhe|zhe|ذکر
+ر|re|re|رنګ
+ړ|rra|rra|لومړی
+ز|ze|ze|زړه
+ژ|zhe-big|zhe-big|ژبه
+ږ|zhge|zhge|ږیره
+س|sin|sin|سهار
+ش|shin|shin|شپه
+ښ|xe|xe|ښوونځی
+ص|suad|suad|صابن
+ض|zuad|zuad|ضرورت
+ط|toe|toe|طریق
+ظ|zoe|zoe|ظالم
+ع|ain|ain|عید
+غ|ghain|ghain|غوا
+ف|fe|fe|فرش
+ق|qaaf|qaaf|قیمت
+ک|kaaf|kaaf|کور
+ګ|gaaf|gaaf|ګوته
+ل|laam|laam|لاس
+م|mim|mim|مور
+ن|nun|nun|نن
+ڼ|nne|nne|ڼا
+و|wao|wao|ورځ
+ه|he|he|هوا
+ی|ye|ye|یو
+ې|ye-long|ye-long|لومړې
+ۍ|ye-round|ye-round|کړکۍ

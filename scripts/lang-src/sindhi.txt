@@ -1,0 +1,694 @@
+# Sindhi (سنڌي) — authored source for data/langs/sindhi.json
+# Extended Arabic script, RTL. Romanization: a, aa, i, ee, u, oo, e, ai, o, au;
+# implosives marked ' (ڀ ڏ ڊ ڳ ڱ), kh, gh, ch, sh, th, dh, rr, nn, n.
+
+@info
+romanization|Roman Sindhi: a, aa, i, ee, u, oo, e, ai, o, au; implosives with an apostrophe (b', d', g'); kh, gh, ch, sh, th, dh, rr, nn.
+alphabet.title|سنڌي اکر
+alphabet.intro|سنڌي ۵۲ اکرن واري لپي آهي ۽ ساڄي کان کاٻي لکي ويندي آهي.
+
+@frames
+greetings|چئو: {s}.|Say: {en}.
+numbers|مون وٽ {s} صوف آهن.|I have {en} apples.
+family|هي {s} آهي.|This is my {en}.
+food|مون کي {s} وڻندو آهي.|I like {en}.
+travel|{s} ڪٿي آهي؟|Where is the {en}?
+time|آئون {s} اسڪول ويندو آهيان.|I go to school {en}.
+colors|آسمان {s} آهي.|The sky is {en}.
+body|منهنجو {s} ڏکي ٿو.|My {en} hurts.
+home|هتي {s} آهي.|Here is the {en}.
+work|هي {s} آهي.|This is {en}.
+school|هي {s} آهي.|This is {en}.
+shopping|هي {s} آهي.|This is {en}.
+emotions|آئون {s} محسوس ڪندو آهيان.|I feel {en}.
+verbs|آئون روزانو {s}.|This means: {en}.
+adjectives|هي گهر {s} آهي.|The house is {en}.
+
+@words
+hello|سلام|salaam
+goodbye|الله حافظ|allah hafiz
+good morning|صبح بخير|subah bakhair
+good evening|شام بخير|shaam bakhair
+good night|رات بخير|raat bakhair
+thank you|مهرباني|meharbani
+please|مهرباني ڪري|meharbani kare
+sorry|معافي|mu'aafi
+excuse me|ٻڌو|budho
+yes|ها|ha
+no|نه|na
+welcome|ڀلي ڪري آيا|bhale kari aya
+how are you|توهان ڪيئن آهيو؟|tohann kiyann aahyo
+my name is|منهنجو نالو آهي|munjo nalo aahe||منهنجو نالو اسلم آهي.|My name is Aslam.
+nice to meet you|توهان سان ملي خوشي ٿي|tohaan saan male khushi thi
+see you later|وري ملنداسين|wari milandaaseen
+good luck|سٺي قسمت|saththee qismat
+congratulations|مبارڪ هجي|mubarak huje
+help|مدد|madad
+of course|ضرور|zaroor
+zero|ٻڙي|barree||حساب ۾ ٻڙي لکو.|Write a zero in the calculation.
+one|هڪ|hik
+two|ٻه|bah
+three|ٽي|tte
+four|چار|chaar
+five|پنج|panj
+six|ڇه|chhah
+seven|ست|sat
+eight|اٺ|ath
+nine|نو|nau
+ten|ڏه|dah
+eleven|يارهن|yarah
+twelve|ٻارهن|barah
+thirteen|تيرهن|terah
+fourteen|چوڏهن|chaudah
+fifteen|پندره|pandrah
+twenty|ويھ|vaih
+thirty|ٽيه|teeh
+forty|چاليه|chaleeh
+fifty|پنجيه|panjeeh
+hundred|سو|sau
+thousand|هزار|hazaar
+first|پهريون|pahriyon||هي پهريون سبق آهي.|This is the first lesson.
+second|ٻيون|biyon||هي ٻيون ڪمرو آهي.|This is the second room.
+half|اڌ|adh||اڌ گلاس پاڻي.|Half a glass of water.
+mother|ماءُ|maau
+father|پيءُ|piu
+brother|ڀاءُ|bhau
+sister|ڀيڻ|bhen
+son|پٽ|putt
+daughter|نياڻي|niyaanee
+child|ٻار|baar
+baby|ٻارڙو|baarraro
+family|خاندان|khaandaan
+husband|مڙس|marras
+wife|زال|zaal
+uncle|چاچو|chaacho
+aunt|چاچي|chaachee
+grandfather|ڏاڏو|ddaaddo
+grandmother|ڏاڏي|ddaaddee
+cousin|سئوٽ|seott
+nephew|ڀائٽيو|bhaitiyo
+friend|دوست|dost
+neighbour|پاڙيسري|paarriseri
+parent|ماءُ پيءُ|maau piu
+water|پاڻي|paanee
+bread|ماني|manee
+rice|چانور|chaanor
+milk|کير|kheer
+tea|چانهه|chaanh
+sugar|کنڊ|khand
+salt|لوڻ|loon
+egg|آنا|aano
+meat|گوشت|gosht
+chicken|ڪڪڙ|kukarr
+fish|مڇي|machhee
+apple|صوف|soof
+banana|ڪيلو|kelo
+mango|انب|amb
+orange (fruit)|نارنگي|naarangee
+grapes|انگور|angoor
+lemon|ليمو|lemu
+tomato|ٽماٽي|tamatai
+onion|پياز|pyaaz
+potato|الو|aloo
+carrot|گاجرو|gajro
+oil|تيل|tel
+butter|مکڻ|makkan
+honey|ماکي|maakhee
+juice|رس|ras
+coffee|ڪافي|kaafi
+soup|شوربو|shorbo
+breakfast|ناشتو|naashto
+lunch|منجهند جو مڙهه|munjhand jo merrah
+dinner|رات جو مڙهه|raat jo merrah
+car|گڏي|gaddi
+bus|بس|bus
+train|ريل|rail
+airplane|جهاز|jahaaz
+bicycle|سائيڪل|cycle
+road|رستو|rasto
+street|گهٽي|ghatti
+bridge|پل|pul
+station|اسٽيشن|station
+airport|هوائي اڏو|hawai addo
+ticket|ٽڪيٽ|ticket
+map|نقشو|naqsho
+city|شهر|shehar
+village|ڳوٺ|goth
+country|ملڪ|mulk
+hotel|هوٽل|hotel
+journey|سفر|safar
+luggage|سامان|samaan
+driver|ڊرائيور|driver
+passport|پاسپورٽ|passport
+time|وقت|waqt||وقت ڏاڍي تيزي سان گذري ٿو.|Time passes very quickly.
+day|ڏينهن|dinhan||ڏينهن ۾ ٻه ڀيرا دوا کائو.|Take the medicine twice a day.
+night|رات|raat||رات آسمان صاف هوندو آهي.|The sky is clear at night.
+morning|صبح|subah
+evening|شام|shaam
+week|هفتو|hafto||هفتي ۾ هڪ ڀيرو بازار ويندو آهيان.|I go to the market once a week.
+month|مهينو|meeno||مهيني جي آخر ۾ پگهار اچي ٿي.|The salary comes at the end of the month.
+year|سال|saal||سال ۾ چار موسم اچن ٿا.|Four seasons come in a year.
+hour|ڪلاڪ|klok||هڪ ڪلاڪ اڳ اچو.|Come one hour early.
+minute|منٽ|mint||پنج منٽ ترسو.|Wait five minutes.
+today|اڄ|aj
+tomorrow|سڀاڻي|sabhane
+yesterday|ڪالهه|kalah
+now|هاڻي|haanee
+later|پوءِ|poe
+early|سوير|saver
+late|دير|der
+always|هميشه|hamesha
+sometimes|ڪڏهن ڪڏهن|kadhan kadhan
+never|ڪڏهن به نه|kadhan bhe na
+color|رنگ|rang||هن ڪپڙي جو رنگ گهرو آهي.|The color of this cloth is dark.
+red|ڳاڙهو|gaarro
+blue|نيرو|nero
+green|سائو|saavo
+yellow|پيلو|pelo
+black|ڪارو|kaaro
+white|اڇو|achho
+brown|ناسي|naasee
+grey|ڀورو|bhoro
+pink|گلابي|gulabi
+purple|واڱڻائي|wanganai
+orange (color)|نارنگي رنگ|naarangee rang
+body|جسم|jism||جسم کي آرام جي ضرورت آهي.|The body needs rest.
+head|مٿو|matho
+hair|وار|vaar||منهنجا وار ڪارا آهن.|My hair is black.
+face|منهن|munhan
+eye|اک|akh||منهنجي اک ڏکي ٿي.|My eye hurts.
+ear|ڪن|kann
+nose|نڪ|nuk||نڪ سان ساهه کڻو.|Breathe through the nose.
+mouth|وات|waat
+tooth|ڏند|dand
+tongue|ٻولي|bolee||ٻولي سان ذائقو محسوس ٿيندو آهي.|The tongue feels the taste.
+neck|ڳيچي|gechee||ڳيچي سڌي رکو.|Keep the neck straight.
+shoulder|ڪلهو|kulho
+hand|هٿ|hath
+finger|آڱر|aangar||آڱر سان اشارو ڪريو.|Point with the finger.
+leg|ڄنگ|jang||ڄنگ ۾ سور آهي.|There is pain in the leg.
+foot|پير|per
+heart|دل|dil
+stomach|پيٽ|pet
+house|گهر|ghar
+room|ڪمرو|kamro
+door|دروازو|darwaazo
+window|دري|darree
+wall|ڀت|bhitt
+roof|ڇت|chhatt
+floor|فرش|farsh
+kitchen|رسوئي|rasoi
+bathroom|غسل خانو|ghusal khaano
+bed|بسترو|bistro
+table|ميز|mez
+chair|ڪرسي|kursee
+sofa|صوفو|sofo
+lamp|بتي|batti
+key|ڪنجي|kunji
+stairs|ڏاڪا|ddaaka
+garden|باغ|baagh
+light|روشني|roshni
+fan|پنکو|panko
+mirror|آئينو|aaino
+work|ڪم|kamm
+job|نوکري|naukree
+office|آفيس|office
+money|پئسا|pesa
+salary|پگهار|paghaar
+meeting|ميٽنگ|meeting
+boss|باس|baas
+employee|ملازم|mulazim
+business|ڪاروبار|karobar
+company|ڪمپني|company
+market|بازار|bazaar
+shop|دڪان|dukaan
+customer|گراهڪ|graahak
+price|اگهه|agg
+farmer|هاري|haari
+doctor|ڊاڪٽر|doctor
+teacher|استاد|ustaad
+police|پوليس|police
+school|اسڪول|school
+book|ڪتاب|kitaab
+pen|قلم|qalam
+pencil|پينسل|pencil
+page|صفحو|safo
+class|ڪلاس|class
+student|شاگرد|shagird
+lesson|سبق|sabaq
+exam|امتحان|imtahaan
+question|سوال|sawaal
+answer|جواب|jawaab
+homework|گهر جو ڪم|ghar jo kamm
+library|لائبريري|library
+university|يونيورسٽي|university
+language|ٻولي|bolee
+word|لفظ|lafz
+sentence|جملو|jumlo
+dictionary|لغت|lughaat
+science|سائنس|science
+history|تاريخ|tareekh
+knowledge|ڄاڻ|jaann
+education|تعليم|taleem
+shopping|خريداري|kharidaaree||شام خريداري ڪرڻي آهي.|We have to go shopping in the evening.
+buy|خريد ڪرڻ|khareed karan||هو سبزي خريد ڪري ٿو.|He is buying vegetables.
+sell|وڪرو ڪرڻ|vikro karan||هاري بازار ۾ ميون جو وڪرو ڪري ٿو.|The farmer sells fruit in the market.
+cheap|سستو|sasto||هي ڪپڙو سستو آهي.|This cloth is cheap.
+expensive|مهانگو|mahaango||موبائل مهانگو آهي.|The mobile is expensive.
+coin|سڪو|siko
+note|نوٽ|note
+bill|بل|bill
+size|ماپ|maap
+discount|رعايت|riyaayat
+receipt|رسيد|raseed
+bag|ٿيلهو|thelhu
+rupee|روپيو|rupiyo
+weigh|تورڻ|torran||دڪاندار سبزي توري ٿو.|The shopkeeper weighs the vegetables.
+pay|ادائگي|adaaygee||ڪارڊ سان ادائگي ڪريو.|Pay by card.
+happiness|خوشي|khushi
+sadness|ڏک|dukh
+anger|ڪاوڙ|kaarr
+fear|ڊپ|dapp
+love|پيار|pyaar
+hope|اميد|umeed
+worry|فڪر|fikar
+surprise|حيراني|hairaanee
+peace|سڪون|sukoon
+smile|مرڪ|murrak
+laugh|کل|khil
+crying|روڄ|roj
+mood|مزاج|mizaaj
+brave|بهادر|bahadur||هو هڪ بهادر ڇوڪرو آهي.|He is a brave boy.
+lonely|اڪيلو|akelo||هو اڪيلو محسوس ڪري ٿو.|He feels lonely.
+to eat|کائڻ|khain|کائيندو آهيان
+to drink|پيئڻ|piyan|پيندو آهيان
+to go|وڃڻ|wajan|ويندو آهيان
+to come|اچڻ|achan|ايندو آهيان
+to see|ڏسڻ|dasan|ڏسندو آهيان
+to hear|ٻڌڻ|budhan|ٻڌندو آهيان
+to speak|ڳالهائڻ|galhain|ڳالهائيندو آهيان
+to read|پڙهڻ|parhan|پڙهندو آهيان
+to write|لکڻ|likhan|لکندو آهيان
+to learn|سکڻ|sukhan|سکندو آهيان
+to teach|سيکارڻ|sekharan|سيکاريندو آهيان
+to sleep|سمهڻ|sumhan|سمهندو آهيان
+to wake up|جاڳڻ|jagan|جاڳندو آهيان
+to run|ڊوڙڻ|daurran|ڊوڙندو آهيان
+to walk|هلڻ|hulan|هلندو آهيان
+to open|کولڻ|kholan|کوليندو آهيان
+to close|بند ڪرڻ|band karan|بند ڪندو آهيان
+to give|ڏيڻ|dyan|ڏيندو آهيان
+to take|وٺڻ|wathan|وٺندو آهيان
+to make|ٺاهڻ|thahan|ٺاهيندو آهيان
+to love|چاهڻ|chahan|چاهيندو آهيان
+to think|سوچڻ|sochan|سوچيندو آهيان
+to understand|سمجهڻ|samjhan|سمجهندو آهيان
+to work|ڪم ڪرڻ|kamm karan|ڪم ڪندو آهيان
+to wait|انتظار ڪرڻ|intazaar karan|انتظار ڪندو آهيان
+big|وڏو|vaddo
+small|ننڍو|nandho
+new|نئون|nauon
+old|پراڻو|purano
+good|سٺو|sathho
+bad|خراب|kharaab
+beautiful|سهڻو|suhano
+hot|گرم|garam||موسم ڏاڍو گرم آهي.|The weather is very hot.
+cold|ٿڌو|thadho||پاڻي ٿڌو آهي.|The water is cold.
+fast|تيز|tez
+slow|سست|sust
+easy|سولو|solo
+difficult|ڏکيو|dukhiyo
+long|ڊگهو|digho
+short|ننڍو قد|nandho qad
+clean|صاف|saaf
+dirty|گندو|gando
+happy|خوش|khush||ٻار ڏاڍا خوش آهن.|The children are very happy.
+tired|ٿڪل|thukal||آئون اڄ ٿڪل آهيان.|I am tired today.
+hungry|بکيو|bukhiyo||ٻار بکيو آهي.|The child is hungry.
+
+@phrases
+سلام!|salaam|Hello!|سلام!|greeting
+الله حافظ!|allah hafiz|Goodbye!|الله حافظ!|greeting
+صبح بخير!|subah bakhair|Good morning!|صبح بخير!|greeting
+شام بخير!|shaam bakhair|Good evening!|شام بخير!|greeting
+رات بخير!|raat bakhair|Good night!|رات بخير!|greeting
+توهان ڪيئن آهيو؟|tohann kiyann aahyo|How are you? (respectful)|توهان ڪيئن آهيو؟|smalltalk
+مان ٹھيڪ آهيان، مهرباني.|maan theek aahiyaan meharbani|I am fine, thank you.|مان ٹھيڪ آهيان، مهرباني۔|smalltalk
+ڏاڍي مهرباني!|ddaaddhee meharbani|Thank you very much!|ڏاڍي مهرباني!|polite
+ڪا ڳالهه ناهي.|ka galh naahee|No problem.|ڪا ڳالهه ناهي۔|polite
+معافي.|mu'aafi|Please excuse me.|معافي۔|polite
+مون کي افسوس آهي.|moon khe afsos aahe|I am sorry.|مون کي افسوس آهي۔|polite
+توهان جو نالو ڇا آهي؟|tohaan jo nalo chha aahe|What is your name?|توهان جو نالو ڇا آهي؟|smalltalk
+منهنجو نالو زيب آهي.|munjo nalo zeb aahe|My name is Zeb.|منهنجو نالو زيب آهي۔|smalltalk
+توهان ڪٿان آهيو؟|tohann kitthaan aahyo|Where are you from?|توهان ڪٿان آهيو؟|smalltalk
+مان حيدرآباد کان آهيان.|maan hyderabad khaan aahiyaan|I am from Hyderabad.|مان حيدرآباد کان آهيان۔|smalltalk
+ڇا توهان انگريزي ڳالهائيندا آهيو؟|chha tohaan angrezi galhainda aahyo|Do you speak English?|ڇا توهان انگريزي ڳالهائيندا آهيو؟|smalltalk
+مون کي سنڌي سکڻي آهي.|moon khe sindhee sukhanee aahe|I want to learn Sindhi.|مون کي سنڌي سکڻي آهي۔|school
+مان نه سمجهيس.|maan na samjhis|I did not understand.|مان نه سمجهيس۔|school
+آهستي ڳالهايو.|aahistee galhaayo|Please speak slowly.|آهستي ڳالهايو۔|polite
+ان جو مطلب ڇا آهي؟|un jo matlab chha aahe|What does that mean?|ان جو مطلب ڇا آهي؟|school
+هي ڪيتري جو آهي؟|hee kitree jo aahe|How much is this?|هي ڪيتري جو آهي؟|shopping
+مون کي هي کپي.|moon khe hee khape|I want this.|مون کي هي کپي۔|shopping
+ڇا توهان وٽ ننڍي ماپ آهي؟|chha tohaan vatt nandhee maap aahe|Do you have a smaller size?|ڇا توهان وٽ ننڍي ماپ آهي؟|shopping
+بل آڻيو، مهرباني.|bill aaniyo meharbani|The bill, please.|بل آڻيو، مهرباني۔|shopping
+مان ڪارڊ سان ادائگي ڪندس.|maan card saan adaaygee kandus|I will pay by card.|مان ڪارڊ سان ادائگي ڪندس۔|shopping
+اسٽيشن ڪٿي آهي؟|station kitthee aahe|Where is the station?|اسٽيشن ڪٿي آهي؟|travel
+واش روم ڪٿي آهي؟|washroom kitthee aahe|Where is the washroom?|واش روم ڪٿي آهي؟|travel
+ڇا هي بس سکر ويندي آهي؟|chha hee bus sakkar vandee aahe|Does this bus go to Sukkur?|ڇا هي بس سکر ويندي آهي؟|travel
+ريل ڪهڙي وقت هلي ٿي؟|rail kehree waqt halee thee|When does the train leave?|ريل ڪهڙي وقت هلي ٿي؟|travel
+مان رستو وساري ويٺس.|maan rasto visaaree vethas|I have lost my way.|مان رستو وساري ويٺس۔|travel
+ڇا توهان مدد ڪري سگهو ٿا؟|chha tohaan madad kare sagho tha|Can you help?|ڇا توهان مدد ڪري سگهو ٿا؟|polite
+مون کي ڊاڪٽر کپي.|moon khe doctor khape|I need a doctor.|مون کي ڊاڪٽر کپي۔|health
+منهنجي طبيعت ٹھيڪ ناهي.|munjee tabiyat theek naahee|I am not feeling well.|منهنجي طبيعت ٹھيڪ ناهي۔|health
+دوا خانو ڪٿي آهي؟|dawa khaano kitthee aahe|Where is the pharmacy?|دوا خانو ڪٿي آهي؟|health
+منهنجي مٿي ۾ سور آهي.|munjee mathee mein sor aahe|I have a headache.|منهنجي مٿي ۾ سور آهي۔|health
+هڪ پيالو چانهه، مهرباني.|hik pyalo chaanh meharbani|One cup of tea, please.|هڪ پيالو چانهه، مهرباني۔|food
+مينيو ڏيکاريو.|menu dekharyo|Show me the menu.|مينيو ڏيکاريو۔|food
+هي ڏاڍو مزيدار آهي.|hee ddaaddho mazedaar aahe|This is very tasty.|هي ڏاڍو مزيدار آهي۔|food
+مان گوشت نه کائيندو آهيان.|maan gosht na khaindo aahiyaan|I don't eat meat.|مان گوشت نه کائيندو آهيان۔|food
+مون کي بک لڳي آهي.|moon khe bukh lagee aahe|I am hungry.|مون کي بک لڳي آهي۔|food
+پاڻي ٿڌو آهي.|paanee thadho aahe|The water is cold.|پاڻي ٿڌو آهي۔|food
+اڄ موسم ڏاڍو سٺو آهي.|aj mausam ddaaddho sathho aahe|The weather is very nice today.|اڄ موسم ڏاڍو سٺو آهي۔|smalltalk
+مان آفيس ۾ ڪم ڪندو آهيان.|maan office mein kamm kandoo aahiyaan|I work in an office.|مان آفيس ۾ ڪم ڪندو آهيان۔|work
+توهان ڪٿي ڪم ڪندا آهيو؟|tohann kitthee kamm kanda aahyo|Where do you work?|توهان ڪٿي ڪم ڪندا آهيو؟|work
+منهنجي پگهار مهيني جي آخر ۾ اچي ٿي.|munjee paghaar meene je aakhir mein achee thee|My salary comes at month end.|منهنجي پگهار مهيني جي آخر ۾ اچي ٿي۔|work
+سڀاڻي منهنجي ميٽنگ آهي.|sabhane munjee meeting aahe|I have a meeting tomorrow.|سڀاڻي منهنجي ميٽنگ آهي۔|work
+مان يونيورسٽي ۾ پڙهندو آهيان.|maan university mein parhandoo aahiyaan|I study at the university.|مان يونيورسٽي ۾ پڙهندو آهيان۔|school
+ڪلاس ڪهڙي وقت شروع ٿيندو آهي؟|class kehree waqt shuroo thindo aahe|When does the class start?|ڪلاس ڪهڙي وقت شروع ٿيندو آهي؟|school
+امتحان سولو هو.|imtahaan solo ho|The exam was easy.|امتحان سولو هو۔|school
+مون کي ڪتاب پڙهڻ وڻندو آهي.|moon khe kitaab parhan vandoo aahe|I like reading books.|مون کي ڪتاب پڙهڻ وڻندو آهي۔|school
+هي لفظ نئون آهي.|hee lafz nauon aahe|This word is new.|هي لفظ نئون آهي۔|school
+مان روزانو سنڌي سکندو آهيان.|maan rozana sindhee skhando aahiyaan|I learn Sindhi every day.|مان روزانو سنڌي سکندو آهيان۔|school
+اڄ سومر آهي.|aj somar aahe|Today is Monday.|اڄ سومر آهي۔|time
+ڪهڙو وقت ٿيو آهي؟|kehro waqt thiyo aahe|What time is it?|ڪهڙو وقت ٿيو آهي؟|time
+مون وٽ وقت ناهي.|moon vatt waqt naahee|I have no time.|مون وٽ وقت ناهي۔|time
+مان ڇهن بجين ايندس.|maan chhan bajen eendus|I will come at six.|مان ڇهن بجين ايندس۔|time
+آچر تي مان فارغ آهيان.|aachar te maan faarigh aahiyaan|I am free on Sunday.|آچر تي مان فارغ آهيان۔|time
+هي منهنجي ماءُ آهي.|hee munjee maau aahe|This is my mother.|هي منهنجي ماءُ آهي۔|family
+منهنجو پيءُ ڏاڍو ڪم ڪندو آهي.|munjo piu ddaaddho kamm kandoo aahe|My father works a lot.|منهنجو پيءُ ڏاڍو ڪم ڪندو آهي۔|family
+منهنجي ڀيڻ ڊاڪٽر آهي.|munjee bhen doctor aahe|My sister is a doctor.|منهنجي ڀيڻ ڊاڪٽر آهي۔|family
+اسان جو خاندان وڏو آهي.|asaan jo khaandaan vaddo aahe|Our family is big.|اسان جو خاندان وڏو آهي۔|family
+ٻار باغ ۾ کيڏندو آهي.|baar baagh mein kheddoo aahe|The child plays in the garden.|ٻار باغ ۾ کيڏندو آهي۔|family
+منهنجو گهر ننڍو آهي.|munjo ghar nandho aahe|My house is small.|منهنجو گهر ننڍو آهي۔|home
+رسوئي صاف آهي.|rasoi saaf aahe|The kitchen is clean.|رسوئي صاف آهي۔|home
+دري کليل آهي.|darree khuleel aahe|The window is open.|دري کليل آهي۔|home
+مان دروازو بند ڪندو آهيان.|maan darwaazo band kandoo aahiyaan|I close the door.|مان دروازو بند ڪندو آهيان۔|home
+بجلي هلي وئي آهي.|bijli halee vee aahe|The power has gone out.|بجلي هلي وئي آهي۔|home
+مان هاڻي سمهڻ ويندو آهيان.|maan haanee sumhan vindoo aahiyaan|I am going to sleep now.|مان هاڻي سمهڻ ويندو آهيان۔|home
+منهنجو پاسپورٽ ڪٿي آهي؟|munjo passport kitthee aahe|Where is my passport?|منهنجو پاسپورٽ ڪٿي آهي؟|travel
+جهاز دير سان آهي.|jahaaz der saan aahe|The flight is delayed.|جهاز دير سان آهي۔|travel
+سامان ڏاڍو ڀاري آهي.|samaan ddaaddho bhaaree aahe|The luggage is very heavy.|سامان ڏاڍو ڀاري آهي۔|travel
+سفر بخير!|safar bakhair|Have a good trip!|سفر بخير!|travel
+مون کي ٻن راتين لاءِ ڪمرو کپي.|moon khe ban raaten lae kamro khape|I need a room for two nights.|مون کي ٻن راتين لاءِ ڪمرو کپي۔|travel
+سڌو وڃو.|sidho wanjo|Go straight ahead.|سڌو وڃو۔|travel
+کاٻي پاسي مڙو.|khaabee paasee maddo|Turn left.|کاٻي پاسي مڙو۔|travel
+بازار ڪٿي آهي؟|bazaar kitthee aahe|Where is the market?|بازار ڪٿي آهي؟|shopping
+اگهه ڏاڍو وڌيڪ آهي.|agg ddaaddho vadheek aahe|The price is too high.|اگهه ڏاڍو وڌيڪ آهي۔|shopping
+ٿوري رعايت ڪريو.|thorree riyaayat karyo|Give a little discount.|ٿوري رعايت ڪريو۔|shopping
+مان صرف ڏسان پيو.|maan siraf dasaan piyo|I am just looking.|مان صرف ڏسان پيو۔|shopping
+رسيد ڏيو.|raseed diyo|Please give the receipt.|رسيد ڏيو۔|shopping
+مڙهه کائو!|merrah khao|Enjoy your meal!|مڙهه کائو!|food
+مڙهه کان پوءِ چانهه پيوندا آهيون.|merrah khaan poe chaanh pyoonda aahiyoon|We drink tea after the meal.|مڙهه کان پوءِ چانهه پيوندا آهيون۔|food
+مون کي ٿڌو پاڻي ڏيو.|moon khe thadho paanee diyo|Give me cold water.|مون کي ٿڌو پاڻي ڏيو۔|food
+فڪر نه ڪريو.|fikar na karyo|Don't worry.|فڪر نه ڪريو۔|emotion
+مون کي توهان تي فخر آهي.|moon khe tohaan te fakhar aahe|I am proud of you.|مون کي توهان تي فخر آهي۔|emotion
+هي ٻڌي خوشي ٿي.|hee budhee khushi thi|I am glad to hear that.|هي ٻڌي خوشي ٿي۔|emotion
+مون کي ڊپ لڳي پيو.|moon khe dapp lagee piyo|I am feeling scared.|مون کي ڊپ لڳي پيو۔|emotion
+توهان سان ملي سٺو لڳو.|tohaan saan male sathho laggo|Good to see you.|توهان سان ملي سٺو لڳو۔|smalltalk
+مبارڪ هجي!|mubarak huje|Congratulations!|مبارڪ هجي!|greeting
+ڀلي ڪري آيا!|bhale kari aya|Welcome!|ڀلي ڪري آيا!|greeting
+جلد ٹھيڪ ٿي وڃو!|jald theek thee wanjo|Get well soon!|جلد ٹھيڪ ٿي وڃو!|health
+هڪ لمحو، مهرباني.|hik lamho meharbani|One moment, please.|هڪ لمحو، مهرباني۔|polite
+مان هاڻي اچان ٿو.|maan haanee achaan tho|I'll be right there.|مان هاڻي اچان ٿو۔|smalltalk
+مون کي خبر ناهي.|moon khe khabar naahee|I don't know.|مون کي خبر ناهي۔|smalltalk
+شايد پوءِ.|shaayad poe|Maybe later.|شايد پوءِ۔|smalltalk
+مان راضي آهيان.|maan raazee aahiyaan|I agree.|مان راضي آهيان۔|smalltalk
+هي صحيح ناهي.|hee saheeh naahee|That is not right.|هي صحيح ناهي۔|smalltalk
+توهان اڄ ڇا ڪري رهيا آهيو؟|tohann aj chha kare rahya aahyo|What are you doing today?|توهان اڄ ڇا ڪري رهيا آهيو؟|smalltalk
+مان امتحان جي تياري ڪريان ٿو.|maan imtahaan jee tayyaaree karyaan tho|I am preparing for the exam.|مان امتحان جي تياري ڪريان ٿو۔|school
+مون کي مدد کپي.|moon khe madad khape|I need help.|مون کي مدد کپي۔|polite
+توهان جي مدد جي مهرباني.|tohaan jee madad jee meharbani|Thank you for your help.|توهان جي مدد جي مهرباني۔|polite
+هي پهريون ڀيرو آهي.|hee pahriyon bhero aahe|This is the first time.|هي پهريون ڀيرو آهي۔|smalltalk
+پئسا ڪٿي بدلايان؟|pesa kitthee badlayaan|Where can I exchange money?|پئسا ڪٿي بدلايان؟|travel
+بس اٺين بجين اچي ٿي.|bus athen bajen achee thee|The bus comes at eight.|بس اٺين بجين اچي ٿي۔|travel
+منهنجي ريل نڪري وئي.|munjee rail nikree vee|I missed my train.|منهنجي ريل نڪري وئي۔|travel
+هوٽل ڏاڍو سٺو آهي.|hotel ddaaddho sathho aahe|The hotel is very good.|هوٽل ڏاڍو سٺو آهي۔|travel
+توهان جو ڪم ڇا آهي؟|tohaan jo kamm chha aahe|What is your work?|توهان جو ڪم ڇا آهي؟|work
+مان انجنيئر آهيان.|maan engineer aahiyaan|I am an engineer.|مان انجنيئر آهيان۔|work
+هوءَ هميشه مدد ڪندي آهي.|hooe hamesha madad kande aahe|She always helps.|هوءَ هميشه مدد ڪندي آهي۔|smalltalk
+اسان گڏجي سکون ٿا.|asaan gaddje sukhoon tha|We learn together.|اسان گڏجي سکون ٿا۔|school
+منهنجي سنڌي بهتر ٿي رهي آهي.|munjee sindhee behtar thee rahee aahe|My Sindhi is improving.|منهنجي سنڌي بهتر ٿي رهي آهي۔|school
+آسمان نيرو آهي.|asmaan nero aahe|The sky is blue.|آسمان نيرو آهي۔|smalltalk
+منهنجو پسنديده رنگ سائو آهي.|munjo pasandeeda rang saavo aahe|My favourite color is green.|منهنجو پسنديده رنگ سائو آهي۔|smalltalk
+ڳاڙهي گڏي تيز آهي.|gaarree gaddi tez aahe|The red car is fast.|ڳاڙهي گڏي تيز آهي۔|smalltalk
+رات پرسڪون آهي.|raat pursukoon aahe|The night is peaceful.|رات پرسڪون آهي۔|time
+اڄ مينهن پوي ٿو.|aj meenh pavee tho|It is raining today.|اڄ مينهن پوي ٿو۔|smalltalk
+سج نڪري پيو.|suj nikree piyo|The sun is shining.|سج نڪري پيو۔|smalltalk
+واهه واهه!|waah waah|Well done!|واهه واهه!|smalltalk
+توهان سان ملي خوشي ٿي.|tohaan saan male khushi thi|Nice to meet you.|توهان سان ملي خوشي ٿي۔|greeting
+وري ملاقات ٿيندي.|wari mulaqat thindee|We will meet again.|وري ملاقات ٿيندي۔|greeting
+معافي، ڇا چيائون؟|mu'aafi chha chayoon|Pardon, what did you say?|معافي، ڇا چيائون؟|polite
+ٻيهر چئو.|behar chayo|Please say it again.|ٻيهر چئو۔|polite
+اکر ٻڌايو.|akhar budhaayo|Please spell it.|اکر ٻڌايو۔|school
+مون کي چانهه ڏاڍي وڻندي آهي.|moon khe chaanh ddaaddhee vandee aahe|I love tea.|مون کي چانهه ڏاڍي وڻندي آهي۔|food
+مڙهه تيار آهي.|merrah tayyaar aahe|The food is ready.|مڙهه تيار آهي۔|food
+پليٽ ۾ وڌيڪ مڙهه وجهو.|plate mein vadheek merrah vaja|Put more food on the plate.|پليٽ ۾ وڌيڪ مڙهه وجهو۔|food
+هي ڪپڙو سٺو آهي.|hee kapro sathho aahe|This cloth is good.|هي ڪپڙو سٺو آهي۔|shopping
+دڪان بند ٿي ويو.|dukaan band thyo viyo|The shop is closed.|دڪان بند ٿي ويو۔|shopping
+مان روزانو بازار ويندو آهيان.|maan rozana bazaar vindoo aahiyaan|I go to the market every day.|مان روزانو بازار ويندو آهيان۔|shopping
+گڏي رستي تي آهي.|gaddi raste te aahe|The car is on the road.|گڏي رستي تي آهي۔|travel
+پل وٽ مڙو.|pul vatt maddo|Turn near the bridge.|پل وٽ مڙو۔|travel
+شهر ڏاڍو وڏو آهي.|shehar ddaaddho vaddo aahe|The city is very big.|شهر ڏاڍو وڏو آهي۔|travel
+ڳوٺ ۾ سڪون آهي.|goth mein sukoon aahe|There is peace in the village.|ڳوٺ ۾ سڪون آهي۔|travel
+مان شاگرد آهيان.|maan shagird aahiyaan|I am a student.|مان شاگرد آهيان۔|school
+هو سٺو استاد آهي.|ho sathho ustaad aahe|He is a good teacher.|هو سٺو استاد آهي۔|school
+سوال ڏکيو آهي.|sawaal dukhiyo aahe|The question is difficult.|سوال ڏکيو آهي۔|school
+جواب صحيح آهي.|jawaab saheeh aahe|The answer is correct.|جواب صحيح آهي۔|school
+ڪتاب ميز تي آهي.|kitaab mez te aahe|The book is on the table.|ڪتاب ميز تي آهي۔|school
+بسترو نرم آهي.|bistro naram aahe|The bed is soft.|بسترو نرم آهي۔|home
+ڪنجي گم ٿي وئي.|kunji gum thee vee|The key is lost.|ڪنجي گم ٿي وئي۔|home
+باغ ۾ گل آهن.|baagh mein gul ahin|There are flowers in the garden.|باغ ۾ گل آهن۔|home
+ڪمرو روشن آهي.|kamro roshan aahe|The room is bright.|ڪمرو روشن آهي۔|home
+ڏاڪا چڙهو.|ddaaka chaddho|Go up the stairs.|ڏاڪا چڙهو۔|home
+
+@grammar
+"ڪتاب" جو جنس ڇا آهي؟|مذکر|مؤنث|بي جنس|1|Sindhi nouns ending in "-o" are usually masculine: ڪتاب مذکر آهي.|Nouns ending in "-o" are usually masculine.
+"دري" جو جنس ڇا آهي؟|مؤنث|مذکر|بي جنس|1|Nouns ending in "-ee" are usually feminine: دري مؤنث آهي.|Nouns ending in "-ee" are usually feminine.
+"آئون ___ آهيان."|ٿڪل|ٿڪلي|ٿڪليا|1|A male speaker says "آئون ٿڪل آهيان"; the adjective agrees with the speaker.|The adjective agrees with the speaker.
+"توهان ___ آهيو؟"|ڪيئن|ڪيڏو|ڪير|1|"Kiyann" = how (state).|"Kiyann" asks how someone is.
+"هو ___ ۾ رهي ٿو."|گهر|گهر ۾|گهر کان|2|Location uses "mein": گهر ۾.|"Mein" marks location.
+"آئون ___ وڃان ٿو."|اسڪول|اسڪول ڏانهن|اسڪول ۾|2|Direction uses "ddanhan": اسڪول ڏانهن.|"Ddanhan" marks direction.
+"مون ___ وٺي آيو."|ڪتاب|ڪتاب کي|ڪتاب جو|1|Transitive past takes the ergative "مون ... آندو".|Sindhi uses an ergative in the past.
+"هي ڪنهن ___ آهي؟"|جو|۾|کان|1|Possession uses "jo": ڪنهن جو؟|"Jo" marks possession.
+"جو/جي/جا" ___ سان ملندا آهن.|ملڪيت واري شيءِ|مالڪ|وقت|1|They agree with the thing owned: منهنجو گهر، منهنجي ڪتاب.|The possessive agrees with the owned noun.
+جمع: "ڪتاب" → ___|ڪتابَ|ڪتابون|ڪتابين|1|Masculine plural drops or lengthens "-o": ڪتابَ.|Masculine nouns change the final vowel.
+جمع: "دري" → ___|دريون|دريو|دريا|1|Feminine plural takes "-oon": دريون.|Feminine nouns take "-oon".
+حرفِ جر "تي" ___ لاءِ آهي.|مٿان|هيٺ|پويان|1|"Te" = on: ميز تي.|"Te" means "on".
+حرفِ جر "هيٺ" ___ لاءِ آهي.|هيٺ|مٿان|سامهون|1|"Heth" = under.|"Heth" means "under".
+حرفِ جر "وٽ" ___ لاءِ آهي.|ويجهو|پري|اندر|1|"Vatt" = near/with.|"Vatt" means "near".
+"هتي" ___ لاءِ آهي.|هن جاءِ|انهيءَ جاءِ|وقت|1|"Hithe" = here.|"Hithe" means "here".
+"اتي" ___ لاءِ آهي.|انهيءَ جاءِ|هن جاءِ|وقت|1|"Uthe" = there.|"Uthe" means "there".
+"هي" ___ لاءِ آهي.|ويجهو|پري|وقت|1|"Hee" = this.|"Hee" means "this".
+"اهو" ___ لاءِ آهي.|پري|ويجهو|وقت|1|"Aho" = that.|"Aho" means "that".
+عزت سان ڳالهائڻ لاءِ ___ وڃايو.|توهان|تون|هو|1|"Tohaann" is respectful, "toon" is familiar.|Use "tohaann" for respect.
+منفي: "مان نه ___ ."|اچان|اچان نه|نه اچان ٿو|3|Negation: "na" + verb + tho.|"Na" precedes the verb.
+سوال: "___ توهان ايندا؟"|ڇا|ڪٿي|ڪڏهن|1|"Chha" makes a yes/no question.|"Chha" makes yes/no questions.
+"ڪٿي" ___ پڇي ٿو.|جاءِ|وقت|ڪارڻ|1|"Kitthee" = where.|"Kitthee" asks about place.
+"ڪڏهن" ___ پڇي ٿو.|وقت|جاءِ|ڪارڻ|1|"Kadhaan" = when.|"Kadhaan" asks about time.
+"ڇو" ___ پڇي ٿو.|ڪارڻ|وقت|جاءِ|1|"Chho" = why.|"Chho" asks the reason.
+"ڪيترو" ___ پڇي ٿو.|مقدار|جاءِ|وقت|1|"Kitro" = how much.|"Kitro" asks the amount.
+"ڪيترا" ___ پڇي ٿو.|تعداد|مقدار|وقت|1|"Kitra" = how many.|"Kitra" asks the number.
+فعل حال: "هو ___ ٿو."|اچي|اچي ٿي|اچان|1|Masculine present: هو اچي ٿو.|"Achee tho" is masculine present.
+فعل حال (مؤنث): "هوءَ ___ ٿي."|اچي|اچي ٿو|اچان|1|Feminine present: هوءَ اچي ٿي.|"Achee thee" is feminine present.
+فعل حال (جمع): "اسان ___ ٿا."|اچون|اچي|اچان|1|Plural: اسان اچون ٿا.|"Achoon tha" is plural.
+حال استمراري: "آئون ___ پيو."|کائي|کائيندو|کائيندو آهيان|1|Present continuous uses "piyo".|"Piyo" marks present continuous.
+ماضي: "هو ڪالهه ___ ."|آيو|اچي|ايندو|1|Simple past: هو ڪالهه آيو.|"Aayo" is the simple past.
+مستقبل: "مان ___ ."|ايندس|اچي|ايندو|1|Future first person: مان ايندس.|"Eendus" is future.
+"سگهي ٿو" ___ ڏيکاري ٿو.|صلاحيت|مجبوري|منفي|1|"Sagee tho" = can.|"Sagee tho" expresses ability.
+"کپي" ___ ڏيکاري ٿو.|ضرورت|صلاحيت|خوشي|1|"Khape" = need.|"Khape" expresses need.
+"وڻندو آهي" ___ لاءِ آهي.|پسند|نفرت|ڊپ|1|"Vandoo aahe" = like.|"Vandoo aahe" means "like".
+"مون وٽ" ___ ڏيکاري ٿو.|ملڪيت|جاءِ|وقت|1|"Moon vatt" = I have.|"Moon vatt" expresses possession.
+ترتيب: فعل ___ اچي ٿو.|آخر ۾|شروع ۾|وچ ۾|1|Sindhi is SOV — the verb is last.|The verb comes at the end.
+صفت ___ کان اڳ اچي ٿي.|اسم|فعل|حرف|1|Adjectives precede the noun: وڏو گهر.|Adjectives come before the noun.
+"وڏو گهر" ۾ "وڏو" ___ آهي.|صفت|اسم|فعل|1|"Vaddo" describes "ghar".|"Vaddo" is an adjective.
+"تيز هلڻ" ۾ "تيز" ___ آهي.|متعلق فعل|اسم|حرف|1|"Tez" modifies the verb → adverb.|"Tez" is an adverb here.
+موازنو: "هي ان ___ وڌيڪ سٺو آهي."|کان|تي|۾|1|Comparison uses "khaan".|Tulna ke liye 'khaan' lagate hain.
+بهترين: "سڀ کان ___"|سٺو|سٺو تر|سٺا|1|Superlative: سڀ کان سٺو.|Superlative = "sabb khaan sathho".
+جمع اسم سان فعل ___ هوندو آهي.|جمع|واحد|ڪوبه نه|1|ڪتابَ آهن۔|Plural nouns take plural verbs.
+"ڪندو آهي" ___ لاءِ آهي.|مذکر واحد|مؤنث واحد|جمع|1|Masculine singular present.|"Kandoo aahe" is masculine singular.
+"ڪندي آهي" ___ لاءِ آهي.|مؤنث واحد|مذکر واحد|جمع|1|Feminine singular present.|"Kandee aahe" is feminine singular.
+"ڪندا آهن" ___ لاءِ آهي.|جمع|واحد|مستقبل|1|Plural present.|"Kanda ahin" is plural.
+امر (عزت): "دروازو ___ ."|کوليو|کول|کوليندو|1|Respectful imperative ends in "-yo".|Polite commands end in "-yo".
+امر (عام): "هتي ___ ."|اچ|اچو|اچندو|1|Familiar imperative for "toon".|Familiar command is the bare stem.
+"وٺو" ___ آهي.|عزت وارو امر|ماضي|حال|1|"Watho" is a polite command.|"Watho" is the polite imperative.
+"ڏاڍو" ___ آهي.|متعلق فعل|اسم|حرف|1|"Ddaaddho" = very.|"Ddaaddho" means "very".
+"ٿورو" ___ آهي.|ٿورو|ڏاڍو|وقت|1|"Thoro" = a little.|"Thoro" means "a little".
+"سڀ" ___ لاءِ آهي.|سڀ|ڪوبه نه|ڪجهه|1|"Sabb" = all.|"Sabb" means "all".
+"ڪو" ___ لاءِ آهي.|ڪوبه|سڀ|ڪجهه|1|"Ko" = any/someone.|"Ko" means "any".
+"ڪجهه" ___ لاءِ آهي.|ڪجهه|سڀ|ڪوبه نه|1|"Kujh" = some.|"Kujh" means "some".
+"هر" ___ لاءِ آهي.|هر هڪ|ڪوبه نه|ڪجهه|1|"Har" = every.|"Har" means "every".
+"ڏينهن ۾" ___ ڏيکاري ٿو.|وقت|جاءِ|ملڪيت|1|"Dinhan mein" = during the day.|"Dinhan mein" means "during the day".
+"رات جو" ___ ڏيکاري ٿو.|وقت|جاءِ|ملڪيت|1|"Raat jo" = at night.|"Raat jo" means "at night".
+"سڀاڻي" ___ آهي.|ايندڙ ڏينهن|اڄ|ڪالهه|1|"Sabhane" = tomorrow.|"Sabhane" means "tomorrow".
+"ڪالهه" ___ آهي.|گذريل ڏينهن|سڀاڻي|اڄ|1|"Kalah" = yesterday.|"Kalah" means "yesterday".
+"هاڻي" ___ آهي.|هاڻي|پوءِ|اڳ|1|"Haanee" = now.|"Haanee" means "now".
+"سوير" ___ آهي.|صبح جو|دير|پوءِ|1|"Saver" = early morning.|"Saver" means "early".
+"دير" ___ آهي.|دير|سوير|هاڻي|1|"Der" = late.|"Der" means "late".
+"هميشه" ___ آهي.|هر وقت|ڪڏهن ڪڏهن|ڪڏهن نه|1|"Hamesha" = always.|"Hamesha" means "always".
+"ڪڏهن ڪڏهن" ___ آهي.|بعض وقت|هميشه|ڪڏهن نه|1|"Kadhan kadhan" = sometimes.|"Kadhan kadhan" means "sometimes".
+"مهرباني" ___ لاءِ آهي.|شڪريه|معافي|خوش آمديد|1|"Meharbani" = thank you/please.|"Meharbani" is used for thanks and requests.
+"ڀلي ڪري آيا" ___ لاءِ آهي.|خوش آمديد|رخصت|شڪريه|1|"Bhale kari aya" = welcome.|"Bhale kari aya" greets a guest.
+"معافي" ___ لاءِ آهي.|معافي|شڪريه|خوشي|1|"Mu'aafi" = pardon.|"Mu'aafi" asks forgiveness.
+"ها" ___ آهي.|تصديق|منفي|سوال|1|"Ha" = yes.|"Ha" means "yes".
+"نه" ___ آهي.|منفي|تصديق|سوال|1|"Na" = no.|"Na" means "no".
+
+@sentences
+مان هر صبح چانهه پيندو آهيان.|I drink tea every morning.|مان هر صبح چانهه پيندو آهيان۔
+منهنجو ڀاءُ جرمن ٻولي سکي ٿو.|My brother is learning German.|منهنجو ڀاءُ جرمن ٻولي سکي ٿو۔
+اسان آچر تي سکر وڃون ٿا.|We go to Sukkur on Sunday.|اسان آچر تي سکر وڃون ٿا۔
+ڪتاب ميز تي رکيل آهي.|The book is kept on the table.|ڪتاب ميز تي رکيل آهي۔
+هن ڪالهه خط لکيو.|He wrote a letter yesterday.|هن ڪالهه خط لکيو۔
+ڇا توهان منهنجي مدد ڪري سگهو ٿا؟|Can you help me?|ڇا توهان منهنجي مدد ڪري سگهو ٿا؟
+مون کي ٻه ڪافي ۽ هڪ پاڻي کپي.|I need two coffees and a water.|مون کي ٻه ڪافي ۽ هڪ پاڻي کپي۔
+ريل اٺين بجين هلي ٿي.|The train leaves at eight.|ريل اٺين بجين هلي ٿي۔
+منهنجي ماءُ اڄ مڇي پچائي ٿي.|My mother is cooking fish today.|منهنجي ماءُ اڄ مڇي پچائي ٿي۔
+هو ٽي ٻوليون رواني سان ڳالهائي ٿو.|He speaks three languages fluently.|هو ٽي ٻوليون رواني سان ڳالهائي ٿو۔
+اسان جو گهر ننڍو پر صاف آهي.|Our house is small but clean.|اسان جو گهر ننڍو پر صاف آهي۔
+مان سوال پورو نه سمجهيس.|I did not fully understand the question.|مان سوال پورو نه سمجهيس۔
+اڄ موسم ڏاڍو سٺو آهي.|The weather is very pleasant today.|اڄ موسم ڏاڍو سٺو آهي۔
+مون کي سڀاڻي سوير جلدي اٿڻو آهي.|I have to get up early tomorrow.|مون کي سڀاڻي سوير جلدي اٿڻو آهي۔
+هوءَ اسپتال ۾ ڪم ڪندي آهي.|She works in a hospital.|هوءَ اسپتال ۾ ڪم ڪندي آهي۔
+اسان اسڪول جي سامهون ملون ٿا.|We meet in front of the school.|اسان اسڪول جي سامهون ملون ٿا۔
+هو پنهنجو فون گهر ۾ وساري ويو.|He forgot his phone at home.|هو پنهنجو فون گهر ۾ وساري ويو۔
+مان اڄ آفيس نه وڃان ٿو.|I am not going to the office today.|مان اڄ آفيس نه وڃان ٿو۔
+ٻار باغ ۾ فوٽبال کيڏن ٿا.|The children play football in the garden.|ٻار باغ ۾ فوٽبال کيڏن ٿا۔
+ڇا توهان دري کولي سگهو ٿا؟|Can you open the window?|ڇا توهان دري کولي سگهو ٿا؟
+مون وٽ اڄ ڏاڍو ڪم آهي.|I have a lot of work today.|مون وٽ اڄ ڏاڍو ڪم آهي۔
+منهنجي پيءُ کي اخبار پڙهڻ وڻندو آهي.|My father likes reading newspapers.|منهنجي پيءُ کي اخبار پڙهڻ وڻندو آهي۔
+مڙهه سچ پچ ڏاڍو مزيدار آهي.|The food is really tasty.|مڙهه سچ پچ ڏاڍو مزيدار آهي۔
+اسان هڪ ڪلاڪ کان انتظار ڪري رهيا آهيون.|We have been waiting for an hour.|اسان هڪ ڪلاڪ کان انتظار ڪري رهيا آهيون۔
+مان پنهنجي نوڪريءَ لاءِ سنڌي سکندو آهيان.|I learn Sindhi for my job.|مان پنهنجي نوڪريءَ لاءِ سنڌي سکندو آهيان۔
+هوءَ هڪ ننڍڙي شهر کان آهي.|She is from a small town.|هوءَ هڪ ننڍڙي شهر کان آهي۔
+مان بازار کان ماني ۽ کير آڻيندو آهيان.|I bring bread and milk from the market.|مان بازار کان ماني ۽ کير آڻيندو آهيان۔
+هو بس سان آفيس ويندو آهي.|He goes to the office by bus.|هو بس سان آفيس ويندو آهي۔
+اسان ڪالهه هڪ فلم ڏٺي.|We watched a film yesterday.|اسان ڪالهه هڪ فلم ڏٺي۔
+مان اڄ شام توهان کي پيغام موڪليندس.|I will send you a message this evening.|مان اڄ شام توهان کي پيغام موڪليندس۔
+هوٽل اسٽيشن کان گهڻو پري ناهي.|The hotel is not far from the station.|هوٽل اسٽيشن کان گهڻو پري ناهي۔
+منهنجي ڀيڻ ميڊيڪل پڙهي ٿي.|My sister studies medicine.|منهنجي ڀيڻ ميڊيڪل پڙهي ٿي۔
+هفتي جي آخر ۾ مون وٽ وقت ناهي.|I have no time at the weekend.|هفتي جي آخر ۾ مون وٽ وقت ناهي۔
+هو شام جو ڪافي نه پيندو آهي.|He does not drink coffee in the evening.|هو شام جو ڪافي نه پيندو آهي۔
+اسان کي سکر جا ٻه ٽڪيٽ کپن.|We need two tickets to Sukkur.|اسان کي سکر جا ٻه ٽڪيٽ کپن۔
+امتحان نون بجين شروع ٿيندو آهي.|The exam starts at nine.|امتحان نون بجين شروع ٿيندو آهي۔
+مان ٿوري سنڌي ۽ انگريزي ڳالهائيندو آهيان.|I speak a little Sindhi and English.|مان ٿوري سنڌي ۽ انگريزي ڳالهائيندو آهيان۔
+منهنجو دوست انجنيئر طور ڪم ڪندو آهي.|My friend works as an engineer.|منهنجو دوست انجنيئر طور ڪم ڪندو آهي۔
+هوءَ رسوئي ۾ ماءُ جي مدد ڪندي آهي.|She helps her mother in the kitchen.|هوءَ رسوئي ۾ ماءُ جي مدد ڪندي آهي۔
+مان هر شام سير لاءِ ويندو آهيان.|I go for a walk every evening.|مان هر شام سير لاءِ ويندو آهيان۔
+
+@listening
+سلام، توهان ڪيئن آهيو؟|salaam tohann kiyann aahyo|Hello, how are you?|سلام، توهان ڪيئن آهيو؟|سلام، توهان ڪٿي آهيو؟|صبح بخير، توهان ڪيئن آهيو؟|1
+مون کي هڪ پيالو چانهه کپي.|moon khe hik pyalo chaanh khape|I need a cup of tea.|مون کي هڪ پيالو چانهه کپي|مون کي هڪ پيالو ڪافي کپي|مون کي هڪ گلاس پاڻي کپي|1
+اسٽيشن ڪٿي آهي؟|station kitthee aahe|Where is the station?|اسٽيشن ڪٿي آهي؟|بازار ڪٿي آهي؟|هوٽل ڪٿي آهي؟|1
+مان حيدرآباد کان آهيان.|maan hyderabad khaan aahiyaan|I am from Hyderabad.|مان حيدرآباد کان آهيان|مان حيدرآباد ۾ رهندو آهيان|مان حيدرآباد وڃان ٿو|1
+بل آڻيو، مهرباني.|bill aaniyo meharbani|The bill, please.|بل آڻيو، مهرباني|مينيو آڻيو، مهرباني|رسيد آڻيو، مهرباني|1
+هي ڪيتري جو آهي؟|hee kitree jo aahe|How much is this?|هي ڪيتري جو آهي؟|هي ڪنهن جو آهي؟|هي ڇا آهي؟|1
+مان نه سمجهيس.|maan na samjhis|I did not understand.|مان نه سمجهيس|مان نه وڃي سگهيس|مان نه ٻڌي سگهيس|1
+آهستي ڳالهايو.|aahistee galhaayo|Please speak slowly.|آهستي ڳالهايو|اُچي ڳالهايو|ويجهو اچو|1
+منهنجو ڀاءُ ڊاڪٽر آهي.|munjo bhau doctor aahe|My brother is a doctor.|منهنجو ڀاءُ ڊاڪٽر آهي|منهنجو ڀاءُ استاد آهي|منهنجو پيءُ ڊاڪٽر آهي|1
+ريل اٺين بجين هلي ٿي.|rail athen bajen halee thee|The train leaves at eight.|ريل اٺين بجين هلي ٿي|بس اٺين بجين هلي ٿي|ريل اٺين بجين اچي ٿي|1
+مون وٽ اڄ وقت ناهي.|moon vatt aj waqt naahee|I have no time today.|مون وٽ اڄ وقت ناهي|مون وٽ اڄ پئسا ناهن|مون وٽ اڄ ڪم ناهي|1
+مڙهه ڏاڍو مزيدار آهي.|merrah ddaaddho mazedaar aahe|The food is very tasty.|مڙهه ڏاڍو مزيدار آهي|موسم ڏاڍو سٺو آهي|چانهه ڏاڍي گرم آهي|1
+اسان گڏجي سنڌي سکون ٿا.|asaan gaddje sindhee sukhoon tha|We learn Sindhi together.|اسان گڏجي سنڌي سکون ٿا|اسان گڏجي سنڌي ڳالهائيندا آهيون|اسان گڏجي ڪتاب پڙهون ٿا|1
+مون کي ٻن راتين لاءِ ڪمرو کپي.|moon khe ban raaten lae kamro khape|I need a room for two nights.|مون کي ٻن راتين لاءِ ڪمرو کپي|مون کي ٻن ماڻهن لاءِ ميز کپي|مون کي هڪ رات لاءِ ڪمرو کپي|1
+منهنجي ماءُ اڄ مڇي پچائي ٿي.|munjee maau aj machhee pachai thee|My mother cooks fish today.|منهنجي ماءُ اڄ مڇي پچائي ٿي|منهنجي ماءُ اڄ مڇي آڻي ٿي|منهنجو پيءُ اڄ مڇي پچائي ٿو|1
+مان هر شام سير ڪندو آهيان.|maan har shaam sair kandoo aahiyaan|I walk every evening.|مان هر شام سير ڪندو آهيان|مان هر صبح سير ڪندو آهيان|مان هر شام سمهندو آهيان|1
+ڇا توهان وٽ ننڍي ماپ آهي؟|chha tohaan vatt nandhee maap aahe|Do you have a smaller size?|ڇا توهان وٽ ننڍي ماپ آهي؟|ڇا توهان وٽ وڏي ماپ آهي؟|ڇا توهان وٽ ٻيو رنگ آهي؟|1
+مان ڪارڊ سان ادائگي ڪندس.|maan card saan adaaygee kandus|I will pay by card.|مان ڪارڊ سان ادائگي ڪندس|مان نقد ادائگي ڪندس|مان سڀاڻي ادائگي ڪندس|1
+مون کي ڏاڍو افسوس آهي.|moon khe ddaaddho afsos aahe|I am very sorry.|مون کي ڏاڍو افسوس آهي|مون کي ڏاڍي خوشي آهي|مون کي ڏاڍو ڊپ آهي|1
+مان سڀاڻي توهان کي فون ڪندس.|maan sabhane tohaan khe phone kandus|I will call you tomorrow.|مان سڀاڻي توهان کي فون ڪندس|مان اڄ توهان کي فون ڪندس|مان سڀاڻي توهان سان ملندس|1
+
+@stories
+حيدرآباد ۾ پهريون ڏينهن|🚆|اسلم صبح حيدرآباد پهتو.\nهن ٽيڪسي سان ___ (1) تائين سفر ڪيو.\nڪمري ۾ هن ___ (2) پيتي.\nپوءِ هن پنهنجي ___ (3) کي فون ڪيو.|Aslam reaches Hyderabad in the morning. He travels by taxi to the hotel. In the room he drinks tea. Then he calls his family.|هوٽل/اسٽيشن/بازار=0;چانهه/ڪتاب/ماني=0;ماءُ/دڪان/ڪلاس=0
+بازار ۾ خريداري|🛒|زرينه آچر تي ___ (1) وئي.\nهن ماني، کير ۽ ___ (2) خريد ڪيا.\nادائگي هن ___ (3) سان ڪئي.|Zareena goes shopping on Sunday. She buys bread, milk and apples. She pays by card.|بازار/اسڪول/آفيس=0;صوف/ڪتاب/ڪرسيون=0;ڪارڊ/ڪاغذ/پاڻي=0
+گم ٿيل پاسپورٽ|🛂|احمد پنهنجو ___ (1) ڳولي رهيو هو.\nهن هڪ ___ (2) کان مدد گهري.\nخوش قسمتي سان اهو سندس ___ (3) ۾ ملي ويو.|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is found in his bag.|پاسپورٽ/ڪنجي/ڪتاب=0;پوليس واري/استاد/پاڙيسري=0;ٿيلهي/رسوئي/اسڪول=0
+ڊاڪٽر وٽ|🏥|بلال جي طبيعت ___ (1) هئي.\nهو ___ (2) وٽ ويو.\nڊاڪٽر کيس دوا ۽ ___ (3) ڏني.|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|خراب/سٺي/بک=0;ڊاڪٽر/بيڪر/ڊرائيور=0;آرام/پئسا/ڪتاب=0
+سنڌي ڪلاس|📚|ناديه ٽي مهينا ٿيا ___ (1) سکي ٿي.\nهوءَ هر شام ___ (2) سان مشق ڪندي آهي.\nسندس ___ (3) چون ٿا ته هوءَ سٺو ڳالهائي ٿي.|Nadia has been learning Sindhi for three months. She practises every evening with books. Her teacher says she speaks well.|سنڌي/فرانسيسي/عربي=0;ڪتابن/تصويرن/ڪارڊن=0;استاد/ڀاءُ/پاڙيسري=0
+خانداني مڙهه|👨‍👩‍👧‍👦|آچر تي سڄو ___ (1) آيو.\nڏاڏي ___ (2) پچايو.\nسڀني گڏجي کاڌو ۽ ڏاڍي ___ (3) ڪيائون.|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|خاندان/آفيس/ڪلاس=0;چانور/پاڻي/ڪاغذ=0;کل/ڪم/سمهه=0
+اسٽيشن تي|🚉|ريل ڏهه منٽ ___ (1) هئي.\nحسن دڪان تان ___ (2) خريد ڪئي.\nپوءِ هو ___ (3) ۾ ويهي رهيو.|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|دير/صاف/تيار=0;اخبار/رسيد/ڪنجي=0;ريل/بس/جهاز=0
+سياري جي شام|❄️|جنوري ۾ ڏاڍي ___ (1) پوندي آهي.\nعائشه گرم ___ (2) پاتو.\nهن گرم ___ (3) پيتي ۽ ڪتاب پڙهڻ لڳي.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|ٿڌ/گرمي/مينهن=0;ڪوٽ/ڪميس/بوٽ=0;چانهه/پاڻي/رس=0
+هوٽل ۾ مڙهه|🍽️|خادم ___ (1) آندو.\nعمر مڇي ۽ ___ (2) گهريو.\nآخر ۾ هن ___ (3) گهري.|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|مينيو/ڪرسي/روشني=0;چانور/ميز/دري=0;بل/ڪنجي/رسيد=0
+نوان دوست|🤝|لينا ۽ ثنا ___ (1) ۾ مليون.\nانهن موسيقي ۽ ___ (2) بابت ڳالهايو.\nآخر ۾ ٻنهي پنهنجا ___ (3) بدلايا.|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|باغ/آفيس/ريل=0;سفر/رسيدن/امتحانن=0;نمبر/پتا/ڪتاب=0
+
+@idioms
+اک جو تارو|akh jo taaro|The apple of one's eye.|اک جو تارو|سندس پٽ سندس اک جو تارو آهي۔
+دل تي هٿ رکي|dil te hath rakhe|Speaking honestly.|سچ چوڻ|دل تي هٿ رکي ٻڌايو، ڇا ٿيو؟
+نڪ ۾ دم ڪرڻ|nuk mein dam karan|To annoy someone constantly.|تنگ ڪرڻ|ٻارن شور ڪري نڪ ۾ دم ڪري ڇڏيو۔
+هٿ ڌوئي پوي پوڻ|hath dhoei poy pwan|To chase someone relentlessly.|ڪنهن جي پويان پوڻ|هن ان معاملي ۾ هٿ ڌوئي پوي پيو۔
+اک جو ڏانهو، نالو نورو|akh jo daanho nalo nooro|All name, no substance.|نالو وڏو، ڪم صفر|هن کي ڪجهه به نٿو اچي — اک جو ڏانهو، نالو نورو۔
+پنهنجي نڪ ڪٽائڻ|panhnjee nuk kataain|To bring shame on oneself.|بي عزتي ڪرائڻ|ڪوڙ چئي هن پنهنجي نڪ ڪٽائي۔
+آسمان مٿي کڻڻ|asmaan mathhe khannan|To make a huge fuss.|ڏاڍو شور ڪرڻ|ننڍڙي ڳالهه تي آسمان مٿي کڻي ڇڏيائين۔
+دال ۾ ڪارو|daal mein kaaro|Something suspicious.|ڪجهه گڙٻڙ|هي معاملو صاف ناهي، دال ۾ ڪجهه ڪارو آهي۔
+هٿان نڪري وڃڻ|hathan nikree wanjan|To lose control.|قابو کان ٻاهر ٿيڻ|معاملو هٿان نڪري ويو۔
+وڏيون ڳالهيون، ڪم صفر|wadhyoon galhyoon kamm sifar|All talk, no action.|صرف ڳالهيون|سندس وڏيون ڳالهيون، ڪم صفر آهي۔
+وقت هٿان نڪرڻ|waqt hathan nikran|To let time slip away.|وقت ضايع ڪرڻ|پڙهائي ۾ وقت هٿان نه ڪڍو۔
+دل کولي|dil khole|Wholeheartedly.|پوري دل سان|هن دل کولي مهمانن جي آڌرڀاءُ ڪئي۔
+اجڙ گهر|ujjar ghar|A ruined household.|تباهه حال|مينهن فصل جو اجڙ گهر ڪري ڇڏيو۔
+پاڻي پاڻي ٿيڻ|paanee paanee thyan|To be deeply embarrassed.|شرمसार ٿيڻ|سڀني جي سامهون هو پاڻي پاڻي ٿي ويو۔
+وات مان نڪتل لفظ|waat maan niktal lafz|A spoken promise must be kept.|چيل وچن|وات مان نڪتل لفظ واپس نه ورتو ويندو آهي۔
+نڪ جي ڳالهه|nuk jee galh|A matter of honour.|عزت جو سوال|هاڻي هي نڪ جي ڳالهه آهي۔
+چڻا چٽائڻ|channa chataain|To teach someone a harsh lesson.|سخت سبق ڏيڻ|استاد شرارتي ٻار کي چڻا چٽايا۔
+ڏند ڏيکاري|dand dekhare|To threaten someone.|ڊيڄارڻ|هن ڏند ڏيکاري سڀني کي چپ ڪرائي ڇڏيو۔
+اکين جو تارو ٿيڻ|akhyan jo taaro thyan|To become someone's favourite.|سڀني جو پيارو ٿيڻ|هو پنهنجي استاد جي اکين جو تارو ٿي ويو۔
+دل وڏو رکڻ|dil vaddo rakhan|To be generous and open-hearted.|دل جو وڏو هجڻ|سندس دل وڏو آهي، ڪنهن سان ڪينه نه رکندو آهي۔
+وقت پلڪ جي جهپڪ ۾|waqt palak jee jhapak mein|In the blink of an eye.|ڏاڍي تيزيءَ سان|وقت پلڪ جي جهپڪ ۾ گذري ويو۔
+مهاڳا ڳوڙها روئڻ|mahaaga dorya rwann|To cry bitterly.|ڏاڍو روئڻ|ناڪاميءَ کان پوءِ هن مهاڳا ڳوڙها رويا۔
+پٿر دل|patthar dil|Hard-hearted.|سخت دل|پٿر دل ماڻهو ڪنهن جو نٿو ٻڌي۔
+صاف دل|saaf dil|Pure-hearted.|صاف دل وارو|هو صاف دل ماڻهو آهي، ڪينه نه رکندو آهي۔
+پنهنجي پير تي ڪهاڙي هڻڻ|panhnje per te kuharri hannan|To harm oneself.|پاڻ کي نقصان پهچائڻ|ڪوڙ چئي هن پنهنجي پير تي ڪهاڙي هنيو۔
+وات جي مٺي|waat jee maththee|Sweet-talker.|مٺڙي ٻولي وارو|وات جي مٺي ماڻهوءَ تي جلدي اعتبار نه ڪريو۔
+
+@alphabet
+ا|alif|alif|آب
+ب|be|be|باغ
+ٻ|bb|bb|ٻار
+ت|te|te|تاريخ
+ٿ|th|th|ٿيلهو
+ٽ|tt|tt|ٽماٽي
+ث|se|se|ثابت
+ج|jim|jim|جسم
+ڄ|jj|jj|ڄنگ
+جھ|jh|jh|جهڳ
+ڃ|nny|nny|ڃاڻ
+چ|che|che|چانهه
+ڇ|chh|chh|ڇت
+ح|he|hhe|حڪيم
+خ|khe|khe|خبر
+د|daal|daal|دري
+ڌ|dh|dh|ڌاڳو
+ڏ|dd|dd|ڏند
+ڊ|ddd|ddd|ڊاڪٽر
+ذ|zhe|zhe|ذکر
+ر|re|re|رنگ
+ڙ|rr|rr|ڙڪ
+ز|ze|ze|زلزلو
+س|sin|sin|سوير
+ش|shin|shin|شام
+ص|suad|suad|صابڻ
+ض|zuad|zuad|ضرورت
+ط|toe|toe|طريقو
+ظ|zoe|zoe|ظالم
+ع|ain|ain|عيد
+غ|ghain|ghain|غريب
+ف|fe|fe|فرش
+ق|qaaf|qaaf|قيمت
+ڪ|kaaf|kaaf|ڪتاب
+ک|kh|kh|کير
+گ|gaaf|gaaf|گهر
+ڳ|gg|gg|ڳوٺ
+ڱ|ng|ng|ڱر
+ل|laam|laam|لفظ
+م|mim|mim|ماني
+ن|nun|nun|نڪ
+ڻ|nn|nn|ڻو
+و|wao|wao|وقت
+ه|he|he|هٿ
+ي|ye|ye|يه
