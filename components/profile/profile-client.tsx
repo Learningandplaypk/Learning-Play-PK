@@ -347,7 +347,7 @@ export function ProfileClient() {
                   <button
                     key={k}
                     type="button"
-                    onClick={() => s.setPlayer({ lang: k })}
+                    onClick={() => setLang(k)}
                     className="filter-chip"
                     aria-pressed={s.lang === k}
                     style={

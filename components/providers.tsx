@@ -8,6 +8,7 @@ import { ToastHost } from "./toast";
 import { LevelUpHost } from "./levelup";
 import { ConsentBanner } from "./consent";
 import { InstallPrompt } from "./install-prompt";
+import { OnboardingSheet } from "./onboarding";
 import { setSfxEnabled } from "@/lib/sfx";
 import { usePlayer } from "@/lib/store";
 import { themeVars } from "@/lib/cosmetics";
@@ -57,6 +58,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           {children}
           <ToastHost />
           <LevelUpHost />
+          <OnboardingSheet />
           <ConsentBanner />
           <InstallPrompt />
         </AuthProvider>

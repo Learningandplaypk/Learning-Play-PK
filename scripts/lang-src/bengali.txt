@@ -1,0 +1,695 @@
+# Bengali (বাংলা) — authored source for data/langs/bengali.json
+# Bengali script, LTR. Romanization: a, aa, i, ii, u, uu, e, oi, o, ou;
+# kh, gh, ch, chh, jh, th, dh, ph, bh, sh, shh, n (retroflex n), r (rr).
+
+@info
+romanization|Roman Bangla: a, aa, i, ii, u, uu, e, oi, o, ou; kh, gh, ch, chh, jh, th, dh, ph, bh, sh, shh, n, rr.
+alphabet.title|বাংলা বর্ণমালা
+alphabet.intro|বাংলায় ১১টি স্বরবর্ণ ও ৩৯টি ব্যঞ্জনবর্ণ আছে; বাঁ থেকে ডানে লেখা হয়।
+
+@frames
+greetings|বলুন: {s}.|Say: {en}.
+numbers|আমার কাছে {s}টা আপেল আছে.|I have {en} apples.
+family|ইনি {s}.|This is my {en}.
+food|আমি {s} পছন্দ করি.|I like {en}.
+travel|{s} কোথায়?|Where is the {en}?
+time|আমি {s} স্কুলে যাই.|I go to school {en}.
+colors|আকাশ {s}.|The sky is {en}.
+body|আমার {s} ব্যথা করছে.|My {en} hurts.
+home|এখানে {s} আছে.|Here is the {en}.
+work|এই {s}.|Here is the {en}.
+school|এই {s}.|Here is the {en}.
+shopping|এই {s}.|Here is the {en}.
+emotions|আমি {s} অনুভব করছি.|I feel {en}.
+verbs|আমি প্রতিদিন {s}.|This means: {en}.
+adjectives|বাড়িটা {s}.|The house is {en}.
+
+@words
+hello|নমস্কার|nomoskar
+goodbye|বিদায়|biday
+good morning|শুভ সকাল|shubho shokal
+good evening|শুভ সন্ধ্যা|shubho shondha
+good night|শুভ রাত্রি|shubho ratri
+thank you|ধন্যবাদ|dhonnobad
+please|অনুগ্রহ করে|onugroho kore
+sorry|দুঃখিত|dukkhito
+excuse me|শুনুন|shunun
+yes|হ্যাঁ|hyae
+no|না|na
+welcome|স্বাগতম|shagotom
+how are you|আপনি কেমন আছেন?|apni kemon achhen
+my name is|আমার নাম|amar naam||আমার নাম রাকিব.|My name is Rakib.
+nice to meet you|আপনার সাথে দেখা হয়ে ভালো লাগল|apnar sathe dekha hoye bhalo laglo
+see you later|পরে দেখা হবে|pore dekha hobe
+good luck|শুভকামনা|shubhokamona
+congratulations|অভিনন্দন|obhinondon
+help|সাহায্য|shahajjo
+of course|অবশ্যই|obosshoi
+zero|শূন্য|shunno||হিসাবে শূন্য লিখুন.|Write a zero in the calculation.
+one|এক|ek
+two|দুই|dui
+three|তিন|tin
+four|চার|char
+five|পাঁচ|pach
+six|ছয়|chhoy
+seven|সাত|shat
+eight|আট|at
+nine|নয়|noy
+ten|দশ|dosh
+eleven|এগারো|egaro
+twelve|বারো|baro
+thirteen|তেরো|tero
+fourteen|চোদ্দ|choddo
+fifteen|পনেরো|ponero
+twenty|বিশ|bish
+thirty|ত্রিশ|trish
+forty|চল্লিশ|chollish
+fifty|পঞ্চাশ|ponchash
+hundred|একশো|eksho
+thousand|হাজার|hajar
+first|প্রথম|prothom||এটা প্রথম পাঠ.|This is the first lesson.
+second|দ্বিতীয়|ditio||এটা দ্বিতীয় ঘর.|This is the second room.
+half|অর্ধেক|ordhek||অর্ধেক গ্লাস জল.|Half a glass of water.
+mother|মা|ma|আমার মা
+father|বাবা|baba|আমার বাবা
+brother|ভাই|bhai|আমার ভাই
+sister|বোন|bon|আমার বোন
+son|ছেলে|chhele|তার ছেলে
+daughter|মেয়ে|meye|তার মেয়ে
+child|শিশু|shishu|এই শিশু
+baby|দুগ্ধপায়ী|dugdhophayi|এই দুগ্ধপায়ী
+family|পরিবার|poribar|আমাদের পরিবার
+husband|স্বামী|shami|তার স্বামী
+wife|স্ত্রী|stri|তার স্ত্রী
+uncle|কাকা|kaka|আমার কাকা
+aunt|কাকি|kaki|আমার কাকি
+grandfather|দাদা|dada|আমার দাদা
+grandmother|দিদিমা|didima|আমার দিদিমা
+cousin|চাচাতো ভাই|chachato bhai|আমার চাচাতো ভাই
+nephew|ভাইপো|bhaipo|তার ভাইপো
+friend|বন্ধু|bondhu|আমার বন্ধু
+neighbour|প্রতিবেশী|protibeshi|আমাদের প্রতিবেশী
+parent|মা-বাবা|ma-baba|আমার মা-বাবা
+water|জল|jol
+bread|রুটি|ruti
+rice|ভাত|bhat
+milk|দুধ|dudh
+tea|চা|cha
+sugar|চিনি|chini
+salt|লবণ|lobon
+egg|ডিম|dim
+meat|মাংস|mangsho
+chicken|মুরগি|murgi
+fish|মাছ|machh
+apple|আপেল|apel
+banana|কলা|kola
+mango|আম|aam
+orange (fruit)|কমলা|komola
+grapes|আঙুর|angur
+lemon|লেবু|lebu
+tomato|টমেটো|tomato
+onion|পেঁয়াজ|peyaj
+potato|আলু|alu
+carrot|গাজর|gajor
+oil|তেল|tel
+butter|মাখন|makhon
+honey|মধু|modhu
+juice|রস|rosh
+coffee|কফি|kophi
+soup|সুপ|sup
+breakfast|সকালের নাস্তা|shokaler nasta
+lunch|দুপুরের খাবার|dupurer khabar
+dinner|রাতের খাবার|rater khabar
+car|গাড়ি|gari
+bus|বাস|bas
+train|ট্রেন|tren
+airplane|বিমান|biman
+bicycle|সাইকেল|saikel
+road|রাস্তা|rasta
+street|গলি|goli
+bridge|সেতু|shetu
+station|স্টেশন|steshon
+airport|বিমানবন্দর|bimanbondor
+ticket|টিকিট|tikit
+map|মানচিত্র|manchitro
+city|শহর|shohor
+village|গ্রাম|gram
+country|দেশ|desh
+hotel|হোটেল|hotel
+journey|যাত্রা|jatra
+luggage|লাগেজ|lagej
+driver|চালক|chalok
+passport|পাসপোর্ট|passport
+time|সময়|shomoy||সময় খুব দ্রুত চলে যায়.|Time passes very quickly.
+day|দিন|din||দিনে দুইবার ওষুধ খান.|Take the medicine twice a day.
+night|রাত|raat||রাতে আকাশ পরিষ্কার থাকে.|The sky is clear at night.
+morning|সকাল|shokal
+evening|সন্ধ্যা|shondha
+week|সপ্তাহ|shoptaho||সপ্তাহে একবার বাজারে যাই.|I go to the market once a week.
+month|মাস|maash||মাসের শেষে বেতন আসে.|The salary comes at the end of the month.
+year|বছর|bochor||বছরে চারটি ঋতু আসে.|Four seasons come in a year.
+hour|ঘণ্টা|ghonta||এক ঘণ্টা আগে আসুন.|Come one hour earlier.
+minute|মিনিট|minit||পাঁচ মিনিট অপেক্ষা করুন.|Wait five minutes.
+today|আজ|aaj
+tomorrow|আগামীকাল|agamikal
+yesterday|গতকাল|gotokal
+now|এখন|ekhon
+later|পরে|pore
+early|তাড়াতাড়ি|taratari
+late|দেরিতে|derite
+always|সবসময়|shobshomoy
+sometimes|মাঝে মাঝে|majhe majhe
+never|কখনো না|kokhono na
+color|রং|rong||এই কাপড়ের রং গাঢ়.|The color of this cloth is dark.
+red|লাল|lal
+blue|নীল|nil
+green|সবুজ|shobuj
+yellow|হলুদ|holud
+black|কালো|kalo
+white|সাদা|shada
+brown|বাদামি|badami
+grey|ধূসর|dhusor
+pink|গোলাপি|golapi
+purple|বেগুনি|beguni
+orange (color)|কমলা রং|komola rong
+body|শরীর|shorir||শরীরের বিশ্রাম দরকার.|The body needs rest.
+head|মাথা|matha
+hair|চুল|chul||আমার চুল কালো.|My hair is black.
+face|মুখ|mukh
+eye|চোখ|chokh||আমার চোখ ব্যথা করছে.|My eye hurts.
+ear|কান|kaan
+nose|নাক|naak||নাক দিয়ে শ্বাস নিন.|Breathe through the nose.
+mouth|মুখের ভিতর|mukher bhitore
+tooth|দাঁত|daat
+tongue|জিভ|jibh||জিভ দিয়ে স্বাদ বোঝা যায়.|The tongue feels the taste.
+neck|গলা|gola||গলা সোজা রাখুন.|Keep the neck straight.
+shoulder|কাঁধ|kadh
+hand|হাত|haat
+finger|আঙুল|angul||আঙুল দিয়ে দেখান.|Point with the finger.
+leg|পা|paa||পায়ে ব্যথা.|There is pain in the leg.
+foot|পায়ের তালু|payer talu
+heart|হৃদয়|hriddoy
+stomach|পেট|pet
+house|বাড়ি|bari
+room|ঘর|ghor
+door|দরজা|dorja
+window|জানালা|janala
+wall|দেয়াল|deyal
+roof|ছাদ|chhad
+floor|মেঝে|mejhe
+kitchen|রান্নাঘর|rannaghor
+bathroom|স্নানঘর|shnanghor
+bed|বিছানা|bichhana
+table|টেবিল|tebil
+chair|চেয়ার|cheyar
+sofa|সোফা|sofa
+lamp|বাতি|bati
+key|চাবি|chabi
+stairs|সিঁড়ি|shiri
+garden|বাগান|bagan
+light|আলো|alo
+fan|পাখা|pakha
+mirror|আয়না|ayna
+work|কাজ|kaaj
+job|চাকরি|chakri
+office|অফিস|ophis
+money|টাকা|taka
+salary|বেতন|beton
+meeting|সভা|shobha
+boss|বস|bos
+employee|কর্মচারী|kormochari
+business|ব্যবসা|bebsha
+company|কোম্পানি|kompani
+market|বাজার|bajar
+shop|দোকান|dokan
+customer|ক্রেতা|kreta
+price|দাম|daam
+farmer|কৃষক|krishok
+doctor|ডাক্তার|daktar
+teacher|শিক্ষক|shikkhok
+police|পুলিশ|pulish
+school|স্কুল|skul
+book|বই|boi
+pen|কলম|kolom
+pencil|পেন্সিল|pensil
+page|পাতা|pata
+class|শ্রেণি|shreni
+student|ছাত্র|chhatro
+lesson|পাঠ|paath
+exam|পরীক্ষা|porikkha
+question|প্রশ্ন|proshno
+answer|উত্তর|uttar
+homework|বাড়ির কাজ|barir kaaj
+library|লাইব্রেরি|laibreri
+university|বিশ্ববিদ্যালয়|bishshobiddaloy
+language|ভাষা|bhasha
+word|শব্দ|shobdo
+sentence|বাক্য|bakko
+dictionary|অভিধান|obhidhan
+science|বিজ্ঞান|biggan
+history|ইতিহাস|itihas
+knowledge|জ্ঞান|ggan
+education|শিক্ষা|shikkha
+shopping|কেনাকাটা|kenakata||আজ সন্ধ্যায় কেনাকাটা করতে হবে.|We have to go shopping tonight.
+buy|কেনা|kena||সে সবজি কিনছে.|He is buying vegetables.
+sell|বিক্রি করা|bikri kora||কৃষক বাজারে ফল বিক্রি করে.|The farmer sells fruit at the market.
+cheap|সস্তা|shoshtha||এই কাপড় সস্তা.|This cloth is cheap.
+expensive|দামি|dami||ফোন দামি.|The phone is expensive.
+coin|মুদ্রা|mudra
+note|নোট|note
+bill|বিল|bill
+size|সাইজ|saiz
+discount|ছাড়|chhaar
+receipt|রসিদ|roshid
+bag|ব্যাগ|byag
+rupee|টাকা|taka note
+weigh|ওজন করা|ojon kora||দোকানদার সবজি ওজন করে.|The shopkeeper weighs the vegetables.
+pay|পরিশোধ করা|porishodh kora||কার্ড দিয়ে পরিশোধ করুন.|Pay by card.
+happiness|আনন্দ|anondo
+sadness|দুঃখ|dukkho
+anger|রাগ|raag
+fear|ভয়|bhoy
+love|ভালোবাসা|bhalobasha
+hope|আশা|aasha
+worry|চিন্তা|chinta
+surprise|অবাক|obak
+peace|শান্তি|shanti
+smile|হাসি|hushi
+laugh|হাসা|husha
+crying|কান্না|kanna
+mood|মেজাজ|mejaj
+brave|সাহসী|shahoshi||সে একজন সাহসী ছেলে.|He is a brave boy.
+lonely|একাকী|ekaki||সে একাকী বোধ করে.|He feels lonely.
+to eat|খাওয়া|khaoya|খাই
+to drink|পান করা|pan kora|পান করি
+to go|যাওয়া|jaoya|যাই
+to come|আসা|asha|আসি
+to see|দেখা|dekha|দেখি
+to hear|শোনা|shona|শুনি
+to speak|বলা|bola|বলি
+to read|পড়া|pora|পড়ি
+to write|লেখা|lekha|লিখি
+to learn|শেখা|shekha|শিখি
+to teach|শেখানো|shekhano|শেখাই
+to sleep|ঘুমানো|ghumano|ঘুমাই
+to wake up|জাগা|jaga|জাগি
+to run|দৌড়ানো|dourano|দৌড়াই
+to walk|হাঁটা|hata|হাঁটি
+to open|খোলা|khola|খুলি
+to close|বন্ধ করা|bondho kora|বন্ধ করি
+to give|দেওয়া|deoya|দিই
+to take|নেওয়া|neoya|নিই
+to make|তৈরি করা|toiri kora|তৈরি করি
+to love|ভালোবাসা|bhalobasha kora|ভালোবাসি
+to think|ভাবা|bhaba|ভাবি
+to understand|বোঝা|bujha|বুঝি
+to work|কাজ করা|kaaj kora|কাজ করি
+to wait|অপেক্ষা করা|opekkha kora|অপেক্ষা করি
+big|বড়|boro
+small|ছোট|chhoto
+new|নতুন|notun
+old|পুরনো|purono
+good|ভালো|bhalo
+bad|খারাপ|kharap
+beautiful|সুন্দর|shundor
+hot|গরম|gorom||আজ আবহাওয়া খুব গরম.|It is very hot today.
+cold|ঠান্ডা|thanda||জল ঠান্ডা.|The water is cold.
+fast|দ্রুত|druto
+slow|ধীর|dhiro
+easy|সহজ|shohojo
+difficult|কঠিন|kothin
+long|লম্বা|lomba
+short|খাটো|khato
+clean|পরিষ্কার|porishkar
+dirty|নোংরা|nongra
+happy|খুশি|khushi||শিশুরা খুব খুশি.|The children are very happy.
+tired|ক্লান্ত|klanto||আজ আমি ক্লান্ত.|I am tired today.
+hungry|ক্ষুধার্ত|khudharto||শিশুটি ক্ষুধার্ত.|The child is hungry.
+
+@phrases
+নমস্কার!|nomoskar|Hello!|নমস্কার!|greeting
+বিদায়!|biday|Goodbye!|বিদায়!|greeting
+শুভ সকাল!|shubho shokal|Good morning!|শুভ সকাল!|greeting
+শুভ সন্ধ্যা!|shubho shondha|Good evening!|শুভ সন্ধ্যা!|greeting
+শুভ রাত্রি!|shubho ratri|Good night!|শুভ রাত্রি!|greeting
+আপনি কেমন আছেন?|apni kemon achhen|How are you? (formal)|আপনি কেমন আছেন?|smalltalk
+আমি ভালো আছি, ধন্যবাদ.|ami bhalo achhi dhonnobad|I am fine, thank you.|আমি ভালো আছি, ধন্যবাদ.|smalltalk
+অনেক ধন্যবাদ!|onek dhonnobad|Thank you very much!|অনেক ধন্যবাদ!|polite
+কিছু মনে করবেন না.|kichhu mone korben na|No problem.|কিছু মনে করবেন না.|polite
+দুঃখিত!|dukkhito|Sorry!|দুঃখিত!|polite
+আমি দুঃখিত.|ami dukkhito|I am sorry.|আমি দুঃখিত.|polite
+কোনো সমস্যা নেই.|kono shomossha nei|No problem.|কোনো সমস্যা নেই.|polite
+আপনার নাম কী?|apnar naam ki|What is your name?|আপনার নাম কী?|smalltalk
+আমার নাম মিতু.|amar naam mitu|My name is Mitu.|আমার নাম মিতু.|smalltalk
+আপনি কোথা থেকে এসেছেন?|apni kotha theke eshechhen|Where are you from?|আপনি কোথা থেকে এসেছেন?|smalltalk
+আমি ঢাকা থেকে এসেছি.|ami dhaka theke eshechhi|I am from Dhaka.|আমি ঢাকা থেকে এসেছি.|smalltalk
+আপনি কি ইংরেজি বলেন?|apni ki ingreji bolen|Do you speak English?|আপনি কি ইংরেজি বলেন?|smalltalk
+আমি বাংলা শিখতে চাই.|ami bangla shikhte chai|I want to learn Bangla.|আমি বাংলা শিখতে চাই.|school
+আমি বুঝতে পারিনি.|ami bujhte parini|I did not understand.|আমি বুঝতে পারিনি.|school
+আস্তে বলুন.|aashte bolun|Please speak slowly.|আস্তে বলুন.|polite
+এর মানে কী?|er mane ki|What does it mean?|এর মানে কী?|school
+এটার দাম কত?|etar daam koto|How much is it?|এটার দাম কত?|shopping
+আমি এটা চাই.|ami eta chai|I want this.|আমি এটা চাই.|shopping
+আপনার কাছে ছোট সাইজ আছে?|apnar kachhe chhoto saiz achhe|Do you have a smaller size?|আপনার কাছে ছোট সাইজ আছে?|shopping
+বিল দিন, ধন্যবাদ.|bill din dhonnobad|The bill, please.|বিল দিন, ধন্যবাদ.|shopping
+আমি কার্ডে পরিশোধ করব.|ami karde porishodh korbo|I will pay by card.|আমি কার্ডে পরিশোধ করব.|shopping
+স্টেশন কোথায়?|steshon kothay|Where is the station?|স্টেশন কোথায়?|travel
+শৌচাগার কোথায়?|shouchagar kothay|Where is the toilet?|শৌচাগার কোথায়?|travel
+এই বাস কি চট্টগ্রাম যায়?|ei bas ki chattogram jay|Does this bus go to Chattogram?|এই বাস কি চট্টগ্রাম যায়?|travel
+ট্রেন কখন ছাড়ে?|tren kokhon chhare|When does the train leave?|ট্রেন কখন ছাড়ে?|travel
+আমি পথ হারিয়ে ফেলেছি.|ami poth hariye phelechhi|I have lost my way.|আমি পথ হারিয়ে ফেলেছি.|travel
+আপনি কি সাহায্য করতে পারেন?|apni ki shahajjo korte paren|Can you help?|আপনি কি সাহায্য করতে পারেন?|polite
+আমার ডাক্তার দরকার.|amar daktar dorkar|I need a doctor.|আমার ডাক্তার দরকার.|health
+আমার শরীর ভালো নেই.|amar shorir bhalo nei|I am not feeling well.|আমার শরীর ভালো নেই.|health
+ঔষধের দোকান কোথায়?|oushudher dokan kothay|Where is the pharmacy?|ঔষধের দোকান কোথায়?|health
+আমার মাথা ব্যথা করছে.|amar matha byatha korche|I have a headache.|আমার মাথা ব্যথা করছে.|health
+এক কাপ চা দিন.|ek kap cha din|A cup of tea, please.|এক কাপ চা দিন.|food
+মেনু দিন.|menu din|Show me the menu.|মেনু দিন.|food
+খুব সুস্বাদু.|khub shushbadu|It is very tasty.|খুব সুস্বাদু.|food
+আমি নিরামিষাশী.|ami niramisashi|I am a vegetarian.|আমি নিরামিষাশী.|food
+আমার খিদে পেয়েছে.|amar khidhe peyechhe|I am hungry.|আমার খিদে পেয়েছে.|food
+আমি মাংস খাই না.|ami mangsho khai na|I don't eat meat.|আমি মাংস খাই না.|food
+জল ঠান্ডা.|jol thanda|The water is cold.|জল ঠান্ডা.|food
+আজ আবহাওয়া খুব ভালো.|aaj abohawa khub bhalo|The weather is nice today.|আজ আবহাওয়া খুব ভালো.|smalltalk
+আমি অফিসে কাজ করি.|ami ophise kaaj kori|I work in an office.|আমি অফিসে কাজ করি.|work
+আপনি কোথায় কাজ করেন?|apni kothay kaaj koren|Where do you work?|আপনি কোথায় কাজ করেন?|work
+আমার বেতন মাসের শেষে আসে.|amar beton masher sheshe ashe|The salary comes at month end.|আমার বেতন মাসের শেষে আসে.|work
+আগামীকাল আমার সভা আছে.|agamikal amar shobha achhe|I have a meeting tomorrow.|আগামীকাল আমার সভা আছে.|work
+আমি বিশ্ববিদ্যালয়ে পড়ি.|ami bishshobiddaloye pori|I study at the university.|আমি বিশ্ববিদ্যালয়ে পড়ি.|school
+ক্লাস কখন শুরু হয়?|class kokhon shuru hoy|When does the class start?|ক্লাস কখন শুরু হয়?|school
+পরীক্ষা সহজ ছিল.|porikkha shohojo chhilo|The exam was easy.|পরীক্ষা সহজ ছিল.|school
+আমি বই পড়তে পছন্দ করি.|ami boi porte pochchondo kori|I like reading books.|আমি বই পড়তে পছন্দ করি.|school
+এটা নতুন শব্দ.|eta notun shobdo|This word is new.|এটা নতুন শব্দ.|school
+আমি প্রতিদিন বাংলা শিখি.|ami protidin bangla shikhi|I learn Bangla every day.|আমি প্রতিদিন বাংলা শিখি.|school
+আজ সোমবার.|aaj shombar|Today is Monday.|আজ সোমবার.|time
+কটা বাজে?|kota baje|What time is it?|কটা বাজে?|time
+আমার সময় নেই.|amar shomoy nei|I have no time.|আমার সময় নেই.|time
+আমি ছয়টায় আসব.|ami chhoytay ashbo|I will come at six.|আমি ছয়টায় আসব.|time
+রবিবার আমি ফ্রি.|robibar ami phri|I am free on Sunday.|রবিবার আমি ফ্রি.|time
+ইনি আমার মা.|ini amar ma|This is my mother.|ইনি আমার মা.|family
+আমার বাবা অনেক কাজ করেন.|amar baba onek kaaj koren|My father works a lot.|আমার বাবা অনেক কাজ করেন.|family
+আমার বোন ডাক্তার.|amar bon daktar|My sister is a doctor.|আমার বোন ডাক্তার.|family
+আমাদের পরিবার বড়.|amader poribar boro|Our family is big.|আমাদের পরিবার বড়.|family
+শিশুটি বাগানে খেলে.|shishuti bagane khele|The child plays in the garden.|শিশুটি বাগানে খেলে.|family
+আমার বাড়ি ছোট.|amar bari chhoto|My house is small.|আমার বাড়ি ছোট.|home
+রান্নাঘর পরিষ্কার.|rannaghor porishkar|The kitchen is clean.|রান্নাঘর পরিষ্কার.|home
+জানালা খোলা.|janala khola|The window is open.|জানালা খোলা.|home
+আমি দরজা বন্ধ করি.|ami dorja bondho kori|I close the door.|আমি দরজা বন্ধ করি.|home
+বিদ্যুৎ চলে গেছে.|biddut chole gechhe|The power has gone out.|বিদ্যুৎ চলে গেছে.|home
+আমি এখন ঘুমাতে যাই.|ami ekhon ghumate jai|I am going to sleep now.|আমি এখন ঘুমাতে যাই.|home
+আমার পাসপোর্ট কোথায়?|amar passport kothay|Where is my passport?|আমার পাসপোর্ট কোথায়?|travel
+ফ্লাইট দেরিতে আছে.|phlait derite achhe|The flight is delayed.|ফ্লাইট দেরিতে আছে.|travel
+লাগেজ খুব ভারী.|lagej khub bhari|The luggage is very heavy.|লাগেজ খুব ভারী.|travel
+যাত্রা শুভ হোক!|jatra shubho hok|Have a good trip!|যাত্রা শুভ হোক!|travel
+আমার দুই রাতের জন্য ঘর দরকার.|amar dui rater jonno ghor dorkar|I need a room for two nights.|আমার দুই রাতের জন্য ঘর দরকার.|travel
+সোজা যান.|shoja jaan|Go straight ahead.|সোজা যান.|travel
+বাম দিকে ঘুরুন.|baam dike ghurun|Turn left.|বাম দিকে ঘুরুন.|travel
+বাজার কোথায়?|bajar kothay|Where is the market?|বাজার কোথায়?|shopping
+দাম অনেক বেশি.|daam onek beshi|The price is too high.|দাম অনেক বেশি.|shopping
+একটু ছাড় দিন.|ektu chhaar din|Give a little discount.|একটু ছাড় দিন.|shopping
+আমি শুধু দেখছি.|ami shudhu dekhchhi|I am just looking.|আমি শুধু দেখছি.|shopping
+রসিদ দিন.|roshid din|Please give the receipt.|রসিদ দিন.|shopping
+খাবার গ্রহণ করুন!|khabar grohon korun|Enjoy your meal!|খাবার গ্রহণ করুন!|food
+খাওয়ার পরে চা খাই.|khaoyar pore cha khai|We drink tea after the meal.|খাওয়ার পরে চা খাই.|food
+আমাকে ঠান্ডা জল দিন.|amake thanda jol din|Give me cold water.|আমাকে ঠান্ডা জল দিন.|food
+চিন্তা করবেন না.|chinta korben na|Don't worry.|চিন্তা করবেন না.|emotion
+আমি আপনার জন্য গর্বিত.|ami apnar jonno gorbito|I am proud of you.|আমি আপনার জন্য গর্বিত.|emotion
+শুনে ভালো লাগল.|shune bhalo laglo|I am glad to hear that.|শুনে ভালো লাগল.|emotion
+আমার ভয় করছে.|amar bhoy korche|I am scared.|আমার ভয় করছে.|emotion
+আপনাকে দেখে ভালো লাগল.|apnake dekhe bhalo laglo|Good to see you.|আপনাকে দেখে ভালো লাগল.|smalltalk
+অভিনন্দন!|obhinondon|Congratulations!|অভিনন্দন!|greeting
+স্বাগতম!|shagotom|Welcome!|স্বাগতম!|greeting
+তাড়াতাড়ি সুস্থ হোন!|taratari shustho hon|Get well soon!|তাড়াতাড়ি সুস্থ হোন!|health
+এক মুহূর্ত, অনুগ্রহ করে.|ek muhurto onugroho kore|One moment, please.|এক মুহূর্ত, অনুগ্রহ করে.|polite
+আমি এখনই আসছি.|ami ekhoni ashchhi|I'll be right there.|আমি এখনই আসছি.|smalltalk
+আমি জানি না.|ami jani na|I don't know.|আমি জানি না.|smalltalk
+হয়তো পরে|hoyto pore|Maybe later.|হয়তো পরে.|smalltalk
+আমি একমত.|ami ekmot|I agree.|আমি একমত.|smalltalk
+এটা ঠিক নয়.|eta thik noy|That is not right.|এটা ঠিক নয়.|smalltalk
+আপনি আজ কী করছেন?|apni aaj ki korchen|What are you doing today?|আপনি আজ কী করছেন?|smalltalk
+আমি পরীক্ষার প্রস্তুতি নিচ্ছি.|ami porikkhar prostuti nichchhi|I am preparing for the exam.|আমি পরীক্ষার প্রস্তুতি নিচ্ছি.|school
+আমার সাহায্য দরকার.|amar shahajjo dorkar|I need help.|আমার সাহায্য দরকার.|polite
+আপনার সাহায্যের জন্য ধন্যবাদ.|apnar shahajjer jonno dhonnobad|Thank you for your help.|আপনার সাহায্যের জন্য ধন্যবাদ.|polite
+এটা প্রথমবার.|eta prothombar|This is the first time.|এটা প্রথমবার.|smalltalk
+টাকা কোথায় ভাঙাব?|taka kothay bhangabo|Where can I exchange money?|টাকা কোথায় ভাঙাব?|travel
+বাস আটটায় আসে.|bas attay ashe|The bus comes at eight.|বাস আটটায় আসে.|travel
+আমার ট্রেন ছেড়ে গেছে.|amar tren chhere gechhe|I missed my train.|আমার ট্রেন ছেড়ে গেছে.|travel
+হোটেল খুব ভালো.|hotel khub bhalo|The hotel is very good.|হোটেল খুব ভালো.|travel
+আপনার পেশা কী?|apnar pesha ki|What is your job?|আপনার পেশা কী?|work
+আমি ইঞ্জিনিয়ার.|ami injiniyar|I am an engineer.|আমি ইঞ্জিনিয়ার.|work
+সে সবসময় সাহায্য করে.|she shobshomoy shahajjo kore|She always helps.|সে সবসময় সাহায্য করে.|smalltalk
+আমরা একসাথে শিখি.|amra ekshathe shikhi|We learn together.|আমরা একসাথে শিখি.|school
+আমার বাংলা উন্নত হচ্ছে.|amar bangla unnoto hochchhe|My Bangla is improving.|আমার বাংলা উন্নত হচ্ছে.|school
+আকাশ নীল.|akash nil|The sky is blue.|আকাশ নীল.|smalltalk
+আমার প্রিয় রং সবুজ.|amar priyo rong shobuj|My favourite color is green.|আমার প্রিয় রং সবুজ.|smalltalk
+লাল গাড়ি দ্রুত.|lal gari druto|The red car is fast.|লাল গাড়ি দ্রুত.|smalltalk
+রাত শান্ত.|raat shanto|The night is calm.|রাত শান্ত.|time
+আজ বৃষ্টি হচ্ছে.|aaj brishthi hochchhe|It is raining today.|আজ বৃষ্টি হচ্ছে.|smalltalk
+সূর্য উজ্জ্বল.|shurjo ujjol|The sun is bright.|সূর্য উজ্জ্বল.|smalltalk
+সাবাস!|shabash|Well done!|সাবাস!|smalltalk
+আপনার সাথে দেখা হয়ে ভালো লাগল.|apnar sathe dekha hoye bhalo laglo|Nice to meet you.|আপনার সাথে দেখা হয়ে ভালো লাগল.|greeting
+আবার দেখা হবে.|abar dekha hobe|We will meet again.|আবার দেখা হবে.|greeting
+দুঃখিত, আপনি কী বললেন?|dukkhito apni ki bollen|Pardon, what did you say?|দুঃখিত, আপনি কী বললেন?|polite
+আবার বলুন.|abar bolun|Please say it again.|আবার বলুন.|polite
+বানান বলুন.|banan bolun|Please spell it.|বানান বলুন.|school
+আমি চা খুব পছন্দ করি.|ami cha khub pochchondo kori|I love tea.|আমি চা খুব পছন্দ করি.|food
+খাবার তৈরি.|khabar toiri|The food is ready.|খাবার তৈরি.|food
+প্লেটে আরও খাবার দিন.|platee aro khabar din|Put more food on the plate.|প্লেটে আরও খাবার দিন.|food
+এই কাপড় ভালো.|ei kapar bhalo|This cloth is good.|এই কাপড় ভালো.|shopping
+দোকান বন্ধ হয়ে গেছে.|dokan bondho hoye gechhe|The shop is closed.|দোকান বন্ধ হয়ে গেছে.|shopping
+আমি প্রতিদিন বাজারে যাই.|ami protidin bajare jai|I go to the market every day.|আমি প্রতিদিন বাজারে যাই.|shopping
+গাড়ি রাস্তায়.|gari rastay|The car is on the road.|গাড়ি রাস্তায়.|travel
+সেতুর কাছে ঘুরুন.|shetur kachhe ghurun|Turn near the bridge.|সেতুর কাছে ঘুরুন.|travel
+শহর অনেক বড়.|shohor onek boro|The city is very big.|শহর অনেক বড়.|travel
+গ্রামে শান্তি আছে.|grame shanti achhe|There is peace in the village.|গ্রামে শান্তি আছে.|travel
+আমি ছাত্র.|ami chhatro|I am a student.|আমি ছাত্র.|school
+তিনি ভালো শিক্ষক.|tini bhalo shikkhok|He is a good teacher.|তিনি ভালো শিক্ষক.|school
+প্রশ্ন কঠিন.|proshno kothin|The question is difficult.|প্রশ্ন কঠিন.|school
+উত্তর ঠিক.|uttar thik|The answer is correct.|উত্তর ঠিক.|school
+বই টেবিলে.|boi tebile|The book is on the table.|বই টেবিলে.|school
+বিছানা নরম.|bichhana norom|The bed is soft.|বিছানা নরম.|home
+চাবি হারিয়ে গেছে.|chabi hariye gechhe|The key is lost.|চাবি হারিয়ে গেছে.|home
+বাগানে ফুল আছে.|bagane phul achhe|There are flowers in the garden.|বাগানে ফুল আছে.|home
+ঘর উজ্জ্বল.|ghor ujjol|The room is bright.|ঘর উজ্জ্বল.|home
+সিঁড়ি দিয়ে উঠুন.|shiri diye uthun|Go up the stairs.|সিঁড়ি দিয়ে উঠুন.|home
+
+@grammar
+"বই" শব্দটি ___ .|বিশেষ্য|ক্রিয়া|বিশেষণ|1|"Boi" (book) is a noun.|"Boi" is a noun.
+"সুন্দর" শব্দটি ___ .|বিশেষণ|বিশেষ্য|ক্রিয়া|1|"Shundor" describes a noun → adjective.|"Shundor" is an adjective.
+"যাই" শব্দটি ___ .|ক্রিয়া|বিশেষ্য|বিশেষণ|1|"Jai" = I go → verb.|"Jai" is a verb.
+বাংলায় লিঙ্গ ___ .|নেই|আছে|শুধু পুরুষবাচক|1|Bangla nouns have no grammatical gender.|Bangla has no noun gender.
+"আমি ___ ."|যাই|যায়|যান|1|First person present: আমি যাই.|"Ami" takes the plain verb stem.
+"তুমি ___ ."|যাও|যাই|যান|1|Second person familiar: তুমি যাও.|"Tumi" takes "-o".
+"আপনি ___ ."|যান|যাও|যাই|1|Respectful: আপনি যান.|"Apni" takes "-en".
+"সে ___ ."|যায়|যাই|যান|1|Third person: সে যায়.|"She" takes "-ay".
+বর্তমান কাল: "সে ___ ."|খাচ্ছে|খেয়েছে|খাবে|1|Present continuous: সে খাচ্ছে.|"Chchhe" makes the present continuous.
+অতীত কাল: "সে ___ ."|খেয়েছে|খাচ্ছে|খাবে|1|Past: সে খেয়েছে.|"Eyechhe" is the past.
+ভবিষ্যৎ কাল: "সে ___ ."|খাবে|খাচ্ছে|খেয়েছে|1|Future: সে খাবে.|"Abe" is the future.
+নেতিবাচক বাক্যে ___ বসে.|না|নেই|নয়|1|"Na" goes after the verb: আমি যাই না.|"Na" follows the verb.
+"নেই" ___ বোঝায়.|অনুপস্থিতি|ক্রিয়া|বিশেষণ|1|"Nei" = there is not.|"Nei" expresses absence.
+হ্যাঁ/না প্রশ্নে ___ বসে.|কি|কেন|কোথায়|1|"Ki" makes yes/no questions.|Haan/na ka sawaal banane ke liye 'ki' lagate hain.
+"কোথায়" ___ জিজ্ঞাসা করে.|স্থান|সময়|কারণ|1|"Kothay" = where.|"Kothay" asks place.
+"কখন" ___ জিজ্ঞাসা করে.|সময়|স্থান|কারণ|1|"Kokhon" = when.|"Kokhon" asks time.
+"কেন" ___ জিজ্ঞাসা করে.|কারণ|সময়|স্থান|1|"Keno" = why.|"Keno" asks reason.
+"কত" ___ জিজ্ঞাসা করে.|পরিমাণ|স্থান|সময়|1|"Koto" = how much.|"Koto" asks amount.
+"কয়টা" ___ জিজ্ঞাসা করে.|সংখ্যা|পরিমাণ|সময়|1|"Koyta" = how many.|"Koyta" asks the number.
+"কে" ___ জিজ্ঞাসা করে.|ব্যক্তি|বস্তু|স্থান|1|"Ke" = who.|"Ke" asks who.
+"কী" ___ জিজ্ঞাসা করে.|বস্তু|ব্যক্তি|স্থান|1|"Ki" = what (thing).|"Ki" asks what.
+"কীভাবে" ___ জিজ্ঞাসা করে.|উপায়|স্থান|সময়|1|"Kibhabe" = how.|"Kibhabe" asks how.
+"তে/য়" ___ বোঝায়.|অবস্থান|দিক|সময়|1|"Te/-y" marks location: ঘরে, স্কুলে.|"Te" marks place.
+"কে" ___ বোঝায়.|কর্মপদ|কর্তা|অবস্থান|1|"Ke" marks the object: বইকে.|The object marker is "ke".
+"এর" ___ বোঝায়.|মালিকানা|সময়|স্থান|1|"Er" = of: আমার বইয়ের.|The possessive is "-er".
+"থেকে" ___ বোঝায়.|উৎস|গন্তব্য|সময়|1|"Theke" = from: ঢাকা থেকে.|"Theke" marks origin.
+"দিয়ে" ___ বোঝায়.|মাধ্যম|উৎস|সময়|1|"Diye" = by/with: কার্ড দিয়ে.|"Diye" marks means.
+"জন্য" ___ বোঝায়.|উদ্দেশ্য|উৎস|সময়|1|"Jonno" = for: তোমার জন্য.|"Jonno" means "for".
+"পর" ___ বোঝায়.|পরে|আগে|ভিতরে|1|"Por" = after: খাওয়ার পর.|"Por" means "after".
+"আগে" ___ বোঝায়.|আগে|পরে|ভিতরে|1|"Aage" = before.|"Aage" means "before".
+"পর্যন্ত" ___ বোঝায়.|সীমা|শুরু|উদ্দেশ্য|1|"Porjonto" = until.|"Porjonto" marks the limit.
+"উপর" ___ বোঝায়.|উপরে|নিচে|পাশে|1|"Upor" = on: টেবিলের উপর.|"Upor" means "on".
+"নিচে" ___ বোঝায়.|নিচে|উপরে|পাশে|1|"Niche" = under.|"Niche" means "under".
+"কাছে" ___ বোঝায়.|নিকটে|দূরে|ভিতরে|1|"Kachhe" = near.|"Kachhe" means "near".
+"এখানে" ___ বোঝায়.|এই স্থান|সেই স্থান|সময়|1|"Ekhane" = here.|"Ekhane" means "here".
+"সেখানে" ___ বোঝায়.|সেই স্থান|এই স্থান|সময়|1|"Shekhane" = there.|"Shekhane" means "there".
+"এই" ___ বোঝায়.|কাছের|দূরের|সময়|1|"Ei" = this.|"Ei" means "this".
+"সেই" ___ বোঝায়.|দূরের|কাছের|সময়|1|"Shei" = that.|"Shei" means "that".
+শব্দক্রম: বাংলায় ক্রিয়া ___ আসে.|শেষে|শুরুতে|মাঝে|1|Bangla is SOV — the verb is last.|The verb comes at the end.
+বিশেষণ ___ আগে বসে.|বিশেষ্যের|ক্রিয়ার|সর্বনামের|1|Adjectives precede the noun: বড় বাড়ি.|Adjectives come first.
+"বড় বাড়ি"-তে "বড়" ___ .|বিশেষণ|বিশেষ্য|ক্রিয়া|1|"Boro" describes "bari".|"Boro" is an adjective.
+"দ্রুত হাঁটা"-তে "দ্রুত" ___ .|ক্রিয়াবিশেষণ|বিশেষ্য|বিশেষণ|1|"Druto" modifies the verb.|It is an adverb.
+তুলনামূলক: "এটা ওটার ___ বড়."|চেয়ে|জন্য|থেকে|1|Comparison uses "cheye".|Tulna ke liye 'cheye' lagate hain.
+সর্বোচ্চ: "সব ___ বড়"|চেয়ে|জন্য|থেকে|1|Superlative: সবচেয়ে বড়.|Superlative = "shobcheye".
+"এবং" ___ বোঝায়.|যোগ|বিপরীত|কারণ|1|"Ebong" = and.|"Ebong" means "and".
+"কিন্তু" ___ বোঝায়.|বিপরীত|যোগ|কারণ|1|"Kintu" = but.|"Kintu" means "but".
+"কারণ" ___ বোঝায়.|হেতু|সময়|স্থান|1|"Karon" = because.|"Karon" gives the reason.
+"যদি" ___ তৈরি করে.|শর্ত|অতীত|বহুবচন|1|"Jodi" = if.|"Jodi" makes a condition.
+"যখন" ___ বোঝায়.|সময়|স্থান|মালিকানা|1|"Jokhon" = when.|"Jokhon" refers to time.
+"খুব" ___ .|ক্রিয়াবিশেষণ|বিশেষ্য|সর্বনাম|1|"Khub" = very.|"Khub" is an adverb.
+"সব" ___ বোঝায়.|সবাই|কেউ না|কিছু|1|"Sob" = all.|"Sob" means "all".
+"কেউ" ___ বোঝায়.|কেউ একজন|সব|কেউ না|1|"Keu" = someone/anyone.|"Keu" means "anyone".
+"কিছু" ___ বোঝায়.|কিছু|সব|কেউ না|1|"Kichhu" = some.|"Kichhu" means "some".
+"প্রতি" ___ বোঝায়.|প্রত্যেক|কেউ না|কিছু|1|"Proti" = every.|"Proti" means "every".
+"দিনে" ___ বোঝায়.|সময়|স্থান|মালিকানা|1|"Dine" = during the day.|"Dine" means "during the day".
+"রাতে" ___ বোঝায়.|সময়|স্থান|মালিকানা|1|"Rate" = at night.|"Rate" means "at night".
+"আগামীকাল" ___ .|আগামী দিন|আজ|গতকাল|1|"Agamikal" = tomorrow.|"Agamikal" means "tomorrow".
+"গতকাল" ___ .|গত দিন|আগামীকাল|আজ|1|"Gotokal" = yesterday.|"Gotokal" means "yesterday".
+"এখন" ___ .|এখন|পরে|আগে|1|"Ekhon" = now.|"Ekhon" means "now".
+"সবসময়" ___ .|সব সময়|মাঝে মাঝে|কখনো না|1|"Shobshomoy" = always.|"Shobshomoy" means "always".
+"ধন্যবাদ" ___ বোঝায়.|কৃতজ্ঞতা|ক্ষমা|স্বাগত|1|"Dhonnobad" = thank you.|"Dhonnobad" is thanks.
+"স্বাগতম" ___ বোঝায়.|স্বাগত|বিদায়|কৃতজ্ঞতা|1|"Shagotom" = welcome.|"Shagotom" greets a guest.
+"হ্যাঁ" ___ .|হ্যাঁ|না|হয়তো|1|"Hyae" = yes.|"Hyae" means "yes".
+"না" ___ .|না|হ্যাঁ|হয়তো|1|"Na" = no.|"Na" means "no".
+
+@sentences
+আমি প্রতিদিন সকালে চা খাই.|I drink tea every morning.|আমি প্রতিদিন সকালে চা খাই.
+আমার ভাই জার্মান শিখছে.|My brother is learning German.|আমার ভাই জার্মান শিখছে.
+আমরা রবিবার চট্টগ্রাম যাচ্ছি.|We are going to Chattogram on Sunday.|আমরা রবিবার চট্টগ্রাম যাচ্ছি.
+বইটা টেবিলের উপর রাখা.|The book is kept on the table.|বইটা টেবিলের উপর রাখা.
+সে গতকাল একটি চিঠি লিখেছে.|He wrote a letter yesterday.|সে গতকাল একটি চিঠি লিখেছে.
+আপনি কি আমাকে সাহায্য করতে পারেন?|Can you help me?|আপনি কি আমাকে সাহায্য করতে পারেন?
+আমি দুই কাপ কফি আর এক গ্লাস জল চাই.|I want two coffees and a glass of water.|আমি দুই কাপ কফি আর এক গ্লাস জল চাই.
+ট্রেন আটটায় ছাড়ে.|The train leaves at eight.|ট্রেন আটটায় ছাড়ে.
+আমার মা আজ মাছ রান্না করছেন.|My mother is cooking fish today.|আমার মা আজ মাছ রান্না করছেন.
+সে তিনটি ভাষায় সাবলীল.|He speaks three languages fluently.|সে তিনটি ভাষায় সাবলীল.
+আমাদের বাড়ি ছোট কিন্তু পরিষ্কার.|Our house is small but clean.|আমাদের বাড়ি ছোট কিন্তু পরিষ্কার.
+আমি প্রশ্নটি পুরো বুঝতে পারিনি.|I did not fully understand the question.|আমি প্রশ্নটি পুরো বুঝতে পারিনি.
+আজ আবহাওয়া খুব সুন্দর.|The weather is really lovely today.|আজ আবহাওয়া খুব সুন্দর.
+আগামীকাল আমাকে তাড়াতাড়ি উঠতে হবে.|Tomorrow I have to get up early.|আগামীকাল আমাকে তাড়াতাড়ি উঠতে হবে.
+সে হাসপাতালে কাজ করে.|She works in a hospital.|সে হাসপাতালে কাজ করে.
+আমরা স্কুলের সামনে দেখা করি.|We meet in front of the school.|আমরা স্কুলের সামনে দেখা করি.
+সে ফোন বাড়িতে ভুলে গেছে.|He forgot his phone at home.|সে ফোন বাড়িতে ভুলে গেছে.
+আমি আজ অফিসে যাচ্ছি না.|I am not going to the office today.|আমি আজ অফিসে যাচ্ছি না.
+শিশুরা বাগানে ফুটবল খেলছে.|The children are playing football in the garden.|শিশুরা বাগানে ফুটবল খেলছে.
+আপনি কি জানালা খুলতে পারেন?|Can you open the window?|আপনি কি জানালা খুলতে পারেন?
+আজ আমার অনেক কাজ আছে.|I have a lot of work today.|আজ আমার অনেক কাজ আছে.
+আমার বাবা খবরের কাগজ পড়তে ভালোবাসেন.|My father likes reading newspapers.|আমার বাবা খবরের কাগজ পড়তে ভালোবাসেন.
+খাবার সত্যিই খুব সুস্বাদু.|The food is really tasty.|খাবার সত্যিই খুব সুস্বাদু.
+আমরা এক ঘণ্টা ধরে অপেক্ষা করছি.|We have been waiting for an hour.|আমরা এক ঘণ্টা ধরে অপেক্ষা করছি.
+আমি কাজের জন্য বাংলা শিখি.|I learn Bangla for my job.|আমি কাজের জন্য বাংলা শিখি.
+সে একটি ছোট শহর থেকে এসেছে.|She is from a small town.|সে একটি ছোট শহর থেকে এসেছে.
+আমি বাজার থেকে রুটি আর দুধ আনি.|I bring bread and milk from the market.|আমি বাজার থেকে রুটি আর দুধ আনি.
+সে বাসে অফিসে যায়.|He goes to the office by bus.|সে বাসে অফিসে যায়.
+আমরা গতকাল একটি ছবি দেখেছি.|We watched a film yesterday.|আমরা গতকাল একটি ছবি দেখেছি.
+আজ সন্ধ্যায় আমি বার্তা পাঠাব.|I will send you a message this evening.|আজ সন্ধ্যায় আমি বার্তা পাঠাব.
+হোটেল স্টেশন থেকে বেশি দূরে নয়.|The hotel is not far from the station.|হোটেল স্টেশন থেকে বেশি দূরে নয়.
+আমার বোন চিকিৎসা পড়ছে.|My sister is studying medicine.|আমার বোন চিকিৎসা পড়ছে.
+সপ্তাহান্তে আমার সময় নেই.|I have no time at the weekend.|সপ্তাহান্তে আমার সময় নেই.
+সে সন্ধ্যায় কফি খায় না.|He does not drink coffee in the evening.|সে সন্ধ্যায় কফি খায় না.
+আমাদের ঢাকার দুটি টিকিট দরকার.|We need two tickets to Dhaka.|আমাদের ঢাকার দুটি টিকিট দরকার.
+পরীক্ষা নয়টায় শুরু হয়.|The exam starts at nine.|পরীক্ষা নয়টায় শুরু হয়.
+আমি অল্প বাংলা আর ইংরেজি বলি.|I speak a little Bangla and English.|আমি অল্প বাংলা আর ইংরেজি বলি.
+আমার বন্ধু ইঞ্জিনিয়ার হিসেবে কাজ করে.|My friend works as an engineer.|আমার বন্ধু ইঞ্জিনিয়ার হিসেবে কাজ করে.
+সে রান্নাঘরে মাকে সাহায্য করে.|She helps her mother in the kitchen.|সে রান্নাঘরে মাকে সাহায্য করে.
+আমি প্রতি সন্ধ্যায় হাঁটতে যাই.|I go for a walk every evening.|আমি প্রতি সন্ধ্যায় হাঁটতে যাই.
+
+@listening
+নমস্কার, আপনি কেমন আছেন?|nomoskar apni kemon achhen|Hello, how are you?|নমস্কার, আপনি কেমন আছেন?|নমস্কার, আপনি কোথায়?|শুভ সকাল, আপনি কেমন আছেন?|1
+আমি এক কাপ চা চাই.|ami ek kap cha chai|I want a cup of tea.|আমি এক কাপ চা চাই|আমি এক কাপ কফি চাই|আমি এক গ্লাস জল চাই|1
+স্টেশন কোথায়?|steshon kothay|Where is the station?|স্টেশন কোথায়?|বাজার কোথায়?|হোটেল কোথায়?|1
+আমি ঢাকা থেকে এসেছি.|ami dhaka theke eshechhi|I am from Dhaka.|আমি ঢাকা থেকে এসেছি|আমি ঢাকায় থাকি|আমি ঢাকায় যাচ্ছি|1
+বিল দিন, ধন্যবাদ.|bill din dhonnobad|The bill, please.|বিল দিন, ধন্যবাদ|মেনু দিন, ধন্যবাদ|রসিদ দিন, ধন্যবাদ|1
+এটার দাম কত?|etar daam koto|How much is it?|এটার দাম কত?|এটা কার?|এটা কী?|1
+আমি বুঝতে পারিনি.|ami bujhte parini|I did not understand.|আমি বুঝতে পারিনি|আমি আসতে পারিনি|আমি শুনতে পারিনি|1
+আস্তে বলুন.|aashte bolun|Please speak slowly.|আস্তে বলুন|জোরে বলুন|কাছে আসুন|1
+আমার ভাই ডাক্তার.|amar bhai daktar|My brother is a doctor.|আমার ভাই ডাক্তার|আমার ভাই শিক্ষক|আমার বাবা ডাক্তার|1
+ট্রেন আটটায় ছাড়ে.|tren attay chhare|The train leaves at eight.|ট্রেন আটটায় ছাড়ে|বাস আটটায় ছাড়ে|ট্রেন আটটায় আসে|1
+আজ আমার সময় নেই.|aaj amar shomoy nei|I have no time today.|আজ আমার সময় নেই|আজ আমার টাকা নেই|আজ আমার কাজ নেই|1
+খাবার খুব সুস্বাদু.|khabar khub shushbadu|The food is very tasty.|খাবার খুব সুস্বাদু|আবহাওয়া খুব ভালো|চা খুব গরম|1
+আমরা একসাথে বাংলা শিখি.|amra ekshathe bangla shikhi|We learn Bangla together.|আমরা একসাথে বাংলা শিখি|আমরা একসাথে বাংলা বলি|আমরা একসাথে বই পড়ি|1
+আমার দুই রাতের জন্য ঘর দরকার.|amar dui rater jonno ghor dorkar|I need a room for two nights.|আমার দুই রাতের জন্য ঘর দরকার|আমার দুইজনের জন্য টেবিল দরকার|আমার এক রাতের জন্য ঘর দরকার|1
+আমার মা আজ মাছ রান্না করছেন.|amar ma aaj machh ranna korchen|My mother cooks fish today.|আমার মা আজ মাছ রান্না করছেন|আমার মা আজ মাছ আনছেন|আমার বাবা আজ মাছ রান্না করছেন|1
+আমি প্রতি সন্ধ্যায় হাঁটি.|ami proti shondhay hati|I walk every evening.|আমি প্রতি সন্ধ্যায় হাঁটি|আমি প্রতি সকালে হাঁটি|আমি প্রতি সন্ধ্যায় ঘুমাই|1
+আপনার কাছে ছোট সাইজ আছে?|apnar kachhe chhoto saiz achhe|Do you have a smaller size?|আপনার কাছে ছোট সাইজ আছে?|আপনার কাছে বড় সাইজ আছে?|আপনার কাছে অন্য রং আছে?|1
+আমি কার্ডে পরিশোধ করব.|ami karde porishodh korbo|I will pay by card.|আমি কার্ডে পরিশোধ করব|আমি নগদ পরিশোধ করব|আমি আগামীকাল পরিশোধ করব|1
+আমি খুব দুঃখিত.|ami khub dukkhito|I am very sorry.|আমি খুব দুঃখিত|আমি খুব খুশি|আমার খুব ভয় করছে|1
+আগামীকাল আমি ফোন করব.|agamikal ami phone korbo|I will call you tomorrow.|আগামীকাল আমি ফোন করব|আজ আমি ফোন করব|আগামীকাল আমি দেখা করব|1
+
+@stories
+ঢাকায় প্রথম দিন|🚆|রাকিব সকালে ঢাকায় পৌঁছাল.\nসে ট্যাকসি করে ___ (1)-এ গেল.\nঘরে সে ___ (2) খেল.\nতারপর সে তার ___ (3)-কে ফোন করল.|Rakib reaches Dhaka in the morning. He goes by taxi to the hotel. In the room he drinks tea. Then he calls his family.|হোটেল/স্টেশন/বাজার=0;চা/বই/রুটি=0;মা/দোকান/শ্রেণি=0
+বাজারে কেনাকাটা|🛒|সারা রবিবার ___ (1)-এ গেল.\nসে রুটি, দুধ আর ___ (2) কিনল.\nপরিশোধ করল ___ (3) দিয়ে.|Sara goes shopping on Sunday. She buys bread, milk and apples. She pays by card.|বাজার/স্কুল/অফিস=0;আপেল/বই/চেয়ার=0;কার্ড/কাগজ/জল=0
+হারানো পাসপোর্ট|🛂|আহমেদ তার ___ (1) খুঁজছিল.\nসে এক ___ (2)-এর কাছে সাহায্য চাইল.\nভাগ্যক্রমে সে ___ (3)-তে পাওয়া গেল.|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is found in his bag.|পাসপোর্ট/চাবি/বই=0;পুলিশ/শিক্ষক/প্রতিবেশী=0;ব্যাগ/রান্নাঘর/স্কুল=0
+ডাক্তারের কাছে|🏥|বিলালের শরীর ___ (1) ছিল.\nসে ___ (2)-এর কাছে গেল.\nডাক্তার ওষুধ আর ___ (3) দিলেন.|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|খারাপ/ভালো/ক্ষুধার্ত=0;ডাক্তার/বেকার/চালক=0;বিশ্রাম/টাকা/বই=0
+বাংলা ক্লাস|📚|নাদিয়া তিন মাস ধরে ___ (1) শিখছে.\nসে প্রতি সন্ধ্যায় ___ (2) দিয়ে অনুশীলন করে.\nতার ___ (3) বলেন সে ভালো বলে.|Nadia has been learning Bangla for three months. She practises every evening with books. Her teacher says she speaks well.|বাংলা/ফরাসি/আরবি=0;বই/ছবি/কার্ড=0;শিক্ষক/ভাই/প্রতিবেশী=0
+পারিবারিক খাবার|👨‍👩‍👧‍👦|রবিবার পুরো ___ (1) এল.\nদিদিমা ___ (2) রান্না করলেন.\nসবাই একসাথে খেল আর অনেক ___ (3).|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|পরিবার/অফিস/শ্রেণি=0;ভাত/জল/কাগজ=0;হাসল/কাজ করল/ঘুমাল=0
+স্টেশনে|🚉|ট্রেন দশ মিনিট ___ (1).\nহাসান দোকান থেকে ___ (2) কিনল.\nতারপর সে ___ (3)-এ উঠল.|The train is ten minutes late. Hassan buys a newspaper. Then he gets on the train.|দেরিতে/পরিষ্কার/তৈরি=0;খবরের কাগজ/রসিদ/চাবি=0;ট্রেন/বাস/বিমান=0
+শীতের সন্ধ্যা|❄️|জানুয়ারিতে খুব ___ (1).\nআয়েশা উষ্ণ ___ (2) পরল.\nসে গরম ___ (3) খেল আর বই পড়তে লাগল.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|ঠান্ডা/গরম/বৃষ্টি=0;কোট/শার্ট/জুতো=0;চা/জল/রস=0
+হোটেলে খাবার|🍽️|ওয়েটার ___ (1) আনল.\nউমর মাছ আর ___ (2) চাইল.\nশেষে সে ___ (3) চাইল.|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|মেনু/চেয়ার/আলো=0;ভাত/টেবিল/জানালা=0;বিল/চাবি/রসিদ=0
+নতুন বন্ধু|🤝|লিনা আর সানা ___ (1)-তে দেখা করল.\nতারা সঙ্গীত আর ___ (2) নিয়ে কথা বলল.\nশেষে তারা ___ (3) বিনিময় করল.|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|বাগান/অফিস/ট্রেন=0;ভ্রমণ/রসিদ/পরীক্ষা=0;নম্বর/ঠিকানা/বই=0
+
+@idioms
+চোখের মণি|chokher moni|The apple of one's eye.|চোখের মণি|তার ছেলে তার চোখের মণি.
+বুকে হাত দিয়ে বলা|buke haat diye bola|To speak honestly.|সত্যি বলা|বুকে হাত দিয়ে বলো, কী হয়েছে?
+নাকে দম বন্ধ করা|nake dom bondho kora|To annoy someone badly.|অতিষ্ঠ করা|বাচ্চারা নাকে দম বন্ধ করে দিল.
+হাত ধুয়ে পড়া|haat dhuye pora|To chase someone relentlessly.|পেছনে পড়া|সে এই ব্যাপারে হাত ধুয়ে পড়েছে.
+নামে বড়, কাজে ছোট|naame boro kaaje chhoto|All name, no substance.|নাম বড়, কাজ শূন্য|তার কিছুই আসে না — নামে বড়, কাজে ছোট.
+নাক কাটা|naak kata|To bring shame on oneself.|অপমান হওয়া|মিথ্যা বলে সে নিজের নাক কাটল.
+আকাশ ভাঙা|akash bhanga|To make a huge fuss.|অতিরিক্ত হৈচৈ|ছোট কথায় আকাশ ভেঙে ফেলল.
+ডালে কালো|dale kalo|Something suspicious.|কিছু গোলমাল|ব্যাপারটা পরিষ্কার নয়, ডালে কিছু কালো আছে.
+হাতছাড়া হয়ে যাওয়া|haatchhara hoye jaoya|To lose control.|নিয়ন্ত্রণ হারানো|ব্যাপারটা হাতছাড়া হয়ে গেল.
+সময় হাতছাড়া করা|shomoy haatchhara kora|To let time slip away.|সময় নষ্ট করা|পড়াশোনায় সময় হাতছাড়া করো না.
+মন খুলে বলা|mon khule bola|To speak one's mind.|মন খুলে বলা|মন খুলে বলো, ভয় পেও না.
+ঘর ভাঙা|ghor bhanga|A ruined household.|সংসার ভাঙা|বন্যায় গ্রামের ঘর ভেঙে দিল.
+লজ্জায় জল হওয়া|lojjay jol howa|To be deeply embarrassed.|লজ্জিত হওয়া|সবার সামনে সে লজ্জায় জল হয়ে গেল.
+মুখের কথা|mukher kotha|A spoken word must be kept.|কথার মর্যাদা|মুখের কথা ফিরিয়ে নেওয়া যায় না.
+সম্মানের প্রশ্ন|shommaner proshno|A matter of honour.|ইজ্জতের ব্যাপার|এখন এটা সম্মানের প্রশ্ন.
+চোয়াল দেখানো|choyal dekhano|To threaten someone.|ভয় দেখানো|সে চোয়াল দেখিয়ে সবাইকে চুপ করাল.
+চোখ বন্ধ রাখা|chokh bondho rakha|To ignore the obvious.|চোখ বন্ধ রাখা|নোটিশ তোমার সামনে, চোখ বন্ধ রেখো না.
+দুই পায়ে ভর দিয়ে দাঁড়ানো|dui paye bhor diye darano|To stand on one's own feet.|নিজের পায়ে দাঁড়ানো|বাবার মৃত্যুর পর সে দুই পায়ে ভর দিয়ে দাঁড়াল.
+কথা মিষ্টি|kotha mishti|Sweet-talker.|মিষ্টি কথা|মিষ্টি কথার মানুষকে তাড়াতাড়ি বিশ্বাস করো না.
+পলক ফেলার মধ্যে|polok phelar moddhe|In the blink of an eye.|নিমেষে|সময় পলক ফেলার মধ্যে চলে গেল.
+কান্নায় ভাসা|kannay bhasha|To cry bitterly.|খুব কাঁদা|ব্যর্থতার পর সে কান্নায় ভেসে গেল.
+পাথরের মন|pathorer mon|Hard-hearted.|নির্মম|পাথরের মন কারও কথা শোনে না.
+পরিষ্কার মন|porishkar mon|Pure-hearted.|সাদা মন|তার মন পরিষ্কার, কারও ওপর রাগ রাখে না.
+নিজের পায়ে কুড়াল মারা|nijo paye kural mara|To harm oneself.|নিজের ক্ষতি করা|মিথ্যা বলে সে নিজের পায়ে কুড়াল মারল.
+হাতে-নাতে ধরা|hate-nate dhora|To catch someone red-handed.|হাতেনাতে ধরা|চোরকে হাতে-নাতে ধরা হলো.
+
+@alphabet
+অ|o|o|অজগর
+আ|aa|aa|আম
+ই|i|i|ইঁদুর
+ঈ|ii|ii|ঈগল
+উ|u|u|উট
+ঊ|uu|uu|ঊষা
+ঋ|ri|ri|ঋষি
+এ|e|e|এক
+ঐ|oi|oi|ঐরাবত
+ও|o|o|ওল
+ঔ|ou|ou|ঔষধ
+ক|ko|ko|কমলা
+খ|kho|kho|খাতা
+গ|go|go|গাড়ি
+ঘ|gho|gho|ঘর
+ঙ|ngo|ngo|বাঙালি
+চ|cho|cho|চা
+ছ|chho|chho|ছবি
+জ|jo|jo|জল
+ঝ|jho|jho|ঝড়
+ঞ|nno|nno|জ্ঞান
+ট|tto|tto|টাকা
+ঠ|ttho|ttho|ঠান্ডা
+ড|ddo|ddo|ডাক্তার
+ঢ|ddho|ddho|ঢাকা
+ণ|nno2|nno2|বাণিজ্য
+ত|to|to|তারা
+থ|tho|tho|থাকা
+দ|do|do|দরজা
+ধ|dho|dho|ধন্যবাদ
+ন|no|no|নাক
+প|po|po|পানি
+ফ|pho|pho|ফুল
+ব|bo|bo|বই
+ভ|bho|bho|ভাই
+ম|mo|mo|মা
+য|jo2|jo2|যাত্রা
+র|ro|ro|রং
+ল|lo|lo|লাল
+শ|sho|sho|শহর
+ষ|shho|shho|ষড়যন্ত্র
+স|so|so|সময়
+হ|ho|ho|হাত
+ড়|rra|rra|গাড়ি
+ঢ়|rrha|rrha|পাহাড়
+য়|yyo|yyo|হয়
+ৎ|khondota|khondota|ভবিষ্যৎ
+ং|anuswar|anuswar|রং
+ঃ|bisarga|bisarga|দুঃখ
+ঁ|chandrabindu|chandrabindu|চাঁদ

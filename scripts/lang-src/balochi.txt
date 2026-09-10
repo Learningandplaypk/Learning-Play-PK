@@ -1,0 +1,675 @@
+# Balochi (بلۏچی) — authored source for data/langs/balochi.json
+# Arabic-derived script, RTL. Romanization: a, aa, i, ee, u, oo, e, o;
+# ch, sh, zh, kh, gh, th, dh; c = چ, j = ج.
+
+@info
+romanization|Roman Balochi: a, aa, i, ee, u, oo, e, o; ch, sh, zh, kh, gh, th, dh.
+alphabet.title|بلۏچی ابجد
+alphabet.intro|بلۏچی عربی لپی استعمال کنت ۏ ساڄێں تاکێں لکگ بێت۔
+
+@frames
+greetings|بگۆ: {s}.|Say: {en}.
+numbers|منا {s} سیب هست اینت.|I have {en} apples.
+family|ای {s} اینت.|This is my {en}.
+food|منا {s} خوش ئیت.|I like {en}.
+travel|{s} کجاه اینت؟|Where is the {en}?
+time|من {s} سکول آن اِن.|I go to school {en}.
+colors|آسمان {s} اینت.|The sky is {en}.
+body|منی {s} درد کنت.|My {en} hurts.
+home|ادار {s} اینت.|Here is the {en}.
+work|ای {s} اینت.|This is {en}.
+school|ای {s} اینت.|This is {en}.
+shopping|ای {s} اینت.|This is {en}.
+emotions|من {s} احساس کن اِن.|I feel {en}.
+verbs|من هروچ {s}.|This means: {en}.
+adjectives|ای گس {s} اینت.|The house is {en}.
+
+@words
+hello|سلام|salaam
+goodbye|خدا حافظ|khuda hafiz
+good morning|صبح بخیر|subah bakhair
+good evening|شام بخیر|shaam bakhair
+good night|شب بخیر|shab bakhair
+thank you|توار|tawar
+please|مہربانی کَہ|mebarbani ka
+sorry|ببخش|bibakhsh
+excuse me|بہ گوش|ba gwash
+yes|آ|aa
+no|نه|na
+welcome|خوش آمدید|khush amadeed
+how are you|تو چۆں ئی؟|to chon ai
+my name is|منی نام|mani naam||منی نام کریم اینت.|My name is Karim.
+nice to meet you|تؤاں دیدار خوشی بوت|twan deedaaar khushi but
+see you later|دگہ لێں مل ئین|digain lain mil een
+good luck|شپاش|shpaash
+congratulations|مبارک بوت|mubarak but
+help|داتار|daataar
+of course|البته|albatta
+zero|صفر|sifar||حسابێں صفر لکک.|Write a zero in the calculation.
+one|یک|yak
+two|دو|du
+three|سه|se
+four|چار|chaar
+five|پنچ|panch
+six|شش|shash
+seven|ہپت|hapt
+eight|ہشت|hasht
+nine|نہ|no
+ten|دہ|da
+eleven|یازدہ|yaazda
+twelve|دوازدہ|dwaazda
+thirteen|سیزدہ|sezda
+fourteen|چارزدہ|chaarzda
+fifteen|پازدہ|paazda
+twenty|بیست|beest
+thirty|سی|si
+forty|چل|chil
+fifty|پنجاہ|panjaah
+hundred|صد|sad
+thousand|ہزار|hazaar
+first|پہلم|pahlim||ای پہلمین درس اینت.|This is the first lesson.
+second|دمین|dumin||ای دمین کمره اینت.|This is the second room.
+half|نیم|neem||نیم گلاس آپ.|Half a glass of water.
+mother|مات|maat
+father|پِت|pit
+brother|برات|braat
+sister|ہار|haar
+son|باز|baaz
+daughter|داتر|daatar
+child|بچگ|bachchag
+baby|نوک|nook
+family|ٹبر|tabbar
+husband|شوہر|shawhar
+wife|جن|jan
+uncle|ماما|maamaa
+aunt|مامی|maamee
+grandfather|پِپی|pipi
+grandmother|نانه|naana
+cousin|ترس|turas
+nephew|براسی|braasee
+friend|رفق|rafag
+neighbour|ہمسایہ|hamsaaya
+parent|مات ۏ پِت|maat o pit
+water|آپ|aap
+bread|نان|naan
+rice|برنج|birinj
+milk|دود|dood
+tea|چای|chay
+sugar|شکر|shakar
+salt|نمک|namak
+egg|ہک|hakk
+meat|گوشٹ|gosht
+chicken|کرک|kurk
+fish|ماہی|maahi
+apple|سیب|seb
+banana|کیلہ|kela
+mango|آم|aam
+orange (fruit)|سنترہ|santra
+grapes|انگور|angoor
+lemon|لیمو|lemu
+tomato|ٹماٹر|tamatar
+onion|پیاز|pyaaz
+potato|الو|aloo
+carrot|زردک|zardak
+oil|روغن|rogan
+butter|مکھن|makkhan
+honey|مچ|mach
+juice|رس|ras
+coffee|کافی|kaafi
+soup|شوروا|shorwaa
+breakfast|ناس|naas
+lunch|نیمروز|nemroz
+dinner|شامی|shaami
+car|ماشین|maasheen
+bus|بس|bus
+train|ریل|rail
+airplane|ہواپیما|hawaa-pemaa
+bicycle|سائیکل|cycle
+road|راه|raah
+street|کوچہ|kochaa
+bridge|پل|pul
+station|اسٹیشن|station
+airport|ہوائی اډہ|hawaai adda
+ticket|ٹکٹ|ticket
+map|نقشہ|naqshaa
+city|شہر|shehar
+village|دہات|dehaat
+country|ملک|mulk
+hotel|ہوٹل|hotel
+journey|سفر|safar
+luggage|سامان|samaan
+driver|رانندہ|raananda
+passport|پاسپورٹ|passport
+time|وخت|wakht||وخت ډیر تیز گذر کنت.|Time passes very quickly.
+day|روچ|roch||روچێں دو بار دوا بور.|Take the medicine twice a day.
+night|شپ|shap||شپێں آسمان پاک اینت.|The sky is clear at night.
+morning|صبح|subah
+evening|شام|shaam
+week|ہپتہ|hapta||ہپتێں یک بار بازار آن اِن.|I go to the market once a week.
+month|ماہ|maah||ماہێں آخرێں تنخواہ ئیت.|The salary comes at the end of the month.
+year|سال|saal||سالێں چار موسم ئینت.|Four seasons come in a year.
+hour|گھنٹہ|ghanta||یک گھنٹہ پہلوں بیا.|Come one hour early.
+minute|منٹ|mint||پنچ منٹ ٹھپ بو.|Wait five minutes.
+today|دؤ|do
+tomorrow|دگہ|diga
+yesterday|دؤک|dok
+now|ہنوں|hanon
+later|پس|pas
+early|پہل|pahl
+late|درنگ|darang
+always|ہمیشہ|hamesha
+sometimes|کدے کدے|kada kada
+never|ہچ ود|hach wat
+color|رنگ|rang||ای کپڑێ رنگ گپ اینت.|The color of this cloth is dark.
+red|سور|sur
+blue|کبود|kabod
+green|سبز|sabs
+yellow|زرد|zard
+black|سیاه|siyaah
+white|سپید|sped
+brown|کھرک|khark
+grey|خاکستری|khaakastari
+pink|گلابی|gulaabi
+purple|ارغوانی|arghawaani
+orange (color)|نارنجی|naaranji
+body|جسم|jism||جسم ئاں آرام لوٹ اینت.|The body needs rest.
+head|کلہ|kalaa
+hair|مچک|machak||منی مچک سیاہ اینت.|My hair is black.
+face|ماتک|maatak
+eye|چم|cham||منی چم درد کنت.|My eye hurts.
+ear|گوہہ|gwaha
+nose|ناک|naak||ناکێں ناپہ بکشا.|Breathe through the nose.
+mouth|دہان|dahaan
+tooth|دند|dand
+tongue|زبان|zabaan||زبانێں مزہ زانگ بېت.|The tongue feels the taste.
+neck|گرڈن|gardan||گرڈن سدہ دار.|Keep the neck straight.
+shoulder|کول|kol
+hand|دست|dast
+finger|گۆست|gost||گۆستێں اشارہ بکَ.|Point with the finger.
+leg|پاڃ|paag||پاڃێں درد اینت.|There is pain in the leg.
+foot|پۆں|pon
+heart|دل|dil
+stomach|پیٹ|pet
+house|گس|gas
+room|کمره|kamra
+door|در|dar
+window|جھنگل|jhangel
+wall|دیوار|dewaar
+roof|بوم|boom
+floor|زمین|zameen
+kitchen|آشپزگ|aashpazag
+bathroom|غسلخانه|ghusal-khaana
+bed|بستر|bistar
+table|میز|mez
+chair|کورسی|korsi
+sofa|صوفہ|sofa
+lamp|چراغ|charaagh
+key|کلیت|kaleet
+stairs|پلہ|pala
+garden|باغ|baagh
+light|روشنی|roshni
+fan|پنکہ|panka
+mirror|آئینہ|aaina
+work|کار|kaar
+job|کاسپ|kaasp
+office|دفتر|daftar
+money|پول|pol
+salary|تنخواہ|tankhwaah
+meeting|میٹنگ|meeting
+boss|ریئس|raees
+employee|کارمند|kaarmend
+business|کاروبار|kaarobaar
+company|کمپنی|company
+market|بازار|bazaar
+shop|دکان|dukaan
+customer|خریدار|kharedaar
+price|بھا|bhaa
+farmer|دهقان|dehqaan
+doctor|ڈاکٹر|doctor
+teacher|استاد|ustaad
+police|پولیس|police
+school|سکول|school
+book|کتاب|kitaab
+pen|قلم|qalam
+pencil|پنسل|pencil
+page|پنڑ|parr
+class|جماعت|jamaat
+student|شاگرد|shaagird
+lesson|درس|dars
+exam|امتحان|imtahaan
+question|پرس|purs
+answer|جواب|jawaab
+homework|گسی کار|gasi kaar
+library|کتابخانہ|kitaab-khaana
+university|پوهنځی|pohanzay
+language|زبان|zabaan
+word|لفظ|lafz
+sentence|جملہ|jumla
+dictionary|لغت|lughaat
+science|سائنس|science
+history|تاریخ|taareekh
+knowledge|زانست|zaanist
+education|تعلیم|taleem
+shopping|خرید|khared||شامێں خرید کن ئین.|We go shopping in the evening.
+buy|گرتگ|girtag||اہو سبزی گرێت.|He is buying vegetables.
+sell|پروش|parosh||دهقان بازارێں میوه پروش کنت.|The farmer sells fruit in the market.
+cheap|ارزان|arzaan||ای کپڑ ارزان اینت.|This cloth is cheap.
+expensive|گران|graan||موبایل گران اینت.|The mobile is expensive.
+coin|سکہ|sikka
+note|نوٹ|note
+bill|بل|bill
+size|اندازہ|andaaza
+discount|رعایت|riyaayat
+receipt|رسید|raseed
+bag|تھیلہ|thela
+rupee|روپیہ|rupiya
+weigh|وزن|wazan||دکاندار سبزی وزن کنت.|The shopkeeper weighs the vegetables.
+pay|ادائگی|adaayagi||کارڈێں ادائگی بکَ.|Pay by card.
+happiness|خوشی|khushi
+sadness|غم|gham
+anger|گپ|gapp
+fear|ترس|tirs
+love|دوست|dost
+hope|امید|umeed
+worry|اندیشہ|andeesha
+surprise|حیرت|hairat
+peace|سکون|sukoon
+smile|مسکا|muskaa
+laugh|ہندا|hinda
+crying|گرینت|greent
+mood|مزاج|mizaaj
+brave|دلیر|daleer||اہو یک دلیر باز اینت.|He is a brave boy.
+lonely|تنها|tanhaa||اہو تنها احساس کنت.|He feels lonely.
+to eat|وارگ|waarag|وارین
+to drink|اشکگ|ashkag|اشمین
+to go|جگ|jag|آن
+to come|ئاتگ|aatag|ئاین
+to see|دیستگ|deestag|وینین
+to hear|اوستگ|awastag|اوشمین
+to speak|آوژگ|aawjag|آوژین
+to read|وانگ|waang|وانین
+to write|لکگ|likag|لکین
+to learn|یاد گرتگ|yaad girtag|یاد گیرین
+to teach|یاد داتگ|yaad daatag|یاد دہین
+to sleep|خسپگ|khuspag|خسپین
+to wake up|بیدار بوتگ|bedaara butag|بیدار بئین
+to run|دؤڑگ|daurrag|دؤڑین
+to walk|گامگ|gaamag|گامین
+to open|کل کنگ|kal kag|کل کنین
+to close|بند کنگ|band kag|بند کنین
+to give|داتگ|daatag|دہین
+to take|گرتگ|girtag|گرین
+to make|کنگ|kag|کنین
+to love|دوست داتگ|dost daatag|دوست داتین
+to think|گمانگ|gumaanag|گمان کنین
+to understand|زانگ|zaanag|زانین
+to work|کار کنگ|kaar kag|کار کنین
+to wait|ٹھپگ|thapag|ٹھپین
+big|مزن|mazen
+small|خورد|khurd
+new|نۆک|nok
+old|پیر|peer
+good|باش|baash
+bad|بد|bad
+beautiful|خوشگل|khushgul
+hot|تپ|tap||ہوا ډیر تپ اینت.|The weather is very hot.
+cold|گوات|gwaat||آپ گوات اینت.|The water is cold.
+fast|تیز|tez
+slow|آہستہ|aahista
+easy|آسان|aasaan
+difficult|سخت|sakht
+long|درہگ|darhag
+short|کوتہ|kota
+clean|پاک|paak
+dirty|گند|gand
+happy|خوش|khush||بچ ډیر خوش اینت.|The children are very happy.
+tired|ماندہ|maanda||من دؤ ماندہ اِن.|I am tired today.
+hungry|شگ|shag||بچ شگ اینت.|The child is hungry.
+
+@phrases
+سلام!|salaam|Hello!|سلام!|greeting
+خدا حافظ!|khuda hafiz|Goodbye!|خدا حافظ!|greeting
+صبح بخیر!|subah bakhair|Good morning!|صبح بخیر!|greeting
+شام بخیر!|sham bakhair|Good evening!|شام بخیر!|greeting
+شب بخیر!|shab bakhair|Good night!|شب بخیر!|greeting
+تو چۆں ئی؟|to chon ai|How are you?|تو چۆں ئی؟|smalltalk
+من باش اِن، توار.|man baash een tawar|I am fine, thank you.|من باش اِن، توار۔|smalltalk
+ډیر توار!|dear tawar|Thank you very much!|ډیر توار!|polite
+کوئی ڳالہ نہ اینت.|koi gaala na eent|No problem.|کوئی ڳالہ نہ اینت۔|polite
+ببخش.|bibakhsh|Please excuse me.|ببخش۔|polite
+من پشیمان اِن.|man pashemaan een|I am sorry.|من پشیمان اِن۔|polite
+تئی نام چی اینت؟|tai naam chi eent|What is your name?|تئی نام چی اینت؟|smalltalk
+منی نام سومی اینت.|mani naam somee eent|My name is Somee.|منی نام سومی اینت۔|smalltalk
+تو کجاں ئی؟|to kajaa ai|Where are you from?|تو کجاں ئی؟|smalltalk
+من کوئٹہ ئں اِن.|man quetta en een|I am from Quetta.|من کوئٹہ ئں اِن۔|smalltalk
+تو انگلیسی آوژی ئی؟|to anglisi aawji ai|Do you speak English?|تو انگلیسی آوژی ئی؟|smalltalk
+من بلۏچی یاد گیرین.|man balochi yaad geereen|I am learning Balochi.|من بلۏچی یاد گیرین۔|school
+من نہ زانت.|man na zaanat|I did not understand.|من نہ زانت۔|school
+آہستہ آوژ.|aahista aawj|Please speak slowly.|آہستہ آوژ۔|polite
+انێ معنی چی اینت؟|anee maani chi eent|What does this mean?|انێ معنی چی اینت؟|school
+ای چنڑ اینت؟|ai channar eent|How much is this?|ای چنڑ اینت؟|shopping
+منا ای لوٹ اینت.|mana ai lot eent|I want this.|منا ای لوٹ اینت۔|shopping
+تئی تا خوردین اندازہ هست؟|tai ta khurdin andaaza hast|Do you have a smaller size?|تئی تا خوردین اندازہ هست؟|shopping
+بل بیا، توار.|bill biya tawar|The bill, please.|بل بیا، توار۔|shopping
+من کارڈێں ادائگی کن اِن.|man card en adaayagi kan een|I will pay by card.|من کارڈێں ادائگی کن اِن۔|shopping
+اسٹیشن کجاه اینت؟|station kajaah eent|Where is the station?|اسٹیشن کجاه اینت؟|travel
+غسلخانه کجاه اینت؟|ghusal-khaana kajaah eent|Where is the toilet?|غسلخانه کجاه اینت؟|travel
+ای بس کوئٹہ ئہ ئیت؟|ai bus quetta aa eet|Does this bus go to Quetta?|ای بس کوئٹہ ئہ ئیت؟|travel
+ریل کتێں وخت ئیت؟|rail kateen wakht eet|When does the train leave?|ریل کتێں وخت ئیت؟|travel
+منی راه گم بوتگ.|mani raah gum butag|I have lost my way.|منی راه گم بوتگ۔|travel
+تو داتار کنت ئی؟|to daataar kant ai|Can you help?|تو داتار کنت ئی؟|polite
+منا ڈاکٹر لوٹ اینت.|mana doctor lot eent|I need a doctor.|منا ڈاکٹر لوٹ اینت۔|health
+منی طبیعت باش نہ اینت.|mani tabiyat baash na eent|I am not well.|منی طبیعت باش نہ اینت۔|health
+دوا خانہ کجاه اینت؟|dawa khaana kajaah eent|Where is the pharmacy?|دوا خانہ کجاه اینت؟|health
+منی کلہ درد کنت.|mani kalaa dard kant|I have a headache.|منی کلہ درد کنت۔|health
+یک پیالہ چای، مہربانی.|yak pyala chay mebarbani|One cup of tea, please.|یک پیالہ چای، مہربانی۔|food
+مینو نشان بدہ.|menu nishaan bada|Show me the menu.|مینو نشان بدہ۔|food
+ای ډیر مزہ دار اینت.|ai dear maza daar eent|This is very tasty.|ای ډیر مزہ دار اینت۔|food
+من گوشٹ نہ وارین.|man gosht na waareen|I don't eat meat.|من گوشٹ نہ وارین۔|food
+من شگ اِن.|man shag een|I am hungry.|من شگ اِن۔|food
+آپ گوات اینت.|aap gwaat eent|The water is cold.|آپ گوات اینت۔|food
+دؤ ہوا ډیر باش اینت.|do hawa dear baash eent|The weather is nice today.|دؤ ہوا ډیر باش اینت۔|smalltalk
+من دفترێں کار کن اِن.|man daftar en kaar kan een|I work in an office.|من دفترێں کار کن اِن۔|work
+تو کجاه کار کن ئی؟|to kajaah kaar kan ai|Where do you work?|تو کجاه کار کن ئی؟|work
+منی تنخواہ ماہێں آخرێں ئیت.|mani tankhwaah maah een aakhir een eet|My salary comes at month end.|منی تنخواہ ماہێں آخرێں ئیت۔|work
+دگہ منی میٹنگ اینت.|diga mani meeting eent|I have a meeting tomorrow.|دگہ منی میٹنگ اینت۔|work
+من پوهنځیێں خوانین.|man pohanzay en khwaaneen|I study at the university.|من پوهنځیێں خوانین۔|school
+جماعت کتێں وخت شروع بێت؟|jamaat kateen wakht shuroo bait|When does the class start?|جماعت کتێں وخت شروع بێت؟|school
+امتحان آسان بوت.|imtahaan aasaan but|The exam was easy.|امتحان آسان بوت۔|school
+منا کتاب وانگ خوش ئیت.|mana kitaab waang khush eet|I like reading books.|منا کتاب وانگ خوش ئیت۔|school
+ای لفظ نۆک اینت.|ai lafz nok eent|This word is new.|ای لفظ نۆک اینت۔|school
+من هروچ بلۏچی یاد گیرین.|man haroch balochi yaad geereen|I learn Balochi every day.|من هروچ بلۏچی یاد گیرین۔|school
+دؤ دوشنبہ اینت.|do doshanba eent|Today is Monday.|دؤ دوشنبہ اینت۔|time
+کتێں بجہ ہنوں؟|kateen baja hanon|What time is it?|کتێں بجہ ہنوں؟|time
+منی تا وخت نہ اینت.|mani ta wakht na eent|I have no time.|منی تا وخت نہ اینت۔|time
+من شش بجہ ئین.|man shash baja een|I will come at six.|من شش بجہ ئین۔|time
+جمعہ روچ من فارغ اِن.|juma roch man faarigh een|I am free on Friday.|جمعہ روچ من فارغ اِن۔|time
+ای منی مات اینت.|ai mani maat eent|This is my mother.|ای منی مات اینت۔|family
+منی پِت ډیر کار کنت.|mani pit dear kaar kant|My father works a lot.|منی پِت ډیر کار کنت۔|family
+منی ہار ڈاکٹر اینت.|mani haar doctor eent|My sister is a doctor.|منی ہار ڈاکٹر اینت۔|family
+سانی ٹبر مزن اینت.|saani tabbar mazen eent|Our family is big.|سانی ٹبر مزن اینت۔|family
+بچگ باغێں کھیل کنت.|bachchag baagh en kheel kant|The child plays in the garden.|بچگ باغێں کھیل کنت۔|family
+منی گس خورد اینت.|mani gas khurd eent|My house is small.|منی گس خورد اینت۔|home
+آشپزگ پاک اینت.|aashpazag paak eent|The kitchen is clean.|آشپزگ پاک اینت۔|home
+جھنگل کل اینت.|jhangel kal eent|The window is open.|جھنگل کل اینت۔|home
+من در بند کن اِن.|man dar band kan een|I close the door.|من در بند کن اِن۔|home
+برق روتگ.|barak rawtag|The power has gone out.|برق روتگ۔|home
+من ہنوں خسپین.|man hanon khuspeen|I am going to sleep now.|من ہنوں خسپین۔|home
+منی پاسپورٹ کجاه اینت؟|mani passport kajaah eent|Where is my passport?|منی پاسپورٹ کجاه اینت؟|travel
+ہواپیما درنگ اینت.|hawaai-pemaa darang eent|The flight is late.|ہواپیما درنگ اینت۔|travel
+سامان ډیر بھاری اینت.|samaan dear bhaari eent|The luggage is heavy.|سامان ډیر بھاری اینت۔|travel
+سفر بخیر!|safar bakhair|Have a good trip!|سفر بخیر!|travel
+منا دو شبێں کمره لوٹ اینت.|mana du shap en kamra lot eent|I need a room for two nights.|منا دو شبێں کمره لوٹ اینت۔|travel
+رپت برو.|rapat boro|Go straight ahead.|رپت برو۔|travel
+چپےں مڑ.|chappe en murr|Turn left.|چپےں مڑ۔|travel
+بازار کجاه اینت؟|bazaar kajaah eent|Where is the market?|بازار کجاه اینت؟|shopping
+بھا ډیر گران اینت.|bhaa dear graan eent|The price is too high.|بھا ډیر گران اینت۔|shopping
+تھورا رعایت بدہ.|thora riyaayat bada|Give a little discount.|تھورا رعایت بدہ۔|shopping
+من صرف وینین.|man siraf veeneen|I am just looking.|من صرف وینین۔|shopping
+رسید بدہ.|raseed bada|Please give the receipt.|رسید بدہ۔|shopping
+ناں بور!|naan bor|Enjoy your meal!|ناں بور!|food
+ناں پس چای اشیم ئین.|naan pas chay asheen een|We drink tea after the meal.|ناں پس چای اشیم ئین۔|food
+منا گواتین آپ بدہ.|mana gwaat eenaap bada|Give me cold water.|منا گواتین آپ بدہ۔|food
+اندیشہ مکہ.|andeesha maka|Don't worry.|اندیشہ مکہ۔|emotion
+منا تئی تا فخر اینت.|mana tai ta fakhar eent|I am proud of you.|منا تئی تا فخر اینت۔|emotion
+ای اوشته خوشی بوت.|ai awshte khushi but|I am glad to hear that.|ای اوشته خوشی بوت۔|emotion
+منا ترس اینت.|mana tirs eent|I am scared.|منا ترس اینت۔|emotion
+تؤاں دیدار خوشی بوت.|twan deedaaar khushi but|Good to see you.|تؤاں دیدار خوشی بوت۔|smalltalk
+مبارک بوت!|mubarak but|Congratulations!|مبارک بوت!|greeting
+خوش آمدید!|khush amadeed|Welcome!|خوش آمدید!|greeting
+زود باش بۏ!|zod baash bo|Get well soon!|زود باش بۏ!|health
+یک لحظہ، مہربانی.|yak lahza mebarbani|One moment, please.|یک لحظہ، مہربانی۔|polite
+من ہنوں ئین.|man hanon een|I'll be right there.|من ہنوں ئین۔|smalltalk
+من نہ زانین.|man na zaaneen|I don't know.|من نہ زانین۔|smalltalk
+شا ید پس.|shaayad pas|Maybe later.|شا ید پس۔|smalltalk
+من راضی اِن.|man raazi een|I agree.|من راضی اِن۔|smalltalk
+ای راست نہ اینت.|ai raast na eent|That is not right.|ای راست نہ اینت۔|smalltalk
+تو دؤ چی کن ئی؟|to do chi kan ai|What are you doing today?|تو دؤ چی کن ئی؟|smalltalk
+من امتحانێں تیاری کن اِن.|man imtahaan en tiyaari kan een|I am preparing for the exam.|من امتحانێں تیاری کن اِن۔|school
+منا داتار لوٹ اینت.|mana daataar lot eent|I need help.|منا داتار لوٹ اینت۔|polite
+تئی داتارێں توار.|tai daataar en tawar|Thank you for your help.|تئی داتارێں توار۔|polite
+ای پہلمین بار اینت.|ai pahlimin baar eent|This is the first time.|ای پہلمین بار اینت۔|smalltalk
+پول کجاه بدلاں؟|pol kajaah badalaan|Where can I exchange money?|پول کجاه بدلاں؟|travel
+بس ہشت بجہ ئیت.|bus hasht baja eet|The bus comes at eight.|بس ہشت بجہ ئیت۔|travel
+منی ریل روت.|mani rail rawt|I missed my train.|منی ریل روت۔|travel
+ہوٹل ډیر باش اینت.|hotel dear baash eent|The hotel is very good.|ہوٹل ډیر باش اینت۔|travel
+تئی کاسپ چی اینت؟|tai kaasp chi eent|What is your job?|تئی کاسپ چی اینت؟|work
+من انجنیر اِن.|man anjineer een|I am an engineer.|من انجنیر اِن۔|work
+اوه ہمیشہ داتار کنت.|owa hamesha daataar kant|She always helps.|اوه ہمیشہ داتار کنت۔|smalltalk
+ماں یکرہ یاد گیرین|maan yakra yaad geereen|We learn together.|ماں یکرہ یاد گیرین۔|school
+منی بلۏچی بہتر بېت.|mani balochi behtar bait|My Balochi is improving.|منی بلۏچی بہتر بېت۔|school
+آسمان کبود اینت.|asmaan kabod eent|The sky is blue.|آسمان کبود اینت۔|smalltalk
+منی خوشین رنگ سبز اینت.|mani khushin rang sabs eent|My favourite color is green.|منی خوشین رنگ سبز اینت۔|smalltalk
+سورین ماشین تیز اینت.|surin maasheen tez eent|The red car is fast.|سورین ماشین تیز اینت۔|smalltalk
+شپ سکونین اینت.|shap sukoonin eent|The night is peaceful.|شپ سکونین اینت۔|time
+دؤ مینہ وزیت.|do meenha wazit|It is raining today.|دؤ مینہ وزیت۔|smalltalk
+نوروز نکلگ.|nawroz niklag|The sun is shining.|نوروز نکلگ۔|smalltalk
+شاباش!|shabaash|Well done!|شاباش!|smalltalk
+دگہ لێں مل ئین.|diga lain mil een|We will meet again.|دگہ لێں مل ئین۔|greeting
+ببخش، چی آوژت؟|bibakhsh chi aawjt|Pardon, what did you say?|ببخش، چی آوژت؟|polite
+دگرہ آوژ.|digara aawj|Please say it again.|دگرہ آوژ۔|polite
+اکھر آوژ.|akhar aawj|Please spell it.|اکھر آوژ۔|school
+منا چای ډیر خوش ئیت.|mana chay dear khush eet|I love tea.|منا چای ډیر خوش ئیت۔|food
+ناں تیار اینت.|naan tayyaar eent|The food is ready.|ناں تیار اینت۔|food
+پلیٹێں دیگہ ناں بیڈہ.|plate en digaa naan beda|Put more food on the plate.|پلیٹێں دیگہ ناں بیڈہ۔|food
+ای کپڑ باش اینت.|ai kapar baash eent|This cloth is good.|ای کپڑ باش اینت۔|shopping
+دکان بند بوت.|dukaan band but|The shop is closed.|دکان بند بوت۔|shopping
+من هروچ بازار آن اِن.|man haroch bazaar aan een|I go to the market every day.|من هروچ بازار آن اِن۔|shopping
+ماشین راہێں اینت.|maasheen raah en eent|The car is on the road.|ماشین راہێں اینت۔|travel
+پلێں نزیک مڑ.|pul en nazeek murr|Turn near the bridge.|پلێں نزیک مڑ۔|travel
+شہر ډیر مزن اینت.|shehar dear mazen eent|The city is very big.|شہر ډیر مزن اینت۔|travel
+دہاتێں سکون اینت.|dehaat en sukoon eent|There is peace in the village.|دہاتێں سکون اینت۔|travel
+من شاگرد اِن.|man shaagird een|I am a student.|من شاگرد اِن۔|school
+اہو باش استاد اینت.|aho baash ustaad eent|He is a good teacher.|اہو باش استاد اینت۔|school
+پرس سخت اینت.|purs sakht eent|The question is difficult.|پرس سخت اینت۔|school
+جواب راست اینت.|jawaab raast eent|The answer is correct.|جواب راست اینت۔|school
+کتاب میزێں اینت.|kitaab mez en eent|The book is on the table.|کتاب میزێں اینت۔|school
+بستر نرم اینت.|bistar naram eent|The bed is soft.|بستر نرم اینت۔|home
+کلیت گم بوت.|kaleet gum but|The key is lost.|کلیت گم بوت۔|home
+باغێں پھول اینت.|baagh en phool eent|There are flowers in the garden.|باغێں پھول اینت۔|home
+کمرہ روشنین اینت.|kamra roshnin eent|The room is bright.|کمرہ روشنین اینت۔|home
+پلہ سر برو.|pala sar boro|Go up the stairs.|پلہ سر برو۔|home
+
+@grammar
+"کتاب" جنس چی اینت؟|مذکر|مؤنث|بے جنس|1|Balochi has no grammatical gender for nouns — "kitaab" is neutral.|Balochi nouns do not take gender.
+"مات" کدیمین لفظ اینت؟|اسم|فعل|صفت|1|"Maat" (mother) is a noun.|"Maat" is a noun.
+"من ___ اِن."|ماندہ|ماندہ اِنت|ماندہ بوت|1|A male speaker says "من ماندہ اِن"; the adjective follows the pronoun.|The adjective follows the pronoun.
+"تو ___ ئی؟"|چۆں|کجاه|کتێں|1|"Chon" = how (state).|"Chon" asks how.
+"سکول ___ اینت؟"|کجاه|چۆں|کتێں|1|"Kajaah" = where.|"Kajaah" asks where.
+"ریل ___ ئیت؟"|کتێں وخت|کجاه|چۆں|1|"Kateen wakht" = when.|"Kateen wakht" asks when.
+"آ" ___ جوڑ کنت.|ہاں/نہ پرس|کجاه پرس|منفی|1|"Aa" starts a yes/no question.|"Aa" makes yes/no questions.
+منفی: "من نہ ___ ."|وارین|وارین نہ|نہ وارین اِن|1|Negation uses "na" before the verb.|"Na" precedes the verb.
+حرفِ جر "ێں" ___ لپاره اینت.|اندرێں|سرێں|پسێں|1|"-en" = in/at: گسێں.|"En" means "in/at".
+حرفِ جر "ئہ" ___ لپاره اینت.|خواہ|اندر|پس|1|"Aa" = to/towards: سکولئہ.|"Aa" marks direction.
+حرفِ جر "ئں" ___ لپاره اینت.|چوں|خواہ|سر|1|"An/En" also means "from".|"An" can mean "from".
+"ای" ___ لپاره اینت.|نزیک|در|وخت|1|"Ai" = this (near).|"Ai" means "this".
+"اهو" ___ لپاره اینت.|در|نزیک|وخت|1|"Aho" = that (far).|"Aho" means "that".
+"اینت" ___ اینت.|ہست/اینٹ|بوت|بێت|1|"Eent" is the present "is".|"Eent" is present tense.
+"بوت" ___ اینت.|بوتگ (ماضی)|حال|مستقبل|1|"But" is the past "was/became".|"But" is past tense.
+"بێت" ___ اینت.|مستقبل|ماضی|حال|1|"Bait" is the future/subjunctive "will be".|"Bait" marks the future.
+حال استمراری: "من ___ کن اِن."|کار|کار کنت|کار بوت|1|Present continuous uses "kan een".|"Kan een" makes the present continuous.
+"کنت ئی" ___ لپاره اینت.|دوم شخص واحد|پہلم شخص|جمع|1|"Kant ai" = you do.|"Kant ai" is second person singular.
+"کن اِن" ___ لپاره اینت.|پہلم شخص واحد|دوم شخص|جمع|1|"Kan een" = I do.|"Kan een" is first person singular.
+"کن اینت" ___ لپاره اینت.|سوم شخص جمع|پہلم شخص|دوم شخص|1|"Kaneent" = they do.|"Kaneent" is third person plural.
+"کنت" ___ لپاره اینت.|سوم شخص واحد|جمع|پہلم شخص|1|"Kant" = he/she does.|"Kant" is third person singular.
+"لوٹ اینت" ___ ډیش دینت.|لوٹ|ترس|خوشی|1|"Lot eent" = want/need.|"Lot eent" expresses need.
+"خوش ئیت" ___ لپاره اینت.|خوشی|ناخوشی|ترس|1|"Khush eet" = like.|"Khush eet" means "like".
+"منی تا" ___ ډیش دینت.|ملکیت|جگہ|وخت|1|"Mani ta" = I have.|"Mani ta" expresses possession.
+ترتیب: فعل ___ ئیت.|آخرێں|پہلێں|وچێں|1|Balochi is SOV — the verb is last.|The verb comes at the end.
+صفت ___ پہلوں ئیت.|اسم|فعل|حرف|1|Adjectives precede the noun: مزن گس.|Adjectives come before the noun.
+"مزن گس" ێں "مزن" ___ اینت.|صفت|اسم|فعل|1|"Mazen" describes "gas".|"Mazen" is an adjective.
+"تیز گامگ" ێں "تیز" ___ اینت.|متعلق فعل|اسم|حرف|1|"Tez" modifies the verb → adverb.|"Tez" is an adverb here.
+موازنہ: "ای ان ___ بہتر اینت."|چوں|ئں|سر|1|Comparison uses "chan ... tar".|Comparison uses "chan".
+بہترین: "پچین ___"|بہتر|باش|بہتریں|1|Superlative: پچین بہتر.|Superlative = "pacheen behtar".
+حرفِ عطف "ۏ" ___ لپاره اینت.|جوڑ|تضاد|ویلی|1|"O" = and.|"O" means "and".
+"ولی" ___ لپاره اینت.|تضاد|جوڑ|ویلی|1|"Wali" = but.|"Wali" means "but".
+"چیا کہ" ___ ډیش دینت.|ویلی|وخت|جگہ|1|"Chyaa ke" = because.|"Chyaa ke" gives the reason.
+"اگر" ___ جوڑ کنت.|شرط|ماضی|جمع|1|"Agar" = if.|"Agar" makes a condition.
+"وچے کہ" ___ ډیش دینت.|وخت|جگہ|ملکیت|1|"Wache ke" = when.|"Wache ke" refers to time.
+"تا" ___ ډیش دینت.|حد|پہل|ملکیت|1|"Taa" = until/to.|"Taa" marks the limit.
+"ډیر" ___ اینت.|متعلق فعل|اسم|حرف|1|"Dear" = very.|"Dear" means "very".
+"تھورا" ___ اینت.|تھورا|ډیر|وخت|1|"Thora" = a little.|"Thora" means "a little".
+"پچ" ___ لپاره اینت.|پچ|کس نہ|کجہ|1|"Pach" = all.|"Pach" means "all".
+"کجہ" ___ لپاره اینت.|کجہ|پچ|کس نہ|1|"Kajaa" = some.|"Kajaa" means "some".
+"ہچ" ___ لپاره اینت.|کس نہ|پچ|کجہ|1|"Hach" = none.|"Hach" means "none".
+"روچێں" ___ ډیش دینت.|وخت|جگہ|ملکیت|1|"Roch en" = during the day.|"Roch en" means "during the day".
+"شپێں" ___ ډیش دینت.|وخت|جگہ|ملکیت|1|"Shap en" = at night.|"Shap en" means "at night".
+"دگہ" ___ اینت.|راتکین روچ|دؤ|دؤک|1|"Diga" = tomorrow.|"Diga" means "tomorrow".
+"دؤک" ___ اینت.|گذشتہ روچ|دگہ|دؤ|1|"Dok" = yesterday.|"Dok" means "yesterday".
+"ہنوں" ___ اینت.|ہنوں|پس|پہل|1|"Hanon" = now.|"Hanon" means "now".
+"ہمیشہ" ___ اینت.|ہر وخت|کدے کدے|ہچ ود|1|"Hamesha" = always.|"Hamesha" means "always".
+"توار" ___ لپاره اینت.|شکریہ|معافی|خوش آمدید|1|"Tawar" = thank you.|"Tawar" is "thank you".
+"خوش آمدید" ___ لپاره اینت.|خوش آمدید|رخصت|شکریہ|1|"Khush amadeed" = welcome.|"Khush amadeed" greets a guest.
+"ببخش" ___ لپاره اینت.|معافی|شکریہ|خوشی|1|"Bibakhsh" = pardon.|"Bibakhsh" asks forgiveness.
+"آ" ___ اینت.|ہاں|نہ|پرس|1|"Aa" = yes.|"Aa" means "yes".
+"نہ" ___ اینت.|نہ|ہاں|پرس|1|"Na" = no.|"Na" means "no".
+
+"دل" کدیمین لفظ اینت؟|اسم|فعل|صفت|1|"Dil" (heart) is a noun.|"Dil" is a noun.
+"باش" کدیمین لفظ اینت؟|صفت|اسم|فعل|1|"Baash" (good) describes a noun → adjective.|"Baash" is an adjective.
+"وارین" کدیمین لفظ اینت؟|فعل|اسم|صفت|1|"Waareen" = I eat → verb.|"Waareen" is a verb.
+"من ___ وارین."|نان|نان ئہ|نان ئں|1|Direct object needs no postposition: نان وارین.|The direct object takes no marker.
+"من ___ ئہ روت اِن."|بازار|بازار ئں|بازارێں|1|Direction takes "aa": بازارئہ.|Direction takes "aa".
+"من بازار ___ ئات اِن."|ئں|ئہ|سر|1|Source takes "an": بازارئں.|Origin takes "an".
+"مات ___ کار کنت."|بازارێں|بازارئہ|بازار ئں|1|Location takes "en": بازارێں.|Location takes "en".
+"ای کس ___ اینت؟"|کئیں|کجاه|چۆں|1|"Kaeen" = whose.|"Kaeen" asks whose.
+"کتێں" ___ پرس کنت.|چند|کجاه|کدیم|1|"Kateen" = how many/much.|"Kateen" asks quantity.
+
+@sentences
+من ہر صبح چای اشمین.|I drink tea every morning.|من ہر صبح چای اشمین۔
+منی برات جرمن زبان یاد گیریت.|My brother is learning German.|منی برات جرمن زبان یاد گیریت۔
+ماں جمعہ روچ کوئٹہ ئہ ئین.|We go to Quetta on Friday.|ماں جمعہ روچ کوئٹہ ئہ ئین۔
+کتاب میزێں ڈالگ اینت.|The book lies on the table.|کتاب میزێں ڈالگ اینت۔
+اہو دؤک یک خط لکیت.|He wrote a letter yesterday.|اہو دؤک یک خط لکیت۔
+تو منی داتار کنت ئی؟|Can you help me?|تو منی داتار کنت ئی؟
+منا دو کافی ۏ یک آپ لوٹ اینت.|I need two coffees and a water.|منا دو کافی ۏ یک آپ لوٹ اینت۔
+ریل ہشت بجہ ئیت.|The train leaves at eight.|ریل ہشت بجہ ئیت۔
+منی مات دؤ ماہی پز کنت.|My mother is cooking fish today.|منی مات دؤ ماہی پز کنت۔
+اہو سہ زبان روانیئں آوژیت.|He speaks three languages fluently.|اہو سہ زبان روانیئں آوژیت۔
+سانی گس خورد ۏلے پاک اینت.|Our house is small but clean.|سانی گس خورد ۏلے پاک اینت۔
+من پرس پورا نہ زانت.|I did not fully understand the question.|من پرس پورا نہ زانت۔
+دؤ ہوا ډیر خوش اینت.|The weather is very pleasant today.|دؤ ہوا ډیر خوش اینت۔
+من دگہ پہلوں بیدار بئین.|I get up early tomorrow.|من دگہ پہلوں بیدار بئین۔
+اوه شفاخانہێں کار کنت.|She works in a hospital.|اوه شفاخانہێں کار کنت۔
+ماں سکولێں پہلوں مل ئین.|We meet in front of the school.|ماں سکولێں پہلوں مل ئین۔
+اہو پنیں فون گسێں یاد نہ کرت.|He forgot his phone at home.|اہو پنیں فون گسێں یاد نہ کرت۔
+من دؤ دفتر ئہ نہ آن.|I am not going to the office today.|من دؤ دفتر ئہ نہ آن۔
+بچ باغێں فٹ بال کھیل کنت.|The children play football in the garden.|بچ باغێں فٹ بال کھیل کنت۔
+تو جھنگل کل کنت ئی؟|Can you open the window?|تو جھنگل کل کنت ئی؟
+منی تا دؤ ډیر کار اینت.|I have a lot of work today.|منی تا دؤ ډیر کار اینت۔
+منی پِت ئاں اخبار وانگ خوش ئیت.|My father likes reading newspapers.|منی پِت ئاں اخبار وانگ خوش ئیت۔
+ناں سچ ډیر مزہ دار اینت.|The food is really tasty.|ناں سچ ډیر مزہ دار اینت۔
+ماں یک گھنٹہ ٹھپ ئین.|We have been waiting for an hour.|ماں یک گھنٹہ ٹھپ ئین۔
+من منی کاسپ لپارہ بلۏچی یاد گیرین.|I learn Balochi for my job.|من منی کاسپ لپارہ بلۏچی یاد گیرین۔
+اوه یک خوردین شہر ئں اینت.|She is from a small town.|اوه یک خوردین شہر ئں اینت۔
+من بازار ئں نان ۏ دود آرین.|I bring bread and milk from the market.|من بازار ئں نان ۏ دود آرین۔
+اہو بسێں دفتر ئہ ئیت.|He goes to the office by bus.|اہو بسێں دفتر ئہ ئیت۔
+ماں دؤک یک فلم دیست.|We watched a film yesterday.|ماں دؤک یک فلم دیست۔
+من شام تئی تا پیام لکین.|I will send you a message this evening.|من شام تئی تا پیام لکین۔
+ہوٹل اسٹیشن ئں ډیر در نہ اینت.|The hotel is not far from the station.|ہوٹل اسٹیشن ئں ډیر در نہ اینت۔
+منی ہار طب خوانیت.|My sister studies medicine.|منی ہار طب خوانیت۔
+ہپتێں آخرێں منی تا وخت نہ اینت.|I have no time at the weekend.|ہپتێں آخرێں منی تا وخت نہ اینت۔
+اہو شامێں کافی نہ اشیت.|He does not drink coffee in the evening.|اہو شامێں کافی نہ اشیت۔
+ماں کوئٹہ ئاں دو ٹکٹ لوٹ ئین.|We need two tickets to Quetta.|ماں کوئٹہ ئاں دو ٹکٹ لوٹ ئین۔
+امتحان نو بجہ شروع بێت.|The exam starts at nine.|امتحان نو بجہ شروع بێت۔
+من تھورا بلۏچی ۏ انگلیسی آوژین.|I speak a little Balochi and English.|من تھورا بلۏچی ۏ انگلیسی آوژین۔
+منی رفق انجنیر کاسپ کنت.|My friend works as an engineer.|منی رفق انجنیر کاسپ کنت۔
+اوه آشپزگێں مات داتار کنت.|She helps her mother in the kitchen.|اوه آشپزگێں مات داتار کنت۔
+من ہر شام گامین.|I go for a walk every evening.|من ہر شام گامین۔
+
+@listening
+سلام، تو چۆں ئی؟|salaam to chon ai|Hello, how are you?|سلام، تو چۆں ئی؟|سلام، تو کجاه ئی؟|صبح بخیر، تو چۆں ئی؟|1
+منا یک پیالہ چای لوٹ اینت.|mana yak pyala chay lot eent|I need a cup of tea.|منا یک پیالہ چای لوٹ اینت|منا یک پیالہ کافی لوٹ اینت|منا یک گلاس آپ لوٹ اینت|1
+اسٹیشن کجاه اینت؟|station kajaah eent|Where is the station?|اسٹیشن کجاه اینت؟|بازار کجاه اینت؟|ہوٹل کجاه اینت؟|1
+من کوئٹہ ئں اِن.|man quetta en een|I am from Quetta.|من کوئٹہ ئں اِن|من کوئٹہ ئں زندگ کنین|من کوئٹہ ئہ آن|1
+بل بیا، توار.|bill biya tawar|The bill, please.|بل بیا، توار|مینو بیا، توار|رسید بیا، توار|1
+ای چنڑ اینت؟|ai channar eent|How much is this?|ای چنڑ اینت؟|ای کسێ اینت؟|ای چی اینت؟|1
+من نہ زانت.|man na zaanat|I did not understand.|من نہ زانت|من نہ ئاتگ|من نہ اوستگ|1
+آہستہ آوژ.|aahistaa aawj|Please speak slowly.|آہستہ آوژ|بلند آوژ|نزیک بیا|1
+منی برات ڈاکٹر اینت.|mani braat doctor eent|My brother is a doctor.|منی برات ڈاکٹر اینت|منی برات استاد اینت|منی پِت ڈاکٹر اینت|1
+ریل ہشت بجہ ئیت.|rail hasht baja eet|The train leaves at eight.|ریل ہشت بجہ ئیت|بس ہشت بجہ ئیت|ریل ہشت بجہ ئا ئیت|1
+منی تا دؤ وخت نہ اینت.|mani ta do wakht na eent|I have no time today.|منی تا دؤ وخت نہ اینت|منی تا دؤ پول نہ اینت|منی تا دؤ کار نہ اینت|1
+ناں ډیر مزہ دار اینت.|naan dear maza daar eent|The food is very tasty.|ناں ډیر مزہ دار اینت|ہوا ډیر باش اینت|چای ډیر تپ اینت|1
+ماں یکرہ بلۏچی یاد گیرین|maan yakra balochi yaad geereen|We learn Balochi together.|ماں یکرہ بلۏچی یاد گیرین|ماں یکرہ بلۏچی آوژین|ماں یکرہ کتاب وانین|1
+منا دو شبێں کمره لوٹ اینت.|mana du shap en kamra lot eent|I need a room for two nights.|منا دو شبێں کمره لوٹ اینت|منا دو کسێں میز لوٹ اینت|منا یک شبێں کمره لوٹ اینت|1
+منی مات دؤ ماہی پز کنت.|mani maat do maahi paz kant|My mother cooks fish today.|منی مات دؤ ماہی پز کنت|منی مات دؤ ماہی آریت|منی پِت دؤ ماہی پز کنت|1
+من ہر شام گامین.|man har shaam gaameen|I walk every evening.|من ہر شام گامین|من ہر صبح گامین|من ہر شام خسپین|1
+تئی تا خوردین اندازہ هست؟|tai ta khurdin andaaza hast|Do you have a smaller size?|تئی تا خوردین اندازہ هست؟|تئی تا مزنیں اندازہ هست؟|تئی تا دیگہ رنگ هست؟|1
+من کارڈێں ادائگی کن اِن.|man card en adaayagi kan een|I will pay by card.|من کارڈێں ادائگی کن اِن|من نقد ادائگی کن اِن|من دگہ ادائگی کن اِن|1
+من ډیر پشیمان اِن.|man dear pashemaan een|I am very sorry.|من ډیر پشیمان اِن|من ډیر خوش اِن|من ډیر ترس اِن|1
+من دگہ تئی تا زنګ کن اِن.|man diga tai ta zang kan een|I will call you tomorrow.|من دگہ تئی تا زنګ کن اِن|من دؤ تئی تا زنګ کن اِن|من دگہ تئی تا مل اِن|1
+
+@stories
+کوئٹہ ئہ پہلمین سفر|🚆|کریم صبح کوئٹہ رسیت.\nاہو ٹیکسیئں ___ (1) تہ روت.\nکمرهێں اهو ___ (2) آشمت.\nپس اهو منی ___ (3) تا زنګ کرت.|Karim reaches Quetta in the morning. He goes by taxi to the hotel. In the room he drinks tea. Then he calls his family.|ہوٹل/اسٹیشن/بازار=0;چای/کتاب/نان=0;مات/دکان/جماعت=0
+بازارێں خرید|🛒|سمیہ جمعہ روچ ___ (1) روت.\nاوه نان، دود ۏ ___ (2) گریت.\nادائگی اوه ___ (3) ئں کرت.|Sameea goes shopping on Friday. She buys bread, milk and apples. She pays by card.|بازار/سکول/دفتر=0;سیب/کتاب/کورسی=0;کارڈ/کاغذ/آپ=0
+گم بوتگین پاسپورٹ|🛂|احمد پنیں ___ (1) گردایت.\nاہو یک ___ (2) ئں داتار پرسیت.\nشپاش اوه پنیں ___ (3) ئں درکورت.|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is found in his bag.|پاسپورٹ/کلیت/کتاب=0;پولیس/استاد/ہمسایہ=0;تھیلہ/آشپزگ/سکول=0
+ڈاکٹر ئاں|🏥|بلالێں طبیعت ___ (1) بوت.\nاہو ___ (2) ئاں روت.\nڈاکٹر اهو دوا ۏ ___ (3) دات.|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|خراب/باش/شگ=0;ڈاکٹر/نانوا/رانندہ=0;آرام/پول/کتاب=0
+بلۏچی جماعت|📚|نادیہ سہ ماہ بوتگ ___ (1) یاد گیریت.\nاوه ہر شام ___ (2) ئں مشق کنت.\nاوهئیں ___ (3) آوژنت اوه باش آوژیت.|Nadia has been learning Balochi for three months. She practises every evening with books. Her teacher says she speaks well.|بلۏچی/فرانسوی/عربی=0;کتاب/تصویر/کارڈ=0;استاد/برات/ہمسایہ=0
+ٹبرێں ناں|👨‍👩‍👧‍👦|جمعہ روچ پچیں ___ (1) آت.\nنانه ___ (2) پز کرت.\nپچ یکرہ ناشته ۏ ډیر ___ (3) کرت.|On Friday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|ٹبر/دفتر/جماعت=0;برنج/آپ/کاغذ=0;ہندا/کار/خسپ=0
+اسٹیشنێں|🚉|ریل دہ منٹ ___ (1) بوت.\nحسن دکان ئں ___ (2) گریت.\nپس اهو ___ (3) ئں نشست.|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|درنگ/پاک/تیار=0;اخبار/رسید/کلیت=0;ریل/بس/ہواپیما=0
+زمستانێں شپ|❄️|جنوریێں ډیر ___ (1) بېت.\nعائشہ گرمین ___ (2) پوشیت.\nاوه گرمین ___ (3) آشمت ۏ کتاب وانگ بوت.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|گوات/تپ/مینہ=0;کوٹ/کرتا/بوت=0;چای/آپ/رس=0
+ہوٹلێں ناں|🍽️|خادم ___ (1) آورت.\nعمر ماہی ۏ ___ (2) لوٹ کرت.\nآخرێں اهو ___ (3) لوٹ کرت.|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|مینو/کورسی/روشنی=0;برنج/میز/جھنگل=0;بل/کلیت/رسید=0
+نۆکین رفق|🤝|لینا ۏ ثنا ___ (1) ئں ملنت.\nاوہاں موسیقی ۏ ___ (2) باروا آوژنت.\nآخرێں اوہاں پنیں ___ (3) بدل کنت.|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|باغ/دفتر/ریل=0;سفر/رسید/امتحان=0;نمبر/پتہ/کتاب=0
+
+@idioms
+چمێں تارو|cham een taaro|The apple of one's eye.|چمێں تارو|اہوئیں باز اہوئیں چمێں تارو اینت۔
+دلێں دست ڈالگ|dil een dast daalag|To speak honestly.|سچ آوژگ|دلێں دست ڈالہ ۏ سچ بآوژ۔
+ناکێں دم کنگ|naak een dam kag|To annoy someone constantly.|ډیر تنگ کنگ|بچاں شور کنتہ ناکێں دم کرت۔
+دست داتگ|dast daatag|To give up.|ہار منگ|ستون دیستہ دست دات۔
+چم بند کنگ|cham band kag|To ignore the obvious.|چم بند کنگ|نشان تئی پہلوں اینت، چم بند مکن۔
+پنیں ناک کٹاگ|panin naak kataag|To bring shame on oneself.|بے عزتی کنگ|ڈروغ آوژتہ پنیں ناک کٹاگ۔
+آسمان سر کپگ|asmaan sar kapag|To make a huge fuss.|ډیر شور کنگ|خوردین ڳالہ ئاں آسمان سر کپت۔
+دالێں سیاہ|daal een siyaah|Something suspicious.|کجہ گڑبڑ|ای ڳالہ صاف نہ اینت، دالێں سیاہ ہست۔
+دست ئں بوتگ|dast en butag|To lose control.|قابو ئں بوتگ|ڳالہ دست ئں بوت۔
+وخت دست ئں ڈارگ|wakht dast en daaraag|To use time wisely.|وخت ضایع نہ کنگ|وخت دست ئں ڈارہ، دگرہ نہ ئیت۔
+دل کل کنگ|dil kal kag|To speak one's mind.|دل کل کنگ|پنیں دل کل بکنہ، ترس مکنہ۔
+گس خراب|gas kharaab|A ruined household.|ویجاڑ بوتگین گس|مینہ فصلێں گس خراب کرت۔
+آپ بوتگ|aap butag|To be deeply embarrassed.|شرمندہ بوتگ|پچێں پہلوں اوه آپ بوت۔
+دہان ئں نکلگین لفظ|dahaan en niklageen lafz|A spoken promise must be kept.|چیلگین وچن|دہان ئں نکلگین لفظ دگرہ نہ آرگ بېت۔
+ناکێں ڳالہ|naak een gaala|A matter of honour.|عزتێں ڳالہ|ہنوں ای ناکێں ڳالہ اینت۔
+چنا چٹاگ|chana chataag|To teach someone a harsh lesson.|سخت سبق داتگ|استاد شرارتین بچئاً چنا چٹاگ۔
+ډنڈ ڈیشاگ|dand deshaag|To threaten someone.|ترس داتگ|اهو ډنڈ ڈیشاگ ۏ پچے چپ کرت۔
+چمێں تارو بوتگ|cham een taaro butag|To become someone's favourite.|پچێں پیارو بوتگ|اوه پنیں استادئیں چمێں تارو بوت۔
+دل مزن دارگ|dil mazen daaraag|To be generous and open.|دل مزن بوتگ|اوهئیں دل مزن اینت، کسێں تا کینه نہ ڈاریت۔
+وخت چمێں جھپکێں|wakht cham een jhapak een|In the blink of an eye.|ډیر تیز|وخت چمێں جھپکێں گذر بوت۔
+گرانین اشک روانگ|graanin ashk rawaang|To cry bitterly.|ډیر گرینت|ناکامی پس اوه گرانین اشک روانت۔
+زانتین دل|zaanin dil|Hard-hearted.|سخت دل|زانتین دل کسێں ڳالہ نہ اوشیت۔
+پاکین دل|paakin dil|Pure-hearted.|پاک دل|اوه پاکین دل کس اینت، کینه نہ ڈاریت۔
+پنیں پاڈێں کلہاڑ|panin paag een kulhaar|To harm oneself.|پنیں تا نقصان|ڈروغ آوژتہ پنیں پاڈێں کلہاڑ کرت۔
+دہانێں شیرین|dahaan een shereen|Sweet-talker.|شیرین ڳپ|دہانێں شیرین کسے تا زود اعتبار مکنہ۔
+
+@alphabet
+ا|alif|alif|آپ
+ب|be|be|باغ
+پ|pe|pe|پل
+ت|te|te|تاریخ
+ٹ|tte|tte|ٹبر
+ث|se|se|ثابت
+ج|jim|jim|جسم
+چ|che|che|چای
+ح|he|hhe|حکیم
+خ|khe|khe|خبر
+د|daal|daal|در
+ڈ|dd|dd|ڈاکٹر
+ذ|zhe|zhe|ذکر
+ر|re|re|رنگ
+ز|ze|ze|زبان
+ژ|zh|zh|ژند
+س|sin|sin|صبح
+ش|shin|shin|شپ
+ص|suad|suad|صابن
+ض|zuad|zuad|ضرورت
+ط|toe|toe|طریق
+ظ|zoe|zoe|ظالم
+ع|ain|ain|عید
+غ|ghain|ghain|غریب
+ف|fe|fe|فرش
+ق|qaaf|qaaf|قیمت
+ک|kaaf|kaaf|گس
+گ|gaaf|gaaf|گوشٹ
+ل|laam|laam|لفظ
+م|mim|mim|مات
+ن|nun|nun|ناک
+و|wao|wao|وخت
+ہ|he|he|ہوا
+ی|ye|ye|یک
+ے|bari ye|bari ye|روچ

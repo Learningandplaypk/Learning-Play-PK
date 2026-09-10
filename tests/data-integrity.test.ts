@@ -11,7 +11,7 @@ import { TECH } from "@/data/quiz/tech";
 import { MOVIES } from "@/data/quiz/movies";
 import { BADGES } from "@/data/badges";
 import { LEARN_GAME_DATA, BRAIN_GAME_DATA, QUIZ_TOPIC_DATA, FUN_GAME_DATA, getGameData } from "@/lib/games-data";
-import { LANGUAGES } from "@/lib/langs";
+import { LANG_REGISTRY, LANG_SLUGS } from "@/lib/lang-registry";
 
 const TOPICS: Array<[string, typeof GK]> = [
   ["gk", GK], ["pakistan", PAKISTAN], ["science", SCIENCE], ["islamic", ISLAMIC], ["history", HISTORY],
@@ -127,17 +127,19 @@ describe("Games catalog integrity", () => {
 });
 
 describe("Languages + badges", () => {
-  it("7 foreign language packs (english = full course, separate data); 100 words + 30 phrases each", () => {
-    const langs = Object.values(LANGUAGES);
-    expect(langs.length).toBe(7);
-    expect(Object.keys(LANGUAGES)).toContain("arabic");
-    for (const l of langs) {
-      expect(l.words.length).toBeGreaterThanOrEqual(100);
-      expect(l.phrases.length).toBeGreaterThanOrEqual(30);
-      for (const w of l.words) {
-        expect(w.roman.length).toBeGreaterThan(0);
-        expect(w.en.length).toBeGreaterThan(0);
-      }
+  it("21 learning languages registered with unique slugs, names and TTS codes", () => {
+    expect(LANG_REGISTRY.length).toBe(21);
+    expect(LANG_SLUGS.length).toBe(21);
+    expect(new Set(LANG_SLUGS).size).toBe(21);
+    for (const l of LANG_REGISTRY) {
+      expect(l.name.length).toBeGreaterThan(1);
+      expect(l.native.length).toBeGreaterThan(0);
+      expect(l.nameUr.length).toBeGreaterThan(0);
+      expect(l.tts.length).toBeGreaterThan(0);
+      expect(l.tts[0]).toMatch(/^[a-z]{2,3}(-[A-Za-z]{2,4})?$/);
+      expect(["latin", "arabic", "nastaliq", "devanagari", "bengali", "cyrillic", "han", "hangul", "kana"]).toContain(
+        l.script
+      );
     }
   });
 

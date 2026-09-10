@@ -2,57 +2,43 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { ENGLISH_WORDS, SENTENCES } from "@/data/english";
-import { getLanguage } from "@/lib/langs";
 import { shuffle } from "@/lib/utils";
 import { sfx } from "@/lib/sfx";
+import { useTts } from "@/lib/tts";
+import { getLangMeta } from "@/lib/lang-registry";
+import { LessonEmpty, LessonLoading, TtsNote, useLangPack, useLessonScript } from "./lesson-bits";
 
 const ROUNDS = 8;
 
 type Round = { say: string; options: string[]; answer: number; code: string };
 
-function speak(text: string, code: string) {
-  try {
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = code;
-    u.rate = 0.85;
-    window.speechSynthesis.speak(u);
-  } catch {
-    /* speech unavailable */
-  }
-}
-
 export default function ListeningChallenge({ lang = "english", onEnd }: GameProps) {
-  const code = lang === "english" ? "en-US" : (getLanguage(lang)?.code ?? "en-US");
+  const pack = useLangPack(lang);
+  const codes = getLangMeta(lang)?.tts ?? ["en-US"];
+  const { say } = useTts(codes);
+  const { rtl, family } = useLessonScript(lang);
 
-  const rounds = useMemo<Round[]>(() => {
-    if (lang === "english") {
-      const sentences = shuffle(SENTENCES.filter((s) => s.correct.length <= 7)).slice(0, 5);
-      const words = shuffle(ENGLISH_WORDS.filter((w) => w.lv === 1)).slice(0, 3);
-      return [
-        ...sentences.map((s) => {
-          const say = s.correct.join(" ");
-          const wrongs = shuffle(SENTENCES.filter((x) => x !== s)).slice(0, 2).map((x) => x.correct.join(" "));
-          const opts = shuffle([say, ...wrongs]);
-          return { say, options: opts, answer: opts.indexOf(say), code };
-        }),
-        ...words.map((w) => {
-          const wrongs = shuffle(ENGLISH_WORDS.filter((x) => x.en !== w.en)).slice(0, 2).map((x) => x.en);
-          const opts = shuffle([w.en, ...wrongs]);
-          return { say: w.en, options: opts, answer: opts.indexOf(w.en), code };
-        }),
-      ];
+  const rounds = useMemo<Round[] | null>(() => {
+    if (!pack) return null;
+    // dedicated listening items first (hand-authored), words as a fallback pool
+    if (pack.listening.length) {
+      return shuffle(pack.listening)
+        .slice(0, ROUNDS)
+        .map((it) => {
+          const opts = shuffle(it.o.map((text, i) => ({ text, correct: i === it.a })));
+          return { say: it.t, options: opts.map((o) => o.text), answer: opts.findIndex((o) => o.correct), code: codes[0] };
+        });
     }
-    const data = getLanguage(lang);
-    const ws = shuffle(data?.words ?? []).slice(0, ROUNDS);
+    const ws = shuffle(pack.words).slice(0, ROUNDS);
     return ws.map((w) => {
-      const wrongs = shuffle((data?.words ?? []).filter((x) => x.word !== w.word)).slice(0, 2).map((x) => `${x.word} (${x.roman})`);
-      const label = `${w.word} (${w.roman})`;
+      const label = `${w.w} (${w.r})`;
+      const wrongs = shuffle(pack.words.filter((x) => x.w !== w.w))
+        .slice(0, 2)
+        .map((x) => `${x.w} (${x.r})`);
       const opts = shuffle([label, ...wrongs]);
-      return { say: w.word, options: opts, answer: opts.indexOf(label), code };
+      return { say: w.w, options: opts, answer: opts.indexOf(label), code: codes[0] };
     });
-  }, [lang]);
+  }, [pack, codes]);
 
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
@@ -61,22 +47,24 @@ export default function ListeningChallenge({ lang = "english", onEnd }: GameProp
   const [startedAt] = useState(() => Date.now());
   const spokenRef = useRef(false);
 
-  const round = rounds[idx];
+  const round = rounds?.[idx];
 
   useEffect(() => {
+    if (!round) return;
     if (!spokenRef.current) {
       spokenRef.current = true;
-      setTimeout(() => speak(round.say, round.code), 350);
+      setTimeout(() => say(round.say, { rate: 0.85 }), 350);
     }
   }, [round]);
 
   const replay = () => {
+    if (!round) return;
     setPlays((p) => p + 1);
-    speak(round.say, round.code);
+    say(round.say, { rate: 0.85 });
   };
 
   const choose = (i: number) => {
-    if (picked !== null) return;
+    if (picked !== null || !round || !rounds) return;
     setPicked(i);
     const ok = i === round.answer;
     if (ok) {
@@ -84,7 +72,7 @@ export default function ListeningChallenge({ lang = "english", onEnd }: GameProp
       setCorrect((c) => c + 1);
     } else {
       sfx("wrong");
-      speak(round.say, round.code);
+      say(round.say, { rate: 0.85 });
     }
     setTimeout(() => {
       setPicked(null);
@@ -95,8 +83,12 @@ export default function ListeningChallenge({ lang = "english", onEnd }: GameProp
     }, 1300);
   };
 
+  if (!pack) return <LessonLoading />;
+  if (!rounds || rounds.length === 0 || !round) return <LessonEmpty onEnd={onEnd} slug={lang} />;
+
   return (
     <div className="mx-auto max-w-lg text-center">
+      <TtsNote codes={codes} />
       <div className="mb-4 flex justify-center gap-2 text-sm">
         <span className="chip">{idx + 1}/{rounds.length}</span>
         <span className="chip">✅ {correct}</span>
@@ -116,6 +108,8 @@ export default function ListeningChallenge({ lang = "english", onEnd }: GameProp
             <button
               key={i}
               onClick={() => choose(i)}
+              dir={rtl ? "rtl" : "ltr"}
+              style={family ? { fontFamily: family } : undefined}
               className={`rounded-xl border px-4 py-3.5 text-start text-[15px] font-semibold transition ${
                 state === "idle"? "card": state === "right"? "border-brand/70 bg-brand/15": state === "wrong"? "shake border-accent/70 bg-accent/15": "opacity-35"}`}
             >

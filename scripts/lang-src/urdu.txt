@@ -1,0 +1,710 @@
+# Urdu (اردو) for English speakers — authored source for data/langs/urdu.json
+# Romanization follows a single consistent scheme: short a = a, long aa,
+# i/ee, u/oo, e, o, ai, au; q/kh/gh/ch/sh/dh for the retroflex + guttural set.
+
+@info
+romanization|Roman letters: a, aa, i, ee, u, oo, e, o; kh, gh, q, ch, sh, zh, dh, th, rr, n, n for special letters.
+alphabet.title|اردو حروفِ تہجی
+alphabet.intro|اُردو میں 38 بنیادی حروف ہیں اور دائیں سے بائیں لکھا جاتا ہے۔
+
+@frames
+greetings|یہ کہیں: {s}۔|Say: {en}.
+numbers|میرے پاس {s} سیب ہیں۔|I have {en} apples.
+family|یہ {s} ہیں۔|This is my {en}.
+food|مجھے {s} پسند ہے۔|I like {en}.
+travel|{s} کہاں ہے؟|Where is the {en}?
+time|میں {s} سکول جاتا ہوں۔|I go to school {en}.
+colors|آسمان {s} ہے۔|The sky is {en}.
+body|میرا {s} دکھ رہا ہے۔|My {en} hurts.
+home|یہاں {s} ہے۔|Here is the {en}.
+work|یہ {s} ہے۔|This is {en}.
+school|یہ {s} ہے۔|This is {en}.
+shopping|یہ {s} ہے۔|This is {en}.
+emotions|میں {s} محسوس کرتا ہوں۔|I feel {en}.
+verbs|میں روز {s} ہوں۔|This means: {en}.
+adjectives|یہ گھر {s} ہے۔|The house is {en}.
+
+@words
+hello|السلام علیکم|assalam-o-alaikum||اسلامی طریقے سے سلام کہیں۔|Greet the Islamic way.
+goodbye|خدا حافظ|khuda hafiz
+good morning|صبح بخیر|subah bakhair
+good evening|شام بخیر|shaam bakhair
+good night|شب بخیر|shab bakhair
+thank you|شکریہ|shukriya
+please|مہربانی فرمائیں|meharbani farmaein
+sorry|معاف کیجیے|maaf kijiye
+excuse me|سنیے|suniye
+yes|جی ہاں|jee haan
+no|جی نہیں|jee nahin
+welcome|خوش آمدید|khush amdeed
+how are you|آپ کیسے ہیں؟|aap kaise hain
+my name is|میرا نام ہے|mera naam hai||میرا نام احمد ہے۔|My name is Ahmad.
+nice to meet you|آپ سے مل کر خوشی ہوئی|aap se mil kar khushi hui
+see you later|پھر ملتے ہیں|phir milte hain
+good luck|خوش قسمتی|khush qismati
+congratulations|مبارک ہو|mubarak ho
+help|مدد|madad
+of course|بالکل|bilkul
+zero|صفر|sifar||حساب میں صفر لگائیں۔|Put a zero in the calculation.
+one|ایک|ek
+two|دو|do
+three|تین|teen
+four|چار|chaar
+five|پانچ|paanch
+six|چھ|chay
+seven|سات|saat
+eight|آٹھ|aath
+nine|نو|nau
+ten|دس|das
+eleven|گیارہ|gyarah
+twelve|بارہ|barah
+thirteen|تیرہ|terah
+fourteen|چودہ|chaudah
+fifteen|پندرہ|pandrah
+twenty|بیس|bees
+thirty|تیس|tees
+forty|چالیس|chaalis
+fifty|پچاس|pachaas
+hundred|سو|sau
+thousand|ہزار|hazaar
+first|پہلا|pehla||یہ پہلا سبق ہے۔|This is the first lesson.
+second|دوسرا|dusra||وہ دوسرا کمرہ ہے۔|That is the second room.
+half|آدھا|aadha||آدھا گلاس پانی۔|Half a glass of water.
+mother|ماں|maa|میری ماں
+father|باپ|baap|میرے والد
+brother|بھائی|bhai|میرا بھائی
+sister|بہن|behen|میری بہن
+son|بیٹا|beta|ان کا بیٹا
+daughter|بیٹی|beti|ان کی بیٹی
+child|بچہ|bachcha|یہ بچہ
+baby|ننھا بچہ|nanha bachcha|یہ ننھا بچہ
+family|خاندان|khandan|ہمارا خاندان
+husband|شوہر|shohar|ان کے شوہر
+wife|بیوی|biwi|ان کی بیوی
+uncle|چچا|chacha|میرے چچا
+aunt|چچی|chachi|میری چچی
+grandfather|دادا|dada|میرے دادا
+grandmother|دادی|dadi|میری دادی
+cousin|چچا زاد بھائی|chacha zad bhai|میرا چچا زاد بھائی
+nephew|بھتیجا|bhatija|ان کا بھتیجا
+friend|دوست|dost|میرا دوست
+neighbour|پڑوسی|parosi|ہمارے پڑوسی
+parent|والدین|walidain|میرے والدین
+water|پانی|paani
+bread|روٹی|roti
+rice|چاول|chaawal
+milk|دودھ|doodh
+tea|چائے|chai
+sugar|چینی|cheeni
+salt|نمک|namak
+egg|انڈا|anda
+meat|گوشت|gosht
+chicken|مرغی|murgi
+fish|مچھلی|machli
+apple|سیب|seb
+banana|کیلا|kela
+mango|آم|aam
+orange (fruit)|مالٹا|maalta
+grapes|انگور|angoor
+lemon|لیموں|lemon
+tomato|ٹماٹر|tamatar
+onion|پیاز|pyaaz
+potato|آلو|aloo
+carrot|گاجر|gajar
+oil|تیل|tail
+butter|مکھن|makhan
+honey|شہد|shahad
+juice|رس|ras
+coffee|کافی|kaafi
+soup|شوربہ|shorba
+breakfast|ناشتہ|nashta
+lunch|دوپہر کا کھانا|dopehar ka khana
+dinner|رات کا کھانا|raat ka khana
+car|گاڑی|gaari
+bus|بس|bus
+train|ٹرین|train
+airplane|جہاز|jahaaz
+bicycle|سائیکل|cycle
+road|سڑک|sarak
+street|گلی|gali
+bridge|پل|pul
+station|اسٹیشن|station
+airport|ہوائی اڈہ|hawai adda
+ticket|ٹکٹ|ticket
+map|نقشہ|naqsha
+city|شہر|shehar
+village|گاؤں|gaaon
+country|ملک|mulk
+hotel|ہوٹل|hotel
+journey|سفر|safar
+luggage|سامان|saamaan
+driver|ڈرائیور|driver
+passport|پاسپورٹ|passport
+time|وقت|waqt||وقت بہت تیزی سے گزرتا ہے۔|Time passes very quickly.
+day|دن|din||دن میں دو بار دوا لیں۔|Take the medicine twice a day.
+night|رات|raat||رات کو آسمان صاف ہے۔|The sky is clear at night.
+morning|صبح|subah
+evening|شام|shaam
+week|ہفتہ|hafta||ہفتے میں ایک بار بازار جاتا ہوں۔|I go to the market once a week.
+month|مہینہ|maheena||مہینے کے آخر میں تنخواہ آتی ہے۔|The salary comes at the end of the month.
+year|سال|saal||سال میں چار موسم آتے ہیں۔|Four seasons come in a year.
+hour|گھنٹہ|ghanta||ایک گھنٹہ پہلے آ جائیں۔|Come one hour earlier.
+minute|منٹ|minute||پانچ منٹ ٹھہر جائیں۔|Wait for five minutes.
+today|آج|aaj
+tomorrow|کل|kal
+yesterday|گزشتہ کل|guzishta kal
+now|اب|ab
+later|بعد|baad
+early|جلدی|jaldi
+late|دیر|dair
+always|ہمیشہ|hamesha
+sometimes|کبھی کبھی|kabhi kabhi
+never|کبھی نہیں|kabhi nahin
+color|رنگ|rang||اس کپڑے کا رنگ گہرا ہے۔|The color of this cloth is dark.
+red|سرخ|surkh
+blue|نیلا|neela
+green|ہرا|hara
+yellow|پیلا|peela
+black|کالا|kaala
+white|سفید|safed
+brown|بھورا|bhoora
+grey|سرمئی|surmai
+pink|گلابی|gulabi
+purple|جامنی|jaamni
+orange (color)|نارنجی|naaranji
+body|جسم|jism||جسم کو آرام کی ضرورت ہے۔|The body needs rest.
+head|سر|sar
+hair|بال|baal||میرے بال کالے ہیں۔|My hair is black.
+face|چہرہ|chehra
+eye|آنکھ|aankh||میری آنکھ دکھ رہی ہے۔|My eye hurts.
+ear|کان|kaan
+nose|ناک|naak||ناک سے سانس لیں۔|Breathe through the nose.
+mouth|منہ|munh
+tooth|دانت|daant
+tongue|زبان|zubaan||زبان سے ذائقہ محسوس ہوتا ہے۔|The tongue feels the taste.
+neck|گردن|gardan||گردن سیدھی رکھیں۔|Keep the neck straight.
+shoulder|کندھا|kandha
+hand|ہاتھ|haath
+finger|انگلی|ungli||انگلی سے اشارہ کریں۔|Point with the finger.
+leg|ٹانگ|taang||ٹانگ میں درد ہے۔|There is pain in the leg.
+foot|پاؤں|paaon
+heart|دل|dil
+stomach|پیٹ|pet
+house|گھر|ghar
+room|کمرہ|kamra
+door|دروازہ|darwaza
+window|کھڑکی|khirki
+wall|دیوار|deewar
+roof|چھت|chhat
+floor|فرش|farsh
+kitchen|باورچی خانہ|bawarchi khana
+bathroom|غسل خانہ|ghusal khana
+bed|بستر|bistar
+table|میز|mez
+chair|کرسی|kursi
+sofa|صوفہ|sofa
+lamp|بجلی|bijli
+key|چابی|chaabi
+stairs|سیڑھیاں|seerhiyan
+garden|باغ|baagh
+light|روشنی|roshni
+fan|پنکھا|pankha
+mirror|آئینہ|aaina
+work|کام|kaam
+job|نوکری|naukri
+office|دفتر|daftar
+money|پیسے|paise
+salary|تنخواہ|tankhwa
+meeting|میٹنگ|meeting
+boss|باس|baas
+employee|ملازم|mulazim
+business|کاروبار|karobar
+company|کمپنی|company
+market|بازار|bazaar
+shop|دکان|dukaan
+customer|گاہک|gahak
+price|قیمت|qeemat
+farmer|کسان|kisaan
+doctor|ڈاکٹر|doctor
+teacher|استاد|ustaad
+police|پولیس|police
+school|سکول|school
+book|کتاب|kitaab
+pen|قلم|qalam
+pencil|پنسل|pencil
+page|صفحہ|safha
+class|جماعت|jamaat
+student|طالب علم|talib-e-ilm
+lesson|سبق|sabaq
+exam|امتحان|imtihan
+question|سوال|sawaal
+answer|جواب|jawaab
+homework|ہوم ورک|home work
+library|لائبریری|library
+university|یونیورسٹی|university
+language|زبان|zubaan
+word|لفظ|lafz
+sentence|جملہ|jumla
+dictionary|لغت|lughaat
+science|سائنس|science
+history|تاریخ|tareekh
+knowledge|علم|ilm
+education|تعلیم|taleem
+shopping|خریداری|khareedari||آج شام خریداری کرنی ہے۔|We have to go shopping this evening.
+buy|خریدنا|khareedna||وہ سبزی خرید رہا ہے۔|He is buying vegetables.
+sell|بیچنا|bechna||کسان بازار میں پھل بیچتا ہے۔|The farmer sells fruit in the market.
+cheap|سستا|sasta||یہ کپڑا سستا ہے۔|This cloth is cheap.
+expensive|مہنگا|mehnga||موبائل مہنگا ہے۔|The mobile is expensive.
+coin|سکہ|sikka
+note|نوٹ|note
+bill|بل|bill
+size|سائز|size
+discount|رعایت|riayat
+receipt|رسید|raseed
+bag|بیگ|bag
+rupee|روپیہ|rupiya
+weigh|تولنا|tolna||دکاندار سبزی تولتا ہے۔|The shopkeeper weighs the vegetables.
+pay|ادائیگی|adaigi||کارڈ سے ادائیگی کریں۔|Pay by card.
+happiness|خوشی|khushi
+sadness|اداسی|udaasi
+anger|غصہ|ghussa
+fear|ڈر|dar
+love|محبت|mohabbat
+hope|امید|umeed
+worry|فکر|fikar
+surprise|حیرت|hairat
+peace|سکون|sukoon
+smile|مسکراہٹ|muskurahat
+laugh|ہنسی|hansi
+crying|رونا|rona
+mood|مزاج|mizaj
+brave|بہادر|bahadur||وہ ایک بہادر لڑکا ہے۔|He is a brave boy.
+lonely|اکیلا|akela||وہ اکیلا محسوس کرتا ہے۔|He feels lonely.
+to eat|کھانا|khana|کھاتا
+to drink|پینا|peena|پیتا
+to go|جانا|jaana|جاتا
+to come|آنا|aana|آتا
+to see|دیکھنا|dekhna|دیکھتا
+to hear|سننا|sunna|سنتا
+to speak|بولنا|bolna|بولتا
+to read|پڑھنا|parhna|پڑھتا
+to write|لکھنا|likhna|لکھتا
+to learn|سیکھنا|seekhna|سیکھتا
+to teach|پڑھانا|parhana|پڑھاتا
+to sleep|سونا|sona|سوتا
+to wake up|جاگنا|jaagna|جاگتا
+to run|دوڑنا|daurna|دوڑتا
+to walk|چلنا|chalna|چلتا
+to open|کھولنا|kholna|کھولتا
+to close|بند کرنا|band karna|بند کرتا
+to give|دینا|dena|دیتا
+to take|لینا|lena|لیتا
+to make|بنانا|banana|بناتا
+to love|چاہنا|chahna|چاہتا
+to think|سوچنا|sochna|سوچتا
+to understand|سمجھنا|samajhna|سمجھتا
+to work|کام کرنا|kaam karna|کام کرتا
+to wait|انتظار کرنا|intezar karna|انتظار کرتا
+big|بڑا|bara
+small|چھوٹا|chota
+new|نیا|naya
+old|پرانا|purana
+good|اچھا|achha
+bad|برا|bura
+beautiful|خوبصورت|khoobsurat
+hot|گرم|garam||موسم بہت گرم ہے۔|The weather is very hot.
+cold|ٹھنڈا|thanda||پانی ٹھنڈا ہے۔|The water is cold.
+fast|تیز|tez
+slow|سست|sust
+easy|آسان|aasaan
+difficult|مشکل|mushkil
+long|لمبا|lamba
+short|چھوٹا قد|chota qad
+clean|صاف|saaf
+dirty|گندا|ganda
+happy|خوش|khush||بچے بہت خوش ہیں۔|The children are very happy.
+tired|تھکا ہوا|thaka hua||میں آج تھکا ہوا ہوں۔|I am tired today.
+hungry|بھوکا|bhookha||بچہ بھوکا ہے۔|The child is hungry.
+
+@phrases
+السلام علیکم!|assalam-o-alaikum|Peace be upon you (hello)!|السلام علیکم!|greeting
+وعلیکم السلام!|wa-alaikum-assalam|And peace be upon you!|وعلیکم السلام!|greeting
+صبح بخیر!|subah bakhair|Good morning!|صبح بخیر!|greeting
+شب بخیر!|shab bakhair|Good night!|شب بخیر!|greeting
+خدا حافظ!|khuda hafiz|Goodbye!|خدا حافظ!|greeting
+آپ کیسے ہیں؟|aap kaise hain|How are you? (formal)|آپ کیسے ہیں؟|smalltalk
+میں ٹھیک ہوں، شکریہ۔|main theek hoon shukriya|I am fine, thank you.|میں ٹھیک ہوں، شکریہ۔|smalltalk
+بہت شکریہ!|bohat shukriya|Thank you very much!|بہت شکریہ!|polite
+کوئی بات نہیں۔|koi baat nahin|You're welcome / no problem.|کوئی بات نہیں۔|polite
+معاف کیجیے گا۔|maaf kijiye ga|Please excuse me.|معاف کیجیے گا۔|polite
+مجھے افسوس ہے۔|mujhe afsos hai|I am sorry.|مجھے افسوس ہے۔|polite
+آپ کا نام کیا ہے؟|aap ka naam kya hai|What is your name?|آپ کا نام کیا ہے؟|smalltalk
+میرا نام سارہ ہے۔|mera naam sara hai|My name is Sara.|میرا نام سارہ ہے۔|smalltalk
+آپ کہاں سے ہیں؟|aap kahan se hain|Where are you from?|آپ کہاں سے ہیں؟|smalltalk
+میں لاہور سے ہوں۔|main lahore se hoon|I am from Lahore.|میں لاہور سے ہوں۔|smalltalk
+کیا آپ انگریزی بولتے ہیں؟|kya aap angrezi bolte hain|Do you speak English?|کیا آپ انگریزی بولتے ہیں؟|smalltalk
+مجھے اردو سیکھنی ہے۔|mujhe urdu seekhni hai|I want to learn Urdu.|مجھے اردو سیکھنی ہے۔|school
+میں سمجھ نہیں پایا۔|main samajh nahin paya|I did not understand.|میں سمجھ نہیں پایا۔|school
+ذرا آہستہ بولیں۔|zara aahista bolein|Please speak slowly.|ذرا آہستہ بولیں۔|polite
+اس کا مطلب کیا ہے؟|is ka matlab kya hai|What does that mean?|اس کا مطلب کیا ہے؟|school
+یہ کتنے کا ہے؟|yeh kitne ka hai|How much is this?|یہ کتنے کا ہے؟|shopping
+مجھے یہ چاہیے۔|mujhe yeh chahiye|I want this.|مجھے یہ چاہیے۔|shopping
+کیا آپ کے پاس چھوٹا سائز ہے؟|kya aap ke paas chota size hai|Do you have a smaller size?|کیا آپ کے پاس چھوٹا سائز ہے؟|shopping
+بل لائیں، شکریہ۔|bill laein shukriya|The bill, please.|بل لائیں، شکریہ۔|shopping
+میں کارڈ سے ادائیگی کروں گا۔|main card se adaigi karoon ga|I will pay by card.|میں کارڈ سے ادائیگی کروں گا۔|shopping
+ریلवे اسٹیشن کہاں ہے؟|railway station kahan hai|Where is the railway station?|ریل اسٹیشن کہاں ہے؟|travel
+باتھ روم کہاں ہے؟|bathroom kahan hai|Where is the bathroom?|باتھ روم کہاں ہے؟|travel
+کیا یہ بس کراچی جاتی ہے؟|kya yeh bus karachi jaati hai|Does this bus go to Karachi?|کیا یہ بس کراچی جاتی ہے؟|travel
+ٹرین کس وقت روانہ ہوتی ہے؟|train kis waqt rawana hoti hai|What time does the train leave?|ٹرین کس وقت روانہ ہوتی ہے؟|travel
+میں راستہ بھول گیا ہوں۔|main rasta bhool gaya hoon|I have lost my way.|میں راستہ بھول گیا ہوں۔|travel
+کیا آپ میری مدد کر سکتے ہیں؟|kya aap meri madad kar sakte hain|Can you help me?|کیا آپ میری مدد کر سکتے ہیں؟|polite
+مجھے ڈاکٹر کی ضرورت ہے۔|mujhe doctor ki zaroorat hai|I need a doctor.|مجھے ڈاکٹر کی ضرورت ہے۔|health
+میری طبیعت ٹھیک نہیں۔|meri tabiyat theek nahin|I am not feeling well.|میری طبیعت ٹھیک نہیں۔|health
+دوا خانہ کہاں ہے؟|dawa khana kahan hai|Where is the pharmacy?|دوا خانہ کہاں ہے؟|health
+مجھے سر میں درد ہے۔|mujhe sar mein dard hai|I have a headache.|مجھے سر میں درد ہے۔|health
+ایک کپ چائے، مہربانی ہوگی۔|ek cup chai meharbani hogi|One cup of tea, please.|ایک کپ چائے، مہربانی ہوگی۔|food
+مینو دکھائیں۔|menu dikhaein|Show me the menu.|مینو دکھائیں۔|food
+یہ بہت مزیدار ہے۔|yeh bohat mazedaar hai|This is very tasty.|یہ بہت مزیدار ہے۔|food
+میں سبزی خور ہوں۔|main sabzi khor hoon|I am a vegetarian.|میں سبزی خور ہوں۔|food
+مجھے بھوک لگی ہے۔|mujhe bhook lagi hai|I am hungry.|مجھے بھوک لگی ہے۔|food
+مجھے گوشت نہیں چاہیے۔|mujhe gosht nahin chahiye|I don't want meat.|مجھے گوشت نہیں چاہیے۔|food
+پانی ٹھنڈا ہے۔|paani thanda hai|The water is cold.|پانی ٹھنڈا ہے۔|food
+آج موسم بہت اچھا ہے۔|aaj mausam bohat achha hai|The weather is very nice today.|آج موسم بہت اچھا ہے۔|smalltalk
+میں دفتر میں کام کرتا ہوں۔|main daftar mein kaam karta hoon|I work in an office.|میں دفتر میں کام کرتا ہوں۔|work
+آپ کہاں کام کرتے ہیں؟|aap kahan kaam karte hain|Where do you work?|آپ کہاں کام کرتے ہیں؟|work
+میری تنخواہ مہینے کے آخر میں آتی ہے۔|meri tankhwa maheene ke aakhir mein aati hai|My salary comes at the end of the month.|میری تنخواہ مہینے کے آخر میں آتی ہے۔|work
+کل میری میٹنگ ہے۔|kal meri meeting hai|I have a meeting tomorrow.|کل میری میٹنگ ہے۔|work
+میں یونیورسٹی میں پڑھتا ہوں۔|main university mein parhta hoon|I study at the university.|میں یونیورسٹی میں پڑھتا ہوں۔|school
+کلاس کس وقت شروع ہوتی ہے؟|class kis waqt shuru hoti hai|What time does the class start?|کلاس کس وقت شروع ہوتی ہے؟|school
+امتحان آسان تھا۔|imtihan aasaan tha|The exam was easy.|امتحان آسان تھا۔|school
+مجھے کتابیں پڑھنا پسند ہے۔|mujhe kitaabein parhna pasand hai|I like reading books.|مجھے کتابیں پڑھنا پسند ہے۔|school
+یہ لفظ نیا ہے۔|yeh lafz naya hai|This word is new.|یہ لفظ نیا ہے۔|school
+میں روزانہ اردو سیکھتا ہوں۔|main rozana urdu seekhta hoon|I learn Urdu every day.|میں روزانہ اردو سیکھتا ہوں۔|school
+آج پیر ہے۔|aaj peer hai|Today is Monday.|آج پیر ہے۔|time
+کیا وقت ہوا ہے؟|kya waqt hua hai|What time is it?|کیا وقت ہوا ہے؟|time
+میرے پاس وقت نہیں ہے۔|mere paas waqt nahin hai|I don't have time.|میرے پاس وقت نہیں ہے۔|time
+میں چھ بجے آؤں گا۔|main chay baje aoon ga|I will come at six o'clock.|میں چھ بجے آؤں گا۔|time
+اتوار کو میں فارغ ہوں۔|itwaar ko main farigh hoon|I am free on Sunday.|اتوار کو میں فارغ ہوں۔|time
+یہ میری ماں ہیں۔|yeh meri maa hain|This is my mother.|یہ میری ماں ہیں۔|family
+میرے والد بہت کام کرتے ہیں۔|mere walid bohat kaam karte hain|My father works a lot.|میرے والد بہت کام کرتے ہیں۔|family
+میری بہن ڈاکٹر ہے۔|meri behen doctor hai|My sister is a doctor.|میری بہن ڈاکٹر ہے۔|family
+ہم ایک بڑا خاندان ہیں۔|hum ek bara khandan hain|We are a big family.|ہم ایک بڑا خاندان ہیں۔|family
+بچہ باغ میں کھیلتا ہے۔|bachcha baagh mein khelta hai|The child plays in the garden.|بچہ باغ میں کھیلتا ہے۔|family
+میرا گھر چھوٹا ہے۔|mera ghar chota hai|My house is small.|میرا گھر چھوٹا ہے۔|home
+باورچی خانہ صاف ہے۔|bawarchi khana saaf hai|The kitchen is clean.|باورچی خانہ صاف ہے۔|home
+کھڑکی کھلی ہے۔|khirki khuli hai|The window is open.|کھڑکی کھلی ہے۔|home
+میں دروازہ بند کرتا ہوں۔|main darwaza band karta hoon|I close the door.|میں دروازہ بند کرتا ہوں۔|home
+بجلی چلی گئی ہے۔|bijli chali gayi hai|The power has gone out.|بجلی چلی گئی ہے۔|home
+میں اب سونے جا رہا ہوں۔|main ab sone ja raha hoon|I am going to sleep now.|میں اب سونے جا رہا ہوں۔|home
+میرا پاسپورٹ کہاں ہے؟|mera passport kahan hai|Where is my passport?|میرا پاسپورٹ کہاں ہے؟|travel
+پرواز تاخیر سے ہے۔|parwaaz taakheer se hai|The flight is delayed.|پرواز تاخیر سے ہے۔|travel
+سامان بہت بھاری ہے۔|saamaan bohat bhaari hai|The luggage is very heavy.|سامان بہت بھاری ہے۔|travel
+سفر بخیر!|safar bakhair|Have a good trip!|سفر بخیر!|travel
+مجھے دو راتوں کے لیے کمرہ چاہیے۔|mujhe do raaton ke liye kamra chahiye|I need a room for two nights.|مجھے دو راتوں کے لیے کمرہ چاہیے۔|travel
+سیدھے جائیں۔|seedhe jaayein|Go straight ahead.|سیدھے جائیں۔|travel
+بائیں مڑ جائیں۔|baayein mur jaayein|Turn left.|بائیں مڑ جائیں۔|travel
+بازار کہاں ہے؟|bazaar kahan hai|Where is the market?|بازار کہاں ہے؟|shopping
+قیمت بہت زیادہ ہے۔|qeemat bohat zyada hai|The price is too high.|قیمت بہت زیادہ ہے۔|shopping
+تھوڑی رعایت کر دیں۔|thori riayat kar dein|Give a little discount.|تھوڑی رعایت کر دیں۔|shopping
+میں صرف دیکھ رہا ہوں۔|main sirf dekh raha hoon|I am just looking.|میں صرف دیکھ رہا ہوں۔|shopping
+رسید دے دیں۔|raseed de dein|Please give the receipt.|رسید دے دیں۔|shopping
+کھانا نوش فرمائیں۔|khana naush farmaein|Enjoy your meal!|کھانا نوش فرمائیں۔|food
+کھانے کے بعد چائے پیتے ہیں۔|khane ke baad chai peete hain|We drink tea after the meal.|کھانے کے بعد چائے پیتے ہیں۔|food
+مجھے ٹھنڈا پانی دیں۔|mujhe thanda paani dein|Give me cold water.|مجھے ٹھنڈا پانی دیں۔|food
+فکر نہ کریں۔|fikar na karein|Don't worry.|فکر نہ کریں۔|emotion
+مجھے آپ پر فخر ہے۔|mujhe aap par fakhar hai|I am proud of you.|مجھے آپ پر فخر ہے۔|emotion
+یہ سن کر خوشی ہوئی۔|yeh sun kar khushi hui|I am happy to hear that.|یہ سن کر خوشی ہوئی۔|emotion
+مجھے ڈر لگ رہا ہے۔|mujhe dar lag raha hai|I am feeling scared.|مجھے ڈر لگ رہا ہے۔|emotion
+آپ کو دیکھ کر اچھا لگا۔|aap ko dekh kar achha laga|It was good to see you.|آپ کو دیکھ کر اچھا لگا۔|smalltalk
+مبارک ہو!|mubarak ho|Congratulations!|مبارک ہو!|greeting
+خوش آمدید!|khush amdeed|Welcome!|خوش آمدید!|greeting
+جلد صحت یاب ہوں۔|jald sehat yaab hon|Get well soon.|جلد صحت یاب ہوں۔|health
+ایک لمحہ، مہربانی ہوگی۔|ek lamha meharbani hogi|One moment, please.|ایک لمحہ، مہربانی ہوگی۔|polite
+میں ابھی آتا ہوں۔|main abhi aata hoon|I'll be right there.|میں ابھی آتا ہوں۔|smalltalk
+مجھے نہیں پتہ۔|mujhe nahin pata|I don't know.|مجھے نہیں پتہ۔|smalltalk
+شاید بعد میں۔|shayad baad mein|Maybe later.|شاید بعد میں۔|smalltalk
+میں متفق ہوں۔|main muttafiq hoon|I agree.|میں متفق ہوں۔|smalltalk
+یہ درست نہیں ہے۔|yeh durust nahin hai|That is not right.|یہ درست نہیں ہے۔|smalltalk
+آپ آج کیا کر رہے ہیں؟|aap aaj kya kar rahe hain|What are you doing today?|آپ آج کیا کر رہے ہیں؟|smalltalk
+میں امتحان کی تیاری کر رہا ہوں۔|main imtihan ki tayyari kar raha hoon|I am preparing for the exam.|میں امتحان کی تیاری کر رہا ہوں۔|school
+مجھے مدد چاہیے۔|mujhe madad chahiye|I need help.|مجھے مدد چاہیے۔|polite
+آپ کی مدد کا شکریہ۔|aap ki madad ka shukriya|Thank you for your help.|آپ کی مدد کا شکریہ۔|polite
+یہ پہلی بار ہے۔|yeh pehli baar hai|This is the first time.|یہ پہلی بار ہے۔|smalltalk
+پیسے کہاں تبدیل کروں؟|paise kahan tabdeel karoon|Where can I exchange money?|پیسے کہاں تبدیل کروں؟|travel
+بس آٹھ بجے آتی ہے۔|bus aath baje aati hai|The bus comes at eight.|بس آٹھ بجے آتی ہے۔|travel
+میری ٹرین چھوٹ گئی۔|meri train choot gayi|I missed my train.|میری ٹرین چھوٹ گئی۔|travel
+ہوٹل بہت اچھا ہے۔|hotel bohat achha hai|The hotel is very nice.|ہوٹل بہت اچھا ہے۔|travel
+آپ کا پیشہ کیا ہے؟|aap ka pesha kya hai|What is your profession?|آپ کا پیشہ کیا ہے؟|work
+میں انجینئر ہوں۔|main engineer hoon|I am an engineer.|میں انجینئر ہوں۔|work
+وہ ہمیشہ مدد کرتی ہے۔|woh hamesha madad karti hai|She always helps.|وہ ہمیشہ مدد کرتی ہے۔|smalltalk
+ہم ساتھ سیکھتے ہیں۔|hum saath seekhte hain|We learn together.|ہم ساتھ سیکھتے ہیں۔|school
+میری اردو بہتر ہو رہی ہے۔|meri urdu behtar ho rahi hai|My Urdu is getting better.|میری اردو بہتر ہو رہی ہے۔|school
+آسمان نیلا ہے۔|aasmaan neela hai|The sky is blue.|آسمان نیلا ہے۔|smalltalk
+میرا پسندیدہ رنگ ہرا ہے۔|mera pasandeeda rang hara hai|My favourite color is green.|میرا پسندیدہ رنگ ہرا ہے۔|smalltalk
+سرخ گاڑی تیز ہے۔|surkh gaari tez hai|The red car is fast.|سرخ گاڑی تیز ہے۔|smalltalk
+رات پرسکون ہے۔|raat pursukoon hai|The night is peaceful.|رات پرسکون ہے۔|time
+آج بارش ہو رہی ہے۔|aaj baarish ho rahi hai|It is raining today.|آج بارش ہو رہی ہے۔|smalltalk
+سورج نکل رہا ہے۔|sooraj nikal raha hai|The sun is shining.|سورج نکل رہا ہے۔|smalltalk
+واہ واہ!|waah waah|Well done!|واہ واہ!|smalltalk
+اللہ حافظ!|allah hafiz|May God protect you (goodbye)!|اللہ حافظ!|greeting
+آپ سے مل کر خوشی ہوئی۔|aap se mil kar khushi hui|Nice to meet you.|آپ سے مل کر خوشی ہوئی۔|greeting
+پھر ملاقات ہوگی۔|phir mulaqat hogi|We will meet again.|پھر ملاقات ہوگی۔|greeting
+معاف کیجیے، کیا کہا؟|maaf kijiye kya kaha|Pardon, what did you say?|معاف کیجیے، کیا کہا؟|polite
+ذرا دہرا دیں۔|zara dohra dein|Please repeat that.|ذرا دہرا دیں۔|polite
+ہجے بتا دیں۔|hije bata dein|Please spell it.|ہجے بتا دیں۔|school
+مجھے چائے بہت پسند ہے۔|mujhe chai bohat pasand hai|I love tea.|مجھے چائے بہت پسند ہے۔|food
+کھانا تیار ہے۔|khana tayyar hai|The food is ready.|کھانا تیار ہے۔|food
+پلیٹ میں اور کھانا ڈالیں۔|plate mein aur khana daalein|Put more food on the plate.|پلیٹ میں اور کھانا ڈالیں۔|food
+میں پانی نہیں پیتا۔|main paani nahin peeta|I don't drink water.|میں پانی نہیں پیتا۔|food
+یہ کپڑا اچھا ہے۔|yeh kapra achha hai|This cloth is good.|یہ کپڑا اچھا ہے۔|shopping
+دکان بند ہو گئی ہے۔|dukaan band ho gayi hai|The shop is closed.|دکان بند ہو گئی ہے۔|shopping
+میں روز بازار جاتا ہوں۔|main roz bazaar jaata hoon|I go to the market every day.|میں روز بازار جاتا ہوں۔|shopping
+گاڑی سڑک پر ہے۔|gaari sarak par hai|The car is on the road.|گاڑی سڑک پر ہے۔|travel
+پل کے پاس مڑیں۔|pul ke paas murein|Turn near the bridge.|پل کے پاس مڑیں۔|travel
+شہر بہت بڑا ہے۔|shehar bohat bara hai|The city is very big.|شہر بہت بڑا ہے۔|travel
+گاؤں میں سکون ہے۔|gaaon mein sukoon hai|There is peace in the village.|گاؤں میں سکون ہے۔|travel
+میں طالب علم ہوں۔|main talib-e-ilm hoon|I am a student.|میں طالب علم ہوں۔|school
+وہ اچھے استاد ہیں۔|woh achhe ustaad hain|He is a good teacher.|وہ اچھے استاد ہیں۔|school
+سوال مشکل ہے۔|sawaal mushkil hai|The question is difficult.|سوال مشکل ہے۔|school
+جواب صحیح ہے۔|jawaab saheeh hai|The answer is correct.|جواب صحیح ہے۔|school
+کتاب میز پر ہے۔|kitaab mez par hai|The book is on the table.|کتاب میز پر ہے۔|school
+بستر نرم ہے۔|bistar naram hai|The bed is soft.|بستر نرم ہے۔|home
+چابی گم ہو گئی ہے۔|chaabi gum ho gayi hai|The key is lost.|چابی گم ہو گئی ہے۔|home
+باغ میں پھول ہیں۔|baagh mein phool hain|There are flowers in the garden.|باغ میں پھول ہیں۔|home
+کمرہ روشن ہے۔|kamra raushan hai|The room is bright.|کمرہ روشن ہے۔|home
+سیڑھیاں چڑھ جائیں۔|seerhiyan charh jaayein|Go up the stairs.|سیڑھیاں چڑھ جائیں۔|home
+
+@grammar
+"کتاب" کا لنگ کیا ہے؟|مؤنث|مذکر|غیر جنسی|1|Most Urdu nouns ending in "آ" sound feminine: کتاب مؤنث ہے۔|اردو میں زیادہ تر "آ" پر ختم ہونے والے اسم مؤنث ہوتے ہیں۔
+"لڑکا" کا لنگ کیا ہے؟|مذکر|مؤنث|کوئی نہیں|1|لڑکا مذکر ہے۔|لڑکا مذکر اسم ہے۔
+"میں ___ ہوں۔"|جا رہا|جا رہے|جاتا ہے|1|First person singular uses "جا رہا ہوں".|میں کے ساتھ واحد صیغہ آتا ہے۔
+"آپ ___ ہیں؟"|کیسے|کیسا|کیسی|1|Formal "آپ" takes the plural adjective form "کیسے".|رسمی "آپ" کے ساتھ جمع کی صفت آتی ہے۔
+"وہ ___ جاتا ہے۔"|بازار|بازار میں|بازار کو|2|Postposition "میں" marks location: بازار میں۔|اردو میں حرفِ جار کے بعد اسم آتا ہے۔
+"میں نے ___ خریدا۔"|کتاب|کتاب کو|کتاب کی|1|"نے" construction: میں نے کتاب خریدا۔|فعل متعدی کے ساتھ "نے" آتا ہے۔
+ماضی: "میں ___ گیا۔"|کل|آج|اب|1|کل + past tense = میں کل گیا۔|ماضی کے ساتھ کل کا مطلب گزشتہ دن ہے۔
+مستقبل: "میں ___ جاؤں گا۔"|کل|کل کو|کل ہی|1|Future tense: میں کل جاؤں گا۔|مستقبل کے ساتھ گا/گی لگتا ہے۔
+منفی: "میں نہیں ___ ۔"|آتا|آتا ہوں نہیں|نہیں آتا ہوں|1|Negation: نہیں comes before the verb stem — میں نہیں آتا۔|نفی میں "نہیں" فعل سے پہلے آتا ہے۔
+سوالیہ: "آپ ___ رہتے ہیں؟"|کہاں|کیا|کب|1|کہاں = where — آپ کہاں رہتے ہیں؟|جگہ پوچھنے کے لیے کہاں۔
+"کتنے" کا استعمال ___ کے لیے ہے۔|تعداد|جگہ|وقت|1|کتنے = how many (count).|گننے کے لیے کتنے۔
+"کتنا" کا استعمال ___ کے لیے ہے۔|مقدار|تعداد|رنگ|1|کتنا = how much (amount).|مقدار کے لیے کتنا۔
+"کب" ___ پوچھتا ہے۔|وقت|جگہ|نام|1|کب = when.|وقت کے لیے کب۔
+"کیوں" ___ پوچھتا ہے۔|وجہ|وقت|جگہ|1|کیوں = why.|وجہ کے لیے کیوں۔
+"کس کا" ___ ظاہر کرتا ہے۔|ملکیت|وقت|جگہ|1|کس کا = whose (possession).|ملکیت کے لیے کس کا۔
+جمع: "کتاب" → ___|کتابیں|کتابات|کتابیںیں|1|Feminine plural takes "یں": کتابیں۔|مؤنث اسم کی جمع میں "یں" لگتا ہے۔
+جمع: "لڑکا" → ___|لڑکے|لڑکوں|لڑکاے|1|Masculine plural: لڑکے۔|مذکر اسم کی جمع میں "ے"۔
+حرفِ جار: "میز ___ کتاب ہے۔"|پر|کو|سے|1|پر = on — میز پر کتاب ہے۔|"پر" کا مطلب on ہے۔
+حرفِ جار: "میں اسکول ___ جاتا ہوں۔"|کو|پر|کا|1|کو = to — اسکول کو جانا۔|طرف جانے کے لیے "کو"۔
+حرفِ جار: "یہ ___ کس کا ہے؟"|کے|کا|کو|2|Possessive "کا": یہ کس کا ہے؟|ملکیت کے لیے "کا"۔
+"کا/کی/کے" کا انتخاب ___ پر منحصر ہے۔|ملکیت رکھنے والے|مالک کی جنس|وقت|2|کا/کی/کے agrees with the thing owned: میری کتاب، میرا قلم۔|کا/کی/کے ملکیت رکھنے والی چیز سے مطابقت رکھتا ہے۔
+عزت کا واحد: ___|آپ|تم|تو|1|"آپ" is the respectful form.|عزت کے لیے "آپ"۔
+عام دوست کے لیے: ___|تم|آپ|تو|1|"تم" is informal/familiar.|دوستوں کے لیے "تم"۔
+"یہ" ___ کے لیے ہے۔|قریب|دور|وقت|1|یہ = this (near).|قریب کی چیز کے لیے یہ۔
+"وہ" ___ کے لیے ہے۔|دور|قریب|وقت|1|وہ = that (far).|دور کی چیز کے لیے وہ۔
+فعل "ہونا" حال: "میں ___ ہوں۔"|خوش|خوشی|خوش ہوتا|1|Adjective + ہوں: میں خوش ہوں۔|صفت کے بعد ہوں آتا ہے۔
+فعل "کرنا": "میں کام ___ ہوں۔"|کر|کرتا|کرنا|1|Present continuous: کام کر رہا ہوں۔|حال استمراری میں "کر رہا"۔
+فعل "چاہیے": "مجھے پانی ___ ۔"|چاہیے|چاہتا|چاہیے ہے|1|چاہیے = need/want (impersonal).|"چاہیے" کے ساتھ مجھے آتا ہے۔
+"پڑتا ہے" ___ ظاہر کرتا ہے۔|مجبوری|پسند|ماضی|1|پڑتا ہے = have to.|مجبوری کے لیے پڑتا ہے۔
+"سکتا ہے" ___ ظاہر کرتا ہے۔|صلاحیت|مجبوری|نفی|1|سکتا ہے = can/ability.|صلاحیت کے لیے سکتا ہے۔
+ترتیب: اردو میں فعل ___ آتا ہے۔|آخر میں|شروع میں|درمیان میں|1|Urdu is SOV — the verb comes last.|اردو میں فعل جملے کے آخر میں آتا ہے۔
+"کیا" ___ بناتا ہے۔|ہاں/نہ سوال|جگہ کا سوال|وقت کا سوال|1|"کیا" makes a yes/no question.|ہاں/نہ کے سوال کے لیے کیا۔
+منفی سوال: "کیا آپ نہیں ___ ؟"|آئے|آنا|آئے گا|1|کیا آپ نہیں آئے؟|منفی سوال میں کیا + نہیں۔
+حرفِ عطف: "روٹی ___ سالن"|اور|لیکن|کیونکہ|1|اور = and.|جمع کرنے کے لیے اور۔
+حرفِ عطف: "لیکن" ___ ظاہر کرتا ہے۔|تضاد|اضافہ|وجہ|1|لیکن = but.|تضاد کے لیے لیکن۔
+حرفِ عطف: "کیونکہ" ___ ظاہر کرتا ہے۔|وجہ|وقت|جگہ|1|کیونکہ = because.|وجہ کے لیے کیونکہ۔
+"اگر" ___ بناتا ہے۔|شرط|ماضی|جمع|1|اگر = if.|شرط کے لیے اگر۔
+"جب" ___ ظاہر کرتا ہے۔|وقت|جگہ|ملکیت|1|جب = when.|وقت کے لیے جب۔
+"تک" ___ ظاہر کرتا ہے۔|حد|شروع|ملکیت|1|تک = until/to.|حد کے لیے تک۔
+"سے" ___ ظاہر کرتا ہے۔|شروع یا ذریعہ|آخر|ملکیت|1|سے = from / by means of.|سے = from یا by۔
+"میں" ___ کے لیے ہے۔|اندرونی جگہ|اوپر|نیچے|1|میں = in (inside).|اندر کے لیے میں۔
+"پر" ___ کے لیے ہے۔|اوپر|اندر|باہر|1|پر = on (above).|اوپر کے لیے پر۔
+"نیچے" ___ کے لیے ہے۔|تحت|اوپر|سامنے|1|نیچے = under/below.|نیچے = under۔
+"سامنے" ___ کے لیے ہے۔|مقابل|پیچھے|اوپر|1|سامنے = in front of.|سامنے = in front۔
+"پیچھے" ___ کے لیے ہے۔|خلف|سامنے|اوپر|1|پیچھے = behind.|پیچھے = behind۔
+صفت ___ سے پہلے آتی ہے۔|اسم|فعل|حرفِ جار|1|Adjectives come before the noun: بڑا گھر۔|صفت اسم سے پہلے آتی ہے۔
+"بڑا گھر" میں "بڑا" ___ ہے۔|صفت|اسم|فعل|1|بڑا describes گھر, so it is an adjective.|بڑا صفت ہے۔
+"تیز دوڑنا" میں "تیز" ___ ہے۔|متعلق فعل|اسم|حرف|1|تیز describes the verb → adverb.|فعل کی وضاحت کرنے والا لفظ متعلق فعل ہے۔
+موازنہ: "یہ اس سے ___ ہے۔"|بہتر|اچھا|اچھے|1|Comparative uses "سے": اس سے بہتر۔|موازنے کے لیے "سے"۔
+اعلیٰ ترین: "سب سے ___"|بہترین|اچھا|بہتر|1|Superlative: سب سے بہترین۔|اعلیٰ ترین کے لیے سب سے۔
+جمع اسم کے بعد فعل ___ ہوتا ہے۔|جمع|واحد|کوئی نہیں|1|لڑکے آتے ہیں — plural verb.|جمع اسم کے ساتھ جمع فعل۔
+"کرتا ہے" ___ کے لیے ہے۔|مذکر واحد|مؤنث واحد|جمع|1|Masculine singular present: کرتا ہے۔|مذکر واحد کے لیے کرتا ہے۔
+"کرتی ہے" ___ کے لیے ہے۔|مؤنث واحد|مذکر واحد|جمع|1|Feminine singular: کرتی ہے۔|مؤنث واحد کے لیے کرتی ہے۔
+"کرتے ہیں" ___ کے لیے ہے۔|جمع|واحد|مستقبل|1|Plural: کرتے ہیں۔|جمع کے لیے کرتے ہیں۔
+ماضی استمراری: "وہ ___ تھا۔"|کھانا کھا رہا|کھاتا|کھائے|1|Past continuous: کھا رہا تھا۔|ماضی استمراری میں "رہا تھا"۔
+حال استمراری: "میں ___ رہا ہوں۔"|پڑھ|پڑھتا|پڑھوں|1|Present continuous: پڑھ رہا ہوں۔|حال استمراری میں "رہا ہوں"۔
+مستقبل: "وہ ___ گا۔"|آئے|آنا|آیا|1|Future masculine: آئے گا۔|مستقبل مذکر میں گا۔
+مستقبل مؤنث: "وہ ___ گی۔"|آئے|آئے گا|آئی|1|Future feminine: آئے گی۔|مستقبل مؤنث میں گی۔
+فعلِ امر (عزت): "___ کھولیں۔"|دروازہ|دروازے|دروازے کو|1|Respectful imperative uses the plural verb form.|عزت کے امر میں جمع فعل۔
+فعلِ امر (عام): "یہاں ___ ۔"|آؤ|آئیں|آنا|1|Informal imperative for "تم": آؤ۔|تم کے لیے آؤ۔
+"لیجیے" ___ ہے۔|عزت کا امر|ماضی|حال|1|لیجیے = please take (respectful).|لیجیے عزت کے ساتھ دینے/لینے کا امر ہے۔
+"چاہیے" کے بعد ___ آتا ہے۔|اسم|فعل کی بنیادی شکل|صفت|1|مجھے پانی چاہیے — noun follows.|چاہیے کے بعد اسم آتا ہے۔
+"پسند ہے" ___ کے لیے ہے۔|پسندیدگی|نفرت|مجبوری|1|پسند ہے = like.|پسند کے لیے پسند ہے۔
+"نفرت ہے" ___ کے لیے ہے۔|ناپسندیدگی|پسند|خوشی|1|نفرت ہے = dislike.|ناپسند کے لیے نفرت ہے۔
+"کے پاس" ___ ظاہر کرتا ہے۔|ملکیت|جگہ|وقت|1|میرے پاس وقت ہے = I have time.|پاس ہونا = رکھنا۔
+"کو ___ ہے" درد کے لیے ہے۔|درد|خوشی|بھوک|1|مجھے درد ہے۔|درد کے لیے کو درد ہے۔
+"لگی ہے" ___ کے ساتھ آتا ہے۔|بھوک|درد|خوشی|1|بھوک لگی ہے = I am hungry.|بھوک کے لیے لگی ہے۔
+"تکلیف" ___ ہے۔|دکھ|خوشی|بھوک|1|تکلیف = pain/discomfort.|تکلیف کا مطلب دکھ ہے۔
+"زیادہ" ___ کے لیے ہے۔|مقدار زیادہ|مقدار کم|وقت|1|زیادہ = more.|زیادہ = more۔
+"کم" ___ کے لیے ہے۔|مقدار کم|مقدار زیادہ|جگہ|1|کم = less.|کم = less۔
+"بہت" ___ ہے۔|متعلق فعل|اسم|حرف|1|بہت = very (adverb).|بہت متعلق فعل ہے۔
+"سب" ___ کے لیے ہے۔|تمام|کوئی نہیں|ایک|1|سب = all.|سب = all۔
+"کوئی" ___ کے لیے ہے۔|کوئی بھی|سب|کوئی نہیں|1|کوئی = any/someone.|کوئی = any۔
+"کچھ" ___ کے لیے ہے۔|تھوڑی مقدار|سب|کوئی نہیں|1|کچھ = some.|کچھ = some۔
+"ہر" ___ کے لیے ہے۔|ہر ایک|کوئی نہیں|کچھ|1|ہر = every.|ہر = every۔
+"دن میں" ___ ظاہر کرتا ہے۔|وقت|جگہ|ملکیت|1|دن میں = during the day.|دن میں = during the day۔
+"رات کو" ___ ظاہر کرتا ہے۔|وقت|جگہ|ملکیت|1|رات کو = at night.|رات کو = at night۔
+"صبح" ___ ہے۔|وقت کا حصہ|جگہ|اسمِ ذات|1|صبح = morning (time).|صبح وقت کا حصہ ہے۔
+"کل" ___ معنی رکھتا ہے۔|کل اور آج دونوں|صرف کل|صرف آج|1|"کل" can mean yesterday or tomorrow — context decides.|کل کا مطلب سیاق سے طے ہوتا ہے۔
+"پرسوں" ___ ہے۔|کل کے آگے کا دن|آج|گزشتہ دن|1|پرسوں = the day after tomorrow / day before yesterday.|پرسوں = دو دن آگے یا پیچھے۔
+"ابھی" ___ ہے۔|ابھی|بعد|پہلے|1|ابھی = right now.|ابھی = right now۔
+"جلد" ___ ہے۔|جلدی|دیر|بعد|1|جلد = soon/early.|جلد = soon۔
+"دیر" ___ ہے۔|لیٹ|جلدی|اب|1|دیر = late.|دیر = late۔
+"ہمیشہ" ___ ہے۔|ہر وقت|کبھی کبھی|کبھی نہیں|1|ہمیشہ = always.|ہمیشہ = always۔
+"کبھی کبھی" ___ ہے۔|بعض اوقات|ہمیشہ|کبھی نہیں|1|کبھی کبھی = sometimes.|کبھی کبھی = sometimes۔
+"بالکل نہیں" ___ ہے۔|نفی کی تاکید|تصدیق|شک|1|بالکل نہیں = not at all.|بالکل نہیں = not at all۔
+"شکریہ" ___ کے لیے ہے۔|اظہارِ تشکر|معافی|خوش آمدید|1|شکریہ = thank you.|شکریہ اظہار تشکر ہے۔
+"خوش آمدید" ___ کے لیے ہے۔|استقبال|رخصت|تشکر|1|خوش آمدید = welcome.|خوش آمدید استقبال کے لیے ہے۔
+"معاف کیجیے" ___ کے لیے ہے۔|معافی|تشکر|خوشی|1|معاف کیجیے = please forgive me.|معافی کے لیے معاف کیجیے۔
+"جی ہاں" ___ ہے۔|تصدیق|نفی|سوال|1|جی ہاں = yes (respectful).|جی ہاں = yes۔
+"جی نہیں" ___ ہے۔|نفی|تصدیق|سوال|1|جی نہیں = no (respectful).|جی نہیں = no۔
+
+@sentences
+میں ہر صبح چائے پیتا ہوں۔|I drink tea every morning.|میں ہر صبح چائے پیتا ہوں۔
+میرا بھائی جرمن زبان سیکھ رہا ہے۔|My brother is learning German.|میرا بھائی جرمن زبان سیکھ رہا ہے۔
+ہم اتوار کو کراچی جا رہے ہیں۔|We are going to Karachi on Sunday.|ہم اتوار کو کراچی جا رہے ہیں۔
+کتاب میز پر رکھی ہے۔|The book is kept on the table.|کتاب میز پر رکھی ہے۔
+اس نے کل خط لکھا۔|He wrote a letter yesterday.|اس نے کل خط لکھا۔
+کیا آپ میری مدد کر سکتے ہیں؟|Can you help me?|کیا آپ میری مدد کر سکتے ہیں؟
+مجھے دو کافی اور ایک پانی چاہیے۔|I want two coffees and a water.|مجھے دو کافی اور ایک پانی چاہیے۔
+ٹرین آٹھ بجے روانہ ہوتی ہے۔|The train leaves at eight o'clock.|ٹرین آٹھ بجے روانہ ہوتی ہے۔
+میری ماں آج مچھلی پکا رہی ہے۔|My mother is cooking fish today.|میری ماں آج مچھلی پکا رہی ہے۔
+وہ تین زبانیں روانی سے بولتا ہے۔|He speaks three languages fluently.|وہ تین زبانیں روانی سے بولتا ہے۔
+ہمارا گھر چھوٹا مگر صاف ہے۔|Our house is small but clean.|ہمارا گھر چھوٹا مگر صاف ہے۔
+مجھے سوال پوری طرح سمجھ نہیں آیا۔|I did not fully understand the question.|مجھے سوال پوری طرح سمجھ نہیں آیا۔
+آج موسم بہت خوشگوار ہے۔|The weather is very pleasant today.|آج موسم بہت خوشگوار ہے۔
+مجھے کل صبح جلدی اٹھنا ہے۔|I have to get up early tomorrow.|مجھے کل صبح جلدی اٹھنا ہے۔
+وہ اسپتال میں کام کرتی ہے۔|She works in a hospital.|وہ اسپتال میں کام کرتی ہے۔
+ہم سکول کے سامنے ملتے ہیں۔|We meet in front of the school.|ہم سکول کے سامنے ملتے ہیں۔
+وہ اپنا فون گھر بھول گیا۔|He forgot his phone at home.|وہ اپنا فون گھر بھول گیا۔
+میں آج دفتر نہیں جا رہا۔|I am not going to the office today.|میں آج دفتر نہیں جا رہا۔
+بچے باغ میں فٹ بال کھیل رہے ہیں۔|The children are playing football in the garden.|بچے باغ میں فٹ بال کھیل رہے ہیں۔
+کیا تم کھڑکی کھول سکتے ہو؟|Can you open the window?|کیا تم کھڑکی کھول سکتے ہو؟
+آج مجھے بہت کام ہے۔|I have a lot of work today.|آج مجھے بہت کام ہے۔
+میرے والد اخبار پڑھنا پسند کرتے ہیں۔|My father likes reading newspapers.|میرے والد اخبار پڑھنا پسند کرتے ہیں۔
+کھانا واقعی بہت مزیدار ہے۔|The food is really very tasty.|کھانا واقعی بہت مزیدار ہے۔
+ہم ایک گھنٹے سے انتظار کر رہے ہیں۔|We have been waiting for an hour.|ہم ایک گھنٹے سے انتظار کر رہے ہیں۔
+میں اپنی ملازمت کے لیے اردو سیکھتا ہوں۔|I learn Urdu for my job.|میں اپنی ملازمت کے لیے اردو سیکھتا ہوں۔
+وہ ایک چھوٹے سے شہر سے ہے۔|She is from a small town.|وہ ایک چھوٹے سے شہر سے ہے۔
+میں بازار سے روٹی اور دودھ لاتا ہوں۔|I bring bread and milk from the market.|میں بازار سے روٹی اور دودھ لاتا ہوں۔
+وہ بس سے دفتر جاتا ہے۔|He goes to the office by bus.|وہ بس سے دفتر جاتا ہے۔
+ہم نے کل ایک فلم دیکھی۔|We watched a film yesterday.|ہم نے کل ایک فلم دیکھی۔
+میں آج شام تمہیں پیغام بھیجوں گا۔|I will send you a message this evening.|میں آج شام تمہیں پیغام بھیجوں گا۔
+ہوٹل اسٹیشن سے زیادہ دور نہیں ہے۔|The hotel is not far from the station.|ہوٹل اسٹیشن سے زیادہ دور نہیں ہے۔
+میری بہن میڈیکل پڑھ رہی ہے۔|My sister is studying medicine.|میری بہن میڈیکل پڑھ رہی ہے۔
+ہفتے کے آخر میں میرے پاس وقت نہیں ہے۔|I have no time at the weekend.|ہفتے کے آخر میں میرے پاس وقت نہیں ہے۔
+وہ شام کو کافی نہیں پیتا۔|He does not drink coffee in the evening.|وہ شام کو کافی نہیں پیتا۔
+ہمیں کراچی کے دو ٹکٹ چاہیے۔|We need two tickets to Karachi.|ہمیں کراچی کے دو ٹکٹ چاہیے۔
+امتحان نو بجے شروع ہوتا ہے۔|The exam starts at nine o'clock.|امتحان نو بجے شروع ہوتا ہے۔
+میں تھوڑی اردو اور انگریزی بولتا ہوں۔|I speak a little Urdu and English.|میں تھوڑی اردو اور انگریزی بولتا ہوں۔
+میرا دوست انجینئر کے طور پر کام کرتا ہے۔|My friend works as an engineer.|میرا دوست انجینئر کے طور پر کام کرتا ہے۔
+وہ باورچی خانے میں ماں کی مدد کرتی ہے۔|She helps her mother in the kitchen.|وہ باورچی خانے میں ماں کی مدد کرتی ہے۔
+میں ہر شام سیر کے لیے جاتا ہوں۔|I go for a walk every evening.|میں ہر شام سیر کے لیے جاتا ہوں۔
+
+@listening
+السلام علیکم، آپ کیسے ہیں؟|assalam-o-alaikum aap kaise hain|Peace be upon you, how are you?|السلام علیکم، آپ کیسے ہیں؟|السلام علیکم، آپ کہاں ہیں؟|صبح بخیر، آپ کیسے ہیں؟|1
+مجھے ایک کپ چائے چاہیے۔|mujhe ek cup chai chahiye|I want a cup of tea.|مجھے ایک کپ چائے چاہیے|مجھے ایک کپ کافی چاہیے|مجھے ایک گلاس پانی چاہیے|1
+ریل اسٹیشن کہاں ہے؟|rail station kahan hai|Where is the railway station?|ریل اسٹیشن کہاں ہے؟|بازار کہاں ہے؟|ہوٹل کہاں ہے؟|1
+میں لاہور سے ہوں۔|main lahore se hoon|I am from Lahore.|میں لاہور سے ہوں|میں لاہور میں رہتا ہوں|میں لاہور جا رہا ہوں|1
+بل لائیں، شکریہ۔|bill laein shukriya|The bill, please.|بل لائیں، شکریہ|مینو لائیں، شکریہ|رسید لائیں، شکریہ|1
+یہ کتنے کا ہے؟|yeh kitne ka hai|How much is this?|یہ کتنے کا ہے؟|یہ کس کا ہے؟|یہ کیا ہے؟|1
+میں سمجھ نہیں پایا۔|main samajh nahin paya|I did not understand.|میں سمجھ نہیں پایا|میں جا نہیں پایا|میں سن نہیں پایا|1
+ذرا آہستہ بولیں۔|zara aahista bolein|Please speak slowly.|ذرا آہستہ بولیں|ذرا اونچا بولیں|ذرا قریب آئیں|1
+میرا بھائی ڈاکٹر ہے۔|mera bhai doctor hai|My brother is a doctor.|میرا بھائی ڈاکٹر ہے|میرا بھائی استاد ہے|میرے والد ڈاکٹر ہیں|1
+ٹرین آٹھ بجے جاتی ہے۔|train aath baje jaati hai|The train goes at eight.|ٹرین آٹھ بجے جاتی ہے|بس آٹھ بجے جاتی ہے|ٹرین آٹھ بجے آتی ہے|1
+آج میرے پاس وقت نہیں ہے۔|aaj mere paas waqt nahin hai|I have no time today.|آج میرے پاس وقت نہیں ہے|آج میرے پاس پیسے نہیں ہیں|آج میرے پاس کام نہیں ہے|1
+کھانا بہت مزیدار ہے۔|khana bohat mazedaar hai|The food is very tasty.|کھانا بہت مزیدار ہے|موسم بہت اچھا ہے|چائے بہت گرم ہے|1
+ہم ساتھ اردو سیکھتے ہیں۔|hum saath urdu seekhte hain|We learn Urdu together.|ہم ساتھ اردو سیکھتے ہیں|ہم ساتھ اردو بولتے ہیں|ہم ساتھ کتاب پڑھتے ہیں|1
+مجھے دو راتوں کے لیے کمرہ چاہیے۔|mujhe do raaton ke liye kamra chahiye|I need a room for two nights.|مجھے دو راتوں کے لیے کمرہ چاہیے|مجھے دو لوگوں کے لیے میز چاہیے|مجھے ایک رات کے لیے کمرہ چاہیے|1
+میری ماں آج مچھلی پکا رہی ہے۔|meri maa aaj machli paka rahi hai|My mother is cooking fish today.|میری ماں آج مچھلی پکا رہی ہے|میری ماں آج مچھلی لا رہی ہے|میرے والد آج مچھلی پکا رہے ہیں|1
+میں ہر شام سیر کرتا ہوں۔|main har shaam sair karta hoon|I walk every evening.|میں ہر شام سیر کرتا ہوں|میں ہر صبح سیر کرتا ہوں|میں ہر شام سوتا ہوں|1
+کیا آپ کے پاس چھوٹا سائز ہے؟|kya aap ke paas chota size hai|Do you have a smaller size?|کیا آپ کے پاس چھوٹا سائز ہے؟|کیا آپ کے پاس بڑا سائز ہے؟|کیا آپ کے پاس اور رنگ ہے؟|1
+میں کارڈ سے ادائیگی کروں گا۔|main card se adaigi karoon ga|I will pay by card.|میں کارڈ سے ادائیگی کروں گا|میں نقد ادائیگی کروں گا|میں کل ادائیگی کروں گا|1
+مجھے بہت افسوس ہے۔|mujhe bohat afsos hai|I am very sorry.|مجھے بہت افسوس ہے|مجھے بہت خوشی ہے|مجھے بہت ڈر ہے|1
+میں کل آپ کو فون کروں گا۔|main kal aap ko phone karoon ga|I will call you tomorrow.|میں کل آپ کو فون کروں گا|میں آج آپ کو فون کروں گا|میں کل آپ سے ملوں گا|1
+
+@stories
+لاہور میں پہلا دن|🚆|علی صبح لاہور پہنچا۔\nاس نے ٹیکسی سے ___ (1) تک سفر کیا۔\nکمرے میں اس نے ___ (2) پی۔\nپھر اس نے اپنی ___ (3) کو فون کیا۔|Ali reaches Lahore in the morning. He travels by taxi to the hotel. In the room he drinks tea. Then he calls his family.|ہوٹل/اسٹیشن/بازار=0;چائے/کتاب/روٹی=0;ماں/دکان/کلاس=0
+بازار میں خریداری|🛒|سارہ اتوار کو ___ (1) گئی۔\nاس نے روٹی، دودھ اور ___ (2) خریدے۔\nادائیگی اس نے ___ (3) سے کی۔|Sara goes shopping on Sunday. She buys bread, milk and apples. She pays by card.|بازار/سکول/دفتر=0;سیب/کتابیں/کرسیاں=0;کارڈ/کاغذ/پانی=0
+گم شدہ پاسپورٹ|🛂|احمد اپنا ___ (1) ڈھونڈ رہا تھا۔\nاس نے ایک ___ (2) سے مدد مانگی۔\nخوش قسمتی سے وہ اس کے ___ (3) میں مل گیا۔|Ahmad is looking for his passport. He asks a policeman for help. Luckily he finds it in his bag.|پاسپورٹ/چابی/کتاب=0;پولیس والے/استاد/پڑوسی=0;بیگ/باورچی خانے/سکول=0
+ڈاکٹر کے پاس|🏥|بلال کی طبیعت ___ (1) تھی۔\nوہ ___ (2) کے پاس گیا۔\nڈاکٹر نے اسے دوا اور ___ (3) دی۔|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|خراب/اچھی/بھوک=0;ڈاکٹر/بیکر/ڈرائیور=0;آرام/پیسے/کتابیں=0
+اردو کلاس|📚|نادیہ تین مہینے سے ___ (1) سیکھ رہی ہے۔\nوہ ہر شام ___ (2) سے مشق کرتی ہے۔\nاس کے ___ (3) کہتے ہیں وہ اچھا بول لیتی ہے۔|Nadia has been learning Urdu for three months. She practises every evening with books. Her teacher says she speaks well.|اردو/فرانسیسی/عربی=0;کتابوں/تصویروں/کارڈوں=0;استاد/بھائی/پڑوسی=0
+خاندانی کھانا|👨‍👩‍👧‍👦|اتوار کو پورا ___ (1) آیا۔\nدادی نے ___ (2) پکایا۔\nسب نے مل کر کھایا اور بہت ___ (3)۔|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|خاندان/دفتر/جماعت=0;چاول/پانی/کاغذ=0;ہنسا/کام کیا/سویا=0
+اسٹیشن پر|🚉|ٹرین دس منٹ ___ (1) تھی۔\nحسن نے دکان سے ___ (2) خریدی۔\nپھر وہ ___ (3) میں بیٹھ گیا۔|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|لیٹ/صاف/تیار=0;اخبار/رسید/چابی=0;ٹرین/بس/جہاز=0
+سردیوں کی شام|❄️|جنوری میں بہت ___ (1) ہوتی ہے۔\nعائشہ نے گرم ___ (2) پہنا۔\nوہ گرم ___ (3) پی کر کتاب پڑھنے لگی۔|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and starts reading.|سردی/گرمی/بارش=0;کوٹ/قمیض/جوتے=0;چائے/پانی/رس=0
+ہوٹل میں کھانا|🍽️|ویٹر ___ (1) لے کر آیا۔\nعمر نے مچھلی اور ___ (2) منگوایا۔\nآخر میں اس نے ___ (3) مانگی۔|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|مینو/کرسی/روشنی=0;چاول/میز/کھڑکی=0;بل/چابی/رسید=0
+نئے دوست|🤝|لینا اور ثنہ ___ (1) میں ملے۔\nانہوں نے موسیقی اور ___ (2) کے بارے میں بات کی۔\nآخر میں دونوں نے اپنے ___ (3) بدل لیے۔|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|باغ/دفتر/ٹرین=0;سفر/رسیدیں/امتحان=0;نمبر/پتے/کتابیں=0
+
+@idioms
+آنکھوں کا تارا|aankhon ka taara|The apple of one's eye.|آنکھوں کا تارا (بہت پیارا)|اس کا بیٹا اس کی آنکھوں کا تارا ہے۔
+دل پر ہاتھ رکھنا|dil par haath rakhna|To speak honestly, from the heart.|دل پر ہاتھ رکھ کر سچ کہنا|دل پر ہاتھ رکھ کر بتائیں، کیا ہوا؟
+ناک میں دم کرنا|naak mein dam karna|To annoy someone constantly.|تنگ کر دینا|بچوں نے شور مچا کر ناک میں دم کر دیا۔
+ہاتھ دھو کر پیچھے پڑنا|haath dho kar peechay parna|To go after someone relentlessly.|کسی کے پیچھے پڑ جانا|وہ اس معاملے میں ہاتھ دھو کر پیچھے پڑ گئے۔
+آنکھ کا اندھا، نام نورے|aankh ka andha naam nooray|All name, no substance.|نام بڑا، کام صفر|وہ کچھ نہیں جانتا — آنکھ کا اندھا، نام نورے۔
+اپنی ناک کٹوانا|apni naak katwana|To bring shame on oneself.|بے عزتی کروانا|اس نے جھوٹ بول کر اپنی ناک کٹوا لی۔
+آسمان سر پر اٹھانا|aasman sar par uthana|To make a huge fuss / noise.|بہت شور مچانا|چھوٹی سی بات پر آسمان سر پر اٹھا دیا۔
+الٹی گنگا بہانا|ulti ganga bahana|To do the exact opposite of what is expected.|الٹا کام کرنا|مشورہ دینے کے بجائے اس نے الٹی گنگا بہائی۔
+دال میں کالا|daal mein kaala|Something suspicious.|کچھ گڑبڑ|یہ معاملہ صاف نہیں، دال میں کچھ کالا ہے۔
+ہاتھ کے ہاتھ|haath ke haath|Immediately, on the spot.|فوراً|اس نے نقد پیسے ہاتھ کے ہاتھ دے دیے۔
+بات کی بات|baat ki baat|In no time at all.|لمحوں میں|بات کی بات میں سارا کام ہو گیا۔
+وقت کا پابند|waqt ka paaband|Punctual.|وقت پر آنے والا|وہ ہر میٹنگ میں وقت کا پابند رہتا ہے۔
+اپنے پاؤں پر کلہاڑی مارنا|apne paaon par kulhari marna|To harm oneself by one's own action.|اپنا ہی نقصان کرنا|جھوٹ بول کر اس نے اپنے پاؤں پر کلہاڑی ماری۔
+دو ٹوک جواب|do tok jawaab|A blunt, clear answer.|صاف گوئی|اس نے دو ٹوک جواب دے دیا۔
+پانی پانی ہونا|paani paani hona|To be deeply embarrassed.|شرمندہ ہونا|سب کے سامنے اس کی بات سن کر وہ پانی پانی ہو گیا۔
+منہ سے نکلا ہوا لفظ|munh se nikla hua lafz|A promise once spoken must be kept.|کہا ہوا وعدہ|منہ سے نکلا ہوا لفظ واپس نہیں لیتے۔
+دل کھول کر|dil khol kar|Wholeheartedly, generously.|پورے دل سے|انہوں نے دل کھول کر مہمانوں کی خاطر داری کی۔
+آگ لگانا|aag lagana|To spread discord / cause trouble.|فتنہ کھڑا کرنا|اس کی بات نے گھر میں آگ لگا دی۔
+ہاتھ سے نکل جانا|haath se nikal jaana|To lose control of something.|قابو سے باہر ہونا|معاملہ ہاتھ سے نکل گیا۔
+دل میں اتر جانا|dil mein utar jaana|To touch someone's heart deeply.|دل میں گھر کر جانا|اس کی آواز دل میں اتر گئی۔
+کسی کے ہاتھ باندھنا|kisi ke haath baandhna|To surrender / give up.|ہار مان لینا|مشکل دیکھ کر اس نے ہاتھ باندھ لیے۔
+وقت پلک جھپکتے میں|waqt palak jhapakte mein|In the blink of an eye.|بہت تیزی سے|وقت پلک جھپکتے میں گزر گیا۔
+مہنگے آنسو رونا|mehange aansoo rona|To cry bitterly.|بہت زیادہ رونا|امتحان میں ناکامی پر وہ مہنگے آنسو رویا۔
+پتھر دل|patthar dil|Hard-hearted.|سخت دل|پتھر دل انسان کسی کی نہیں سنتا۔
+دل کا صاف|dil ka saaf|Honest and pure-hearted.|صاف دل والا|وہ دل کا صاف انسان ہے، کسی سے کینہ نہیں رکھتا۔
+
+@alphabet
+ا|alif|alif|اردو
+ب|be|be|باغ
+پ|pe|pe|پانی
+ت|te|te|تاریخ
+ٹ|tte|tte|ٹماٹر
+ث|se|se|ثابت
+ج|jim|jim|جسم
+چ|che|che|چائے
+ح|he (with dot)|he|حکیم
+خ|khe|khe|خواب
+د|daal|daal|دروازہ
+ڈ|ddaal|ddaal|ڈاکٹر
+ذ|zaal|zaal|ذکر
+ر|re|re|روشنی
+ڑ|rra|rra|پہاڑ
+ز|ze|ze|زبان
+ژ|zhe|zhe|ژالہ
+س|sin|sin|سکول
+ش|shin|shin|شام
+ص|suad|suad|صابن
+ض|zuad|zuad|ضرورت
+ط|toe|toe|طریقہ
+ظ|zoe|zoe|ظالم
+ع|ain|ain|عید
+غ|ghain|ghain|غریب
+ف|fe|fe|فصل
+ق|qaaf|qaaf|قیمت
+ک|kaaf|kaaf|کتاب
+گ|gaaf|gaaf|گھر
+ل|laam|laam|لفظ
+م|mim|mim|میز
+ن|nun|nun|نمک
+و|wao|wao|وقت
+ہ|he|he|ہاتھ
+ء|hamza|hamza|آئینہ
+ی|ye|ye|یہ
+ے|bari ye|bari ye|کھیلے

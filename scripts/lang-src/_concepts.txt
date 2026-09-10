@@ -1,0 +1,319 @@
+# Shared core-concept list — 300 concepts every learning language covers.
+# en|ur|pos|cat|lv     (the `en` column is the join key for scripts/lang-src/<slug>.txt)
+# Urdu meanings are authored once here so all 21 packs stay consistent.
+#
+# ---- greetings (20) ----
+hello|ہیلو|intj|greetings|A1
+goodbye|خدا حافظ|intj|greetings|A1
+good morning|صبح بخیر|intj|greetings|A1
+good evening|شام بخیر|intj|greetings|A1
+good night|شب بخیر|intj|greetings|A1
+thank you|شکریہ|intj|greetings|A1
+please|براہِ کرم|adv|greetings|A1
+sorry|معذرت|intj|greetings|A1
+excuse me|معاف کیجیے|intj|greetings|A1
+yes|جی ہاں|adv|greetings|A1
+no|نہیں|adv|greetings|A1
+welcome|خوش آمدید|intj|greetings|A2
+how are you|آپ کیسے ہیں؟|phrase|greetings|A1
+my name is|میرا نام ہے|phrase|greetings|A1
+nice to meet you|آپ سے مل کر خوشی ہوئی|phrase|greetings|A2
+see you later|پھر ملیں گے|phrase|greetings|A1
+good luck|خوش قسمتی|n|greetings|A2
+congratulations|مبارک ہو|intj|greetings|A2
+help|مدد|n|greetings|A1
+of course|بالکل|adv|greetings|A2
+# ---- numbers (25) ----
+zero|صفر|num|numbers|A1
+one|ایک|num|numbers|A1
+two|دو|num|numbers|A1
+three|تین|num|numbers|A1
+four|چار|num|numbers|A1
+five|پانچ|num|numbers|A1
+six|چھ|num|numbers|A1
+seven|سات|num|numbers|A1
+eight|آٹھ|num|numbers|A1
+nine|نو|num|numbers|A1
+ten|دس|num|numbers|A1
+eleven|گیارہ|num|numbers|A1
+twelve|بارہ|num|numbers|A1
+thirteen|تیرہ|num|numbers|A1
+fourteen|چودہ|num|numbers|A1
+fifteen|پندرہ|num|numbers|A1
+twenty|بیس|num|numbers|A1
+thirty|تیس|num|numbers|A2
+forty|چالیس|num|numbers|A2
+fifty|پچاس|num|numbers|A2
+hundred|سو|num|numbers|A2
+thousand|ہزار|num|numbers|A2
+first|پہلا|num|numbers|A2
+second|دوسرا|num|numbers|A2
+half|آدھا|num|numbers|A2
+# ---- family (20) ----
+mother|ماں|n|family|A1
+father|باپ|n|family|A1
+brother|بھائی|n|family|A1
+sister|بہن|n|family|A1
+son|بیٹا|n|family|A1
+daughter|بیٹی|n|family|A1
+child|بچہ|n|family|A1
+baby|ننھا بچہ|n|family|A1
+family|خاندان|n|family|A1
+husband|شوہر|n|family|A2
+wife|بیوی|n|family|A2
+uncle|چچا|n|family|A2
+aunt|چچی|n|family|A2
+grandfather|دادا|n|family|A2
+grandmother|دادی|n|family|A2
+cousin|کزن|n|family|A2
+nephew|بھتیجا|n|family|B1
+friend|دوست|n|family|A1
+neighbour|پڑوسی|n|family|A2
+parent|والدین|n|family|A2
+# ---- food (30) ----
+water|پانی|n|food|A1
+bread|روٹی|n|food|A1
+rice|چاول|n|food|A1
+milk|دودھ|n|food|A1
+tea|چائے|n|food|A1
+sugar|چینی|n|food|A1
+salt|نمک|n|food|A1
+egg|انڈا|n|food|A1
+meat|گوشت|n|food|A1
+chicken|مرغی|n|food|A1
+fish|مچھلی|n|food|A1
+apple|سیب|n|food|A1
+banana|کیلا|n|food|A1
+mango|آم|n|food|A1
+orange (fruit)|سنترا|n|food|A2
+grapes|انگور|n|food|A2
+lemon|لیمن|n|food|A2
+tomato|ٹماٹر|n|food|A2
+onion|پیاز|n|food|A2
+potato|آلو|n|food|A1
+carrot|گاجر|n|food|A2
+oil|تیل|n|food|A2
+butter|مکھن|n|food|A2
+honey|شہد|n|food|A2
+juice|رس|n|food|A2
+coffee|کافی|n|food|A2
+soup|سوپ|n|food|A2
+breakfast|ناشتہ|n|food|A1
+lunch|دوپہر کا کھانا|n|food|A2
+dinner|رات کا کھانا|n|food|A2
+# ---- travel (20) ----
+car|گاڑی|n|travel|A1
+bus|بس|n|travel|A1
+train|ریل گاڑی|n|travel|A1
+airplane|جہاز|n|travel|A1
+bicycle|سائیکل|n|travel|A2
+road|سڑک|n|travel|A1
+street|گلی|n|travel|A2
+bridge|پل|n|travel|A2
+station|اسٹیشن|n|travel|A2
+airport|ہوائی اڈہ|n|travel|A2
+ticket|ٹکٹ|n|travel|A1
+map|نقشہ|n|travel|A2
+city|شہر|n|travel|A1
+village|گاؤں|n|travel|A2
+country|ملک|n|travel|A1
+hotel|ہوٹل|n|travel|A2
+journey|سفر|n|travel|A2
+luggage|سامان|n|travel|A2
+driver|ڈرائیور|n|travel|A2
+passport|پاسپورٹ|n|travel|A2
+# ---- time (20) ----
+time|وقت|n|time|A1
+day|دن|n|time|A1
+night|رات|n|time|A1
+morning|صبح|n|time|A1
+evening|شام|n|time|A1
+week|ہفتہ|n|time|A1
+month|مہینہ|n|time|A1
+year|سال|n|time|A1
+hour|گھنٹہ|n|time|A1
+minute|منٹ|n|time|A1
+today|آج|adv|time|A1
+tomorrow|کل|adv|time|A1
+yesterday|گزشتہ کل|adv|time|A1
+now|اب|adv|time|A1
+later|بعد میں|adv|time|A1
+early|جلدی|adv|time|A2
+late|دیر سے|adv|time|A2
+always|ہمیشہ|adv|time|A2
+sometimes|کبھی کبھی|adv|time|A2
+never|کبھی نہیں|adv|time|A2
+# ---- colors (12) ----
+color|رنگ|n|colors|A1
+red|سرخ|adj|colors|A1
+blue|نیلا|adj|colors|A1
+green|سبز|adj|colors|A1
+yellow|پیلا|adj|colors|A1
+black|کالا|adj|colors|A1
+white|سفید|adj|colors|A1
+brown|بھورا|adj|colors|A2
+grey|خاکستری|adj|colors|A2
+pink|گلابی|adj|colors|A2
+purple|جامنی|adj|colors|A2
+orange (color)|نارنجی|adj|colors|A2
+# ---- body (18) ----
+body|جسم|n|body|A1
+head|سر|n|body|A1
+hair|بال|n|body|A1
+face|چہرہ|n|body|A1
+eye|آنکھ|n|body|A1
+ear|کان|n|body|A1
+nose|ناک|n|body|A1
+mouth|منہ|n|body|A1
+tooth|دانت|n|body|A2
+tongue|زبان|n|body|A2
+neck|گردن|n|body|A2
+shoulder|کندھا|n|body|A2
+hand|ہاتھ|n|body|A1
+finger|انگلی|n|body|A2
+leg|ٹانگ|n|body|A2
+foot|پاؤں|n|body|A2
+heart|دل|n|body|A1
+stomach|پیٹ|n|body|A2
+# ---- home (20) ----
+house|گھر|n|home|A1
+room|کمرہ|n|home|A1
+door|دروازہ|n|home|A1
+window|کھڑکی|n|home|A1
+wall|دیوار|n|home|A2
+roof|چھت|n|home|A2
+floor|فرش|n|home|A2
+kitchen|باورچی خانہ|n|home|A1
+bathroom|باتھ روم|n|home|A2
+bed|بستر|n|home|A1
+table|میز|n|home|A1
+chair|کرسی|n|home|A1
+sofa|صوفہ|n|home|A2
+lamp|لیمپ|n|home|A2
+key|چابی|n|home|A1
+stairs|سیڑھیاں|n|home|A2
+garden|باغ|n|home|A2
+light|روشنی|n|home|A1
+fan|پنکھا|n|home|A2
+mirror|آئینہ|n|home|A2
+# ---- work (18) ----
+work|کام|n|work|A1
+job|نوکری|n|work|A1
+office|دفتر|n|work|A1
+money|پیسہ|n|work|A1
+salary|تنخواہ|n|work|A2
+meeting|میٹنگ|n|work|A2
+boss|باس|n|work|A2
+employee|ملازم|n|work|A2
+business|کاروبار|n|work|A2
+company|کمپنی|n|work|A2
+market|بازار|n|work|A1
+shop|دکان|n|work|A1
+customer|گاہک|n|work|A2
+price|قیمت|n|work|A2
+farmer|کسان|n|work|A2
+doctor|ڈاکٹر|n|work|A1
+teacher|استاد|n|work|A1
+police|پولیس|n|work|A2
+# ---- school (22) ----
+school|اسکول|n|school|A1
+book|کتاب|n|school|A1
+pen|قلم|n|school|A1
+pencil|پنسل|n|school|A2
+page|صفحہ|n|school|A2
+class|کلاس|n|school|A1
+student|طالب علم|n|school|A1
+lesson|سبق|n|school|A2
+exam|امتحان|n|school|A1
+question|سوال|n|school|A1
+answer|جواب|n|school|A1
+homework|گھر کا کام|n|school|A2
+library|لائبریری|n|school|A2
+university|یونیورسٹی|n|school|A2
+language|زبان|n|school|A1
+word|لفظ|n|school|A2
+sentence|جملہ|n|school|B1
+dictionary|لغت|n|school|B1
+science|سائنس|n|school|A2
+history|تاریخ|n|school|A2
+knowledge|علم|n|school|B1
+education|تعلیم|n|school|A2
+# ---- shopping (15) ----
+shopping|خریداری|n|shopping|A1
+buy|خریدنا|v|shopping|A1
+sell|بیچنا|v|shopping|A2
+cheap|سستا|adj|shopping|A2
+expensive|مہنگا|adj|shopping|A2
+coin|سکہ|n|shopping|A2
+note|نوٹ|n|shopping|A2
+bill|بل|n|shopping|A2
+size|سائز|n|shopping|A2
+discount|رعایت|n|shopping|B1
+receipt|رسید|n|shopping|B1
+bag|تھیلا|n|shopping|A1
+rupee|روپیہ|n|shopping|A1
+weigh|تولنا|v|shopping|B1
+pay|ادا کرنا|v|shopping|A1
+# ---- emotions (15) ----
+happiness|خوشی|n|emotions|A1
+sadness|اداسی|n|emotions|A2
+anger|غصہ|n|emotions|A2
+fear|ڈر|n|emotions|A2
+love|محبت|n|emotions|A1
+hope|امید|n|emotions|A2
+worry|فکر|n|emotions|A2
+surprise|حیرانی|n|emotions|B1
+peace|امن|n|emotions|A2
+smile|مسکراہٹ|n|emotions|A2
+laugh|ہنسی|n|emotions|A2
+crying|رونا|n|emotions|A2
+mood|موڈ|n|emotions|B1
+brave|بہادر|adj|emotions|A2
+lonely|اکیلا|adj|emotions|A2
+# ---- verbs (25) ----
+to eat|کھانا|v|verbs|A1
+to drink|پینا|v|verbs|A1
+to go|جانا|v|verbs|A1
+to come|آنا|v|verbs|A1
+to see|دیکھنا|v|verbs|A1
+to hear|سننا|v|verbs|A1
+to speak|بولنا|v|verbs|A1
+to read|پڑھنا|v|verbs|A1
+to write|لکھنا|v|verbs|A1
+to learn|سیکھنا|v|verbs|A1
+to teach|پڑھانا|v|verbs|A2
+to sleep|سونا|v|verbs|A1
+to wake up|جاگنا|v|verbs|A2
+to run|دوڑنا|v|verbs|A1
+to walk|چلنا|v|verbs|A1
+to open|کھولنا|v|verbs|A1
+to close|بند کرنا|v|verbs|A1
+to give|دینا|v|verbs|A1
+to take|لینا|v|verbs|A1
+to make|بنانا|v|verbs|A1
+to love|محبت کرنا|v|verbs|A1
+to think|سوچنا|v|verbs|A1
+to understand|سمجھنا|v|verbs|A1
+to work|کام کرنا|v|verbs|A1
+to wait|انتظار کرنا|v|verbs|A2
+# ---- adjectives (20) ----
+big|بڑا|adj|adjectives|A1
+small|چھوٹا|adj|adjectives|A1
+new|نیا|adj|adjectives|A1
+old|پرانا|adj|adjectives|A1
+good|اچھا|adj|adjectives|A1
+bad|برا|adj|adjectives|A1
+beautiful|خوبصورت|adj|adjectives|A1
+hot|گرم|adj|adjectives|A1
+cold|ٹھنڈا|adj|adjectives|A1
+fast|تیز|adj|adjectives|A2
+slow|آہستہ|adj|adjectives|A2
+easy|آسان|adj|adjectives|A2
+difficult|مشکل|adj|adjectives|A2
+long|لمبا|adj|adjectives|A2
+short|چھوٹا قد|adj|adjectives|A2
+clean|صاف|adj|adjectives|A2
+dirty|گندا|adj|adjectives|A2
+happy|خوش|adj|adjectives|A1
+tired|تھکا ہوا|adj|adjectives|A2
+hungry|بھوکا|adj|adjectives|A2

@@ -1,0 +1,148 @@
+# turkish — authored source (migrated from data/langs/turkish.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|{s} kelimesini biliyorum.|I know the word {en}.
+food|{s} severim.|I like {en}.
+adjectives|Ev çok {s}.|The house is very {en}.
+verbs|{s} istiyorum.|I want to {en}.
+numbers|Sayı {s}.|The number is {en}.
+
+@words
+book|kitap|kitap
+pen|kalem|kalem
+water|su|su
+bread|ekmek|ekmek
+house|ev|ev
+school|okul|okul
+friend|arkadaş|arkadaş
+mother|anne|anne
+father|baba|baba
+fish|balık|balık
+car|araba|araba
+road|yol|yol
+city|şehir|şehir
+village|köy|köy
+rice|pirinç|pirinç
+tea|çay|çay
+milk|süt|süt
+hand|el|el
+eye|göz|göz
+heart|kalp|kalp
+day|gün|gün
+night|gece|gece
+time|zaman|zaman
+money|para|para
+work|iş|iş
+teacher|öğretmen|öğretmen
+student|öğrenci|öğrenci
+doctor|doktor|doktor
+market|pazar|pazar
+price|fiyat|fiyat
+door|kapı|kapı
+window|pencere|pencere
+light|ışık|ışık
+morning|sabah|sabah
+evening|akşam|akşam
+week|hafta|hafta
+month|ay (month)|ay
+year|yıl|yıl
+peace|barış|barış
+egg|yumurta|yumurta
+meat|et|et
+salt|tuz|tuz
+sugar|şeker|şeker
+apple|elma|elma
+grapes|üzüm|üzüm
+tomato|domates|domates
+onion|soğan|soğan
+table|masa|masa
+chair|sandalye|sandalye
+bed|yatak|yatak
+room|oda|oda
+kitchen|mutfak|mutfak
+bus|otobüs|otobüs
+train|tren|tren
+airplane|uçak|uçak
+beautiful|güzel|güzel
+big|büyük|büyük
+small|küçük|küçük
+new|yeni|yeni
+old|eski|eski
+fast|hızlı|hızlı
+slow|yavaş|yavaş
+short|kısa|kısa
+to come|gelmek|gelmek
+to go|gitmek|gitmek
+to drink|içmek|içmek
+to read|okumak|okumak
+to write|yazmak|yazmak
+to speak|konuşmak|konuşmak
+to love|sevmek|sevmek
+to work|çalışmak|çalışmak
+to sleep|uyumak|uyumak
+color|renk|renk
+red|kırmızı|kırmızı
+blue|mavi|mavi
+green|yeşil|yeşil
+yellow|sarı|sarı
+black|siyah|siyah
+white|beyaz|beyaz
+child|çocuk|çocuk
+garden|bahçe|bahçe
+
+# unmatched (not in _concepts.txt) — 18 entries carried over as extras:
+sun|güneş|güneş||سورج|n|time|A2
+moon|ay|ay||چاند|n|time|A2
+star|yıldız|yıldız||ستارہ|n|time|A2
+tree|ağaç|ağaç||درخت|n|home|A2
+flower|çiçek|çiçek||پھول|n|home|A2
+bird|kuş|kuş||پرندہ|n|school|A2
+food|yemek|yemek||کھانا|n|food|A2
+wind|rüzgar|rüzgar||ہوا|n|home|A2
+rain|yağmur|yağmur||بارش|n|home|A2
+sea|deniz|deniz||سمندر|n|travel|A2
+mountain|dağ|dağ||پہاڑ|n|travel|A2
+rice dish|pilav|pilav||پلاؤ|n|food|A2
+orange|portakal|portakal||سنترا|n|food|A2
+tall / long|uzun|uzun||لمبا|adj|adjectives|A2
+sibling|kardeş|kardeş||بھائی/بہن|n|school|A2
+older sister|abla|abla||بڑی بہن|n|family|A2
+older brother|ağabey|ağabey||بڑا بھائی|n|family|A2
+woman|kadın|kadın||عورت|n|family|A2
+
+@phrases
+Merhaba|merhaba|Hello|سلام|greeting
+Nasılsın?|nasılsın|How are you?|آپ کیسے ہیں؟|smalltalk
+İyiyim, teşekkürler|iyiyim teşekkürler|I'm fine, thanks|ٹھیک ہوں، شکریہ|polite
+Adın ne?|adın ne|What's your name?|آپ کا نام کیا ہے؟|smalltalk
+Benim adım Ali|benim adım Ali|My name is Ali|میرا نام علی ہے|smalltalk
+Nerelisin?|nerelisin|Where are you from?|آپ کہاں سے ہیں؟|travel
+Ben Pakistanlıyım|ben Pakistanlıyım|I am from Pakistan|میں پاکستانی ہوں|smalltalk
+Çok teşekkür ederim|çok teşekkür ederim|Thank you very much|بہت بہت شکریہ|polite
+Bir şey değil|bir şey değil|You're welcome|کوئی بات نہیں|greeting
+Evet / Hayır|evet / hayır|Yes / No|ہاں / نہیں|smalltalk
+Su istiyorum|su istiyorum|I want water|مجھے پانی چاہیے|food
+Bu ne kadar?|bu ne kadar|How much is this?|یہ کتنے کا ہے؟|greeting
+Okul nerede?|okul nerede|Where is the school?|اسکول کہاں ہے؟|travel
+Anlamıyorum|anlamıyorum|I don't understand|میں نہیں سمجھا|school
+Yavaş konuşur musun?|yavaş konuşur musun|Can you speak slowly?|آہستہ بول سکتے ہیں؟|school
+Günaydın|günaydın|Good morning|صبح بخیر|greeting
+İyi akşamlar|iyi akşamlar|Good evening|شام بخیر|greeting
+Görüşürüz|görüşürüz|See you|پھر ملیں گے|greeting
+Buyurun|buyurun|Here you go|یہ لیجیے|smalltalk
+Afedersiniz|afedersiniz|Excuse me|معاف کیجیے|polite
+Teşekkür ederim|teşekkür ederim|Thank you|شکریہ|polite
+Yardım edin|yardım edin|Help me|میری مدد کریں|health
+Çok güzel|çok güzel|Very beautiful|بہت خوبصورت|smalltalk
+Nerede?|nerede|Where is...?|کہاں ہے؟|travel
+Ne zaman?|ne zaman|When?|کب؟|smalltalk
+Hadi gidelim|hadi gidelim|Let's go|چلو چلیں|smalltalk
+Kendine iyi bak|kendine iyi bak|Take care|اپنا خیال رکھنا|smalltalk
+Türkçe bilmiyorum|türkçe bilmiyorum|I don't know Turkish|مجھے ترکی نہیں آتی|school
+İyi şanslar|iyi şanslar|Good luck|خوش قسمتی|smalltalk
+Tabii ki|tabii ki|Of course|بیشک|polite
+

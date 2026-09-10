@@ -1,0 +1,145 @@
+# japanese — authored source (migrated from data/langs/japanese.ts, then expanded).
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+
+@info
+romanization|Consistent romanization used throughout this pack.
+
+@frames
+default|{s}という言葉を知っています。|I know the word {en}.
+food|私は{s}が好きです。|I like {en}.
+adjectives|この家はとても{s}です。|The house is very {en}.
+colors|色は{s}です。|The color is {en}.
+
+@words
+book|本|hon
+pen|ペン|pen
+water|水|mizu
+bread|パン|pan
+house|家|ie
+school|学校|gakkō
+friend|友達|tomodachi
+mother|母|haha
+father|父|chichi
+fish|魚|sakana
+car|車|kuruma
+road|道|michi
+city|街|machi
+village|村|mura
+rice|ご飯|gohan
+tea|お茶|ocha
+milk|牛乳|gyūnyū
+hand|手|te
+eye|目|me
+heart|心|kokoro
+day|日|hi
+night|夜|yoru
+time|時間|jikan
+money|お金|okane
+work|仕事|shigoto
+teacher|先生|sensei
+student|学生|gakusei
+doctor|医者|isha
+market|市場|ichiba
+price|値段|nedan
+door|ドア|doa
+window|窓|mado
+light|光|hikari
+morning|朝|asa
+evening|夕方|yūgata
+week|週|shū
+month|月 (かげつ)|kagetsu
+year|年|toshi
+peace|平和|heiwa
+meat|肉|niku
+egg|卵|tamago
+salt|塩|shio
+sugar|砂糖|satō
+apple|りんご|ringo
+grapes|ぶどう|budō
+tomato|トマト|tomato
+table|テーブル|tēburu
+chair|椅子|isu
+bed|ベッド|beddo
+room|部屋|heya
+bus|バス|basu
+train|電車|densha
+airplane|飛行機|hikōki
+new|新しい|atarashii
+old|古い|furui
+big|大きい|ōkii
+small|小さい|chiisai
+fast|速い|hayai
+slow|遅い|osoi
+beautiful|美しい|utsukushii
+to eat|食べる|taberu
+to drink|飲む|nomu
+to see|見る|miru
+to speak|話す|hanasu
+to read|読む|yomu
+to write|書く|kaku
+to learn|学ぶ|manabu
+to go|行く|iku
+to come|来る|kuru
+to love|愛する|aisuru
+to sleep|寝る|neru
+to work|働く|hataraku
+color|色|iro
+red|赤い|akai
+blue|青い|aoi
+green|緑|midori
+yellow|黄色い|kiiroi
+black|黒い|kuroi
+white|白い|shiroi
+child|子供|kodomo
+
+# unmatched (not in _concepts.txt) — 18 entries carried over as extras:
+sun|太陽|taiyō||سورج|n|time|A2
+moon|月|tsuki||چاند|n|time|A2
+star|星|hoshi||ستارہ|n|time|A2
+tree|木|ki||درخت|n|home|A2
+flower|花|hana||پھول|n|home|A2
+bird|鳥|tori||پرندہ|n|school|A2
+food|食べ物|tabemono||کھانا|n|food|A2
+wind|風|kaze||ہوا|n|home|A2
+rain|雨|ame||بارش|n|home|A2
+sea|海|umi||سمندر|n|travel|A2
+mountain|山|yama||پہاڑ|n|travel|A2
+orange|みかん|mikan||سنترا|n|food|A2
+town|町|machi||قصبہ|n|travel|A2
+boy|男の子|otoko no ko||لڑکا|n|family|A2
+girl|女の子|onna no ko||لڑکی|n|family|A2
+man|男|otoko||آدمی|n|family|A2
+woman|女|onna||عورت|n|family|A2
+dog|犬|inu||کتا|n|school|A2
+
+@phrases
+こんにちは|konnichiwa|Hello|سلام|greeting
+お元気ですか|o-genki desu ka|How are you?|آپ کیسے ہیں؟|smalltalk
+元気です、ありがとう|genki desu, arigatō|I'm fine, thanks|ٹھیک ہوں، شکریہ|polite
+お名前は何ですか|o-namae wa nan desu ka|What's your name?|آپ کا نام کیا ہے؟|smalltalk
+私の名前はアリです|watashi no namae wa Ali desu|My name is Ali|میرا نام علی ہے|smalltalk
+どこから来ましたか|doko kara kimashita ka|Where are you from?|آپ کہاں سے ہیں؟|travel
+パキスタンから来ました|Pakistan kara kimashita|I'm from Pakistan|میں پاکستان سے ہوں|smalltalk
+ありがとうございます|arigatō gozaimasu|Thank you very much|بہت شکریہ|polite
+どういたしまして|dō itashimashite|You're welcome|کوئی بات نہیں|greeting
+はい / いいえ|hai / iie|Yes / No|ہاں / نہیں|smalltalk
+水が欲しいです|mizu ga hoshii desu|I want water|مجھے پانی چاہیے|food
+いくらですか|ikura desu ka|How much is it?|یہ کتنے کا ہے؟|shopping
+学校はどこですか|gakkō wa doko desu ka|Where is the school?|اسکول کہاں ہے؟|travel
+わかりません|wakarimasen|I don't understand|میں نہیں سمجھا|school
+ゆっくり話してください|yukkuri hanashite kudasai|Please speak slowly|آہستہ بولیں|polite
+おはようございます|ohayō gozaimasu|Good morning|صبح بخیر|greeting
+こんばんは|konbanwa|Good evening|شام بخیر|greeting
+またね|mata ne|See you|پھر ملیں گے|greeting
+すみません|sumimasen|Excuse me / sorry|معاف کیجیے|polite
+大丈夫です|daijōbu desu|It's okay|ٹھیک ہے|smalltalk
+助けて|tasukete|Help me|میری مدد کریں|health
+おいしい|oishii|Delicious|مزیدار|food
+おやすみなさい|oyasuminasai|Good night|شب بخیر|greeting
+頑張って|ganbatte|Good luck / do your best|خوش قسمتی|smalltalk
+もちろん|mochiron|Of course|بیشک|polite
+これをください|kore o kudasai|This one please|یہ دیجیے|greeting
+今何時ですか|ima nanji desu ka|What time is it?|اب کیا وقت ہوا؟|smalltalk
+頑張ります|ganbarimasu|I'll do my best|میں کوشش کروں گا|smalltalk
+元気です|genki desu|I'm fine|میں ٹھیک ہوں|smalltalk
+

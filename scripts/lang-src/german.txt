@@ -1,0 +1,733 @@
+# German (Deutsch) — authored source for data/langs/german.json
+# Words join to scripts/lang-src/_concepts.txt on the English gloss.
+# Romanization = German spelling with umlauts/ß transliterated (ae/oe/ue/ss),
+# the scheme Pakistani learners already see in Goethe A1 material.
+
+@info
+romanization|German spelling with ä/ö/ü/ß written as ae/oe/ue/ss.
+alphabet.title|Das deutsche Alphabet
+alphabet.intro|26 Buchstaben plus ä, ö, ü und ß. Groß- und Kleinschreibung ist wichtig — Nomen werden großgeschrieben.
+
+@frames
+greetings|Sag einfach: {s}.|Just say: {en}.
+numbers|Ich habe {s} Äpfel.|I have {en} apples.
+family|Das ist {s}.|This is {en}.
+food|Ich mag {s}.|I like {en}.
+travel|Wo ist {s}?|Where is the {en}?
+time|Das ist {s}.|This is {en}.
+colors|Der Himmel ist {s}.|The sky is {en}.
+body|Mein {s} tut weh.|My {en} hurts.
+home|Hier ist {s}.|Here is the {en}.
+work|Das ist {s}.|This is {en}.
+school|Das ist {s}.|This is {en}.
+shopping|Das ist {s}.|This is {en}.
+emotions|Ich fühle {s}.|I feel {en}.
+verbs|Ich {s} jeden Tag.|This means: {en}.
+adjectives|Das Haus ist {s}.|The house is {en}.
+
+@words
+hello|Hallo|hallo
+goodbye|Auf Wiedersehen|auf wiedersehen
+good morning|Guten Morgen|guten morgen
+good evening|Guten Abend|guten abend
+good night|Gute Nacht|gute nacht
+thank you|Danke|danke
+please|Bitte|bitte
+sorry|Entschuldigung|entschuldigung
+excuse me|Verzeihung|verzeihung
+yes|Ja|ja
+no|Nein|nein
+welcome|Willkommen|willkommen
+how are you|Wie geht es dir?|wie geht es dir
+my name is|Ich heiße|ich heisse||Sag einfach: Ich heiße Ali.|Just say: My name is Ali.
+nice to meet you|Freut mich|freut mich||Es freut mich, dich zu treffen.|Nice to meet you.
+see you later|Bis später|bis spaeter
+good luck|Viel Glück|viel glueck
+congratulations|Herzlichen Glückwunsch|herzlichen glueckwunsch
+help|Hilfe|hilfe
+of course|Natürlich|natuerlich
+zero|null|null||Die Zahl ist null.|The number is zero.
+one|eins|eins
+two|zwei|zwei
+three|drei|drei
+four|vier|vier
+five|fünf|fuenf
+six|sechs|sechs
+seven|sieben|sieben
+eight|acht|acht
+nine|neun|neun
+ten|zehn|zehn
+eleven|elf|elf
+twelve|zwölf|zwoelf
+thirteen|dreizehn|dreizehn
+fourteen|vierzehn|vierzehn
+fifteen|fünfzehn|fuenfzehn
+twenty|zwanzig|zwanzig
+thirty|dreißig|dreissig
+forty|vierzig|vierzig
+fifty|fünfzig|fuenfzig
+hundred|hundert|hundert
+thousand|tausend|tausend
+first|erste|erste||Der erste Tag.|The first day.
+second|zweite|zweite||Der zweite Platz.|The second place.
+half|halbe|halbe||Eine halbe Stunde.|Half an hour.
+mother|Mutter|mutter|meine Mutter
+father|Vater|vater|mein Vater
+brother|Bruder|bruder|mein Bruder
+sister|Schwester|schwester|meine Schwester
+son|Sohn|sohn|mein Sohn
+daughter|Tochter|tochter|meine Tochter
+child|Kind|kind|mein Kind
+baby|Baby|baby|mein Baby
+family|Familie|familie|meine Familie
+husband|Ehemann|ehemann|mein Mann
+wife|Ehefrau|ehefrau|meine Frau
+uncle|Onkel|onkel|mein Onkel
+aunt|Tante|tante|meine Tante
+grandfather|Großvater|grossvater|mein Großvater
+grandmother|Großmutter|grossmutter|meine Großmutter
+cousin|Cousin|cousin|mein Cousin
+nephew|Neffe|neffe|mein Neffe
+friend|Freund|freund|mein Freund
+neighbour|Nachbar|nachbar|mein Nachbar
+parent|Eltern|eltern|meine Eltern
+water|Wasser|wasser
+bread|Brot|brot
+rice|Reis|reis
+milk|Milch|milch
+tea|Tee|tee
+sugar|Zucker|zucker
+salt|Salz|salz
+egg|Ei|ei|ein Ei
+meat|Fleisch|fleisch
+chicken|Hähnchen|haehnchen
+fish|Fisch|fisch
+apple|Apfel|apfel|Äpfel
+banana|Banane|banane|Bananen
+mango|Mango|mango|Mangos
+orange (fruit)|Orange|orange|Orangen
+grapes|Trauben|trauben
+lemon|Zitrone|zitrone|Zitronen
+tomato|Tomate|tomate|Tomaten
+onion|Zwiebel|zwiebel|Zwiebeln
+potato|Kartoffel|kartoffel|Kartoffeln
+carrot|Karotte|karotte|Karotten
+oil|Öl|oel
+butter|Butter|butter
+honey|Honig|honig
+juice|Saft|saft
+coffee|Kaffee|kaffee
+soup|Suppe|suppe
+breakfast|Frühstück|fruehstueck
+lunch|Mittagessen|mittagessen
+dinner|Abendessen|abendessen
+car|Auto|auto|das Auto
+bus|Bus|bus|der Bus
+train|Zug|zug|der Zug
+airplane|Flugzeug|flugzeug|das Flugzeug
+bicycle|Fahrrad|fahrrad|das Fahrrad
+road|Landstraße|landstrasse|die Landstraße
+street|Straße|strasse|die Straße
+bridge|Brücke|bruecke|die Brücke
+station|Bahnhof|bahnhof|der Bahnhof
+airport|Flughafen|flughafen|der Flughafen
+ticket|Ticket|ticket|das Ticket
+map|Karte|karte|die Karte
+city|Stadt|stadt|die Stadt
+village|Dorf|dorf|das Dorf
+country|Land|land|das Land
+hotel|Hotel|hotel|das Hotel
+journey|Reise|reise|die Reise
+luggage|Gepäck|gepaeck|das Gepäck
+driver|Fahrer|fahrer|der Fahrer
+passport|Pass|pass|der Pass
+time|Zeit|zeit|die Zeit
+day|Tag|tag|der Tag
+night|Nacht|nacht|die Nacht
+morning|Morgen|morgen|der Morgen
+evening|Abend|abend|der Abend
+week|Woche|woche|die Woche
+month|Monat|monat|der Monat
+year|Jahr|jahr|das Jahr
+hour|Stunde|stunde|die Stunde
+minute|Minute|minute|die Minute
+today|heute|heute||Heute gehe ich zur Schule.|Today I go to school.
+tomorrow|morgen|morgen||Morgen habe ich Zeit.|Tomorrow I have time.
+yesterday|gestern|gestern||Gestern war ich müde.|Yesterday I was tired.
+now|jetzt|jetzt||Jetzt esse ich zu Abend.|Now I am eating dinner.
+later|später|spaeter||Später komme ich vorbei.|I will come by later.
+early|früh|frueh||Ich stehe früh auf.|I get up early.
+late|spät|spaet||Er kommt spät nach Hause.|He comes home late.
+always|immer|immer||Sie arbeitet immer fleißig.|She always works hard.
+sometimes|manchmal|manchmal||Manchmal regnet es.|Sometimes it rains.
+never|nie|nie||Ich vergesse das nie.|I never forget that.
+color|Farbe|farbe||Welche Farbe hat das?|What color is that?
+red|rot|rot
+blue|blau|blau
+green|grün|gruen
+yellow|gelb|gelb
+black|schwarz|schwarz
+white|weiß|weiss
+brown|braun|braun
+grey|grau|grau
+pink|rosa|rosa
+purple|lila|lila
+orange (color)|orange|orange
+body|Körper|koerper||Der Körper braucht Wasser.|The body needs water.
+head|Kopf|kopf
+hair|Haare|haare||Meine Haare sind lang.|My hair is long.
+face|Gesicht|gesicht
+eye|Auge|auge
+ear|Ohr|ohr
+nose|Nase|nase||Meine Nase ist klein.|My nose is small.
+mouth|Mund|mund
+tooth|Zahn|zahn
+tongue|Zunge|zunge||Meine Zunge brennt.|My tongue burns.
+neck|Hals|hals
+shoulder|Schulter|schulter||Meine Schulter schmerzt.|My shoulder hurts.
+hand|Hand|hand||Meine Hand ist kalt.|My hand is cold.
+finger|Finger|finger
+leg|Bein|bein
+foot|Fuß|fuss
+heart|Herz|herz
+stomach|Bauch|bauch
+house|Haus|haus|das Haus
+room|Zimmer|zimmer|das Zimmer
+door|Tür|tuer|die Tür
+window|Fenster|fenster|das Fenster
+wall|Wand|wand|die Wand
+roof|Dach|dach|das Dach
+floor|Boden|boden|der Boden
+kitchen|Küche|kueche|die Küche
+bathroom|Badezimmer|badezimmer|das Badezimmer
+bed|Bett|bett|das Bett
+table|Tisch|tisch|der Tisch
+chair|Stuhl|stuhl|der Stuhl
+sofa|Sofa|sofa|das Sofa
+lamp|Lampe|lampe|die Lampe
+key|Schlüssel|schluessel|der Schlüssel
+stairs|Treppe|treppe|die Treppe
+garden|Garten|garten|der Garten
+light|Licht|licht|das Licht
+fan|Ventilator|ventilator|der Ventilator
+mirror|Spiegel|spiegel|der Spiegel
+work|Arbeit|arbeit|meine Arbeit
+job|Job|job|mein Job
+office|Büro|buero|das Büro
+money|Geld|geld|das Geld
+salary|Gehalt|gehalt|das Gehalt
+meeting|Meeting|meeting|das Meeting
+boss|Chef|chef|mein Chef
+employee|Mitarbeiter|mitarbeiter|ein Mitarbeiter
+business|Geschäft|geschaeft|das Geschäft
+company|Firma|firma|die Firma
+market|Markt|markt|der Markt
+shop|Laden|laden|der Laden
+customer|Kunde|kunde|ein Kunde
+price|Preis|preis|der Preis
+farmer|Bauer|bauer|ein Bauer
+doctor|Arzt|arzt|der Arzt
+teacher|Lehrer|lehrer|der Lehrer
+police|Polizei|polizei|die Polizei
+school|Schule|schule|die Schule
+book|Buch|buch|ein Buch
+pen|Stift|stift|ein Stift
+pencil|Bleistift|bleistift|ein Bleistift
+page|Seite|seite|die Seite
+class|Klasse|klasse|die Klasse
+student|Student|student|ein Student
+lesson|Lektion|lektion|die Lektion
+exam|Prüfung|pruefung|die Prüfung
+question|Frage|frage|eine Frage
+answer|Antwort|antwort|die Antwort
+homework|Hausaufgabe|hausaufgabe|die Hausaufgabe
+library|Bibliothek|bibliothek|die Bibliothek
+university|Universität|universitaet|die Universität
+language|Sprache|sprache|eine Sprache
+word|Wort|wort|ein Wort
+sentence|Satz|satz|ein Satz
+dictionary|Wörterbuch|woerterbuch|ein Wörterbuch
+science|Wissenschaft|wissenschaft|die Wissenschaft
+history|Geschichte|geschichte|die Geschichte
+knowledge|Wissen|wissen|das Wissen
+education|Bildung|bildung|die Bildung
+shopping|Einkaufen|einkaufen||Ich gehe heute einkaufen.|I go shopping today.
+buy|kaufen|kaufen||Ich kaufe frisches Brot.|I buy fresh bread.
+sell|verkaufen|verkaufen||Er verkauft Obst auf dem Markt.|He sells fruit at the market.
+cheap|billig|billig||Das T-Shirt ist billig.|The T-shirt is cheap.
+expensive|teuer|teuer||Dieses Handy ist teuer.|This phone is expensive.
+coin|Münze|muenze|die Münze
+note|Schein|schein|der Schein
+bill|Rechnung|rechnung|die Rechnung
+size|Größe|groesse|die Größe
+discount|Rabatt|rabatt|der Rabatt
+receipt|Beleg|beleg|der Beleg
+bag|Tasche|tasche|die Tasche
+rupee|Rupie|rupie|die Rupie
+weigh|wiegen|wiegen||Ich wiege die Tomaten.|I weigh the tomatoes.
+pay|bezahlen|bezahlen||Ich bezahle mit Karte.|I pay by card.
+happiness|Freude|freude
+sadness|Trauer|trauer
+anger|Wut|wut
+fear|Angst|angst
+love|Liebe|liebe
+hope|Hoffnung|hoffnung
+worry|Sorge|sorge
+surprise|Überraschung|ueberraschung
+peace|Frieden|frieden
+smile|Lächeln|laecheln
+laugh|Lachen|lachen
+crying|Weinen|weinen
+mood|Stimmung|stimmung
+brave|mutig|mutig||Er ist ein mutiger Junge.|He is a brave boy.
+lonely|einsam|einsam||Sie fühlt sich einsam.|She feels lonely.
+to eat|essen|essen|esse
+to drink|trinken|trinken|trinke
+to go|gehen|gehen|gehe
+to come|kommen|kommen|komme
+to see|sehen|sehen|sehe
+to hear|hören|hoeren|höre
+to speak|sprechen|sprechen|spreche
+to read|lesen|lesen|lese
+to write|schreiben|schreiben|schreibe
+to learn|lernen|lernen|lerne
+to teach|unterrichten|unterrichten|unterrichte
+to sleep|schlafen|schlafen|schlafe
+to wake up|aufwachen|aufwachen|wache auf
+to run|rennen|rennen|renne
+to walk|spazieren|spazieren|spaziere
+to open|öffnen|oeffnen|öffne
+to close|schließen|schliessen|schließe
+to give|geben|geben|gebe
+to take|nehmen|nehmen|nehme
+to make|machen|machen|mache
+to love|lieben|lieben|liebe
+to think|denken|denken|denke
+to understand|verstehen|verstehen|verstehe
+to work|arbeiten|arbeiten|arbeite
+to wait|warten|warten|warte
+big|groß|gross
+small|klein|klein
+new|neu|neu
+old|alt|alt
+good|gut|gut
+bad|schlecht|schlecht
+beautiful|schön|schoen
+hot|heiß|heiss||Es ist heute sehr heiß.|It is very hot today.
+cold|kalt|kalt||Im Winter ist es kalt.|It is cold in winter.
+fast|schnell|schnell
+slow|langsam|langsam
+easy|einfach|einfach
+difficult|schwierig|schwierig
+long|lang|lang
+short|kurz|kurz
+clean|sauber|sauber
+dirty|schmutzig|schmutzig
+happy|glücklich|gluecklich||Ich bin sehr glücklich.|I am very happy.
+tired|müde|muede||Ich bin heute müde.|I am tired today.
+hungry|hungrig|hungrig||Das Kind ist hungrig.|The child is hungry.
+
+@phrases
+Guten Morgen!|guten morgen|Good morning!|صبح بخیر!|greeting
+Guten Abend!|guten abend|Good evening!|شام بخیر!|greeting
+Gute Nacht!|gute nacht|Good night!|شب بخیر!|greeting
+Auf Wiedersehen!|auf wiedersehen|Goodbye!|خدا حافظ!|greeting
+Bis morgen!|bis morgen|See you tomorrow!|کل ملتے ہیں!|greeting
+Wie geht es Ihnen?|wie geht es ihnen|How are you? (formal)|آپ کیسے ہیں؟|smalltalk
+Mir geht es gut, danke.|mir geht es gut danke|I am fine, thank you.|میں ٹھیک ہوں، شکریہ۔|smalltalk
+Vielen Dank!|vielen dank|Thank you very much!|بہت شکریہ!|polite
+Bitte schön.|bitte schoen|You're welcome.|کوئی بات نہیں۔|polite
+Entschuldigung!|entschuldigung|Excuse me!|معاف کیجیے!|polite
+Es tut mir leid.|es tut mir leid|I am sorry.|مجھے افسوس ہے۔|polite
+Kein Problem.|kein problem|No problem.|کوئی مسئلہ نہیں۔|polite
+Wie heißen Sie?|wie heissen sie|What is your name?|آپ کا نام کیا ہے؟|smalltalk
+Ich heiße Ahmad.|ich heisse ahmad|My name is Ahmad.|میرا نام احمد ہے۔|smalltalk
+Woher kommen Sie?|woher kommen sie|Where are you from?|آپ کہاں سے ہیں؟|smalltalk
+Ich komme aus Pakistan.|ich komme aus pakistan|I am from Pakistan.|میں پاکستان سے ہوں۔|smalltalk
+Sprechen Sie Englisch?|sprechen sie englisch|Do you speak English?|کیا آپ انگریزی بولتے ہیں؟|smalltalk
+Ich spreche ein bisschen Deutsch.|ich spreche ein bisschen deutsch|I speak a little German.|میں تھوڑی جرمن بولتا ہوں۔|smalltalk
+Ich verstehe das nicht.|ich verstehe das nicht|I don't understand that.|مجھے یہ سمجھ نہیں آیا۔|school
+Können Sie das wiederholen?|koennen sie das wiederholen|Can you repeat that?|کیا آپ دہرا سکتے ہیں؟|school
+Bitte sprechen Sie langsam.|bitte sprechen sie langsam|Please speak slowly.|آہستہ بولیں، مہربانی ہوگی۔|school
+Was bedeutet das?|was bedeutet das|What does that mean?|اس کا مطلب کیا ہے؟|school
+Wie viel kostet das?|wie viel kostet das|How much does this cost?|یہ کتنے کا ہے؟|shopping
+Ich möchte das kaufen.|ich moechte das kaufen|I would like to buy this.|میں یہ خریدنا چاہتا ہوں۔|shopping
+Haben Sie eine kleinere Größe?|haben sie eine kleinere groesse|Do you have a smaller size?|کیا آپ کے پاس چھوٹا سائز ہے؟|shopping
+Ich bezahle bar.|ich bezahle bar|I pay in cash.|میں نقد ادائیگی کروں گا۔|shopping
+Die Rechnung, bitte.|die rechnung bitte|The bill, please.|بل لائیں، مہربانی ہوگی۔|shopping
+Wo ist der Bahnhof?|wo ist der bahnhof|Where is the train station?|ریلवे اسٹیشن کہاں ہے؟|travel
+Wo ist die Toilette?|wo ist die toiletten|Where is the toilet?|باتھ روم کہاں ہے؟|travel
+Ich habe ein Ticket nach Berlin.|ich habe ein ticket nach berlin|I have a ticket to Berlin.|میرے پاس برلن کا ٹکٹ ہے۔|travel
+Um wie viel Uhr fährt der Zug?|um wie viel uhr faehrt der zug|What time does the train leave?|ٹرین کس وقت روانہ ہوتی ہے؟|travel
+Ich bin verloren.|ich bin verloren|I am lost.|میں راستہ بھول گیا ہوں۔|travel
+Können Sie mir helfen?|koennen sie mir helfen|Can you help me?|کیا آپ میری مدد کر سکتے ہیں؟|polite
+Ich brauche einen Arzt.|ich brauche einen arzt|I need a doctor.|مجھے ڈاکٹر کی ضرورت ہے۔|health
+Mir ist schlecht.|mir ist schlecht|I feel sick.|میری طبیعت خراب ہے۔|health
+Wo ist die Apotheke?|wo ist die apotheke|Where is the pharmacy?|دوا خانہ کہاں ہے؟|health
+Ich habe Kopfschmerzen.|ich habe kopfschmerzen|I have a headache.|مجھے سر درد ہے۔|health
+Ich hätte gern einen Kaffee.|ich haette gern einen kaffee|I would like a coffee, please.|مجھے ایک کافی چاہیے۔|food
+Die Speisekarte, bitte.|die speisekarte bitte|The menu, please.|مینو لائیں۔|food
+Das schmeckt sehr gut.|das schmeckt sehr gut|This tastes very good.|یہ بہت مزیدار ہے۔|food
+Ich bin Vegetarier.|ich bin vegetarianer|I am a vegetarian.|میں سبزی خور ہوں۔|food
+Ein Glas Wasser, bitte.|ein glas wasser bitte|A glass of water, please.|ایک گلاس پانی دیں۔|food
+Ich bin hungrig.|ich bin hungrig|I am hungry.|مجھے بھوک لگی ہے۔|food
+Ich arbeite als Lehrer.|ich arbeite als lehrer|I work as a teacher.|میں استاد کے طور پر کام کرتا ہوں۔|work
+Wo arbeiten Sie?|wo arbeiten sie|Where do you work?|آپ کہاں کام کرتے ہیں؟|work
+Ich studiere an der Universität.|ich studiere an der universitaet|I study at the university.|میں یونیورسٹی میں پڑھتا ہوں۔|school
+Wann beginnt der Kurs?|wann beginnt der kurs|When does the course start?|کورس کب شروع ہوتا ہے؟|school
+Ich lerne Deutsch seit drei Monaten.|ich lerne deutsch seit drei monaten|I have been learning German for three months.|میں تین مہینے سے جرمن سیکھ رہا ہوں۔|school
+Heute ist Montag.|heute ist montag|Today is Monday.|آج پیر ہے۔|time
+Wie spät ist es?|wie spaet ist es|What time is it?|کیا وقت ہوا ہے؟|time
+Ich habe heute keine Zeit.|ich habe heute keine zeit|I have no time today.|آج میرے پاس وقت نہیں ہے۔|time
+Das Wetter ist heute schön.|das wetter ist heute schoen|The weather is nice today.|آج موسم اچھا ہے۔|smalltalk
+Ich liebe meine Familie.|ich liebe meine familie|I love my family.|میں اپنے خاندان سے محبت کرتا ہوں۔|smalltalk
+Herzlichen Glückwunsch!|herzlichen glueckwunsch|Congratulations!|مبارک ہو!|greeting
+Viel Erfolg!|viel erfolg|Good luck!|خوش قسمتی!|greeting
+Willkommen in Deutschland!|willkommen in deutschland|Welcome to Germany!|جرمنی میں خوش آمدید!|greeting
+Ich freue mich auf dich.|ich freue mich auf dich|I look forward to seeing you.|میں آپ سے ملنے کا منتظر ہوں۔|smalltalk
+Kann ich Ihre Nummer haben?|kann ich ihre nummer haben|Can I have your number?|کیا مجھے آپ کا نمبر مل سکتا ہے؟|smalltalk
+Wo wohnen Sie?|wo wohnen sie|Where do you live?|آپ کہاں رہتے ہیں؟|smalltalk
+Ich wohne in Lahore.|ich wohne in lahore|I live in Lahore.|میں لاہور میں رہتا ہوں۔|smalltalk
+Das ist meine Adresse.|das ist meine adresse|This is my address.|یہ میرا پتہ ہے۔|smalltalk
+Ich bin 25 Jahre alt.|ich bin fuenfundzwanzig jahre alt|I am 25 years old.|میری عمر پچیس سال ہے۔|smalltalk
+Ich habe zwei Geschwister.|ich habe zwei geschwister|I have two siblings.|میرے دو بہن بھائی ہیں۔|family
+Das ist mein Bruder Ali.|das ist mein bruder ali|This is my brother Ali.|یہ میرا بھائی علی ہے۔|family
+Wie komme ich zum Flughafen?|wie komme ich zum flughafen|How do I get to the airport?|ہوائی اڈے کیسے جاؤں؟|travel
+Fahren Sie geradeaus.|fahren sie geradeaus|Go straight ahead.|سیدھے جائیں۔|travel
+Biegen Sie links ab.|biegen sie links ab|Turn left.|بائیں مڑیں۔|travel
+Das Hotel ist sehr schön.|das hotel ist sehr schoen|The hotel is very nice.|ہوٹل بہت اچھا ہے۔|travel
+Ich brauche ein Zimmer für zwei Nächte.|ich brauche ein zimmer fuer zwei naechte|I need a room for two nights.|مجھے دو راتوں کے لیے کمرہ چاہیے۔|travel
+Alles klar?|alles klar|Is everything clear?|سب واضح ہے؟|smalltalk
+Ja, natürlich!|ja natuerlich|Yes, of course!|جی ہاں، بالکل!|smalltalk
+Ich weiß es nicht.|ich weiss es nicht|I don't know.|مجھے نہیں پتہ۔|smalltalk
+Keine Ahnung.|keine ahnung|No idea.|کوئی اندازہ نہیں۔|smalltalk
+Einen Moment, bitte.|einen moment bitte|One moment, please.|ایک لمحہ، مہربانی ہوگی۔|polite
+Ich komme gleich.|ich komme gleich|I'll be right there.|میں ابھی آتا ہوں۔|smalltalk
+Tschüss!|tschuess|Bye!|خدا حافظ!|greeting
+Mach's gut!|machs gut|Take care!|اپنا خیال رکھنا!|greeting
+Wie war dein Tag?|wie war dein tag|How was your day?|آپ کا دن کیسا گزرا؟|smalltalk
+Sehr gut, danke!|sehr gut danke|Very good, thank you!|بہت اچھا، شکریہ!|polite
+Ich muss jetzt gehen.|ich muss jetzt gehen|I have to go now.|مجھے اب جانا ہے۔|smalltalk
+Auf bald!|auf bald|See you soon!|جلد ملتے ہیں!|greeting
+Gute Besserung!|gute besserung|Get well soon!|جلد صحت یاب ہوں!|health
+Viel Spaß!|viel spass|Have fun!|مزے کریں!|smalltalk
+Herzlich willkommen!|herzlich willkommen|A warm welcome!|دلی خوش آمدید!|greeting
+Es war mir eine Freude.|es war mir eine freude|It was a pleasure.|آپ سے مل کر خوشی ہوئی۔|polite
+Ich rufe dich an.|ich rufe dich an|I will call you.|میں آپ کو فون کرتا ہوں۔|smalltalk
+Keine Sorge.|keine sorge|Don't worry.|فکر نہ کریں۔|emotion
+Ich bin stolz auf dich.|ich bin stolz auf dich|I am proud of you.|مجھے آپ پر فخر ہے۔|emotion
+Das macht mich glücklich.|das macht mich gluecklich|That makes me happy.|اس سے مجھے خوشی ہوتی ہے۔|emotion
+Ich habe Angst.|ich habe angst|I am afraid.|مجھے ڈر لگ رہا ہے۔|emotion
+Beruhige dich.|beruhige dich|Calm down.|طمینت کریں۔|emotion
+Es tut gut, dich zu sehen.|es tut gut dich zu sehen|It's good to see you.|آپ کو دیکھ کر اچھا لگا۔|smalltalk
+Ich wünsche dir alles Gute.|ich wuensche dir alles gute|I wish you all the best.|میں آپ کے لیے نیک خواہشات رکھتا ہوں۔|smalltalk
+Gleichfalls!|gleichfalls|Same to you!|آپ کو بھی!|polite
+Genau!|genau|Exactly!|بالکل درست!|smalltalk
+Vielleicht später.|vielleicht spaeter|Maybe later.|شاید بعد میں۔|smalltalk
+Ich bin einverstanden.|ich bin einverstanden|I agree.|میں متفق ہوں۔|smalltalk
+Das stimmt nicht.|das stimmt nicht|That's not true.|یہ درست نہیں ہے۔|smalltalk
+Was machst du heute?|was machst du heute|What are you doing today?|آج آپ کیا کر رہے ہیں؟|smalltalk
+Ich lerne für die Prüfung.|ich lerne fuer die pruefung|I am studying for the exam.|میں امتحان کی تیاری کر رہا ہوں۔|school
+Die Prüfung war einfach.|die pruefung war einfach|The exam was easy.|امتحان آسان تھا۔|school
+Ich brauche Hilfe.|ich brauche hilfe|I need help.|مجھے مدد چاہیے۔|polite
+Danke für Ihre Hilfe.|danke fuer ihre hilfe|Thank you for your help.|آپ کی مدد کا شکریہ۔|polite
+Ich lerne jeden Tag Deutsch.|ich lerne jeden tag deutsch|I learn German every day.|میں روزانہ جرمن سیکھتا ہوں۔|school
+Das ist mein erstes Mal hier.|das ist mein erstes mal hier|This is my first time here.|یہ میری پہلی بار یہاں آنا ہے۔|smalltalk
+Wo kann ich Geld wechseln?|wo kann ich geld wechseln|Where can I exchange money?|میں پیسے کہاں تبدیل کروا سکتا ہوں؟|travel
+Ich suche meine Tasche.|ich suche meine tasche|I am looking for my bag.|میں اپنا بیگ ڈھونڈ رہا ہوں۔|travel
+Der Bus kommt um acht Uhr.|der bus kommt um acht uhr|The bus comes at eight o'clock.|بس آٹھ بجے آتی ہے۔|travel
+Ich habe Hunger.|ich habe hunger|I am hungry.|مجھے بھوک لگی ہے۔|food
+Das Frühstück war lecker.|das fruehstueck war lecker|The breakfast was tasty.|ناشتہ مزیدار تھا۔|food
+Ich trinke keinen Kaffee.|ich trinke keinen kaffee|I don't drink coffee.|میں کافی نہیں پیتا۔|food
+Ein Tisch für zwei, bitte.|ein tisch fuer zwei bitte|A table for two, please.|دو افراد کے لیے میز۔|food
+Ich arbeite im Büro.|ich arbeite im buero|I work in an office.|میں دفتر میں کام کرتا ہوں۔|work
+Mein Gehalt kommt am Monatsende.|mein gehalt kommt am monatsende|My salary comes at the end of the month.|میری تنخواہ مہینے کے آخر میں آتی ہے۔|work
+Ich habe morgen ein Meeting.|ich habe morgen ein meeting|I have a meeting tomorrow.|کل میری میٹنگ ہے۔|work
+Die Schule beginnt um acht.|die schule beginnt um acht|School starts at eight.|اسکول آٹھ بجے شروع ہوتا ہے۔|school
+Mein Sohn geht in die Schule.|mein sohn geht in die schule|My son goes to school.|میرا بیٹا اسکول جاتا ہے۔|school
+Ich lese gern Bücher.|ich lese gern buecher|I like reading books.|مجھے کتابیں پڑھنا پسند ہے۔|school
+Das Wort ist neu für mich.|das wort ist neu fuer mich|The word is new to me.|یہ لفظ میرے لیے نیا ہے۔|school
+Ich schreibe eine E-Mail.|ich schreibe eine e-mail|I am writing an email.|میں ای میل لکھ رہا ہوں۔|work
+Der Preis ist zu hoch.|der preis ist zu hoch|The price is too high.|قیمت بہت زیادہ ہے۔|shopping
+Kann ich mit Karte zahlen?|kann ich mit karte zahlen|Can I pay by card?|کیا میں کارڈ سے ادائیگی کر سکتا ہوں؟|shopping
+Das ist ein gutes Angebot.|das ist ein gutes angebot|That is a good offer.|یہ اچھی پیشکش ہے۔|shopping
+Ich schaue mich nur um.|ich schaue mich nur um|I am just looking around.|میں صرف دیکھ رہا ہوں۔|shopping
+Wo ist der Markt?|wo ist der markt|Where is the market?|بازار کہاں ہے؟|shopping
+Meine Mutter kocht gut.|meine mutter kocht gut|My mother cooks well.|میری ماں اچھا کھانا پکاتی ہے۔|family
+Mein Vater arbeitet viel.|mein vater arbeitet viel|My father works a lot.|میرے والد بہت کام کرتے ہیں۔|family
+Meine Schwester ist Ärztin.|meine schwester ist aerztin|My sister is a doctor.|میری بہن ڈاکٹر ہے۔|family
+Wir sind eine große Familie.|wir sind eine grosse familie|We are a big family.|ہم ایک بڑا خاندان ہیں۔|family
+Das Kind spielt im Garten.|das kind spielt im garten|The child plays in the garden.|بچہ باغ میں کھیلتا ہے۔|family
+Mein Haus ist klein.|mein haus ist klein|My house is small.|میرا گھر چھوٹا ہے۔|home
+Die Küche ist sauber.|die kueche ist sauber|The kitchen is clean.|باورچی خانہ صاف ہے۔|home
+Das Fenster ist offen.|das fenster ist offen|The window is open.|کھڑکی کھلی ہے۔|home
+Ich schließe die Tür.|ich schliesse die tuer|I close the door.|میں دروازہ بند کرتا ہوں۔|home
+Das Licht funktioniert nicht.|das licht funktioniert nicht|The light is not working.|ببتی جل نہیں رہی۔|home
+Heute regnet es.|heute regnet es|It is raining today.|آج بارش ہو رہی ہے۔|smalltalk
+Die Sonne scheint.|die sonne scheint|The sun is shining.|سورج نکل رہا ہے۔|smalltalk
+Es ist sehr kalt heute.|es ist sehr kalt heute|It is very cold today.|آج بہت سردی ہے۔|smalltalk
+Ich gehe jetzt schlafen.|ich gehe jetzt schlafen|I am going to sleep now.|میں اب سونے جا رہا ہوں۔|home
+Guten Appetit!|guten appetit|Enjoy your meal!|کھانا نوش فرمائیں!|food
+Prost!|prost|Cheers!|واہ واہ!|food
+Ich bin satt.|ich bin satt|I am full.|میرا پیٹ بھر گیا ہے۔|food
+Noch eine Tasse Tee, bitte.|noch eine tasse tee bitte|One more cup of tea, please.|ایک کپ چائے اور دیں۔|food
+Ich mag kein Fleisch.|ich mag kein fleisch|I don't like meat.|مجھے گوشت پسند نہیں۔|food
+Das Wasser ist kalt.|das wasser ist kalt|The water is cold.|پانی ٹھنڈا ہے۔|food
+Wo ist mein Pass?|wo ist mein pass|Where is my passport?|میرا پاسپورٹ کہاں ہے؟|travel
+Der Flug hat Verspätung.|der flug hat verspaetung|The flight is delayed.|پرواز تاخیر سے ہے۔|travel
+Ich habe meinen Zug verpasst.|ich habe meinen zug verpasst|I missed my train.|میری ٹرین چھوٹ گئی۔|travel
+Das Gepäck ist sehr schwer.|das gepaeck ist sehr schwer|The luggage is very heavy.|سامان بہت بھاری ہے۔|travel
+Gute Reise!|gute reise|Have a good trip!|سفر بخیر!|travel
+Ich bin Student.|ich bin student|I am a student.|میں طالب علم ہوں۔|school
+Er ist ein guter Lehrer.|er ist ein guter lehrer|He is a good teacher.|وہ اچھے استاد ہیں۔|school
+Die Frage ist schwer.|die frage ist schwer|The question is difficult.|سوال مشکل ہے۔|school
+Ich verstehe die Grammatik.|ich verstehe die grammatik|I understand the grammar.|مجھے گرامر سمجھ آ گئی۔|school
+Mein Deutsch wird besser.|mein deutsch wird besser|My German is getting better.|میری جرمن بہتر ہو رہی ہے۔|school
+Ich habe keine Zeit.|ich habe keine zeit|I have no time.|میرے پاس وقت نہیں ہے۔|time
+Die Zeit vergeht schnell.|die zeit vergeht schnell|Time passes quickly.|وقت تیزی سے گزرتا ہے۔|time
+Um wie viel Uhr?|um wie viel uhr|At what time?|کس وقت؟|time
+Ich komme um sechs Uhr.|ich komme um sechs uhr|I come at six o'clock.|میں چھ بجے آؤں گا۔|time
+Am Wochenende habe ich frei.|am wochenende habe ich frei|I am free on the weekend.|ہفتے کے آخر میں میں فارغ ہوں۔|time
+Der Himmel ist blau.|der himmel ist blau|The sky is blue.|آسمان نیلا ہے۔|smalltalk
+Mein Lieblingsfarbe ist grün.|meine lieblingsfarbe ist gruen|My favourite color is green.|میرا پسندیدہ رنگ سبز ہے۔|smalltalk
+Das rote Auto ist schnell.|das rote auto ist schnell|The red car is fast.|سرخ گاڑی تیز ہے۔|smalltalk
+Er trägt ein weißes Hemd.|er traegt ein weisses hemd|He is wearing a white shirt.|اس نے سفید قمیض پہنی ہے۔|smalltalk
+Die Nacht ist ruhig.|die nacht ist ruhig|The night is quiet.|رات پرسکون ہے۔|time
+Guten Morgen, Herr Müller!|guten morgen herr mueller|Good morning, Mr. Müller!|صبح بخیر، مسٹر مولر!|greeting
+Wie bitte?|wie bitte|Pardon?|معاف کیجیے، کیا کہا؟|polite
+Langsamer, bitte.|langsamer bitte|Slower, please.|آہستہ، مہربانی ہوگی۔|polite
+Können Sie das buchstabieren?|koennen sie das buchstabieren|Can you spell that?|کیا آپ ہجے بتا سکتے ہیں؟|school
+Was ist Ihr Beruf?|was ist ihr beruf|What is your profession?|آپ کا پیشہ کیا ہے؟|work
+Ich bin Ingenieur.|ich bin ingenieur|I am an engineer.|میں انجینئر ہوں۔|work
+Sie hilft mir immer.|sie hilft mir immer|She always helps me.|وہ ہمیشہ میری مدد کرتی ہے۔|smalltalk
+Wir lernen zusammen.|wir lernen zusammen|We learn together.|ہم ساتھ سیکھتے ہیں۔|school
+Ich freue mich auf das Wochenende.|ich freue mich auf das wochenende|I look forward to the weekend.|مجھے ہفتے کے آخر کا انتظار ہے۔|time
+
+@grammar
+Welche Artikel hat "Buch"?|der|die|das|3|"Buch" is neuter, so it takes "das" — das Buch.|جرمن میں ہر اسم کا جنس ہوتا ہے؛ Buch غیر جنسی ہے اس لیے das۔
+___ ist meine Mutter.|Das|Die|Den|2|Feminine nouns take "die" — die Mutter.|مؤنث اسم کے لیے die آتا ہے۔
+Ich ___ Student.|bin|bist|ist|1|"ich" goes with "bin" — ich bin.|فعل sein کی ich کے ساتھ شکل bin ہے۔
+Du ___ schnell.|bist|bin|sind|1|"du" takes "bist".|du کے ساتھ bist استعمال ہوتا ہے۔
+Er ___ aus Pakistan.|kommt|kommen|komme|1|Third person singular verbs end in -t.|تیسرے شخص واحد میں فعل کے آخر میں t آتا ہے۔
+Wir ___ Deutsch.|sprechen|spricht|sprichst|1|"wir" uses the infinitive form.|wir کے ساتھ فعل کی بنیادی شکل آتی ہے۔
+Das ist ___ Apfel.|ein|eine|einen|1|"Apfel" is masculine and this is the subject, so "ein".|مذکر اسم کے لیے ein آتا ہے۔
+Ich habe ___ Katze.|eine|ein|einen|1|"Katze" is feminine, so "eine".|مؤنث اسم کے لیے eine آتا ہے۔
+Ich sehe ___ Mann.|einen|ein|eine|1|Masculine accusative changes "ein" to "einen".|مفعول کی صورت میں مذکر ein بدل کر einen ہو جاتا ہے۔
+Er liest ___ Buch.|das|der|dem|1|Neuter accusative stays "das".|غیر جنسی اسم مفعول کی حالت میں بدلتا نہیں۔
+Plural von "Kind"?|Kinder|Kinds|Kindern|1|"Kind" becomes "Kinder" in the plural.|Kind کی جمع Kinder ہے۔
+Plural von "Haus"?|Häuser|Hauses|Hausen|1|"Haus" becomes "Häuser".|Haus کی جمع Häuser ہے۔
+Plural von "Buch"?|Bücher|Buchs|Buchen|1|"Buch" becomes "Bücher" with an umlaut.|Buch کی جمع Bücher ہے۔
+Wo ___ der Bahnhof?|ist|sind|bin|1|"der Bahnhof" is singular, so "ist".|واحد اسم کے ساتھ ist آتا ہے۔
+Wie ___ du?|heißt|heißen|heiße|1|"du" takes "heißt".|du کے ساتھ heißt استعمال ہوتا ہے۔
+___ Sie Deutsch?|Sprechen|Sprichst|Sprecht|1|Formal "Sie" uses the infinitive.|رسمی Sie کے ساتھ فعل کی بنیادی شکل آتی ہے۔
+Ich ___ keinen Kaffee.|trinke|trinkt|trinkst|1|"ich" takes "trinke".|ich کے ساتھ trinke آتا ہے۔
+Er ___ jeden Tag.|arbeitet|arbeite|arbeiten|1|Regular verbs add -t for er/sie/es.|قاعدہ فعل er/sie/es کے ساتھ t لیتے ہیں۔
+"fahren" für "du"?|fährst|fahrt|fahre|1|Strong verb: du fährst (a → ä).|مضبوط فعل میں a بدل کر ä ہو جاتا ہے۔
+"sehen" für "er"?|sieht|sehen|seht|1|"er sieht" — e becomes ie.|er کے ساتھ sehen کی شکل sieht ہے۔
+Modalverb: Ich ___ gehen.|will|wollen|willst|1|"ich will" is the modal form.|ich کے ساتھ modal فعل will آتا ہے۔
+Nach dem Modalverb steht das Verb ___ .|am Ende|am Anfang|in der Mitte|1|The second verb goes to the end: Ich will gehen.|modal فعل کے بعد دوسرا فعل آخر میں آتا ہے۔
+Perfekt: Ich ___ gegessen.|habe|bin|werde|1|"essen" forms the perfect with "haben".|essen کا ماضی haben سے بنتا ہے۔
+Perfekt: Ich ___ nach Hause gegangen.|bin|habe|werde|1|Verbs of movement use "sein".|حرکت کے فعل sein سے ماضی بناتے ہیں۔
+Partizip von "machen"?|gemacht|machen|macht|1|"ge-" prefix plus -t: gemacht.|قاعدہ فعل کا اسم مفعول ge-…-t ہوتا ہے۔
+Partizip von "trinken"?|getrunken|getrinkt|trinkt|1|Irregular: getrunken.|بے قاعدہ فعل کا اسم مفعول getrunken ہے۔
+Präteritum von "sein" (ich)?|war|bin|gewesen|1|"ich war" is the simple past.|ماضی سادہ میں ich war۔
+Präteritum von "haben" (ich)?|hatte|habe|gehabt|1|"ich hatte" is the simple past.|ماضی سادہ میں ich hatte۔
+Dativ: Ich helfe ___ .|dir|dich|dein|1|"helfen" takes the dative: dir.|helfen فعل dative لیتا ہے۔
+Akkusativ: Ich sehe ___ .|dich|dir|dein|1|"sehen" takes the accusative: dich.|sehen فعل accusative لیتا ہے۔
+Possessiv für "ich"?|mein|dein|sein|1|"mein Buch" — my book.|میرا = mein۔
+Possessiv für "sie" (she)?|ihr|sein|dein|1|"ihr Bruder" — her brother.|اس (مؤنث) کا = ihr۔
+Welche Präposition: ___ Montag|Am|In|Auf|1|Days use "am": am Montag.|دنوں کے ساتھ am آتا ہے۔
+Zeit: ___ acht Uhr|Um|Am|In|1|Clock times use "um".|گھنٹے کے وقت کے ساتھ um آتا ہے۔
+Monat: ___ Januar|Im|Am|Um|1|Months use "im" (in dem).|مہینوں کے ساتھ im آتا ہے۔
+Ort: Ich bin ___ Hause.|zu|nach|in|1|Fixed phrase: zu Hause (at home).|گھر پر = zu Hause (مقررہ محاورہ)۔
+Richtung: Ich gehe ___ Hause.|nach|zu|in|1|Direction home is "nach Hause".|گھر کی طرف = nach Hause۔
+Stadt: Ich fahre ___ Berlin.|nach|zu|in|1|Cities take "nach".|شہروں کے لیے nach آتا ہے۔
+Land mit Artikel: Ich fahre ___ die Türkei.|in|nach|zu|1|Countries with an article use "in".|جن ممالک کے ساتھ artikel آتا ہے ان کے لیے in۔
+Negation von Nomen: Ich habe ___ Zeit.|keine|nicht|kein|1|"Zeit" is feminine → keine.|مؤنث اسم کی نفی keine سے ہوتی ہے۔
+Negation von Verben: Ich komme ___ .|nicht|kein|keine|1|Verbs are negated with "nicht".|فعل کی نفی nicht سے ہوتی ہے۔
+Wortstellung: ___ gehe ich nach Hause.|Heute|Ich heute|Nach Hause ich|1|Time adverb first → verb stays second.|جملے میں فعل ہمیشہ دوسرے نمبر پر رہتا ہے۔
+Nebensatz mit "weil": Ich lerne, weil ich ___ .|arbeite|arbeiten|arbeitest|1|"weil" sends the verb to the end.|weil کے بعد فعل آخر میں چلا جاتا ہے۔
+Frage: ___ kommst du?|Woher|Was|Wer|1|"Woher" asks about origin.|کہاں سے = woher۔
+Frage: ___ kostet das?|Wie viel|Wie viele|Wie oft|1|"Wie viel" asks about price/amount.|قیمت کے لیے wie viel۔
+Komparativ: gut → ___|besser|guter|mehr gut|1|"gut" is irregular: besser.|اچھا کی تفضیلی شکل besser ہے۔
+Superlativ: gut → ___|am besten|am gutesten|beste|1|Irregular superlative: am besten.|سب سے اچھا = am besten۔
+Komparativ: schnell → ___|schneller|schnellster|mehr schnell|1|Add -er for the comparative.|تفضیل کے لیے er لگتا ہے۔
+Adjektivendung: ein ___ Mann.|guter|gute|gutes|1|Masculine nominative after "ein" takes -er.|مذکر اسم کے بعد صفت er لیتی ہے۔
+Adjektivendung: eine ___ Frau.|gute|guter|gutes|1|Feminine takes -e.|مؤنث کے بعد صفت e لیتی ہے۔
+Reflexiv: Ich ___ mich.|freue|freut|freust|1|"Ich freue mich" — reflexive pronoun.|reflexive ضمیر mich استعمال ہوتا ہے۔
+Trennbares Verb: Ich ___ um sechs ___ .|stehe … auf|auf … stehe|stehe … zu|1|"aufstehen" splits: ich stehe auf.|الگ ہونے والے فعل کا حصہ آخر میں آتا ہے۔
+Imperativ (du): ___ bitte langsam!|Sprich|Sprechen|Sprichst|1|Imperative for "du" drops the pronoun.|حکم کے انداز میں ضمیر ہٹ جاتا ہے۔
+Konjunktiv II: Ich ___ gern einen Tee.|hätte|habe|hatte|1|Polite request: "Ich hätte gern".|مؤدبانہ درخواست کے لیے hätte۔
+Zahl: 21 heißt ___|einundzwanzig|zwanzigeins|zweizig|1|German builds numbers backwards: einundzwanzig.|جرمن میں عدد الٹا بولا جاتا ہے۔
+Zahl: 100 heißt ___|hundert|hundertert|einhundertig|1|100 is "hundert".|سو کو hundert کہتے ہیں۔
+Großschreibung: ___ ist wichtig.|Das Buch|das buch|Das buch|1|All German nouns are capitalised.|جرمن میں ہر اسم بڑے حرف سے شروع ہوتا ہے۔
+Welches Wort ist ein Verb?|laufen|Tisch|schnell|1|"laufen" (to run) is a verb.|laufen ایک فعل ہے۔
+Welches Wort ist ein Adjektiv?|langsam|Haus|laufen|1|"langsam" (slow) is an adjective.|langsam صفت ہے۔
+Welche Präposition: Ich warte ___ den Bus.|auf|für|mit|1|"warten auf" + Akkusativ.|انتظار کرنا = warten auf۔
+Welche Präposition: Ich fahre ___ dem Bus.|mit|auf|zu|1|Means of transport use "mit".|سواری کے لیے mit۔
+Zeitangabe: Ich lerne ___ drei Monaten.|seit|für|vor|1|"seit" + dative for "since/for".|عرصے کے لیے seit + dative۔
+Uhrzeit: 15:30 heißt ___|halb vier|viertel drei|drei Uhr|1|German counts to the next hour: halb vier.|جرمن میں اگلا گھنٹہ گنا جاتا ہے۔
+Wortfolge: Ich habe das Buch ___ gelesen.|gestern|lesen gestern|gelesen gestern|1|Time comes before the participle.|وقت اسم مفعول سے پہلے آتا ہے۔
+Artikel Plural: ___ Bücher sind neu.|Die|Der|Das|1|All plurals take "die".|جمع کے لیے ہمیشہ die۔
+Dativ Plural: mit ___ Kindern|den|die|der|1|Dative plural adds -n and takes "den".|dative جمع میں den اور n آتا ہے۔
+Genitiv: das Auto ___ Mannes.|des|dem|den|1|Masculine genitive takes "des".|مذکر اضافت میں des آتا ہے۔
+Frage mit Dativ: ___ gehört das Buch?|Wem|Wer|Wen|1|"Wem" is the dative question word.|dative سوالیہ لفظ wem ہے۔
+Konjunktion: Ich lerne, ___ ich Zeit habe.|wenn|weil|aber|1|"wenn" = when/if (conditional).|جب = wenn۔
+"als" oder "wie"? Er ist größer ___ ich.|als|wie|dann|1|Comparisons use "als".|موازنے میں als آتا ہے۔
+Passiv: Das Buch ___ gelesen.|wird|ist|hat|1|Passive uses "werden".|مجہول werden سے بنتا ہے۔
+Welche Endung hat das Partizip von "gehen"?|gegangen|gegeht|geht|1|Irregular participle: gegangen.|جانے کا اسم مفعول gegangen ہے۔
+Satzbau: ___ du mir helfen?|Kannst|Kann|Können|1|Yes/no questions start with the verb.|ہاں/نہ سوال فعل سے شروع ہوتے ہیں۔
+Wort: "Ich ___ Durst."|habe|bin|mache|1|German says "Ich habe Durst" (I have thirst).|جرمن میں پیاس کے لیے haben استعمال ہوتا ہے۔
+Wort: "Mir ___ kalt."|ist|bin|habe|1|"Mir ist kalt" — dative construction.|سردی کے لیے mir ist kalt۔
+Wort: "Ich bin 20 Jahre ___ ."|alt|jahr|jahre|1|Age uses "alt".|عمر کے لیے alt۔
+Zeit: "Von Montag ___ Freitag"|bis|zu|nach|1|"von … bis" means from … to.|سے تا = von … bis۔
+Fragen: "Wie ___ ist er?" (age)|alt|viel|lange|1|"Wie alt" asks the age.|عمر پوچھنے کے لیے wie alt۔
+Fragen: "Wie ___ dauert das?"|lange|viel|oft|1|"Wie lange" asks about duration.|مدت کے لیے wie lange۔
+Negation: Ich habe ___ Bruder.|keinen|nicht|kein|1|Masculine accusative: keinen.|مذکر مفعول کی نفی keinen۔
+Artikel: "die ___" (feminine)|Frau|Mann|Kind|1|"die Frau" — Frau is feminine.|Frau مؤنث ہے۔
+Welche Präposition: "Ich danke ___ ."|dir|dich|dein|1|"danken" takes the dative.|danken فعل dative لیتا ہے۔
+Zeit: "Gestern ___ ich im Kino."|war|bin|gewesen|1|Simple past of "sein": war.|ماضی میں war۔
+Wortstellung im Nebensatz: ..., dass ich ___ komme.|morgen|morgen komme|komme morgen|1|After "dass" the verb goes to the end.|dass کے بعد فعل آخر میں آتا ہے۔
+Welches Modalverb zeigt Erlaubnis?|dürfen|müssen|wollen|1|"dürfen" = to be allowed to.|اجازت کے لیے dürfen۔
+Welches Modalverb zeigt Pflicht?|müssen|können|mögen|1|"müssen" = must/have to.|لازمی کام کے لیے müssen۔
+Konjunktiv: "Wenn ich Zeit ___, käme ich."|hätte|habe|hatte|1|Hypothetical statements use Konjunktiv II.|مفروضے کے لیے Konjunktiv II۔
+Zahlwort: 1. (ordinal)|erste|eins|erste Mal|1|"der erste" = the first.|پہلا = erste۔
+Wort: "Ich ___ müde."|bin|habe|werde|1|Feelings use "sein": Ich bin müde.|تھکن کے لیے sein استعمال ہوتا ہے۔
+Zeit: "am ___" (day part)|Abend|Nacht|Morgen?|1|"am Abend" — but "in der Nacht".|شام کے لیے am Abend، رات کے لیے in der Nacht۔
+Präposition: "Ich gehe ___ Schule."|in die|zu der|auf die|1|Movement into a building: in die Schule.|عمارت کے اندر جانے کے لیے in die۔
+Artikel: "das ___" (neuter)|Kind|Tür|Lampe|1|"das Kind" is neuter.|Kind غیر جنسی اسم ہے۔
+
+@sentences
+Ich trinke jeden Morgen Tee.|I drink tea every morning.|میں ہر صبح چائے پیتا ہوں۔
+Mein Bruder lernt Deutsch in Berlin.|My brother is learning German in Berlin.|میرا بھائی برلن میں جرمن سیکھ رہا ہے۔
+Wir fahren am Sonntag nach Hamburg.|We are going to Hamburg on Sunday.|ہم اتوار کو ہامبرگ جا رہے ہیں۔
+Das Buch liegt auf dem Tisch.|The book is lying on the table.|کتاب میز پر رکھی ہے۔
+Sie hat gestern einen Brief geschrieben.|She wrote a letter yesterday.|اس نے کل ایک خط لکھا۔
+Können Sie mir bitte helfen?|Can you please help me?|کیا آپ پلیز میری مدد کر سکتے ہیں؟
+Ich möchte zwei Kaffee und ein Wasser.|I would like two coffees and a water.|مجھے دو کافی اور ایک پانی چاہیے۔
+Der Zug fährt um acht Uhr ab.|The train leaves at eight o'clock.|ٹرین آٹھ بجے روانہ ہوتی ہے۔
+Meine Mutter kocht heute Fisch.|My mother is cooking fish today.|میری ماں آج مچھلی پکا رہی ہے۔
+Er spricht drei Sprachen fließend.|He speaks three languages fluently.|وہ تین زبانیں روانی سے بولتا ہے۔
+Wir haben ein kleines Haus mit Garten.|We have a small house with a garden.|ہمارا ایک چھوٹا گھر باغ کے ساتھ ہے۔
+Ich verstehe die Frage nicht ganz.|I don't fully understand the question.|مجھے سوال پوری طرح سمجھ نہیں آیا۔
+Das Wetter ist heute sehr schön.|The weather is very nice today.|آج موسم بہت اچھا ہے۔
+Ich muss morgen früh aufstehen.|I have to get up early tomorrow.|مجھے کل صبح جلدی اٹھنا ہے۔
+Sie arbeitet in einem Krankenhaus.|She works in a hospital.|وہ ایک اسپتال میں کام کرتی ہے۔
+Wir treffen uns vor der Schule.|We meet in front of the school.|ہم اسکول کے سامنے ملتے ہیں۔
+Er hat sein Telefon zu Hause vergessen.|He forgot his phone at home.|وہ اپنا فون گھر بھول گیا۔
+Ich gehe heute nicht zur Arbeit.|I am not going to work today.|میں آج کام پر نہیں جا رہا۔
+Die Kinder spielen im Garten Fußball.|The children are playing football in the garden.|بچے باغ میں فٹ بال کھیل رہے ہیں۔
+Kannst du das Fenster öffnen?|Can you open the window?|کیا تم کھڑکی کھول سکتے ہو؟
+Ich habe heute viel zu tun.|I have a lot to do today.|آج مجھے بہت کام ہے۔
+Mein Vater liest gern Zeitungen.|My father likes reading newspapers.|میرے والد اخبار پڑھنا پسند کرتے ہیں۔
+Das Essen schmeckt wirklich gut.|The food tastes really good.|کھانا واقعی مزیدار ہے۔
+Wir warten seit einer Stunde.|We have been waiting for an hour.|ہم ایک گھنٹے سے انتظار کر رہے ہیں۔
+Ich lerne Deutsch für meinen Job.|I learn German for my job.|میں اپنی ملازمت کے لیے جرمن سیکھتا ہوں۔
+Sie kommt aus einer kleinen Stadt.|She comes from a small town.|وہ ایک چھوٹے شہر سے ہے۔
+Ich kaufe Brot und Milch im Supermarkt.|I buy bread and milk at the supermarket.|میں سپر مارکت سے روٹی اور دودھ خریدتا ہوں۔
+Er fährt mit dem Bus zur Arbeit.|He goes to work by bus.|وہ بس سے کام جاتا ہے۔
+Wir haben gestern einen Film gesehen.|We watched a film yesterday.|ہم نے کل ایک فلم دیکھی۔
+Ich schreibe dir heute Abend eine Nachricht.|I will send you a message tonight.|میں آج شام تمہیں پیغام بھیجوں گا۔
+Das Hotel ist nicht weit vom Bahnhof.|The hotel is not far from the station.|ہوٹل اسٹیشن سے زیادہ دور نہیں ہے۔
+Meine Schwester studiert Medizin.|My sister studies medicine.|میری بہن میڈیکل پڑھ رہی ہے۔
+Ich habe keine Zeit am Wochenende.|I have no time at the weekend.|ہفتے کے آخر میں میرے پاس وقت نہیں ہے۔
+Er trinkt keinen Kaffee am Abend.|He doesn't drink coffee in the evening.|وہ شام کو کافی نہیں پیتا۔
+Wir brauchen zwei Tickets nach Köln.|We need two tickets to Cologne.|ہمیں کولون کے دو ٹکٹ چاہیے۔
+Die Prüfung beginnt um neun Uhr.|The exam starts at nine o'clock.|امتحان نو بجے شروع ہوتا ہے۔
+Ich spreche ein bisschen Urdu und Englisch.|I speak a little Urdu and English.|میں تھوڑی اردو اور انگریزی بولتا ہوں۔
+Mein Freund arbeitet als Ingenieur.|My friend works as an engineer.|میرا دوست انجینئر کے طور پر کام کرتا ہے۔
+Sie hilft ihrer Mutter in der Küche.|She helps her mother in the kitchen.|وہ باورچی خانے میں اپنی ماں کی مدد کرتی ہے۔
+Ich gehe jeden Abend spazieren.|I go for a walk every evening.|میں ہر شام سیر کے لیے جاتا ہوں۔
+
+@listening
+Guten Morgen, wie geht es Ihnen?|guten morgen wie geht es ihnen|Good morning, how are you?|Guten Morgen, wie geht es Ihnen?|Guten Tag, wie geht es Ihnen?|Gute Nacht, wie geht es Ihnen?|1
+Ich möchte bitte einen Kaffee.|ich moechte bitte einen kaffee|I would like a coffee, please.|Ich möchte bitte einen Kaffee|Ich möchte bitte einen Tee|Ich möchte bitte ein Wasser|1
+Wo ist der nächste Bahnhof?|wo ist der naechste bahnhof|Where is the nearest station?|Wo ist der nächste Bahnhof?|Wo ist der nächste Markt?|Wo ist das nächste Hotel?|1
+Ich komme aus Pakistan.|ich komme aus pakistan|I come from Pakistan.|Ich komme aus Pakistan|Ich wohne in Pakistan|Ich fahre nach Pakistan|1
+Die Rechnung, bitte.|die rechnung bitte|The bill, please.|Die Rechnung, bitte|Die Speisekarte, bitte|Die Tasche, bitte|1
+Wie viel kostet das?|wie viel kostet das|How much does this cost?|Wie viel kostet das?|Wie spät ist es?|Wie heißt das?|1
+Ich verstehe das nicht.|ich verstehe das nicht|I don't understand that.|Ich verstehe das nicht|Ich weiß das nicht|Ich mag das nicht|1
+Können Sie bitte langsam sprechen?|koennen sie bitte langsam sprechen|Can you please speak slowly?|Können Sie bitte langsam sprechen?|Können Sie bitte laut sprechen?|Können Sie bitte kommen?|1
+Mein Bruder ist Arzt.|mein bruder ist arzt|My brother is a doctor.|Mein Bruder ist Arzt|Mein Bruder ist Lehrer|Mein Vater ist Arzt|1
+Der Zug fährt um acht Uhr.|der zug faehrt um acht uhr|The train leaves at eight.|Der Zug fährt um acht Uhr|Der Bus fährt um acht Uhr|Der Zug kommt um acht Uhr|1
+Ich habe heute keine Zeit.|ich habe heute keine zeit|I have no time today.|Ich habe heute keine Zeit|Ich habe heute keine Lust|Ich habe heute viel Zeit|1
+Das Essen schmeckt sehr gut.|das essen schmeckt sehr gut|The food tastes very good.|Das Essen schmeckt sehr gut|Das Wetter ist sehr gut|Das Hotel ist sehr gut|1
+Wir lernen zusammen Deutsch.|wir lernen zusammen deutsch|We learn German together.|Wir lernen zusammen Deutsch|Wir sprechen zusammen Deutsch|Wir lesen zusammen Deutsch|1
+Ich brauche ein Zimmer für zwei Nächte.|ich brauche ein zimmer fuer zwei naechte|I need a room for two nights.|Ich brauche ein Zimmer für zwei Nächte|Ich brauche einen Tisch für zwei|Ich brauche ein Ticket nach Berlin|1
+Meine Mutter kocht heute Fisch.|meine mutter kocht heute fisch|My mother cooks fish today.|Meine Mutter kocht heute Fisch|Meine Mutter kauft heute Fisch|Mein Vater kocht heute Fisch|1
+Ich gehe jeden Abend spazieren.|ich gehe jeden abend spazieren|I go for a walk every evening.|Ich gehe jeden Abend spazieren|Ich gehe jeden Morgen joggen|Ich gehe jeden Abend schlafen|1
+Haben Sie eine kleinere Größe?|haben sie eine kleinere groesse|Do you have a smaller size?|Haben Sie eine kleinere Größe?|Haben Sie eine größere Tasche?|Haben Sie eine andere Farbe?|1
+Ich bezahle mit Karte.|ich bezahle mit karte|I pay by card.|Ich bezahle mit Karte|Ich bezahle in bar|Ich bezahle morgen|1
+Es tut mir sehr leid.|es tut mir sehr leid|I am very sorry.|Es tut mir sehr leid|Es macht mir Freude|Es geht mir gut|1
+Ich freue mich auf das Wochenende.|ich freue mich auf das wochenende|I look forward to the weekend.|Ich freue mich auf das Wochenende|Ich freue mich auf den Urlaub|Ich arbeite am Wochenende|1
+
+@stories
+Der erste Tag in Berlin|🚆|Ali kommt am Morgen in Berlin an.\nEr nimmt ein Taxi zum ___ (1).\nIm Zimmer trinkt er einen ___ (2).\nDann ruft er seine ___ (3) an.|Ali arrives in Berlin in the morning. He takes a taxi to the hotel. In the room he drinks a coffee. Then he calls his family.|Hotel/Flughafen/Bahnhof=0;Kaffee/Tee/Saft=0;Familie/Firma/Schule=0
+Im Supermarkt|🛒|Sara geht am Samstag ___ (1).\nSie kauft Brot, Milch und ___ (2).\nAn der Kasse ___ (3) sie mit Karte.|Sara goes shopping on Saturday. She buys bread, milk and apples. At the checkout she pays by card.|einkaufen/schlafen/lernen=0;Äpfel/Bücher/Stühle=0;bezahlt/liest/schreibt=0
+Der verlorene Pass|🛂|Ahmad sucht seinen ___ (1).\nEr fragt einen ___ (2) um Hilfe.\nZum Glück findet er ihn in seiner ___ (3).|Ahmad looks for his passport. He asks a policeman for help. Luckily he finds it in his bag.|Pass/Schlüssel/Tisch=0;Polizisten/Lehrer/Nachbarn=0;Tasche/Küche/Schule=0
+Ein Arztbesuch|🏥|Bilal fühlt sich ___ (1).\nEr geht zum ___ (2).\nDer Arzt gibt ihm ___ (3) und Ruhe.|Bilal feels sick. He goes to the doctor. The doctor gives him medicine and rest.|krank/hungrig/müde=0;Arzt/Bäcker/Fahrer=0;Medizin/Geld/Bücher=0
+Der Deutschkurs|📚|Nadia lernt seit drei Monaten ___ (1).\nSie übt jeden Abend mit ___ (2).\nIhr ___ (3) sagt, sie spricht schon gut.|Nadia has been learning German for three months. She practises every evening with books. Her teacher says she already speaks well.|Deutsch/Französisch/Arabisch=0;Büchern/Karten/Bildern=0;Lehrer/Bruder/Nachbar=0
+Familienfest|👨‍👩‍👧‍👦|Am Sonntag kommt die ganze ___ (1).\nDie Großmutter kocht ___ (2).\nAlle essen zusammen und ___ (3) viel.|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|Familie/Klasse/Firma=0;Reis/Papier/Wasser=0;lachen/arbeiten/schlafen=0
+Am Bahnhof|🚉|Der Zug hat zehn Minuten ___ (1).\nHassan kauft am Kiosk eine ___ (2).\nDann steigt er in den ___ (3) ein.|The train is ten minutes late. Hassan buys a newspaper at the kiosk. Then he gets into the train.|Verspätung/Freude/Antwort=0;Zeitung/Tasche/Rechnung=0;Zug/Bus/Flug=0
+Ein kalter Winter|❄️|Im Januar ist es sehr ___ (1).\nAisha trägt einen warmen ___ (2).\nSie trinkt heißen ___ (3) und liest.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|kalt/heiß/warm=0;Mantel/Hemd/Schuh=0;Tee/Saft/Wasser=0
+Im Restaurant|🍽️|Der Kellner bringt die ___ (1).\nOmar bestellt Fisch und ___ (2).\nAm Ende verlangt er die ___ (3).|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|Speisekarte/Rechnung/Karte=0;Reis/Tisch/Fenster=0;Rechnung/Tür/Lampe=0
+Neue Freunde|🤝|Lena und Sana treffen sich im ___ (1).\nSie sprechen über Musik und ___ (2).\nAm Ende tauschen sie ihre ___ (3) aus.|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|Park/Büro/Zug=0;Reisen/Rechnungen/Prüfungen=0;Nummern/Adressen/Bücher=0
+
+@idioms
+Ich verstehe nur Bahnhof.|ich verstehe nur bahnhof|I don't understand anything at all.|مجھے کچھ سمجھ نہیں آ رہا۔|Er erklärt schnell, und ich verstehe nur Bahnhof.
+Das ist nicht mein Bier.|das ist nicht mein bier|That's not my business.|یہ میرا مسئلہ نہیں ہے۔|Was er macht, ist nicht mein Bier.
+Ich drücke dir die Daumen.|ich druecke dir die daumen|I'll keep my fingers crossed for you.|میں آپ کی کامیابی کے لیے دعا گو ہوں۔|Viel Erfolg bei der Prüfung — ich drücke dir die Daumen.
+Jetzt geht es um die Wurst.|jetzt geht es um die wurst|Now it's do or die — the decisive moment.|اب فیصلہ کن لمحہ ہے۔|Das letzte Spiel: Jetzt geht es um die Wurst.
+Das ist mir Wurst.|das ist mir wurst|I couldn't care less.|مجھے کوئی فرق نہیں پڑتا۔|Ob es regnet oder nicht, das ist mir Wurst.
+Er hat nicht alle Tassen im Schrank.|er hat nicht alle tassen im schrank|He is a bit crazy.|وہ تھوڑا پاگل ہے۔|Er kauft im Winter ein Fahrrad — er hat nicht alle Tassen im Schrank.
+Alles hat ein Ende, nur die Wurst hat zwei.|alles hat ein ende nur die wurst hat zwei|Everything comes to an end.|ہر چیز کا اختتام ہوتا ہے۔|Die Ferien sind vorbei — alles hat ein Ende, nur die Wurst hat zwei.
+Zeit ist Geld.|zeit ist geld|Time is money.|وقت ہی دولت ہے۔|Komm pünktlich, denn Zeit ist Geld.
+Übung macht den Meister.|uebung macht den meister|Practice makes perfect.|مشق استاد بنا دیتی ہے۔|Du spielst schon besser — Übung macht den Meister.
+Ende gut, alles gut.|ende gut alles gut|All's well that ends well.|انجام بخیر، سب بخیر۔|Wir haben den Zug verpasst, aber Ende gut, alles gut.
+Das geht auf keine Kuhhaut.|das geht auf keine kuhhaut|That's unbelievable / too much.|یہ بات ناقابل یقین ہے۔|So viele Fehler — das geht auf keine Kuhhaut.
+Er fällt mit der Tür ins Haus.|er faellt mit der tuer ins haus|He gets straight to the point, rudely.|وہ بغیر تمہید کے اصل بات پر آ جاتا ہے۔|Ohne Gruß verlangt er Geld — er fällt mit der Tür ins Haus.
+Ich habe die Nase voll.|ich habe die nase voll|I am fed up.|میں تنگ آ گیا ہوں۔|Ich habe die Nase voll von diesen Ausreden.
+Das ist Jacke wie Hose.|das ist jacke wie hose|It makes no difference.|دونوں برابر ہیں۔|Ob Montag oder Dienstag, das ist Jacke wie Hose.
+Er lebt auf großem Fuß.|er lebt auf grossem fuss|He lives beyond his means.|وہ اترتا ہے اپنی حیثیت سے بڑھ کر۔|Teure Autos und Markenkleidung — er lebt auf großem Fuß.
+Tomaten auf den Augen haben|tomaten auf den augen haben|To be blind to something obvious.|آنکھوں پر پردہ ہونا۔|Das Schild steht direkt vor dir — hast du Tomaten auf den Augen?
+Die Kirche im Dorf lassen|die kirche im dorf lassen|Don't overdo it.|حد سے آگے نہ بڑھو۔|Feiern ist gut, aber lass die Kirche im Dorf.
+Unter aller Sau|unter aller sau|Absolutely terrible.|انتہائی برا۔|Sein Vortrag war unter aller Sau.
+Auf dem richtigen Weg sein|auf dem richtigen weg sein|To be on the right track.|صحیح راستے پر ہونا۔|Deine Aussprache wird besser — du bist auf dem richtigen Weg.
+Den Faden verlieren|den faden verlieren|To lose the thread of what you were saying.|بات کا ڈور کھو دینا۔|Mitten im Satz hat er den Faden verloren.
+Ins Fettnäpfchen treten|ins fettnaepfchen treten|To put one's foot in it.|بے موقع بات کہہ دینا۔|Er fragte nach ihrem Mann — da trat er ins Fettnäpfchen.
+Schwein haben|schwein haben|To be lucky.|خوش قسمتی ہونا۔|Der Zug wartete — da hatte ich Schwein.
+Da steppt der Bär|da steppt der baer|The place is lively / a great party.|وہاں بہت رونق ہے۔|Am Wochenende steppt in der Altstadt der Bär.
+Zwei Fliegen mit einer Klappe|zwei fliegen mit einer klappe|Two birds with one stone.|ایک پتھر سے دو شکار۔|Ich kaufe im Markt ein und treffe meinen Freund — zwei Fliegen mit einer Klappe.
+Auf Wolke sieben|auf wolke sieben|On cloud nine.|ساتویں آسمان پر۔|Seit sie zusammen sind, schweben sie auf Wolke sieben.
+
+@alphabet
+A|a|ah|Abend
+B|b|beh|Buch
+C|c|tseh|Computer
+D|d|deh|Danke
+E|e|eh|Essen
+F|f|eff|Familie
+G|g|geh|Geld
+H|h|hah|Haus
+I|i|ih|immer
+J|j|yot|Jahr
+K|k|kah|Kaffee
+L|l|ell|Lampe
+M|m|emm|Mutter
+N|n|enn|Nacht
+O|o|oh|Osten
+P|p|peh|Pass
+Q|q|kuh|Quelle
+R|r|err|Reise
+S|s|ess|Schule
+T|t|teh|Tisch
+U|u|uh|Uhr
+V|v|fau|Vater
+W|w|weh|Wasser
+X|x|iks|Taxi
+Y|y|ypsilon|Typ
+Z|z|tsett|Zug
+Ä|ä|a-Umlaut|Äpfel
+Ö|ö|o-Umlaut|Öl
+Ü|ü|u-Umlaut|Über
+ß|ß|scharfes S|Straße

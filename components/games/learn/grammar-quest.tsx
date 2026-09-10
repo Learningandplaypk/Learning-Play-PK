@@ -2,21 +2,25 @@
 
 import React, { useMemo, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { GRAMMAR } from "@/data/english/grammar";
 import { shuffle } from "@/lib/utils";
+import { LessonEmpty, LessonLoading, useLangPack, useLessonScript } from "./lesson-bits";
 import { sfx } from "@/lib/sfx";
 
 const TOTAL = 10;
 const ENEMY_HP = 3;
 const PLAYER_HP = 3;
 
-export default function GrammarQuest({ onEnd }: GameProps) {
+export default function GrammarQuest({ lang = "english", onEnd }: GameProps) {
+  const pack = useLangPack(lang);
+  const { rtl, family } = useLessonScript(lang);
   const questions = useMemo(
     () =>
-      shuffle(GRAMMAR)
-        .slice(0, TOTAL)
-        .map((q) => ({ ...q, opts: shuffle(q.o.map((text, i) => ({ text, correct: i === q.a }))) })),
-    []
+      pack
+        ? shuffle(pack.grammar)
+            .slice(0, TOTAL)
+            .map((q) => ({ ...q, opts: shuffle(q.o.map((text, i) => ({ text, correct: i === q.a }))) }))
+        : null,
+    [pack]
   );
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
@@ -27,7 +31,9 @@ export default function GrammarQuest({ onEnd }: GameProps) {
   const [slain, setSlain] = useState(0);
   const [startedAt] = useState(() => Date.now());
 
-  const q = questions[idx];
+  // never undefined: the guards below the hooks bail out before rendering,
+  // and callbacks (setTimeout bodies) need a stable shape to read.
+  const q = questions?.[idx] ?? { q: "", o: [] as string[], a: 0, why: "", urWhy: "", opts: [] as Array<{ text: string; correct: boolean }> };
 
   const advance = (ok: boolean) => {
     let nhp = enemyHp;
@@ -49,7 +55,7 @@ export default function GrammarQuest({ onEnd }: GameProps) {
     setTimeout(() => {
       setPicked(null);
       const gameOver = !ok && nplayer <= 0;
-      const finished = idx + 1 >= questions.length;
+      const finished = idx + 1 >= (questions?.length ?? 0);
       if (gameOver || finished) {
         const score = (correct + (ok ? 1 : 0)) * 15 + nslain * 10;
         onEnd({ score, maxScore: TOTAL * 15 + 50, accuracy: (correct + (ok ? 1 : 0)) / Math.max(1, idx + 1), timeMs: Date.now() - startedAt });
@@ -122,7 +128,12 @@ export default function GrammarQuest({ onEnd }: GameProps) {
             );
           })}
         </div>
-        {picked !== null && <p className="mt-3 text-sm text-brand-ink">💡 {q.why}</p>}
+        {picked !== null && (
+          <p className="mt-3 text-sm text-brand-ink" dir={rtl ? "rtl" : "ltr"} style={family ? { fontFamily: family } : undefined}>
+            💡 {q.why}
+            <span className="block text-xs text-muted">{q.urWhy}</span>
+          </p>
+        )}
       </div>
     </div>
   );

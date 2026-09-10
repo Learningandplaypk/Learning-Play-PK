@@ -117,7 +117,7 @@ export type CompareRow = { feature: string; free: string; premium: string };
  */
 export const COMPARE_ROWS: CompareRow[] = [
   { feature: "Saare 43 games", free: "✓", premium: "✓" },
-  { feature: "Saari 8 zubanein, saare levels", free: "✓", premium: "✓" },
+  { feature: "Saari 21 zubanein, saare levels", free: "✓", premium: "✓" },
   { feature: "Roz kitne games / lessons", free: "Unlimited", premium: "Unlimited" },
   { feature: "XP, streak, badges, leaderboard", free: "✓", premium: "✓" },
   { feature: "Progress cloud sync", free: "✓", premium: "✓" },

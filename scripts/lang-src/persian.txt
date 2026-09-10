@@ -1,0 +1,678 @@
+# Persian / Farsi (فارسی) — authored source for data/langs/persian.json
+# Arabic-derived script, RTL. Romanization: a, â, e, i, o, u; kh, gh, ch, sh, zh, ' (glottal).
+
+@info
+romanization|Roman Farsi: a, â, e, i, o, u; kh, gh, q, ch, sh, zh; apostrophe for the glottal stop.
+alphabet.title|الفبای فارسی
+alphabet.intro|فارسی ۳۲ حرف دارد و از راست به چپ نوشته می‌شود.
+
+@frames
+greetings|بگویید: {s}.|Say: {en}.
+numbers|من {s} سیب دارم.|I have {en} apples.
+family|این {s} است.|This is my {en}.
+food|من {s} دوست دارم.|I like {en}.
+travel|{s} کجاست؟|Where is the {en}?
+time|من {s} به مدرسه می‌روم.|I go to school {en}.
+colors|آسمان {s} است.|The sky is {en}.
+body|{s} درد می‌کند.|My {en} hurts.
+home|اینجا {s} است.|Here is the {en}.
+work|این {s} است.|This is {en}.
+school|این {s} است.|This is {en}.
+shopping|این {s} است.|This is {en}.
+emotions|من {s} احساس می‌کنم.|I feel {en}.
+verbs|من هر روز {s}.|This means: {en}.
+adjectives|این خانه {s} است.|The house is {en}.
+
+@words
+hello|سلام|salâm
+goodbye|خداحافظ|khodâ hâfez
+good morning|صبح بخیر|sobh be kheyr
+good evening|عصر بخیر|asr be kheyr
+good night|شب بخیر|shab be kheyr
+thank you|ممنون|mamnun
+please|لطفاً|lotfan
+sorry|ببخشید|bebakhshid
+excuse me|معذرت می‌خواهم|ma'zerat mikhâham
+yes|بله|bale
+no|نه|na
+welcome|خوش آمدید|khosh âmadid
+how are you|حال شما چطور است؟|hâl-e shomâ chetor ast
+my name is|نام من|nâm-e man||نام من علی است.|My name is Ali.
+nice to meet you|از آشنایی خوشوقتم|az âshnâyi khoshvaghtam
+see you later|بعداً می‌بینمت|ba'dan mibinamat
+good luck|موفق باشید|mowaffagh bâshid
+congratulations|تبریک|tabrik
+help|کمک|komak
+of course|البته|albatta
+zero|صفر|sefr||در حساب صفر بگذارید.|Put a zero in the calculation.
+one|یک|yek
+two|دو|do
+three|سه|se
+four|چهار|chahâr
+five|پنج|panj
+six|شش|shesh
+seven|هفت|haft
+eight|هشت|hasht
+nine|نُه|noh
+ten|ده|dah
+eleven|یازده|yâzdah
+twelve|دوازده|davâzdah
+thirteen|سیزده|sizdah
+fourteen|چهارده|chahârdah
+fifteen|پانزده|pânzdah
+twenty|بیست|bist
+thirty|سی|si
+forty|چهل|chehel
+fifty|پنجاه|panjâh
+hundred|صد|sad
+thousand|هزار|hezâr
+first|اول|avval||این درس اول است.|This is the first lesson.
+second|دوم|dovvom||این اتاق دوم است.|This is the second room.
+half|نصف|nesf||نصف لیوان آب.|Half a glass of water.
+mother|مادر|mâdar|مادرم
+father|پدر|pedar|پدرم
+brother|برادر|barâdar|برادرم
+sister|خواهر|khâhar|خواهرم
+son|پسر|pesar|پسرش
+daughter|دختر|dokhtar|دخترش
+child|بچه|bachche|این بچه
+baby|نوزاد|nowzâd|این نوزاد
+family|خانواده|khânevâdeh|خانواده‌ام
+husband|شوهر|shawhar|شوهرش
+wife|همسر|hamsar|همسرش
+uncle|عمو|amu|عمویم
+aunt|عمه|ammeh|عمه‌ام
+grandfather|پدربزرگ|pedar bozorg|پدربزرگم
+grandmother|مادربزرگ|mâdar bozorg|مادربزرگم
+cousin|پسرعمو|pesar amu|پسرعمویم
+nephew|برادرزاده|barâdar zâdeh|برادرزاده‌اش
+friend|دوست|dust|دوستم
+neighbour|همسایه|hamsâye|همسایه‌مان
+parent|والدین|vâledeyn|والدینم
+water|آب|âb
+bread|نان|nân
+rice|برنج|berenj
+milk|شیر|shir
+tea|چای|chây
+sugar|شکر|shekar
+salt|نمک|namak
+egg|تخم مرغ|tokhm-e morgh
+meat|گوشت|gusht
+chicken|مرغ|morgh
+fish|ماهی|mâhi
+apple|سیب|sib
+banana|موز|mowz
+mango|انبه|anbeh
+orange (fruit)|پرتقال|porteghâl
+grapes|انگور|angur
+lemon|لیمو|limu
+tomato|گوجه فرنگی|guje farangi
+onion|پیاز|piyâz
+potato|سیب زمینی|sib zamini
+carrot|هویج|havij
+oil|روغن|rowghan
+butter|کره|kare
+honey|عسل|asal
+juice|آبمیوه|âb mive
+coffee|قهوه|ghahve
+soup|سوپ|sup
+breakfast|صبحانه|sobhâne
+lunch|ناهار|nahâr
+dinner|شام|shâm
+car|ماشین|mâshin
+bus|اتوبوس|otubus
+train|قطار|ghatâr
+airplane|هواپیما|havâpeymâ
+bicycle|دوچرخه|docharkhe
+road|جاده|jâdeh
+street|خیابان|khiyâbân
+bridge|پل|pol
+station|ایستگاه|istgâh
+airport|فرودگاه|forudgâh
+ticket|بلیت|belit
+map|نقشه|naghshe
+city|شهر|shahr
+village|روستا|rustâ
+country|کشور|keshvar
+hotel|هتل|hotel
+journey|سفر|safar
+luggage|چمدان|chamedân
+driver|راننده|rânande
+passport|گذرنامه|gozarnâme
+time|زمان|zamân||زمان خیلی زود می‌گذرد.|Time passes very quickly.
+day|روز|ruz||در روز دو بار دارو بخورید.|Take the medicine twice a day.
+night|شب|shab||در شب آسمان صاف است.|The sky is clear at night.
+morning|صبح|sobh
+evening|عصر|asr
+week|هفته|hafte||هفته‌ای یک بار به بازار می‌روم.|I go to the market once a week.
+month|ماه|mâh||حقوق در آخر ماه می‌آید.|The salary comes at the end of the month.
+year|سال|sâl||در سال چهار فصل داریم.|Four seasons come in a year.
+hour|ساعت|sâ'at||یک ساعت زودتر بیایید.|Come one hour earlier.
+minute|دقیقه|daghighe||پنج دقیقه صبر کنید.|Wait five minutes.
+today|امروز|emruz
+tomorrow|فردا|fardâ
+yesterday|دیروز|diruz
+now|حالا|hâlâ
+later|بعد|ba'd
+early|زود|zud
+late|دیر|dir
+always|همیشه|hamishe
+sometimes|گاهی|gâhi
+never|هرگز|hargez
+color|رنگ|rang||رنگ این پارچه تیره است.|The color of this cloth is dark.
+red|قرمز|ghermez
+blue|آبی|âbi
+green|سبز|sabz
+yellow|زرد|zard
+black|سیاه|siyâh
+white|سفید|sefid
+brown|قهوه‌ای|ghahve'i
+grey|خاکستری|khâkestari
+pink|صورتی|surati
+purple|بنفش|banafsh
+orange (color)|نارنجی|nârenji
+body|بدن|badan||بدن به استراحت نیاز دارد.|The body needs rest.
+head|سر|sar|سرم
+hair|مو|mu||موهایم سیاه است.|My hair is black.
+face|صورت|surat|صورتم
+eye|چشم|cheshm|چشمم
+ear|گوش|gush|گوشم
+nose|بینی|bini|بینی‌ام
+mouth|دهان|dahân|دهانم
+tooth|دندان|dandân|دندانم
+tongue|زبان|zabân||زبان مزه را حس می‌کند.|The tongue feels the taste.
+neck|گردن|gardan|گردنم
+shoulder|شانه|shâneh|شانه‌ام
+hand|دست|dast|دستم
+finger|انگشت|angosht|انگشتم
+leg|پا|pâ|پایم
+foot|کف پا|kaf-e pâ|کف پایم
+heart|قلب|ghalb|قلبم
+stomach|شکم|shekam|شکمم
+house|خانه|khâne
+room|اتاق|otâgh
+door|در|dar
+window|پنجره|panjere
+wall|دیوار|divâr
+roof|سقف|saghf
+floor|کف|kaf
+kitchen|آشپزخانه|âshpazkhâne
+bathroom|حمام|hammâm
+bed|تخت|takht
+table|میز|miz
+chair|صندلی|sandali
+sofa|مبل|mobl
+lamp|چراغ|cherâgh
+key|کلید|kelid
+stairs|پله|pelle
+garden|باغ|bâgh
+light|نور|nur
+fan|پنکه|panke
+mirror|آینه|âyene
+work|کار|kâr
+job|شغل|shoghl
+office|اداره|edâre
+money|پول|pul
+salary|حقوق|hoghugh
+meeting|جلسه|jalse
+boss|رئیس|ra'is
+employee|کارمند|kârmand
+business|تجارت|tejârat
+company|شرکت|sherkat
+market|بازار|bâzâr
+shop|مغازه|maghâze
+customer|مشتری|moshtari
+price|قیمت|gheymat
+farmer|کشاورز|keshâvarz
+doctor|پزشک|pezeshk
+teacher|معلم|mo'allem
+police|پلیس|polis
+school|مدرسه|madrese
+book|کتاب|ketâb
+pen|خودکار|khodkâr
+pencil|مداد|medâd
+page|صفحه|safhe
+class|کلاس|kelâs
+student|دانش آموز|dânesh âmuz
+lesson|درس|dars
+exam|امتحان|emtehân
+question|سؤال|so'âl
+answer|جواب|javâb
+homework|تکلیف|taklif
+library|کتابخانه|ketâbkhâne
+university|دانشگاه|dâneshgâh
+language|زبان|zabân
+word|کلمه|kalame
+sentence|جمله|jomle
+dictionary|فرهنگ لغت|farhang-e loghat
+science|علم|elm
+history|تاریخ|târikh
+knowledge|دانش|dânesh
+education|تحصیلات|tahsilât
+shopping|خرید|kharid||امشب باید خرید کنیم.|We have to go shopping tonight.
+buy|خریدن|kharidan||او سبزی می‌خرد.|He is buying vegetables.
+sell|فروختن|forukhtan||کشاورز در بازار میوه می‌فروشد.|The farmer sells fruit in the market.
+cheap|ارزان|arzân||این پارچه ارزان است.|This cloth is cheap.
+expensive|گران|gerân||گوشی گران است.|The phone is expensive.
+coin|سکه|sekke
+note|اسکناس|eskenâs
+bill|صورت حساب|surat hesâb
+size|سایز|sâyz
+discount|تخفیف|takhfif
+receipt|رسید|rasid
+bag|کیف|kif
+rupee|روپیه|rupiye
+weigh|وزن کردن|vazn kardan||فروشنده سبزی را وزن می‌کند.|The shopkeeper weighs the vegetables.
+pay|پرداخت|pardâkht||با کارت پرداخت کنید.|Pay by card.
+happiness|خوشحالی|khoshhâli
+sadness|غم|gham
+anger|خشم|khashm
+fear|ترس|tars
+love|عشق|eshgh
+hope|امید|omid
+worry|نگرانی|negarâni
+surprise|تعجب|ta'ajjob
+peace|آرامش|ârâmesh
+smile|لبخند|labkhand
+laugh|خنده|khande
+crying|گریه|gerye
+mood|حال|hâl
+brave|شجاع|shojâ'||او پسر شجاعی است.|He is a brave boy.
+lonely|تنها|tanhâ||او احساس تنهایی می‌کند.|He feels lonely.
+to eat|خوردن|khordan|می‌خورم
+to drink|نوشیدن|nushidan|می‌نوشم
+to go|رفتن|raftan|می‌روم
+to come|آمدن|âmadan|می‌آیم
+to see|دیدن|didan|می‌بینم
+to hear|شنیدن|shenidan|می‌شنوم
+to speak|صحبت کردن|sohbat kardan|صحبت می‌کنم
+to read|خواندن|khvândan|می‌خوانم
+to write|نوشتن|neveshtan|می‌نویسم
+to learn|یاد گرفتن|yâd gereftan|یاد می‌گیرم
+to teach|درس دادن|dars dâdan|درس می‌دهم
+to sleep|خوابیدن|khâbidan|می‌خوابم
+to wake up|بیدار شدن|bidâr shodan|بیدار می‌شوم
+to run|دویدن|davidan|می‌دوم
+to walk|راه رفتن|râh raftan|راه می‌روم
+to open|باز کردن|bâz kardan|باز می‌کنم
+to close|بستن|bastan|می‌بندم
+to give|دادن|dâdan|می‌دهم
+to take|گرفتن|gereftan|می‌گیرم
+to make|ساختن|sâkhtan|می‌سازم
+to love|دوست داشتن|dust dâshtan|دوست دارم
+to think|فکر کردن|fekr kardan|فکر می‌کنم
+to understand|فهمیدن|fahmidan|می‌فهمم
+to work|کار کردن|kâr kardan|کار می‌کنم
+to wait|صبر کردن|sabr kardan|صبر می‌کنم
+big|بزرگ|bozorg
+small|کوچک|kuchak
+new|جدید|jadid
+old|قدیمی|ghadimi
+good|خوب|khub
+bad|بد|bad
+beautiful|زیبا|zibâ
+hot|گرم|garm||هوا خیلی گرم است.|The weather is very hot.
+cold|سرد|sard||آب سرد است.|The water is cold.
+fast|سریع|sari'
+slow|آهسته|âheste
+easy|آسان|âsân
+difficult|سخت|sakht
+long|بلند|boland
+short|کوتاه|kutâh
+clean|تمیز|tamiz
+dirty|کثیف|kasif
+happy|خوشحال|khoshhâl||بچه‌ها خیلی خوشحال هستند.|The children are very happy.
+tired|خسته|khaste||امروز خسته هستم.|I am tired today.
+hungry|گرسنه|gorosne||بچه گرسنه است.|The child is hungry.
+
+@phrases
+سلام!|salâm|Hello!|سلام!|greeting
+خداحافظ!|khodâ hâfez|Goodbye!|خداحافظ!|greeting
+صبح بخیر!|sobh be kheyr|Good morning!|صبح بخیر!|greeting
+عصر بخیر!|asr be kheyr|Good evening!|عصر بخیر!|greeting
+شب بخیر!|shab be kheyr|Good night!|شب بخیر!|greeting
+حال شما چطور است؟|hâl-e shomâ chetor ast|How are you? (formal)|حال شما چطور است؟|smalltalk
+خوبم، ممنون.|khubam mamnun|I am fine, thank you.|خوبم، ممنون۔|smalltalk
+خیلی ممنون!|kheyli mamnun|Thank you very much!|خیلی ممنون!|polite
+خواهش می‌کنم.|khâhesh mikonam|You're welcome.|خواهش می‌کنم۔|polite
+ببخشید!|bebakhshid|Excuse me!|ببخشید!|polite
+متأسفم.|motassefam|I am sorry.|متأسفم۔|polite
+مشکلی نیست.|moshkeli nist|No problem.|مشکلی نیست۔|polite
+اسم شما چیست؟|esm-e shomâ chist|What is your name?|اسم شما چیست؟|smalltalk
+اسم من سارا است.|esm-e man sârâ ast|My name is Sara.|اسم من سارا است۔|smalltalk
+اهل کجا هستید؟|ahl-e kojâ hastid|Where are you from?|اهل کجا هستید؟|smalltalk
+اهل ایران هستم.|ahl-e irân hastam|I am from Iran.|اهل ایران هستم۔|smalltalk
+فارسی حرف می‌زنید؟|fârsi harf mizani|Do you speak Farsi?|فارسی حرف می‌زنید؟|smalltalk
+می‌خواهم فارسی یاد بگیرم.|mikhâham fârsi yâd begiram|I want to learn Farsi.|می‌خواهم فارسی یاد بگیرم۔|school
+متوجه نشدم.|motavajjeh nashodam|I did not understand.|متوجه نشدم۔|school
+آهسته‌تر بگویید.|âheste tar beguyid|Please speak slowly.|آهسته‌تر بگویید۔|polite
+معنی این چیست؟|ma'ni-ye in chist|What does this mean?|معنی این چیست؟|school
+این چند است؟|in chand ast|How much is this?|این چند است؟|shopping
+این را می‌خواهم.|in râ mikhâham|I want this.|این را می‌خواهم۔|shopping
+سایز کوچک‌تر دارید؟|sâyz-e kuchaktar dârid|Do you have a smaller size?|سایز کوچک‌تر دارید؟|shopping
+صورت حساب لطفاً.|surat hesâb lotfan|The bill, please.|صورت حساب لطفاً۔|shopping
+با کارت پرداخت می‌کنم.|bâ kart pardâkht mikonam|I pay by card.|با کارت پرداخت می‌کنم۔|shopping
+ایستگاه کجاست؟|istgâh kojâst|Where is the station?|ایستگاه کجاست؟|travel
+دستشویی کجاست؟|dastshuyi kojâst|Where is the toilet?|دستشویی کجاست؟|travel
+این اتوبوس به شیراز می‌رود؟|in otubus be shirâz miravad|Does this bus go to Shiraz?|این اتوبوس به شیراز می‌رود؟|travel
+قطار ساعت چند می‌رود؟|ghatâr sâ'at chand miravad|When does the train leave?|قطار ساعت چند می‌رود؟|travel
+راه را گم کرده‌ام.|râh râ gom kardeam|I have lost my way.|راه را گم کرده‌ام۔|travel
+می‌توانید کمک کنید؟|mitavânid komak konid|Can you help?|می‌توانید کمک کنید؟|polite
+به پزشک نیاز دارم.|be pezeshk niyâz dâram|I need a doctor.|به پزشک نیاز دارم۔|health
+حالم خوب نیست.|hâlam khub nist|I am not feeling well.|حالم خوب نیست۔|health
+داروخانه کجاست؟|dârukhâne kojâst|Where is the pharmacy?|داروخانه کجاست؟|health
+سرم درد می‌کند.|saram dard mikonad|I have a headache.|سرم درد می‌کند۔|health
+یک فنجان چای لطفاً.|yek fenjân chây lotfan|One cup of tea, please.|یک فنجان چای لطفاً۔|food
+منو لطفاً.|menu lotfan|The menu, please.|منو لطفاً۔|food
+خیلی خوشمزه است.|kheyli khoshmaze ast|It is very tasty.|خیلی خوشمزه است۔|food
+من گیاهخوار هستم.|man giyâhkhvâr hastam|I am a vegetarian.|من گیاهخوار هستم۔|food
+گرسنه هستم.|gorosne hastam|I am hungry.|گرسنه هستم۔|food
+گوشت نمی‌خورم.|gusht nemikhoram|I don't eat meat.|گوشت نمی‌خورم۔|food
+آب سرد است.|âb sard ast|The water is cold.|آب سرد است۔|food
+امروز هوا خیلی خوب است.|emruz havâ kheyli khub ast|The weather is very nice today.|امروز هوا خیلی خوب است۔|smalltalk
+در اداره کار می‌کنم.|dar edâre kâr mikonam|I work in an office.|در اداره کار می‌کنم۔|work
+کجا کار می‌کنید؟|kojâ kâr mikonid|Where do you work?|کجا کار می‌کنید؟|work
+حقوقم آخر ماه می‌آید.|hoghugham âkhar-e mâh miâyad|My salary comes at month end.|حقوقم آخر ماه می‌آید۔|work
+فردا جلسه دارم.|fardâ jalse dâram|I have a meeting tomorrow.|فردا جلسه دارم۔|work
+در دانشگاه درس می‌خوانم.|dar dâneshgâh dars mikhanam|I study at the university.|در دانشگاه درس می‌خوانم۔|school
+کلاس ساعت چند شروع می‌شود؟|kelâs sâ'at chand shoru mishavad|When does the class start?|کلاس ساعت چند شروع می‌شود؟|school
+امتحان آسان بود.|emtehân âsân bud|The exam was easy.|امتحان آسان بود۔|school
+کتاب خواندن را دوست دارم.|ketâb khvândan râ dust dâram|I like reading books.|کتاب خواندن را دوست دارم۔|school
+این کلمه جدید است.|in kalame jadid ast|This word is new.|این کلمه جدید است۔|school
+هر روز فارسی یاد می‌گیرم.|har ruz fârsi yâd migiram|I learn Farsi every day.|هر روز فارسی یاد می‌گیرم۔|school
+امروز دوشنبه است.|emruz doshanbe ast|Today is Monday.|امروز دوشنبه است۔|time
+ساعت چند است؟|sâ'at chand ast|What time is it?|ساعت چند است؟|time
+وقت ندارم.|vaght nadâram|I have no time.|وقت ندارم۔|time
+ساعت شش می‌آیم.|sâ'at shesh miâyam|I will come at six.|ساعت شش می‌آیم۔|time
+جمعه آزاد هستم.|jom'e âzâd hastam|I am free on Friday.|جمعه آزاد هستم۔|time
+این مادر من است.|in mâdar-e man ast|This is my mother.|این مادر من است۔|family
+پدرم خیلی کار می‌کند.|pedaram kheyli kâr mikonad|My father works a lot.|پدرم خیلی کار می‌کند۔|family
+خواهرم پزشک است.|khâharam pezeshk ast|My sister is a doctor.|خواهرم پزشک است۔|family
+خانواده ما بزرگ است.|khânevâde-ye mâ bozorg ast|Our family is big.|خانواده ما بزرگ است۔|family
+بچه در باغ بازی می‌کند.|bachche dar bâgh bâzi mikonad|The child plays in the garden.|بچه در باغ بازی می‌کند۔|family
+خانه من کوچک است.|khâne-ye man kuchak ast|My house is small.|خانه من کوچک است۔|home
+آشپزخانه تمیز است.|âshpazkhâne tamiz ast|The kitchen is clean.|آشپزخانه تمیز است۔|home
+پنجره باز است.|panjere bâz ast|The window is open.|پنجره باز است۔|home
+در را می‌بندم.|dar râ mibandam|I close the door.|در را می‌بندم۔|home
+برق رفته است.|bargh rafte ast|The power has gone out.|برق رفته است۔|home
+الان می‌خوابم.|alân mikhâbam|I am going to sleep now.|الان می‌خوابم۔|home
+گذرنامه‌ام کجاست؟|gozarnâmeam kojâst|Where is my passport?|گذرنامه‌ام کجاست؟|travel
+پرواز تأخیر دارد.|parvâz ta'khir dârad|The flight is delayed.|پرواز تأخیر دارد۔|travel
+چمدان خیلی سنگین است.|chamedân kheyli sangin ast|The luggage is very heavy.|چمدان خیلی سنگین است۔|travel
+سفر بخیر!|safar be kheyr|Have a good trip!|سفر بخیر!|travel
+برای دو شب اتاق می‌خواهم.|barâye do shab otâgh mikhâham|I need a room for two nights.|برای دو شب اتاق می‌خواهم۔|travel
+مستقیم بروید.|mostaghim beravid|Go straight ahead.|مستقیم بروید۔|travel
+به چپ بپیچید.|be chap bepeechid|Turn left.|به چپ بپیچید۔|travel
+بازار کجاست؟|bâzâr kojâst|Where is the market?|بازار کجاست؟|shopping
+قیمت خیلی زیاد است.|gheymat kheyli ziyâd ast|The price is too high.|قیمت خیلی زیاد است۔|shopping
+کمی تخفیف بدهید.|kami takhfif bedahid|Give a little discount.|کمی تخفیف بدهید۔|shopping
+فقط نگاه می‌کنم.|faghat negâh mikonam|I am just looking.|فقط نگاه می‌کنم۔|shopping
+رسید بدهید.|rasid bedahid|Please give the receipt.|رسید بدهید۔|shopping
+نوش جان!|nush-e jân|Enjoy your meal!|نوش جان!|food
+بعد از غذا چای می‌خوریم.|ba'd az ghazâ chây mikhurim|We drink tea after the meal.|بعد از غذا چای می‌خوریم۔|food
+آب سرد بدهید.|âb-e sard bedahid|Give me cold water.|آب سرد بدهید۔|food
+نگران نباشید.|negarân nabâshid|Don't worry.|نگران نباشید۔|emotion
+به شما افتخار می‌کنم.|be shomâ eftekhâr mikonam|I am proud of you.|به شما افتخار می‌کنم۔|emotion
+از شنیدنش خوشحال شدم.|az shenidanes khoshhâl shodam|I am glad to hear that.|از شنیدنش خوشحال شدم۔|emotion
+می‌ترسم.|mitarsam|I am scared.|می‌ترسم۔|emotion
+از دیدنت خوشحال شدم.|az didanet khoshhâl shodam|Good to see you.|از دیدنت خوشحال شدم۔|smalltalk
+تبریک می‌گویم!|tabrik migooyam|Congratulations!|تبریک می‌گویم!|greeting
+خوش آمدید!|khosh âmadid|Welcome!|خوش آمدید!|greeting
+زود خوب شوید!|zud khub shavid|Get well soon!|زود خوب شوید!|health
+یک لحظه لطفاً.|yek lahze lotfan|One moment, please.|یک لحظه لطفاً۔|polite
+الان می‌آیم.|alân miâyam|I'll be right there.|الان می‌آیم۔|smalltalk
+نمی‌دانم.|nemidânam|I don't know.|نمی‌دانم۔|smalltalk
+شاید بعداً.|shâyad ba'dan|Maybe later.|شاید بعداً۔|smalltalk
+موافقم.|movâfegham|I agree.|موافقم۔|smalltalk
+این درست نیست.|in dorost nist|That is not right.|این درست نیست۔|smalltalk
+امروز چه کار می‌کنید؟|emruz che kâr mikonid|What are you doing today?|امروز چه کار می‌کنید؟|smalltalk
+برای امتحان آماده می‌شوم.|barâye emtehân âmâde mishavam|I am preparing for the exam.|برای امتحان آماده می‌شوم۔|school
+به کمک نیاز دارم.|be komak niyâz dâram|I need help.|به کمک نیاز دارم۔|polite
+از کمکتان ممنون.|az komaketân mamnun|Thank you for your help.|از کمکتان ممنون۔|polite
+اولین بار است.|avvalin bâr ast|This is the first time.|اولین بار است۔|smalltalk
+پول را کجا عوض کنم؟|pul râ kojâ avaz konam|Where can I exchange money?|پول را کجا عوض کنم؟|travel
+اتوبوس ساعت هشت می‌آید.|otubus sâ'at hasht miâyad|The bus comes at eight.|اتوبوس ساعت هشت می‌آید۔|travel
+قطارم را از دست دادم.|ghatâram râ az dast dâdam|I missed my train.|قطارم را از دست دادم۔|travel
+هتل خیلی خوب است.|hotel kheyli khub ast|The hotel is very good.|هتل خیلی خوب است۔|travel
+شغل شما چیست؟|shoghl-e shomâ chist|What is your job?|شغل شما چیست؟|work
+من مهندس هستم.|man mohandes hastam|I am an engineer.|من مهندس هستم۔|work
+او همیشه کمک می‌کند.|u hamishe komak mikonad|She always helps.|او همیشه کمک می‌کند۔|smalltalk
+با هم یاد می‌گیریم.|bâ ham yâd migirim|We learn together.|با هم یاد می‌گیریم۔|school
+فارسی‌ام بهتر می‌شود.|fârsiyam behtar mishavad|My Farsi is improving.|فارسی‌ام بهتر می‌شود۔|school
+آسمان آبی است.|âsemân âbi ast|The sky is blue.|آسمان آبی است۔|smalltalk
+رنگ مورد علاقه‌ام سبز است.|rang-e mored-e alâgheam sabz ast|My favourite color is green.|رنگ مورد علاقه‌ام سبز است۔|smalltalk
+ماشین قرمز سریع است|mâshin-e ghermez sari' ast|The red car is fast.|ماشین قرمز سریع است۔|smalltalk
+شب آرام است.|shab ârâm ast|The night is peaceful.|شب آرام است۔|time
+امروز باران می‌بارد.|emruz bârân mibârad|It is raining today.|امروز باران می‌بارد۔|smalltalk
+آفتاب درخشان است.|âftâb derakhshân ast|The sun is shining.|آفتاب درخشان است۔|smalltalk
+آفرین!|âfarin|Well done!|آفرین!|smalltalk
+از آشنایی خوشوقتم.|az âshnâyi khoshvaghtam|Nice to meet you.|از آشنایی خوشوقتم۔|greeting
+بعداً می‌بینمت.|ba'dan mibinamat|We will meet again.|بعداً می‌بینمت۔|greeting
+ببخشید، چه گفتید؟|bebakhshid che goftid|Pardon, what did you say?|ببخشید، چه گفتید؟|polite
+یک بار دیگر بگویید.|yek bâr-e digar beguyid|Please say it again.|یک بار دیگر بگویید۔|polite
+لطفاً هجی کنید.|lotfan heji konid|Please spell it.|لطفاً هجی کنید۔|school
+چای را خیلی دوست دارم.|chây râ kheyli dust dâram|I love tea.|چای را خیلی دوست دارم۔|food
+غذا آماده است.|ghazâ âmâde ast|The food is ready.|غذا آماده است۔|food
+در بشقاب غذای بیشتری بریزید.|dar boshghâb ghazâye bishtari berizid|Put more food on the plate.|در بشقاب غذای بیشتری بریزید۔|food
+این پارچه خوب است.|in pâerche khub ast|This cloth is good.|این پارچه خوب است۔|shopping
+مغازه بسته شد.|maghâze baste shod|The shop is closed.|مغازه بسته شد۔|shopping
+هر روز به بازار می‌روم.|har ruz be bâzâr miravam|I go to the market every day.|هر روز به بازار می‌روم۔|shopping
+ماشین در جاده است.|mâshin dar jâde ast|The car is on the road.|ماشین در جاده است۔|travel
+نزدیک پل بپیچید.|nazdik-e pol bepeechid|Turn near the bridge.|نزدیک پل بپیچید۔|travel
+شهر خیلی بزرگ است.|shahr kheyli bozorg ast|The city is very big.|شهر خیلی بزرگ است۔|travel
+در روستا آرامش هست.|dar rustâ ârâmesh hast|There is peace in the village.|در روستا آرامش هست۔|travel
+من دانش آموز هستم.|man dânesh âmuz hastam|I am a student.|من دانش آموز هستم۔|school
+او معلم خوبی است.|u mo'allem-e khubi ast|He is a good teacher.|او معلم خوبی است۔|school
+سؤال سخت است.|so'âl sakht ast|The question is difficult.|سؤال سخت است۔|school
+جواب درست است.|javâb dorost ast|The answer is correct.|جواب درست است۔|school
+کتاب روی میز است.|ketâb ruye miz ast|The book is on the table.|کتاب روی میز است۔|school
+تخت نرم است.|takht narm ast|The bed is soft.|تخت نرم است۔|home
+کلید گم شده است.|kelid gom shode ast|The key is lost.|کلید گم شده است۔|home
+در باغ گل هست.|dar bâgh gol hast|There are flowers in the garden.|در باغ گل هست۔|home
+اتاق روشن است.|otâgh rowshan ast|The room is bright.|اتاق روشن است۔|home
+از پله بالا بروید.|az pelle bâlâ beravid|Go up the stairs.|از پله بالا بروید۔|home
+
+@grammar
+فارسی ___ جنس دستوری دارد.|هیچ|دو|سه|1|Persian nouns have no grammatical gender.|Persian has no noun gender.
+"را" چه کار می‌کند؟|مفعول را نشان می‌دهد|فاعل را|زمان را|1|"Râ" marks the direct object: کتاب را.|The object marker is "râ".
+"کتاب ___ روی میز است."|را|به|از|2|Location needs no marker here; "ra" is only for objects.|Location takes no object marker.
+"من ___ را دیدم."|او|او به|او از|1|Object pronoun takes "râ": او را دیدم.|Pronoun objects also take "râ".
+"اضافه" با ___ ساخته می‌شود.|ـِ|را|به|1|The ezafe "-e" links noun + modifier: کتابِ من.|Ezafe links two nouns.
+"خانهٔ ___ بزرگ است."|من|را من|به من|1|Possession uses ezafe: خانهٔ من.|Possession uses ezafe.
+جمع با ___ ساخته می‌شود.|ها|ات|ین|1|Plural marker "hâ": کتاب‌ها.|The plural marker is "hâ".
+"مدرسه ___ کجاست؟"|را|به|در|1|"Kojâst" needs no marker for the subject.|Subjects take no marker.
+"من ___ مدرسه می‌روم."|به|را|از|1|Direction uses "be": به مدرسه.|Direction uses "be".
+"او ___ تهران آمد."|از|به|با|1|Origin uses "az": از تهران.|Origin uses "az".
+"با ___ به کار می‌روم."|اتوبوس|را اتوبوس|به اتوبوس|1|Means uses "bâ": با اتوبوس.|Means of transport uses "bâ".
+"روی" ___ را نشان می‌دهد.|بالا|پایین|داخل|1|"Ruye" = on: روی میز.|"Ruye" means "on".
+"زیر" ___ را نشان می‌دهد.|پایین|بالا|کنار|1|"Zir" = under.|"Zir" means "under".
+"کنار" ___ را نشان می‌دهد.|نزدیک|داخل|بالا|1|"Kenâr" = beside/near.|"Kenâr" means "beside".
+"این" ___ را نشان می‌دهد.|نزدیک|دور|زمان|1|"In" = this.|"In" means "this".
+"آن" ___ را نشان می‌دهد.|دور|نزدیک|زمان|1|"Ân" = that.|"Ân" means "that".
+"است" ___ است.|حال|گذشته|آینده|1|"Ast" is the present "is".|"Ast" is present.
+"بود" ___ است.|گذشته|حال|آینده|1|"Bud" is the past "was".|"Bud" is past.
+"خواهد بود" ___ است.|آینده|گذشته|حال|1|"Khâhad bud" is the future "will be".|"Khâhad bud" is future.
+منفی: "من ___ نمی‌خورم."|گوشت|را گوشت|نه گوشت|1|Negation: "ne-" + "mi-": نمی‌خورم.|"Nemi-" negates the present verb.
+"نمی‌دانم" از ___ ساخته شده.|نه + می + دانم|ن + دانم|می + دانم|1|"Nemi-" is the negative prefix.|Manfi banane ke liye 'nemi-' pehle lagta hai.
+پرسش بله/نه با ___ ساخته می‌شود.|آیا|چه|کجا|1|"Ayâ" makes yes/no questions.|Haan/na ke sawaal ke liye 'âyâ' lagate hain.
+"چه" ___ می‌پرسد.|چیستی|مکان|زمان|1|"Che" = what.|"Che" asks "what".
+"کجا" ___ می‌پرسد.|مکان|زمان|دلیل|1|"Kojâ" = where.|"Kojâ" asks "where".
+"کی" ___ می‌پرسد.|زمان|مکان|دلیل|1|"Key" = when.|"Key" asks "when".
+"چرا" ___ می‌پرسد.|دلیل|زمان|مکان|1|"Cherâ" = why.|"Cherâ" asks "why".
+"چند" ___ می‌پرسد.|تعداد|مکان|زمان|1|"Chand" = how many/much.|"Chand" asks the number.
+"چه کسی" ___ می‌پرسد.|شخص|چیز|مکان|1|"Che kasi" = who.|"Che kasi" asks "who".
+"چطور" ___ می‌پرسد.|حالت|مکان|زمان|1|"Chetor" = how.|"Chetor" asks "how".
+ترتیب جمله در فارسی ___ است.|فاعل + مفعول + فعل|فعل + فاعل|مفعول + فعل + فاعل|1|Persian is SOV — the verb is last.|The verb comes at the end.
+"می‌روم" ___ است.|حال استمراری|گذشته|آینده|1|"Mi-" marks the present continuous.|"Mi-" is present continuous.
+"رفتم" ___ است.|گذشته ساده|حال|آینده|1|"Raftam" is the simple past.|"Raftam" is simple past.
+"رفته‌ام" ___ است.|گذشته نقلی|حال|آینده|1|"Rafte-am" is the present perfect.|"Rafte-am" is present perfect.
+"می‌رفتم" ___ است.|گذشته استمراری|حال|آینده|1|"Miraftam" is the past continuous.|"Miraftam" is past continuous.
+"می‌خواهم ___ ."|بروم|رفتن|رفتم|1|After "mikhâham" comes the subjunctive: بروم.|Modals take the subjunctive.
+"باید ___ ."|بروی|رفتن|رفتی|1|"Bâyad" + subjunctive: باید بروی.|"Bâyad" takes the subjunctive.
+"می‌توانم ___ ."|کمک کنم|کمک کردن|کمک کردم|1|"Mitavânam" + subjunctive.|Ability verbs take the subjunctive.
+"می‌شود ___ ؟"|کمک کرد|کمک کردن|کمک می‌کند|1|Impersonal: می‌شود کمک کرد؟|"Mishavad" + infinitive asks permission.
+"دوست دارم ___ ."|یاد بگیرم|یاد گرفتن|یاد گرفتم|1|"Dust dâram" + subjunctive.|"Dust dâram" takes the subjunctive.
+صفت ___ اسم می‌آید.|بعد از|قبل از|کنار فعل|1|Adjectives follow the noun with ezafe: خانهٔ بزرگ.|Adjectives come after the noun.
+"خانهٔ بزرگ" در آن "بزرگ" ___ است.|صفت|اسم|فعل|1|"Bozorg" describes "khâne".|"Bozorg" is an adjective.
+"سریع می‌رود" در آن "سریع" ___ است.|قید|اسم|صفت|1|"Sari'" modifies the verb → adverb.|"Sari'" is an adverb here.
+تفضیلی: ___|بزرگ‌تر|بزرگ‌ترین|بزرگ|1|Comparative adds "-tar": بزرگ‌تر.|Comparative uses "-tar".
+عالی: ___|بزرگ‌ترین|بزرگ‌تر|بزرگ|1|Superlative adds "-tarin".|Superlative uses "-tarin".
+"از من ___ است."|بزرگ‌تر|بزرگ|بزرگ‌ترین|1|Comparison uses "az".|Tulna ke liye 'az' istemal hota hai.
+"و" ___ را نشان می‌دهد.|پیوند|تضاد|دلیل|1|"Va" = and.|"Va" means "and".
+"اما" ___ را نشان می‌دهد.|تضاد|پیوند|دلیل|1|"Ammâ" = but.|"Ammâ" means "but".
+"چون" ___ را نشان می‌دهد.|دلیل|زمان|مکان|1|"Chun" = because.|"Chun" gives the reason.
+"اگر" ___ می‌سازد.|شرط|گذشته|جمع|1|"Agar" = if.|"Agar" makes a condition.
+"وقتی که" ___ را نشان می‌دهد.|زمان|مکان|ملکیت|1|"Vaghti ke" = when.|"Vaghti ke" refers to time.
+"تا" ___ را نشان می‌دهد.|حد|شروع|ملکیت|1|"Tâ" = until/to.|"Tâ" marks the limit.
+"خیلی" ___ است.|قید|اسم|حرف|1|"Kheyli" = very.|"Kheyli" is an adverb.
+"همه" ___ را نشان می‌دهد.|کل|هیچ|بعضی|1|"Hame" = all.|"Hame" means "all".
+"هیچ" ___ را نشان می‌دهد.|هیچ|همه|بعضی|1|"Hich" = none/any.|"Hich" means "none".
+"بعضی" ___ را نشان می‌دهد.|بعضی|همه|هیچ|1|"Ba'zi" = some.|"Ba'zi" means "some".
+"هر" ___ را نشان می‌دهد.|هر یک|هیچ|بعضی|1|"Har" = every.|"Har" means "every".
+"در روز" ___ را نشان می‌دهد.|زمان|مکان|ملکیت|1|"Dar ruz" = during the day.|"Dar ruz" means "during the day".
+"در شب" ___ را نشان می‌دهد.|زمان|مکان|ملکیت|1|"Dar shab" = at night.|"Dar shab" means "at night".
+"فردا" ___ است.|روز بعد|امروز|دیروز|1|"Fardâ" = tomorrow.|"Fardâ" means "tomorrow".
+"دیروز" ___ است.|روز قبل|فردا|امروز|1|"Diruz" = yesterday.|"Diruz" means "yesterday".
+"حالا" ___ است.|اکنون|بعد|قبل|1|"Hâlâ" = now.|"Hâlâ" means "now".
+"همیشه" ___ است.|هر وقت|گاهی|هرگز|1|"Hamishe" = always.|"Hamishe" means "always".
+"ممنون" ___ را نشان می‌دهد.|تشکر|معذرت|خوش آمد|1|"Mamnun" = thank you.|"Mamnun" is "thank you".
+"خوش آمدید" ___ را نشان می‌دهد.|خوش آمد|خداحافظی|تشکر|1|"Khosh âmadid" = welcome.|"Khosh âmadid" welcomes a guest.
+"بله" ___ است.|تأیید|نفی|پرسش|1|"Bale" = yes.|"Bale" means "yes".
+"نه" ___ است.|نفی|تأیید|پرسش|1|"Na" = no.|"Na" means "no".
+
+@sentences
+من هر صبح چای می‌خورم.|I drink tea every morning.|من هر صبح چای می‌خورم۔
+برادرم آلمانی یاد می‌گیرد.|My brother is learning German.|برادرم آلمانی یاد می‌گیرد۔
+ما جمعه به شیراز می‌رویم.|We go to Shiraz on Friday.|ما جمعه به شیراز می‌رویم۔
+کتاب روی میز است.|The book is on the table.|کتاب روی میز است۔
+او دیروز نامه نوشت.|He wrote a letter yesterday.|او دیروز نامه نوشت۔
+آیا می‌توانید کمک کنید؟|Can you help?|آیا می‌توانید کمک کنید؟
+دو قهوه و یک آب می‌خواهم.|I want two coffees and a water.|دو قهوه و یک آب می‌خواهم۔
+قطار ساعت هشت می‌رود.|The train leaves at eight.|قطار ساعت هشت می‌رود۔
+مادرم امروز ماهی می‌پزد.|My mother is cooking fish today.|مادرم امروز ماهی می‌پزد۔
+او سه زبان روان صحبت می‌کند.|He speaks three languages fluently.|او سه زبان روان صحبت می‌کند۔
+خانهٔ ما کوچک ولی تمیز است.|Our house is small but clean.|خانهٔ ما کوچک ولی تمیز است۔
+سؤال را کامل نفهمیدم.|I did not fully understand the question.|سؤال را کامل نفهمیدم۔
+امروز هوا خیلی خوب است.|The weather is very pleasant today.|امروز هوا خیلی خوب است۔
+فردا باید زود بیدار شوم.|I have to get up early tomorrow.|فردا باید زود بیدار شوم۔
+او در بیمارستان کار می‌کند.|She works in a hospital.|او در بیمارستان کار می‌کند۔
+ما جلوی مدرسه همدیگر را می‌بینیم.|We meet in front of the school.|ما جلوی مدرسه همدیگر را می‌بینیم۔
+او گوشی‌اش را در خانه جا گذاشت.|He forgot his phone at home.|او گوشی‌اش را در خانه جا گذاشت۔
+من امروز به اداره نمی‌روم.|I am not going to the office today.|من امروز به اداره نمی‌روم۔
+بچه‌ها در باغ فوتبال بازی می‌کنند.|The children play football in the garden.|بچه‌ها در باغ فوتبال بازی می‌کنند۔
+آیا می‌توانید پنجره را باز کنید؟|Can you open the window?|آیا می‌توانید پنجره را باز کنید؟
+امروز کار زیادی دارم.|I have a lot of work today.|امروز کار زیادی دارم۔
+پدرم روزنامه خواندن را دوست دارد.|My father likes reading newspapers.|پدرم روزنامه خواندن را دوست دارد۔
+غذا واقعاً خیلی خوشمزه است.|The food is really tasty.|غذا واقعاً خیلی خوشمزه است۔
+ما یک ساعت است صبر می‌کنیم.|We have been waiting for an hour.|ما یک ساعت است صبر می‌کنیم۔
+من برای کارم فارسی یاد می‌گیرم.|I learn Farsi for my job.|من برای کارم فارسی یاد می‌گیرم۔
+او اهل شهر کوچکی است.|She is from a small town.|او اهل شهر کوچکی است۔
+من از بازار نان و شیر می‌آورم.|I bring bread and milk from the market.|من از بازار نان و شیر می‌آورم۔
+او با اتوبوس به اداره می‌رود.|He goes to the office by bus.|او با اتوبوس به اداره می‌رود۔
+ما دیروز فیلم دیدیم.|We watched a film yesterday.|ما دیروز فیلم دیدیم۔
+امشب برایت پیام می‌فرستم.|I will send you a message tonight.|امشب برایت پیام می‌فرستم۔
+هتل از ایستگاه دور نیست.|The hotel is not far from the station.|هتل از ایستگاه دور نیست۔
+خواهرم پزشکی می‌خواند.|My sister studies medicine.|خواهرم پزشکی می‌خواند۔
+آخر هفته وقت ندارم.|I have no time at the weekend.|آخر هفته وقت ندارم۔
+او عصرها قهوه نمی‌خورد.|He does not drink coffee in the evening.|او عصرها قهوه نمی‌خورد۔
+ما دو بلیت به تهران می‌خواهیم.|We need two tickets to Tehran.|ما دو بلیت به تهران می‌خواهیم۔
+امتحان ساعت نه شروع می‌شود.|The exam starts at nine.|امتحان ساعت نه شروع می‌شود۔
+من کمی فارسی و انگلیسی صحبت می‌کنم.|I speak a little Farsi and English.|من کمی فارسی و انگلیسی صحبت می‌کنم۔
+دوستم به عنوان مهندس کار می‌کند.|My friend works as an engineer.|دوستم به عنوان مهندس کار می‌کند۔
+او در آشپزخانه به مادرش کمک می‌کند.|She helps her mother in the kitchen.|او در آشپزخانه به مادرش کمک می‌کند۔
+من هر عصر قدم می‌زنم.|I go for a walk every evening.|من هر عصر قدم می‌زنم۔
+
+@listening
+سلام، حال شما چطور است؟|salâm hâl-e shomâ chetor ast|Hello, how are you?|سلام، حال شما چطور است؟|سلام، شما کجا هستید؟|صبح بخیر، حال شما چطور است؟|1
+یک فنجان چای می‌خواهم.|yek fenjân chây mikhâham|I want a cup of tea.|یک فنجان چای می‌خواهم|یک فنجان قهوه می‌خواهم|یک لیوان آب می‌خواهم|1
+ایستگاه کجاست؟|istgâh kojâst|Where is the station?|ایستگاه کجاست؟|بازار کجاست؟|هتل کجاست؟|1
+اهل تهران هستم.|ahl-e tehrân hastam|I am from Tehran.|اهل تهران هستم|در تهران زندگی می‌کنم|به تهران می‌روم|1
+صورت حساب لطفاً.|surat hesâb lotfan|The bill, please.|صورت حساب لطفاً|منو لطفاً|رسید لطفاً|1
+این چند است؟|in chand ast|How much is this?|این چند است؟|این مال کیست؟|این چیست؟|1
+متوجه نشدم.|motavajjeh nashodam|I did not understand.|متوجه نشدم|نتوانستم بیایم|نتوانستم بشنوم|1
+آهسته‌تر بگویید.|âheste tar beguyid|Please speak slowly.|آهسته‌تر بگویید|بلندتر بگویید|نزدیک‌تر بیایید|1
+برادرم پزشک است.|barâdaram pezeshk ast|My brother is a doctor.|برادرم پزشک است|برادرم معلم است|پدرم پزشک است|1
+قطار ساعت هشت می‌رود.|ghatâr sâ'at hasht miravad|The train leaves at eight.|قطار ساعت هشت می‌رود|اتوبوس ساعت هشت می‌رود|قطار ساعت هشت می‌آید|1
+امروز وقت ندارم.|emruz vaght nadâram|I have no time today.|امروز وقت ندارم|امروز پول ندارم|امروز کار ندارم|1
+غذا خیلی خوشمزه است.|ghazâ kheyli khoshmaze ast|The food is very tasty.|غذا خیلی خوشمزه است|هوا خیلی خوب است|چای خیلی گرم است|1
+ما با هم فارسی یاد می‌گیریم.|mâ bâ ham fârsi yâd migirim|We learn Farsi together.|ما با هم فارسی یاد می‌گیریم|ما با هم فارسی حرف می‌زنیم|ما با هم کتاب می‌خوانیم|1
+برای دو شب اتاق می‌خواهم.|barâye do shab otâgh mikhâham|I need a room for two nights.|برای دو شب اتاق می‌خواهم|برای دو نفر میز می‌خواهم|برای یک شب اتاق می‌خواهم|1
+مادرم امروز ماهی می‌پزد.|mâdaram emruz mâhi mipazad|My mother cooks fish today.|مادرم امروز ماهی می‌پزد|مادرم امروز ماهی می‌آورد|پدرم امروز ماهی می‌پزد|1
+من هر عصر قدم می‌زنم.|man har asr ghadam mizanam|I walk every evening.|من هر عصر قدم می‌زنم|من هر صبح قدم می‌زنم|من هر عصر می‌خوابم|1
+سایز کوچک‌تر دارید؟|sâyz-e kuchaktar dârid|Do you have a smaller size?|سایز کوچک‌تر دارید؟|سایز بزرگ‌تر دارید؟|رنگ دیگری دارید؟|1
+با کارت پرداخت می‌کنم.|bâ kart pardâkht mikonam|I pay by card.|با کارت پرداخت می‌کنم|نقد پرداخت می‌کنم|فردا پرداخت می‌کنم|1
+خیلی متأسفم.|kheyli motassefam|I am very sorry.|خیلی متأسفم|خیلی خوشحالم|خیلی می‌ترسم|1
+فردا به شما زنگ می‌زنم.|fardâ be shomâ zang mizanam|I will call you tomorrow.|فردا به شما زنگ می‌زنم|امروز به شما زنگ می‌زنم|فردا شما را می‌بینم|1
+
+@stories
+اولین روز در تهران|🚆|علی صبح به تهران رسید.\nاو با تاکسی به ___ (1) رفت.\nدر اتاق ___ (2) نوشید.\nسپس به ___ (3) زنگ زد.|Ali reaches Tehran in the morning. He goes by taxi to the hotel. In the room he drinks tea. Then he calls his family.|هتل/ایستگاه/بازار=0;چای/کتاب/نان=0;مادرش/مغازه/کلاس=0
+خرید در بازار|🛒|سارا جمعه به ___ (1) رفت.\nنان، شیر و ___ (2) خرید.\nپرداخت را با ___ (3) انجام داد.|Sara goes shopping on Friday. She buys bread, milk and apples. She pays by card.|بازار/مدرسه/اداره=0;سیب/کتاب/صندلی=0;کارت/کاغذ/آب=0
+گذرنامهٔ گم شده|🛂|احمد ___ (1) را می‌گشت.\nاو از یک ___ (2) کمک خواست.\nخوشبختانه در ___ (3) پیدا شد.|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is found in his bag.|گذرنامه/کلید/کتاب=0;پلیس/معلم/همسایه=0;کیف/آشپزخانه/مدرسه=0
+مراجعه به پزشک|🏥|حال بلال ___ (1) نبود.\nاو پیش ___ (2) رفت.\nپزشک دارو و ___ (3) داد.|Bilal is unwell. He goes to the doctor. The doctor gives medicine and rest.|خوب/بد/گرسنه=0;پزشک/نانوا/راننده=0;استراحت/پول/کتاب=0
+کلاس فارسی|📚|نادیه سه ماه است ___ (1) یاد می‌گیرد.\nاو هر شب با ___ (2) تمرین می‌کند.\n___ (3) می‌گوید خوب صحبت می‌کند.|Nadia has been learning Farsi for three months. She practises every evening with books. Her teacher says she speaks well.|فارسی/فرانسوی/عربی=0;کتاب/عکس/کارت=0;معلمش/برادرش/همسایه=0
+غذای خانوادگی|👨‍👩‍👧‍👦|جمعه همهٔ ___ (1) آمدند.\nمادربزرگ ___ (2) پخت.\nهمه با هم خوردند و خیلی ___ (3).|On Friday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|خانواده/اداره/کلاس=0;برنج/آب/کاغذ=0;خندیدند/کار کردند/خوابیدند=0
+در ایستگاه|🚉|قطار ده دقیقه ___ (1) بود.\nحسن از دکه ___ (2) خرید.\nبعد در ___ (3) نشست.|The train is ten minutes late. Hassan buys a newspaper. Then he sits in the train.|تأخیر/تمیز/آماده=0;روزنامه/رسید/کلید=0;قطار/اتوبوس/هواپیما=0
+شب زمستانی|❄️|در ژانویه هوا خیلی ___ (1) است.\nعایشه ___ (2) گرم پوشید.\nاو ___ (3) گرم نوشید و کتاب خواند.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|سرد/گرم/بارانی=0;کت/پیراهن/کفش=0;چای/آب/آبمیوه=0
+غذا در هتل|🍽️|گارسون ___ (1) را آورد.\nعمر ماهی و ___ (2) سفارش داد.\nدر آخر ___ (3) خواست.|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|منو/صندلی/نور=0;برنج/میز/پنجره=0;صورت حساب/کلید/رسید=0
+دوستان تازه|🤝|لنا و ثنا در ___ (1) همدیگر را دیدند.\nدربارهٔ موسیقی و ___ (2) حرف زدند.\nدر آخر ___ (3) را عوض کردند.|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|باغ/اداره/قطار=0;سفر/رسید/امتحان=0;شماره/آدرس/کتاب=0
+
+@idioms
+نور چشمی|nur-e cheshmi|The apple of one's eye.|نور چشمی|پسرش نور چشمی اوست۔
+دست روی دل گذاشتن|dast ruye del gozâshtan|To speak honestly.|صادقانه گفتن|دست روی دل بگذار و راست بگو۔
+خون کسی را به جوش آوردن|khun-e kasi râ be jush âvardan|To make someone furious.|به خشم آوردن|سروصدای بچه‌ها خونم را به جوش آورد۔
+از آب کره گرفتن|az âb kare gereftan|To profit out of nothing.|سود بی‌جا بردن|او حتی از آب هم کره می‌گیرد۔
+چشم بستن|cheshm bastan|To ignore the obvious.|نادیده گرفتن|تابلو جلویت است، چشم نبند۔
+آبرو ریختن|âberu rikhtan|To lose face.|بی‌آبرو شدن|با دروغ گفتن آبرویش ریخت۔
+آسمان ریختن|âsemân rikhtan|To make a huge fuss.|سروصدای الکی|برای حرف کوچک آسمان ریخت۔
+کاسهٔ چیزی زیر نیم‌کاسه بودن|kâse-ye chizi zir-e nim kâse budan|Something suspicious.|چیز مشکوک|این معامله صاف نیست، کاسه‌ای زیر نیم‌کاسه است۔
+از دست رفتن|az dast raftan|To lose control.|از کنترل خارج شدن|کار از دست رفت۔
+وقت را غنیمت شمردن|vaght râ ghanimat shemordan|To make the most of time.|قدر وقت دانستن|وقت را غنیمت بشمار، دوباره نمی‌آید۔
+دل باز کردن|del bâz kardan|To speak one's mind.|دل باز کردن|دلت را باز کن، نترس۔
+خانه خراب|khâne kharâb|A ruined household.|خانوادهٔ ویران|سیل خانه‌های ده را خراب کرد۔
+آب شدن|âb shodan|To be deeply ashamed.|شرمنده شدن|جلوی همه آب شد۔
+حرف دهان|harf-e dahân|A spoken word must be kept.|قول داده شده|حرف دهان را پس نمی‌گیرند۔
+آبروی کسی|âberuye kasi|A matter of honour.|مسئلهٔ حیثیت|حالا این آبروی خانواده است۔
+چوب لای چرخ گذاشتن|chub lâye charkh gozâshtan|To put obstacles in someone's way.|مانع شدن|او چوب لای چرخ ما گذاشت۔
+دندان نشان دادن|dandân neshân dâdan|To threaten someone.|تهدید کردن|او دندان نشان داد و همه ساکت شدند۔
+نور چشم کسی شدن|nur-e cheshm-e kasi shodan|To become someone's favourite.|عزیز کسی شدن|او نور چشم معلمش شد۔
+دل بزرگ داشتن|del-e bozorg dâshtan|To be generous and open-hearted.|دل بزرگ داشتن|دل بزرگی دارد، کینه نگه نمی‌دارد۔
+در یک چشم به هم زدن|dar yek cheshm be ham zadan|In the blink of an eye.|خیلی سریع|وقت در یک چشم به هم زدن گذشت۔
+خون گریستن|khun gerestan|To cry bitterly.|خیلی گریه کردن|بعد از شکست خون گریست۔
+سنگ دل|sang-e del|Hard-hearted.|سنگ‌دل|سنگ‌دل به حرف کسی گوش نمی‌دهد۔
+دل پاک|del-e pâk|Pure-hearted.|پاک‌دل|او دل پاکی دارد، کینه ندارد۔
+دست خود را بریدن|dast-e khod râ boridan|To harm oneself.|به خود ضرر زدن|با دروغ دست خودش را برید۔
+دهان شیرین|dahân-e shirin|Sweet-talker.|زبان‌باز|به دهان شیرین زود اعتماد نکن۔
+
+@alphabet
+ا|alef|alef|آب
+ب|be|be|باغ
+پ|pe|pe|پدر
+ت|te|te|تاریخ
+ث|se|se|ثابت
+ج|jim|jim|جسم
+چ|che|che|چای
+ح|he-ye jimi|he|حکیم
+خ|khe|khe|خانه
+د|dâl|dâl|در
+ذ|zâl|zâl|ذکر
+ر|re|re|رنگ
+ز|ze|ze|زبان
+ژ|zhe|zhe|ژاله
+س|sin|sin|صبح
+ش|shin|shin|شب
+ص|sâd|sâd|صابن
+ض|zâd|zâd|ضرورت
+ط|tâ|tâ|طریق
+ظ|zâ|zâ|ظالم
+ع|eyn|eyn|عید
+غ|gheyn|gheyn|غریب
+ف|fe|fe|فرش
+ق|ghâf|ghâf|قیمت
+ک|kâf|kâf|کتاب
+گ|gâf|gâf|گوش
+ل|lâm|lâm|لبخند
+م|mim|mim|مادر
+ن|nun|nun|نان
+و|vâv|vâv|وقت
+ه|he|he|هوا
+ی|ye|ye|یک

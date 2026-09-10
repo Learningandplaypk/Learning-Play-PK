@@ -7,6 +7,8 @@ import { ArrowRight, Check, Coins, Flame, Gift, GraduationCap, Quote, Target, Za
 import { Button, ButtonLink, Card, Chip, Progress, SectionHeading } from "@/components/ui";
 import { usePlayer } from "@/lib/store";
 import { getGameData } from "@/lib/games-data";
+import { continueLang } from "@/lib/lang-progress";
+import { getLangMeta } from "@/lib/lang-registry";
 import { levelFromXp, levelTitle } from "@/lib/gamification";
 import { fmt, pktDayKey } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
@@ -24,7 +26,7 @@ const HOW = [
 ];
 
 const ZONES: Array<{ id: ZoneKey; title: string; line: string; count: string; href: string }> = [
-  { id: "learn", title: "Learn", line: "8 zubanein — words, grammar, listening, pronunciation.", count: "8 languages", href: "/learn" },
+  { id: "learn", title: "Learn", line: "21 zubanein — words, grammar, listening, pronunciation.", count: "21 languages", href: "/learn" },
   { id: "brain", title: "Brain", line: "Memory, Sudoku, 2048, Chess — dimaag ki training.", count: "10 games", href: "/brain" },
   { id: "quiz", title: "Quiz", line: "GK, Pakistan, Islam, Science aur Millionaire.", count: "10 topics", href: "/quiz" },
   { id: "fun", title: "Fun", line: "Snake, Tetris, Racing, Fruit Ninja — pure masti.", count: "15 games", href: "/fun" },
@@ -37,9 +39,9 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Kya yeh bilkul free hai?", a: "Haan — sach mein. Saare 43 games, saare levels aur saari 8 zubanein free hain, bina kisi daily limit ke. Premium (Rs. 299/mahina) sirf tajurba behtar karta hai: zero ads, unlimited hearts, progress report, certificate." },
+  { q: "Kya yeh bilkul free hai?", a: "Haan — sach mein. Saare 43 games, saare levels aur saari 21 zubanein free hain, bina kisi daily limit ke. Premium (Rs. 299/mahina) sirf tajurba behtar karta hai: zero ads, unlimited hearts, progress report, certificate." },
   { q: "Mobile par chalega?", a: "Bilkul. Mobile-first PWA hai — Android Chrome se \"Add to Home Screen\" karo aur app ki tarah chalta hai, offline bhi." },
-  { q: "Kaun si languages hain?", a: "English (full course) + Arabic (Quranic vocabulary samet), Turkish, Chinese, French, Spanish, Korean aur Japanese — sab Urdu meanings ke sath." },
+  { q: "Kaun si languages hain?", a: "English (full course) + Urdu, Arabic (Quranic vocabulary samet), German, French, Spanish, Turkish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Hindi, Bengali, Malay, Persian, Punjabi, Pashto, Sindhi aur Balochi — sab Urdu meanings ke sath." },
   { q: "Progress save hota hai?", a: "Bina account bhi progress browser mein save hoti hai. Login karo toh cloud (Firestore) mein save hoti hai aur leaderboard par aati hai." },
 ];
 
@@ -47,14 +49,37 @@ const FAQS = [
 
 function ContinueCard() {
   const results = usePlayer((s) => s.results);
+  const lastLearnLang = usePlayer((s) => s.lastLearnLang);
+  const learningLanguages = usePlayer((s) => s.learningLanguages);
   const last = results[0];
+  // "Continue learning" always points back into the language you last played
+  const learnLang = continueLang(lastLearnLang, learningLanguages);
   const href = useMemo(() => {
-    if (!last) return "/fun";
-    if (last.zone === "learn") return `/learn/english/${last.slug}`;
+    if (!last) return `/learn/${learnLang}`;
+    if (last.zone === "learn") return `/learn/${learnLang}/${last.slug}`;
     return `/${last.zone}/${last.slug}`;
-  }, [last]);
-  if (!last) return null;
-  const meta = getGameData(last.slug);
+  }, [last, learnLang]);
+  const meta = last ? getGameData(last.slug) : undefined;
+  const learnMeta = getLangMeta(learnLang);
+  if (!last) {
+    return (
+      <Card className="mb-10 flex flex-wrap items-center justify-between gap-4 p-4 sm:p-5">
+        <div className="flex min-w-0 items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-tint">
+            <ZoneArt zone="learn" className="h-7 w-7" />
+          </span>
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted">Continue learning</p>
+            <p className="truncate font-display text-base font-extrabold text-fg">{learnMeta?.name ?? "English"}</p>
+            <p className="text-xs text-muted">Words, phrases aur games — 5 minute mein ek lesson.</p>
+          </div>
+        </div>
+        <Link href={href} className="btn btn-primary btn-sm">
+          Shuru karo <ArrowRight size={16} strokeWidth={2.4} />
+        </Link>
+      </Card>
+    );
+  }
 
   return (
     <Card className="mb-10 flex flex-wrap items-center justify-between gap-4 p-4 sm:p-5">
@@ -66,6 +91,7 @@ function ContinueCard() {
           <p className="text-xs font-semibold uppercase tracking-wider text-muted">Continue where you left</p>
           <p className="truncate font-display text-base font-extrabold text-fg">{meta?.title ?? last.slug}</p>
           <p className="text-xs text-muted">
+            {last.zone === "learn" && <span className="me-1">{learnMeta?.name} ·</span>}
             Last score <span className="tnum">{fmt(last.score)}</span> · +<span className="tnum">{last.xp}</span> XP
           </p>
         </div>

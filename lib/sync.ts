@@ -69,6 +69,11 @@ export async function pushProgressToFirestore(outcome: LastGameOutcome) {
         themeSkin: store.themeSkin,
         heartsState: store.heartsState,
         allowance: store.allowance,
+        lang: store.lang,
+        onboarded: store.onboarded,
+        learningLanguages: store.learningLanguages.slice(0, 24),
+        langProgress: store.langProgress,
+        lastLearnLang: store.lastLearnLang,
         lastActive: serverTimestamp(),
         updatedAt: serverTimestamp(),
       });
@@ -77,6 +82,37 @@ export async function pushProgressToFirestore(outcome: LastGameOutcome) {
     await submitLeaderboardScore(outcome.slug, outcome.score);
   } catch (e) {
     console.warn("progress sync skipped", e);
+  }
+}
+
+/**
+ * Language preferences (UI locale + picked learning languages) are mirrored to
+ * users/{uid} so a learner who reinstalls the PWA or signs in on another device
+ * keeps the same setup. Silently no-ops for guests.
+ */
+export async function pushLanguagePrefs(): Promise<void> {
+  const store = usePlayer.getState();
+  if (!isFirebaseConfigured || !store.uid || store.uid.startsWith("guest")) return;
+  try {
+    const { doc, getDoc, setDoc, updateDoc, serverTimestamp } = await fsModOf();
+    const db = await fbDb();
+    const ref = doc(db, "users", store.uid);
+    const payload = {
+      lang: store.lang,
+      onboarded: store.onboarded,
+      learningLanguages: store.learningLanguages.slice(0, 24),
+      langProgress: store.langProgress,
+      lastLearnLang: store.lastLearnLang,
+      updatedAt: serverTimestamp(),
+    };
+    const snap = await getDoc(ref);
+    if (!snap.exists()) {
+      await setDoc(ref, { ...playerSnapshot(store), lastActive: serverTimestamp(), ...payload });
+    } else {
+      await updateDoc(ref, payload);
+    }
+  } catch (e) {
+    console.warn("language prefs sync skipped", e);
   }
 }
 

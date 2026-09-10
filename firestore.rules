@@ -29,7 +29,9 @@ service cloud.firestore {
            'updatedAt','createdAt','rewards','lastActive',
            // monetization rebuild — client-writable comfort state
            'hearts','heartsState','heartsAt','mistakes','frame','themeSkin','cosmetics','downloads',
-           'premiumCycle','allowance','freezesUsedThisMonth','repairsUsedThisMonth','certificates'])
+           'premiumCycle','allowance','freezesUsedThisMonth','repairsUsedThisMonth','certificates',
+           // 21-language rebuild — UI locale + the learner's language list
+           'learningLanguages','langProgress','lastLearnLang','onboarded'])
         && request.resource.data.xp is int && request.resource.data.xp >= 0
         && request.resource.data.xp <= 5000000
         && request.resource.data.coins is int && request.resource.data.coins >= 0

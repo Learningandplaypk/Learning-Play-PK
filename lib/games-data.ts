@@ -12,18 +12,39 @@ export type GameData = {
   langs?: string[];
 };
 
-const ALL_LANGS = ["english", "arabic", "turkish", "chinese", "french", "spanish", "korean", "japanese"];
-const EN_ONLY = ["english"];
+import MANIFEST from "@/data/langs/_manifest.json";
+import { LANG_SLUGS } from "./lang-registry";
+
+/**
+ * Which languages each lesson can actually run in is derived from the built
+ * content manifest, not hardcoded: a language without authored grammar never
+ * gets a Grammar Quest route, so the sitemap and static params stay honest.
+ *
+ * English is the reference pack (TS, not JSON) and has every content type.
+ */
+type CountKey = "words" | "phrases" | "grammar" | "sentences" | "listening" | "stories" | "idioms";
+const COUNTS = MANIFEST as Record<string, Partial<Record<CountKey, number>>>;
+
+function langsHaving(...keys: CountKey[]): string[] {
+  return ["english", ...LANG_SLUGS.filter((slug) => slug !== "english" && keys.some((k) => (COUNTS[slug]?.[k] ?? 0) > 0))];
+}
+
+const WORD_LANGS = langsHaving("words");
+const SENTENCE_LANGS = langsHaving("sentences", "phrases");
+const LISTENING_LANGS = langsHaving("listening", "words");
+const GRAMMAR_LANGS = langsHaving("grammar");
+const IDIOM_LANGS = langsHaving("idioms");
+const STORY_LANGS = langsHaving("stories");
 
 export const LEARN_GAME_DATA: GameData[] = [
-  { slug: "word-builder", zone: "learn", title: "Word Builder", desc: "Letter tiles se word banao — Urdu meaning dekh kar.", emoji: "🔤", howTo: ["Urdu meaning parho", "Letter tiles tap karke word banao", "8 words theek banao"], langs: ALL_LANGS },
-  { slug: "grammar-quest", zone: "learn", title: "Grammar Quest", desc: "RPG battle! Sahi jawab se monster ko hit karo.", emoji: "⚔️", howTo: ["Sahi jawab chuno — monster ko damage", "Streak = double damage", "3 galtiyan = khatam"], langs: EN_ONLY },
-  { slug: "vocab-battle", zone: "learn", title: "Vocabulary Battle", desc: "Timer ke against word-meaning pairs milao.", emoji: "🃏", howTo: ["Word aur Urdu meaning match karo", "45 sec mein 5 pairs", "3 rounds"], langs: ALL_LANGS },
-  { slug: "sentence-puzzle", zone: "learn", title: "Sentence Puzzle", desc: "Jumbled words ko sahi tarteeb mein lagao.", emoji: "🧩", howTo: ["Urdu translation parho", "Words tap karke jumla banao", "Undo bhi hota hai"], langs: ALL_LANGS },
-  { slug: "listening-challenge", zone: "learn", title: "Listening Challenge", desc: "Sun kar sahi word/jumla pehchano.", emoji: "🎧", howTo: ["Speaker tap karke suno", "Sahi option chuno", "Kam replays = zyada score"], langs: ALL_LANGS },
-  { slug: "idiom-master", zone: "learn", title: "Idiom Master", desc: "English idioms ke matlab pehchano.", emoji: "🗣️", howTo: ["Idiom parho", "Sahi matlab chuno", "Example sath milega"], langs: EN_ONLY },
-  { slug: "story-builder", zone: "learn", title: "Story Builder", desc: "Kahani ke blanks bharo.", emoji: "📖", howTo: ["Blank ke liye word chuno", "2 stories per round", "Perfect = bonus"], langs: EN_ONLY },
-  { slug: "pronunciation", zone: "learn", title: "Pronunciation", desc: "Word ko clearly bolein — mic score dega.", emoji: "🎤", howTo: ["Word parho", "Mic tap karke bolein", "72%+ = pass"], langs: ALL_LANGS },
+  { slug: "word-builder", zone: "learn", title: "Word Builder", desc: "Letter tiles se word banao — Urdu meaning dekh kar.", emoji: "🔤", howTo: ["Urdu meaning parho", "Letter tiles tap karke word banao", "8 words theek banao"], langs: WORD_LANGS },
+  { slug: "grammar-quest", zone: "learn", title: "Grammar Quest", desc: "RPG battle! Sahi jawab se monster ko hit karo.", emoji: "⚔️", howTo: ["Sahi jawab chuno — monster ko damage", "Streak = double damage", "3 galtiyan = khatam"], langs: GRAMMAR_LANGS },
+  { slug: "vocab-battle", zone: "learn", title: "Vocabulary Battle", desc: "Timer ke against word-meaning pairs milao.", emoji: "🃏", howTo: ["Word aur Urdu meaning match karo", "45 sec mein 5 pairs", "3 rounds"], langs: WORD_LANGS },
+  { slug: "sentence-puzzle", zone: "learn", title: "Sentence Puzzle", desc: "Jumbled words ko sahi tarteeb mein lagao.", emoji: "🧩", howTo: ["Urdu translation parho", "Words tap karke jumla banao", "Undo bhi hota hai"], langs: SENTENCE_LANGS },
+  { slug: "listening-challenge", zone: "learn", title: "Listening Challenge", desc: "Sun kar sahi word/jumla pehchano.", emoji: "🎧", howTo: ["Speaker tap karke suno", "Sahi option chuno", "Kam replays = zyada score"], langs: LISTENING_LANGS },
+  { slug: "idiom-master", zone: "learn", title: "Idiom Master", desc: "Idioms aur mahawaron ke matlab pehchano.", emoji: "🗣️", howTo: ["Idiom parho", "Sahi matlab chuno", "Example sath milega"], langs: IDIOM_LANGS },
+  { slug: "story-builder", zone: "learn", title: "Story Builder", desc: "Kahani ke blanks bharo.", emoji: "📖", howTo: ["Blank ke liye word chuno", "2 stories per round", "Perfect = bonus"], langs: STORY_LANGS },
+  { slug: "pronunciation", zone: "learn", title: "Pronunciation", desc: "Word ko clearly bolein — mic score dega.", emoji: "🎤", howTo: ["Word parho", "Mic tap karke bolein", "72%+ = pass"], langs: WORD_LANGS },
 ];
 
 export const BRAIN_GAME_DATA: GameData[] = [

@@ -29,9 +29,9 @@ import { addHearts, freshHearts, settleHearts, spendHeart, type HeartsState } fr
 import { recordMistake, recordReviewHit, type Mistake } from "./mistakes";
 import { BADGES } from "@/data/badges";
 import { pktDayKey } from "./utils";
-import type { GameRecord, LangKey, ShopItem, Zone } from "./store-types";
+import type { GameRecord, LangKey, LangProgress, ShopItem, Zone } from "./store-types";
 
-export type { GameRecord, LangKey, ShopItem, Zone };
+export type { GameRecord, LangKey, LangProgress, ShopItem, Zone };
 
 export type PlayerState = {
   /* identity */
@@ -73,10 +73,17 @@ export type PlayerState = {
   themeSkin: string;
   /* settings */
   sound: boolean;
+  /** UI language — English by default, never inferred from the browser. */
   lang: LangKey;
   lowQuality: boolean;
   consentAds: boolean | null;
+  /** First-visit language picker answered (or skipped). */
   onboarded: boolean;
+  /* learning languages the user picked */
+  learningLanguages: string[];
+  langProgress: Record<string, LangProgress>;
+  /** Language of the last lesson played — drives "Continue learning". */
+  lastLearnLang: string | null;
 };
 
 export type LastGameOutcome = {
@@ -98,7 +105,10 @@ type Store = PlayerState & {
   setPlayer: (p: Partial<PlayerState>) => void;
   toast: (emoji: string, title: string, body?: string) => void;
   dismissToast: (id: number) => void;
-  submitGame: (args: { slug: string; zone: Zone; result: GameResultInput; flag?: string; words?: string[]; quizCorrect?: number }) => LastGameOutcome;
+  submitGame: (args: { slug: string; zone: Zone; result: GameResultInput; flag?: string; words?: string[]; quizCorrect?: number; lang?: string }) => LastGameOutcome;
+  addLearningLanguage: (slug: string) => string[];
+  removeLearningLanguage: (slug: string) => string[];
+  setLearningLanguages: (slugs: string[]) => string[];
   spendCoins: (amount: number) => boolean;
   buyItem: (item: ShopItem) => boolean;
   claimDailyReward: () => { coins: number; xp: number; freeze: boolean; label: string } | null;
@@ -160,10 +170,13 @@ const initialPlayer: PlayerState = {
   frame: "none",
   themeSkin: "default",
   sound: false,
-  lang: "roman",
+  lang: "en",
   lowQuality: false,
   consentAds: null,
   onboarded: false,
+  learningLanguages: ["english"],
+  langProgress: {},
+  lastLearnLang: null,
 };
 
 export const usePlayer = create<Store>()(
@@ -181,7 +194,7 @@ export const usePlayer = create<Store>()(
       },
       dismissToast: (id) => set((s) => ({ toasts: s.toasts.filter((t) => t.id !== id) })),
 
-      submitGame: ({ slug, zone, result, flag, words, quizCorrect }) => {
+      submitGame: ({ slug, zone, result, flag, words, quizCorrect, lang }) => {
         const s = get();
         const today = pktDayKey();
         const premium = isPremiumActive(
@@ -240,6 +253,25 @@ export const usePlayer = create<Store>()(
           perfect,
         };
 
+        // per-language progress: only "learn" zone games belong to a language
+        const learnLang = zone === "learn" ? lang || "english" : null;
+        let langProgress = s.langProgress;
+        let lastLearnLang = s.lastLearnLang;
+        if (learnLang) {
+          const prev = s.langProgress[learnLang] ?? { xp: 0, words: 0, plays: 0, last: 0 };
+          const addedWords = Math.max(0, wordsLearned.length - s.wordsLearned.length);
+          langProgress = {
+            ...s.langProgress,
+            [learnLang]: {
+              xp: prev.xp + xp,
+              words: prev.words + addedWords,
+              plays: prev.plays + 1,
+              last: Date.now(),
+            },
+          };
+          lastLearnLang = learnLang;
+        }
+
         set({
           xp: totalXp,
           coins: s.coins + coins,
@@ -254,6 +286,8 @@ export const usePlayer = create<Store>()(
           perfectScores,
           quizCorrect: quizCorrectTotal,
           badges: [...s.badges, ...newBadges.map((b) => b.id)],
+          langProgress,
+          lastLearnLang,
           outcome,
         });
         return outcome;
@@ -334,6 +368,29 @@ export const usePlayer = create<Store>()(
         return monthlyAllowance(s.allowance, s.isPremium());
       },
 
+      addLearningLanguage: (slug) => {
+        const s = get();
+        if (s.learningLanguages.includes(slug)) return s.learningLanguages;
+        // keep the registry order so the hub always reads the same way
+        const next = Array.from(new Set([...s.learningLanguages, slug]));
+        set({ learningLanguages: next });
+        return next;
+      },
+
+      removeLearningLanguage: (slug) => {
+        const s = get();
+        // English is the floor — the hub always shows at least one language.
+        const next = s.learningLanguages.filter((l) => l !== slug);
+        set({ learningLanguages: next.length ? next : ["english"] });
+        return next.length ? next : ["english"];
+      },
+
+      setLearningLanguages: (slugs) => {
+        const next = Array.from(new Set(slugs.filter(Boolean)));
+        set({ learningLanguages: next.length ? next : ["english"] });
+        return next.length ? next : ["english"];
+      },
+
       mergeGuest: (guest) => {
         const s = get();
         set({
@@ -353,11 +410,14 @@ export const usePlayer = create<Store>()(
     }),
     {
       name: "learnplay-player",
-      version: 2,
+      version: 3,
       /**
        * v2 — monetization rebuild: drops the dead `daily` usage counters (the
        * 5-games / 3-lessons limits no longer exist) and seeds hearts, the
        * monthly freeze/repair allowance, mistakes and cosmetics.
+       * v3 — i18n + My Languages: default UI locale becomes English (a saved
+       * choice is always kept), and the learner's language list / per-language
+       * progress are seeded.
        */
       migrate: (persisted) => {
         const s = persisted as Partial<PlayerState> & { uid?: string | null; daily?: unknown };
@@ -373,6 +433,13 @@ export const usePlayer = create<Store>()(
           mistakes: s.mistakes ?? [],
           frame: s.frame ?? "none",
           themeSkin: s.themeSkin ?? "default",
+          lang: s.lang === "ur" || s.lang === "roman" ? s.lang : "en",
+          learningLanguages:
+            Array.isArray(s.learningLanguages) && s.learningLanguages.length
+              ? s.learningLanguages
+              : ["english"],
+          langProgress: s.langProgress ?? {},
+          lastLearnLang: s.lastLearnLang ?? null,
         } as PlayerState;
       },
       // rehydrate manually after mount (see Providers) — avoids SSR/CSR hydration mismatch
@@ -417,6 +484,11 @@ export function playerSnapshot(s: PlayerState): Partial<PlayerState> {
     themeSkin: s.themeSkin,
     heartsState: s.heartsState,
     allowance: s.allowance,
+    lang: s.lang,
+    onboarded: s.onboarded,
+    learningLanguages: s.learningLanguages.slice(0, 24),
+    langProgress: s.langProgress,
+    lastLearnLang: s.lastLearnLang,
   };
 }
 

@@ -1,0 +1,670 @@
+# Portuguese — Brazil (Português do Brasil) — authored source for data/langs/portuguese.json
+# Latin script. Romanization = spelling plus stress marks, which is how Brazilian
+# learners write phonetics anyway (á â ã à é ê í ó ô õ ú ü ç).
+
+@info
+romanization|Brazilian spelling with stress marks (á, â, ã, é, ê, í, ó, ô, õ, ú); nh = nya, lh = lya, ch = sha, j = zha.
+alphabet.title|O alfabeto português
+alphabet.intro|26 letras mais ç e os dígrafos nh, lh e ch. As vogais nasais (ã, õ) são típicas do português.
+
+@frames
+greetings|Diga: {s}.|Say: {en}.
+numbers|Tenho {s} maçãs.|I have {en} apples.
+family|Esta é {s}.|This is my {en}.
+food|Eu gosto de {s}.|I like {en}.
+travel|Onde fica {s}?|Where is the {en}?
+time|Vou à escola {s}.|I go to school {en}.
+colors|O céu é {s}.|The sky is {en}.
+body|{s} dói.|My {en} hurts.
+home|Aqui está {s}.|Here is the {en}.
+work|Aqui está {s}.|Here is the {en}.
+school|Aqui está {s}.|Here is the {en}.
+shopping|Aqui está {s}.|Here is the {en}.
+emotions|Sinto {s}.|I feel {en}.
+verbs|Preciso {s} hoje.|This means: {en}.
+adjectives|A casa é {s}.|The house is {en}.
+
+@words
+hello|olá|olá
+goodbye|tchau|tchau
+good morning|bom dia|bong jia
+good evening|boa tarde|boa tardchi
+good night|boa noite|boa noitchi
+thank you|obrigado|obrigadu
+please|por favor|por favor
+sorry|desculpe|deskulpchi
+excuse me|com licença|kong lisensa
+yes|sim|sing
+no|não|nong
+welcome|bem-vindo|beng vingu
+how are you|como você está?|komu vosê istá
+my name is|meu nome é|meu nomi é||Meu nome é Rafael.|My name is Rafael.
+nice to meet you|prazer|prazer
+see you later|até depois|até depois
+good luck|boa sorte|boa sorthi
+congratulations|parabéns|parabengs
+help|ajuda|ajuda
+of course|claro|klaru
+zero|zero|zeru||Escreva zero na conta.|Write a zero in the calculation.
+one|um|ung
+two|dois|dois
+three|três|tres
+four|quatro|kwatru
+five|cinco|singku
+six|seis|seis
+seven|sete|setchi
+eight|oito|oitu
+nine|nove|novi
+ten|dez|des
+eleven|onze|onzi
+twelve|doze|dozi
+thirteen|treze|trezi
+fourteen|catorze|katórzi
+fifteen|quinze|kingzi
+twenty|vinte|vingtchi
+thirty|trinta|tringta
+forty|quarenta|kwarengta
+fifty|cinquenta|singkwengta
+hundred|cem|seg
+thousand|mil|miw
+first|primeiro|primeiru||Esta é a primeira lição.|This is the first lesson.
+second|segundo|segungdu||Este é o segundo quarto.|This is the second room.
+half|meio|meiu||Meio copo de água.|Half a glass of water.
+mother|mãe|mãe|minha mãe
+father|pai|pai|meu pai
+brother|irmão|irmaung|meu irmão
+sister|irmã|irma|minha irmã
+son|filho|filhu|meu filho
+daughter|filha|filia|minha filha
+child|criança|kriansa|esta criança
+baby|bebê|bebe|este bebê
+family|família|familia|minha família
+husband|marido|maridu|meu marido
+wife|esposa|espoza|minha esposa
+uncle|tio|tiu|meu tio
+aunt|tia|tia|minha tia
+grandfather|avô|avô|meu avô
+grandmother|avó|avó|minha avó
+cousin|primo|primu|meu primo
+nephew|sobrinho|sobrinhu|meu sobrinho
+friend|amigo|amigu|meu amigo
+neighbour|vizinho|vizinhu|meu vizinho
+parent|pais|pais|meus pais
+water|água|água
+bread|pão|pang
+rice|arroz|arrós
+milk|leite|leitchi
+tea|chá|chá
+sugar|açúcar|asukar
+salt|sal|saw
+egg|ovo|ovu
+meat|carne|karni
+chicken|frango|frangu
+fish|peixe|peichi
+apple|maçã|masa
+banana|banana|banana
+mango|manga|manga
+orange (fruit)|laranja|laranja
+grapes|uvas|uvas
+lemon|limão|limaung
+tomato|tomate|tomatchi
+onion|cebola|sebola
+potato|batata|batata
+carrot|cenoura|senoura
+oil|óleo|óliu
+butter|manteiga|manteiga
+honey|mel|mew
+juice|suco|suku
+coffee|café|kafé
+soup|sopa|sopa
+breakfast|café da manhã|kafé da manhang
+lunch|almoço|almosu
+dinner|jantar|jangtar
+car|carro|karru
+bus|ônibus|ônibus
+train|trem|treg
+airplane|avião|aviang
+bicycle|bicicleta|bisikleta
+road|estrada|istrada
+street|rua|rua
+bridge|ponte|pongchi
+station|estação|istasang
+airport|aeroporto|aeroportu
+ticket|bilhete|bilhetchi
+map|mapa|mapa
+city|cidade|sidadi
+village|vila|vila
+country|país|país
+hotel|hotel|otew
+journey|viagem|viageng
+luggage|bagagem|bagageng
+driver|motorista|motorista
+passport|passaporte|passaportchi
+time|tempo|tengu||O tempo passa muito rápido.|Time passes very quickly.
+day|dia|jia||Tome o remédio duas vezes por dia.|Take the medicine twice a day.
+night|noite|noitchi||À noite o céu fica limpo.|The sky is clear at night.
+morning|manhã|manhang
+evening|tarde|tardchi
+week|semana|semana
+month|mês|mes
+year|ano|anu
+hour|hora|ora
+minute|minuto|minutu
+today|hoje|oji
+tomorrow|amanhã|amanhang
+yesterday|ontem|onteng
+now|agora|agora
+later|depois|depois
+early|cedo|sedu
+late|atrasado|atrazadu
+always|sempre|sempri
+sometimes|às vezes|as vezi
+never|nunca|nungka
+color|cor|kor||A cor deste tecido é escura.|The color of this cloth is dark.
+red|vermelho|vermelhu
+blue|azul|azuw
+green|verde|verji
+yellow|amarelo|amarelu
+black|preto|pretu
+white|branco|brangku
+brown|marrom|marrong
+grey|cinza|singza
+pink|rosa|roza
+purple|roxo|rochu
+orange (color)|laranja|laranja
+body|corpo|korpu||O corpo precisa de descanso.|The body needs rest.
+head|cabeça|kabesa|Minha cabeça
+hair|cabelo|kabelu|Meu cabelo
+face|rosto|rostu|Meu rosto
+eye|olho|olhu|Meu olho
+ear|orelha|orelia|Minha orelha
+nose|nariz|naris|Meu nariz
+mouth|boca|boka|Minha boca
+tooth|dente|dengchi|Meu dente
+tongue|língua|lingua|Minha língua
+neck|pescoço|peskosu|Meu pescoço
+shoulder|ombro|ombru|Meu ombro
+hand|mão|maung|Minha mão
+finger|dedo|dedu|Meu dedo
+leg|perna|perna|Minha perna
+foot|pé|pé|Meu pé
+heart|coração|korasang|Meu coração
+stomach|estômago|istômagu|Meu estômago
+house|casa|kaza
+room|quarto|kwartu
+door|porta|porta
+window|janela|janela
+wall|parede|paredchi
+roof|telhado|telhadu
+floor|piso|pizu
+kitchen|cozinha|kozinia
+bathroom|banheiro|banheiru
+bed|cama|kama
+table|mesa|meza
+chair|cadeira|kadeira
+sofa|sofá|sofá
+lamp|lâmpada|lâmpada
+key|chave|chavi
+stairs|escada|iskada
+garden|jardim|jardim
+light|luz|lus
+fan|ventilador|ventilador
+mirror|espelho|ispelhu
+work|trabalho|trabalhu
+job|emprego|empregu
+office|escritório|iskritóriu
+money|dinheiro|dinheiru
+salary|salário|salariu
+meeting|reunião|reuniang
+boss|chefe|chefi
+employee|funcionário|fungcionariu
+business|negócio|negósiu
+company|empresa|empresa
+market|mercado|merkadu
+shop|loja|loja
+customer|cliente|klientchi
+price|preço|presu
+farmer|agricultor|agrikultor
+doctor|médico|médiku
+teacher|professor|professor
+police|polícia|polisia
+school|escola|iskola
+book|livro|livru
+pen|caneta|kaneta
+pencil|lápis|lapis
+page|página|pájina
+class|turma|turma
+student|estudante|istudangchi
+lesson|lição|lisang
+exam|prova|prova
+question|pergunta|pergungta
+answer|resposta|risposta
+homework|dever de casa|dever di kaza
+library|biblioteca|biblioteka
+university|universidade|universidaji
+language|língua|lingua
+word|palavra|palavra
+sentence|frase|frazi
+dictionary|dicionário|disionariu
+science|ciência|siensia
+history|história|istória
+knowledge|conhecimento|konhesimengtu
+education|educação|edukasang
+shopping|compras|kompras||Hoje à noite temos que fazer compras.|We have to go shopping tonight.
+buy|comprar|komprar||Ele compra legumes.|He is buying vegetables.
+sell|vender|vender||O agricultor vende frutas no mercado.|The farmer sells fruit at the market.
+cheap|barato|baratu||Este tecido é barato.|This cloth is cheap.
+expensive|caro|karu||O celular é caro.|The phone is expensive.
+coin|moeda|mueda
+note|cédula|sédula
+bill|conta|kongta
+size|tamanho|tamanhu
+discount|desconto|deskongtu
+receipt|recibo|resibu
+bag|bolsa|bolza
+rupee|rúpia|rupia
+weigh|pesar|pezar||O vendedor pesa os legumes.|The shopkeeper weighs the vegetables.
+pay|pagar|pagar||Pague com o cartão.|Pay by card.
+happiness|alegria|alegria
+sadness|tristeza|tristeza
+anger|raiva|raiva
+fear|medo|medu
+love|amor|amor
+hope|esperança|isperansa
+worry|preocupação|preokupasang
+surprise|surpresa|surpresa
+peace|paz|pas
+smile|sorriso|sorrizu
+laugh|risada|rizada
+crying|choro|choru
+mood|humor|umor
+brave|corajoso|korajozu||Ele é um menino corajoso.|He is a brave boy.
+lonely|sozinho|sozinhu||Ele se sente sozinho.|He feels lonely.
+to eat|comer|komer
+to drink|beber|beber
+to go|ir|ir
+to come|vir|vir
+to see|ver|ver
+to hear|ouvir|ouvir
+to speak|falar|falar
+to read|ler|ler
+to write|escrever|iskrever
+to learn|aprender|aprender
+to teach|ensinar|isinar
+to sleep|dormir|dormir
+to wake up|acordar|akordar
+to run|correr|korre
+to walk|andar|andar
+to open|abrir|abrir
+to close|fechar|fechar
+to give|dar|dar
+to take|pegar|pegar
+to make|fazer|fazer
+to love|amar|amar
+to think|pensar|pensar
+to understand|entender|entender
+to work|trabalhar|trabalhar
+to wait|esperar|isperar
+big|grande|grandchi
+small|pequeno|pekinu
+new|novo|novu
+old|velho|velhu
+good|bom|bong
+bad|mau|mau
+beautiful|bonito|bonitu
+hot|quente|kengchi||Está muito quente hoje.|It is very hot today.
+cold|frio|friu||A água está fria.|The water is cold.
+fast|rápido|rapidu
+slow|devagar|devagar
+easy|fácil|fasil
+difficult|difícil|difisil
+long|longo|longu
+short|curto|kurtu
+clean|limpo|lingpu
+dirty|sujo|suju
+happy|feliz|felis||As crianças estão muito felizes.|The children are very happy.
+tired|cansado|kangsadu||Hoje estou cansado.|I am tired today.
+hungry|com fome|kong fomi||A criança está com fome.|The child is hungry.
+
+@phrases
+Olá!|olá|Hello!|Olá!|greeting
+Tchau!|tchau|Bye!|Tchau!|greeting
+Bom dia!|bong jia|Good morning!|Bom dia!|greeting
+Boa tarde!|boa tardchi|Good afternoon!|Boa tarde!|greeting
+Boa noite!|boa noitchi|Good night!|Boa noite!|greeting
+Como você está?|komu vosê istá|How are you?|Como você está?|smalltalk
+Estou bem, obrigado.|istau beng obrigadu|I am fine, thank you.|Estou bem, obrigado.|smalltalk
+Muito obrigado!|muintu obrigadu|Thank you very much!|Muito obrigado!|polite
+De nada.|di nada|You're welcome.|De nada.|polite
+Desculpe!|deskulpchi|Sorry!|Desculpe!|polite
+Sinto muito.|singtu muintu|I am sorry.|Sinto muito.|polite
+Sem problema.|seg probléma|No problem.|Sem problema.|polite
+Qual é o seu nome?|kual é u seu nomi|What is your name?|Qual é o seu nome?|smalltalk
+Meu nome é Ana.|meu nomi é ana|My name is Ana.|Meu nome é Ana.|smalltalk
+De onde você é?|ji onji vosê é|Where are you from?|De onde você é?|smalltalk
+Sou do Brasil.|sou du brasil|I am from Brazil.|Sou do Brasil.|smalltalk
+Você fala inglês?|vosê fala inglês|Do you speak English?|Você fala inglês?|smalltalk
+Quero aprender português.|keru aprender portugues|I want to learn Portuguese.|Quero aprender português.|school
+Não entendi.|nong entendchi|I did not understand.|Não entendi.|school
+Fale mais devagar.|fali mais devagar|Please speak slowly.|Fale mais devagar.|polite
+O que significa isso?|ki signifika isu|What does that mean?|O que significa isso?|school
+Quanto custa?|kuantu kusta|How much is it?|Quanto custa?|shopping
+Eu quero este.|eu keru istchi|I want this one.|Eu quero este.|shopping
+Tem um tamanho menor?|teng ung tamanhu menór|Do you have a smaller size?|Tem um tamanho menor?|shopping
+A conta, por favor.|a kongta por favor|The bill, please.|A conta, por favor.|shopping
+Vou pagar com cartão.|vou pagar kong kartang|I will pay by card.|Vou pagar com cartão.|shopping
+Onde fica a estação?|onji fika a istasang|Where is the station?|Onde fica a estação?|travel
+Onde fica o banheiro?|onji fika u banheiru|Where is the toilet?|Onde fica o banheiro?|travel
+Este ônibus vai para São Paulo?|istchi ônibus vai para sang paulu|Does this bus go to São Paulo?|Este ônibus vai para São Paulo?|travel
+A que horas sai o trem?|a ki oras sai u treg|When does the train leave?|A que horas sai o trem?|travel
+Estou perdido.|istau perdjidu|I am lost.|Estou perdido.|travel
+Pode me ajudar?|podchi mi ajudar|Can you help me?|Pode me ajudar?|polite
+Preciso de um médico.|presizu di ung médiku|I need a doctor.|Preciso de um médico.|health
+Não estou me sentindo bem.|nong istau mi sintindu beng|I am not feeling well.|Não estou me sentindo bem.|health
+Onde fica a farmácia?|onji fika a farmasia|Where is the pharmacy?|Onde fica a farmácia?|health
+Estou com dor de cabeça.|istau kong dor di kabesa|I have a headache.|Estou com dor de cabeça.|health
+Um café, por favor.|ung kafé por favor|A coffee, please.|Um café, por favor.|food
+O cardápio, por favor.|u kardápiu por favor|The menu, please.|O cardápio, por favor.|food
+Está muito gostoso.|ista muintu gostozu|It is very tasty.|Está muito gostoso.|food
+Sou vegetariano.|sou vedjetarianu|I am a vegetarian.|Sou vegetariano.|food
+Estou com fome.|istau kong fomi|I am hungry.|Estou com fome.|food
+Não como carne.|nong komu karni|I don't eat meat.|Não como carne.|food
+A água está gelada.|a água ista jelada|The water is cold.|A água está gelada.|food
+Hoje o tempo está bom.|oji u tengu ista bong|The weather is nice today.|Hoje o tempo está bom.|smalltalk
+Trabalho num escritório.|trabalhu nug iskritóriu|I work in an office.|Trabalho num escritório.|work
+Onde você trabalha?|onji vosê trabalha|Where do you work?|Onde você trabalha?|work
+O salário cai no fim do mês.|u salariu kai nu fing du mes|The salary comes at month end.|O salário cai no fim do mês.|work
+Amanhã tenho uma reunião.|amanhang tengu uma reuniang|I have a meeting tomorrow.|Amanhã tenho uma reunião.|work
+Estudo na universidade.|istudu na universidaji|I study at the university.|Estudo na universidade.|school
+A que horas começa a aula?|a ki oras komesa a aula|When does the class start?|A que horas começa a aula?|school
+A prova foi fácil.|a prova foi fasil|The exam was easy.|A prova foi fácil.|school
+Gosto de ler livros.|gostu di ler livrus|I like reading books.|Gosto de ler livros.|school
+Esta palavra é nova.|ista palavra é nova|This word is new.|Esta palavra é nova.|school
+Aprendo português todos os dias.|aprendu portugues toodus us jias|I learn Portuguese every day.|Aprendo português todos os dias.|school
+Hoje é segunda-feira.|oji é segunda-feira|Today is Monday.|Hoje é segunda-feira.|time
+Que horas são?|ki oras sang|What time is it?|Que horas são?|time
+Não tenho tempo.|nong tengu tengu|I have no time.|Não tenho tempo.|time
+Chego às seis.|chegu as seis|I arrive at six.|Chego às seis.|time
+Domingo estou livre.|domingu istau livri|I am free on Sunday.|Domingo estou livre.|time
+Esta é a minha mãe.|ista é a minha mãe|This is my mother.|Esta é a minha mãe.|family
+Meu pai trabalha muito.|meu pai trabalha muintu|My father works a lot.|Meu pai trabalha muito.|family
+Minha irmã é médica.|minha irmã é médika|My sister is a doctor.|Minha irmã é médica.|family
+Nossa família é grande.|nossa família é grandchi|Our family is big.|Nossa família é grande.|family
+A criança brinca no jardim.|a kriansa brinka nu jardim|The child plays in the garden.|A criança brinca no jardim.|family
+Minha casa é pequena.|minha kaza é pekina|My house is small.|Minha casa é pequena.|home
+A cozinha está limpa.|a kozinha ista lingpa|The kitchen is clean.|A cozinha está limpa.|home
+A janela está aberta.|a janela ista abertta|The window is open.|A janela está aberta.|home
+Eu fecho a porta.|eu fechu a porta|I close the door.|Eu fecho a porta.|home
+A luz acabou.|a lus akabou|The power went out.|A luz acabou.|home
+Agora vou dormir.|agora vou dormi|I am going to sleep now.|Agora vou dormir.|home
+Onde está o meu passaporte?|onji ista u meu passaportchi|Where is my passport?|Onde está o meu passaporte?|travel
+O voo está atrasado.|u voo ista atrazadu|The flight is delayed.|O voo está atrasado.|travel
+A bagagem é pesada.|a bagageng é pezada|The luggage is heavy.|A bagagem é pesada.|travel
+Boa viagem!|boa viageng|Have a good trip!|Boa viagem!|travel
+Preciso de um quarto por duas noites.|presizu di ung kwartu por duas noitchis|I need a room for two nights.|Preciso de um quarto por duas noites.|travel
+Vá em frente.|va eng fregchi|Go straight ahead.|Vá em frente.|travel
+Vire à esquerda.|viri a iskérda|Turn left.|Vire à esquerda.|travel
+Onde fica o mercado?|onji fika u merkadu|Where is the market?|Onde fica o mercado?|shopping
+O preço está muito alto.|u presu ista muintu altu|The price is too high.|O preço está muito alto.|shopping
+Pode dar um desconto?|podchi dar ung deskongtu|Can you give a discount?|Pode dar um desconto?|shopping
+Estou só olhando.|istau so olandu|I am just looking.|Estou só olhando.|shopping
+Me dá o recibo?|mi da u resibu|Can I have the receipt?|Me dá o recibo?|shopping
+Bom apetite!|bong apetitchi|Enjoy your meal!|Bom apetite!|food
+Depois tomamos um chá.|depois tomamus ung chá|We drink tea after the meal.|Depois tomamos um chá.|food
+Me dá água gelada.|mi da água jelada|Give me cold water.|Me dá água gelada.|food
+Não se preocupe.|nong si preokupi|Don't worry.|Não se preocupe.|emotion
+Tenho orgulho de você.|tengu orgulhu di vosê|I am proud of you.|Tenho orgulho de você.|emotion
+Fico feliz em saber.|fiku felis eng saber|I am glad to hear that.|Fico feliz em saber.|emotion
+Estou com medo.|istau kong medu|I am scared.|Estou com medo.|emotion
+Que bom te ver.|ki bong tchi ver|Good to see you.|Que bom te ver.|smalltalk
+Parabéns!|parabengs|Congratulations!|Parabéns!|greeting
+Seja bem-vindo!|seja beng vingu|Welcome!|Seja bem-vindo!|greeting
+Melhoras!|melhoras|Get well soon!|Melhoras!|health
+Um momento, por favor.|ung momengtu por favor|One moment, please.|Um momento, por favor.|polite
+Já vou.|ja vou|I'll be right there.|Já vou.|smalltalk
+Não sei.|nong sei|I don't know.|Não sei.|smalltalk
+Talvez depois.|talves depois|Maybe later.|Talvez depois.|smalltalk
+Concordo.|kongkordu|I agree.|Concordo.|smalltalk
+Isso não é certo.|isu nong é sertu|That is not right.|Isso não é certo.|smalltalk
+O que você faz hoje?|ki vosê fas oji|What are you doing today?|O que você faz hoje?|smalltalk
+Estou estudando para a prova.|istau istudandu para a prova|I am preparing for the exam.|Estou estudando para a prova.|school
+Preciso de ajuda.|presizu di ajuda|I need help.|Preciso de ajuda.|polite
+Obrigado pela ajuda.|obrigadu pela ajuda|Thank you for your help.|Obrigado pela ajuda.|polite
+É a primeira vez.|é a primeira ves|This is the first time.|É a primeira vez.|smalltalk
+Onde troco dinheiro?|onji troku dinheiru|Where can I exchange money?|Onde troco dinheiro?|travel
+O ônibus chega às oito.|u ônibus chega as oitu|The bus comes at eight.|O ônibus chega às oito.|travel
+Perdi o trem.|perdi u treg|I missed my train.|Perdi o trem.|travel
+O hotel é muito bom.|u otew é muintu bong|The hotel is very good.|O hotel é muito bom.|travel
+Qual é o seu trabalho?|kual é u seu trabalho|What is your job?|Qual é o seu trabalho?|work
+Sou engenheiro.|sou engenheiru|I am an engineer.|Sou engenheiro.|work
+Ela sempre ajuda.|ela sempre ajuda|She always helps.|Ela sempre ajuda.|smalltalk
+Aprendemos juntos.|aprendemus jungtus|We learn together.|Aprendemos juntos.|school
+Meu português está melhorando.|meu portugues ista melhorandu|My Portuguese is improving.|Meu português está melhorando.|school
+O céu é azul.|u céu é azuw|The sky is blue.|O céu é azul.|smalltalk
+Minha cor preferida é verde.|minha kor preferida é verji|My favourite color is green.|Minha cor preferida é verde.|smalltalk
+O carro vermelho é rápido.|u karru vermelhu é rapidu|The red car is fast.|O carro vermelho é rápido.|smalltalk
+A noite é calma.|a noitchi é kauma|The night is calm.|A noite é calma.|time
+Hoje está chovendo.|oji ista chovendu|It is raining today.|Hoje está chovendo.|smalltalk
+O sol está brilhando.|u sow ista brilhandu|The sun is shining.|O sol está brilhando.|smalltalk
+Muito bem!|muintu beng|Well done!|Muito bem!|smalltalk
+Prazer em conhecer.|prazer eng konheser|Nice to meet you.|Prazer em conhecer.|greeting
+Até logo!|até logu|See you soon!|Até logo!|greeting
+Desculpe, o que disse?|deskulpchi ki dissi|Pardon, what did you say?|Desculpe, o que disse?|polite
+Pode repetir?|podchi repeti|Please repeat.|Pode repetir?|polite
+Como se escreve?|komu si iskreve|How do you spell it?|Como se escreve?|school
+Amo chá.|amu chá|I love tea.|Amo chá.|food
+A comida está pronta.|a komida ista pronga|The food is ready.|A comida está pronta.|food
+Ponha mais comida no prato.|ponia mais komida nu pratu|Put more food on the plate.|Ponha mais comida no prato.|food
+Este tecido é bom.|istchi teshidu é bong|This cloth is good.|Este tecido é bom.|shopping
+A loja fechou.|a loja fechou|The shop is closed.|A loja fechou.|shopping
+Vou ao mercado todo dia.|vou au merkadu tudu jia|I go to the market every day.|Vou ao mercado todo dia.|shopping
+O carro está na estrada.|u karru ista na istrada|The car is on the road.|O carro está na estrada.|travel
+Vire perto da ponte.|viri pertu da pongchi|Turn near the bridge.|Vire perto da ponte.|travel
+A cidade é grande.|a sidadi é grandchi|The city is big.|A cidade é grande.|travel
+Na vila há paz.|na vila a pas|There is peace in the village.|Na vila há paz.|travel
+Sou estudante.|sou istudangchi|I am a student.|Sou estudante.|school
+Ele é um bom professor.|ele é ung bong professor|He is a good teacher.|Ele é um bom professor.|school
+A pergunta é difícil.|a pergungta é difisil|The question is difficult.|A pergunta é difícil.|school
+A resposta está certa.|a risposta ista sertta|The answer is correct.|A resposta está certa.|school
+O livro está na mesa.|u livru ista na meza|The book is on the table.|O livro está na mesa.|school
+A cama é macia.|a kama é masia|The bed is soft.|A cama é macia.|home
+A chave sumiu.|a chavi sumiu|The key is missing.|A chave sumiu.|home
+No jardim há flores.|nu jardim a floris|There are flowers in the garden.|No jardim há flores.|home
+O quarto é claro.|u kwartu é klaru|The room is bright.|O quarto é claro.|home
+Suba as escadas.|suba as iskadas|Go up the stairs.|Suba as escadas.|home
+
+@grammar
+O artigo de "livro" é ___ .|o|a|os|1|"Livro" is masculine: o livro.|Masculine nouns take "o".
+O artigo de "casa" é ___ .|a|o|as|1|"Casa" is feminine: a casa.|Feminine nouns take "a".
+"Um" e "uma" são ___ .|artigos indefinidos|artigos definidos|pronomes|1|"Um/uma" = a/an.|Indefinite articles are "um/uma".
+O plural de "livro" é ___ .|livros|livras|livroes|1|Masculine "-o" → "-os".|Masculine nouns take "-os".
+O plural de "casa" é ___ .|casas|casoes|case|1|Feminine "-a" → "-as".|Feminine nouns take "-as".
+O plural de "pão" é ___ .|pães|pãos|paos|1|Irregular plural: pães.|"Pão" becomes "pães".
+Eu ___ brasileiro.|sou|é|somos|1|"Eu sou" — first person of "ser".|"Sou" is "I am".
+Você ___ brasileiro.|é|sou|somos|1|"Você é" — third person form.|Portuguese uses "é" for "você".
+Nós ___ amigos.|somos|sou|são|1|"Nós somos" — first person plural.|"Somos" is "we are".
+Eles ___ estudantes.|são|somos|é|1|"Eles são" — third person plural.|"São" is "they are".
+"Estar" se usa para ___ .|estado temporário|profissão|origem|1|"Estar" = temporary state: estou cansado.|"Estar" is for states.
+"Ser" se usa para ___ .|característica permanente|estado|localização|1|"Ser" = permanent trait: sou alto.|"Ser" is for permanent traits.
+Estou ___ .|cansado|cansar|cansei|1|Adjective after "estar".|"Estar" + adjective.
+O presente de "falar" (eu) é ___ .|falo|fala|falamos|1|"-ar" verbs: eu falo.|"Eu" takes "-o".
+O presente de "comer" (eu) é ___ .|como|come|comemos|1|"-er" verbs: eu como.|"Eu como" is "I eat".
+O presente de "partir" (eu) é ___ .|parto|parte|partimos|1|"-ir" verbs: eu parto.|"Eu" takes "-o" for "-ir" too.
+O gerúndio de "falar" é ___ .|falando|falado|falar|1|"-ando" makes the gerund.|"Ando" is the gerund.
+O gerúndio de "comer" é ___ .|comendo|comido|comer|1|"-endo" for "-er" verbs.|"Endo" is the gerund.
+O particípio de "falar" é ___ .|falado|falando|falei|1|"-ado" is the participle.|"Ado" is the participle.
+O passado simples de "falar" (eu) é ___ .|falei|falo|falava|1|"Falei" is the preterite.|"Ei" is the "-ar" preterite ending.
+O imperfeito de "ser" (eu) é ___ .|era|sou|fui|1|"Era" describes a past state.|"Era" is the imperfect.
+O futuro de "ir" (eu) é ___ .|irei|vou|fui|1|"Irei" is the simple future.|"Irei" is future.
+A negação usa ___ .|não|no|nem|1|"Não" goes before the verb.|"Não" negates.
+A pergunta sim/não ___ .|não muda a ordem|muda tudo|usa "que"|1|Brazilian Portuguese often just raises intonation.|Intonation makes questions.
+"O que" pergunta ___ .|uma coisa|um lugar|um tempo|1|"O que" = what.|"O que" asks what.
+"Onde" pergunta ___ .|um lugar|um tempo|uma coisa|1|"Onde" = where.|"Onde" asks where.
+"Quando" pergunta ___ .|um tempo|um lugar|uma coisa|1|"Quando" = when.|"Quando" asks when.
+"Por que" pergunta ___ .|a razão|o tempo|o lugar|1|"Por que" = why.|"Por que" asks why.
+"Quanto" pergunta ___ .|a quantidade|o lugar|o tempo|1|"Quanto" = how much.|"Quanto" asks quantity.
+"Quem" pergunta ___ .|a pessoa|a coisa|o lugar|1|"Quem" = who.|"Quem" asks who.
+"Como" pergunta ___ .|o modo|o lugar|o tempo|1|"Como" = how.|"Como" asks how.
+A ordem normal é ___ .|sujeito + verbo + objeto|verbo + sujeito|objeto + verbo|1|Portuguese is SVO.|Portuguese SVO hai: subject, phir verb, phir object.
+O adjetivo vem ___ .|depois do nome|antes do nome|depois do verbo|1|Adjectives follow the noun: casa grande.|Adjectives follow the noun.
+Em "casa grande", "grande" é ___ .|um adjetivo|um nome|um verbo|1|"Grande" describes "casa".|"Grande" is an adjective.
+Em "corre rápido", "rápido" é ___ .|um advérbio|um nome|um adjetivo|1|"Rápido" modifies the verb.|It is an adverb here.
+O comparativo é ___ .|mais grande|grande mais|grandíssimo|1|"Mais" + adjective makes the comparative.|"Mais" makes comparatives.
+O superlativo é ___ .|o mais grande|mais grande|grande|1|"O mais" makes the superlative.|"O mais" makes superlatives.
+"E" serve para ___ .|unir|opor|explicar|1|"E" = and.|"E" means "and".
+"Mas" serve para ___ .|opor|unir|explicar|1|"Mas" = but.|"Mas" means "but".
+"Porque" indica ___ .|a causa|o tempo|o lugar|1|"Porque" = because.|"Porque" gives the reason.
+"Se" introduz ___ .|uma condição|um tempo|um lugar|1|"Se" = if.|"Se" makes a condition.
+"Quando" introduz ___ .|um tempo|um lugar|uma causa|1|"Quando" = when.|"Quando" refers to time.
+"Até" indica ___ .|um limite|um começo|uma causa|1|"Até" = until.|"Até" marks the limit.
+"De" indica ___ .|origem|destino|futuro|1|"De" = from/of.|"De" marks origin.
+"Em" indica ___ .|lugar|tempo|causa|1|"Em" = in: na cozinha.|"Em" marks place.
+"Sobre" indica ___ .|acima|abaixo|ao lado|1|"Sobre" = on.|"Sobre" means "on".
+"Debaixo" indica ___ .|abaixo|acima|ao lado|1|"Debaixo" = under.|"Debaixo" means "under".
+"Perto de" indica ___ .|proximidade|distância|tempo|1|"Perto de" = near.|"Perto de" means "near".
+"Muito" é ___ .|um advérbio|um nome|uma preposição|1|"Muito" = very.|"Muito" is an adverb.
+"Tudo" significa ___ .|tudo|ninguém|alguns|1|"Tudo" = all.|"Tudo" means "all".
+"Ninguém" significa ___ .|ninguém|tudo|alguns|1|"Ninguém" = nobody.|"Ninguém" means "nobody".
+"Alguns" significa ___ .|alguns|todos|ninguém|1|"Alguns" = some.|"Alguns" means "some".
+"Cada" significa ___ .|cada|ninguém|alguns|1|"Cada" = every.|"Cada" means "every".
+"De dia" indica ___ .|tempo|lugar|causa|1|"De dia" = during the day.|"De dia" means "during the day".
+"À noite" indica ___ .|tempo|lugar|causa|1|"À noite" = at night.|"À noite" means "at night".
+"Amanhã" significa ___ .|o dia seguinte|hoje|ontem|1|"Amanhã" = tomorrow.|"Amanhã" means "tomorrow".
+"Ontem" significa ___ .|o dia anterior|amanhã|hoje|1|"Ontem" = yesterday.|"Ontem" means "yesterday".
+"Agora" significa ___ .|neste momento|depois|antes|1|"Agora" = now.|"Agora" means "now".
+"Sempre" significa ___ .|toda vez|às vezes|nunca|1|"Sempre" = always.|"Sempre" means "always".
+"Obrigado" expressa ___ .|agradecimento|desculpas|boas-vindas|1|"Obrigado" = thank you.|"Obrigado" is thanks.
+"Bem-vindo" expressa ___ .|boas-vindas|despedida|agradecimento|1|"Bem-vindo" = welcome.|"Bem-vindo" greets someone.
+"Sim" significa ___ .|sim|não|talvez|1|"Sim" = yes.|"Sim" means "yes".
+"Não" significa ___ .|não|sim|talvez|1|"Não" = no.|"Não" means "no".
+
+@sentences
+Tomo chá toda manhã.|I drink tea every morning.|Tomo chá toda manhã.
+Meu irmão aprende alemão.|My brother is learning German.|Meu irmão aprende alemão.
+No domingo vamos a São Paulo.|We go to São Paulo on Sunday.|No domingo vamos a São Paulo.
+O livro está sobre a mesa.|The book is on the table.|O livro está sobre a mesa.
+Ontem ele escreveu uma carta.|He wrote a letter yesterday.|Ontem ele escreveu uma carta.
+Pode me ajudar, por favor?|Can you help me, please?|Pode me ajudar, por favor?
+Quero dois cafés e uma água.|I want two coffees and a water.|Quero dois cafés e uma água.
+O trem sai às oito.|The train leaves at eight.|O trem sai às oito.
+Minha mãe cozinha peixe hoje.|My mother is cooking fish today.|Minha mãe cozinha peixe hoje.
+Ele fala três línguas fluentemente.|He speaks three languages fluently.|Ele fala três línguas fluentemente.
+Nossa casa é pequena mas limpa.|Our house is small but clean.|Nossa casa é pequena mas limpa.
+Não entendi bem a pergunta.|I did not fully understand the question.|Não entendi bem a pergunta.
+Hoje o tempo está ótimo.|The weather is really lovely today.|Hoje o tempo está ótimo.
+Amanhã preciso acordar cedo.|Tomorrow I have to get up early.|Amanhã preciso acordar cedo.
+Ela trabalha num hospital.|She works in a hospital.|Ela trabalha num hospital.
+Nos encontramos em frente à escola.|We meet in front of the school.|Nos encontramos em frente à escola.
+Ele esqueceu o celular em casa.|He forgot his phone at home.|Ele esqueceu o celular em casa.
+Hoje não vou ao escritório.|I am not going to the office today.|Hoje não vou ao escritório.
+As crianças jogam futebol no jardim.|The children play football in the garden.|As crianças jogam futebol no jardim.
+Pode abrir a janela?|Can you open the window?|Pode abrir a janela?
+Hoje tenho muito trabalho.|I have a lot of work today.|Hoje tenho muito trabalho.
+Meu pai gosta de ler o jornal.|My father likes reading the newspaper.|Meu pai gosta de ler o jornal.
+A comida é realmente gostosa.|The food is really tasty.|A comida é realmente gostosa.
+Estamos esperando há uma hora.|We have been waiting for an hour.|Estamos esperando há uma hora.
+Aprendo português para o meu trabalho.|I learn Portuguese for my job.|Aprendo português para o meu trabalho.
+Ela é de uma cidade pequena.|She is from a small town.|Ela é de uma cidade pequena.
+Compro pão e leite no mercado.|I buy bread and milk at the market.|Compro pão e leite no mercado.
+Ele vai de ônibus ao escritório.|He goes to the office by bus.|Ele vai de ônibus ao escritório.
+Ontem vimos um filme.|We watched a film yesterday.|Ontem vimos um filme.
+Hoje à noite te mando uma mensagem.|I will send you a message tonight.|Hoje à noite te mando uma mensagem.
+O hotel não fica longe da estação.|The hotel is not far from the station.|O hotel não fica longe da estação.
+Minha irmã estuda medicina.|My sister studies medicine.|Minha irmã estuda medicina.
+No fim de semana não tenho tempo.|I have no time at the weekend.|No fim de semana não tenho tempo.
+À noite ele não toma café.|He does not drink coffee in the evening.|À noite ele não toma café.
+Precisamos de duas passagens para o Rio.|We need two tickets to Rio.|Precisamos de duas passagens para o Rio.
+A prova começa às nove.|The exam starts at nine.|A prova começa às nove.
+Falo um pouco de português e inglês.|I speak a little Portuguese and English.|Falo um pouco de português e inglês.
+Meu amigo trabalha como engenheiro.|My friend works as an engineer.|Meu amigo trabalha como engenheiro.
+Ela ajuda a mãe na cozinha.|She helps her mother in the kitchen.|Ela ajuda a mãe na cozinha.
+Toda noite faço uma caminhada.|I go for a walk every evening.|Toda noite faço uma caminhada.
+
+@listening
+Olá, como você está?|olá komu vosê istá|Hello, how are you?|Olá, como você está?|Olá, onde você está?|Bom dia, como você está?|1
+Quero um café.|keru ung kafé|I want a coffee.|Quero um café|Quero um chá|Quero uma água|1
+Onde fica a estação?|onji fika a istasang|Where is the station?|Onde fica a estação?|Onde fica o mercado?|Onde fica o hotel?|1
+Sou do Brasil.|sou du brasil|I am from Brazil.|Sou do Brasil|Moro no Brasil|Vou para o Brasil|1
+A conta, por favor.|a kongta por favor|The bill, please.|A conta, por favor|O cardápio, por favor|O recibo, por favor|1
+Quanto custa?|kuantu kusta|How much is it?|Quanto custa?|De quem é?|O que é isso?|1
+Não entendi.|nong entendchi|I did not understand.|Não entendi|Não vim|Não ouvi|1
+Fale mais devagar.|fali mais devagar|Please speak slowly.|Fale mais devagar|Fale mais alto|Venha mais perto|1
+Meu irmão é médico.|meu irmão é médiku|My brother is a doctor.|Meu irmão é médico|Meu irmão é professor|Meu pai é médico|1
+O trem sai às oito.|u treg sai as oitu|The train leaves at eight.|O trem sai às oito|O ônibus sai às oito|O trem chega às oito|1
+Hoje não tenho tempo.|oji nong tengu tengu|I have no time today.|Hoje não tenho tempo|Hoje não tenho dinheiro|Hoje não tenho trabalho|1
+A comida é muito gostosa.|a komida é muintu gostosa|The food is very tasty.|A comida é muito gostosa|O tempo está muito bom|O chá está muito quente|1
+Aprendemos português juntos.|aprendemus portugues jungtus|We learn Portuguese together.|Aprendemos português juntos|Falamos português juntos|Lemos um livro juntos|1
+Preciso de um quarto por duas noites.|presizu di ung kwartu por duas noitchis|I need a room for two nights.|Preciso de um quarto por duas noites|Preciso de uma mesa para dois|Preciso de um quarto por uma noite|1
+Minha mãe cozinha peixe hoje.|minha mãe kozinha peichi oji|My mother cooks fish today.|Minha mãe cozinha peixe hoje|Minha mãe compra peixe hoje|Meu pai cozinha peixe hoje|1
+Toda noite faço uma caminhada.|toda noitchi fachu uma kaminada|I walk every evening.|Toda noite faço uma caminhada|Toda manhã faço uma caminhada|Toda noite vou dormir|1
+Tem um tamanho menor?|teng ung tamanhu menór|Do you have a smaller size?|Tem um tamanho menor?|Tem um tamanho maior?|Tem outra cor?|1
+Vou pagar com cartão.|vou pagar kong kartang|I will pay by card.|Vou pagar com cartão|Vou pagar em dinheiro|Vou pagar amanhã|1
+Sinto muito.|singtu muintu|I am very sorry.|Sinto muito|Estou muito feliz|Estou com muito medo|1
+Amanhã eu ligo para você.|amanhang eu ligu para vosê|I will call you tomorrow.|Amanhã eu ligo para você|Hoje eu ligo para você|Amanhã eu vejo você|1
+
+@stories
+O primeiro dia no Rio|🚆|Ali chega ao Rio de manhã.\nEle pega um táxi até o ___ (1).\nNo quarto ele bebe um ___ (2).\nDepois liga para a ___ (3).|Ali reaches Rio in the morning. He takes a taxi to the hotel. In the room he drinks a coffee. Then he calls his family.|hotel/aeroporto/mercado=0;café/livro/pão=0;família/loja/turma=0
+No mercado|🛒|Sara vai ao ___ (1) no domingo.\nCompra pão, leite e ___ (2).\nEla paga com o ___ (3).|Sara goes to the market on Sunday. She buys bread, milk and apples. She pays by card.|mercado/escola/escritório=0;maçãs/livros/cadeiras=0;cartão/papel/água=0
+O passaporte perdido|🛂|Ahmad procura o seu ___ (1).\nEle pede ajuda a um ___ (2).\nPor sorte encontra na ___ (3).|Ahmad is looking for his passport. He asks a policeman for help. Luckily he finds it in his bag.|passaporte/chave/livro=0;policial/professor/vizinho=0;bolsa/cozinha/escola=0
+No médico|🏥|Bilal não está ___ (1).\nEle vai ao ___ (2).\nO médico dá remédio e ___ (3).|Bilal is unwell. He goes to the doctor. The doctor gives medicine and rest.|bem/mal/com fome=0;médico/padeiro/motorista=0;descanso/dinheiro/livros=0
+A aula de português|📚|Nadia aprende ___ (1) há três meses.\nEla pratica toda noite com ___ (2).\nO ___ (3) dela diz que ela já fala bem.|Nadia has been learning Portuguese for three months. She practises every evening with books. Her teacher says she already speaks well.|português/francês/árabe=0;livros/fotos/cartões=0;professor/irmão/vizinho=0
+Almoço em família|👨‍👩‍👧‍👦|No domingo chega toda a ___ (1).\nA avó cozinha ___ (2).\nTodos comem juntos e ___ (3) muito.|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|família/empresa/turma=0;arroz/água/papel=0;riem/trabalham/dormem=0
+Na estação|🚉|O trem está dez minutos ___ (1).\nHassan compra um ___ (2) na banca.\nDepois entra no ___ (3).|The train is ten minutes late. Hassan buys a newspaper. Then he gets on the train.|atrasado/limpo/pronto=0;jornal/recibo/chave=0;trem/ônibus/avião=0
+Uma noite de inverno|❄️|Em julho faz muito ___ (1).\nAisha veste um ___ (2) quente.\nEla bebe um ___ (3) quente e lê.|In July it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|frio/calor/chuva=0;casaco/camisa/sapato=0;chá/água/suco=0
+Jantar no hotel|🍽️|O garçom traz o ___ (1).\nOmar pede peixe e ___ (2).\nNo fim ele pede a ___ (3).|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|cardápio/cadeira/luz=0;arroz/mesa/janela=0;conta/chave/recibo=0
+Novos amigos|🤝|Lena e Sana se encontram no ___ (1).\nElas falam de música e de ___ (2).\nNo fim trocam os ___ (3).|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|parque/escritório/trem=0;viagens/recibos/provas=0;números/endereços/livros=0
+
+@idioms
+Quebrar um galho|kebrar ung galyu|To do someone a favour.|fazer um favor|Ele sempre quebra um galho para mim.
+Cair a ficha|kair a ficha|To finally understand.|cair a ficha|Só depois de uma hora caiu a ficha.
+Chutar o balde|chutar u baldi|To give up / lose patience.|desistir|Com tanta confusão ele chutou o balde.
+Encher o saco|encher u saku|To annoy someone.|encher a paciência|Pare de encher o saco!
+Pôr a mão no fogo|por a maung nu fogu|To vouch for someone.|garantir por alguém|Ponho a mão no fogo por ela.
+Custo os olhos da cara|kustu us olhus da kara|To cost a fortune.|custar caríssimo|Aquela bolsa custou os olhos da cara.
+Ficar de boca aberta|fika di boka abertta|To be stunned.|ficar espantado|Quando viu a conta ficou de boca aberta.
+Engolir sapo|engolir sapu|To swallow one's pride.|engolir a raiva|No trabalho às vezes é preciso engolir sapo.
+Dar com os burros n'água|dar kong us burrus n'água|To fail miserably.|fracassar|O plano deu com os burros n'água.
+Matar dois coelhos com uma cajadada|matar dois koelus kong uma kajadada|Two birds with one stone.|matar dois coelhos|Vou ao mercado e encontro o Pedro: dois coelhos com uma cajadada.
+Estar nas nuvens|istar nas nuvens|To be daydreaming.|estar distraído|Ele não ouviu nada: está nas nuvens.
+Ter coração de pedra|ter korasang di pedra|To be hard-hearted.|ser insensível|Um coração de pedra não escuta ninguém.
+Ser um coração de ouro|ser ung korasang di ouru|To be very kind.|ser muito bom|Ela ajuda todos: tem coração de ouro.
+Num piscar de olhos|nung piskar di olhus|In the blink of an eye.|num instante|O tempo passou num piscar de olhos.
+Chorar rios de lágrimas|chorar rius di lágrima|To cry bitterly.|chorar muito|Depois da prova ela chorou rios de lágrimas.
+Fechar os olhos para tudo|fechar us olhus para tudu|To ignore the obvious.|ignorar|A placa está na sua frente, não feche os olhos.
+Ter dedo podre para negócios|ter dedu podri para negósius|To have bad judgement in deals.|escolher mal|Ele tem dedo podre para investimentos.
+Ser boca doce|ser boka dosi|To be a sweet-talker.|falar macio|Não confie em quem é boca doce.
+Bater na mesma tecla|bater na mesma tekla|To repeat the same thing.|insistir no mesmo ponto|Ele bate sempre na mesma tecla.
+Ter sangue de barata|ter sangu di barata|To be extremely patient.|ser muito paciente|Ela tem sangue de barata com as crianças.
+Fazer boca de siri|fazer boka di siri|To keep quiet.|ficar calado|Sobre isso, boca de siri.
+Pegar o touro à unha|pegar u touru a unha|To tackle a problem head-on.|enfrentar de frente|Vamos pegar o touro à unha e resolver hoje.
+Estar com a pulga atrás da orelha|istar kong a pulga atras da orelia|To be suspicious.|ficar desconfiado|Fiquei com a pulga atrás da orelha com aquele preço.
+Ir com os porcos|ir kong us porkus|To go badly wrong.|dar errado|O projeto foi com os porcos.
+Dar bola fora|dar bola fora|To make a blunder.|cometer uma gafe|Ele deu bola fora na reunião.
+
+@alphabet
+A|a|a|água
+B|bê|be|bom
+C|cê|se|casa
+D|dê|de|dia
+E|e|e|escola
+F|efe|efi|falar
+G|gê|je|gente
+H|agá|aga|hotel
+I|i|i|irmã
+J|jota|jota|janela
+K|ká|ka|kilo
+L|ele|eli|livro
+M|eme|emi|mãe
+N|ene|eni|noite
+O|o|o|ovo
+P|pê|pe|pão
+Q|quê|ke|quatro
+R|erre|erri|rua
+S|esse|essi|sol
+T|tê|te|tempo
+U|u|u|uva
+V|vê|ve|verde
+W|dáblio|dabliu|web
+X|xis|chis|xícara
+Y|ípsilon|ipsilong|yoga
+Z|zê|ze|zero

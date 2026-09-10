@@ -1,0 +1,678 @@
+# Malay (Bahasa Melayu) — authored source for data/langs/malay.json
+# Latin script, LTR. Spoken mainly in Malaysia, Brunei and Singapore.
+# Romanization: standard spelling; ng, ny, sy, kh.
+
+@info
+romanization|Roman Melayu: a, e, i, o, u; ng (as in sing), ny (as in canyon), sy (sh), kh (kh). Stress usually falls on the last syllable.
+alphabet.title|Abjad Bahasa Melayu
+alphabet.intro|Bahasa Melayu menggunakan tulisan Latin; huruf disebut seperti dalam bahasa Inggeris.
+
+@frames
+greetings|Cakap: {s}.|Say: {en}.
+numbers|Saya ada {s} epal.|I have {en} apples.
+family|Ini {s}.|This is my {en}.
+food|Saya suka {s}.|I like {en}.
+travel|Di mana {s}?|Where is the {en}?
+time|Saya pergi ke sekolah {s}.|I go to school {en}.
+colors|Langit itu {s}.|The sky is {en}.
+body|{s} saya sakit.|My {en} hurts.
+home|Di sini ada {s}.|Here is the {en}.
+work|Ini {s}.|Here is the {en}.
+school|Ini {s}.|Here is the {en}.
+shopping|Ini {s}.|Here is the {en}.
+emotions|Saya rasa {s}.|I feel {en}.
+verbs|Saya {s} setiap hari.|This means: {en}.
+adjectives|Rumah itu {s}.|The house is {en}.
+
+@words
+hello|hai|hai
+goodbye|selamat tinggal|selamat tinggal
+good morning|selamat pagi|selamat pagi
+good evening|selamat petang|selamat petang
+good night|selamat malam|selamat malam
+thank you|terima kasih|terima kasih
+please|tolong|tolong
+sorry|maaf|maaf
+excuse me|tumpang lalu|tumpang lalu
+yes|ya|ya
+no|tidak|tidak
+welcome|selamat datang|selamat datang
+how are you|apa khabar|apa khabar
+my name is|nama saya|nama saya||Nama saya Rahim.|My name is Rahim.
+nice to meet you|seronok berjumpa|seronok berjumpa
+see you later|jumpa lagi|jumpa lagi
+good luck|semoga berjaya|semoga berjaya
+congratulations|tahniah|tahniah
+help|bantuan|bantuan
+of course|sudah tentu|sudah tentu
+zero|sifar|sifar||Tulis sifar dalam pengiraan.|Write a zero in the calculation.
+one|satu|satu
+two|dua|dua
+three|tiga|tiga
+four|empat|empat
+five|lima|lima
+six|enam|enam
+seven|tujuh|tujuh
+eight|lapan|lapan
+nine|sembilan|sembilan
+ten|sepuluh|sepuluh
+eleven|sebelas|sebelas
+twelve|dua belas|dua belas
+thirteen|tiga belas|tiga belas
+fourteen|empat belas|empat belas
+fifteen|lima belas|lima belas
+twenty|dua puluh|dua puluh
+thirty|tiga puluh|tiga puluh
+forty|empat puluh|empat puluh
+fifty|lima puluh|lima puluh
+hundred|seratus|seratus
+thousand|seribu|seribu
+first|pertama|pertama||Ini pelajaran pertama.|This is the first lesson.
+second|kedua|kedua||Ini bilik kedua.|This is the second room.
+half|separuh|separuh||Separuh gelas air.|Half a glass of water.
+mother|ibu|ibu|ibu saya
+father|ayah|ayah|ayah saya
+brother|abang|abang|abang saya
+sister|kakak|kakak|kakak saya
+son|anak lelaki|anak lelaki|anak lelaki dia
+daughter|anak perempuan|anak perempuan|anak perempuan dia
+child|anak|anak|anak ini
+baby|bayi|bayi|bayi ini
+family|keluarga|keluarga|keluarga kami
+husband|suami|suami|suami dia
+wife|isteri|isteri|isteri dia
+uncle|pak cik|pak cik|pak cik saya
+aunt|mak cik|mak cik|mak cik saya
+grandfather|datuk|datuk|datuk saya
+grandmother|nenek|nenek|nenek saya
+cousin|sepupu|sepupu|sepupu saya
+nephew|anak saudara|anak saudara|anak saudara dia
+friend|kawan|kawan|kawan saya
+neighbour|jiran|jiran|jiran kami
+parent|ibu bapa|ibu bapa|ibu bapa saya
+water|air|air
+bread|roti|roti
+rice|nasi|nasi
+milk|susu|susu
+tea|teh|teh
+sugar|gula|gula
+salt|garam|garam
+egg|telur|telur
+meat|daging|daging
+chicken|ayam|ayam
+fish|ikan|ikan
+apple|epal|epal
+banana|pisang|pisang
+mango|mangga|mangga
+orange (fruit)|oren|oren
+grapes|anggur|anggur
+lemon|limau|limau
+tomato|tomato|tomato
+onion|bawang|bawang
+potato|kentang|kentang
+carrot|lobak merah|lobak merah
+oil|minyak|minyak
+butter|mentega|mentega
+honey|madu|madu
+juice|jus|jus
+coffee|kopi|kopi
+soup|sup|sup
+breakfast|sarapan|sarapan
+lunch|makan tengah hari|makan tengah hari
+dinner|makan malam|makan malam
+car|kereta|kereta
+bus|bas|bas
+train|kereta api|kereta api
+airplane|kapal terbang|kapal terbang
+bicycle|basikal|basikal
+road|jalan|jalan
+street|lorong|lorong
+bridge|jambatan|jambatan
+station|stesen|stesen
+airport|lapangan terbang|lapangan terbang
+ticket|tiket|tiket
+map|peta|peta
+city|bandar|bandar
+village|kampung|kampung
+country|negara|negara
+hotel|hotel|hotel
+journey|perjalanan|perjalanan
+luggage|beg|beg
+driver|pemandu|pemandu
+passport|pasport|pasport
+time|masa|masa||Masa berlalu dengan cepat.|Time passes very quickly.
+day|hari|hari||Ambil ubat dua kali sehari.|Take the medicine twice a day.
+night|malam|malam||Malam ini langit cerah.|The sky is clear tonight.
+morning|pagi|pagi
+evening|petang|petang
+week|minggu|minggu||Seminggu sekali saya pergi ke pasar.|I go to the market once a week.
+month|bulan|bulan||Gaji datang pada hujung bulan.|The salary comes at the end of the month.
+year|tahun|tahun||Setahun ada empat musim.|Four seasons come in a year.
+hour|jam|jam||Datang sejam lebih awal.|Come one hour earlier.
+minute|minit|minit||Tunggu lima minit.|Wait five minutes.
+today|hari ini|hari ini
+tomorrow|esok|esok
+yesterday|semalam|semalam
+now|sekarang|sekarang
+later|nanti|nanti
+early|awal|awal
+late|lewat|lewat
+always|sentiasa|sentiasa
+sometimes|kadang-kadang|kadang-kadang
+never|tidak pernah|tidak pernah
+color|warna|warna||Warna kain ini gelap.|The color of this cloth is dark.
+red|merah|merah
+blue|biru|biru
+green|hijau|hijau
+yellow|kuning|kuning
+black|hitam|hitam
+white|putih|putih
+brown|coklat|coklat
+grey|kelabu|kelabu
+pink|merah jambu|merah jambu
+purple|ungu|ungu
+orange (color)|oren|oren2
+body|badan|badan||Badan perlu rehat.|The body needs rest.
+head|kepala|kepala
+hair|rambut|rambut||Rambut saya hitam.|My hair is black.
+face|muka|muka
+eye|mata|mata
+ear|telinga|telinga
+nose|hidung|hidung
+mouth|mulut|mulut
+tooth|gigi|gigi
+tongue|lidah|lidah||Lidah merasa rasa.|The tongue feels the taste.
+neck|leher|leher||Pastikan leher lurus.|Keep the neck straight.
+shoulder|bahu|bahu
+hand|tangan|tangan
+finger|jari|jari
+leg|kaki|kaki
+foot|tapak kaki|tapak kaki
+heart|jantung|jantung
+stomach|perut|perut
+house|rumah|rumah
+room|bilik|bilik
+door|pintu|pintu
+window|tingkap|tingkap
+wall|dinding|dinding
+roof|bumbung|bumbung
+floor|lantai|lantai
+kitchen|dapur|dapur
+bathroom|bilik air|bilik air
+bed|katil|katil
+table|meja|meja
+chair|kerusi|kerusi
+sofa|sofa|sofa
+lamp|lampu|lampu
+key|kunci|kunci
+stairs|tangga|tangga
+garden|taman|taman
+light|cahaya|cahaya
+fan|kipas|kipas
+mirror|cermin|cermin
+work|kerja|kerja
+job|pekerjaan|pekerjaan
+office|pejabat|pejabat
+money|wang|wang
+salary|gaji|gaji
+meeting|mesyuarat|mesyuarat
+boss|bos|bos
+employee|pekerja|pekerja
+business|perniagaan|perniagaan
+company|syarikat|syarikat
+market|pasar|pasar
+shop|kedai|kedai
+customer|pelanggan|pelanggan
+price|harga|harga
+farmer|petani|petani
+doctor|doktor|doktor
+teacher|guru|guru
+police|polis|polis
+school|sekolah|sekolah
+book|buku|buku
+pen|pen|pen
+pencil|pensel|pensel
+page|muka surat|muka surat
+class|kelas|kelas
+student|pelajar|pelajar
+lesson|pelajaran|pelajaran
+exam|peperiksaan|peperiksaan
+question|soalan|soalan
+answer|jawapan|jawapan
+homework|kerja rumah|kerja rumah
+library|perpustakaan|perpustakaan
+university|universiti|universiti
+language|bahasa|bahasa
+word|perkataan|perkataan
+sentence|ayat|ayat
+dictionary|kamus|kamus
+science|sains|sains
+history|sejarah|sejarah
+knowledge|pengetahuan|pengetahuan
+education|pendidikan|pendidikan
+shopping|membeli-belah|membeli-belah||Petang ini kami pergi membeli-belah.|We have to go shopping tonight.
+buy|beli|beli||Dia membeli sayur.|He is buying vegetables.
+sell|jual|jual||Petani menjual buah di pasar.|The farmer sells fruit at the market.
+cheap|murah|murah||Kain ini murah.|This cloth is cheap.
+expensive|mahal|mahal||Telefon itu mahal.|The phone is expensive.
+coin|syiling|syiling
+note|wang kertas|wang kertas
+bill|bil|bil
+size|saiz|saiz
+discount|diskaun|diskaun
+receipt|resit|resit
+bag|beg tangan|beg tangan
+rupee|ringgit|ringgit
+weigh|timbang|timbang||Penjual menimbang sayur.|The shopkeeper weighs the vegetables.
+pay|bayar|bayar||Bayar dengan kad.|Pay by card.
+happiness|kegembiraan|kegembiraan
+sadness|kesedihan|kesedihan
+anger|marah|marah
+fear|takut|takut
+love|cinta|cinta
+hope|harapan|harapan
+worry|risau|risau
+surprise|terkejut|terkejut
+peace|aman|aman
+smile|senyum|senyum
+laugh|ketawa|ketawa
+crying|menangis|menangis
+mood|perasaan|perasaan
+brave|berani|berani||Dia seorang budak yang berani.|He is a brave boy.
+lonely|kesepian|kesepian||Dia berasa kesepian.|He feels lonely.
+to eat|makan|makan
+to drink|minum|minum
+to go|pergi|pergi
+to come|datang|datang
+to see|lihat|lihat
+to hear|dengar|dengar
+to speak|cakap|cakap
+to read|baca|baca
+to write|tulis|tulis
+to learn|belajar|belajar
+to teach|ajar|ajar
+to sleep|tidur|tidur
+to wake up|bangun|bangun
+to run|lari|lari
+to walk|jalan|jalan2
+to open|buka|buka
+to close|tutup|tutup
+to give|beri|beri
+to take|ambil|ambil
+to make|buat|buat
+to love|cinta|cinta2
+to think|fikir|fikir
+to understand|faham|faham
+to work|kerja|kerja2
+to wait|tunggu|tunggu
+big|besar|besar
+small|kecil|kecil
+new|baru|baru
+old|lama|lama
+good|baik|baik
+bad|buruk|buruk
+beautiful|cantik|cantik
+hot|panas|panas||Hari ini sangat panas.|It is very hot today.
+cold|sejuk|sejuk||Air itu sejuk.|The water is cold.
+fast|cepat|cepat
+slow|perlahan|perlahan
+easy|mudah|mudah
+difficult|sukar|sukar
+long|panjang|panjang
+short|pendek|pendek
+clean|bersih|bersih
+dirty|kotor|kotor
+happy|gembira|gembira||Kanak-kanak itu sangat gembira.|The children are very happy.
+tired|penat|penat||Hari ini saya penat.|I am tired today.
+hungry|lapar|lapar||Kanak-kanak itu lapar.|The child is hungry.
+
+@phrases
+Apa khabar?|apa khabar|How are you?|Apa khabar?|greeting
+Khabar baik!|khabar baik|I am fine!|Khabar baik!|smalltalk
+Selamat pagi!|selamat pagi|Good morning!|Selamat pagi!|greeting
+Selamat petang!|selamat petang|Good evening!|Selamat petang!|greeting
+Selamat malam!|selamat malam|Good night!|Selamat malam!|greeting
+Selamat tinggal!|selamat tinggal|Goodbye!|Selamat tinggal!|greeting
+Terima kasih banyak!|terima kasih banyak|Thank you very much!|Terima kasih banyak!|polite
+Sama-sama.|sama-sama|You're welcome.|Sama-sama.|polite
+Maafkan saya.|maafkan saya|I am sorry.|Maafkan saya.|polite
+Tolong!|tolong|Help!|Tolong!|polite
+Tiada masalah.|tiada masalah|No problem.|Tiada masalah.|polite
+Nama awak siapa?|nama awak siapa|What is your name?|Nama awak siapa?|smalltalk
+Nama saya Aina.|nama saya aina|My name is Aina.|Nama saya Aina.|smalltalk
+Awak dari mana?|awak dari mana|Where are you from?|Awak dari mana?|smalltalk
+Saya dari Kuala Lumpur.|saya dari kuala lumpur|I am from Kuala Lumpur.|Saya dari Kuala Lumpur.|smalltalk
+Awak cakap bahasa Inggeris?|awak cakap bahasa inggeris|Do you speak English?|Awak cakap bahasa Inggeris?|smalltalk
+Saya nak belajar Melayu.|saya nak belajar melayu|I want to learn Malay.|Saya nak belajar Melayu.|school
+Saya tidak faham.|saya tidak faham|I did not understand.|Saya tidak faham.|school
+Cakap perlahan-lahan.|cakap perlahan-lahan|Please speak slowly.|Cakap perlahan-lahan.|polite
+Apa maksudnya?|apa maksudnya|What does it mean?|Apa maksudnya?|school
+Berapa harga ini?|berapa harga ini|How much is this?|Berapa harga ini?|shopping
+Saya nak ini.|saya nak ini|I want this.|Saya nak ini.|shopping
+Ada saiz kecil?|ada saiz kecil|Do you have a smaller size?|Ada saiz kecil?|shopping
+Bil, sila.|bil sila|The bill, please.|Bil, sila.|shopping
+Saya bayar dengan kad.|saya bayar dengan kad|I will pay by card.|Saya bayar dengan kad.|shopping
+Di mana stesen?|di mana stesen|Where is the station?|Di mana stesen?|travel
+Di mana tandas?|di mana tandas|Where is the toilet?|Di mana tandas?|travel
+Bas ini ke Penang?|bas ini ke penang|Does this bus go to Penang?|Bas ini ke Penang?|travel
+Kereta api pukul berapa?|kereta api pukul berapa|When does the train leave?|Kereta api pukul berapa?|travel
+Saya sesat.|saya sesat|I am lost.|Saya sesat.|travel
+Boleh tolong saya?|boleh tolong saya|Can you help me?|Boleh tolong saya?|polite
+Saya perlu doktor.|saya perlu doktor|I need a doctor.|Saya perlu doktor.|health
+Saya kurang sihat.|saya kurang sihat|I am not feeling well.|Saya kurang sihat.|health
+Di mana farmasi?|di mana farmasi|Where is the pharmacy?|Di mana farmasi?|health
+Kepala saya sakit.|kepala saya sakit|I have a headache.|Kepala saya sakit.|health
+Secawan teh, sila.|secawan teh sila|A cup of tea, please.|Secawan teh, sila.|food
+Menu, sila.|menu sila|The menu, please.|Menu, sila.|food
+Sedap sangat!|sedap sangat|It is very tasty!|Sedap sangat!|food
+Saya vegetarian.|saya vegetarian|I am a vegetarian.|Saya vegetarian.|food
+Saya lapar.|saya lapar|I am hungry.|Saya lapar.|food
+Saya tidak makan daging.|saya tidak makan daging|I don't eat meat.|Saya tidak makan daging.|food
+Air itu sejuk.|air itu sejuk|The water is cold.|Air itu sejuk.|food
+Cuaca hari ini baik.|cuaca hari ini baik|The weather is nice today.|Cuaca hari ini baik.|smalltalk
+Saya kerja di pejabat.|saya kerja di pejabat|I work in an office.|Saya kerja di pejabat.|work
+Awak kerja di mana?|awak kerja di mana|Where do you work?|Awak kerja di mana?|work
+Gaji saya datang hujung bulan.|gaji saya datang hujung bulan|The salary comes at month end.|Gaji saya datang hujung bulan.|work
+Esok saya ada mesyuarat.|esok saya ada mesyuarat|I have a meeting tomorrow.|Esok saya ada mesyuarat.|work
+Saya belajar di universiti.|saya belajar di universiti|I study at the university.|Saya belajar di universiti.|school
+Kelas mula pukul berapa?|kelas mula pukul berapa|When does the class start?|Kelas mula pukul berapa?|school
+Peperiksaan itu mudah.|peperiksaan itu mudah|The exam was easy.|Peperiksaan itu mudah.|school
+Saya suka baca buku.|saya suka baca buku|I like reading books.|Saya suka baca buku.|school
+Perkataan ini baru.|perkataan ini baru|This word is new.|Perkataan ini baru.|school
+Saya belajar Melayu setiap hari.|saya belajar melayu setiap hari|I learn Malay every day.|Saya belajar Melayu setiap hari.|school
+Hari ini Isnin.|hari ini isnin|Today is Monday.|Hari ini Isnin.|time
+Pukul berapa sekarang?|pukul berapa sekarang|What time is it?|Pukul berapa sekarang?|time
+Saya tiada masa.|saya tiada masa|I have no time.|Saya tiada masa.|time
+Saya datang pukul enam.|saya datang pukul enam|I will come at six.|Saya datang pukul enam.|time
+Ahad saya lapang.|ahad saya lapang|I am free on Sunday.|Ahad saya lapang.|time
+Ini ibu saya.|ini ibu saya|This is my mother.|Ini ibu saya.|family
+Ayah saya kerja keras.|ayah saya kerja keras|My father works hard.|Ayah saya kerja keras.|family
+Kakak saya seorang doktor.|kakak saya seorang doktor|My sister is a doctor.|Kakak saya seorang doktor.|family
+Keluarga kami besar.|keluarga kami besar|Our family is big.|Keluarga kami besar.|family
+Budak itu bermain di taman.|budak itu bermain di taman|The child plays in the garden.|Budak itu bermain di taman.|family
+Rumah saya kecil.|rumah saya kecil|My house is small.|Rumah saya kecil.|home
+Dapur itu bersih.|dapur itu bersih|The kitchen is clean.|Dapur itu bersih.|home
+Tingkap terbuka.|tingkap terbuka|The window is open.|Tingkap terbuka.|home
+Saya tutup pintu.|saya tutup pintu|I close the door.|Saya tutup pintu.|home
+Lampu terpadam.|lampu terpadam|The light went out.|Lampu terpadam.|home
+Saya nak tidur sekarang.|saya nak tidur sekarang|I am going to sleep now.|Saya nak tidur sekarang.|home
+Di mana pasport saya?|di mana pasport saya|Where is my passport?|Di mana pasport saya?|travel
+Penerbangan lewat.|penerbangan lewat|The flight is delayed.|Penerbangan lewat.|travel
+Beg itu berat.|beg itu berat|The luggage is heavy.|Beg itu berat.|travel
+Semoga selamat!|semoga selamat|Have a good trip!|Semoga selamat!|travel
+Saya perlu bilik dua malam.|saya perlu bilik dua malam|I need a room for two nights.|Saya perlu bilik dua malam.|travel
+Pergi terus.|pergi terus|Go straight ahead.|Pergi terus.|travel
+Pusing kiri.|pusing kiri|Turn left.|Pusing kiri.|travel
+Di mana pasar?|di mana pasar|Where is the market?|Di mana pasar?|shopping
+Harga terlalu mahal.|harga terlalu mahal|The price is too high.|Harga terlalu mahal.|shopping
+Bagi diskaun, sila.|bagi diskaun sila|Please give a discount.|Bagi diskaun, sila.|shopping
+Saya tengok dulu.|saya tengok dulu|I am just looking.|Saya tengok dulu.|shopping
+Resit, sila.|resit sila|Please give the receipt.|Resit, sila.|shopping
+Selamat menjamu selera!|selamat menjamu selera|Enjoy your meal!|Selamat menjamu selera!|food
+Selepas makan kita minum teh.|selepas makan kita minum teh|We drink tea after the meal.|Selepas makan kita minum teh.|food
+Bagi saya air sejuk.|bagi saya air sejuk|Give me cold water.|Bagi saya air sejuk.|food
+Jangan risau.|jangan risau|Don't worry.|Jangan risau.|emotion
+Saya bangga dengan awak.|saya bangga dengan awak|I am proud of you.|Saya bangga dengan awak.|emotion
+Seronok mendengarnya.|seronok mendengarnya|I am glad to hear that.|Seronok mendengarnya.|emotion
+Saya takut.|saya takut|I am scared.|Saya takut.|emotion
+Gembira jumpa awak.|gembira jumpa awak|Good to see you.|Gembira jumpa awak.|smalltalk
+Tahniah!|tahniah|Congratulations!|Tahniah!|greeting
+Selamat datang!|selamat datang|Welcome!|Selamat datang!|greeting
+Semoga cepat sembuh!|semoga cepat sembuh|Get well soon!|Semoga cepat sembuh!|health
+Sebentar, sila.|sebentar sila|One moment, please.|Sebentar, sila.|polite
+Saya datang sekarang.|saya datang sekarang|I'll be right there.|Saya datang sekarang.|smalltalk
+Saya tidak tahu.|saya tidak tahu|I don't know.|Saya tidak tahu.|smalltalk
+Mungkin nanti.|mungkin nanti|Maybe later.|Mungkin nanti.|smalltalk
+Saya setuju.|saya setuju|I agree.|Saya setuju.|smalltalk
+Itu tidak betul.|itu tidak betul|That is not right.|Itu tidak betul.|smalltalk
+Awak buat apa hari ini?|awak buat apa hari ini|What are you doing today?|Awak buat apa hari ini?|smalltalk
+Saya bersiap untuk peperiksaan.|saya bersiap untuk peperiksaan|I am preparing for the exam.|Saya bersiap untuk peperiksaan.|school
+Saya perlukan bantuan.|saya perlukan bantuan|I need help.|Saya perlukan bantuan.|polite
+Terima kasih atas bantuan.|terima kasih atas bantuan|Thank you for your help.|Terima kasih atas bantuan.|polite
+Ini kali pertama.|ini kali pertama|This is the first time.|Ini kali pertama.|smalltalk
+Di mana boleh tukar wang?|di mana boleh tukar wang|Where can I exchange money?|Di mana boleh tukar wang?|travel
+Bas datang pukul lapan.|bas datang pukul lapan|The bus comes at eight.|Bas datang pukul lapan.|travel
+Saya tertinggal kereta api.|saya tertinggal kereta api|I missed my train.|Saya tertinggal kereta api.|travel
+Hotel itu sangat baik.|hotel itu sangat baik|The hotel is very good.|Hotel itu sangat baik.|travel
+Awak kerja apa?|awak kerja apa|What is your job?|Awak kerja apa?|work
+Saya jurutera.|saya jurutera|I am an engineer.|Saya jurutera.|work
+Dia sentiasa menolong.|dia sentiasa menolong|She always helps.|Dia sentiasa menolong.|smalltalk
+Kami belajar bersama.|kami belajar bersama|We learn together.|Kami belajar bersama.|school
+Melayu saya makin baik.|melayu saya makin baik|My Malay is getting better.|Melayu saya makin baik.|school
+Langit itu biru.|langit itu biru|The sky is blue.|Langit itu biru.|smalltalk
+Warna kegemaran saya hijau.|warna kegemaran saya hijau|My favourite color is green.|Warna kegemaran saya hijau.|smalltalk
+Kereta merah itu cepat.|kereta merah itu cepat|The red car is fast.|Kereta merah itu cepat.|smalltalk
+Malam ini sunyi.|malam ini sunyi|The night is calm.|Malam ini sunyi.|time
+Hari ini hujan.|hari ini hujan|It is raining today.|Hari ini hujan.|smalltalk
+Matahari bersinar.|matahari bersinar|The sun is shining.|Matahari bersinar.|smalltalk
+Bagus!|bagus|Well done!|Bagus!|smalltalk
+Seronok berjumpa.|seronok berjumpa|Nice to meet you.|Seronok berjumpa.|greeting
+Jumpa lagi!|jumpa lagi|We will meet again.|Jumpa lagi!|greeting
+Maaf, awak kata apa?|maaf awak kata apa|Pardon, what did you say?|Maaf, awak kata apa?|polite
+Tolong ulang.|tolong ulang|Please say it again.|Tolong ulang.|polite
+Eja macam mana?|eja macam mana|How do you spell it?|Eja macam mana?|school
+Saya suka teh.|saya suka teh|I love tea.|Saya suka teh.|food
+Makanan sudah siap.|makanan sudah siap|The food is ready.|Makanan sudah siap.|food
+Letak lagi makanan dalam pinggan.|letak lagi makanan dalam pinggan|Put more food on the plate.|Letak lagi makanan dalam pinggan.|food
+Kain ini baik.|kain ini baik|This cloth is good.|Kain ini baik.|shopping
+Kedai sudah tutup.|kedai sudah tutup|The shop is closed.|Kedai sudah tutup.|shopping
+Saya pergi pasar setiap hari.|saya pergi pasar setiap hari|I go to the market every day.|Saya pergi pasar setiap hari.|shopping
+Kereta di jalan.|kereta di jalan|The car is on the road.|Kereta di jalan.|travel
+Pusing dekat jambatan.|pusing dekat jambatan|Turn near the bridge.|Pusing dekat jambatan.|travel
+Bandar itu besar.|bandar itu besar|The city is very big.|Bandar itu besar.|travel
+Kampung itu aman.|kampung itu aman|It is calm in the village.|Kampung itu aman.|travel
+Saya seorang pelajar.|saya seorang pelajar|I am a student.|Saya seorang pelajar.|school
+Dia guru yang baik.|dia guru yang baik|He is a good teacher.|Dia guru yang baik.|school
+Soalan itu sukar.|soalan itu sukar|The question is difficult.|Soalan itu sukar.|school
+Jawapan itu betul.|jawapan itu betul|The answer is correct.|Jawapan itu betul.|school
+Buku di atas meja.|buku di atas meja|The book is on the table.|Buku di atas meja.|school
+Katil itu lembut.|katil itu lembut|The bed is soft.|Katil itu lembut.|home
+Kunci hilang.|kunci hilang|The key is lost.|Kunci hilang.|home
+Di taman ada bunga.|di taman ada bunga|There are flowers in the garden.|Di taman ada bunga.|home
+Bilik itu cerah.|bilik itu cerah|The room is bright.|Bilik itu cerah.|home
+Naik tangga itu.|naik tangga itu|Go up the stairs.|Naik tangga itu.|home
+
+@grammar
+"Makan" ialah ___ .|kata kerja|kata nama|kata sifat|1|"Makan" (eat) is a verb.|"Makan" is a verb.
+"Buku" ialah ___ .|kata nama|kata kerja|kata sifat|1|"Buku" (book) is a noun.|"Buku" is a noun.
+"Cantik" ialah ___ .|kata sifat|kata nama|kata kerja|1|"Cantik" describes a noun → adjective.|"Cantik" is an adjective.
+Melayu ___ bentuk kata ganti orang pada kata kerja.|tiada|ada|kadangkala|1|Verbs do not change for person.|Malay verbs are invariable.
+"Saya ___ ."|makan|makan2|makan3|1|The verb stays the same: saya makan.|Verbs do not inflect.
+"Dia ___ ."|makan|makan2|makan3|1|"Dia makan" — same verb form.|Verbs are invariable.
+Jamak dibuat dengan ___ .|pengulangan|akhiran -s|awalan|1|Plural by reduplication: buku-buku.|Reduplication marks the plural.
+"Buku-buku" bermaksud ___ .|buku jamak|buku tunggal|buku kecil|1|"Buku-buku" = books.|Reduplication gives the plural.
+Negatif dengan ___ .|tidak|bukan sahaja|juga|1|"Tidak" negates verbs: saya tidak makan.|"Tidak" negates the verb.
+"Bukan" menafikan ___ .|kata nama|kata kerja|kata sendi|1|"Bukan" negates nouns: bukan guru.|"Bukan" negates nouns.
+"Sudah" bermaksud ___ .|selesai|belum|akan|1|"Sudah" = already.|"Sudah" marks completion.
+"Belum" bermaksud ___ .|belum lagi|sudah|sedang|1|"Belum" = not yet.|"Belum" means "not yet".
+"Sedang" bermaksud ___ .|sedang berlaku|selesai|akan datang|1|"Sedang" = in progress.|"Sedang" marks the continuous.
+"Akan" bermaksud ___ .|akan datang|selesai|sedang|1|"Akan" = will.|"Akan" marks the future.
+"Perlu" bermaksud ___ .|perlu|boleh|tidak mahu|1|"Perlu" = must/need to.|"Perlu" means "need to".
+"Boleh" bermaksud ___ .|boleh|tidak boleh|perlu|1|"Boleh" = can.|"Boleh" means "can".
+"Kena" bermaksud ___ .|harus|boleh|sudah|1|"Kena" = have to (colloquial).|"Kena" means "have to".
+"Di" menunjukkan ___ .|tempat|masa|punca|1|"Di sekolah" = at school.|"Di" marks place.
+"Ke" menunjukkan ___ .|arah|tempat|masa|1|"Ke sekolah" = to school.|"Ke" marks direction.
+"Dari" menunjukkan ___ .|punca|arah|masa|1|"Dari Kuala Lumpur" = from KL.|"Dari" marks origin.
+"Untuk" menunjukkan ___ .|tujuan|punca|masa|1|"Untuk awak" = for you.|"Untuk" means "for".
+"Dengan" menunjukkan ___ .|bersama|arah|punca|1|"Dengan kawan" = with a friend.|"Dengan" means "with".
+"Tentang" menunjukkan ___ .|perkara|tempat|masa|1|"Tentang kerja" = about work.|"Tentang" means "about".
+"Selepas" menunjukkan ___ .|selepas|sebelum|dalam|1|"Selepas makan" = after eating.|"Selepas" means "after".
+"Sebelum" menunjukkan ___ .|sebelum|selepas|semasa|1|"Sebelum kerja" = before work.|"Sebelum" means "before".
+"Semasa" menunjukkan ___ .|semasa|sebelum|selepas|1|"Semasa kerja" = during work.|"Semasa" means "during".
+"Sehingga" menunjukkan ___ .|sehingga|sejak|untuk|1|"Sehingga petang" = until evening.|"Sehingga" means "until".
+"Kerana" menunjukkan ___ .|sebab|masa|tempat|1|"Kerana hujan" = because of rain.|"Kerana" gives the reason.
+"Sekiranya" menunjukkan ___ .|syarat|masa|tempat|1|"Sekiranya" = if.|"Sekiranya" makes a condition.
+"Apabila" menunjukkan ___ .|masa|tempat|sebab|1|"Apabila" = when.|"Apabila" refers to time.
+"Sangat" ialah ___ .|kata keterangan|kata nama|kata kerja|1|"Sangat" = very.|"Sangat" is an adverb.
+"Semua" bermaksud ___ .|semua|tiada siapa|beberapa|1|"Semua" = all.|"Semua" means "all".
+"Sesiapa" bermaksud ___ .|sesiapa|semua|tiada siapa|1|"Sesiapa" = anyone.|"Sesiapa" means "anyone".
+"Beberapa" bermaksud ___ .|beberapa|semua|sesiapa|1|"Beberapa" = some.|"Beberapa" means "some".
+"Setiap" bermaksud ___ .|setiap|sesiapa|beberapa|1|"Setiap" = every.|"Setiap" means "every".
+"Pada siang hari" menunjukkan ___ .|masa|tempat|punca|1|"Pada siang hari" = during the day.|It marks the time of day.
+"Pada malam hari" menunjukkan ___ .|masa|tempat|punca|1|"Pada malam hari" = at night.|It marks the time of day.
+"Esok" bermaksud ___ .|hari berikutnya|hari ini|semalam|1|"Esok" = tomorrow.|"Esok" means "tomorrow".
+"Semalam" bermaksud ___ .|hari lepas|esok|hari ini|1|"Semalam" = yesterday.|"Semalam" means "yesterday".
+"Sekarang" bermaksud ___ .|kini|nanti|dahulu|1|"Sekarang" = now.|"Sekarang" means "now".
+"Sentiasa" bermaksud ___ .|setiap kali|kadang-kadang|tidak pernah|1|"Sentiasa" = always.|"Sentiasa" means "always".
+"Dan" bermaksud ___ .|dan|tetapi|kerana|1|"Dan" = and.|"Dan" means "and".
+"Tetapi" bermaksud ___ .|tetapi|dan|kerana|1|"Tetapi" = but.|"Tetapi" means "but".
+"Atau" bermaksud ___ .|atau|dan|tetapi|1|"Atau" = or.|"Atau" means "or".
+"Jadi" bermaksud ___ .|jadi|tetapi|kerana|1|"Jadi" = so.|"Jadi" means "so".
+"Saya" bermaksud ___ .|saya|awak|dia|1|"Saya" = I.|"Saya" means "I".
+"Awak" bermaksud ___ .|awak|saya|mereka|1|"Awak" = you (informal).|"Awak" means "you".
+"Mereka" bermaksud ___ .|mereka|kami|dia|1|"Mereka" = they.|"Mereka" means "they".
+"Kami" bermaksud ___ .|kami eksklusif|mereka|awak|1|"Kami" = we (excluding you).|"Kami" excludes the listener.
+"Kita" bermaksud ___ .|kita inklusif|mereka|saya|1|"Kita" = we (including you).|"Kita" includes the listener.
+"Dia" bermaksud ___ .|dia|awak|mereka|1|"Dia" = he/she.|"Dia" means "he/she".
+"Ini" bermaksud ___ .|ini|itu|sana|1|"Ini" = this.|"Ini" means "this".
+"Itu" bermaksud ___ .|itu|ini|sini|1|"Itu" = that.|"Itu" means "that".
+"Di sini" bermaksud ___ .|di sini|di sana|di mana|1|"Di sini" = here.|"Di sini" means "here".
+"Di sana" bermaksud ___ .|di sana|di sini|di mana|1|"Di sana" = there.|"Di sana" means "there".
+"Di mana" bermaksud ___ .|di mana|bila|kenapa|1|"Di mana" = where.|"Di mana" asks place.
+"Bila" bertanya ___ .|masa|tempat|sebab|1|"Bila" = when.|"Bila" asks time.
+"Kenapa" bertanya ___ .|sebab|masa|tempat|1|"Kenapa" = why.|"Kenapa" asks reason.
+"Berapa" bertanya ___ .|jumlah|tempat|masa|1|"Berapa" = how much.|"Berapa" asks amount.
+"Siapa" bertanya ___ .|orang|benda|tempat|1|"Siapa" = who.|"Siapa" asks who.
+"Apa" bertanya ___ .|benda|orang|tempat|1|"Apa" = what.|"Apa" asks what.
+"Macam mana" bertanya ___ .|cara|tempat|masa|1|"Macam mana" = how.|"Macam mana" asks how.
+Urutan kata Melayu ialah ___ .|SVO|SOV|VSO|1|Malay is SVO: saya makan nasi.|Malay word order is SVO.
+Kata sifat datang ___ kata nama.|selepas|sebelum|selepas kata kerja|1|"Rumah besar" — adjective after the noun.|Adjectives follow the noun.
+"Rumah besar" bermaksud ___ .|rumah yang besar|rumah kecil|rumah baharu|1|"Rumah besar" = big house.|The adjective follows the noun.
+"Lebih besar" bermaksud ___ .|lebih besar|paling besar|kecil|1|"Lebih" = more.|"Lebih" makes the comparative.
+"Paling besar" bermaksud ___ .|paling besar|lebih besar|kecil|1|"Paling" = most.|"Paling" makes the superlative.
+"Terima kasih" menunjukkan ___ .|terima kasih|maaf|selamat datang|1|"Terima kasih" = thank you.|"Terima kasih" is thanks.
+"Selamat datang" menunjukkan ___ .|selamat datang|selamat tinggal|terima kasih|1|"Selamat datang" = welcome.|"Selamat datang" greets a guest.
+"Ya" bermaksud ___ .|ya|tidak|mungkin|1|"Ya" = yes.|"Ya" means "yes".
+"Tidak" bermaksud ___ .|tidak|ya|mungkin|1|"Tidak" = no.|"Tidak" means "no".
+"Mungkin" bermaksud ___ .|mungkin|tentu|tidak|1|"Mungkin" = maybe.|"Mungkin" means "maybe".
+
+@sentences
+Saya minum teh setiap pagi.|I drink tea every morning.|Saya minum teh setiap pagi.
+Abang saya belajar bahasa Jerman.|My brother is learning German.|Abang saya belajar bahasa Jerman.
+Pada hari Ahad kami pergi ke Penang.|We go to Penang on Sunday.|Pada hari Ahad kami pergi ke Penang.
+Buku itu ada di atas meja.|The book is on the table.|Buku itu ada di atas meja.
+Semalam dia menulis surat.|He wrote a letter yesterday.|Semalam dia menulis surat.
+Boleh awak tolong saya?|Can you help me?|Boleh awak tolong saya?
+Saya mahu dua kopi dan satu air.|I want two coffees and a water.|Saya mahu dua kopi dan satu air.
+Kereta api bergerak pukul lapan.|The train leaves at eight.|Kereta api bergerak pukul lapan.
+Ibu saya memasak ikan hari ini.|My mother is cooking fish today.|Ibu saya memasak ikan hari ini.
+Dia fasih dalam tiga bahasa.|He speaks three languages fluently.|Dia fasih dalam tiga bahasa.
+Rumah kami kecil tetapi bersih.|Our house is small but clean.|Rumah kami kecil tetapi bersih.
+Saya tidak faham soalan itu sepenuhnya.|I did not fully understand the question.|Saya tidak faham soalan itu sepenuhnya.
+Cuaca hari ini sungguh baik.|The weather is really lovely today.|Cuaca hari ini sungguh baik.
+Esok saya kena bangun awal.|Tomorrow I have to get up early.|Esok saya kena bangun awal.
+Dia bekerja di hospital.|She works in a hospital.|Dia bekerja di hospital.
+Kami berjumpa di hadapan sekolah.|We meet in front of the school.|Kami berjumpa di hadapan sekolah.
+Dia terlupa telefon di rumah.|He forgot his phone at home.|Dia terlupa telefon di rumah.
+Hari ini saya tidak pergi pejabat.|I am not going to the office today.|Hari ini saya tidak pergi pejabat.
+Kanak-kanak bermain bola di taman.|The children play football in the garden.|Kanak-kanak bermain bola di taman.
+Boleh awak buka tingkap?|Can you open the window?|Boleh awak buka tingkap?
+Hari ini saya banyak kerja.|I have a lot of work today.|Hari ini saya banyak kerja.
+Ayah saya suka baca surat khabar.|My father likes reading newspapers.|Ayah saya suka baca surat khabar.
+Makanan itu sungguh sedap.|The food is really very tasty.|Makanan itu sungguh sedap.
+Kami sudah menunggu sejam.|We have been waiting for an hour.|Kami sudah menunggu sejam.
+Saya belajar Melayu untuk kerja.|I learn Malay for my job.|Saya belajar Melayu untuk kerja.
+Dia dari sebuah bandar kecil.|She is from a small town.|Dia dari sebuah bandar kecil.
+Saya beli roti dan susu di pasar.|I buy bread and milk at the market.|Saya beli roti dan susu di pasar.
+Dia pergi pejabat dengan bas.|He goes to the office by bus.|Dia pergi pejabat dengan bas.
+Semalam kami menonton filem.|We watched a film yesterday.|Semalam kami menonton filem.
+Malam ini saya akan hantar mesej.|I will send you a message tonight.|Malam ini saya akan hantar mesej.
+Hotel itu tidak jauh dari stesen.|The hotel is not far from the station.|Hotel itu tidak jauh dari stesen.
+Kakak saya belajar perubatan.|My sister is studying medicine.|Kakak saya belajar perubatan.
+Pada hujung minggu saya tiada masa.|I have no time at the weekend.|Pada hujung minggu saya tiada masa.
+Pada waktu petang dia tidak minum kopi.|He does not drink coffee in the evening.|Pada waktu petang dia tidak minum kopi.
+Kami perlu dua tiket ke Penang.|We need two tickets to Penang.|Kami perlu dua tiket ke Penang.
+Peperiksaan mula pukul sembilan.|The exam starts at nine.|Peperiksaan mula pukul sembilan.
+Saya cakap sedikit Melayu dan Inggeris.|I speak a little Malay and English.|Saya cakap sedikit Melayu dan Inggeris.
+Kawan saya bekerja sebagai jurutera.|My friend works as an engineer.|Kawan saya bekerja sebagai jurutera.
+Dia menolong ibunya di dapur.|She helps her mother in the kitchen.|Dia menolong ibunya di dapur.
+Saya berjalan setiap petang.|I go for a walk every evening.|Saya berjalan setiap petang.
+
+@listening
+Apa khabar, awak sihat?|apa khabar awak sihat|How are you, are you well?|Apa khabar, awak sihat?|Apa khabar, awak di mana?|Selamat pagi, awak sihat?|1
+Saya nak secawan teh.|saya nak secawan teh|I want a cup of tea.|Saya nak secawan teh|Saya nak secawan kopi|Saya nak segelas air|1
+Di mana stesen?|di mana stesen|Where is the station?|Di mana stesen?|Di mana pasar?|Di mana hotel?|1
+Saya dari Kuala Lumpur.|saya dari kuala lumpur|I am from Kuala Lumpur.|Saya dari Kuala Lumpur|Saya tinggal di Kuala Lumpur|Saya pergi ke Kuala Lumpur|1
+Bil, sila.|bil sila|The bill, please.|Bil, sila|Menu, sila|Resit, sila|1
+Berapa harga ini?|berapa harga ini|How much is this?|Berapa harga ini?|Siapa punya ini?|Apa ini?|1
+Saya tidak faham.|saya tidak faham|I did not understand.|Saya tidak faham|Saya tidak datang|Saya tidak dengar|1
+Cakap perlahan-lahan.|cakap perlahan-lahan|Please speak slowly.|Cakap perlahan-lahan|Cakap kuat-kuat|Datang dekat|1
+Abang saya seorang doktor.|abang saya seorang doktor|My brother is a doctor.|Abang saya seorang doktor|Abang saya seorang guru|Ayah saya seorang doktor|1
+Kereta api bergerak pukul lapan.|kereta api bergerak pukul lapan|The train leaves at eight.|Kereta api bergerak pukul lapan|Bas bergerak pukul lapan|Kereta api datang pukul lapan|1
+Hari ini saya tiada masa.|hari ini saya tiada masa|I have no time today.|Hari ini saya tiada masa|Hari ini saya tiada wang|Hari ini saya tiada kerja|1
+Makanan itu sedap.|makanan itu sedap|The food is tasty.|Makanan itu sedap|Cuaca itu baik|Teh itu panas|1
+Kami belajar Melayu bersama.|kami belajar melayu bersama|We learn Malay together.|Kami belajar Melayu bersama|Kami cakap Melayu bersama|Kami baca buku bersama|1
+Saya perlu bilik dua malam.|saya perlu bilik dua malam|I need a room for two nights.|Saya perlu bilik dua malam|Saya perlu meja dua orang|Saya perlu bilik satu malam|1
+Ibu saya memasak ikan hari ini.|ibu saya memasak ikan hari ini|My mother cooks fish today.|Ibu saya memasak ikan hari ini|Ibu saya membeli ikan hari ini|Ayah saya memasak ikan hari ini|1
+Saya berjalan setiap petang.|saya berjalan setiap petang|I walk every evening.|Saya berjalan setiap petang|Saya berjalan setiap pagi|Saya tidur setiap petang|1
+Ada saiz kecil?|ada saiz kecil|Do you have a smaller size?|Ada saiz kecil?|Ada saiz besar?|Ada warna lain?|1
+Saya bayar dengan kad.|saya bayar dengan kad|I will pay by card.|Saya bayar dengan kad|Saya bayar dengan tunai|Saya bayar esok|1
+Saya minta maaf.|saya minta maaf|I am very sorry.|Saya minta maaf|Saya gembira|Saya takut|1
+Esok saya telefon awak.|esok saya telefon awak|I will call you tomorrow.|Esok saya telefon awak|Hari ini saya telefon awak|Esok saya jumpa awak|1
+
+@stories
+Hari pertama di Kuala Lumpur|🚆|Rahim tiba di Kuala Lumpur pada waktu pagi.\nDia naik teksi ke ___ (1).\nDi bilik dia minum ___ (2).\nKemudian dia telefon ___ (3).|Rahim reaches Kuala Lumpur in the morning. He goes by taxi to the hotel. In the room he drinks a tea. Then he calls his family.|hotel/stesen/pasar=0;teh/buku/roti=0;keluarga/kedai/kelas=0
+Beli-belah di pasar|🛒|Sara pergi ___ (1) pada hari Ahad.\nDia beli roti, susu dan ___ (2).\nDia bayar dengan ___ (3).|Sara goes shopping on Sunday. She buys bread, milk and apples. She pays by card.|pasar/sekolah/pejabat=0;epal/buku/kerusi=0;kad/kertas/air=0
+Pasport hilang|🛂|Ahmad mencari ___ (1) dia.\nDia minta tolong daripada seorang ___ (2).\nNasib baik, ia ada di dalam ___ (3).|Ahmad is looking for his passport. He asks a policeman for help. Luckily it is in his bag.|pasport/kunci/buku=0;polis/guru/jiran=0;beg/dapur/sekolah=0
+Di klinik|🏥|Bilal rasa ___ (1).\nDia pergi jumpa ___ (2).\nDoktor beri ubat dan ___ (3).|Bilal is unwell. He goes to the doctor. The doctor gives him medicine and rest.|kurang sihat/baik/lapar=0;doktor/pembuat roti/pemandu=0;rehat/wang/buku=0
+Kelas Melayu|📚|Nadia belajar ___ (1) selama tiga bulan.\nDia berlatih setiap petang dengan ___ (2).\n___ (3) dia kata dia sudah pandai.|Nadia has been learning Malay for three months. She practises every evening with books. Her teacher says she already speaks well.|Melayu/Perancis/Arab=0;buku/gambar/kad=0;Guru/Abang/Jiran=0
+Makan malam keluarga|👨‍👩‍👧‍👦|Pada hari Ahad seluruh ___ (1) datang.\nNenek memasak ___ (2).\nSemua makan bersama dan banyak ___ (3).|On Sunday the whole family comes. The grandmother cooks rice. Everyone eats together and laughs a lot.|keluarga/pejabat/kelas=0;nasi/air/kertas=0;ketawa/kerja/tidur=0
+Di stesen|🚉|Kereta api ___ (1) sepuluh minit.\nHassan membeli ___ (2) di kedai.\nKemudian dia naik ___ (3).|The train is ten minutes late. Hassan buys a newspaper. Then he gets on the train.|lewat/bersih/siap=0;surat khabar/resit/kunci=0;kereta api/bas/kapal terbang=0
+Petang sejuk|❄️|Pada bulan Januari sangat ___ (1).\nAisha memakai ___ (2) yang hangat.\nDia minum ___ (3) panas dan membaca.|In January it is very cold. Aisha wears a warm coat. She drinks hot tea and reads.|sejuk/panas/hujan=0;kot/baju/kasut=0;teh/air/jus=0
+Makan malam di hotel|🍽️|Pelayan membawa ___ (1).\nOmar pesan ikan dan ___ (2).\nAkhir sekali dia minta ___ (3).|The waiter brings the menu. Omar orders fish and rice. At the end he asks for the bill.|menu/kerusi/lampu=0;nasi/meja/tingkap=0;bil/kunci/resit=0
+Kawan baharu|🤝|Lena dan Sana berjumpa di ___ (1).\nMereka bercakap tentang muzik dan ___ (2).\nAkhir sekali mereka bertukar ___ (3).|Lena and Sana meet in the park. They talk about music and travel. At the end they exchange their numbers.|taman/pejabat/kereta api=0;perjalanan/resit/peperiksaan=0;nombor/alamat/buku=0
+
+@idioms
+Buah hati|buah hati|The apple of one's eye.|buah hati|Anak lelakinya buah hatinya.
+Berfikir panjang|berfikir panjang|To think it over carefully.|fikir masak-masak|Jangan terus setuju, berfikir panjang dahulu.
+Panjang tangan|panjang tangan|A thief (literally: long hands).|pencuri|Jangan biar barang itu — dia panjang tangan.
+Bermurah hati|bermurah hati|To be generous.|murah hati|Dia bermurah hati memberi makan kepada orang miskin.
+Sedikit tetapi bermakna|sedikit tetapi bermakna|Little but meaningful.|sedikit tetapi bernilai|Hadiahnya sedikit tetapi bermakna.
+Pecah tembelang|pecah tembelang|To be exposed.|terbongkar|Rancangannya pecah tembelang.
+Makan hati|makan hati|To be hurt by someone close.|tersiksa hati|Kata-katanya membuat saya makan hati.
+Hilang akal|hilang akal|To lose one's senses.|hilang pertimbangan|Dalam panik dia hilang akal.
+Naik darah|naik darah|To get angry.|naik marah|Dia naik darah mendengar berita itu.
+Naik angin|naik angin|To fly into a rage.|marah besar|Jangan naik angin, sabar dahulu.
+Naik kepala|naik kepala|To become arrogant.|naik minyak|Sejak dipuji dia naik kepala.
+Tutup mulut|tutup mulut|To keep one's mouth shut.|diam|Semua orang tutup mulut tentang perkara itu.
+Tutup mata|tutup mata|To ignore the obvious.|pejam mata|Notis ada di depan awak, jangan tutup mata.
+Buang masa|buang masa|To waste time.|sia-sia|Jangan buang masa dengan perkara remeh.
+Masa itu emas|masa itu emas|Time is money.|masa itu emas|Masa itu emas, jangan membazirkannya.
+Air mata buaya|air mata buaya|Crocodile tears.|pura-pura sedih|Jangan percaya air mata buayanya.
+Batu api|batu api|An instigator.|penghasut|Jangan jadi batu api dalam keluarga.
+Keras hati|keras hati|Stubborn.|degil|Dia keras hati, tidak mahu mendengar nasihat.
+Hati bersih|hati bersih|Pure-hearted.|suci hati|Dia berhati bersih dan tidak menyimpan dendam.
+Dalam sekelip mata|dalam sekelip mata|In the blink of an eye.|dalam sekejap|Masa berlalu dalam sekelip mata.
+Menangis air mata darah|menangis air mata darah|To cry one's eyes out.|menangis teresak-esak|Selepas kegagalan itu dia menangis air mata darah.
+Berdiri di kaki sendiri|berdiri di kaki sendiri|To stand on one's own feet.|berdikari|Selepas tamat belajar dia berdiri di kaki sendiri.
+Berkata manis|berkata manis|Sweet-talker.|berkata manis|Jangan percaya orang yang berkata manis.
+Gigit jari|gigit jari|To be left empty-handed.|kecewa|Yang lewat gigit jari.
+Cari nahas|cari nahas|To ask for trouble.|cari penyakit|Jangan cari nahas dengan orang itu.
+
+@alphabet
+A|a|a|air
+B|be|be|buku
+C|ce|che|cantik
+D|de|de|dua
+E|e|e|enam
+F|ef|ef|filem
+G|ge|ge|gula
+H|ha|ha|hari
+I|i|i|ibu
+J|je|je|jalan
+K|ke|ke|kerja
+L|el|el|lama
+M|em|em|makan
+N|en|en|nasi
+O|o|o|oren
+P|pe|pe|pasar
+Q|ku|ku|Quran
+R|er|er|rumah
+S|es|es|sekolah
+T|te|te|teh
+U|u|u|ubat
+V|ve|ve|vitamin
+W|we|we|wang
+X|eks|eks|x-ray
+Y|ye|ye|ya
+Z|ze|ze|zero

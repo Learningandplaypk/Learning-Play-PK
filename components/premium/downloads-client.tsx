@@ -6,7 +6,8 @@ import { Check, Download, HardDrive, Trash2, WifiOff } from "lucide-react";
 import { Button, Card, Chip } from "@/components/ui";
 import { usePlayer } from "@/lib/store";
 import { downloadPack, formatBytes, packStatuses, removePack, totalBytes, type PackStatus } from "@/lib/offline-packs";
-import { langFlag } from "@/lib/lang-paths";
+import { getLangMeta } from "@/lib/lang-paths";
+import { LangTile } from "@/components/brand/lang-tile";
 
 /** Offline lesson packs + manage-storage UI (premium). */
 export function DownloadsClient() {
@@ -14,6 +15,8 @@ export function DownloadsClient() {
   const toast = usePlayer((s) => s.toast);
   const [packs, setPacks] = useState<PackStatus[] | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
+  // only the languages the learner actually uses get an offline pack slot
+  const myLangs = usePlayer((s) => s.learningLanguages);
 
   const refresh = useCallback(async () => {
     setPacks(await packStatuses());
@@ -80,13 +83,17 @@ export function DownloadsClient() {
       </Card>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
-        {(packs ?? []).map((p) => {
+        {(packs ?? [])
+          .filter((p) => myLangs.includes(p.lang))
+          .map((p) => {
           const done = p.cached > 0;
+          const meta = getLangMeta(p.lang);
+          if (!meta) return null;
           return (
             <Card key={p.lang} className="flex items-center justify-between gap-3 p-4">
               <div className="flex min-w-0 items-center gap-3">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-surface-2 text-xl">
-                  {langFlag(p.lang)}
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-surface-2">
+                  {meta ? <LangTile meta={meta} size={30} /> : null}
                 </span>
                 <div className="min-w-0">
                   <p className="truncate font-display text-sm font-extrabold text-fg">{p.label}</p>
@@ -122,7 +129,7 @@ export function DownloadsClient() {
               )}
             </Card>
           );
-        })}
+          })}
       </div>
 
       <p className="mt-6 text-xs leading-relaxed text-muted">

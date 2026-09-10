@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GameLoader } from "@/components/game-loader";
 import { LEARN_GAME_DATA, getGameData } from "@/lib/games-data";
-import { LANG_PATHS, langLabel } from "@/lib/lang-paths";
+import { LANG_PATHS, getLangMeta } from "@/lib/lang-paths";
 import { GAME_JSON_LD } from "@/components/game-jsonld";
+import { getSiteUrl } from "@/lib/env";
+import MANIFEST from "@/data/langs/_manifest.json";
+
+const COUNTS = MANIFEST as Record<string, { words: number; phrases: number; grammar: number; sentences: number }>;
 
 export function generateStaticParams() {
   const params: Array<{ lang: string; game: string }> = [];
@@ -15,15 +19,36 @@ export function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string; game: string }> }): Promise<Metadata> {
+/** Unique metadata + OG image for every language × lesson combination. */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; game: string }>;
+}): Promise<Metadata> {
   const { lang, game } = await params;
-  const label = langLabel(lang) ?? lang;
+  const meta = getLangMeta(lang);
   const data = getGameData(game);
-  if (!data) return { title: "Lesson" };
+  if (!meta || !data) return { title: "Lesson" };
+  const c = COUNTS[lang] ?? { words: 300, phrases: 60, grammar: 120, sentences: 60 };
+  const title = `${data.title} — Learn ${meta.name} Free`;
+  const description = `${data.desc} ${meta.name} (${meta.native}) lesson — ${c.words} words aur ${c.phrases} phrases ka pool, Urdu + English meanings ke sath. Bilkul free, koi limit nahi.`;
+  const site = getSiteUrl();
+  const og = `${site}/api/og?title=${encodeURIComponent(data.title)}&sub=${encodeURIComponent(
+    `Learn ${meta.name}`
+  )}&game=${encodeURIComponent(`${data.emoji} ${meta.name} lesson — Learn & Play PK`)}`;
   return {
-    title: `${data.title} — ${label} Lesson`,
-    description: `${data.desc} ${label} seekhne ka free game — Urdu meanings ke sath.`,
+    title,
+    description,
     alternates: { canonical: `/learn/${lang}/${game}` },
+    keywords: [`${meta.name} ${data.title.toLowerCase()}`, `learn ${meta.name}`, `${meta.name} practice`, meta.native],
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: `${site}/learn/${lang}/${game}`,
+      images: [{ url: og, width: 1200, height: 630, alt: `${data.title} — ${meta.name}` }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [og] },
   };
 }
 
@@ -31,9 +56,18 @@ export default async function LearnGamePage({ params }: { params: Promise<{ lang
   const { lang, game } = await params;
   if (!LANG_PATHS.includes(lang)) notFound();
   const data = getGameData(game);
+  if (!data || (data.langs && !data.langs.includes(lang))) notFound();
+  const meta = getLangMeta(lang);
   return (
     <>
-      {data && <GAME_JSON_LD name={`${data.title} (${langLabel(lang)})`} description={data.desc} slug={`learn/${lang}/${data.slug}`} emoji={data.emoji} />}
+      {data && meta && (
+        <GAME_JSON_LD
+          name={`${data.title} (${meta.name})`}
+          description={`${data.desc} ${meta.name} (${meta.native}) seekhne ka free game.`}
+          slug={`learn/${lang}/${data.slug}`}
+          emoji={data.emoji}
+        />
+      )}
       <GameLoader zone="learn" slug={game} lang={lang} />
     </>
   );

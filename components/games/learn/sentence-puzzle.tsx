@@ -2,9 +2,8 @@
 
 import React, { useMemo, useState } from "react";
 import type { GameProps } from "@/components/game-shell";
-import { SENTENCES } from "@/data/english/sentences";
-import { getLanguage } from "@/lib/langs";
 import { shuffle } from "@/lib/utils";
+import { LessonEmpty, LessonLoading, useLangPack, useLessonScript } from "./lesson-bits";
 import { sfx } from "@/lib/sfx";
 
 const ROUNDS = 8;
@@ -12,17 +11,20 @@ const ROUNDS = 8;
 type Round = { tokens: string[]; ur: string };
 
 export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
-  const rounds = useMemo<Round[]>(() => {
-    if (lang === "english") {
-      return shuffle(SENTENCES.filter((s) => s.correct.length <= 9))
-        .slice(0, ROUNDS)
-        .map((s) => ({ tokens: s.correct, ur: s.ur }));
-    }
-    const data = getLanguage(lang);
-    return shuffle(data?.phrases ?? [])
-      .slice(0, ROUNDS)
-      .map((p) => ({ tokens: p.phrase.split(/\s+/), ur: `${p.ur} (${p.en})` }));
-  }, [lang]);
+  const pack = useLangPack(lang);
+  const { rtl, family } = useLessonScript(lang);
+  const rounds = useMemo<Round[] | null>(() => {
+    if (!pack) return null;
+    // dedicated jumbled-sentence set first, phrases as a fallback pool
+    const fromSentences = pack.sentences
+      .filter((s) => s.s.split(/\s+/).length <= 10)
+      .map((s) => ({ tokens: s.s.split(/\s+/), ur: `${s.ur} (${s.en})` }));
+    const fromPhrases = pack.phrases
+      .filter((p) => p.p.split(/\s+/).length >= 3 && p.p.split(/\s+/).length <= 10)
+      .map((p) => ({ tokens: p.p.split(/\s+/), ur: `${p.ur} (${p.en})` }));
+    const pool = fromSentences.length >= ROUNDS ? fromSentences : [...fromSentences, ...fromPhrases];
+    return shuffle(pool).slice(0, ROUNDS);
+  }, [pack]);
 
   const [idx, setIdx] = useState(0);
   const [placed, setPlaced] = useState<number[]>([]);
@@ -30,10 +32,8 @@ export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
   const [checked, setChecked] = useState<null | boolean>(null);
   const [startedAt] = useState(() => Date.now());
 
-  if (rounds.length === 0) {
-    onEnd({ score: 0, maxScore: ROUNDS * 10, accuracy: 0, timeMs: 0 });
-    return null;
-  }
+  if (!pack) return <LessonLoading />;
+  if (!rounds || rounds.length === 0) return <LessonEmpty onEnd={onEnd} slug={lang} />;
 
   const round = rounds[idx];
   const tokens = useMemo(() => shuffle(round.tokens.map((t, i) => ({ t, i }))), [round]);
@@ -83,7 +83,11 @@ export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
         <p className="urdu mt-2 text-xl text-brand-ink">{round.ur}</p>
 
         {/* answer area */}
-        <div className="mt-5 flex min-h-20 flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-dashed border-line p-3">
+        <div
+          dir={rtl ? "rtl" : "ltr"}
+          style={family ? { fontFamily: family } : undefined}
+          className="mt-5 flex min-h-20 flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-dashed border-line p-3"
+        >
           {round.tokens.map((_, slot) => {
             const pi = placed[slot];
             return pi !== undefined ? (
@@ -97,7 +101,7 @@ export default function SentencePuzzle({ lang = "english", onEnd }: GameProps) {
         </div>
 
         {/* tokens */}
-        <div className="mt-5 flex flex-wrap justify-center gap-2">
+        <div dir={rtl ? "rtl" : "ltr"} style={family ? { fontFamily: family } : undefined} className="mt-5 flex flex-wrap justify-center gap-2">
           {tokens.map((tok, i) => (
             <button
               key={i}

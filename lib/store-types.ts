@@ -6,6 +6,18 @@
 export type LangKey = "en" | "roman" | "ur";
 export type Zone = "learn" | "brain" | "quiz" | "fun";
 
+/**
+ * Per-language progress. Kept flat + primitive-friendly so Zustand selectors
+ * never return fresh objects.
+ */
+export type LangProgress = {
+  xp: number;
+  words: number;
+  plays: number;
+  /** epoch ms of the last lesson played in this language */
+  last: number;
+};
+
 export type GameRecord = {
   slug: string;
   zone: Zone;
